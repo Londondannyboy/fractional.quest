@@ -26,10 +26,12 @@ export function Button({
     ghost: 'bg-transparent text-purple-700 hover:bg-purple-50 active:bg-purple-100',
   }
 
+  // Minimum touch target: 48x48px (min-h-12 = 48px, min-w-12 = 48px)
+  // Added extra padding for better tap targets on mobile
   const sizeStyles = {
-    sm: 'px-3 py-2 text-sm min-h-10',
-    md: 'px-4 py-2.5 text-base min-h-12',
-    lg: 'px-8 py-4 text-lg min-h-14',
+    sm: 'px-4 py-3 text-sm min-h-12 min-w-12',
+    md: 'px-6 py-3.5 text-base min-h-12 min-w-12',
+    lg: 'px-10 py-5 text-lg min-h-14 min-w-14',
   }
 
   return (
