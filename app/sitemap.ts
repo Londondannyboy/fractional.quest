@@ -57,14 +57,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // Fetch all active jobs
     const jobs = await sql`
-      SELECT id, updated_date FROM jobs
+      SELECT slug, updated_date FROM jobs
       WHERE is_active = true
       ORDER BY updated_date DESC
       LIMIT 500
     `
 
     const jobUrls: MetadataRoute.Sitemap = jobs.map((job: any) => ({
-      url: `${baseUrl}/fractional-job/${job.id}`,
+      url: `${baseUrl}/fractional-job/${job.slug}`,
       lastModified: job.updated_date ? new Date(job.updated_date) : new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.8,

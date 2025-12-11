@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const jobs = await sql`
       SELECT title, company_name
       FROM jobs
-      WHERE id = ${slug}
+      WHERE slug = ${slug}
         AND is_active = true
       LIMIT 1
     `
@@ -61,7 +61,7 @@ export default async function JobDetailPage({ params }: PageProps) {
         posted_date,
         url
       FROM jobs
-      WHERE id = ${slug}
+      WHERE slug = ${slug}
         AND is_active = true
       LIMIT 1
     `
@@ -127,7 +127,7 @@ export default async function JobDetailPage({ params }: PageProps) {
           {job.full_description && (
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">About This Role</h2>
-              <div className="prose prose-lg max-w-none">
+              <div className="prose prose-lg max-w-none text-gray-700 whitespace-pre-wrap leading-relaxed">
                 {job.full_description}
               </div>
             </section>

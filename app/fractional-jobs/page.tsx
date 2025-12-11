@@ -48,6 +48,7 @@ export default async function JobsPage({ searchParams }: JobsPageProps) {
     const jobs = await sql`
       SELECT
         id,
+        slug,
         external_id,
         title,
         company_name,
@@ -120,7 +121,7 @@ export default async function JobsPage({ searchParams }: JobsPageProps) {
               <>
                 <div className="space-y-4 mb-12">
                   {jobs.map((job: any) => (
-                    <Link key={job.id} href={`/fractional-job/${job.id}`}>
+                    <Link key={job.id} href={`/fractional-job/${job.slug}`}>
                       <Card hoverable>
                         <div className="flex justify-between items-start">
                           <div className="flex-1">
