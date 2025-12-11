@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { dbQuery } from '@/lib/db'
+import { createDbQuery } from '@/lib/db'
 
 export const revalidate = 3600 // Revalidate every hour
 
@@ -53,22 +53,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ]
 
   try {
+    const sql = createDbQuery()
+
     // Fetch all active jobs
-    const jobs = await dbQuery(
-      `SELECT title, updated_date FROM jobs WHERE is_active = true AND is_fractional = true ORDER BY updated_date DESC LIMIT 500`
-    )
+    const jobs = await sql`
+      SELECT id, updated_date FROM jobs
+      WHERE is_active = true
+      ORDER BY updated_date DESC
+      LIMIT 500
+    `
 
     const jobUrls: MetadataRoute.Sitemap = jobs.map((job: any) => ({
-      url: `${baseUrl}/job/${encodeURIComponent(job.title.toLowerCase().replace(/\s+/g, '-'))}`,
+      url: `${baseUrl}/job/${job.id}`,
       lastModified: job.updated_date ? new Date(job.updated_date) : new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     }))
 
     // Fetch all published articles
-    const articles = await dbQuery(
-      `SELECT slug, published_at FROM articles WHERE status = 'published' AND app = 'fractional' ORDER BY published_at DESC LIMIT 500`
-    )
+    const articles = await sql`
+      SELECT slug, published_at FROM articles
+      WHERE status = 'published' AND app = 'fractional'
+      ORDER BY published_at DESC
+      LIMIT 500
+    `
 
     const articleUrls: MetadataRoute.Sitemap = articles.map((article: any) => ({
       url: `${baseUrl}/articles/${article.slug}`,

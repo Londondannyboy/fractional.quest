@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { dbQuery } from '@/lib/db'
+import { createDbQuery } from '@/lib/db'
 import { Card } from '@/components/Card'
 import { Badge } from '@/components/Badge'
 
@@ -42,18 +42,18 @@ export default async function JobsPage({ searchParams }: JobsPageProps) {
   const offset = (page - 1) * limit
 
   try {
-    // Fetch jobs from database
-    const jobs = await dbQuery<any>(
-      `
+    const sql = createDbQuery()
+
+    // Fetch jobs from database with proper parameterization
+    const jobs = await sql`
       SELECT
         id,
-        slug,
+        external_id,
         title,
         company_name,
         location,
         is_remote,
         compensation,
-        day_rate,
         skills_required,
         posted_date
       FROM jobs
@@ -61,16 +61,13 @@ export default async function JobsPage({ searchParams }: JobsPageProps) {
       ORDER BY posted_date DESC
       LIMIT ${limit} OFFSET ${offset}
       `
-    )
 
     // Get total count for pagination
-    const countResult = await dbQuery<any>(
-      `
+    const countResult = await sql`
       SELECT COUNT(*) as count
       FROM jobs
       WHERE is_active = true
-      `
-    )
+    `
 
     const total = (countResult[0] as any)?.count || 0
     const totalPages = Math.ceil(total / limit)
@@ -122,8 +119,8 @@ export default async function JobsPage({ searchParams }: JobsPageProps) {
             ) : (
               <>
                 <div className="space-y-4 mb-12">
-                  {jobs.map((job: Job) => (
-                    <Link key={job.id} href={`/job/${job.slug}`}>
+                  {jobs.map((job: any) => (
+                    <Link key={job.id} href={`/job/${job.id}`}>
                       <Card hoverable>
                         <div className="flex justify-between items-start">
                           <div className="flex-1">

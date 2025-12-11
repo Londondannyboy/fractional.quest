@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { dbQuery } from '@/lib/db'
+import { createDbQuery } from '@/lib/db'
 import { Card } from '@/components/Card'
 import { Badge } from '@/components/Badge'
 
@@ -28,9 +28,10 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
   const offset = (page - 1) * limit
 
   try {
-    // Fetch articles from database
-    const articles = await dbQuery<any>(
-      `
+    const sql = createDbQuery()
+
+    // Fetch articles from database with proper parameterization
+    const articles = await sql`
       SELECT
         id,
         slug,
@@ -47,17 +48,14 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
       ORDER BY published_at DESC
       LIMIT ${limit} OFFSET ${offset}
       `
-    )
 
     // Get total count for pagination
-    const countResult = await dbQuery<any>(
-      `
+    const countResult = await sql`
       SELECT COUNT(*) as count
       FROM articles
       WHERE status = 'published'
         AND app = 'fractional'
-      `
-    )
+    `
 
     const total = (countResult[0] as any)?.count || 0
     const totalPages = Math.ceil(total / limit)
