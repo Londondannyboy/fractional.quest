@@ -21,13 +21,23 @@ function incrementUsage(): number {
   return newCount
 }
 
+export interface UserProfile {
+  first_name: string | null
+  current_country: string | null
+  destination_countries: string[] | null
+  budget: string | null
+  timeline: string | null
+  interests: string[] | null
+}
+
 interface VoiceInterfaceProps {
   accessToken: string
   onUse: () => void
   darkMode?: boolean
+  userProfile?: UserProfile | null
 }
 
-function VoiceInterface({ accessToken, onUse, darkMode = true }: VoiceInterfaceProps) {
+function VoiceInterface({ accessToken, onUse, darkMode = true, userProfile }: VoiceInterfaceProps) {
   const { connect, disconnect, status, messages } = useVoice()
   const [isConnecting, setIsConnecting] = useState(false)
   const [hasConnectedOnce, setHasConnectedOnce] = useState(false)
@@ -35,11 +45,33 @@ function VoiceInterface({ accessToken, onUse, darkMode = true }: VoiceInterfaceP
   const handleConnect = useCallback(async () => {
     setIsConnecting(true)
     try {
-      // Connect with config ID - variables are passed via the config's system prompt
-      await connect({
+      // Build variables for Hume config
+      const variables: Record<string, string> = {}
+
+      if (userProfile) {
+        if (userProfile.first_name) variables.first_name = userProfile.first_name
+        if (userProfile.current_country) variables.current_country = userProfile.current_country
+        if (userProfile.destination_countries?.length) {
+          variables.destination_countries = userProfile.destination_countries.join(', ')
+        }
+        if (userProfile.budget) variables.budget = userProfile.budget
+        if (userProfile.timeline) variables.timeline = userProfile.timeline
+      }
+
+      // Connect with config ID and variables
+      const connectOptions: Parameters<typeof connect>[0] = {
         auth: { type: 'accessToken', value: accessToken },
         configId: HUME_CONFIG_ID,
-      })
+      }
+
+      // Only add sessionSettings if we have variables
+      if (Object.keys(variables).length > 0) {
+        (connectOptions as Record<string, unknown>).sessionSettings = {
+          variables
+        }
+      }
+
+      await connect(connectOptions)
 
       if (!hasConnectedOnce) {
         onUse()
@@ -49,7 +81,7 @@ function VoiceInterface({ accessToken, onUse, darkMode = true }: VoiceInterfaceP
       console.error('Failed to connect:', error)
     }
     setIsConnecting(false)
-  }, [connect, accessToken, onUse, hasConnectedOnce])
+  }, [connect, accessToken, onUse, hasConnectedOnce, userProfile])
 
   const handleDisconnect = useCallback(() => {
     disconnect()
@@ -144,9 +176,10 @@ export interface HumeWidgetProps {
   userName?: string
   isAuthenticated?: boolean
   darkMode?: boolean
+  userProfile?: UserProfile | null
 }
 
-export function HumeWidget({ variant = 'hero', userName, isAuthenticated = false, darkMode = true }: HumeWidgetProps) {
+export function HumeWidget({ variant = 'hero', userName, isAuthenticated = false, darkMode = true, userProfile }: HumeWidgetProps) {
   const [accessToken, setAccessToken] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [usageCount, setUsageCount] = useState(0)
@@ -154,6 +187,16 @@ export function HumeWidget({ variant = 'hero', userName, isAuthenticated = false
 
   const textMuted = darkMode ? 'text-purple-200' : 'text-gray-500'
   const iconBg = darkMode ? 'bg-white/10' : 'bg-gray-100'
+
+  // Create a merged profile with userName if provided
+  const mergedProfile: UserProfile | null = userProfile || (userName ? {
+    first_name: userName,
+    current_country: null,
+    destination_countries: null,
+    budget: null,
+    timeline: null,
+    interests: null,
+  } : null)
 
   useEffect(() => {
     setIsClient(true)
@@ -234,6 +277,7 @@ export function HumeWidget({ variant = 'hero', userName, isAuthenticated = false
           accessToken={accessToken}
           onUse={handleUse}
           darkMode={darkMode}
+          userProfile={mergedProfile}
         />
       </VoiceProvider>
       {!isAuthenticated && (

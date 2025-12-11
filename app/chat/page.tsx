@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import { useUser } from '@stackframe/stack'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 
@@ -27,10 +28,16 @@ interface Message {
 }
 
 export default function ChatPage() {
+  const user = useUser()
+  const isAuthenticated = !!user
+  const firstName = user?.displayName?.split(' ')[0]
+
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: "Hi! I'm your Fractional.Quest assistant. I can help you find information about fractional jobs, answer questions about our articles, and provide guidance on fractional executive careers. What would you like to know?",
+      content: firstName
+        ? `Hi ${firstName}! I'm your Fractional.Quest assistant. I can help you find information about fractional jobs, answer questions about our articles, and provide guidance on fractional executive careers. What would you like to know?`
+        : "Hi! I'm your Fractional.Quest assistant. I can help you find information about fractional jobs, answer questions about our articles, and provide guidance on fractional executive careers. What would you like to know?",
     },
   ])
   const [input, setInput] = useState('')
@@ -44,6 +51,16 @@ export default function ChatPage() {
     setUsageCount(getChatUsageCount())
   }, [])
 
+  // Update greeting when user state changes
+  useEffect(() => {
+    if (firstName && messages.length === 1 && messages[0].role === 'assistant') {
+      setMessages([{
+        role: 'assistant',
+        content: `Hi ${firstName}! I'm your Fractional.Quest assistant. I can help you find information about fractional jobs, answer questions about our articles, and provide guidance on fractional executive careers. What would you like to know?`,
+      }])
+    }
+  }, [firstName, messages.length])
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -56,8 +73,8 @@ export default function ChatPage() {
     e.preventDefault()
     if (!input.trim() || isLoading) return
 
-    // Check usage limit
-    if (usageCount >= MAX_FREE_MESSAGES) {
+    // Check usage limit (only for unauthenticated users)
+    if (!isAuthenticated && usageCount >= MAX_FREE_MESSAGES) {
       setMessages((prev) => [
         ...prev,
         { role: 'user', content: input.trim() },
@@ -75,9 +92,11 @@ export default function ChatPage() {
     setMessages((prev) => [...prev, { role: 'user', content: userMessage }])
     setIsLoading(true)
 
-    // Increment usage
-    const newCount = incrementChatUsage()
-    setUsageCount(newCount)
+    // Only increment usage for unauthenticated users
+    if (!isAuthenticated) {
+      const newCount = incrementChatUsage()
+      setUsageCount(newCount)
+    }
 
     try {
       // Call our chat API
@@ -135,17 +154,19 @@ export default function ChatPage() {
         </div>
       </div>
 
-      {/* Sign In Banner - Always shown, auth state checked via Navigation */}
-      <div className="bg-yellow-50 border-b border-yellow-200 py-3">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-yellow-800 text-sm">
-            <Link href="/handler/sign-in" className="font-medium underline hover:text-yellow-900">
-              Sign in
-            </Link>{' '}
-            to save your chat history and get personalized recommendations.
-          </p>
+      {/* Sign In Banner - Only show for unauthenticated users */}
+      {!isAuthenticated && (
+        <div className="bg-yellow-50 border-b border-yellow-200 py-3">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <p className="text-yellow-800 text-sm">
+              <Link href="/handler/sign-in" className="font-medium underline hover:text-yellow-900">
+                Sign in
+              </Link>{' '}
+              to save your chat history and get unlimited messages.
+            </p>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Chat Container */}
       <div className="flex-1 max-w-4xl mx-auto w-full px-4 py-6 flex flex-col">
@@ -248,18 +269,23 @@ export default function ChatPage() {
 
         {/* Usage Counter & Footer */}
         <div className="text-center mt-4 space-y-2">
-          {isClient && remainingUses > 0 && (
+          {isClient && !isAuthenticated && remainingUses > 0 && (
             <p className="text-xs text-purple-600 font-medium">
               {remainingUses} free {remainingUses === 1 ? 'message' : 'messages'} remaining
             </p>
           )}
-          {isClient && remainingUses === 0 && (
+          {isClient && !isAuthenticated && remainingUses === 0 && (
             <p className="text-xs text-orange-600 font-medium">
               Free trial ended.{' '}
               <Link href="/handler/sign-in" className="underline hover:text-orange-800">
                 Sign in
               </Link>{' '}
               for unlimited access.
+            </p>
+          )}
+          {isAuthenticated && (
+            <p className="text-xs text-green-600 font-medium">
+              Unlimited messages
             </p>
           )}
           <p className="text-xs text-gray-400">
