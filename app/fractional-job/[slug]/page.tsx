@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { Badge } from '@/components/Badge'
+import ReactMarkdown from 'react-markdown'
 
 // Revalidate every hour for job details
 export const revalidate = 3600
@@ -127,8 +128,23 @@ export default async function JobDetailPage({ params }: PageProps) {
           {job.full_description && (
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">About This Role</h2>
-              <div className="prose prose-lg max-w-none text-gray-700 whitespace-pre-wrap leading-relaxed">
-                {job.full_description}
+              <div className="prose prose-lg max-w-none">
+                <ReactMarkdown
+                  components={{
+                    h1: ({node, ...props}) => <h1 className="text-2xl font-bold mt-6 mb-3" {...props} />,
+                    h2: ({node, ...props}) => <h2 className="text-xl font-bold mt-4 mb-2" {...props} />,
+                    h3: ({node, ...props}) => <h3 className="text-lg font-semibold mt-3 mb-2" {...props} />,
+                    p: ({node, ...props}) => <p className="mb-3 leading-relaxed" {...props} />,
+                    ul: ({node, ...props}) => <ul className="list-disc list-inside mb-3 space-y-1" {...props} />,
+                    ol: ({node, ...props}) => <ol className="list-decimal list-inside mb-3 space-y-1" {...props} />,
+                    li: ({node, ...props}) => <li className="ml-2" {...props} />,
+                    strong: ({node, ...props}) => <strong className="font-bold" {...props} />,
+                    em: ({node, ...props}) => <em className="italic" {...props} />,
+                    code: ({node, ...props}) => <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono" {...props} />,
+                  }}
+                >
+                  {job.full_description}
+                </ReactMarkdown>
               </div>
             </section>
           )}
