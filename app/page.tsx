@@ -24,7 +24,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Link href="/fractionaljobsuk">
+              <Link href="/fractional-jobs">
                 <Button size="lg" variant="primary">
                   Browse Jobs →
                 </Button>
@@ -104,7 +104,7 @@ export default function Home() {
           <p className="text-xl text-purple-100 mb-8">
             Start your search today and connect with experienced professionals
           </p>
-          <Link href="/fractionaljobsuk">
+          <Link href="/fractional-jobs">
             <Button size="lg" variant="secondary">
               Browse All Jobs
             </Button>
