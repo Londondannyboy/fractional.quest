@@ -27,41 +27,27 @@ class LinkedDescription(BaseModel):
     updated_description: str = Field(description="""
         The job description with 2-4 internal SEO links added naturally.
 
-        KEYWORD CLUSTERS (pick ONE phrase per cluster, max ONE link per cluster):
+        AVAILABLE URLs (use each URL ONLY ONCE - Google penalizes duplicate links!):
+        - /fractional-jobs?role=CFO (for CFO, finance director, finance leadership mentions)
+        - /fractional-jobs?role=CMO (for CMO, marketing director mentions)
+        - /fractional-jobs?role=CTO (for CTO, tech director mentions)
+        - /fractional-jobs?role=COO (for COO, operations director mentions)
+        - /fractional-jobs (for generic: fractional jobs, portfolio career, fractional executive)
 
-        - CFO cluster → /fractional-jobs?role=CFO
-          Anchor text: "fractional CFO", "fractional CFO jobs", "CFO roles",
-          "part-time CFO", "fractional finance director", "CFO opportunities"
-
-        - CMO cluster → /fractional-jobs?role=CMO
-          Anchor text: "fractional CMO", "fractional CMO jobs", "CMO roles",
-          "part-time CMO", "fractional marketing director", "CMO opportunities"
-
-        - CTO cluster → /fractional-jobs?role=CTO
-          Anchor text: "fractional CTO", "fractional CTO jobs", "CTO roles",
-          "part-time CTO", "fractional tech director", "CTO opportunities"
-
-        - COO cluster → /fractional-jobs?role=COO
-          Anchor text: "fractional COO", "fractional COO jobs", "COO roles",
-          "part-time COO", "fractional operations director", "COO opportunities"
-
-        - General fractional → /fractional-jobs
-          Anchor text: "fractional jobs", "fractional roles", "fractional executive",
-          "part-time executive", "portfolio career", "fractional opportunities"
-
-        RULES:
-        1. Maximum ONE link per keyword cluster (no duplicates)
-        2. Choose anchor text that fits naturally in the sentence
-        3. Prioritize the cluster matching the job's role (CFO job = CFO cluster first)
-        4. Add 1-2 related clusters if they fit naturally
-        5. Links must read smoothly - preserve the editorial flow
-        6. Use markdown format: [anchor text](url)
-        7. Do NOT add links to existing linked text
-        8. Keep all existing content and formatting intact
+        CRITICAL RULES:
+        1. NEVER link to the same URL twice in one description!
+           BAD: [fractional opportunities](/fractional-jobs)...[portfolio career](/fractional-jobs)
+           GOOD: [fractional CFO](/fractional-jobs?role=CFO)...[portfolio career](/fractional-jobs)
+        2. Use 2-4 DIFFERENT URLs per description
+        3. Prioritize the role-specific URL matching the job category
+        4. Links must read smoothly - preserve editorial flow
+        5. Use markdown format: [anchor text](url)
+        6. Remove any existing duplicate links and replace with varied URLs
+        7. Keep all existing content and formatting intact
 
         Example transformation:
-        Before: "This fractional CFO opportunity offers strategic impact for finance leaders."
-        After: "This [fractional CFO](/fractional-jobs?role=CFO) opportunity offers strategic impact for finance leaders."
+        Before: "This fractional CFO opportunity offers strategic impact for finance leaders seeking portfolio careers."
+        After: "This [fractional CFO](/fractional-jobs?role=CFO) opportunity offers strategic impact for finance leaders seeking [portfolio careers](/fractional-jobs)."
     """)
 
     links_added: int = Field(description="Number of internal links added (should be 2-4)")
@@ -89,29 +75,41 @@ agent = Agent(
     output_type=LinkedDescription,
     system_prompt="""You are an SEO specialist adding internal links to job descriptions.
 
-Your task: Add 2-4 internal links to the job description WITHOUT changing any other content.
+Your task: Add 2-4 internal links using DIFFERENT URLs - Google penalizes duplicate links!
+
+AVAILABLE URLs (use each ONLY ONCE per description):
+- /fractional-jobs?role=CFO (CFO, finance director, finance leadership)
+- /fractional-jobs?role=CMO (CMO, marketing director, marketing leadership)
+- /fractional-jobs?role=CTO (CTO, tech director, technology leadership)
+- /fractional-jobs?role=COO (COO, operations director, operations leadership)
+- /fractional-jobs (generic: fractional jobs, portfolio career, fractional executive)
 
 CRITICAL RULES:
-1. Preserve ALL existing text exactly - only add markdown link syntax around phrases
-2. Each keyword cluster can only be linked ONCE (no duplicate clusters)
-3. Links must feel natural and editorial, not forced
-4. Use varied anchor text that fits the sentence context
-5. Prioritize the cluster that matches the job's role category
-6. If the text already has markdown links, don't add more to the same cluster
+1. NEVER use the same URL twice - each link must go to a DIFFERENT page!
+2. Preserve ALL existing text - only add markdown link syntax around phrases
+3. If existing links have duplicate URLs, replace them with varied URLs
+4. Prioritize the role-specific URL matching the job's category
+5. Links must feel natural and editorial
+6. Use 2-4 different URLs total
 
-Keyword clusters and their URLs:
-- CFO → /fractional-jobs?role=CFO
-- CMO → /fractional-jobs?role=CMO
-- CTO → /fractional-jobs?role=CTO
-- COO → /fractional-jobs?role=COO
-- General → /fractional-jobs
-
-Choose natural anchor text variations like:
-- "fractional CFO", "CFO roles", "fractional finance leadership"
-- "fractional CMO", "CMO opportunities", "marketing leadership roles"
-- "fractional jobs", "portfolio career", "fractional executive"
+BAD (duplicate): [fractional opportunities](/fractional-jobs)...[portfolio career](/fractional-jobs)
+GOOD (varied): [fractional CFO](/fractional-jobs?role=CFO)...[portfolio career](/fractional-jobs)
 """
 )
+
+
+def has_duplicate_urls(text: str) -> bool:
+    """Check if text has duplicate internal link URLs"""
+    import re
+    urls = re.findall(r'\]\((/fractional-jobs[^)]*)\)', text or '')
+    return len(urls) != len(set(urls))
+
+
+def get_unique_urls(text: str) -> list:
+    """Extract unique URLs from markdown links"""
+    import re
+    urls = re.findall(r'\]\((/fractional-jobs[^)]*)\)', text or '')
+    return list(set(urls))
 
 
 def get_db_connection():
@@ -125,7 +123,6 @@ def get_db_connection():
 def fetch_jobs_without_links(conn, limit: int = 100) -> list[dict]:
     """Fetch jobs that don't have internal links yet"""
     with conn.cursor(cursor_factory=RealDictCursor) as cur:
-        # Find jobs without markdown links in description
         cur.execute("""
             SELECT id, title, company_name, role_category, full_description
             FROM jobs
@@ -137,6 +134,23 @@ def fetch_jobs_without_links(conn, limit: int = 100) -> list[dict]:
             LIMIT %s
         """, (limit,))
         return [dict(row) for row in cur.fetchall()]
+
+
+def fetch_jobs_with_duplicate_links(conn, limit: int = 1000) -> list[dict]:
+    """Fetch jobs that have duplicate internal link URLs (need fixing)"""
+    with conn.cursor(cursor_factory=RealDictCursor) as cur:
+        cur.execute("""
+            SELECT id, title, company_name, role_category, full_description
+            FROM jobs
+            WHERE is_active = true
+            AND full_description IS NOT NULL
+            AND full_description LIKE '%%](/fractional-jobs%%'
+            ORDER BY posted_date DESC NULLS LAST
+            LIMIT %s
+        """, (limit,))
+        # Filter to only those with duplicate URLs
+        jobs = [dict(row) for row in cur.fetchall()]
+        return [j for j in jobs if has_duplicate_urls(j['full_description'])]
 
 
 def fetch_all_jobs(conn, limit: int = 1000) -> list[dict]:
@@ -190,13 +204,16 @@ def update_job_description(conn, job_id: str, new_description: str):
         """, (new_description, job_id))
 
 
-async def process_jobs(limit: int = 100, force_all: bool = False):
+async def process_jobs(limit: int = 100, force_all: bool = False, fix_duplicates: bool = False):
     """Main processing function"""
     conn = get_db_connection()
 
     try:
         # Fetch jobs
-        if force_all:
+        if fix_duplicates:
+            jobs = fetch_jobs_with_duplicate_links(conn, limit)
+            print(f"Found {len(jobs)} jobs with DUPLICATE internal links to fix")
+        elif force_all:
             jobs = fetch_all_jobs(conn, limit)
             print(f"Processing ALL {len(jobs)} jobs (including those with existing links)")
         else:
@@ -219,20 +236,30 @@ async def process_jobs(limit: int = 100, force_all: bool = False):
             print(f"    Company: {job['company_name'][:30] if job['company_name'] else 'Unknown'}")
             print(f"    Category: {job.get('role_category', 'N/A')}")
 
-            # Skip if already has links and not forcing
-            if not force_all and '](/fractional-jobs' in (job['full_description'] or ''):
+            # Skip if already has links and not forcing/fixing
+            if not force_all and not fix_duplicates and '](/fractional-jobs' in (job['full_description'] or ''):
                 print(f"    ⏭ Already has links, skipping")
                 continue
+
+            if fix_duplicates:
+                print(f"    🔧 Fixing duplicate URLs...")
 
             result = await add_links_to_job(job)
 
             if result:
-                # Verify links were actually added
+                # Verify links were actually added and no duplicates
                 if '](/fractional-jobs' in result.updated_description:
-                    update_job_description(conn, job['id'], result.updated_description)
-                    conn.commit()
-                    print(f"    ✓ Added {result.links_added} links: {', '.join(result.clusters_used)}")
-                    success_count += 1
+                    if has_duplicate_urls(result.updated_description):
+                        print(f"    ⚠ Output still has duplicate URLs, skipping")
+                        urls = get_unique_urls(result.updated_description)
+                        print(f"      URLs found: {urls}")
+                        error_count += 1
+                    else:
+                        update_job_description(conn, job['id'], result.updated_description)
+                        conn.commit()
+                        urls = get_unique_urls(result.updated_description)
+                        print(f"    ✓ {len(urls)} unique links: {', '.join(urls)}")
+                        success_count += 1
                 else:
                     print(f"    ⚠ No links in output, skipping update")
                     error_count += 1
@@ -257,11 +284,17 @@ if __name__ == "__main__":
     parser.add_argument('--limit', type=int, default=100, help='Number of jobs to process')
     parser.add_argument('--all', action='store_true', help='Process all jobs, even those with existing links')
     parser.add_argument('--force', action='store_true', help='Force reprocess all jobs (same as --all)')
+    parser.add_argument('--fix-duplicates', action='store_true', help='Find and fix jobs with duplicate link URLs')
 
     args = parser.parse_args()
 
     print(f"\nStarting Internal Link Addition...")
     print(f"Limit: {args.limit}")
-    print(f"Force all: {args.all or args.force}")
+    if args.fix_duplicates:
+        print(f"Mode: FIX DUPLICATE URLS")
+    elif args.all or args.force:
+        print(f"Mode: Process ALL jobs")
+    else:
+        print(f"Mode: Jobs without links only")
 
-    asyncio.run(process_jobs(limit=args.limit, force_all=args.all or args.force))
+    asyncio.run(process_jobs(limit=args.limit, force_all=args.all or args.force, fix_duplicates=args.fix_duplicates))
