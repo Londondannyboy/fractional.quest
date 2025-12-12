@@ -12,7 +12,7 @@ import { AnimatedStats } from "@/components/AnimatedStats";
 const HERO_VIDEO_PLAYBACK_ID: string | undefined = "qIS6PGKxIZyzjrDBzxQuqPRBOhHofDnXq1chdsqAY9Y";
 
 export const metadata: Metadata = {
-  title: "Fractional Jobs UK 2025 | Fractional CFO, CTO, CMO Roles | Fractional.Quest",
+  title: "Fractional Jobs UK | CFO, CTO, CMO Roles",
   description: "Discover the best fractional jobs in the UK. Browse fractional CFO, CMO, CTO and executive roles in London. Connect with leading fractional recruitment agencies and find flexible leadership opportunities.",
   alternates: {
     canonical: "https://fractional.quest",
