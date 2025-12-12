@@ -47,6 +47,14 @@ function VoiceChat({
     setLogs(prev => [...prev.slice(-14), `${new Date().toLocaleTimeString()} ${msg}`])
   }
 
+  // Watch status changes
+  useEffect(() => {
+    log(`Status changed: ${status.value}`)
+    if (status.value === 'error') {
+      console.error('[Hume] Status error')
+    }
+  }, [status.value])
+
   // Forward transcripts
   useEffect(() => {
     if (!onTranscript || messages.length === 0) return
@@ -86,6 +94,7 @@ function VoiceChat({
     log(`Variables: first_name=${userName}, auth=${isAuthenticated}`)
 
     try {
+      log(`Token: ${accessToken?.slice(0, 10)}... ConfigID: ${CONFIG_ID?.slice(0, 12)}...`)
       // Pass variables AT CONNECT TIME - this is the fix!
       await connect({
         auth: { type: 'accessToken', value: accessToken },
@@ -94,7 +103,8 @@ function VoiceChat({
       })
       log('Connected!')
     } catch (e: any) {
-      log(`Error: ${e.message || e}`)
+      console.error('[Hume] Connection error:', e)
+      log(`Error: ${e?.message || e?.toString() || JSON.stringify(e) || 'Unknown error'}`)
     }
     setIsPending(false)
   }, [connect, accessToken, userName, isAuthenticated, userProfile])
