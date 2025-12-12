@@ -26,7 +26,12 @@ interface HumeToolRequest {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    console.log('[Hume Tool] Received:', JSON.stringify(body, null, 2))
+    console.log('========================================')
+    console.log('[Hume Tool] RECEIVED REQUEST')
+    console.log('[Hume Tool] Type:', body.type)
+    console.log('[Hume Tool] Name:', body.name)
+    console.log('[Hume Tool] Full body:', JSON.stringify(body, null, 2))
+    console.log('========================================')
 
     // Handle tool calls
     if (body.type === 'tool_call' || body.name) {

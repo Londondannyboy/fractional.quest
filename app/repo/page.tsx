@@ -19,26 +19,86 @@ function VoiceInterface({ token, userId, profile }: { token: string; userId?: st
   const [displayedJobs, setDisplayedJobs] = useState<JobResult[]>([])
   const [showJobsPanel, setShowJobsPanel] = useState(false)
 
-  // Watch for job results in assistant messages
+  // Watch for tool calls and job-related messages
   useEffect(() => {
+    if (messages.length === 0) return
+
+    // Log all message types for debugging
+    const recentMessages = messages.slice(-5)
+    console.log('[Hume] Recent messages:', recentMessages.map((m: any) => ({
+      type: m.type,
+      hasContent: !!m.message?.content,
+      preview: m.message?.content?.substring(0, 60)
+    })))
+
+    // Check for tool_call or tool_response messages (indicates search was done)
+    const hasToolActivity = messages.some((m: any) =>
+      m.type === 'tool_call' || m.type === 'tool_response' || m.type === 'tool_result'
+    )
+    if (hasToolActivity) {
+      console.log('[Hume] Tool activity detected!')
+    }
+
+    // Get the last assistant message
     const lastAssistantMsg = [...messages].reverse().find(
       (m: any) => m.type === 'assistant_message' && m.message?.content
     ) as any
 
     if (lastAssistantMsg?.message?.content) {
       const content = lastAssistantMsg.message.content.toLowerCase()
-      // Detect when Quest mentions finding jobs
-      if (content.includes('found') && (content.includes('job') || content.includes('role') || content.includes('position'))) {
+
+      // Broader detection - any mention of jobs/roles in response
+      const mentionsJobs = content.includes('job') || content.includes('role') ||
+                          content.includes('position') || content.includes('opportunit')
+      const soundsLikeResults = content.includes('found') || content.includes('show') ||
+                               content.includes('here') || content.includes('screen') ||
+                               content.includes('pull') || content.includes('look at')
+
+      if (mentionsJobs && soundsLikeResults) {
+        console.log('[Hume] Job results detected in response!')
         setShowJobsPanel(true)
-        // Parse jobs from the message - look for "fractional.quest/job/" links
-        const jobMatches = lastAssistantMsg.message.content.match(/fractional\.quest\/job\/([^\s,\.]+)/g)
-        if (jobMatches) {
-          // Fetch job details for display
+
+        // Try to parse job URLs from the message
+        const jobMatches = lastAssistantMsg.message.content.match(/fractional\.quest\/job\/([^\s,\.\)]+)/g)
+        if (jobMatches && jobMatches.length > 0) {
+          console.log('[Hume] Found job URLs:', jobMatches)
           fetchJobsForDisplay(jobMatches.map((m: string) => m.replace('fractional.quest/job/', '')))
+        } else {
+          // No URLs in message - fetch recent jobs as fallback based on what user might have asked
+          console.log('[Hume] No job URLs found, fetching recent jobs as fallback')
+          fetchRecentJobs()
         }
       }
     }
+
+    // Also check if USER mentioned jobs - proactively show panel
+    const lastUserMsg = [...messages].reverse().find(
+      (m: any) => m.type === 'user_message' && m.message?.content
+    ) as any
+    if (lastUserMsg?.message?.content) {
+      const userContent = lastUserMsg.message.content.toLowerCase()
+      if (userContent.includes('job') || userContent.includes('cfo') ||
+          userContent.includes('cmo') || userContent.includes('cto') ||
+          userContent.includes('marketing') || userContent.includes('finance')) {
+        console.log('[Hume] User asking about jobs - preparing panel')
+      }
+    }
   }, [messages])
+
+  const fetchRecentJobs = async () => {
+    try {
+      const response = await fetch('/api/jobs-recent')
+      if (response.ok) {
+        const jobs = await response.json()
+        if (jobs.length > 0) {
+          setDisplayedJobs(jobs)
+          setShowJobsPanel(true)
+        }
+      }
+    } catch (e) {
+      console.error('Failed to fetch recent jobs:', e)
+    }
+  }
 
   const fetchJobsForDisplay = async (slugs: string[]) => {
     try {
@@ -148,6 +208,16 @@ function VoiceInterface({ token, userId, profile }: { token: string; userId?: st
         <p className="mt-4 text-sm text-gray-500">
           {isConnected ? (isPlaying ? 'Quest is speaking...' : 'Listening...') : 'Tap to start'}
         </p>
+
+        {/* Stop button when connected */}
+        {isConnected && (
+          <button
+            onClick={disconnect}
+            className="mt-4 px-6 py-2 bg-red-500 hover:bg-red-600 text-white rounded-full text-sm font-medium transition-colors"
+          >
+            Stop Conversation
+          </button>
+        )}
       </div>
 
       {/* Jobs Panel - appears when Quest finds jobs */}
