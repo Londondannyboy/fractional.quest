@@ -23,7 +23,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Fractional Jobs UK 2025 | Fractional CFO, CTO, CMO Roles | Fractional.Quest",
+    default: "Fractional Jobs UK | CFO, CTO, CMO Roles | Fractional.Quest",
     template: "%s | Fractional.Quest"
   },
   description: "Discover the best fractional jobs in the UK. Browse fractional CFO, CMO, CTO and executive roles in London. Connect with leading fractional recruitment agencies and find flexible leadership opportunities.",
@@ -40,22 +40,17 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://fractional.quest",
     siteName: "Fractional.Quest",
-    title: "Fractional Jobs UK 2025 | Fractional CFO, CTO, CMO Roles",
+    title: "Fractional Jobs UK | CFO, CTO, CMO Roles",
     description: "Discover the best fractional jobs in the UK. Browse fractional CFO, CMO, CTO and executive roles in London.",
-    images: [
-      {
-        url: "/og-image.svg",
-        width: 1200,
-        height: 630,
-        alt: "Fractional.Quest - UK's Leading Fractional Executive Jobs Platform - CFO, CTO, CMO Roles",
-      },
-    ],
+    // Images auto-generated from app/opengraph-image.tsx
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fractional Jobs UK 2025 | Fractional.Quest",
+    title: "Fractional Jobs UK | Fractional.Quest",
     description: "Discover the best fractional jobs in the UK. Browse fractional CFO, CMO, CTO and executive roles.",
-    images: ["/og-image.svg"],
+    site: "@fractionalquest",
+    creator: "@fractionalquest",
+    // Images auto-generated from app/twitter-image.tsx
   },
   robots: {
     index: true,
@@ -67,9 +62,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  verification: {
-    google: "verification-code-here",
   },
 };
 
