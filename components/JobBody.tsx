@@ -33,9 +33,9 @@ export function JobBody({ content, className = '' }: JobBodyProps) {
       .split(/(?<=[.!?])\s+(?=[A-Z])/)
       .filter(s => s.trim().length > 0)
 
-    // Group into chunks of 2-3 sentences
+    // Group into chunks of 2 sentences for readability
     for (let i = 0; i < sentences.length; i += 2) {
-      const chunk = sentences.slice(i, i + 3).join(' ')
+      const chunk = sentences.slice(i, i + 2).join(' ')
       if (chunk.trim()) {
         readableParagraphs.push(chunk.trim())
       }
