@@ -14,6 +14,7 @@ Every job gets the full Condé Nast editorial treatment.
 import os
 import json
 import asyncio
+import httpx
 from datetime import datetime
 from typing import Optional
 
@@ -21,6 +22,11 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 from pydantic import BaseModel, Field
 from pydantic_ai import Agent
+
+# ZEP sync configuration
+ZEP_SYNC_ENABLED = os.environ.get('ZEP_SYNC_ENABLED', 'true').lower() == 'true'
+API_BASE_URL = os.environ.get('API_BASE_URL', 'https://fractional.quest')
+REVALIDATE_SECRET = os.environ.get('REVALIDATE_SECRET', '')
 
 # Load environment variables
 from dotenv import load_dotenv
@@ -275,6 +281,36 @@ def mark_raw_job_processed(conn, raw_id: str, status: str = 'processed', error: 
         """, (status, error, raw_id))
 
 
+async def sync_job_to_zep(job_id: str, structured: StructuredJob, title: str, company: str, location: str) -> bool:
+    """Sync a processed job to ZEP knowledge graph via API"""
+    if not ZEP_SYNC_ENABLED:
+        return True  # Skip but don't fail
+
+    try:
+        async with httpx.AsyncClient() as client:
+            response = await client.post(
+                f"{API_BASE_URL}/api/graph/jobs",
+                json={
+                    "action": "sync-one",
+                    "jobId": job_id,
+                },
+                headers={
+                    "Authorization": f"Bearer {REVALIDATE_SECRET}",
+                    "Content-Type": "application/json",
+                },
+                timeout=30.0,
+            )
+
+            if response.status_code == 200:
+                return True
+            else:
+                print(f"    ⚠ ZEP sync failed: {response.status_code}")
+                return False
+    except Exception as e:
+        print(f"    ⚠ ZEP sync error: {str(e)[:50]}")
+        return False
+
+
 async def process_jobs(limit: int = 10, source: str = None):
     """Main processing function"""
     conn = get_db_connection()
@@ -305,6 +341,14 @@ async def process_jobs(limit: int = 10, source: str = None):
                 # Update the structured jobs table
                 if job['job_id']:
                     update_structured_job(conn, job['job_id'], structured)
+
+                    # Sync to ZEP knowledge graph
+                    zep_synced = await sync_job_to_zep(
+                        job['job_id'], structured, title, company,
+                        structured.city or job.get('location', 'UK')
+                    )
+                    if zep_synced:
+                        print(f"    ✓ Synced to ZEP graph")
 
                 # Mark as processed
                 mark_raw_job_processed(conn, job['raw_id'], 'processed')
