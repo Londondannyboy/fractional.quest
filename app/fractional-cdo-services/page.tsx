@@ -122,7 +122,7 @@ export default function FractionalCDOServicesPage() {
             </div>
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">From Data Rich to Data Driven</h3>
             <p>
-              Many companies are data rich but insight poor. They collect vast amounts of data but can't use it effectively. Decisions are still made on gut feel, reports take weeks, and data quality is questionable.
+              Many companies are data rich but insight poor. They collect vast amounts of data but cannot use it effectively. Decisions are still made on gut feel, reports take weeks, and data quality is questionable.
             </p>
             <p>
               A fractional CDO bridges this gap. They build the systems, processes, and culture that turn data into competitive advantage—enabling faster decisions, better predictions, and AI-powered innovation.
