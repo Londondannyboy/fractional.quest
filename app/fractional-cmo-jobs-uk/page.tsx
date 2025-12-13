@@ -131,8 +131,21 @@ export default async function FractionalCmoJobsUkPage() {
         </div>
       </section>
 
-      {/* JOBS SECTION - Immediately After Hero */}
-      <section id="jobs" className="py-16 md:py-20 bg-gray-50">
+      {/* Calculator Section - Impressive Feature Right After Hero */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-8 text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Calculator</span>
+            <h2 className="text-2xl md:text-3xl font-black text-gray-900">
+              How Much Can You Earn as a Fractional CMO?
+            </h2>
+          </div>
+          <RoleCalculator role="cmo" />
+        </div>
+      </section>
+
+      {/* JOBS SECTION - What They Came For */}
+      <section id="jobs" className="py-16 md:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
@@ -166,6 +179,19 @@ export default async function FractionalCmoJobsUkPage() {
               allJobsLinkText="View All Marketing Jobs"
             />
           </Suspense>
+        </div>
+      </section>
+
+      {/* CMO Skills Graph - Impressive Visual */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="mb-10">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Skills & Competencies</span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">
+              What Skills Do Fractional CMOs Need?
+            </h2>
+          </div>
+          <RoleSkillsGraph role="cmo" width={800} height={450} />
         </div>
       </section>
 
@@ -279,37 +305,8 @@ export default async function FractionalCmoJobsUkPage() {
         </div>
       </section>
 
-      {/* CMO Skills Graph */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Skills & Competencies</span>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900">
-              What Skills Do Fractional CMOs Need?
-            </h2>
-          </div>
-          <RoleSkillsGraph role="cmo" width={800} height={450} />
-        </div>
-      </section>
-
-      {/* Calculator Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="mb-12 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Calculator</span>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900">
-              Fractional CMO Earnings & Savings
-            </h2>
-            <p className="text-gray-600 mt-4">
-              Whether you're a CMO looking to go fractional, or a company considering hiring one
-            </p>
-          </div>
-          <RoleCalculator role="cmo" />
-        </div>
-      </section>
-
       {/* IR35 Calculator Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12 text-center">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">UK Tax</span>
@@ -325,7 +322,7 @@ export default async function FractionalCmoJobsUkPage() {
       </section>
 
       {/* FAQ Section - Editorial Style */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
