@@ -367,12 +367,12 @@ export default async function Home() {
             playbackId={HERO_VIDEO_PLAYBACK_ID}
             fallbackGradient={true}
           />
-          <div className="absolute inset-0 bg-white/75" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Hire Fractional Executives?</h2>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <h2 className="text-4xl font-bold text-white mb-6">Why Hire Fractional Executives?</h2>
+            <p className="text-xl text-gray-300 leading-relaxed">
               Get the strategic leadership your company needs without the cost and commitment of full-time executive hires. Fractional executives work 1-3 days per week, bringing senior expertise to growing businesses.
             </p>
           </div>
@@ -579,13 +579,13 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Featured Jobs Section */}
+      {/* Featured Jobs Section - Dark */}
       {featuredJobs.length > 0 && (
-        <section className="py-20 md:py-28 bg-white">
+        <section className="py-20 md:py-28 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Latest Fractional Jobs UK</h2>
-              <p className="text-xl text-gray-600">Browse fractional executive jobs from verified UK sources</p>
+              <h2 className="text-4xl font-bold text-white mb-4">Latest Fractional Jobs UK</h2>
+              <p className="text-xl text-gray-400">Browse fractional executive jobs from verified UK sources</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {(featuredJobs as any[]).map((job: any) => {
@@ -613,7 +613,7 @@ export default async function Home() {
             <div className="text-center">
               <Link
                 href="/fractional-jobs"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg bg-gray-900 text-white hover:bg-black transition-all duration-200"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg bg-white text-gray-900 hover:bg-gray-100 transition-all duration-200"
               >
                 {totalJobs > 0 ? `View All ${totalJobs} Jobs →` : 'View All Jobs →'}
               </Link>
@@ -623,7 +623,7 @@ export default async function Home() {
       )}
 
       {/* Latest News Section - Auto-generated + Manual Articles */}
-      <section className="py-20 md:py-28 bg-gray-50">
+      <section className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <LatestNews limit={6} />
         </div>
