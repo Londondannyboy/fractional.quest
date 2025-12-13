@@ -195,18 +195,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'daily',
       priority: 0.9,
     },
-    // Part-time guides
+    // Part-time job pages (high priority SEO pages)
     {
-      url: `${baseUrl}/part-time-cfo`,
+      url: `${baseUrl}/part-time-cfo-jobs-uk`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.85,
+      changeFrequency: 'daily',
+      priority: 0.9,
     },
     {
-      url: `${baseUrl}/part-time-cmo`,
+      url: `${baseUrl}/part-time-cmo-jobs-uk`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.85,
+      changeFrequency: 'daily',
+      priority: 0.9,
     },
     // Salary guides
     {
