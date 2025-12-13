@@ -301,3 +301,136 @@ export const STARTUPS_FAQS: FAQItem[] = [
     answer: 'Most startup fractional engagements are 1-2 days per week on retainer, with flexibility to scale up during critical periods (fundraising, launches). Typical engagement lengths are 6-12 months, though many become ongoing relationships.',
   },
 ]
+
+// Service-focused FAQs (for company/employer audience)
+export const CFO_SERVICE_FAQS: FAQItem[] = [
+  {
+    question: 'What is a Fractional CFO?',
+    answer: 'A Fractional CFO is an experienced Chief Financial Officer who works with your company on a part-time basis, typically 1-3 days per week. You get senior-level financial leadership, strategic guidance, and hands-on expertise at a fraction of the cost of a full-time CFO.',
+  },
+  {
+    question: 'When should my company hire a Fractional CFO?',
+    answer: 'Consider hiring a fractional CFO when: you\'re preparing for fundraising or due diligence; your finance function needs professionalising; you need strategic financial guidance but can\'t justify a full-time CFO; you\'re scaling rapidly and need to build financial infrastructure; or you\'re navigating a major transition (M&A, restructuring, IPO prep).',
+  },
+  {
+    question: 'How much does a Fractional CFO cost?',
+    answer: 'Fractional CFOs typically charge £800-£1,500 per day in the UK, depending on experience and specialisation. At 2 days per week, this translates to roughly £80,000-£150,000 annually—compared to £180,000-£300,000+ for a full-time CFO (including salary, benefits, and overhead).',
+  },
+  {
+    question: 'What does a Fractional CFO do?',
+    answer: 'A Fractional CFO handles strategic financial planning, cash flow management, fundraising support, financial reporting and board packs, budgeting and forecasting, team building, investor relations, compliance, and financial process improvement. They act as a strategic partner to the CEO and leadership team.',
+  },
+  {
+    question: 'How is a Fractional CFO different from a Finance Director or Financial Controller?',
+    answer: 'A Fractional CFO operates at the strategic level—they focus on capital strategy, fundraising, M&A, and board-level reporting. Finance Directors and Financial Controllers focus more on operational finance, day-to-day accounting, and financial controls. Many companies use a fractional CFO alongside an internal FD or FC.',
+  },
+  {
+    question: 'How long do Fractional CFO engagements typically last?',
+    answer: 'Most fractional CFO engagements start with a 6-month commitment and extend based on mutual fit. Many become ongoing relationships lasting 2-3+ years. Engagements can flex up (during fundraising) or down (during steady periods) based on your needs.',
+  },
+  {
+    question: 'What should I look for when hiring a Fractional CFO?',
+    answer: 'Look for: relevant industry experience (SaaS metrics, e-commerce, etc.); track record with companies at your stage; specific expertise you need (fundraising, M&A, international expansion); cultural fit with your team; professional qualifications (ACA, ACCA, CIMA); and strong communication skills for board and investor interactions.',
+  },
+  {
+    question: 'Can a Fractional CFO help with fundraising?',
+    answer: 'Yes—fundraising support is one of the most common reasons to hire a fractional CFO. They can build financial models, prepare data rooms, create investor presentations, manage due diligence, negotiate terms, and provide credibility with investors. Many fractional CFOs have raised hundreds of millions across multiple deals.',
+  },
+]
+
+export const CMO_SERVICE_FAQS: FAQItem[] = [
+  {
+    question: 'What is a Fractional CMO?',
+    answer: 'A Fractional CMO is an experienced Chief Marketing Officer who works with your company part-time, typically 1-3 days per week. You get strategic marketing leadership, team management, and growth expertise without the cost of a full-time executive hire.',
+  },
+  {
+    question: 'When should my company hire a Fractional CMO?',
+    answer: 'Consider hiring a fractional CMO when: you need to build or rebuild your marketing strategy; your marketing team needs senior leadership; you\'re scaling and need to professionalise marketing; you\'re launching into new markets or segments; your current marketing isn\'t delivering results; or you need expertise in specific areas (PLG, demand gen, brand).',
+  },
+  {
+    question: 'How much does a Fractional CMO cost?',
+    answer: 'Fractional CMOs typically charge £700-£1,400 per day in the UK. At 2 days per week, this translates to roughly £70,000-£140,000 annually—compared to £150,000-£250,000+ for a full-time CMO (including salary, benefits, and overhead). You save 40-60% while getting equivalent expertise.',
+  },
+  {
+    question: 'What does a Fractional CMO do?',
+    answer: 'A Fractional CMO develops marketing strategy, manages and mentors your marketing team, oversees campaigns and channels, builds marketing infrastructure, tracks performance metrics, manages agency relationships, aligns marketing with sales, and reports to the board on marketing performance and ROI.',
+  },
+  {
+    question: 'How is a Fractional CMO different from a marketing agency?',
+    answer: 'A Fractional CMO is an embedded leader—they join your team, attend leadership meetings, manage your people, and take ownership of results. Agencies execute specific campaigns or channels but don\'t provide strategic leadership or team management. Many companies use both: a fractional CMO to lead strategy with agencies handling execution.',
+  },
+  {
+    question: 'What experience should a Fractional CMO have?',
+    answer: 'Look for: 12-15+ years of marketing experience with 5+ years in leadership roles; proven track record of driving growth; expertise relevant to your business (B2B, DTC, PLG, ABM); experience at companies similar to your stage; team building and management experience; and strong analytical skills.',
+  },
+  {
+    question: 'Can a Fractional CMO work with my existing marketing team?',
+    answer: 'Yes—managing and mentoring existing teams is a core part of the role. A fractional CMO can provide the leadership and direction your team needs, help develop team members, identify skill gaps, and make hiring recommendations. They provide the "CMO layer" that many marketing teams are missing.',
+  },
+  {
+    question: 'How quickly can a Fractional CMO make an impact?',
+    answer: 'Most fractional CMOs can begin adding value within the first 2-4 weeks—conducting audits, identifying quick wins, and developing initial strategy. Significant results typically emerge within 3-6 months as strategies are implemented. The key is that fractional CMOs are experienced and can move fast.',
+  },
+]
+
+export const CTO_SERVICE_FAQS: FAQItem[] = [
+  {
+    question: 'What is a Fractional CTO?',
+    answer: 'A Fractional CTO is an experienced Chief Technology Officer who works with your company part-time, typically 1-3 days per week. You get technical leadership, architecture guidance, and engineering strategy without the cost of a full-time CTO.',
+  },
+  {
+    question: 'When should my company hire a Fractional CTO?',
+    answer: 'Consider hiring a fractional CTO when: you\'re building your first product and need technical direction; your engineering team needs senior leadership; you\'re preparing for fundraising and need technical credibility; you\'re scaling and need to evolve your architecture; or you need expertise in specific areas (AI, security, cloud migration).',
+  },
+  {
+    question: 'How much does a Fractional CTO cost?',
+    answer: 'Fractional CTOs typically charge £850-£1,600 per day in the UK, with specialised expertise (AI, security) at the higher end. At 2 days per week, this translates to roughly £85,000-£160,000 annually—compared to £180,000-£350,000+ for a full-time CTO.',
+  },
+  {
+    question: 'What does a Fractional CTO do?',
+    answer: 'A Fractional CTO sets technical strategy, makes architecture decisions, leads and mentors engineering teams, conducts code and security reviews, manages technical debt, oversees vendor selection, supports fundraising with technical credibility, and reports to the board on technology matters.',
+  },
+  {
+    question: 'Can a Fractional CTO help with technical due diligence?',
+    answer: 'Yes—technical due diligence is a common reason to engage a fractional CTO. They can prepare your technology for investor scrutiny, address technical debt concerns, document architecture, and represent your technical capabilities during fundraising or M&A processes.',
+  },
+  {
+    question: 'What\'s the difference between a Fractional CTO and a technical consultant?',
+    answer: 'A Fractional CTO takes ownership and accountability—they lead your technical function, make decisions, manage people, and are responsible for outcomes. Technical consultants typically advise on specific problems without ongoing leadership responsibility. A fractional CTO is part of your team.',
+  },
+  {
+    question: 'What experience should a Fractional CTO have?',
+    answer: 'Look for: 15+ years of engineering experience with significant leadership roles; experience at companies similar to your stage and scale; relevant technical expertise (your stack, your challenges); track record of building and scaling teams; strong communication skills for board and investor interactions.',
+  },
+  {
+    question: 'How does a Fractional CTO work with existing developers?',
+    answer: 'A Fractional CTO provides the technical leadership layer your developers need. They set technical direction, remove blockers, make architecture decisions, conduct code reviews, mentor senior engineers, and create the processes and standards that help teams work effectively. They elevate your whole engineering function.',
+  },
+]
+
+export const COO_SERVICE_FAQS: FAQItem[] = [
+  {
+    question: 'What is a Fractional COO?',
+    answer: 'A Fractional COO is an experienced Chief Operating Officer who works with your company part-time, typically 1-3 days per week. You get operational leadership, process optimisation, and scaling expertise without the cost of a full-time COO.',
+  },
+  {
+    question: 'When should my company hire a Fractional COO?',
+    answer: 'Consider hiring a fractional COO when: you\'re scaling rapidly and operations are struggling to keep up; your processes are inefficient or undocumented; you need to build operational infrastructure; you\'re experiencing growing pains; or the CEO is spending too much time on operations instead of strategy.',
+  },
+  {
+    question: 'How much does a Fractional COO cost?',
+    answer: 'Fractional COOs typically charge £750-£1,400 per day in the UK. At 2 days per week, this translates to roughly £75,000-£140,000 annually—compared to £160,000-£250,000+ for a full-time COO.',
+  },
+  {
+    question: 'What does a Fractional COO do?',
+    answer: 'A Fractional COO optimises operations and processes, implements systems and tools, manages key initiatives and projects, builds operational teams, creates playbooks and SOPs, oversees vendor relationships, drives cross-functional alignment, and frees the CEO to focus on strategy and growth.',
+  },
+  {
+    question: 'How is a Fractional COO different from an Operations Manager?',
+    answer: 'A Fractional COO operates at the strategic level—they design the operating model, make decisions about systems and structure, and work across all departments. Operations Managers focus on day-to-day execution within specific areas. A fractional COO often builds the framework that operations managers then run.',
+  },
+  {
+    question: 'What experience should a Fractional COO have?',
+    answer: 'Look for: 15+ years of operations experience with senior leadership roles; experience scaling companies similar to yours; track record of building systems and processes; cross-functional experience (operations touches everything); project management and implementation skills; and change management expertise.',
+  },
+]

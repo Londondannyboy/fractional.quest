@@ -6,14 +6,15 @@ import { JobCard } from "@/components/JobCard";
 import { AuthAwareHumeWidget } from "@/components/AuthAwareHumeWidget";
 import { VideoHeroBackground } from "@/components/VideoHeroBackground";
 import { AnimatedStats } from "@/components/AnimatedStats";
+import { LatestNews } from "@/components/RoleNews";
 
 // Mux video playback ID for the hero background
 // Woman walking - professional executive theme
 const HERO_VIDEO_PLAYBACK_ID: string | undefined = "qIS6PGKxIZyzjrDBzxQuqPRBOhHofDnXq1chdsqAY9Y";
 
 export const metadata: Metadata = {
-  title: "Fractional Jobs UK | CFO, CTO, CMO Roles",
-  description: "Discover the best fractional jobs in the UK. Browse fractional CFO, CMO, CTO and executive roles in London. Connect with leading fractional recruitment agencies and find flexible leadership opportunities.",
+  title: "Fractional Executive Services UK | Hire Fractional CFO, CMO, CTO",
+  description: "Hire fractional executives for your business. Access senior CFO, CMO, CTO leadership at a fraction of full-time cost. UK's marketplace for fractional executive services.",
   alternates: {
     canonical: "https://fractional.quest",
   },
@@ -138,29 +139,12 @@ async function getDetailedStats() {
   }
 }
 
-async function getLatestArticles() {
-  try {
-    const sql = createDbQuery()
-    const articles = await sql`
-      SELECT slug, title, description, published_date
-      FROM articles
-      WHERE status = 'published' AND app = 'fractional'
-      ORDER BY published_date DESC
-      LIMIT 3
-    `
-    return articles
-  } catch (error) {
-    return []
-  }
-}
-
 export default async function Home() {
-  const [sections, totalJobs, featuredJobs, detailedStats, latestArticles] = await Promise.all([
+  const [sections, totalJobs, featuredJobs, detailedStats] = await Promise.all([
     getHomepageContent(),
     getJobStats(),
     getFeaturedJobs(),
-    getDetailedStats(),
-    getLatestArticles()
+    getDetailedStats()
   ])
 
   // Extract sections by type
@@ -272,38 +256,39 @@ export default async function Home() {
               {/* Left: Main content */}
               <div className="max-w-2xl">
                 <div className="bg-black/40 backdrop-blur-md rounded-2xl p-6 md:p-10 border border-white/10">
-                  <span className="inline-block bg-white/10 backdrop-blur text-white/90 px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-wider mb-6">
-                    Beta Launch — December 2025
+                  <span className="inline-block bg-emerald-500/20 backdrop-blur text-emerald-300 px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-wider mb-6">
+                    UK's Fractional Executive Marketplace
                   </span>
 
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 leading-[1.1]">
-                    Fractional Jobs UK
+                    Hire Fractional<br />Executives
                   </h1>
 
                   {/* Hidden image for SEO - contains keyword in alt text */}
                   <img
                     src="/logo.svg"
-                    alt="Fractional jobs UK platform for executive roles"
+                    alt="Hire fractional executives UK - CFO CMO CTO services"
                     className="sr-only"
                     aria-hidden="true"
                   />
 
                   <p className="text-lg text-white/70 mb-8 leading-relaxed">
-                    Find fractional CFO, CTO, CMO and executive roles across the UK.
+                    Access senior CFO, CMO, CTO leadership at a fraction of full-time cost.
+                    Start within days, not months.
                   </p>
 
                   <div className="flex flex-wrap gap-3">
                     <Link
-                      href="/fractional-jobs"
-                      className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg bg-white text-black hover:bg-white/90 transition-all duration-200"
+                      href="#services"
+                      className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg bg-emerald-500 text-black hover:bg-emerald-400 transition-all duration-200"
                     >
-                      {totalJobs > 0 ? `Browse ${totalJobs} Jobs` : 'Explore Jobs'} →
+                      Find a Fractional Executive →
                     </Link>
                     <Link
-                      href="/handler/sign-up"
+                      href="/fractional-jobs"
                       className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg bg-white/10 backdrop-blur border border-white/20 text-white hover:bg-white/20 transition-all duration-200"
                     >
-                      Join Beta
+                      I'm an Executive
                     </Link>
                   </div>
                 </div>
@@ -314,20 +299,20 @@ export default async function Home() {
                 <div className="bg-black/40 backdrop-blur-md rounded-2xl p-6 border border-white/10">
                   <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                     <div className="text-center">
-                      <div className="text-3xl md:text-4xl font-bold text-white font-mono">£600</div>
-                      <div className="text-xs text-white/50 uppercase tracking-wider mt-1">Avg Day Rate</div>
+                      <div className="text-3xl md:text-4xl font-bold text-emerald-400 font-mono">60%</div>
+                      <div className="text-xs text-white/50 uppercase tracking-wider mt-1">Cost Savings</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl md:text-4xl font-bold text-white font-mono">{totalJobs || 2}</div>
-                      <div className="text-xs text-white/50 uppercase tracking-wider mt-1">Live Roles</div>
+                      <div className="text-3xl md:text-4xl font-bold text-white font-mono">7 Days</div>
+                      <div className="text-xs text-white/50 uppercase tracking-wider mt-1">To Start</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl md:text-4xl font-bold text-white font-mono">58+</div>
-                      <div className="text-xs text-white/50 uppercase tracking-wider mt-1">Articles</div>
+                      <div className="text-3xl md:text-4xl font-bold text-white font-mono">1-3</div>
+                      <div className="text-xs text-white/50 uppercase tracking-wider mt-1">Days/Week</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl md:text-4xl font-bold text-white font-mono">272</div>
-                      <div className="text-xs text-white/50 uppercase tracking-wider mt-1">Pages</div>
+                      <div className="text-3xl md:text-4xl font-bold text-white font-mono">15+ Yrs</div>
+                      <div className="text-xs text-white/50 uppercase tracking-wider mt-1">Experience</div>
                     </div>
                   </div>
                 </div>
@@ -337,103 +322,114 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Beta Banner */}
-      <section className="bg-gradient-to-r from-amber-50 to-orange-50 border-b border-amber-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <span className="text-3xl">🚀</span>
-              <div>
-                <p className="font-bold text-gray-900">Beta Launch — December 2025</p>
-                <p className="text-sm text-gray-600">Sign up to tell us what fractional roles you're looking for</p>
-              </div>
-            </div>
-            <Link
-              href="/handler/sign-up"
-              className="px-6 py-2 bg-purple-700 text-white font-semibold rounded-lg hover:bg-purple-800 transition-colors whitespace-nowrap"
-            >
-              Join Beta →
+      {/* Services Banner */}
+      <section id="services" className="bg-gradient-to-r from-emerald-50 to-teal-50 border-b border-emerald-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Fractional Executive Services</h2>
+            <p className="text-gray-600">Senior leadership for growing companies</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Link href="/fractional-cfo-services" className="bg-white rounded-xl p-4 text-center hover:shadow-lg transition-shadow border border-emerald-100">
+              <span className="text-3xl block mb-2">💰</span>
+              <span className="font-bold text-gray-900 block">Fractional CFO</span>
+              <span className="text-sm text-gray-500">Financial Leadership</span>
+            </Link>
+            <Link href="/fractional-cmo-services" className="bg-white rounded-xl p-4 text-center hover:shadow-lg transition-shadow border border-emerald-100">
+              <span className="text-3xl block mb-2">📢</span>
+              <span className="font-bold text-gray-900 block">Fractional CMO</span>
+              <span className="text-sm text-gray-500">Marketing Leadership</span>
+            </Link>
+            <Link href="/fractional-cto-services" className="bg-white rounded-xl p-4 text-center hover:shadow-lg transition-shadow border border-emerald-100">
+              <span className="text-3xl block mb-2">💻</span>
+              <span className="font-bold text-gray-900 block">Fractional CTO</span>
+              <span className="text-sm text-gray-500">Technical Leadership</span>
+            </Link>
+            <Link href="/fractional-coo-services" className="bg-white rounded-xl p-4 text-center hover:shadow-lg transition-shadow border border-emerald-100">
+              <span className="text-3xl block mb-2">⚙️</span>
+              <span className="font-bold text-gray-900 block">Fractional COO</span>
+              <span className="text-sm text-gray-500">Operations Leadership</span>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* What Are Fractional Jobs? - SEO Content */}
+      {/* Why Hire Fractional - Company Focused */}
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">What Are Fractional Jobs?</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Hire Fractional Executives?</h2>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Fractional jobs are part-time executive roles where experienced professionals work with companies for a fraction of the week. Instead of one full-time position, you work 1-3 days per week with multiple companies, delivering strategic impact while maintaining flexibility.
+              Get the strategic leadership your company needs without the cost and commitment of full-time executive hires. Fractional executives work 1-3 days per week, bringing senior expertise to growing businesses.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-3xl">⏰</span>
+              <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+                <span className="text-3xl">💰</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Part-Time Leadership</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">60% Cost Savings</h3>
               <p className="text-gray-600">
-                Work 1-3 days per week per client. Maintain flexibility while delivering strategic impact. Fractional executives typically work with 2-4 companies simultaneously.
+                Access CFO, CMO, or CTO expertise at 40-60% less than a full-time hire. Pay only for the time you need—no salary, benefits, or overhead.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-3xl">🏢</span>
+              <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+                <span className="text-3xl">⚡</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Portfolio Career</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Start in Days</h3>
               <p className="text-gray-600">
-                Build a diverse portfolio working with multiple companies. Diversify your income streams and gain experience across different industries, stages, and challenges.
+                Skip the 3-6 month recruitment process. Fractional executives can start within days, bringing immediate impact with proven playbooks.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-3xl">💼</span>
+              <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+                <span className="text-3xl">🎯</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Executive Expertise</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Senior Expertise</h3>
               <p className="text-gray-600">
-                Companies get senior CFO, CMO, CTO, COO, and HR expertise without the cost of a full-time executive hire. Perfect for startups, scale-ups, and SMEs.
+                Get 15-20+ years of experience from executives who've solved your challenges before. No learning on the job—just proven results.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Roles Section - Static content about role types */}
+      {/* Roles Section - Link to Service Pages */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Fractional Executive Roles</h2>
-            <p className="text-xl text-gray-600">Part-time leadership positions for experienced executives</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Hire Fractional Executives</h2>
+            <p className="text-xl text-gray-600">Senior leadership for every function</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: '💰', name: 'Fractional CFO', description: 'Financial leadership, fundraising, reporting, and strategic planning on a part-time basis', link: '/cfo' },
-              { icon: '📢', name: 'Fractional CMO', description: 'Marketing strategy, brand building, and growth marketing for multiple companies', link: '/cmo' },
-              { icon: '💻', name: 'Fractional CTO', description: 'Technology leadership, architecture decisions, and team building without full-time commitment', link: '/cto' },
-              { icon: '⚙️', name: 'Fractional COO', description: 'Operations excellence, process optimization, and scaling for growing businesses', link: '/coo' },
-              { icon: '👥', name: 'Fractional HR Director', description: 'People strategy, culture building, and HR systems for startups and scale-ups', link: '/hr' },
-              { icon: '📈', name: 'Fractional Sales Director', description: 'Sales strategy, team leadership, and revenue growth on flexible terms', link: '/fractional-jobs?role=Sales' },
+              { icon: '💰', name: 'Fractional CFO', description: 'Financial strategy, fundraising, investor relations, and reporting. Perfect for Series A-C companies.', link: '/fractional-cfo-services', color: 'emerald' },
+              { icon: '📢', name: 'Fractional CMO', description: 'Marketing strategy, growth leadership, brand building, and team management for scaling companies.', link: '/fractional-cmo-services', color: 'amber' },
+              { icon: '💻', name: 'Fractional CTO', description: 'Technical leadership, architecture decisions, team building, and technical due diligence.', link: '/fractional-cto-services', color: 'blue' },
+              { icon: '⚙️', name: 'Fractional COO', description: 'Operations excellence, process optimisation, and scaling infrastructure for growth.', link: '/fractional-coo-services', color: 'orange' },
+              { icon: '👥', name: 'Fractional HR Director', description: 'People strategy, culture building, hiring systems, and organisational design.', link: '/fractional-chro-services', color: 'pink' },
+              { icon: '📈', name: 'Fractional Sales Director', description: 'Sales strategy, team leadership, process development, and revenue acceleration.', link: '/fractional-sales-director-services', color: 'purple' },
             ].map((role, i) => (
               <Link
                 key={i}
                 href={role.link}
                 className="group"
               >
-                <div className="p-6 bg-gray-50 rounded-xl hover:bg-purple-50 hover:shadow-lg transition-all duration-200 border border-transparent hover:border-purple-200">
+                <div className="p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 hover:shadow-lg transition-all duration-200 border border-transparent hover:border-emerald-200">
                   <div className="flex items-start gap-4">
                     <span className="text-4xl">{role.icon}</span>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-purple-700 transition-colors mb-1">
+                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-emerald-700 transition-colors mb-1">
                         {role.name}
                       </h3>
                       <p className="text-gray-600 text-sm mb-3">{role.description}</p>
-                      <span className="inline-flex items-center gap-1 text-purple-700 font-semibold text-sm">
-                        Learn more
+                      <span className="inline-flex items-center gap-1 text-emerald-700 font-semibold text-sm">
+                        Hire Now
                         <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -498,50 +494,54 @@ export default async function Home() {
         </section>
       )}
 
-      {/* Why We're Building This Section */}
-      <section className="py-20 md:py-28 bg-purple-900">
+      {/* How It Works for Companies */}
+      <section className="py-20 md:py-28 bg-emerald-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why We're Building Fractional.Quest</h2>
-            <p className="text-xl text-purple-200">The UK fractional market deserves a dedicated platform</p>
+            <h2 className="text-4xl font-bold text-white mb-4">How It Works</h2>
+            <p className="text-xl text-emerald-200">From first conversation to start date in as little as 7 days</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur rounded-xl p-8 border border-white/20">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-bold text-white mb-3">Focused on Fractional</h3>
-              <p className="text-purple-200">
-                Unlike generic job boards, we're 100% focused on fractional and part-time executive roles. No noise, just opportunities that match your working style.
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="bg-white/10 backdrop-blur rounded-xl p-8 border border-white/20 text-center">
+              <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-black text-black">1</div>
+              <h3 className="text-xl font-bold text-white mb-3">Brief</h3>
+              <p className="text-emerald-200">
+                Tell us about your needs, company stage, and what you're looking for in a fractional executive.
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur rounded-xl p-8 border border-white/20">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-bold text-white mb-3">AI-Powered Matching</h3>
-              <p className="text-purple-200">
-                Our AI scans thousands of job postings daily, identifying true fractional opportunities and filtering out the noise so you don't have to.
+            <div className="bg-white/10 backdrop-blur rounded-xl p-8 border border-white/20 text-center">
+              <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-black text-black">2</div>
+              <h3 className="text-xl font-bold text-white mb-3">Match</h3>
+              <p className="text-emerald-200">
+                We curate a shortlist of pre-vetted fractional executives who match your specific requirements.
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur rounded-xl p-8 border border-white/20">
-              <div className="text-4xl mb-4">🇬🇧</div>
-              <h3 className="text-xl font-bold text-white mb-3">UK-First Approach</h3>
-              <p className="text-purple-200">
-                Built specifically for the UK market, covering London, Manchester, Birmingham, Edinburgh, and remote opportunities across the country.
+            <div className="bg-white/10 backdrop-blur rounded-xl p-8 border border-white/20 text-center">
+              <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-black text-black">3</div>
+              <h3 className="text-xl font-bold text-white mb-3">Meet</h3>
+              <p className="text-emerald-200">
+                Interview your top candidates. We handle scheduling and provide interview frameworks.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur rounded-xl p-8 border border-white/20 text-center">
+              <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-black text-black">4</div>
+              <h3 className="text-xl font-bold text-white mb-3">Start</h3>
+              <p className="text-emerald-200">
+                Your fractional executive begins within days. We support onboarding and ongoing success.
               </p>
             </div>
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-purple-200 text-lg mb-6">
-              We're building our job database. Sign up to tell us what you're looking for <br className="hidden md:block" />
-              and we'll match you with opportunities as they come in.
-            </p>
             <Link
               href="/handler/sign-up"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg bg-white text-purple-900 hover:bg-purple-50 transition-all duration-200"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg bg-white text-emerald-900 hover:bg-emerald-50 transition-all duration-200"
             >
-              Join Beta →
+              Find a Fractional Executive →
             </Link>
           </div>
         </div>
@@ -601,50 +601,12 @@ export default async function Home() {
         </section>
       )}
 
-      {/* Latest Articles Section */}
-      {(latestArticles as any[]).length > 0 && (
-        <section className="py-20 md:py-28 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-end mb-12">
-              <div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">Latest Fractional Career Guides</h2>
-                <p className="text-xl text-gray-600">Expert insights on building a successful fractional career</p>
-              </div>
-              <Link
-                href="/fractional-jobs-articles"
-                className="hidden md:inline-flex items-center text-purple-700 font-semibold hover:text-purple-900 transition-colors"
-              >
-                View all articles →
-              </Link>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {(latestArticles as any[]).map((article: any) => (
-                <Link key={article.slug} href={`/${article.slug}`} className="group">
-                  <article className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-200">
-                    <div className="h-48 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
-                      <span className="text-6xl">📚</span>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-purple-700 transition-colors mb-3 line-clamp-2">
-                        {article.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm line-clamp-2">{article.description}</p>
-                    </div>
-                  </article>
-                </Link>
-              ))}
-            </div>
-            <div className="mt-8 text-center md:hidden">
-              <Link
-                href="/fractional-jobs-articles"
-                className="inline-flex items-center text-purple-700 font-semibold hover:text-purple-900 transition-colors"
-              >
-                View all articles →
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
+      {/* Latest News Section - Auto-generated + Manual Articles */}
+      <section className="py-20 md:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <LatestNews limit={6} />
+        </div>
+      </section>
 
       {/* FAQ Section - SEO Rich */}
       <section className="py-20 md:py-28 bg-white">
@@ -721,18 +683,28 @@ export default async function Home() {
       {/* Internal Links Section - SEO */}
       <section className="py-16 bg-gray-50 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Popular Fractional Executive Resources</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Fractional Executive Resources</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* By Role */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* Services - For Companies */}
+            <div>
+              <h3 className="font-bold text-gray-900 mb-4">Hire Fractional Executives</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li><Link href="/fractional-cfo-services" className="hover:text-emerald-700 transition-colors">Fractional CFO Services</Link></li>
+                <li><Link href="/fractional-cmo-services" className="hover:text-emerald-700 transition-colors">Fractional CMO Services</Link></li>
+                <li><Link href="/fractional-cto-services" className="hover:text-emerald-700 transition-colors">Fractional CTO Services</Link></li>
+                <li><Link href="/fractional-coo-services" className="hover:text-emerald-700 transition-colors">Fractional COO Services</Link></li>
+              </ul>
+            </div>
+
+            {/* Jobs - For Executives */}
             <div>
               <h3 className="font-bold text-gray-900 mb-4">Fractional Jobs by Role</h3>
               <ul className="space-y-2 text-gray-600">
-                <li><Link href="/fractional-cfo-jobs-uk" className="hover:text-purple-700 transition-colors">Fractional CFO Jobs UK</Link></li>
-                <li><Link href="/fractional-cmo-jobs-uk" className="hover:text-purple-700 transition-colors">Fractional CMO Jobs UK</Link></li>
-                <li><Link href="/fractional-cto-jobs-uk" className="hover:text-purple-700 transition-colors">Fractional CTO Jobs UK</Link></li>
-                <li><Link href="/fractional-coo-jobs-uk" className="hover:text-purple-700 transition-colors">Fractional COO Jobs UK</Link></li>
-                <li><Link href="/fractional-hr-jobs-uk" className="hover:text-purple-700 transition-colors">Fractional HR Jobs UK</Link></li>
+                <li><Link href="/fractional-cfo-jobs-uk" className="hover:text-emerald-700 transition-colors">Fractional CFO Jobs UK</Link></li>
+                <li><Link href="/fractional-cmo-jobs-uk" className="hover:text-emerald-700 transition-colors">Fractional CMO Jobs UK</Link></li>
+                <li><Link href="/fractional-cto-jobs-uk" className="hover:text-emerald-700 transition-colors">Fractional CTO Jobs UK</Link></li>
+                <li><Link href="/fractional-coo-jobs-uk" className="hover:text-emerald-700 transition-colors">Fractional COO Jobs UK</Link></li>
               </ul>
             </div>
 
@@ -740,23 +712,21 @@ export default async function Home() {
             <div>
               <h3 className="font-bold text-gray-900 mb-4">Fractional Jobs by Location</h3>
               <ul className="space-y-2 text-gray-600">
-                <li><Link href="/fractional-jobs-london" className="hover:text-purple-700 transition-colors">Fractional Jobs London</Link></li>
-                <li><Link href="/fractional-jobs-manchester" className="hover:text-purple-700 transition-colors">Fractional Jobs Manchester</Link></li>
-                <li><Link href="/fractional-jobs-birmingham" className="hover:text-purple-700 transition-colors">Fractional Jobs Birmingham</Link></li>
-                <li><Link href="/fractional-jobs-edinburgh" className="hover:text-purple-700 transition-colors">Fractional Jobs Edinburgh</Link></li>
-                <li><Link href="/remote-fractional-jobs" className="hover:text-purple-700 transition-colors">Remote Fractional Jobs</Link></li>
+                <li><Link href="/fractional-jobs-london" className="hover:text-emerald-700 transition-colors">Fractional Jobs London</Link></li>
+                <li><Link href="/fractional-jobs-manchester" className="hover:text-emerald-700 transition-colors">Fractional Jobs Manchester</Link></li>
+                <li><Link href="/fractional-jobs-birmingham" className="hover:text-emerald-700 transition-colors">Fractional Jobs Birmingham</Link></li>
+                <li><Link href="/fractional-jobs-edinburgh" className="hover:text-emerald-700 transition-colors">Fractional Jobs Edinburgh</Link></li>
               </ul>
             </div>
 
             {/* Guides */}
             <div>
-              <h3 className="font-bold text-gray-900 mb-4">Fractional Executive Guides</h3>
+              <h3 className="font-bold text-gray-900 mb-4">Guides & Resources</h3>
               <ul className="space-y-2 text-gray-600">
-                <li><Link href="/how-to-become-a-fractional-executive" className="hover:text-purple-700 transition-colors">How to Become a Fractional Executive</Link></li>
-                <li><Link href="/fractional-executive-salary-uk" className="hover:text-purple-700 transition-colors">Fractional Executive Salary UK</Link></li>
-                <li><Link href="/what-is-fractional-work" className="hover:text-purple-700 transition-colors">What is Fractional Work?</Link></li>
-                <li><Link href="/fractional-vs-interim" className="hover:text-purple-700 transition-colors">Fractional vs Interim Roles</Link></li>
-                <li><Link href="/fractional-jobs-articles" className="hover:text-purple-700 transition-colors">All Fractional Career Guides</Link></li>
+                <li><Link href="/fractional-cfo-salary" className="hover:text-emerald-700 transition-colors">CFO Salary Guide</Link></li>
+                <li><Link href="/fractional-cmo-salary" className="hover:text-emerald-700 transition-colors">CMO Salary Guide</Link></li>
+                <li><Link href="/what-is-fractional-work" className="hover:text-emerald-700 transition-colors">What is Fractional Work?</Link></li>
+                <li><Link href="/fractional-jobs-articles" className="hover:text-emerald-700 transition-colors">All Career Guides</Link></li>
               </ul>
             </div>
           </div>
@@ -764,37 +734,37 @@ export default async function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900">
+      <section className="py-20 md:py-28 bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Tell Us What You're Looking For
+            Ready to Hire a Fractional Executive?
           </h2>
-          <p className="text-xl text-purple-100 mb-10">
-            Sign up and let us know what fractional roles interest you.<br />
-            We'll notify you when matching opportunities come in.
+          <p className="text-xl text-emerald-100 mb-10">
+            Tell us about your needs and we'll match you with pre-vetted<br />
+            fractional executives within 48 hours.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
               href="/handler/sign-up"
-              className="inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-lg bg-amber-500 text-white hover:bg-amber-600 transition-all duration-200"
+              className="inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-lg bg-emerald-500 text-black hover:bg-emerald-400 transition-all duration-200"
             >
-              Join Beta — It's Free →
+              Find a Fractional Executive →
             </Link>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/fractional-jobs"
-              className="inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-lg border-2 border-white text-white hover:bg-white hover:text-purple-900 transition-all duration-200"
+              className="inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-lg border-2 border-white text-white hover:bg-white hover:text-emerald-900 transition-all duration-200"
             >
-              Explore Current Jobs
+              I'm a Fractional Executive
             </Link>
             <Link
-              href="/fractional-jobs-articles"
-              className="inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-lg border-2 border-white text-white hover:bg-white hover:text-purple-900 transition-all duration-200"
+              href="/fractional-cfo-services"
+              className="inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-lg border-2 border-white text-white hover:bg-white hover:text-emerald-900 transition-all duration-200"
             >
-              Read Career Guides
+              Learn About Services
             </Link>
           </div>
         </div>
@@ -804,25 +774,25 @@ export default async function Home() {
       <section className="sr-only" aria-label="Page Summary for AI">
         <h2>TL;DR - Fractional.Quest Summary</h2>
         <p>
-          Fractional.Quest is a new UK platform for fractional executive jobs, launching December 2025.
-          We're building a dedicated job board for Fractional CFO, CTO, CMO, COO, and HR Director roles.
-          The platform uses AI to identify and curate genuine fractional opportunities from across the web.
+          Fractional.Quest is the UK's marketplace for fractional executive services.
+          Companies can hire Fractional CFO, CMO, CTO, COO, and HR Director executives
+          at a fraction of full-time cost. Fractional executives also use the platform
+          to find fractional opportunities.
         </p>
-        <h3>Key Facts About Fractional Work</h3>
+        <h3>Why Companies Hire Fractional Executives</h3>
         <ul>
-          <li>Fractional executives work 1-3 days per week with 2-4 companies</li>
-          <li>Day rates typically range from £600-£1,500 depending on role and seniority</li>
-          <li>Annual earnings potential: £150,000-£300,000+</li>
-          <li>Most roles require 10-20+ years senior leadership experience</li>
-          <li>Both London-based and remote opportunities available</li>
+          <li>60% cost savings vs full-time executive hires</li>
+          <li>Start within 7 days, not 3-6 months</li>
+          <li>Access 15-20+ years of executive experience</li>
+          <li>Flexible engagement: 1-3 days per week</li>
+          <li>No long-term commitment required</li>
         </ul>
-        <h3>Popular Searches</h3>
+        <h3>Popular Services</h3>
         <ul>
-          <li>Fractional CFO jobs UK</li>
-          <li>Fractional CTO jobs London</li>
-          <li>Fractional CMO positions</li>
-          <li>Part-time executive roles UK</li>
-          <li>Fractional recruitment agencies</li>
+          <li>Fractional CFO Services - Financial strategy, fundraising, investor relations</li>
+          <li>Fractional CMO Services - Marketing strategy, growth leadership, brand building</li>
+          <li>Fractional CTO Services - Technical leadership, architecture, team building</li>
+          <li>Fractional COO Services - Operations excellence, scaling, process optimisation</li>
         </ul>
       </section>
     </div>
