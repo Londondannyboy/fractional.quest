@@ -323,29 +323,29 @@ export default async function Home() {
       </section>
 
       {/* Services Banner */}
-      <section id="services" className="bg-gradient-to-r from-emerald-50 to-teal-50 border-b border-emerald-200">
+      <section id="services" className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center mb-6">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Fractional Executive Services</h2>
             <p className="text-gray-600">Senior leadership for growing companies</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Link href="/fractional-cfo-services" className="bg-white rounded-xl p-4 text-center hover:shadow-lg transition-shadow border border-emerald-100">
+            <Link href="/fractional-cfo-services" className="bg-gray-50 rounded-xl p-4 text-center hover:shadow-lg transition-shadow border border-gray-200">
               <span className="text-3xl block mb-2">💰</span>
               <span className="font-bold text-gray-900 block">Fractional CFO</span>
               <span className="text-sm text-gray-500">Financial Leadership</span>
             </Link>
-            <Link href="/fractional-cmo-services" className="bg-white rounded-xl p-4 text-center hover:shadow-lg transition-shadow border border-emerald-100">
+            <Link href="/fractional-cmo-services" className="bg-gray-50 rounded-xl p-4 text-center hover:shadow-lg transition-shadow border border-gray-200">
               <span className="text-3xl block mb-2">📢</span>
               <span className="font-bold text-gray-900 block">Fractional CMO</span>
               <span className="text-sm text-gray-500">Marketing Leadership</span>
             </Link>
-            <Link href="/fractional-cto-services" className="bg-white rounded-xl p-4 text-center hover:shadow-lg transition-shadow border border-emerald-100">
+            <Link href="/fractional-cto-services" className="bg-gray-50 rounded-xl p-4 text-center hover:shadow-lg transition-shadow border border-gray-200">
               <span className="text-3xl block mb-2">💻</span>
               <span className="font-bold text-gray-900 block">Fractional CTO</span>
               <span className="text-sm text-gray-500">Technical Leadership</span>
             </Link>
-            <Link href="/fractional-coo-services" className="bg-white rounded-xl p-4 text-center hover:shadow-lg transition-shadow border border-emerald-100">
+            <Link href="/fractional-coo-services" className="bg-gray-50 rounded-xl p-4 text-center hover:shadow-lg transition-shadow border border-gray-200">
               <span className="text-3xl block mb-2">⚙️</span>
               <span className="font-bold text-gray-900 block">Fractional COO</span>
               <span className="text-sm text-gray-500">Operations Leadership</span>
@@ -356,14 +356,12 @@ export default async function Home() {
 
       {/* Why Hire Fractional - Company Focused - with subdued video */}
       <section className="py-20 md:py-28 relative overflow-hidden">
-        {/* Video Background - very subdued */}
+        {/* Video Background */}
         <div className="absolute inset-0 z-0">
           <VideoHeroBackground
             playbackId={HERO_VIDEO_PLAYBACK_ID}
             fallbackGradient={true}
           />
-          {/* Heavy overlay to keep it subtle */}
-          <div className="absolute inset-0 bg-gray-50/90" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -375,7 +373,7 @@ export default async function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-3xl">💰</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">60% Cost Savings</h3>
@@ -385,7 +383,7 @@ export default async function Home() {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-3xl">⚡</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Start in Days</h3>
@@ -395,7 +393,7 @@ export default async function Home() {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-3xl">🎯</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Senior Expertise</h3>
@@ -429,15 +427,15 @@ export default async function Home() {
                 href={role.link}
                 className="group"
               >
-                <div className="p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 hover:shadow-lg transition-all duration-200 border border-transparent hover:border-emerald-200">
+                <div className="p-6 bg-gray-50 rounded-xl hover:bg-gray-100 hover:shadow-lg transition-all duration-200 border border-transparent hover:border-gray-300">
                   <div className="flex items-start gap-4">
                     <span className="text-4xl">{role.icon}</span>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-emerald-700 transition-colors mb-1">
+                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-black transition-colors mb-1">
                         {role.name}
                       </h3>
                       <p className="text-gray-600 text-sm mb-3">{role.description}</p>
-                      <span className="inline-flex items-center gap-1 text-emerald-700 font-semibold text-sm">
+                      <span className="inline-flex items-center gap-1 text-gray-900 font-semibold text-sm">
                         Hire Now
                         <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -504,42 +502,42 @@ export default async function Home() {
       )}
 
       {/* How It Works for Companies */}
-      <section className="py-20 md:py-28 bg-emerald-900">
+      <section className="py-20 md:py-28 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">How It Works</h2>
-            <p className="text-xl text-emerald-200">From first conversation to start date in as little as 7 days</p>
+            <p className="text-xl text-gray-400">From first conversation to start date in as little as 7 days</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="bg-white/10 backdrop-blur rounded-xl p-8 border border-white/20 text-center">
-              <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-black text-black">1</div>
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-black text-black">1</div>
               <h3 className="text-xl font-bold text-white mb-3">Brief</h3>
-              <p className="text-emerald-200">
+              <p className="text-gray-400">
                 Tell us about your needs, company stage, and what you're looking for in a fractional executive.
               </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur rounded-xl p-8 border border-white/20 text-center">
-              <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-black text-black">2</div>
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-black text-black">2</div>
               <h3 className="text-xl font-bold text-white mb-3">Match</h3>
-              <p className="text-emerald-200">
+              <p className="text-gray-400">
                 We curate a shortlist of pre-vetted fractional executives who match your specific requirements.
               </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur rounded-xl p-8 border border-white/20 text-center">
-              <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-black text-black">3</div>
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-black text-black">3</div>
               <h3 className="text-xl font-bold text-white mb-3">Meet</h3>
-              <p className="text-emerald-200">
+              <p className="text-gray-400">
                 Interview your top candidates. We handle scheduling and provide interview frameworks.
               </p>
             </div>
 
             <div className="bg-white/10 backdrop-blur rounded-xl p-8 border border-white/20 text-center">
-              <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-black text-black">4</div>
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-black text-black">4</div>
               <h3 className="text-xl font-bold text-white mb-3">Start</h3>
-              <p className="text-emerald-200">
+              <p className="text-gray-400">
                 Your fractional executive begins within days. We support onboarding and ongoing success.
               </p>
             </div>
@@ -548,7 +546,7 @@ export default async function Home() {
           <div className="mt-12 text-center">
             <Link
               href="/handler/sign-up"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg bg-white text-emerald-900 hover:bg-emerald-50 transition-all duration-200"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg bg-white text-gray-900 hover:bg-gray-100 transition-all duration-200"
             >
               Find a Fractional Executive →
             </Link>
@@ -558,14 +556,12 @@ export default async function Home() {
 
       {/* Calculator Section - with subdued video background */}
       <section className="py-20 md:py-28 relative overflow-hidden">
-        {/* Video Background - subdued/dimmed */}
+        {/* Video Background */}
         <div className="absolute inset-0 z-0">
           <VideoHeroBackground
             playbackId={HERO_VIDEO_PLAYBACK_ID}
             fallbackGradient={true}
           />
-          {/* Extra dark overlay to make video more subtle */}
-          <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -708,10 +704,10 @@ export default async function Home() {
             <div>
               <h3 className="font-bold text-gray-900 mb-4">Hire Fractional Executives</h3>
               <ul className="space-y-2 text-gray-600">
-                <li><Link href="/fractional-cfo-services" className="hover:text-emerald-700 transition-colors">Fractional CFO Services</Link></li>
-                <li><Link href="/fractional-cmo-services" className="hover:text-emerald-700 transition-colors">Fractional CMO Services</Link></li>
-                <li><Link href="/fractional-cto-services" className="hover:text-emerald-700 transition-colors">Fractional CTO Services</Link></li>
-                <li><Link href="/fractional-coo-services" className="hover:text-emerald-700 transition-colors">Fractional COO Services</Link></li>
+                <li><Link href="/fractional-cfo-services" className="hover:text-black transition-colors">Fractional CFO Services</Link></li>
+                <li><Link href="/fractional-cmo-services" className="hover:text-black transition-colors">Fractional CMO Services</Link></li>
+                <li><Link href="/fractional-cto-services" className="hover:text-black transition-colors">Fractional CTO Services</Link></li>
+                <li><Link href="/fractional-coo-services" className="hover:text-black transition-colors">Fractional COO Services</Link></li>
               </ul>
             </div>
 
@@ -719,10 +715,10 @@ export default async function Home() {
             <div>
               <h3 className="font-bold text-gray-900 mb-4">Fractional Jobs by Role</h3>
               <ul className="space-y-2 text-gray-600">
-                <li><Link href="/fractional-cfo-jobs-uk" className="hover:text-emerald-700 transition-colors">Fractional CFO Jobs UK</Link></li>
-                <li><Link href="/fractional-cmo-jobs-uk" className="hover:text-emerald-700 transition-colors">Fractional CMO Jobs UK</Link></li>
-                <li><Link href="/fractional-cto-jobs-uk" className="hover:text-emerald-700 transition-colors">Fractional CTO Jobs UK</Link></li>
-                <li><Link href="/fractional-coo-jobs-uk" className="hover:text-emerald-700 transition-colors">Fractional COO Jobs UK</Link></li>
+                <li><Link href="/fractional-cfo-jobs-uk" className="hover:text-black transition-colors">Fractional CFO Jobs UK</Link></li>
+                <li><Link href="/fractional-cmo-jobs-uk" className="hover:text-black transition-colors">Fractional CMO Jobs UK</Link></li>
+                <li><Link href="/fractional-cto-jobs-uk" className="hover:text-black transition-colors">Fractional CTO Jobs UK</Link></li>
+                <li><Link href="/fractional-coo-jobs-uk" className="hover:text-black transition-colors">Fractional COO Jobs UK</Link></li>
               </ul>
             </div>
 
@@ -730,10 +726,10 @@ export default async function Home() {
             <div>
               <h3 className="font-bold text-gray-900 mb-4">Fractional Jobs by Location</h3>
               <ul className="space-y-2 text-gray-600">
-                <li><Link href="/fractional-jobs-london" className="hover:text-emerald-700 transition-colors">Fractional Jobs London</Link></li>
-                <li><Link href="/fractional-jobs-manchester" className="hover:text-emerald-700 transition-colors">Fractional Jobs Manchester</Link></li>
-                <li><Link href="/fractional-jobs-birmingham" className="hover:text-emerald-700 transition-colors">Fractional Jobs Birmingham</Link></li>
-                <li><Link href="/fractional-jobs-edinburgh" className="hover:text-emerald-700 transition-colors">Fractional Jobs Edinburgh</Link></li>
+                <li><Link href="/fractional-jobs-london" className="hover:text-black transition-colors">Fractional Jobs London</Link></li>
+                <li><Link href="/fractional-jobs-manchester" className="hover:text-black transition-colors">Fractional Jobs Manchester</Link></li>
+                <li><Link href="/fractional-jobs-birmingham" className="hover:text-black transition-colors">Fractional Jobs Birmingham</Link></li>
+                <li><Link href="/fractional-jobs-edinburgh" className="hover:text-black transition-colors">Fractional Jobs Edinburgh</Link></li>
               </ul>
             </div>
 
@@ -741,10 +737,10 @@ export default async function Home() {
             <div>
               <h3 className="font-bold text-gray-900 mb-4">Guides & Resources</h3>
               <ul className="space-y-2 text-gray-600">
-                <li><Link href="/fractional-cfo-salary" className="hover:text-emerald-700 transition-colors">CFO Salary Guide</Link></li>
-                <li><Link href="/fractional-cmo-salary" className="hover:text-emerald-700 transition-colors">CMO Salary Guide</Link></li>
-                <li><Link href="/what-is-fractional-work" className="hover:text-emerald-700 transition-colors">What is Fractional Work?</Link></li>
-                <li><Link href="/fractional-jobs-articles" className="hover:text-emerald-700 transition-colors">All Career Guides</Link></li>
+                <li><Link href="/fractional-cfo-salary" className="hover:text-black transition-colors">CFO Salary Guide</Link></li>
+                <li><Link href="/fractional-cmo-salary" className="hover:text-black transition-colors">CMO Salary Guide</Link></li>
+                <li><Link href="/what-is-fractional-work" className="hover:text-black transition-colors">What is Fractional Work?</Link></li>
+                <li><Link href="/fractional-jobs-articles" className="hover:text-black transition-colors">All Career Guides</Link></li>
               </ul>
             </div>
           </div>
@@ -753,14 +749,12 @@ export default async function Home() {
 
       {/* Final CTA Section - with subdued video */}
       <section className="py-20 md:py-28 relative overflow-hidden">
-        {/* Video Background - subdued */}
+        {/* Video Background */}
         <div className="absolute inset-0 z-0">
           <VideoHeroBackground
             playbackId={HERO_VIDEO_PLAYBACK_ID}
             fallbackGradient={true}
           />
-          {/* Dark overlay for text contrast */}
-          <div className="absolute inset-0 bg-black/80" />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
