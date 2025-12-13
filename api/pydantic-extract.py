@@ -72,7 +72,7 @@ def get_agent():
         print(f"[Pydantic AI] Using model: {model}")
         extraction_agent = Agent(
             model=model,
-            result_type=ExtractionResult,
+            output_type=ExtractionResult,
             system_prompt=SYSTEM_PROMPT
         )
     return extraction_agent
