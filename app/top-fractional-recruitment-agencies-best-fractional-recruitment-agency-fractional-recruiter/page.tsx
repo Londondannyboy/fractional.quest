@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { SavingsCalculator } from '@/components/SavingsCalculator'
+import { VideoHeroBackground } from '@/components/VideoHeroBackground'
 import { getAgencies, Agency } from '@/lib/agencies'
 
 export const metadata: Metadata = {
@@ -15,7 +16,10 @@ export const metadata: Metadata = {
   },
 }
 
-export const revalidate = 3600 // Revalidate every hour
+export const revalidate = 3600
+
+// Mux video - professional executive theme (same as CMO page)
+const HERO_VIDEO_PLAYBACK_ID: string | undefined = "qIS6PGKxIZyzjrDBzxQuqPRBOhHofDnXq1chdsqAY9Y"
 
 export default async function TopFractionalRecruitmentAgenciesPage() {
   const agencies = await getAgencies()
@@ -23,96 +27,271 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
   const otherAgencies = agencies.filter(a => !a.payload?.featured)
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Best Fractional Recruitment Agency UK
-            </h1>
-            <p className="text-xl md:text-2xl text-purple-200 mb-8">
-              Find the <strong className="text-white">best fractional recruiters</strong> and <strong className="text-white">top fractional recruitment agencies</strong> to hire fractional executives for your business
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <span className="bg-purple-700/50 text-purple-200 px-4 py-2 rounded-full">Fractional CFO Recruitment</span>
-              <span className="bg-purple-700/50 text-purple-200 px-4 py-2 rounded-full">Fractional CTO Agencies</span>
-              <span className="bg-purple-700/50 text-purple-200 px-4 py-2 rounded-full">Fractional CMO Recruiters</span>
-              <span className="bg-purple-700/50 text-purple-200 px-4 py-2 rounded-full">Fractional COO Search</span>
+    <div className="min-h-screen bg-white">
+      {/* Editorial Hero with Video Background */}
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+        <VideoHeroBackground
+          playbackId={HERO_VIDEO_PLAYBACK_ID}
+          fallbackGradient={true}
+        />
+
+        {/* Hero Content */}
+        <div className="relative z-10 w-full py-20">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Left: Editorial Pitch */}
+              <div>
+                <Link href="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm tracking-wide">
+                  <span className="mr-2">←</span> Back to Home
+                </Link>
+
+                <span className="inline-block bg-amber-500 text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
+                  Executive Recruitment
+                </span>
+
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[0.95] tracking-tight">
+                  UK's Most Comprehensive<br />
+                  <span className="text-amber-400">Fractional Executive</span><br />
+                  Network
+                </h1>
+
+                <p className="text-xl text-white/80 leading-relaxed max-w-xl mb-8">
+                  Access <strong className="text-white">500+ verified fractional executives</strong>—CFOs, CTOs, CMOs, and COOs ready to transform your business.
+                  Transparent fees. Rapid placement. No upfront costs.
+                </p>
+
+                {/* Stats Row */}
+                <div className="flex flex-wrap gap-8 mb-10">
+                  <div>
+                    <div className="text-4xl md:text-5xl font-black text-amber-400">500+</div>
+                    <div className="text-white/60 text-sm uppercase tracking-wider">Verified Executives</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl md:text-5xl font-black text-white">2-3</div>
+                    <div className="text-white/60 text-sm uppercase tracking-wider">Week Placement</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl md:text-5xl font-black text-white">10-15%</div>
+                    <div className="text-white/60 text-sm uppercase tracking-wider">Transparent Fee</div>
+                  </div>
+                </div>
+
+                {/* Trust Badges */}
+                <div className="flex flex-wrap gap-4 text-sm">
+                  <span className="bg-white/10 backdrop-blur text-white px-4 py-2 rounded-full border border-white/20">
+                    90-Day Replacement Guarantee
+                  </span>
+                  <span className="bg-white/10 backdrop-blur text-white px-4 py-2 rounded-full border border-white/20">
+                    Pay Only on Success
+                  </span>
+                </div>
+              </div>
+
+              {/* Right: Contact Form */}
+              <div id="contact-form" className="bg-white rounded-2xl p-8 shadow-2xl">
+                <h2 className="text-2xl font-black text-gray-900 mb-2">Find Your Fractional Executive</h2>
+                <p className="text-gray-600 mb-6">Tell us what you need. We'll match you within 48 hours.</p>
+
+                <form className="space-y-4" action="/contact/companies" method="GET">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-1">Your Name</label>
+                      <input
+                        type="text"
+                        name="name"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                        placeholder="John Smith"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-1">Company</label>
+                      <input
+                        type="text"
+                        name="company"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                        placeholder="Acme Ltd"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                      placeholder="john@company.com"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Role Needed</label>
+                    <select
+                      name="role"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                    >
+                      <option value="">Select a role...</option>
+                      <option value="cfo">Fractional CFO</option>
+                      <option value="cto">Fractional CTO</option>
+                      <option value="cmo">Fractional CMO</option>
+                      <option value="coo">Fractional COO</option>
+                      <option value="chro">Fractional CHRO / HR Director</option>
+                      <option value="ciso">Fractional CISO</option>
+                      <option value="other">Other Executive Role</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Tell us about your needs</label>
+                    <textarea
+                      name="message"
+                      rows={3}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                      placeholder="e.g., Series A startup needs fractional CFO 2 days/week for fundraising support..."
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-amber-500 text-black py-4 rounded-lg font-bold uppercase tracking-wider hover:bg-amber-400 transition-colors"
+                  >
+                    Get Matched in 48 Hours
+                  </button>
+                </form>
+
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <p className="text-center text-gray-600 mb-3">Prefer to speak directly?</p>
+                  <Link
+                    href="/contact"
+                    className="flex items-center justify-center gap-2 w-full py-3 border-2 border-gray-900 text-gray-900 font-bold rounded-lg hover:bg-gray-900 hover:text-white transition-colors"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    Book a Call With Our Team
+                  </Link>
+                </div>
+
+                <p className="text-xs text-gray-500 text-center mt-4">
+                  No obligation. No upfront fees. Confidential.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Calculator Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SavingsCalculator />
-        </div>
-      </section>
-
-      {/* What is Fractional Recruitment Section */}
-      <section className="py-16 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-            What Makes the Best Fractional Recruitment Agency?
-          </h2>
-          <div className="prose prose-lg max-w-none text-gray-700">
-            <p className="text-xl leading-relaxed mb-6">
-              The <strong>best fractional recruitment agency</strong> specialises in connecting businesses with experienced executives who work on a part-time, ongoing basis. Unlike traditional recruitment agencies that place full-time employees, top <strong>fractional recruiters</strong> understand the unique requirements of part-time executive engagements.
-            </p>
-            <p className="text-lg leading-relaxed mb-6">
-              The <strong>best fractional recruitment agencies</strong> in the UK maintain networks of verified fractional CFOs, CTOs, CMOs, COOs, and other C-suite professionals. They understand that fractional hiring requires different assessment criteria: candidates must excel at rapid onboarding, managing multiple clients, and delivering impact in limited time.
-            </p>
-            <p className="text-lg leading-relaxed mb-6">
-              Working with the <strong>best fractional recruitment agency</strong> typically costs between 10-30% of the first year's engagement value—significantly less than traditional executive search fees, which can exceed 30% of annual salary.
-            </p>
+      {/* Roles We Fill - Quick Visual */}
+      <section className="py-12 bg-black text-white">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-x-12 gap-y-4 text-center">
+            {['CFO', 'CTO', 'CMO', 'COO', 'CHRO', 'CISO', 'CPO', 'CRO'].map((role) => (
+              <span key={role} className="text-2xl md:text-3xl font-light text-gray-400 hover:text-amber-400 transition-colors">
+                Fractional {role}
+              </span>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Why Use a Fractional Recruitment Agency */}
-      <section className="py-16 bg-purple-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-            Why Use the Best Fractional Recruiters?
-          </h2>
+      {/* How It Works - Visual Process */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">The Process</span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">
+              From Brief to Executive in 2-3 Weeks
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { step: '1', title: 'Brief Us', description: 'Share your requirements, challenges, and ideal candidate profile.' },
+              { step: '2', title: 'We Match', description: 'We search our network and shortlist 3-5 pre-vetted candidates within days.' },
+              { step: '3', title: 'You Interview', description: 'Meet candidates directly. We facilitate introductions and provide backgrounds.' },
+              { step: '4', title: 'Engage', description: 'Agree terms with your chosen executive. Pay our fee only on success.' }
+            ].map((item, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-black text-amber-400 rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4">
+                  {item.step}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Fee Structure - Transparent */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Pricing</span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
+              Transparent, Success-Based Fees
+            </h2>
+            <p className="text-xl text-gray-600">No retainers. No upfront costs. Pay only when you hire.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-gray-50 rounded-xl p-8 text-center border-2 border-transparent hover:border-amber-400 transition-colors">
+              <div className="text-4xl font-black text-gray-900 mb-2">10%</div>
+              <div className="text-lg font-bold text-gray-900 mb-2">Standard Roles</div>
+              <div className="text-sm text-gray-600">Finance Director, HR Director, Marketing Director</div>
+            </div>
+            <div className="bg-black rounded-xl p-8 text-center text-white transform md:scale-105">
+              <div className="text-4xl font-black text-amber-400 mb-2">12.5%</div>
+              <div className="text-lg font-bold mb-2">C-Suite Roles</div>
+              <div className="text-sm text-gray-400">CFO, CTO, CMO, COO</div>
+              <span className="inline-block mt-4 text-xs font-bold uppercase tracking-wider bg-amber-500 text-black px-3 py-1 rounded-full">Most Popular</span>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-8 text-center border-2 border-transparent hover:border-amber-400 transition-colors">
+              <div className="text-4xl font-black text-gray-900 mb-2">15%</div>
+              <div className="text-lg font-bold text-gray-900 mb-2">Executive Search</div>
+              <div className="text-sm text-gray-600">CEO, specialist or hard-to-fill roles</div>
+            </div>
+          </div>
+
+          <p className="text-center text-gray-500 mt-8 text-sm">
+            Fees calculated on first 12 months' engagement value. 90-day replacement guarantee included.
+          </p>
+        </div>
+      </section>
+
+      {/* Calculator Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Calculator</span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">See Your Savings</h2>
+          </div>
+          <SavingsCalculator />
+        </div>
+      </section>
+
+      {/* Why Use Fractional Recruiters */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">The Advantage</span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">
+              Why Use the Best Fractional Recruiters?
+            </h2>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              {
-                title: 'Pre-Vetted Talent',
-                description: 'The best fractional recruiters maintain networks of verified executives with proven track records in part-time leadership roles.',
-                icon: '✓'
-              },
-              {
-                title: 'Faster Placement',
-                description: 'Average time to placement is 2-4 weeks vs 3-6 months for traditional executive search.',
-                icon: '⚡'
-              },
-              {
-                title: 'Lower Risk',
-                description: 'Fractional arrangements allow evaluation before deeper commitment. Top agencies offer replacement guarantees.',
-                icon: '🛡️'
-              },
-              {
-                title: 'Cost Savings',
-                description: 'Save 40-60% compared to full-time executive hires while accessing equivalent expertise.',
-                icon: '💰'
-              },
-              {
-                title: 'Specialist Knowledge',
-                description: 'The best fractional recruitment agencies understand the unique requirements of part-time executive engagements.',
-                icon: '🎯'
-              },
-              {
-                title: 'Quality Matching',
-                description: 'Top fractional recruiters match executives based on industry, stage, culture fit, and specific business challenges.',
-                icon: '🤝'
-              }
+              { title: 'Pre-Vetted Talent', description: 'Every executive in our network is verified with proven track records in fractional leadership.', icon: '✓' },
+              { title: 'Faster Placement', description: 'Average 2-3 weeks vs 3-6 months for traditional executive search.', icon: '⚡' },
+              { title: 'Lower Risk', description: 'Start fractional, scale up. 90-day replacement guarantee on every placement.', icon: '🛡️' },
+              { title: '40-60% Cost Savings', description: 'Access senior expertise without full-time salary, benefits, and equity costs.', icon: '💰' },
+              { title: 'Specialist Knowledge', description: 'We understand fractional work. Our executives excel at rapid impact.', icon: '🎯' },
+              { title: 'Quality Matching', description: 'Matched on industry, stage, culture fit, and specific business challenges.', icon: '🤝' }
             ].map((benefit, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+              <div key={index} className="bg-gray-50 p-6 border border-gray-200">
                 <div className="text-3xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </div>
             ))}
@@ -120,132 +299,93 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
         </div>
       </section>
 
-      {/* Featured Agency - Fractional.Quest */}
-      {featuredAgency && (
-        <FeaturedAgencySection agency={featuredAgency} />
+      {/* Other Agencies */}
+      {otherAgencies.length > 0 && (
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Market Landscape</span>
+              <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
+                Other Fractional Recruiters UK
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                We've compiled other reputable fractional recruitment agencies operating in the UK market for comparison.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {otherAgencies.map((agency) => (
+                <AgencyCard key={agency.id} agency={agency} />
+              ))}
+            </div>
+          </div>
+        </section>
       )}
 
-      {/* Other Agencies List */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Other Top Fractional Recruiters UK
-          </h2>
-          <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            We've compiled a list of other reputable <strong>fractional recruiters</strong> and <strong>fractional recruitment agencies</strong> operating in the UK market.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {otherAgencies.map((agency) => (
-              <AgencyCard key={agency.id} agency={agency} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How Our Fractional Recruitment Agency Works */}
-      <section className="py-16 md:py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
-            How the Best Fractional Recruitment Agency Works
-          </h2>
-          <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            Simple, transparent <strong>fractional recruitment</strong> with fees between 10-15% depending on the role
-          </p>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                step: '1',
-                title: 'Brief Us',
-                description: 'Tell us about your business, challenges, and the fractional executive role you need to fill.'
-              },
-              {
-                step: '2',
-                title: 'We Match',
-                description: 'We search our network of 500+ verified fractional executives and shortlist 3-5 candidates.'
-              },
-              {
-                step: '3',
-                title: 'You Interview',
-                description: 'Meet shortlisted candidates directly. We facilitate introductions and provide background information.'
-              },
-              {
-                step: '4',
-                title: 'Engage & Pay',
-                description: 'Agree terms directly with your chosen executive. Pay our 10-15% fee only on successful engagement.'
-              }
-            ].map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-purple-700 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  {step.step}
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
-              </div>
-            ))}
+      {/* SEO Content Section - Editorial Style */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-16">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-4 block">The Guide</span>
+            <h2 className="text-4xl font-black text-gray-900 mb-6 leading-tight">
+              What Makes the Best<br />
+              <span className="text-amber-600">Fractional Recruitment Agency</span>
+            </h2>
+            <div className="w-24 h-1 bg-amber-500"></div>
           </div>
 
-          <div className="mt-12 bg-purple-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-              Our Fractional Recruitment Fees
-            </h3>
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="bg-white rounded-xl p-6 text-center shadow-sm">
-                <div className="text-3xl font-bold text-purple-700 mb-2">10%</div>
-                <div className="text-gray-900 font-semibold mb-1">Standard Roles</div>
-                <div className="text-sm text-gray-600">Fractional FD, HR Director, Marketing Director</div>
-              </div>
-              <div className="bg-white rounded-xl p-6 text-center shadow-sm border-2 border-purple-700">
-                <div className="text-3xl font-bold text-purple-700 mb-2">12.5%</div>
-                <div className="text-gray-900 font-semibold mb-1">C-Suite Roles</div>
-                <div className="text-sm text-gray-600">Fractional CFO, CMO, CTO, COO</div>
-              </div>
-              <div className="bg-white rounded-xl p-6 text-center shadow-sm">
-                <div className="text-3xl font-bold text-purple-700 mb-2">15%</div>
-                <div className="text-gray-900 font-semibold mb-1">Executive Search</div>
-                <div className="text-sm text-gray-600">CEO, specialist or hard-to-fill roles</div>
-              </div>
-            </div>
-            <p className="text-center text-gray-600 mt-6">
-              All fees calculated on first 12 months' engagement value. No upfront costs. 90-day replacement guarantee.
+          <article className="prose prose-lg prose-gray max-w-none">
+            <p className="text-xl text-gray-600 leading-relaxed mb-8 font-light">
+              The <strong className="font-semibold text-gray-900">best fractional recruitment agency</strong> specialises in connecting businesses with experienced executives who work on a part-time, ongoing basis. Unlike traditional recruitment agencies that place full-time employees, top fractional recruiters understand the unique requirements of part-time executive engagements.
             </p>
-          </div>
+
+            <p>
+              The <strong>best fractional recruitment agencies</strong> in the UK maintain networks of verified fractional CFOs, CTOs, CMOs, COOs, and other C-suite professionals. They understand that fractional hiring requires different assessment criteria: candidates must excel at rapid onboarding, managing multiple clients, and delivering impact in limited time.
+            </p>
+
+            <div className="bg-gray-50 p-8 my-10 border-l-4 border-amber-500">
+              <p className="text-xl font-semibold text-gray-900 mb-0">
+                "Working with the best fractional recruitment agency typically costs 10-15% of engagement value—significantly less than traditional executive search fees of 25-33%."
+              </p>
+            </div>
+
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">What to Look for in Fractional Recruiters</h3>
+            <ul className="space-y-3">
+              <li><strong>Specialisation:</strong> They focus on fractional placements, not just interim or permanent roles</li>
+              <li><strong>Verified Network:</strong> Pre-vetted executives with proven fractional experience</li>
+              <li><strong>Transparent Fees:</strong> Clear pricing without hidden costs or retainers</li>
+              <li><strong>Speed:</strong> Placement in weeks, not months</li>
+              <li><strong>Guarantee:</strong> Replacement guarantee if the match doesn't work</li>
+            </ul>
+
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Fractional vs Interim Recruitment</h3>
+            <p>
+              <strong>Fractional recruiters</strong> place part-time executives for ongoing engagements (typically 1-3 days/week indefinitely). <strong>Interim recruiters</strong> place full-time executives for temporary periods (3-12 months). The best fractional recruitment agency understands this distinction and builds networks accordingly.
+            </p>
+          </article>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-            Best Fractional Recruitment Agency FAQs
-          </h2>
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-12">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">
+              Common Questions About Fractional Recruitment
+            </h2>
+          </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             {[
-              {
-                q: 'What is the best fractional recruitment agency?',
-                a: 'The best fractional recruitment agency specialises in placing executives who work on a part-time, ongoing basis with multiple companies. Fractional.Quest is rated the #1 fractional recruitment agency in the UK, with transparent 10-15% fees, a network of 500+ verified executives, and average placement times of 2-3 weeks.'
-              },
-              {
-                q: 'How much do the best fractional recruiters charge?',
-                a: 'Top fractional recruitment agency fees typically range from 10-30% of the first year\'s engagement value. At Fractional.Quest, our fees are 10-15% depending on the role, significantly lower than traditional executive search firms which often charge 25-33% of annual salary.'
-              },
-              {
-                q: 'How long does fractional recruitment take with the best agencies?',
-                a: 'Working with the best fractional recruitment agency, you can typically expect to meet shortlisted candidates within 1-2 weeks and make a placement within 2-4 weeks. This is much faster than traditional executive search which can take 3-6 months.'
-              },
-              {
-                q: 'What roles do top fractional recruiters fill?',
-                a: 'The best fractional recruitment agencies place part-time executives across all C-suite and senior leadership roles: CFO, CTO, CMO, COO, CHRO, CISO, CPO, as well as director-level positions like Finance Director, HR Director, and Marketing Director.'
-              },
-              {
-                q: 'Are fractional recruiters different from interim recruiters?',
-                a: 'Yes. Interim recruiters place full-time executives for temporary periods (usually 3-12 months). The best fractional recruiters place part-time executives for ongoing engagements, typically 1-3 days per week on an indefinite basis.'
-              }
+              { q: 'What is the best fractional recruitment agency?', a: 'The best fractional recruitment agency specialises in placing executives who work part-time with multiple companies. Fractional.Quest maintains a network of 500+ verified executives with transparent 10-15% fees and average placement times of 2-3 weeks.' },
+              { q: 'How much do fractional recruiters charge?', a: 'Top fractional recruitment agency fees range from 10-30% of first year engagement value. Our fees are 10-15% depending on the role—significantly lower than traditional executive search firms charging 25-33% of annual salary.' },
+              { q: 'How long does fractional recruitment take?', a: 'Working with the best fractional recruitment agency, expect to meet shortlisted candidates within 1-2 weeks and make a placement within 2-3 weeks. Traditional executive search typically takes 3-6 months.' },
+              { q: 'What roles do fractional recruiters fill?', a: 'The best fractional recruitment agencies place part-time executives across all C-suite roles: CFO, CTO, CMO, COO, CHRO, CISO, CPO, as well as director-level positions like Finance Director, HR Director, and Marketing Director.' },
+              { q: 'What\'s the difference between fractional and interim?', a: 'Interim recruiters place full-time executives for temporary periods (3-12 months). Fractional recruiters place part-time executives for ongoing engagements, typically 1-3 days per week on an indefinite basis.' }
             ].map((faq, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.q}</h3>
+              <div key={index} className="bg-white p-6 border border-gray-200">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{faq.q}</h3>
                 <p className="text-gray-600">{faq.a}</p>
               </div>
             ))}
@@ -254,159 +394,49 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 md:py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900" id="contact">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Work with the Best Fractional Recruiters?
+      <section className="py-20 bg-black text-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-4 block">Ready?</span>
+          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
+            Find Your<br />
+            <span className="text-amber-400">Fractional Executive</span>
           </h2>
-          <p className="text-xl text-purple-200 mb-8 max-w-2xl mx-auto">
-            Join hundreds of UK businesses who've found fractional CFOs, CTOs, CMOs and more through the <strong className="text-white">best fractional recruitment agency</strong> in the UK.
+          <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+            Join hundreds of UK businesses who've found fractional CFOs, CTOs, CMOs and more through the best fractional recruitment agency.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="#contact-form"
+              className="px-10 py-5 bg-amber-500 text-black font-bold uppercase tracking-wider hover:bg-amber-400 transition-colors"
+            >
+              Get Started
+            </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-purple-900 font-bold rounded-xl hover:bg-purple-100 transition-all shadow-lg"
+              className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors"
             >
-              Contact Our Fractional Recruiters
-            </Link>
-            <Link
-              href="/fractionaljobsuk"
-              className="inline-flex items-center justify-center px-8 py-4 bg-purple-700 text-white font-bold rounded-xl hover:bg-purple-600 transition-all border border-purple-500"
-            >
-              Browse Fractional Jobs
+              Book a Call
             </Link>
           </div>
         </div>
       </section>
 
-      {/* SEO Content Footer */}
-      <section className="py-12 bg-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-sm max-w-none text-gray-600">
-            <h3 className="text-lg font-semibold text-gray-900">About the Best Fractional Recruitment Agencies in the UK</h3>
-            <p>
-              The UK fractional recruitment market has grown significantly as more businesses recognise the value of part-time executive leadership. The <strong>best fractional recruitment agencies</strong> like Fractional.Quest have emerged to serve this growing demand, connecting companies with experienced <strong>fractional executives</strong> who can deliver strategic leadership without the cost of full-time hires.
-            </p>
-            <p>
-              Whether you're searching for <strong>fractional CFO recruitment</strong>, <strong>fractional CTO agencies</strong>, or <strong>fractional CMO recruiters</strong>, working with the <strong>best fractional recruitment agency</strong> ensures you access pre-vetted candidates who understand the unique demands of part-time executive work.
-            </p>
-            <p>
-              <Link href="/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter" className="text-purple-700 hover:underline">Best fractional recruitment agency</Link> | <Link href="/fractional-cfo-jobs-uk" className="text-purple-700 hover:underline">Fractional CFO Jobs</Link> | <Link href="/fractional-cto-jobs-uk" className="text-purple-700 hover:underline">Fractional CTO Jobs</Link> | <Link href="/fractional-cmo-jobs-uk" className="text-purple-700 hover:underline">Fractional CMO Jobs</Link>
-            </p>
+      {/* Related Pages */}
+      <section className="py-12 bg-white border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related</span>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/fractional-cfo-jobs-uk" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Fractional CFO Jobs</Link>
+              <Link href="/fractional-cto-jobs-uk" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Fractional CTO Jobs</Link>
+              <Link href="/fractional-cmo-jobs-uk" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Fractional CMO Jobs</Link>
+              <Link href="/fractional-coo-jobs-uk" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Fractional COO Jobs</Link>
+              <Link href="/fractionaljobsuk" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">All Jobs</Link>
+            </div>
           </div>
         </div>
       </section>
     </div>
-  )
-}
-
-function FeaturedAgencySection({ agency }: { agency: Agency }) {
-  const highlights = agency.payload?.highlights || []
-  const fee = agency.payload?.fee || '10-15%'
-
-  return (
-    <section className="py-16 md:py-20" id="fractional-quest">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <span className="bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
-            Recommended
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            #1 Best Fractional Recruitment Agency UK
-          </h2>
-        </div>
-
-        <div className="bg-gradient-to-br from-purple-700 to-purple-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">{agency.name}</h3>
-              <p className="text-xl text-purple-200 mb-6">{agency.description}</p>
-
-              {highlights.length > 0 && (
-                <div className="space-y-3 mb-8">
-                  {highlights.map((highlight, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <svg className="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="text-purple-100">{highlight}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {agency.specializations && (
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {agency.specializations.map((specialty, index) => (
-                    <span key={index} className="bg-white/20 px-3 py-1 rounded-full text-sm">
-                      Fractional {specialty}
-                    </span>
-                  ))}
-                </div>
-              )}
-
-              <div className="flex items-center gap-6 text-purple-200">
-                <div>
-                  <span className="block text-sm">Placement Fee</span>
-                  <span className="text-2xl font-bold text-white">{fee}</span>
-                </div>
-                <div>
-                  <span className="block text-sm">Location</span>
-                  <span className="text-lg font-semibold text-white">{agency.headquarters}</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 text-gray-900">
-              <h4 className="text-2xl font-bold mb-6 text-center">Get Started Today</h4>
-              <form className="space-y-4" action="/contact" method="GET">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    placeholder="John Smith"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Company Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    placeholder="john@company.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Role Needed</label>
-                  <select
-                    name="role"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  >
-                    <option value="cfo">Fractional CFO</option>
-                    <option value="cto">Fractional CTO</option>
-                    <option value="cmo">Fractional CMO</option>
-                    <option value="coo">Fractional COO</option>
-                    <option value="chro">Fractional CHRO</option>
-                    <option value="other">Other Role</option>
-                  </select>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-purple-700 text-white py-4 rounded-lg font-bold hover:bg-purple-800 transition-colors"
-                >
-                  Find Fractional Executives
-                </button>
-              </form>
-              <p className="text-xs text-gray-600 text-center mt-4">
-                No upfront fees. Pay only on successful placement.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   )
 }
 
@@ -415,20 +445,16 @@ function AgencyCard({ agency }: { agency: Agency }) {
   const website = agency.payload?.website
 
   return (
-    <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all border border-gray-100">
+    <div className="bg-white p-6 border border-gray-200 hover:border-amber-400 transition-colors">
       <div className="flex justify-between items-start mb-4">
-        <h3 className="text-xl font-bold text-gray-900">
-          {agency.name}
-        </h3>
-        <span className="text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-full">
-          Fee: {fee}
-        </span>
+        <h3 className="text-xl font-bold text-gray-900">{agency.name}</h3>
+        <span className="text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-full">Fee: {fee}</span>
       </div>
       <p className="text-gray-600 mb-4">{agency.description}</p>
       {agency.specializations && (
         <div className="flex flex-wrap gap-2 mb-4">
           {agency.specializations.slice(0, 4).map((specialty, i) => (
-            <span key={i} className="bg-purple-50 text-purple-700 px-2 py-1 rounded text-xs font-medium">
+            <span key={i} className="bg-gray-100 text-gray-700 px-2 py-1 text-xs font-medium">
               {specialty}
             </span>
           ))}
@@ -437,12 +463,7 @@ function AgencyCard({ agency }: { agency: Agency }) {
       <div className="flex justify-between items-center text-sm text-gray-600">
         <span>{agency.headquarters}</span>
         {website && (
-          <a
-            href={website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-purple-600 font-medium hover:underline"
-          >
+          <a href={website} target="_blank" rel="noopener noreferrer" className="text-amber-600 font-medium hover:underline">
             Visit Website →
           </a>
         )}
