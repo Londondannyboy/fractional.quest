@@ -41,8 +41,7 @@ function VoiceInterface({ token, userId, profile, memoryContext }: {
   const [preferenceOpacity, setPreferenceOpacity] = useState(1)
   const [savingPreference, setSavingPreference] = useState(false)
 
-  // Track processed items to avoid duplicates
-  const processedToolCalls = useRef<Set<string>>(new Set())
+  // Track processed confirmations to avoid duplicates
   const processedConfirmations = useRef<Set<string>>(new Set())
   const lastExtractedText = useRef<string>('')
   const fadeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
@@ -167,59 +166,12 @@ function VoiceInterface({ token, userId, profile, memoryContext }: {
     }
   }, [userId])
 
-  // Watch for tool calls and job-related messages
+  // Watch transcript for job-related content
+  // Simple approach: just analyze the text content from UserMessage and AssistantMessage
   useEffect(() => {
     if (messages.length === 0) return
 
-    // Log all message types for debugging
-    const recentMessages = messages.slice(-5)
-    console.log('[Hume] Recent messages:', recentMessages.map((m: any) => ({
-      type: m.type,
-      hasContent: !!m.message?.content,
-      toolName: m.name || m.tool_name,
-      preview: (m.message?.content || m.content || '').substring(0, 100)
-    })))
-
-    // PRIORITY 1: Check for tool_response/tool_result with job URLs
-    // This is the most reliable way to detect search_jobs results
-    const toolResponses = messages.filter((m: any) =>
-      m.type === 'tool_response' || m.type === 'tool_result'
-    )
-
-    for (const toolMsg of toolResponses) {
-      const msg = toolMsg as any
-      const content = msg.content || msg.message?.content || ''
-      const toolId = msg.tool_call_id || `${messages.indexOf(toolMsg)}`
-
-      // Skip if we've already processed this tool response
-      if (processedToolCalls.current.has(toolId)) continue
-
-      // Check if this is a job search response (contains job URLs)
-      const jobMatches = content.match(/fractional\.quest\/job\/([^\s,\.\)]+)/g)
-      if (jobMatches && jobMatches.length > 0) {
-        console.log('[Hume] Found job URLs in tool response:', jobMatches)
-        processedToolCalls.current.add(toolId)
-        setShowJobsPanel(true)
-        fetchJobsForDisplay(jobMatches.map((m: string) => m.replace('fractional.quest/job/', '')))
-        return // Found jobs, no need to continue
-      }
-
-      // Also check for "Found X roles" pattern without URLs
-      if (content.toLowerCase().includes('found') && content.toLowerCase().includes('role')) {
-        console.log('[Hume] Tool response mentions found roles:', content.substring(0, 100))
-        processedToolCalls.current.add(toolId)
-      }
-    }
-
-    // PRIORITY 2: Check for tool_call to search_jobs (tool is being called)
-    const searchJobsCalls = messages.filter((m: any) =>
-      (m.type === 'tool_call' && (m.name === 'search_jobs' || m.tool_name === 'search_jobs'))
-    )
-    if (searchJobsCalls.length > 0) {
-      console.log('[Hume] search_jobs tool called!', searchJobsCalls.length, 'times')
-    }
-
-    // PRIORITY 3: Detect from assistant message (fallback)
+    // Get assistant messages (Repo's responses)
     const lastAssistantMsg = [...messages].reverse().find(
       (m: any) => m.type === 'assistant_message' && m.message?.content
     ) as any
@@ -227,37 +179,17 @@ function VoiceInterface({ token, userId, profile, memoryContext }: {
     if (lastAssistantMsg?.message?.content) {
       const content = lastAssistantMsg.message.content.toLowerCase()
 
-      // Detect when Repo says they're showing jobs
+      // Detect when Repo mentions showing jobs
       const mentionsJobs = content.includes('job') || content.includes('role') ||
                           content.includes('position') || content.includes('opportunit')
       const soundsLikeResults = content.includes('found') || content.includes('show') ||
-                               content.includes('screen') || content.includes('pull') ||
-                               content.includes('look at') || content.includes('putting') ||
+                               content.includes('screen') || content.includes('putting') ||
                                content.includes('here are') || content.includes('take a look')
 
-      if (mentionsJobs && soundsLikeResults) {
-        console.log('[Hume] Job results mentioned in response!')
-
-        // If panel not already showing and we haven't found jobs from tool response
-        if (!showJobsPanel) {
-          setShowJobsPanel(true)
-          // Fetch recent jobs since Repo mentioned jobs but we don't have specific ones
-          console.log('[Hume] Fetching recent jobs as Repo mentioned showing results')
-          fetchRecentJobs()
-        }
-      }
-    }
-
-    // Also check if USER mentioned jobs - prepare panel early
-    const lastUserMsg = [...messages].reverse().find(
-      (m: any) => m.type === 'user_message' && m.message?.content
-    ) as any
-    if (lastUserMsg?.message?.content) {
-      const userContent = lastUserMsg.message.content.toLowerCase()
-      if (userContent.includes('job') || userContent.includes('cfo') ||
-          userContent.includes('cmo') || userContent.includes('cto') ||
-          userContent.includes('marketing') || userContent.includes('finance')) {
-        console.log('[Hume] User asking about jobs - panel will show when results arrive')
+      if (mentionsJobs && soundsLikeResults && !showJobsPanel) {
+        console.log('[Repo] Mentioned jobs - showing panel')
+        setShowJobsPanel(true)
+        fetchRecentJobs()
       }
     }
   }, [messages, showJobsPanel])
@@ -696,13 +628,8 @@ export default function RepoPage() {
             onError={(err) => console.error('[Hume Error]', err)}
             onClose={(e) => console.warn('[Hume Close]', e?.code, e?.reason)}
             onMessage={(msg) => {
-              // Log ALL message types for debugging
-              console.log('[Hume Raw Message]', msg.type, msg)
-              // Specifically log tool-related messages
-              const msgType = (msg as any).type
-              if (msgType === 'tool_call' || msgType === 'tool_response' || msgType === 'tool_result') {
-                console.log('[Hume Tool Event]', JSON.stringify(msg, null, 2))
-              }
+              // Log message types for debugging
+              console.log('[Hume]', msg.type)
             }}
           >
             <VoiceInterface
