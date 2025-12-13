@@ -72,32 +72,58 @@ def get_companies_without_brands(conn, limit: int = 10, provider: str = 'brandde
 
 
 async def fetch_brand_from_branddev(domain: str, api_key: str) -> Optional[dict]:
-    """Fetch brand data from Brand.dev API"""
-    url = f"https://api.brand.dev/v1/brand/retrieve?domain={domain}"
+    """Fetch brand data from Brand.dev API (brand + styleguide + fonts)"""
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json"
     }
 
     async with httpx.AsyncClient() as client:
+        result = {}
+
+        # Fetch main brand data
         try:
-            response = await client.get(url, headers=headers, timeout=30.0)
+            brand_url = f"https://api.brand.dev/v1/brand/retrieve?domain={domain}"
+            response = await client.get(brand_url, headers=headers, timeout=30.0)
             if response.status_code == 200:
-                return response.json()
+                result['brand'] = response.json()
             elif response.status_code == 404:
                 print(f"    Brand not found for {domain}")
                 return None
             else:
-                print(f"    API error {response.status_code}: {response.text[:100]}")
+                print(f"    Brand API error {response.status_code}: {response.text[:100]}")
                 return None
         except Exception as e:
-            print(f"    Request error: {str(e)[:80]}")
+            print(f"    Brand request error: {str(e)[:80]}")
             return None
+
+        # Fetch styleguide (separate endpoint)
+        try:
+            style_url = f"https://api.brand.dev/v1/brand/styleguide?domain={domain}"
+            response = await client.get(style_url, headers=headers, timeout=30.0)
+            if response.status_code == 200:
+                result['styleguide'] = response.json().get('styleguide', {})
+                print(f"    + Styleguide fetched")
+        except Exception as e:
+            print(f"    Styleguide skipped: {str(e)[:50]}")
+
+        # Fetch fonts (separate endpoint)
+        try:
+            fonts_url = f"https://api.brand.dev/v1/brand/fonts?domain={domain}"
+            response = await client.get(fonts_url, headers=headers, timeout=30.0)
+            if response.status_code == 200:
+                result['fonts'] = response.json().get('fonts', [])
+                print(f"    + Fonts fetched")
+        except Exception as e:
+            print(f"    Fonts skipped: {str(e)[:50]}")
+
+        return result
 
 
 def extract_brand_data(api_response: dict) -> dict:
     """Extract and normalize Brand.dev response to our schema"""
-    brand = api_response.get('brand', {})
+    brand_response = api_response.get('brand', {})
+    brand = brand_response.get('brand', {}) if 'brand' in brand_response else brand_response
 
     # Extract and normalize colors
     colors = []
@@ -151,6 +177,28 @@ def extract_brand_data(api_response: dict) -> dict:
             if ind.get('industry'):
                 industries.append(ind['industry'])
 
+    # Extract social links
+    socials = {}
+    for social in brand.get('socials', []):
+        social_type = social.get('type', '').lower()
+        if social_type and social.get('url'):
+            socials[social_type] = social['url']
+
+    # Extract page links (careers, privacy, etc.)
+    links = brand.get('links', {})
+
+    # Get styleguide and fonts from api_response (fetched separately)
+    styleguide = api_response.get('styleguide', {})
+    fonts_data = api_response.get('fonts', [])
+
+    # Extract primary font from fonts data
+    font_title = None
+    font_body = None
+    if fonts_data:
+        primary_font = fonts_data[0].get('font', '')
+        font_title = primary_font
+        font_body = primary_font
+
     # Calculate quality score based on data completeness
     quality_factors = [
         bool(colors),
@@ -159,23 +207,33 @@ def extract_brand_data(api_response: dict) -> dict:
         bool(brand.get('description')),
         bool(address.get('city')),
         bool(industries),
+        bool(socials),
+        bool(styleguide),
     ]
     quality_score = sum(quality_factors) / len(quality_factors)
 
     return {
         'colors': colors,
-        'font_title': None,  # Brand.dev doesn't include fonts in standard response
-        'font_body': None,
+        'font_title': font_title,
+        'font_body': font_body,
         'logos': logos,
         'banners': banners,
         'description': brand.get('description'),
-        'founded': None,  # Brand.dev doesn't include founded year in standard response
+        'founded': None,  # Brand.dev doesn't include founded year
         'employees': None,  # Brand.dev doesn't include employee count
         'city': address.get('city'),
         'country': address.get('country'),
         'company_kind': None,
         'industries': industries,
-        'quality_score': round(quality_score, 2)
+        'quality_score': round(quality_score, 2),
+        # New Brand.dev specific fields
+        'socials': socials,
+        'links': links,
+        'address': address,  # Full address object
+        'styleguide': styleguide,
+        'fonts': fonts_data,
+        'slogan': brand.get('slogan'),
+        'phone': brand.get('phone')
     }
 
 
@@ -187,9 +245,11 @@ def save_brand_to_database(conn, domain: str, company_name: str, brand_data: dic
                 domain, company_name, colors, font_title, font_body,
                 logos, banners, description, founded, employees,
                 city, country, company_kind, industries, quality_score,
-                fetched_at, provider
+                fetched_at, provider,
+                socials, links, address, styleguide, fonts, slogan, phone
             ) VALUES (
-                %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, NOW(), %s
+                %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, NOW(), %s,
+                %s, %s, %s, %s, %s, %s, %s
             )
             ON CONFLICT (domain) DO UPDATE SET
                 company_name = EXCLUDED.company_name,
@@ -207,7 +267,14 @@ def save_brand_to_database(conn, domain: str, company_name: str, brand_data: dic
                 industries = EXCLUDED.industries,
                 quality_score = EXCLUDED.quality_score,
                 fetched_at = NOW(),
-                provider = EXCLUDED.provider
+                provider = EXCLUDED.provider,
+                socials = EXCLUDED.socials,
+                links = EXCLUDED.links,
+                address = EXCLUDED.address,
+                styleguide = EXCLUDED.styleguide,
+                fonts = EXCLUDED.fonts,
+                slogan = EXCLUDED.slogan,
+                phone = EXCLUDED.phone
         """, (
             domain,
             company_name,
@@ -224,7 +291,15 @@ def save_brand_to_database(conn, domain: str, company_name: str, brand_data: dic
             brand_data.get('company_kind'),
             brand_data['industries'],
             brand_data['quality_score'],
-            provider
+            provider,
+            # New Brand.dev fields
+            Json(brand_data.get('socials', {})),
+            Json(brand_data.get('links', {})),
+            Json(brand_data.get('address', {})),
+            Json(brand_data.get('styleguide', {})),
+            Json(brand_data.get('fonts', [])),
+            brand_data.get('slogan'),
+            brand_data.get('phone')
         ))
     conn.commit()
 

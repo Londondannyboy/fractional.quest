@@ -30,6 +30,11 @@ interface BrandData {
   quality_score: string | null
   font_title: string | null
   font_body: string | null
+  // Brand.dev specific fields
+  socials: Record<string, string> | null
+  links: Record<string, string | null> | null
+  slogan: string | null
+  styleguide: any | null
 }
 
 // Generate metadata for SEO
@@ -81,7 +86,7 @@ async function getCompanyData(domain: string) {
   const [brandData] = await sql`
     SELECT colors, logos, banners, description, founded, employees,
            city, country, company_kind, industries, quality_score,
-           font_title, font_body
+           font_title, font_body, socials, links, slogan, styleguide
     FROM company_brands
     WHERE domain = ${domain}
     LIMIT 1
@@ -111,7 +116,8 @@ function getBrandStyling(brand?: BrandData) {
     primary: '#1f2937',
     accent: '#a855f7',
     light: '#f9fafb',
-    text: 'white'
+    text: 'white',
+    background: '#f9fafb'
   }
 
   if (!brand?.colors || brand.colors.length === 0) {
@@ -119,15 +125,21 @@ function getBrandStyling(brand?: BrandData) {
       colors: defaultColors,
       banner: null,
       logo: null,
-      hasRichBranding: false
+      hasRichBranding: false,
+      buttonStyle: null
     }
   }
 
-  // Find colors by type
+  // Find colors by type from brand extraction
   const darkColor = brand.colors.find(c => c.type === 'dark')
     || brand.colors.reduce((darkest, c) => c.brightness < darkest.brightness ? c : darkest)
   const accentColor = brand.colors.find(c => c.type === 'accent')
   const lightColor = brand.colors.find(c => c.type === 'light')
+
+  // Get styleguide colors if available (more accurate)
+  const styleguideColors = brand.styleguide?.colors
+  const styleguideAccent = styleguideColors?.accent
+  const styleguideBackground = styleguideColors?.background
 
   // Get banner image if available
   const banner = brand.banners?.banner || brand.banners?.background || null
@@ -139,16 +151,23 @@ function getBrandStyling(brand?: BrandData) {
   // Determine text color based on background brightness
   const textColor = darkColor.brightness < 128 ? 'white' : '#1f2937'
 
+  // Get button styling from styleguide if available
+  const buttonStyle = brand.styleguide?.components?.button?.primary || null
+
   return {
     colors: {
       primary: darkColor.hex,
-      accent: accentColor?.hex || '#a855f7',
+      // Prefer styleguide accent (more accurate) over extracted accent
+      accent: styleguideAccent || accentColor?.hex || '#a855f7',
       light: lightColor?.hex || '#f9fafb',
-      text: textColor
+      text: textColor,
+      // Styleguide background for cards/sections
+      background: styleguideBackground || lightColor?.hex || '#f9fafb'
     },
     banner,
     logo,
-    hasRichBranding: !!banner || (brand.colors.length >= 2 && !!logo)
+    hasRichBranding: !!banner || (brand.colors.length >= 2 && !!logo),
+    buttonStyle
   }
 }
 
@@ -253,14 +272,101 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
                   {company.name}
                 </h1>
 
-                {/* Tagline/Description */}
+                {/* Slogan */}
+                {company.brand?.slogan && (
+                  <p
+                    className="text-2xl md:text-3xl mb-4 max-w-3xl font-light italic"
+                    style={{ color: colors.text, opacity: 0.9 }}
+                  >
+                    "{company.brand.slogan}"
+                  </p>
+                )}
+
+                {/* Description */}
                 {company.brand?.description && (
                   <p
-                    className="text-xl md:text-2xl mb-6 max-w-2xl font-light"
-                    style={{ color: colors.text, opacity: 0.85 }}
+                    className="text-base md:text-lg mb-6 max-w-2xl"
+                    style={{ color: colors.text, opacity: 0.8 }}
                   >
-                    {company.brand.description}
+                    {company.brand.description.length > 200
+                      ? company.brand.description.slice(0, 200) + '...'
+                      : company.brand.description}
                   </p>
+                )}
+
+                {/* Social Links */}
+                {company.brand?.socials && Object.keys(company.brand.socials).length > 0 && (
+                  <div className="flex flex-wrap items-center gap-3 mb-6">
+                    {company.brand.socials.linkedin && (
+                      <a
+                        href={company.brand.socials.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-full transition-opacity hover:opacity-80"
+                        style={{ backgroundColor: `${colors.light}22` }}
+                        aria-label={`${company.name} on LinkedIn`}
+                      >
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" style={{ color: colors.text }}>
+                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                      </a>
+                    )}
+                    {company.brand.socials.x && (
+                      <a
+                        href={company.brand.socials.x}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-full transition-opacity hover:opacity-80"
+                        style={{ backgroundColor: `${colors.light}22` }}
+                        aria-label={`${company.name} on X`}
+                      >
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" style={{ color: colors.text }}>
+                          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                      </a>
+                    )}
+                    {company.brand.socials.facebook && (
+                      <a
+                        href={company.brand.socials.facebook}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-full transition-opacity hover:opacity-80"
+                        style={{ backgroundColor: `${colors.light}22` }}
+                        aria-label={`${company.name} on Facebook`}
+                      >
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" style={{ color: colors.text }}>
+                          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                      </a>
+                    )}
+                    {company.brand.socials.youtube && (
+                      <a
+                        href={company.brand.socials.youtube}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-full transition-opacity hover:opacity-80"
+                        style={{ backgroundColor: `${colors.light}22` }}
+                        aria-label={`${company.name} on YouTube`}
+                      >
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" style={{ color: colors.text }}>
+                          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                      </a>
+                    )}
+                    {/* Careers link if available */}
+                    {company.brand.links?.careers && (
+                      <a
+                        href={company.brand.links.careers}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-2 px-4 py-2 rounded-full text-sm font-semibold transition-opacity hover:opacity-90"
+                        style={{ backgroundColor: colors.accent, color: 'white' }}
+                        aria-label={`View careers at ${company.name}`}
+                      >
+                        View All Careers →
+                      </a>
+                    )}
+                  </div>
                 )}
 
                 {/* Meta info row */}

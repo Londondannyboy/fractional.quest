@@ -26,6 +26,10 @@ interface BrandData {
   logos: Record<string, string>
   banners: Record<string, string>
   description: string | null
+  styleguide?: {
+    colors?: { accent?: string; background?: string; text?: string }
+    components?: { button?: { primary?: any } }
+  }
 }
 
 // Helper to get brand styling
@@ -34,7 +38,8 @@ function getBrandStyling(brand?: BrandData) {
     primary: '#1f2937',
     accent: '#a855f7',
     light: '#f9fafb',
-    text: 'white'
+    text: 'white',
+    background: '#f9fafb'
   }
 
   if (!brand?.colors || brand.colors.length === 0) {
@@ -42,15 +47,21 @@ function getBrandStyling(brand?: BrandData) {
       colors: defaultColors,
       banner: null,
       logo: null,
-      hasRichBranding: false
+      hasRichBranding: false,
+      buttonStyle: null
     }
   }
 
-  // Find colors by type
+  // Find colors by type from brand extraction
   const darkColor = brand.colors.find(c => c.type === 'dark')
     || brand.colors.reduce((darkest, c) => c.brightness < darkest.brightness ? c : darkest)
   const accentColor = brand.colors.find(c => c.type === 'accent')
   const lightColor = brand.colors.find(c => c.type === 'light')
+
+  // Get styleguide colors if available (more accurate)
+  const styleguideColors = brand.styleguide?.colors
+  const styleguideAccent = styleguideColors?.accent
+  const styleguideBackground = styleguideColors?.background
 
   // Get banner image if available
   const banner = brand.banners?.banner || brand.banners?.background || null
@@ -62,16 +73,22 @@ function getBrandStyling(brand?: BrandData) {
   // Determine text color based on background brightness
   const textColor = darkColor.brightness < 128 ? 'white' : '#1f2937'
 
+  // Get button styling from styleguide if available
+  const buttonStyle = brand.styleguide?.components?.button?.primary || null
+
   return {
     colors: {
       primary: darkColor.hex,
-      accent: accentColor?.hex || '#a855f7',
+      // Prefer styleguide accent (more accurate) over extracted accent
+      accent: styleguideAccent || accentColor?.hex || '#a855f7',
       light: lightColor?.hex || '#f9fafb',
-      text: textColor
+      text: textColor,
+      background: styleguideBackground || lightColor?.hex || '#f9fafb'
     },
     banner,
     logo,
-    hasRichBranding: !!banner || (brand.colors.length >= 2 && !!logo)
+    hasRichBranding: !!banner || (brand.colors.length >= 2 && !!logo),
+    buttonStyle
   }
 }
 
@@ -130,7 +147,8 @@ export default async function JobDetailPage({ params }: PageProps) {
         cb.colors as brand_colors,
         cb.logos as brand_logos,
         cb.banners as brand_banners,
-        cb.description as brand_description
+        cb.description as brand_description,
+        cb.styleguide as brand_styleguide
       FROM jobs j
       LEFT JOIN company_brands cb ON j.company_domain = cb.domain
       WHERE j.slug = ${slug}
@@ -168,7 +186,8 @@ export default async function JobDetailPage({ params }: PageProps) {
       colors: job.brand_colors,
       logos: job.brand_logos || {},
       banners: job.brand_banners || {},
-      description: job.brand_description
+      description: job.brand_description,
+      styleguide: job.brand_styleguide || undefined
     } : undefined
 
     const styling = getBrandStyling(brand)
