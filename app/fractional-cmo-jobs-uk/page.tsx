@@ -8,6 +8,7 @@ import { VideoHeroBackground } from '@/components/VideoHeroBackground'
 import { RoleCalculator } from '@/components/RoleCalculator'
 import { RoleSkillsGraph } from '@/components/RoleSkillsGraph'
 import { IR35Calculator } from '@/components/IR35Calculator'
+import { RoleNews } from '@/components/RoleNews'
 
 export const revalidate = 3600
 
@@ -318,6 +319,13 @@ export default async function FractionalCmoJobsUkPage() {
             </p>
           </div>
           <IR35Calculator defaultDayRate={950} />
+        </div>
+      </section>
+
+      {/* Marketing News */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <RoleNews category="Marketing" title="Latest CMO & Marketing News" limit={3} />
         </div>
       </section>
 
