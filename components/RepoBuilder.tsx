@@ -83,7 +83,7 @@ export default function RepoBuilder({ userId, voiceTranscript, onPreferenceSaved
 
     try {
       // Call Pydantic AI extraction endpoint
-      const response = await fetch('/api/extract', {
+      const response = await fetch('/api/pydantic-extract', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ transcript: text })
