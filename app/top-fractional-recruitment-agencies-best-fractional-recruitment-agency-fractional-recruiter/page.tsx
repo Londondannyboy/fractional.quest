@@ -5,11 +5,14 @@ import { VideoHeroBackground } from '@/components/VideoHeroBackground'
 import { getAgencies, Agency } from '@/lib/agencies'
 
 export const metadata: Metadata = {
-  title: 'Best Fractional Recruitment Agency UK | Top Fractional Recruiters 2025',
+  title: 'Best Fractional Recruitment Agency UK | Top Recruiters',
   description: 'Find the best fractional recruitment agency in the UK. Compare top fractional recruiters for CFO, CTO, CMO hiring. Save 40-60% vs full-time executive hires.',
   keywords: 'best fractional recruitment agency, fractional recruiters, top fractional recruitment agencies, fractional recruitment agency uk, fractional executive recruitment, fractional cfo recruitment',
+  alternates: {
+    canonical: 'https://fractional.quest/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter',
+  },
   openGraph: {
-    title: 'Best Fractional Recruitment Agency UK | Top Fractional Recruiters 2025',
+    title: 'Best Fractional Recruitment Agency UK | Top Recruiters',
     description: 'Find the best fractional recruitment agency in the UK. Compare top fractional recruiters and save 40-60% vs full-time hires.',
     type: 'website',
     url: 'https://fractional.quest/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter',
