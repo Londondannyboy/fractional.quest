@@ -4,6 +4,7 @@ import {
   getUserGraphEdges,
   searchUserGraph,
   getZepClient,
+  ensureZepUser,
   ZepNode,
   ZepEdge,
 } from '@/lib/zep-client'
@@ -145,6 +146,9 @@ export async function POST(request: NextRequest) {
     // If a preference is provided, add it to the graph
     if (preference) {
       const { type, values, validated, raw_text } = preference
+
+      // Ensure user exists in ZEP before adding data
+      await ensureZepUser(userId)
 
       // Format data for ZEP graph
       const graphData = {
