@@ -50,6 +50,7 @@ export default async function JobDetailPage({ params }: PageProps) {
         id,
         title,
         company_name,
+        company_domain,
         location,
         is_remote,
         compensation,
@@ -210,10 +211,30 @@ export default async function JobDetailPage({ params }: PageProps) {
               {/* About Company */}
               {job.about_company && (
                 <section className="mb-12">
-                  <h2 className="text-2xl font-black text-gray-900 mb-6">About {job.company_name}</h2>
+                  <h2 className="text-2xl font-black text-gray-900 mb-6">
+                    About{' '}
+                    {job.company_domain ? (
+                      <Link href={`/company/${job.company_domain}`} className="text-purple-700 hover:text-purple-900 transition-colors">
+                        {job.company_name}
+                      </Link>
+                    ) : (
+                      job.company_name
+                    )}
+                  </h2>
                   <div className="prose prose-gray max-w-none">
                     <p className="text-gray-700 leading-8">{job.about_company}</p>
                   </div>
+                  {job.company_domain && (
+                    <Link
+                      href={`/company/${job.company_domain}`}
+                      className="inline-flex items-center gap-2 mt-4 text-purple-700 hover:text-purple-900 font-medium transition-colors"
+                    >
+                      View all jobs at {job.company_name}
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  )}
                 </section>
               )}
             </div>
