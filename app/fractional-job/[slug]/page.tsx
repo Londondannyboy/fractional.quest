@@ -204,8 +204,101 @@ export default async function JobDetailPage({ params }: PageProps) {
       })
     }
 
+    // Parse location for structured data
+    const parseLocation = (locationStr: string) => {
+      const parts = locationStr.split(',').map(p => p.trim())
+      return {
+        addressLocality: parts[0] || locationStr,
+        addressRegion: parts[1] || '',
+        addressCountry: parts.length > 2 ? parts[parts.length - 1] : 'United Kingdom'
+      }
+    }
+    const parsedLocation = parseLocation(job.location || '')
+
+    // Generate description for schema (use full_description or description_snippet)
+    const schemaDescription = job.full_description
+      ? job.full_description.replace(/<[^>]*>/g, '').slice(0, 5000)
+      : job.description_snippet || `${job.title} position at ${job.company_name} in ${job.location}.`
+
+    // Calculate validThrough (30 days from posted date)
+    const postedDate = job.posted_date ? new Date(job.posted_date) : new Date()
+    const validThrough = new Date(postedDate.getTime() + 30 * 24 * 60 * 60 * 1000)
+
+    // Parse salary from compensation string if available
+    const parseSalary = (comp: string | null) => {
+      if (!comp) return null
+      // Try to extract numbers from strings like "£600-£1,200/day" or "£65,000/yr"
+      const numbers = comp.match(/[\d,]+/g)
+      if (!numbers || numbers.length === 0) return null
+      const minValue = parseInt(numbers[0].replace(/,/g, ''))
+      const maxValue = numbers.length > 1 ? parseInt(numbers[1].replace(/,/g, '')) : minValue
+      const isDaily = comp.toLowerCase().includes('/day')
+      const isYearly = comp.toLowerCase().includes('/yr') || comp.toLowerCase().includes('/year')
+      return {
+        minValue,
+        maxValue,
+        unitText: isDaily ? 'DAY' : isYearly ? 'YEAR' : 'MONTH'
+      }
+    }
+    const salary = parseSalary(job.compensation)
+
+    // JobPosting structured data for Google
+    const jobPostingSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'JobPosting',
+      title: job.title,
+      description: schemaDescription,
+      datePosted: postedDate.toISOString(),
+      validThrough: validThrough.toISOString(),
+      employmentType: job.is_remote ? 'CONTRACTOR' : 'PART_TIME',
+      hiringOrganization: {
+        '@type': 'Organization',
+        name: job.company_name,
+        ...(job.company_domain && { sameAs: `https://${job.company_domain}` }),
+        ...(logo && { logo: logo })
+      },
+      jobLocation: {
+        '@type': 'Place',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: parsedLocation.addressLocality,
+          addressRegion: parsedLocation.addressRegion,
+          addressCountry: parsedLocation.addressCountry
+        }
+      },
+      ...(job.is_remote && {
+        jobLocationType: 'TELECOMMUTE',
+        applicantLocationRequirements: {
+          '@type': 'Country',
+          name: 'United Kingdom'
+        }
+      }),
+      ...(salary && {
+        baseSalary: {
+          '@type': 'MonetaryAmount',
+          currency: 'GBP',
+          value: {
+            '@type': 'QuantitativeValue',
+            minValue: salary.minValue,
+            maxValue: salary.maxValue,
+            unitText: salary.unitText
+          }
+        }
+      }),
+      ...(job.skills_required && job.skills_required.length > 0 && {
+        skills: job.skills_required.join(', ')
+      }),
+      directApply: true
+    }
+
     return (
       <div className="min-h-screen bg-white">
+        {/* JobPosting Structured Data for Google */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostingSchema) }}
+        />
+
         {/* Branded Hero Header */}
         <section className="relative min-h-[40vh] flex items-end overflow-hidden">
           {/* Background - Banner image or gradient */}

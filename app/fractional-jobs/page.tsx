@@ -237,8 +237,64 @@ export default async function JobsPage({ searchParams }: JobsPageProps) {
     // Check if we have any active filters
     const hasActiveFilters = roleFilter || locationFilter || industryFilter || searchQuery
 
+    // Helper to parse location for schema
+    const parseLocation = (locationStr: string) => {
+      const parts = locationStr.split(',').map(p => p.trim())
+      return {
+        addressLocality: parts[0] || locationStr,
+        addressRegion: parts[1] || '',
+        addressCountry: parts.length > 2 ? parts[parts.length - 1] : 'United Kingdom'
+      }
+    }
+
+    // Generate JobPosting schema for each job in the list
+    const jobPostingsSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      itemListElement: jobs.map((job: any, index: number) => {
+        const parsedLoc = parseLocation(job.location || '')
+        const postedDate = job.posted_date ? new Date(job.posted_date) : new Date()
+        const validThrough = new Date(postedDate.getTime() + 30 * 24 * 60 * 60 * 1000)
+
+        return {
+          '@type': 'ListItem',
+          position: index + 1,
+          item: {
+            '@type': 'JobPosting',
+            title: job.title,
+            description: job.description_snippet || `${job.title} position at ${job.company_name}`,
+            datePosted: postedDate.toISOString(),
+            validThrough: validThrough.toISOString(),
+            employmentType: job.is_remote ? 'CONTRACTOR' : 'PART_TIME',
+            hiringOrganization: {
+              '@type': 'Organization',
+              name: job.company_name,
+              ...(job.company_domain && { sameAs: `https://${job.company_domain}` })
+            },
+            jobLocation: {
+              '@type': 'Place',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: parsedLoc.addressLocality,
+                addressRegion: parsedLoc.addressRegion,
+                addressCountry: parsedLoc.addressCountry
+              }
+            },
+            ...(job.is_remote && { jobLocationType: 'TELECOMMUTE' }),
+            url: `https://fractional.quest/fractional-job/${job.slug}`
+          }
+        }
+      })
+    }
+
     return (
       <div className="min-h-screen bg-white">
+        {/* JobPosting Structured Data for Google */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostingsSchema) }}
+        />
+
         {/* Compact Hero Section */}
         <section className="bg-gray-900 pt-6 pb-8">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
