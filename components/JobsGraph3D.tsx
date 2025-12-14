@@ -290,25 +290,25 @@ export function JobsGraph3D({
             height={dimensions.height}
             backgroundColor="rgba(0,0,0,0)"
             nodeThreeObject={createNodeObject}
-            nodeThreeObjectExtend={false}
+            nodeThreeObjectExtend={true}
             nodeLabel={getNodeLabel}
-            nodeRelSize={8}
-            linkColor={() => 'rgba(99, 102, 241, 0.4)'}
-            linkWidth={3}
+            nodeRelSize={6}
+            nodeOpacity={1}
+            linkColor={() => 'rgba(99, 102, 241, 0.5)'}
+            linkWidth={2}
             linkOpacity={0.6}
             onNodeClick={handleNodeClick}
             onNodeHover={(node: any) => {
               if (containerRef.current) {
-                containerRef.current.style.cursor = node?.url ? 'pointer' : 'grab'
+                containerRef.current.style.cursor = node ? 'pointer' : 'grab'
               }
             }}
-            enableNodeDrag={true}
+            enableNodeDrag={false}
             enableNavigationControls={true}
-            d3AlphaDecay={0.03}
-            d3VelocityDecay={0.4}
-            d3AlphaMin={0.001}
-            warmupTicks={100}
-            cooldownTicks={200}
+            d3AlphaDecay={0.02}
+            d3VelocityDecay={0.3}
+            warmupTicks={50}
+            cooldownTicks={100}
           />
         )}
       </div>
