@@ -200,31 +200,57 @@ export default async function Home() {
     ]
   };
 
-  // JobPosting aggregate JSON-LD
+  // Helper to parse location for schema
+  const parseLocation = (locationStr: string) => {
+    const parts = locationStr.split(',').map(p => p.trim())
+    return {
+      addressLocality: parts[0] || locationStr,
+      addressRegion: parts[1] || '',
+      addressCountry: parts.length > 2 ? parts[parts.length - 1] : 'United Kingdom'
+    }
+  }
+
+  // JobPosting aggregate JSON-LD - with complete schema for Google
   const jobPostingJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Fractional Jobs UK - Fractional Executive Jobs & Services",
     description: `Browse ${totalJobs}+ fractional jobs in the UK. Find fractional executive jobs including CFO, CTO, CMO, COO roles or access fractional services for your business.`,
     numberOfItems: totalJobs,
-    itemListElement: featuredJobs.slice(0, 3).map((job: any, index: number) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "JobPosting",
-        title: job.title,
-        hiringOrganization: {
-          "@type": "Organization",
-          name: job.company_name
-        },
-        jobLocation: {
-          "@type": "Place",
-          address: job.location || "United Kingdom"
-        },
-        employmentType: "PART_TIME",
-        datePosted: job.posted_date || new Date().toISOString()
+    itemListElement: featuredJobs.slice(0, 3).map((job: any, index: number) => {
+      const parsedLoc = parseLocation(job.location || 'United Kingdom')
+      const postedDate = job.posted_date ? new Date(job.posted_date) : new Date()
+      const validThrough = new Date(postedDate.getTime() + 30 * 24 * 60 * 60 * 1000)
+
+      return {
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "JobPosting",
+          title: job.title,
+          description: job.description_snippet || `${job.title} position at ${job.company_name}. Fractional executive opportunity in ${job.location || 'United Kingdom'}.`,
+          datePosted: postedDate.toISOString(),
+          validThrough: validThrough.toISOString(),
+          employmentType: job.is_remote ? "CONTRACTOR" : "PART_TIME",
+          hiringOrganization: {
+            "@type": "Organization",
+            name: job.company_name,
+            ...(job.company_domain && { sameAs: `https://${job.company_domain}` })
+          },
+          jobLocation: {
+            "@type": "Place",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: parsedLoc.addressLocality,
+              addressRegion: parsedLoc.addressRegion,
+              addressCountry: parsedLoc.addressCountry
+            }
+          },
+          ...(job.is_remote && { jobLocationType: "TELECOMMUTE" }),
+          url: `https://fractional.quest/fractional-job/${job.slug}`
+        }
       }
-    }))
+    })
   };
 
   return (
