@@ -3,12 +3,6 @@
 import { useEffect, useRef, useCallback, useState } from 'react'
 import dynamic from 'next/dynamic'
 
-// Dynamically import THREE and SpriteText only when needed
-const loadThreeModules = () => Promise.all([
-  import('three'),
-  import('three-spritetext')
-])
-
 // Dynamically import the 3D graph component with SSR disabled
 const ForceGraph3D = dynamic(() => import('react-force-graph-3d'), {
   ssr: false,
@@ -63,41 +57,10 @@ export function JobsGraph3D({
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
   const [dimensions, setDimensions] = useState({ width: 800, height: 500 })
-  const [isVisible, setIsVisible] = useState(false)
-  const [threeModules, setThreeModules] = useState<{ THREE: any; SpriteText: any } | null>(null)
   const [cameraInfo, setCameraInfo] = useState({ x: 0, y: 0, z: 80, distance: 80 })
 
-  // Only load THREE modules when component becomes visible
+  // Fetch graph data
   useEffect(() => {
-    if (!isVisible) return
-
-    loadThreeModules().then(([THREE, SpriteTextModule]) => {
-      setThreeModules({ THREE, SpriteText: SpriteTextModule.default })
-    })
-  }, [isVisible])
-
-  // Intersection observer - only render when visible
-  useEffect(() => {
-    if (!containerRef.current) return
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.1, rootMargin: '100px' }
-    )
-
-    observer.observe(containerRef.current)
-    return () => observer.disconnect()
-  }, [])
-
-  // Fetch graph data - only when visible
-  useEffect(() => {
-    if (!isVisible) return
-
     async function fetchData() {
       try {
         const params = new URLSearchParams()
@@ -165,7 +128,7 @@ export function JobsGraph3D({
     }
 
     fetchData()
-  }, [isVisible, roleFilter, locationFilter, categoryFilter, limit])
+  }, [roleFilter, locationFilter, categoryFilter, limit])
 
   // Handle resize
   useEffect(() => {
@@ -220,7 +183,7 @@ export function JobsGraph3D({
     }, 500)
 
     return () => clearInterval(interval)
-  }, [graphData, threeModules])
+  }, [graphData])
 
   const handleNodeClick = useCallback((node: any) => {
     if (!node.url || !graphRef.current) {
@@ -261,42 +224,6 @@ export function JobsGraph3D({
     return node.name || node.id
   }, [])
 
-  // Create custom node with sphere and text label
-  const createNodeObject = useCallback((node: any) => {
-    if (!threeModules) return null
-
-    const { THREE, SpriteText } = threeModules
-
-    // Create a group to hold sphere and text
-    const group = new THREE.Group()
-
-    // Create sphere - much larger for better visibility and clickability
-    const radius = node.group === 'company' ? 12 : node.group === 'job' ? 10 : 6
-    const geometry = new THREE.SphereGeometry(radius, 24, 24)
-    const material = new THREE.MeshLambertMaterial({
-      color: node.color || groupColors.default,
-      transparent: true,
-      opacity: 0.95,
-    })
-    const sphere = new THREE.Mesh(geometry, material)
-    group.add(sphere)
-
-    // Create text sprite - larger text, especially for jobs
-    const maxLen = node.group === 'job' ? 35 : 25
-    const displayName = node.name?.length > maxLen ? node.name.substring(0, maxLen - 2) + '...' : node.name || ''
-    const sprite = new SpriteText(displayName)
-    sprite.color = '#ffffff'
-    // Much larger text heights for readability
-    sprite.textHeight = node.group === 'company' ? 8 : node.group === 'job' ? 7 : 4
-    sprite.backgroundColor = node.group === 'job' ? 'rgba(59, 130, 246, 0.9)' : node.group === 'company' ? 'rgba(245, 158, 11, 0.9)' : 'rgba(16, 185, 129, 0.8)'
-    sprite.padding = 3
-    sprite.borderRadius = 4
-    sprite.position.y = radius + 10
-    group.add(sprite)
-
-    return group
-  }, [threeModules])
-
   return (
     <div className="relative" style={{ width: '100%', height }}>
       <div
@@ -324,7 +251,7 @@ export function JobsGraph3D({
           </div>
         )}
 
-        {!loading && !error && graphData && threeModules && (
+        {!loading && !error && graphData && (
           <ForceGraph3D
             ref={graphRef}
             graphData={graphData}
