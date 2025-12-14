@@ -251,24 +251,26 @@ export function JobsGraph3D({
   const createNodeLabel = useCallback((node: any): any => {
     if (!SpriteText) return undefined
 
-    // Only show permanent labels for companies and jobs, not skills
+    // Show labels for companies and jobs (not skills)
     if (node.group === 'skill') return undefined
 
     // Get the label text
     let labelText = ''
     let textColor = '#ffffff'
-    let fontSize = 3
+    let fontSize = 6
+    let bgColor = 'rgba(0,0,0,0.8)'
 
     if (node.group === 'company') {
       labelText = node.name || ''
-      textColor = '#f59e0b' // amber
-      fontSize = 4
+      textColor = '#fbbf24' // brighter amber
+      fontSize = 8 // LARGE company names
+      bgColor = 'rgba(120,53,15,0.9)' // dark amber background
     } else if (node.group === 'job') {
-      // Shorter label for jobs
-      const shortName = (node.name || '').split(' ').slice(0, 3).join(' ')
-      labelText = shortName
-      textColor = '#93c5fd' // light blue
-      fontSize = 2.5
+      // Show FULL job title - don't shorten
+      labelText = node.name || ''
+      textColor = '#60a5fa' // bright blue
+      fontSize = 6 // LARGE job titles
+      bgColor = 'rgba(30,58,138,0.9)' // dark blue background
     }
 
     if (!labelText) return undefined
@@ -276,13 +278,14 @@ export function JobsGraph3D({
     const sprite = new SpriteText(labelText)
     sprite.color = textColor
     sprite.textHeight = fontSize
-    sprite.backgroundColor = 'rgba(0,0,0,0.6)'
-    sprite.padding = 1
-    sprite.borderRadius = 2
+    sprite.backgroundColor = bgColor
+    sprite.padding = 2
+    sprite.borderRadius = 3
+    sprite.fontWeight = '700' // Bold font
 
-    // Position label above the node
-    const nodeSize = node.group === 'company' ? 12 : 8
-    sprite.position.y = nodeSize
+    // Position label above the node with more space
+    const nodeSize = node.group === 'company' ? 14 : 10
+    sprite.position.y = nodeSize + 2
 
     return sprite
   }, [SpriteText])
