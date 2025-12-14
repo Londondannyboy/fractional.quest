@@ -141,7 +141,7 @@ export default async function FractionalCooJobsUkPage() {
         <section className="py-16 bg-gray-950">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="mb-10 text-center">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-2 block">Interactive Network</span>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Interactive Network</span>
               <h2 className="text-3xl md:text-4xl font-black text-white">COO Jobs Knowledge Graph</h2>
               <p className="text-gray-400 mt-2">Explore COO roles, skills, and companies in 3D</p>
             </div>

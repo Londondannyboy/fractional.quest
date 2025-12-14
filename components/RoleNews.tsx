@@ -270,7 +270,7 @@ export async function LatestNews({ limit = 6 }: { limit?: number }) {
         </div>
         <Link
           href="/fractional-jobs-articles"
-          className="hidden md:inline-flex items-center text-sm font-medium text-amber-600 hover:text-amber-700 transition-colors"
+          className="hidden md:inline-flex items-center text-sm font-medium text-amber-700 hover:text-amber-800 transition-colors"
         >
           View all articles →
         </Link>

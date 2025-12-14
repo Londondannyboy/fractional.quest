@@ -149,14 +149,6 @@ export default async function FractionalJobsUKPage() {
                     <span className="text-white/90">& London</span>
                   </h1>
 
-                  <img
-                    src="/images/fractional-jobs-uk.svg"
-                    alt="Fractional Jobs UK - Executive recruitment opportunities nationwide including London"
-                    className="hidden"
-                    width={1}
-                    height={1}
-                  />
-
                   <p className="text-lg text-white/70 mb-8 leading-relaxed max-w-lg">
                     Find fractional jobs UK wide. From fractional jobs London to Manchester, Birmingham and beyond. CFO, CMO, CTO roles with £800-£1,500 daily rates.
                   </p>
