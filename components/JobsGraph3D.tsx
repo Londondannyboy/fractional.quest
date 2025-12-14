@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 import type SpriteTextType from 'three-spritetext'
 
 // Dynamically import the 3D graph component with SSR disabled
+// This is lazy-loaded to not block initial page render
 const ForceGraph3D = dynamic(() => import('react-force-graph-3d'), {
   ssr: false,
   loading: () => null
@@ -61,16 +62,30 @@ export function JobsGraph3D({
   const [dimensions, setDimensions] = useState({ width: 800, height: 500 })
   const [cameraInfo, setCameraInfo] = useState({ x: 0, y: 0, z: 80, distance: 80 })
   const [SpriteText, setSpriteText] = useState<typeof SpriteTextType | null>(null)
+  const [shouldLoad, setShouldLoad] = useState(false) // Defer loading for performance
 
-  // Load SpriteText dynamically on client
+  // Defer graph loading until after initial page render (performance trick!)
   useEffect(() => {
+    // Wait 500ms after component mounts before loading the graph
+    // This ensures the page becomes interactive first
+    const timer = setTimeout(() => {
+      setShouldLoad(true)
+    }, 500)
+    return () => clearTimeout(timer)
+  }, [])
+
+  // Load SpriteText dynamically on client (only after shouldLoad is true)
+  useEffect(() => {
+    if (!shouldLoad) return
     import('three-spritetext').then(mod => {
       setSpriteText(() => mod.default)
     })
-  }, [])
+  }, [shouldLoad])
 
-  // Fetch graph data
+  // Fetch graph data (only after shouldLoad is true)
   useEffect(() => {
+    if (!shouldLoad) return
+
     async function fetchData() {
       try {
         const params = new URLSearchParams()
@@ -139,7 +154,7 @@ export function JobsGraph3D({
     }
 
     fetchData()
-  }, [roleFilter, locationFilter, categoryFilter, limit])
+  }, [roleFilter, locationFilter, categoryFilter, limit, shouldLoad])
 
   // Handle resize
   useEffect(() => {
@@ -299,7 +314,16 @@ export function JobsGraph3D({
           background: 'radial-gradient(ellipse at center, #0a0a1a 0%, #000000 100%)',
         }}
       >
-        {loading && (
+        {/* Show placeholder before graph loads (performance trick!) */}
+        {!shouldLoad && (
+          <div className="absolute inset-0 flex items-center justify-center z-10">
+            <div className="text-center opacity-50">
+              <p className="text-gray-400 text-sm">Interactive graph loading...</p>
+            </div>
+          </div>
+        )}
+
+        {shouldLoad && loading && (
           <div className="absolute inset-0 flex items-center justify-center z-10">
             <div className="text-center">
               <div className="w-12 h-12 border-4 border-blue-500/30 border-t-blue-500 rounded-full animate-spin mx-auto mb-4" />
@@ -317,7 +341,7 @@ export function JobsGraph3D({
           </div>
         )}
 
-        {!loading && !error && graphData && (
+        {shouldLoad && !loading && !error && graphData && (
           <ForceGraph3D
             ref={graphRef}
             graphData={graphData}
