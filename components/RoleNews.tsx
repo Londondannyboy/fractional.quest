@@ -87,7 +87,7 @@ export async function RoleNews({
         {showViewAll && (
           <Link
             href="/fractional-jobs-articles"
-            className="text-sm font-medium text-amber-600 hover:text-amber-700 transition-colors"
+            className="text-sm font-medium text-amber-700 hover:text-amber-800 transition-colors"
           >
             View all articles →
           </Link>
@@ -334,7 +334,7 @@ export async function LatestNews({ limit = 6 }: { limit?: number }) {
                   <span className="text-gray-500">
                     {formatDate(article.published_at)}
                   </span>
-                  <span className="font-medium text-amber-600 group-hover:text-amber-700">
+                  <span className="font-medium text-amber-700 group-hover:text-amber-800">
                     Read →
                   </span>
                 </div>
@@ -348,7 +348,7 @@ export async function LatestNews({ limit = 6 }: { limit?: number }) {
       <div className="mt-6 md:hidden text-center">
         <Link
           href="/fractional-jobs-articles"
-          className="inline-flex items-center text-sm font-medium text-amber-600 hover:text-amber-700 transition-colors"
+          className="inline-flex items-center text-sm font-medium text-amber-700 hover:text-amber-800 transition-colors"
         >
           View all articles →
         </Link>
