@@ -272,25 +272,11 @@ export default async function Home() {
       />
     <div className="flex flex-col">
       {/* Hero Section with 3D Knowledge Graph - Interactive Job Network */}
-      <section className="relative min-h-screen flex items-end overflow-hidden">
-        {/* 3D Knowledge Graph Background */}
-        <div className="absolute inset-0">
+      <section className="relative min-h-screen flex items-end overflow-hidden bg-gradient-to-br from-gray-900 via-slate-900 to-black">
+        {/* 3D Knowledge Graph Background - Desktop Only */}
+        <div className="hidden md:block absolute inset-0">
           <JobsGraph3D
-            limit={30}
-            height="100%"
-            isHero={true}
-            showOverlay={false}
-          />
-        </div>
-
-        {/* Mini Graph - CFO Focus (Top Right) - Desktop Only */}
-        <div className="hidden lg:block absolute top-24 right-6 w-72 h-56 rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl z-30">
-          <div className="absolute top-2 left-2 z-10 bg-black/70 backdrop-blur px-3 py-1 rounded text-xs">
-            <span className="text-amber-400 font-semibold">CFO Jobs</span>
-          </div>
-          <JobsGraph3D
-            roleFilter="CFO"
-            limit={12}
+            limit={15}
             height="100%"
             isHero={true}
             showOverlay={false}
