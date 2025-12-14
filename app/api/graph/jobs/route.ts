@@ -63,6 +63,7 @@ export async function GET(request: NextRequest) {
         SELECT
           id,
           title,
+          slug,
           company_name,
           location,
           skills_required,
@@ -79,6 +80,7 @@ export async function GET(request: NextRequest) {
         SELECT
           id,
           title,
+          slug,
           company_name,
           location,
           skills_required,
@@ -99,6 +101,7 @@ export async function GET(request: NextRequest) {
         SELECT
           id,
           title,
+          slug,
           company_name,
           location,
           skills_required,
@@ -115,6 +118,7 @@ export async function GET(request: NextRequest) {
       jobs.map(j => ({
         id: String(j.id),
         title: j.title,
+        slug: j.slug,
         company: j.company_name || 'Unknown Company',
         skills: parseSkills(j.skills_required),
         location: j.location || 'UK',

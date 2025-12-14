@@ -14,6 +14,7 @@ export interface GraphNode {
   id: string
   type: 'user' | 'skill' | 'job' | 'company' | 'preference' | 'fact'
   label: string
+  url?: string
   data?: Record<string, unknown>
 }
 
@@ -625,6 +626,7 @@ export async function buildJobsGraph(
   jobs: Array<{
     id: string
     title: string
+    slug?: string
     company: string
     skills: string[]
     location: string
@@ -643,6 +645,7 @@ export async function buildJobsGraph(
       id: `job-${job.id}`,
       type: 'job',
       label: job.title,
+      url: job.slug ? `/fractional-job/${job.slug}` : undefined,
       data: { company: job.company, location: job.location },
     }
     nodes.push(jobNode)
