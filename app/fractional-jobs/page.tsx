@@ -7,11 +7,7 @@ import { JobFilters } from '@/components/JobFilters'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { JobsSunburst } from '@/components/JobsSunburst'
 import { SkillsRadar } from '@/components/SkillsRadar'
-import { VideoHeroBackground } from '@/components/VideoHeroBackground'
 import { DesktopOnly } from '@/components/DesktopOnly'
-
-// Same video as homepage
-const HERO_VIDEO_PLAYBACK_ID: string | undefined = "qIS6PGKxIZyzjrDBzxQuqPRBOhHofDnXq1chdsqAY9Y"
 
 // Revalidate every 15 minutes for jobs
 export const revalidate = 900
@@ -223,12 +219,11 @@ export default async function JobsPage({ searchParams }: JobsPageProps) {
 
     return (
       <div className="min-h-screen bg-white">
-        {/* Hero Section with Video Background */}
+        {/* Hero Section with 3D Knowledge Graph Background */}
         <section className="relative min-h-[50vh] flex items-end overflow-hidden">
-          <VideoHeroBackground
-            playbackId={HERO_VIDEO_PLAYBACK_ID}
-            fallbackGradient={true}
-          />
+          <div className="absolute inset-0">
+            <JobsGraph3D limit={30} height="100%" isHero={true} showOverlay={true} />
+          </div>
 
           {/* Bottom-aligned content with glass panel */}
           <div className="relative z-10 w-full pb-12 md:pb-16">
@@ -317,13 +312,12 @@ export default async function JobsPage({ searchParams }: JobsPageProps) {
           </div>
         </section>
 
-        {/* Jobs List - Dark section with video */}
+        {/* Jobs List - Dark section with 3D Knowledge Graph */}
         <section className="py-12 relative overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <VideoHeroBackground
-              playbackId={HERO_VIDEO_PLAYBACK_ID}
-              fallbackGradient={true}
-            />
+            <div className="absolute inset-0">
+              <JobsGraph3D limit={30} height="100%" isHero={true} showOverlay={true} />
+            </div>
             <div className="absolute inset-0 bg-gray-900/85" />
           </div>
           <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">

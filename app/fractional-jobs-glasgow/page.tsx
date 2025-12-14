@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { JobCard } from '@/components/JobCard'
+import { JobsGraph3D } from '@/components/JobsGraph3D'
 
 export const revalidate = 3600
 
@@ -123,15 +124,9 @@ export default async function GlasgowPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <defs>
-              <pattern id="glasgowGrid" width="10" height="10" patternUnits="userSpaceOnUse">
-                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" strokeWidth="0.5"/>
-              </pattern>
-            </defs>
-            <rect width="100" height="100" fill="url(#glasgowGrid)" />
-          </svg>
+        {/* 3D Knowledge Graph */}
+        <div className="absolute inset-0">
+          <JobsGraph3D locationFilter="glasgow" limit={30} height="100%" isHero={true} showOverlay={true} />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">

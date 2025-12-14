@@ -2,12 +2,9 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { JobCard } from '@/components/JobCard'
-import { VideoHeroBackground } from '@/components/VideoHeroBackground'
+import { JobsGraph3D } from '@/components/JobsGraph3D'
 
 export const revalidate = 3600 // Revalidate every hour
-
-// Same video as homepage
-const HERO_VIDEO_PLAYBACK_ID: string | undefined = "qIS6PGKxIZyzjrDBzxQuqPRBOhHofDnXq1chdsqAY9Y"
 
 export const metadata: Metadata = {
   title: 'Fractional Jobs UK | Fractional Jobs London - Executive Roles Nationwide',
@@ -122,12 +119,11 @@ export default async function FractionalJobsUKPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section with Video Background */}
+      {/* Hero Section with 3D Knowledge Graph Background */}
       <section className="relative min-h-[85vh] flex items-end overflow-hidden">
-        <VideoHeroBackground
-          playbackId={HERO_VIDEO_PLAYBACK_ID}
-          fallbackGradient={true}
-        />
+        <div className="absolute inset-0">
+          <JobsGraph3D locationFilter="london" limit={30} height="100%" isHero={true} showOverlay={true} />
+        </div>
 
         {/* Bottom-aligned content with glass panel */}
         <div className="relative z-10 w-full pb-16 md:pb-24">

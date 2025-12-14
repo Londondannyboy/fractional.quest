@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { SavingsCalculator } from '@/components/SavingsCalculator'
-import { VideoHeroBackground } from '@/components/VideoHeroBackground'
+import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { getAgencies, Agency } from '@/lib/agencies'
 
 export const metadata: Metadata = {
@@ -21,21 +21,17 @@ export const metadata: Metadata = {
 
 export const revalidate = 3600
 
-// Mux video - professional executive theme (same as CMO page)
-const HERO_VIDEO_PLAYBACK_ID: string | undefined = "qIS6PGKxIZyzjrDBzxQuqPRBOhHofDnXq1chdsqAY9Y"
-
 export default async function TopFractionalRecruitmentAgenciesPage() {
   const agencies = await getAgencies()
   const otherAgencies = agencies.filter(a => !a.payload?.featured)
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Editorial Hero with Video Background */}
+      {/* Editorial Hero with 3D Knowledge Graph Background */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
-        <VideoHeroBackground
-          playbackId={HERO_VIDEO_PLAYBACK_ID}
-          fallbackGradient={true}
-        />
+        <div className="absolute inset-0">
+          <JobsGraph3D limit={30} height="100%" isHero={true} showOverlay={true} />
+        </div>
 
         {/* Hero Content */}
         <div className="relative z-10 w-full py-20">

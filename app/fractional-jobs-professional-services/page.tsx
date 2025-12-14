@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
+import { JobsGraph3D } from '@/components/JobsGraph3D'
 
 export const revalidate = 3600
 
@@ -66,36 +67,41 @@ export default async function ProfessionalServicesPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-20 md:py-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <Link href="/" className="inline-flex items-center text-gray-200 hover:text-white mb-6 transition-colors">
-            ← Back to Home
-          </Link>
-          <div className="inline-block mb-6">
-            <span className="bg-gray-700/50 backdrop-blur text-white px-5 py-2.5 rounded-full text-sm font-medium border border-gray-500/30">
-              {stats.totalPS}+ Professional Services Jobs
-            </span>
-          </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
-            Fractional Jobs Professional Services
-          </h1>
-          <p className="max-w-2xl text-xl text-gray-100 mb-10 leading-relaxed">
-            {stats.totalPS}+ fractional executive opportunities in consulting, legal, and advisory firms. £600-£1,100 daily rates. Help professional services firms digitize and scale.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/fractional-jobs?industry=Professional%20Services"
-              className="inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-lg bg-white text-gray-900 hover:bg-gray-50 transition-all duration-200"
-            >
-              Browse Professional Services Jobs
+      {/* Hero Section with 3D Knowledge Graph Background */}
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <JobsGraph3D limit={30} height="100%" isHero={true} showOverlay={true} />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="bg-black/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10 max-w-3xl">
+            <Link href="/" className="inline-flex items-center text-white/70 hover:text-white mb-6 transition-colors">
+              ← Back to Home
             </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-lg border-2 border-white text-white hover:bg-white/10 transition-all duration-200"
-            >
-              Find Agencies
-            </Link>
+            <div className="inline-block mb-6">
+              <span className="bg-white/10 backdrop-blur text-white/90 px-5 py-2.5 rounded-full text-sm font-medium border border-white/20">
+                {stats.totalPS}+ Professional Services Jobs
+              </span>
+            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+              Fractional Jobs Professional Services
+            </h1>
+            <p className="max-w-2xl text-xl text-white/80 mb-10 leading-relaxed">
+              {stats.totalPS}+ fractional executive opportunities in consulting, legal, and advisory firms. £600-£1,100 daily rates. Help professional services firms digitize and scale.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/fractional-jobs?industry=Professional%20Services"
+                className="inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-lg bg-white text-gray-900 hover:bg-gray-50 transition-all duration-200"
+              >
+                Browse Professional Services Jobs
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-lg bg-white/10 backdrop-blur border border-white/20 text-white hover:bg-white/20 transition-all duration-200"
+              >
+                Find Agencies
+              </Link>
+            </div>
           </div>
         </div>
       </section>

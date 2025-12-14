@@ -26,6 +26,8 @@ interface GraphLink {
 
 export interface JobsGraph3DProps {
   roleFilter?: string
+  locationFilter?: string
+  categoryFilter?: string
   limit?: number
   height?: string
   isHero?: boolean
@@ -42,6 +44,8 @@ const groupColors: Record<string, string> = {
 
 export function JobsGraph3D({
   roleFilter = '',
+  locationFilter = '',
+  categoryFilter = '',
   limit = 20,
   height = '500px',
   isHero = false,
@@ -60,6 +64,8 @@ export function JobsGraph3D({
       try {
         const params = new URLSearchParams()
         if (roleFilter) params.set('role', roleFilter)
+        if (locationFilter) params.set('location', locationFilter)
+        if (categoryFilter) params.set('category', categoryFilter)
         params.set('limit', limit.toString())
 
         const response = await fetch(`/api/graph/jobs?${params}`)
@@ -121,7 +127,7 @@ export function JobsGraph3D({
     }
 
     fetchData()
-  }, [roleFilter, limit])
+  }, [roleFilter, locationFilter, categoryFilter, limit])
 
   // Handle resize
   useEffect(() => {

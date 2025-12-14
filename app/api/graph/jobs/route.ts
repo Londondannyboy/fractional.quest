@@ -14,6 +14,8 @@ const sql = neon(process.env.DATABASE_URL!)
 // GET /api/graph/jobs - Get jobs knowledge graph
 export async function GET(request: NextRequest) {
   const roleFilter = request.nextUrl.searchParams.get('role')
+  const locationFilter = request.nextUrl.searchParams.get('location')
+  const categoryFilter = request.nextUrl.searchParams.get('category')
   const searchQuery = request.nextUrl.searchParams.get('q')
   const limit = parseInt(request.nextUrl.searchParams.get('limit') || '20')
   const source = request.nextUrl.searchParams.get('source') || 'auto'
@@ -56,40 +58,62 @@ export async function GET(request: NextRequest) {
       }
     }
 
-    // Fall back to local database
+    // Build dynamic query based on filters
     let jobs
-    if (roleFilter) {
+
+    // Combine multiple filters
+    if (roleFilter && locationFilter) {
       jobs = await sql`
-        SELECT
-          id,
-          title,
-          slug,
-          company_name,
-          company_domain,
-          location,
-          skills_required,
-          role_category
+        SELECT id, title, slug, company_name, company_domain, location, skills_required, role_category
         FROM jobs
-        WHERE is_active = true
-          AND is_fractional = true
+        WHERE is_active = true AND is_fractional = true
           AND LOWER(title) LIKE LOWER(${`%${roleFilter}%`})
+          AND LOWER(location) LIKE LOWER(${`%${locationFilter}%`})
+        ORDER BY posted_date DESC NULLS LAST
+        LIMIT ${limit}
+      `
+    } else if (roleFilter && categoryFilter) {
+      jobs = await sql`
+        SELECT id, title, slug, company_name, company_domain, location, skills_required, role_category
+        FROM jobs
+        WHERE is_active = true AND is_fractional = true
+          AND LOWER(title) LIKE LOWER(${`%${roleFilter}%`})
+          AND LOWER(role_category) = LOWER(${categoryFilter})
+        ORDER BY posted_date DESC NULLS LAST
+        LIMIT ${limit}
+      `
+    } else if (roleFilter) {
+      jobs = await sql`
+        SELECT id, title, slug, company_name, company_domain, location, skills_required, role_category
+        FROM jobs
+        WHERE is_active = true AND is_fractional = true
+          AND LOWER(title) LIKE LOWER(${`%${roleFilter}%`})
+        ORDER BY posted_date DESC NULLS LAST
+        LIMIT ${limit}
+      `
+    } else if (locationFilter) {
+      jobs = await sql`
+        SELECT id, title, slug, company_name, company_domain, location, skills_required, role_category
+        FROM jobs
+        WHERE is_active = true AND is_fractional = true
+          AND LOWER(location) LIKE LOWER(${`%${locationFilter}%`})
+        ORDER BY posted_date DESC NULLS LAST
+        LIMIT ${limit}
+      `
+    } else if (categoryFilter) {
+      jobs = await sql`
+        SELECT id, title, slug, company_name, company_domain, location, skills_required, role_category
+        FROM jobs
+        WHERE is_active = true AND is_fractional = true
+          AND LOWER(role_category) = LOWER(${categoryFilter})
         ORDER BY posted_date DESC NULLS LAST
         LIMIT ${limit}
       `
     } else if (searchQuery) {
       jobs = await sql`
-        SELECT
-          id,
-          title,
-          slug,
-          company_name,
-          company_domain,
-          location,
-          skills_required,
-          role_category
+        SELECT id, title, slug, company_name, company_domain, location, skills_required, role_category
         FROM jobs
-        WHERE is_active = true
-          AND is_fractional = true
+        WHERE is_active = true AND is_fractional = true
           AND (
             LOWER(title) LIKE LOWER(${`%${searchQuery}%`})
             OR LOWER(company_name) LIKE LOWER(${`%${searchQuery}%`})
@@ -100,15 +124,7 @@ export async function GET(request: NextRequest) {
       `
     } else {
       jobs = await sql`
-        SELECT
-          id,
-          title,
-          slug,
-          company_name,
-          company_domain,
-          location,
-          skills_required,
-          role_category
+        SELECT id, title, slug, company_name, company_domain, location, skills_required, role_category
         FROM jobs
         WHERE is_active = true AND is_fractional = true
         ORDER BY posted_date DESC NULLS LAST

@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
+import { JobsGraph3D } from '@/components/JobsGraph3D'
 
 export const revalidate = 3600
 
@@ -44,18 +45,23 @@ export default async function PartTimeCmoPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-purple-900 to-purple-800 py-20">
-        <div className="max-w-4xl mx-auto px-4">
-          <Link href="/" className="text-purple-200 hover:text-white mb-6 inline-block">← Back to Home</Link>
-          <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Part-Time CMO Jobs UK</h1>
-          <p className="text-xl text-purple-100 mb-8">
-            Flexible Chief Marketing Officer roles for experienced marketing leaders. Work 1-3 days per week earning £700-£1,400 per day.
-          </p>
-          <div className="flex gap-4">
-            <Link href="/fractional-jobs?role=CMO" className="px-8 py-4 bg-white text-purple-900 rounded-lg font-semibold hover:bg-purple-50">
-              Browse {jobCount}+ CMO Jobs
-            </Link>
+      {/* Hero with 3D Knowledge Graph Background */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <JobsGraph3D roleFilter="CMO" limit={30} height="100%" isHero={true} showOverlay={true} />
+        </div>
+        <div className="max-w-4xl mx-auto px-4 relative z-10">
+          <div className="bg-black/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10">
+            <Link href="/" className="text-white/70 hover:text-white mb-6 inline-block">← Back to Home</Link>
+            <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Part-Time CMO Jobs UK</h1>
+            <p className="text-xl text-white/80 mb-8">
+              Flexible Chief Marketing Officer roles for experienced marketing leaders. Work 1-3 days per week earning £700-£1,400 per day.
+            </p>
+            <div className="flex gap-4">
+              <Link href="/fractional-jobs?role=CMO" className="px-8 py-4 bg-white text-purple-900 rounded-lg font-semibold hover:bg-purple-50">
+                Browse {jobCount}+ CMO Jobs
+              </Link>
+            </div>
           </div>
         </div>
       </section>

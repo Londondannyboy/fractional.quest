@@ -1,10 +1,9 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { VideoHeroBackground } from '@/components/VideoHeroBackground'
+import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
 
 export const revalidate = 3600
-const HERO_VIDEO_PLAYBACK_ID = "qIS6PGKxIZyzjrDBzxQuqPRBOhHofDnXq1chdsqAY9Y"
 
 export const metadata: Metadata = {
   title: 'Interim CPO Services UK | Hire a Temporary CPO',
@@ -17,7 +16,9 @@ export default function InterimCPOPage() {
   return (
     <div className="min-h-screen bg-white">
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
-        <VideoHeroBackground playbackId={HERO_VIDEO_PLAYBACK_ID} fallbackGradient={true} />
+        <div className="absolute inset-0">
+          <JobsGraph3D roleFilter="CPO" limit={25} height="100%" isHero={true} showOverlay={true} />
+        </div>
         <div className="relative z-10 w-full py-20">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <Link href="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm"><span className="mr-2">←</span> Back to Home</Link>

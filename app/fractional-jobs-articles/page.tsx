@@ -3,13 +3,10 @@ import Link from 'next/link'
 import { Suspense } from 'react'
 import { createDbQuery } from '@/lib/db'
 import { ArticleCard } from '@/components/ArticleCard'
-import { VideoHeroBackground } from '@/components/VideoHeroBackground'
+import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { JobsCalendarHeatmap } from '@/components/JobsCalendarHeatmap'
 
 export const revalidate = 14400 // Revalidate every 4 hours
-
-// Same video as homepage
-const HERO_VIDEO_PLAYBACK_ID: string | undefined = "qIS6PGKxIZyzjrDBzxQuqPRBOhHofDnXq1chdsqAY9Y"
 
 export const metadata: Metadata = {
   title: 'Fractional Executive Articles & Guides | Fractional Quest',
@@ -75,12 +72,11 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
 
     return (
       <div className="min-h-screen bg-white">
-        {/* Hero Section with Video Background */}
+        {/* Hero Section with 3D Knowledge Graph Background */}
         <section className="relative min-h-[60vh] flex items-end overflow-hidden">
-          <VideoHeroBackground
-            playbackId={HERO_VIDEO_PLAYBACK_ID}
-            fallbackGradient={true}
-          />
+          <div className="absolute inset-0">
+            <JobsGraph3D limit={30} height="100%" isHero={true} showOverlay={true} />
+          </div>
 
           {/* Bottom-aligned content with glass panel */}
           <div className="relative z-10 w-full pb-16 md:pb-24">

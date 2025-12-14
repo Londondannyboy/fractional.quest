@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
-import { VideoHeroBackground } from '@/components/VideoHeroBackground'
+import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { RoleCalculator } from '@/components/RoleCalculator'
 import { HireProcessStepper } from '@/components/HireProcessStepper'
 import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
@@ -55,9 +55,11 @@ export const metadata: Metadata = {
 export default function FractionalCHROServicesPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
+      {/* Hero Section with 3D Knowledge Graph */}
       <section className="relative min-h-[75vh] flex items-center overflow-hidden">
-        <VideoHeroBackground playbackId={HERO_VIDEO_PLAYBACK_ID} fallbackGradient={true} />
+        <div className="absolute inset-0">
+          <JobsGraph3D roleFilter="CHRO" limit={25} height="100%" isHero={true} showOverlay={true} />
+        </div>
         <div className="relative z-10 w-full py-20">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <Link href="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm tracking-wide">

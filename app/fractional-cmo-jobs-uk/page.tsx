@@ -4,7 +4,6 @@ import { Suspense } from 'react'
 import { createDbQuery } from '@/lib/db'
 import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
 import { FAQ, CMO_FAQS } from '@/components/FAQ'
-import { VideoHeroBackground } from '@/components/VideoHeroBackground'
 import { RoleCalculator } from '@/components/RoleCalculator'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { DesktopOnly } from '@/components/DesktopOnly'
@@ -66,12 +65,11 @@ export default async function FractionalCmoJobsUkPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Editorial Hero with Video Background */}
+      {/* Editorial Hero with 3D Knowledge Graph */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        <VideoHeroBackground
-          playbackId={HERO_VIDEO_PLAYBACK_ID}
-          fallbackGradient={true}
-        />
+        <div className="absolute inset-0">
+          <JobsGraph3D roleFilter="CMO" limit={25} height="100%" isHero={true} showOverlay={true} />
+        </div>
 
         {/* Hero Content */}
         <div className="relative z-10 w-full py-20">

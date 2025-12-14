@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
-import { VideoHeroBackground } from '@/components/VideoHeroBackground'
+import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { FAQ, FINANCE_FAQS } from '@/components/FAQ'
@@ -72,12 +72,11 @@ export default async function FinanceJobsPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section with Video Background */}
+      {/* Hero Section with 3D Knowledge Graph Background */}
       <section className="relative min-h-[85vh] flex items-end overflow-hidden">
-        <VideoHeroBackground
-          playbackId={HERO_VIDEO_PLAYBACK_ID}
-          fallbackGradient={true}
-        />
+        <div className="absolute inset-0">
+          <JobsGraph3D categoryFilter="Finance" limit={30} height="100%" isHero={true} showOverlay={true} />
+        </div>
 
         {/* Bottom-aligned content with glass panel */}
         <div className="relative z-10 w-full pb-16 md:pb-24">

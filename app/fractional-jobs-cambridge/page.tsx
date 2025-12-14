@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
+import { JobsGraph3D } from '@/components/JobsGraph3D'
 
 export const revalidate = 3600
 
@@ -70,8 +71,11 @@ export default async function CambridgePage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
+      {/* Hero Section with 3D Knowledge Graph */}
       <section className="relative bg-gradient-to-br from-cyan-900 via-cyan-800 to-cyan-900 py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <JobsGraph3D locationFilter="cambridge" limit={30} height="100%" isHero={true} showOverlay={true} />
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <Link href="/" className="inline-flex items-center text-cyan-200 hover:text-white mb-6 transition-colors">
             ← Back to Home
