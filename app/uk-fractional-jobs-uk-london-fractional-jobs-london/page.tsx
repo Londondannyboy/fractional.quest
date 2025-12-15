@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { createDbQuery } from '@/lib/db'
 import { JobCard } from '@/components/JobCard'
-import { JobsGraph3D } from '@/components/JobsGraph3D'
+import { DesktopOnly3DGraph } from '@/components/DesktopOnly3DGraph'
 import { FAQ } from '@/components/FAQ'
 import { FractionalVsFullTimeComparison } from '@/components/FractionalVsFullTimeComparison'
 import { FractionalRateCalculatorUK } from '@/components/FractionalRateCalculatorUK'
@@ -183,9 +183,8 @@ export default async function FractionalJobsUKPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Section with 3D Knowledge Graph Background */}
       <section className="relative min-h-[85vh] flex items-end overflow-hidden">
-        <div className="absolute inset-0">
-          <JobsGraph3D locationFilter="london" limit={30} height="100%" isHero={true} showOverlay={true} />
-        </div>
+        {/* Conditionally load 3D graph only on desktop (768px+) to avoid 32s mobile JS execution */}
+        <DesktopOnly3DGraph locationFilter="london" limit={30} height="100%" isHero={true} showOverlay={true} />
 
         {/* Bottom-aligned content with glass panel */}
         <div className="relative z-10 w-full pb-16 md:pb-24">
