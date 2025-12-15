@@ -1,21 +1,41 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import { createDbQuery } from '@/lib/db'
 import { JobCard } from '@/components/JobCard'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
+import { FAQ } from '@/components/FAQ'
+
+// Dynamic imports for client-side interactive components
+const FractionalVsFullTimeComparison = dynamic(
+  () => import('@/components/FractionalVsFullTimeComparison').then(mod => mod.FractionalVsFullTimeComparison),
+  { ssr: false, loading: () => <div className="h-96 bg-gray-100 rounded-2xl animate-pulse" /> }
+)
+const FractionalRateCalculatorUK = dynamic(
+  () => import('@/components/FractionalRateCalculatorUK').then(mod => mod.FractionalRateCalculatorUK),
+  { ssr: false, loading: () => <div className="h-96 bg-gray-100 rounded-2xl animate-pulse" /> }
+)
+const FractionalFitQuiz = dynamic(
+  () => import('@/components/FractionalFitQuiz').then(mod => mod.FractionalFitQuiz),
+  { ssr: false, loading: () => <div className="h-96 bg-gray-100 rounded-2xl animate-pulse" /> }
+)
+const UKMarketDashboard = dynamic(
+  () => import('@/components/UKMarketDashboard').then(mod => mod.UKMarketDashboard),
+  { ssr: false, loading: () => <div className="h-96 bg-gray-100 rounded-2xl animate-pulse" /> }
+)
 
 export const revalidate = 3600 // Revalidate every hour
 
 export const metadata: Metadata = {
-  title: 'Fractional Jobs UK | London, Manchester, Birmingham',
-  description: 'Find fractional jobs UK wide. London, Manchester, Birmingham. CFO, CMO, CTO roles. £800-£1,500 day rates. 200+ opportunities.',
-  keywords: 'fractional jobs UK, fractional jobs London, fractional executive jobs UK, fractional CFO jobs UK, fractional CMO jobs UK, fractional CTO jobs UK',
+  title: 'Fractional Jobs UK 2025: 200+ Executive Roles | CFO, CTO, CMO',
+  description: 'Find 200+ fractional jobs UK in 2025. CFO, CTO, CMO executive roles in London, Manchester & UK-wide. Day rates £800-£1,500. Free calculators & career quiz. Browse now.',
+  keywords: 'fractional jobs UK, fractional jobs London, fractional executive jobs UK, fractional CFO jobs UK, fractional CMO jobs UK, fractional CTO jobs UK, fractional jobs 2025',
   alternates: {
     canonical: 'https://fractional.quest/uk-fractional-jobs-uk-london-fractional-jobs-london',
   },
   openGraph: {
-    title: 'Fractional Jobs UK | London, Manchester, Birmingham',
-    description: 'Find fractional jobs UK wide. London, Manchester, Birmingham. CFO, CMO, CTO roles. £800-£1,500 day rates.',
+    title: 'Fractional Jobs UK 2025: 200+ Executive Roles | CFO, CTO, CMO',
+    description: 'Find 200+ fractional jobs UK in 2025. CFO, CTO, CMO executive roles in London, Manchester & UK-wide. Day rates £800-£1,500. Free calculators & career quiz.',
     type: 'website',
     url: 'https://fractional.quest/uk-fractional-jobs-uk-london-fractional-jobs-london',
   },
@@ -58,6 +78,58 @@ const successStories = [
     name: "Sophie W.",
     role: "Fractional CMO",
     area: "London",
+  },
+]
+
+// Expanded FAQ items for UK Fractional Jobs (10+ questions for SEO)
+const ukFractionalJobsFAQs = [
+  {
+    question: 'What are fractional jobs UK?',
+    answer: 'Fractional jobs UK are part-time executive roles where experienced professionals work with multiple companies simultaneously. Fractional jobs UK typically involve CFO, CMO, CTO, and COO positions, offering flexibility and high earning potential across the United Kingdom. Unlike interim roles which are typically full-time temporary positions, fractional executives maintain ongoing relationships with 2-4 clients, dedicating 1-3 days per week to each.',
+  },
+  {
+    question: 'How much do fractional jobs UK pay?',
+    answer: 'Fractional jobs UK typically pay £700-£1,500 per day depending on role, experience, and location. Fractional jobs London command premium rates of £900-£1,500/day, while regional positions in Manchester, Birmingham, and Edinburgh average £700-£1,200/day. Most fractional professionals work with 2-4 clients simultaneously, earning £150,000-£300,000+ annually. CFOs and CTOs typically earn the highest rates, while CMOs and COOs follow closely behind.',
+  },
+  {
+    question: 'Where are most fractional jobs UK located?',
+    answer: 'Fractional jobs London account for approximately 60% of the UK market, making it the dominant hub for fractional executive opportunities. However, fractional jobs UK are growing rapidly in Manchester (15% of market), Birmingham, Edinburgh, Bristol, and Leeds. Many fractional jobs UK also offer remote or hybrid working arrangements, allowing professionals to serve clients nationwide regardless of their base location.',
+  },
+  {
+    question: 'How do I find fractional jobs UK?',
+    answer: 'Fractional.quest is the UK\'s dedicated marketplace for fractional jobs. Browse fractional jobs London, Manchester, Birmingham, and across the UK. Create a profile to get matched with opportunities, or sign up for alerts to receive notifications when new fractional jobs UK matching your skills become available. Networking through LinkedIn and executive communities also helps, as many fractional roles are filled through referrals.',
+  },
+  {
+    question: 'What is the difference between fractional and interim jobs?',
+    answer: 'Fractional executives work part-time (typically 1-3 days per week) with multiple clients simultaneously on an ongoing basis, while interim executives work full-time with one company temporarily (usually 3-12 months) to fill a gap or manage a transition. Fractional roles offer more flexibility and portfolio diversity, while interim roles provide full immersion in one organisation. Day rates for fractional work are often slightly higher to compensate for the complexity of managing multiple engagements.',
+  },
+  {
+    question: 'How do I transition from full-time to fractional work?',
+    answer: 'Transitioning to fractional work typically requires 15+ years of executive experience and a strong professional network. Start by defining your specialism (CFO, CMO, CTO), building your personal brand on LinkedIn, and reaching out to your network for initial opportunities. Many professionals start with one fractional client while employed, then gradually transition. Having 3-6 months of savings provides security during the transition period. Building a reputation for results leads to referrals, which are the primary source of fractional opportunities.',
+  },
+  {
+    question: 'What are typical fractional job contract terms?',
+    answer: 'Fractional job contracts in the UK typically specify 1-3 days per week, with initial commitments of 3-6 months. Most engagements become ongoing relationships lasting 1-3+ years. Contracts usually include day rate (£700-£1,500), notice period (typically 1-2 months), scope of responsibilities, and confidentiality terms. Some include performance bonuses or equity components, particularly in startups. IR35 status should be clearly established, with most fractional roles being outside IR35 when properly structured.',
+  },
+  {
+    question: 'Is fractional work inside or outside IR35?',
+    answer: 'Most properly structured fractional roles in the UK are outside IR35. Key factors that support outside-IR35 status include: working with multiple clients simultaneously, having control over how you deliver work, providing your own equipment, having the right to substitute, and not being integrated into the client\'s organisation like an employee. However, each engagement should be individually assessed. Working with an IR35-specialist accountant is recommended. Fractional executives typically operate through a limited company for tax efficiency.',
+  },
+  {
+    question: 'What industries have the most fractional jobs UK?',
+    answer: 'Technology and SaaS companies account for approximately 35% of UK fractional jobs, followed by FinTech (20%), Professional Services (15%), Healthcare/HealthTech (10%), and E-commerce/DTC (10%). Startups and scale-ups (typically Series A to Series C) are the most active hirers of fractional executives, as they need senior expertise but cannot justify full-time C-suite costs. Private equity portfolio companies are also increasingly using fractional executives for transformation and value creation initiatives.',
+  },
+  {
+    question: 'Can I work for competitors as a fractional executive?',
+    answer: 'Generally, you should avoid directly competing clients, though the definition of "competitor" varies. Most fractional executives establish clear boundaries upfront: they won\'t work with two direct competitors in the same market segment. However, working in the same industry with non-competing companies (e.g., two SaaS companies in different verticals) is typically acceptable. Transparency with all clients about your portfolio is essential. Some contracts include non-compete clauses for specific competitors, which should be negotiated carefully.',
+  },
+  {
+    question: 'What qualifications do I need for fractional jobs UK?',
+    answer: 'Fractional executive roles typically require 15+ years of experience with at least 5 years in senior leadership (Director/VP/C-level). Professional qualifications are valued but not always required: CFOs often have ACA/ACCA/CIMA, while CMOs may have CIM or MBA credentials. More important than formal qualifications is a proven track record of delivering results, expertise in specific areas (fundraising, scaling, transformation), and strong references from previous employers or clients. Industry-specific experience is highly valued.',
+  },
+  {
+    question: 'How many clients do fractional executives typically have?',
+    answer: 'Most fractional executives work with 2-4 clients simultaneously, dedicating 1-3 days per week to each engagement. This typically totals 4-5 working days per week, leaving flexibility for business development, holidays, and overflow work. Some fractional executives maintain a "portfolio" structure: one anchor client (2-3 days/week), one secondary client (1-2 days/week), and advisory/board roles. Managing more than 4 active clients becomes challenging due to context-switching and availability constraints.',
   },
 ]
 
@@ -227,8 +299,56 @@ export default async function FractionalJobsUKPage() {
         </div>
       </section>
 
-      {/* UK Regions - Primary Keyword Section */}
+      {/* Complete Guide to Fractional Jobs UK - E-E-A-T Content Section */}
       <section className="py-24 md:py-32 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">Complete Guide</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">The Complete Guide to Fractional Jobs UK</h2>
+            <p className="text-xl text-gray-500">Understanding the UK&apos;s fastest-growing executive career model</p>
+          </div>
+
+          <div className="prose prose-lg prose-gray max-w-none">
+            <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">What Are Fractional Jobs?</h3>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Fractional jobs represent a fundamental shift in how senior executives structure their careers. Unlike traditional full-time roles, fractional positions allow experienced professionals to work with multiple organisations simultaneously, typically dedicating 1-3 days per week to each client. This model has gained significant traction in the UK since 2020, driven by changing workplace dynamics and companies seeking flexible access to senior expertise.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              The term &ldquo;fractional&rdquo; distinguishes these roles from interim positions, which are typically full-time temporary engagements lasting 6-12 months. Fractional executives maintain ongoing relationships with multiple clients, often for years, becoming embedded strategic partners rather than temporary fixes. This creates stability for both parties while preserving flexibility.
+            </p>
+
+            <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">The Evolution of the UK Fractional Market</h3>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              The UK fractional executive market has evolved dramatically since the early 2020s. What began as a niche concept, primarily serving startups unable to afford full-time C-suite hires, has expanded into a mainstream career choice. Today, fractional jobs UK span every sector and company stage, from seed-funded startups to PE-backed mid-market businesses and even FTSE 250 subsidiaries seeking specialised expertise.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Industry data suggests the UK fractional executive market has grown approximately 40% year-over-year since 2021. London remains the epicentre, accounting for roughly 60% of opportunities, but regional markets in Manchester, Birmingham, Edinburgh, and Bristol have developed robust fractional ecosystems. The rise of remote and hybrid work has accelerated this expansion, enabling fractional executives to serve clients across multiple regions without geographic constraints.
+            </p>
+
+            <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">Who Hires Fractional Executives?</h3>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              The typical fractional hiring profile has evolved beyond early-stage startups. Today&apos;s fractional clients include:
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-gray-600 space-y-2">
+              <li><strong>Series A-C startups</strong> that need senior expertise but cannot justify full-time C-suite costs (typically £180,000-£300,000+ fully loaded)</li>
+              <li><strong>PE and VC portfolio companies</strong> undergoing transformation or preparing for exit</li>
+              <li><strong>SMEs scaling rapidly</strong> that have outgrown their founder-led functions but aren&apos;t ready for full-time executives</li>
+              <li><strong>Established companies</strong> needing specialised expertise for specific initiatives (digital transformation, market expansion, fundraising)</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">The Fractional Engagement Model</h3>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Most fractional engagements follow a predictable structure. Executives typically commit to 1-3 days per week per client, with initial contracts of 3-6 months that often extend to multi-year relationships. Day rates in the UK range from £700 to £1,500 depending on role, experience, and location, with London commanding premium rates.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              The portfolio approach is central to fractional work. Most successful fractional executives maintain 2-4 concurrent clients, balancing an &ldquo;anchor&rdquo; engagement (2-3 days/week) with smaller commitments. This structure provides income diversification while allowing each client to access senior expertise they might otherwise struggle to recruit full-time.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* UK Regions - Primary Keyword Section */}
+      <section className="py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">Fractional Jobs UK</span>
@@ -385,6 +505,76 @@ export default async function FractionalJobsUKPage() {
         </section>
       )}
 
+      {/* UK Market Data 2025 Section */}
+      <section className="py-24 md:py-32 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">Market Intelligence</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">UK Fractional Jobs Market Data 2025</h2>
+            <p className="text-xl text-gray-500 max-w-3xl mx-auto">
+              The UK fractional executive market continues its rapid expansion. Here&apos;s what the data tells us about opportunities, rates, and trends.
+            </p>
+          </div>
+
+          <div className="prose prose-lg prose-gray max-w-4xl mx-auto mb-12">
+            <p className="text-gray-600 leading-relaxed">
+              The UK fractional executive market has grown approximately 40% year-over-year since 2021, establishing itself as a mainstream career path for senior professionals. What began as a solution for early-stage startups has expanded across company stages and sectors. Today, PE portfolio companies, established SMEs, and even divisions of large enterprises increasingly turn to fractional leadership.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              London remains the dominant market, accounting for roughly 60% of UK fractional opportunities. However, Manchester, Birmingham, and Edinburgh have developed robust ecosystems, while remote-first arrangements have opened opportunities nationwide. Day rates have increased approximately 8% compared to 2024, with London CFO and CTO roles commanding the highest premiums.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Technology companies (including SaaS and FinTech) represent approximately 55% of fractional hiring, followed by professional services and healthcare. The fastest-growing segment is fractional CTO roles, driven by AI/ML implementation needs across industries. Looking ahead, analysts expect continued growth as companies seek flexible access to senior expertise without full-time overhead.
+            </p>
+          </div>
+
+          {/* Market Dashboard Component */}
+          <UKMarketDashboard
+            className="max-w-4xl mx-auto"
+            initialStats={{
+              totalJobs: stats.totalUK,
+              avgDayRate: stats.avgDayRate,
+            }}
+          />
+        </div>
+      </section>
+
+      {/* Interactive Tools Section */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">Free Tools</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Fractional Career Tools</h2>
+            <p className="text-xl text-gray-500 max-w-3xl mx-auto">
+              Use our free calculators and assessments to explore fractional work
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Comparison Tool */}
+            <FractionalVsFullTimeComparison />
+
+            {/* Rate Calculator */}
+            <FractionalRateCalculatorUK />
+          </div>
+        </div>
+      </section>
+
+      {/* Quiz Section */}
+      <section className="py-24 md:py-32 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">Self-Assessment</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Is Fractional Work Right for You?</h2>
+            <p className="text-xl text-gray-500 max-w-3xl mx-auto">
+              Take our free 8-question quiz to discover if you&apos;re suited for a fractional executive career
+            </p>
+          </div>
+
+          <FractionalFitQuiz className="max-w-2xl mx-auto" />
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-24 md:py-32 bg-gray-900">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -414,42 +604,134 @@ export default async function FractionalJobsUKPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* How to Get Your First Fractional Job - HowTo Schema Section */}
       <section className="py-24 md:py-32 bg-white">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          {/* HowTo JSON-LD Schema */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'HowTo',
+                'name': 'How to Get Your First Fractional Job in the UK',
+                'description': 'A step-by-step guide to transitioning into fractional executive work in the UK market.',
+                'step': [
+                  {
+                    '@type': 'HowToStep',
+                    'name': 'Assess Your Experience',
+                    'text': 'Evaluate your 15+ years of executive experience and identify your core expertise areas (CFO, CMO, CTO, COO).'
+                  },
+                  {
+                    '@type': 'HowToStep',
+                    'name': 'Define Your Fractional Offering',
+                    'text': 'Clarify what services you provide, which industries you serve, and what outcomes you deliver for clients.'
+                  },
+                  {
+                    '@type': 'HowToStep',
+                    'name': 'Build Your Network and Brand',
+                    'text': 'Establish thought leadership on LinkedIn, connect with PE/VC firms, and join fractional executive communities.'
+                  },
+                  {
+                    '@type': 'HowToStep',
+                    'name': 'Navigate IR35 and Legal Structure',
+                    'text': 'Set up a limited company, understand IR35 implications, and work with an accountant familiar with fractional work.'
+                  },
+                  {
+                    '@type': 'HowToStep',
+                    'name': 'Set Your Rate Structure',
+                    'text': 'Research market rates for your role and location, then set competitive day rates that reflect your experience.'
+                  }
+                ]
+              })
+            }}
+          />
+
           <div className="text-center mb-16">
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">FAQ</span>
-            <h2 className="text-4xl font-bold text-gray-900">Fractional Jobs UK - Common Questions</h2>
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">Getting Started</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">How to Get Your First Fractional Job UK</h2>
+            <p className="text-xl text-gray-500">A practical guide to launching your fractional executive career</p>
           </div>
 
-          <div className="divide-y divide-gray-200">
-            {[
-              {
-                q: 'What are fractional jobs UK?',
-                a: 'Fractional jobs UK are part-time executive roles where experienced professionals work with multiple companies simultaneously. Fractional jobs UK typically involve CFO, CMO, CTO, and COO positions, offering flexibility and high earning potential across the United Kingdom.'
-              },
-              {
-                q: 'How much do fractional jobs UK pay?',
-                a: 'Fractional jobs UK typically pay £700-£1,500 per day depending on role and location. Fractional jobs London command premium rates of £900-£1,500/day, while other UK cities offer £700-£1,200/day. Most professionals work with 2-4 clients, earning £150,000-£300,000+ annually.'
-              },
-              {
-                q: 'Where are most fractional jobs UK located?',
-                a: 'Fractional jobs London account for approximately 60% of the UK market. However, fractional jobs UK are growing rapidly in Manchester, Birmingham, Edinburgh, Bristol, and Leeds. Many fractional jobs UK also offer remote or hybrid working arrangements.'
-              },
-              {
-                q: 'How do I find fractional jobs UK?',
-                a: 'Fractional.quest is a UK job board focused on fractional jobs. Browse fractional jobs London, Manchester, Birmingham and across the UK. Sign up for alerts to get notified of new fractional jobs UK matching your skills.'
-              },
-            ].map((faq, i) => (
-              <details key={i} className="group py-6">
-                <summary className="flex justify-between items-center cursor-pointer list-none">
-                  <span className="font-semibold text-lg text-gray-900 pr-8">{faq.q}</span>
-                  <span className="text-gray-400 group-open:rotate-45 transition-transform text-2xl">+</span>
-                </summary>
-                <p className="mt-4 text-gray-600 leading-relaxed pr-12">{faq.a}</p>
-              </details>
-            ))}
+          <div className="space-y-8">
+            {/* Step 1 */}
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-purple-100 text-purple-700 rounded-full flex items-center justify-center font-bold text-lg">1</div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Assess Your Experience and Expertise</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Fractional roles typically require 15+ years of experience with at least 5 years in senior leadership positions. Before pursuing fractional work, honestly evaluate whether you have the depth of expertise that companies are willing to pay premium day rates for. Identify your core function (CFO, CMO, CTO, COO) and any specialisations that differentiate you, such as fundraising expertise, international expansion experience, or specific industry knowledge.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-purple-100 text-purple-700 rounded-full flex items-center justify-center font-bold text-lg">2</div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Define Your Fractional Offering</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Successful fractional executives have clear, compelling offerings. Define the specific problems you solve, the outcomes you deliver, and the types of companies you serve best. For example: &ldquo;I help Series A-B SaaS companies build their first proper finance function and prepare for fundraising&rdquo; is more compelling than &ldquo;I&apos;m a fractional CFO.&rdquo; This clarity helps potential clients quickly understand whether you&apos;re the right fit.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-purple-100 text-purple-700 rounded-full flex items-center justify-center font-bold text-lg">3</div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Build Your Network and Personal Brand</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Most fractional opportunities come through referrals and network connections. Start building your personal brand on LinkedIn by sharing insights from your experience. Connect with PE and VC firms in your sector, as they frequently place fractional executives into portfolio companies. Join fractional executive communities and attend relevant industry events. Your reputation and visibility directly correlate with the quality and quantity of opportunities you receive.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-purple-100 text-purple-700 rounded-full flex items-center justify-center font-bold text-lg">4</div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Navigate IR35 and Legal Structure</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Most fractional executives operate through a limited company for tax efficiency and professional credibility. Work with an accountant who understands IR35 legislation and fractional work structures. Properly structured fractional roles typically fall outside IR35 due to multiple clients, control over delivery, and absence of employment characteristics. However, each engagement should be individually assessed to ensure compliance.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 5 */}
+            <div className="flex gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-purple-100 text-purple-700 rounded-full flex items-center justify-center font-bold text-lg">5</div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Set Your Rate Structure</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Research market rates for your role and location using resources like this site&apos;s salary guides. London fractional CFOs typically charge £900-£1,400/day, while regional rates run £700-£1,100/day. Consider your experience level, specialisations, and target client profile when setting rates. Many fractional executives start slightly below market rate to build their portfolio, then increase rates as they establish their reputation and fill their availability.
+                </p>
+              </div>
+            </div>
           </div>
+
+          <div className="mt-12 p-8 bg-purple-50 rounded-xl">
+            <p className="text-gray-700 leading-relaxed">
+              <strong>Pro tip:</strong> Many successful fractional executives start their transition while still employed, taking on one fractional client before fully committing. This provides income stability during the transition and helps you test whether fractional work suits your style. Building a pipeline of 2-3 potential clients before leaving full-time employment significantly reduces transition risk.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section - 12 Questions with JSON-LD Schema */}
+      <section className="py-24 md:py-32 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">FAQ</span>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Fractional Jobs UK - Common Questions</h2>
+            <p className="text-xl text-gray-500">Everything you need to know about fractional executive careers in the UK</p>
+          </div>
+
+          <FAQ
+            items={ukFractionalJobsFAQs}
+            title=""
+            className="max-w-3xl mx-auto"
+          />
         </div>
       </section>
 
