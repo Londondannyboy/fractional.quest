@@ -405,6 +405,7 @@ export default async function FractionalCfoJobsUkPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related</span>
             <div className="flex flex-wrap gap-4">
+              <Link href="/uk-fractional-jobs-uk-london-fractional-jobs-london" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Fractional Jobs</Link>
               <Link href="/part-time-cfo" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Part-Time CFO Guide</Link>
               <Link href="/fractional-cfo-salary" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">CFO Salary Guide</Link>
               <Link href="/fractional-cmo-jobs-uk" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">CMO Jobs UK</Link>

@@ -368,11 +368,11 @@ export default async function PartTimeCfoJobsUkPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related</span>
             <div className="flex flex-wrap gap-4">
+              <Link href="/uk-fractional-jobs-uk-london-fractional-jobs-london" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Fractional Jobs UK</Link>
               <Link href="/fractional-cfo-jobs-uk" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Fractional CFO Jobs</Link>
               <Link href="/fractional-cfo-salary" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">CFO Salary Guide</Link>
               <Link href="/part-time-cmo-jobs-uk" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Part-Time CMO Jobs</Link>
               <Link href="/fractional-cto-jobs-uk" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">CTO Jobs UK</Link>
-              <Link href="/fractional-coo-jobs-uk" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">COO Jobs UK</Link>
             </div>
           </div>
         </div>

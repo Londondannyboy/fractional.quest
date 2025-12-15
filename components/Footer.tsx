@@ -57,8 +57,13 @@ export function Footer() {
                 </h4>
                 <ul className="space-y-3">
                   <li>
+                    <Link href="/uk-fractional-jobs-uk-london-fractional-jobs-london" className="text-gray-400 hover:text-white text-sm transition-colors font-medium">
+                      Fractional Jobs UK
+                    </Link>
+                  </li>
+                  <li>
                     <Link href="/fractional-jobs" className="text-gray-400 hover:text-white text-sm transition-colors">
-                      Browse Jobs
+                      Browse All Jobs
                     </Link>
                   </li>
                   <li>
@@ -125,8 +130,8 @@ export function Footer() {
                 </h4>
                 <ul className="space-y-3">
                   <li>
-                    <Link href="/fractional-jobs-london" className="text-gray-400 hover:text-white text-sm transition-colors">
-                      London
+                    <Link href="/uk-fractional-jobs-uk-london-fractional-jobs-london" className="text-gray-400 hover:text-white text-sm transition-colors font-medium">
+                      Fractional Jobs London
                     </Link>
                   </li>
                   <li>

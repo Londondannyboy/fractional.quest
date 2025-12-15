@@ -767,7 +767,8 @@ export default async function Home() {
             <div>
               <h3 className="font-bold text-gray-900 mb-4">Fractional Jobs by Location</h3>
               <ul className="space-y-2 text-gray-600">
-                <li><Link href="/fractional-jobs-london" className="hover:text-black transition-colors">Fractional Jobs London</Link></li>
+                <li><Link href="/uk-fractional-jobs-uk-london-fractional-jobs-london" className="hover:text-black transition-colors font-medium">Fractional Jobs UK</Link></li>
+                <li><Link href="/uk-fractional-jobs-uk-london-fractional-jobs-london" className="hover:text-black transition-colors">Fractional Jobs London</Link></li>
                 <li><Link href="/fractional-jobs-manchester" className="hover:text-black transition-colors">Fractional Jobs Manchester</Link></li>
                 <li><Link href="/fractional-jobs-birmingham" className="hover:text-black transition-colors">Fractional Jobs Birmingham</Link></li>
                 <li><Link href="/fractional-jobs-edinburgh" className="hover:text-black transition-colors">Fractional Jobs Edinburgh</Link></li>
