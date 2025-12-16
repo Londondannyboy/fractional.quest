@@ -190,7 +190,7 @@ export default async function FractionalCfoJobsUkPage() {
               <strong className="font-semibold text-gray-900">Fractional CFO jobs</strong> represent the new frontier of finance leadership. Part-time Chief Financial Officer positions where experienced leaders provide strategic financial guidance to multiple companies simultaneously—delivering world-class expertise at a fraction of the cost.
             </p>
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">The Rise of Fractional CFO Jobs UK</h3>
-            <p>The UK market for <strong>fractional CFO jobs UK</strong> has grown by over 180% in the past three years. This surge reflects a fundamental shift in how companies access senior finance talent, particularly among startups, scale-ups, and SMEs that need experienced financial leadership but cannot justify a full-time CFO salary of £150,000-£300,000.</p>
+            <p>The UK market for <strong>fractional CFO jobs UK</strong> has grown by over 180% in the past three years. This surge reflects a fundamental shift in how companies access senior finance talent, particularly among <a href="https://www.gov.uk/business-finance-support" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">startups, scale-ups, and SMEs</a> that need experienced financial leadership but cannot justify a full-time CFO salary of £150,000-£300,000.</p>
             <div className="bg-gray-50 p-8 my-10 border-l-4 border-emerald-500">
               <p className="text-xl font-semibold text-gray-900 mb-0">"Companies access CFO expertise for £2,000-£5,000/week instead of £12,500+ monthly for full-time."</p>
             </div>
@@ -200,7 +200,7 @@ export default async function FractionalCfoJobsUkPage() {
               <li><strong>Flexibility:</strong> Scale finance leadership based on current needs</li>
               <li><strong>Quality talent:</strong> Access CFOs with diverse, multi-industry experience</li>
               <li><strong>Speed to impact:</strong> No lengthy recruitment—start adding value within days</li>
-              <li><strong>PE/VC influence:</strong> Investors mandate fractional CFOs across portfolios</li>
+              <li><strong>PE/VC influence:</strong> <a href="https://www.bvca.co.uk" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">Investors mandate fractional CFOs</a> across portfolios</li>
             </ul>
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Types of Fractional CFO Jobs</h3>
             <div className="grid md:grid-cols-2 gap-6 not-prose my-8">
@@ -220,9 +220,9 @@ export default async function FractionalCfoJobsUkPage() {
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Requirements for Fractional CFO Jobs</h3>
             <ul className="space-y-2">
               <li>15+ years finance experience, 5+ in CFO or Finance Director roles</li>
-              <li>Professional qualifications (ACA, ACCA, CIMA)</li>
+              <li>Professional qualifications (<a href="https://www.icaew.com" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">ACA</a>, <a href="https://www.accaglobal.com" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">ACCA</a>, <a href="https://www.cimaglobal.com" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">CIMA</a>)</li>
               <li>Fundraising experience (Series A-C, debt facilities)</li>
-              <li>M&A and due diligence expertise</li>
+              <li>M&A and <a href="https://www.frc.org.uk" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">due diligence expertise</a></li>
               <li>Board-level communication skills</li>
             </ul>
           </article>

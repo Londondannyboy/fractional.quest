@@ -248,7 +248,7 @@ export default async function FractionalCmoJobsUkPage() {
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">The Rise of Fractional CMO Jobs UK</h3>
             <p>
-              The UK market for <strong>fractional CMO jobs UK</strong> has exploded, with a 200% year-on-year increase in searches. Startups, scale-ups, and SMEs are accessing senior marketing talent without the £120,000-£200,000 annual cost of a full-time Chief Marketing Officer.
+              The UK market for <strong>fractional CMO jobs UK</strong> has exploded, with a 200% year-on-year increase in searches. <a href="https://www.gov.uk/topic/business-enterprise/business-support" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">Startups, scale-ups, and SMEs</a> are accessing senior marketing talent without the £120,000-£200,000 annual cost of a full-time Chief Marketing Officer.
             </p>
 
             <div className="bg-gray-50 p-8 my-10 border-l-4 border-amber-500">
@@ -293,11 +293,11 @@ export default async function FractionalCmoJobsUkPage() {
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Requirements for Fractional CMO Jobs</h3>
             <ul className="space-y-2">
-              <li>12-15+ years marketing experience, 5+ in senior leadership</li>
+              <li>12-15+ years <a href="https://www.cim.co.uk" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">marketing experience</a>, 5+ in senior leadership</li>
               <li>Proven track record of revenue/pipeline growth</li>
               <li>Deep channel expertise (performance, brand, PLG, ABM)</li>
               <li>Team building and management experience</li>
-              <li>Board-level communication skills</li>
+              <li>Board-level communication skills and understanding of <a href="https://www.asa.org.uk" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">advertising regulations</a></li>
             </ul>
           </article>
         </div>
