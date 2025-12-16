@@ -1,5 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { neon } from '@neondatabase/serverless'
+import {
+  updateUserType,
+  updateOnboardingStep,
+  checkAndCompleteOnboarding,
+} from '@/lib/onboarding-state'
 
 const sql = neon(process.env.DATABASE_URL!)
 
@@ -77,6 +82,63 @@ export async function POST(request: NextRequest) {
           // This tool triggers client-side UI for human confirmation
           // Returns structured data that the client can parse and display
           result = confirmPreference(params)
+          break
+
+        // ========== Onboarding Tools ==========
+
+        case 'set_user_type':
+          result = await setUserTypeOnboarding(params.user_id, params.user_type)
+          break
+
+        case 'add_skill':
+          result = await addSkillToOnboarding(
+            params.user_id,
+            params.skill_name,
+            params.confidence
+          )
+          break
+
+        case 'add_company':
+          result = await addCompanyToOnboarding(
+            params.user_id,
+            params.company_name,
+            params.role,
+            params.tenure
+          )
+          break
+
+        case 'add_role_preference':
+          result = await addRolePreferenceToOnboarding(params.user_id, params.role_title)
+          break
+
+        case 'set_company_info':
+          result = await setCompanyInfoOnboarding(
+            params.user_id,
+            params.company_name,
+            params.industry
+          )
+          break
+
+        case 'add_role_needed':
+          result = await addRoleNeededToOnboarding(
+            params.user_id,
+            params.role_title,
+            params.priority,
+            params.timeline
+          )
+          break
+
+        case 'add_requirement':
+          result = await addRequirementToOnboarding(
+            params.user_id,
+            params.requirement_type,
+            params.value,
+            params.is_hard_constraint
+          )
+          break
+
+        case 'complete_onboarding':
+          result = await completeOnboardingTool(params.user_id)
           break
 
         default:
@@ -494,6 +556,203 @@ function confirmPreference(params: {
   })
 }
 
+// ============ Onboarding Tool Implementations ============
+
+/**
+ * Parse rough tenure from natural language
+ * Examples: "about a year" → "~1 year", "two to three years" → "2-3 years"
+ */
+function parseRoughTenure(tenureText?: string): string | undefined {
+  if (!tenureText) return undefined
+
+  const text = tenureText.toLowerCase()
+
+  // Less than 6 months
+  if (text.match(/few months|couple months|less than.*month/i)) {
+    return '< 6 months'
+  }
+
+  // About 1 year
+  if (text.match(/about.*year|around.*year|roughly.*year|one year/i) && !text.match(/two|three|four|five/i)) {
+    return '~1 year'
+  }
+
+  // 1-2 years
+  if (text.match(/year or two|one to two|1.*2 year/i)) {
+    return '1-2 years'
+  }
+
+  // 2-3 years
+  if (text.match(/two.*three|2.*3 year|couple.*year/i)) {
+    return '2-3 years'
+  }
+
+  // 3-5 years
+  if (text.match(/three.*five|3.*5 year|few years/i)) {
+    return '3-5 years'
+  }
+
+  // 5+ years
+  if (text.match(/five.*more|5\+|over five|more than five/i)) {
+    return '5+ years'
+  }
+
+  // Default: return original text
+  return tenureText
+}
+
+async function setUserTypeOnboarding(userId: string, userType: 'candidate' | 'client'): Promise<string> {
+  try {
+    await updateUserType(userId, userType)
+    return `User type set to ${userType}.`
+  } catch (error) {
+    console.error('[setUserTypeOnboarding] Error:', error)
+    return 'Failed to set user type.'
+  }
+}
+
+async function addSkillToOnboarding(
+  userId: string,
+  skillName: string,
+  confidence?: number
+): Promise<string> {
+  try {
+    const skill = { name: skillName, confidence }
+    await updateOnboardingStep(userId, 'collecting_skills', {
+      skills: [skill] // Will be merged with existing skills
+    })
+
+    return `Added skill: ${skillName}${confidence ? ` (confidence: ${Math.round(confidence * 100)}%)` : ''}.`
+  } catch (error) {
+    console.error('[addSkillToOnboarding] Error:', error)
+    return 'Failed to add skill.'
+  }
+}
+
+async function addCompanyToOnboarding(
+  userId: string,
+  companyName: string,
+  role?: string,
+  tenure?: string
+): Promise<string> {
+  try {
+    const parsedTenure = parseRoughTenure(tenure)
+    const company = {
+      name: companyName,
+      role,
+      tenure: parsedTenure
+    }
+
+    await updateOnboardingStep(userId, 'collecting_experience', {
+      companies: [company] // Will be merged with existing companies
+    })
+
+    let response = `Added ${companyName}`
+    if (role) response += ` as ${role}`
+    if (parsedTenure) response += ` for ${parsedTenure}`
+    response += '.'
+
+    return response
+  } catch (error) {
+    console.error('[addCompanyToOnboarding] Error:', error)
+    return 'Failed to add company.'
+  }
+}
+
+async function addRolePreferenceToOnboarding(userId: string, roleTitle: string): Promise<string> {
+  try {
+    await updateOnboardingStep(userId, 'collecting_preferences', {
+      roles: [roleTitle] // Will be merged with existing roles
+    })
+
+    return `Added role preference: ${roleTitle}.`
+  } catch (error) {
+    console.error('[addRolePreferenceToOnboarding] Error:', error)
+    return 'Failed to add role preference.'
+  }
+}
+
+async function setCompanyInfoOnboarding(
+  userId: string,
+  companyName: string,
+  industry?: string
+): Promise<string> {
+  try {
+    await updateOnboardingStep(userId, 'collecting_company', {
+      companyName,
+      industry
+    })
+
+    return `Set company: ${companyName}${industry ? ` in ${industry} industry` : ''}.`
+  } catch (error) {
+    console.error('[setCompanyInfoOnboarding] Error:', error)
+    return 'Failed to set company info.'
+  }
+}
+
+async function addRoleNeededToOnboarding(
+  userId: string,
+  roleTitle: string,
+  priority?: string,
+  timeline?: string
+): Promise<string> {
+  try {
+    const role = { title: roleTitle, priority, timeline }
+    await updateOnboardingStep(userId, 'collecting_hiring_needs', {
+      rolesNeeded: [role] // Will be merged with existing roles
+    })
+
+    let response = `Added hiring need: ${roleTitle}`
+    if (priority) response += ` (priority: ${priority})`
+    if (timeline) response += ` - timeline: ${timeline}`
+    response += '.'
+
+    return response
+  } catch (error) {
+    console.error('[addRoleNeededToOnboarding] Error:', error)
+    return 'Failed to add role needed.'
+  }
+}
+
+async function addRequirementToOnboarding(
+  userId: string,
+  requirementType: string,
+  value: string,
+  isHardConstraint?: boolean
+): Promise<string> {
+  try {
+    const requirement = {
+      type: requirementType,
+      value,
+      isHardConstraint: isHardConstraint || false
+    }
+
+    await updateOnboardingStep(userId, 'collecting_requirements', {
+      requirements: [requirement] // Will be merged with existing requirements
+    })
+
+    return `Added ${isHardConstraint ? 'hard' : 'soft'} requirement: ${requirementType} - ${value}.`
+  } catch (error) {
+    console.error('[addRequirementToOnboarding] Error:', error)
+    return 'Failed to add requirement.'
+  }
+}
+
+async function completeOnboardingTool(userId: string): Promise<string> {
+  try {
+    const isComplete = await checkAndCompleteOnboarding(userId)
+
+    if (isComplete) {
+      return 'Onboarding complete! All required information has been collected.'
+    } else {
+      return 'Onboarding is not yet complete. Some required information is still missing.'
+    }
+  } catch (error) {
+    console.error('[completeOnboardingTool] Error:', error)
+    return 'Failed to complete onboarding.'
+  }
+}
+
 // Also support GET for testing
 export async function GET() {
   return NextResponse.json({
@@ -505,7 +764,16 @@ export async function GET() {
       'search_articles',
       'save_user_fact (save_user_preference)',
       'get_job_details',
-      'confirm_preference'
+      'confirm_preference',
+      '--- ONBOARDING TOOLS ---',
+      'set_user_type',
+      'add_skill',
+      'add_company',
+      'add_role_preference',
+      'set_company_info',
+      'add_role_needed',
+      'add_requirement',
+      'complete_onboarding'
     ],
     usage: 'POST tool calls from Hume EVI'
   })
