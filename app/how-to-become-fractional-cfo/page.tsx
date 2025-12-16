@@ -105,7 +105,7 @@ export default function HowToBecomeFractionalCFOPage() {
               Fractional CFO work is NOT for junior finance professionals. You need significant senior experience and a proven track record. Here's what's required:
             </p>
 
-            <div className="bg-emerald-50 border-l-4 border-emerald-600 p-8 mb-10">
+            <div className="bg-blue-950/20 border-l-4 border-blue-600 p-8 mb-10">
               <h3 className="text-2xl font-black text-gray-900 mt-0 mb-6">Minimum Requirements (Non-Negotiable)</h3>
               <div className="space-y-4 text-gray-700">
                 <div className="flex items-start gap-3">
@@ -156,7 +156,7 @@ export default function HowToBecomeFractionalCFOPage() {
                     <li>• CPA, CMA (International)</li>
                     <li>• MBA from top school</li>
                   </ul>
-                  <p className="text-sm mt-3 mb-0">Adds credibility, especially early in fractional career, but experience &gt; qualifications. Professional bodies like <a href="https://www.icaew.com" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">ICAEW</a> and <a href="https://www.accaglobal.com/gb/en.html" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">ACCA</a> provide ongoing CPD.</p>
+                  <p className="text-sm mt-3 mb-0">Adds credibility, especially early in fractional career, but experience &gt; qualifications. Professional bodies like <a href="https://www.icaew.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICAEW</a> and <a href="https://www.accaglobal.com/gb/en.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACCA</a> provide ongoing CPD.</p>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-900 mb-3">Specialized Experience:</p>
@@ -237,10 +237,10 @@ export default function HowToBecomeFractionalCFOPage() {
               </div>
 
               <div className="flex gap-6">
-                <div className="flex-shrink-0 w-20 h-20 bg-emerald-600 text-white flex items-center justify-center text-3xl font-black rounded-full">3</div>
+                <div className="flex-shrink-0 w-20 h-20 bg-blue-600 text-white flex items-center justify-center text-3xl font-black rounded-full">3</div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-black text-gray-900 mb-3">Land Your First CFO Role (Years 15-18)</h3>
-                  <div className="bg-emerald-50 p-6 border-l-4 border-emerald-600">
+                  <div className="bg-blue-950/20 p-6 border-l-4 border-blue-600">
                     <p className="text-gray-700 mb-4"><strong>THE Career Milestone:</strong> Your first CFO title. This is essential for fractional work.</p>
                     <ul className="space-y-2 text-gray-700 text-sm">
                       <li>• <strong>Target:</strong> CFO at startup, scale-up, or SME (£1M-£50M revenue)</li>
@@ -307,10 +307,10 @@ export default function HowToBecomeFractionalCFOPage() {
               </div>
 
               <div className="flex gap-6">
-                <div className="flex-shrink-0 w-20 h-20 bg-emerald-600 text-white flex items-center justify-center text-3xl font-black rounded-full">6</div>
+                <div className="flex-shrink-0 w-20 h-20 bg-blue-600 text-white flex items-center justify-center text-3xl font-black rounded-full">6</div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-black text-gray-900 mb-3">Land Your First Fractional Client (Year 20+)</h3>
-                  <div className="bg-emerald-50 p-6 border-l-4 border-emerald-600">
+                  <div className="bg-blue-950/20 p-6 border-l-4 border-blue-600">
                     <p className="text-gray-700 mb-4"><strong>The Transition Moment.</strong> Two approaches:</p>
                     <div className="space-y-4">
                       <div>
@@ -333,7 +333,7 @@ export default function HowToBecomeFractionalCFOPage() {
                         </ul>
                       </div>
                     </div>
-                    <p className="text-emerald-600 font-bold mt-4 mb-0">Recommended: Option A. Most successful fractional CFOs started with one part-time client.</p>
+                    <p className="text-blue-600 font-bold mt-4 mb-0">Recommended: Option A. Most successful fractional CFOs started with one part-time client.</p>
                   </div>
                 </div>
               </div>
@@ -421,7 +421,7 @@ export default function HowToBecomeFractionalCFOPage() {
                 <p className="text-gray-700 mt-4 mb-0"><strong>Target:</strong> 50-100 names. If you can't get to 50, your network needs work before going fractional.</p>
               </div>
 
-              <div className="bg-white p-8 border-l-4 border-emerald-600">
+              <div className="bg-white p-8 border-l-4 border-blue-600">
                 <h4 className="text-xl font-bold text-gray-900 mb-3">Step 2: Announce Your Transition (Week 2)</h4>
                 <p className="text-gray-700 mb-4">Post on LinkedIn (and email "The List"):</p>
                 <div className="bg-gray-50 p-6 text-sm text-gray-700 italic">
@@ -446,7 +446,7 @@ export default function HowToBecomeFractionalCFOPage() {
                 <p className="text-gray-700 mt-4 mb-0"><strong>Conversion:</strong> 20 coffees typically generates 3-5 intros → 1-2 proposals → 1 client.</p>
               </div>
 
-              <div className="bg-white p-8 border-l-4 border-emerald-600">
+              <div className="bg-white p-8 border-l-4 border-blue-600">
                 <h4 className="text-xl font-bold text-gray-900 mb-3">Step 4: Free Consultation (Close the Deal)</h4>
                 <p className="text-gray-700 mb-4">When you get a warm intro, offer free 30-60 minute consultation:</p>
                 <ul className="space-y-2 text-gray-700 text-sm">
@@ -460,7 +460,7 @@ export default function HowToBecomeFractionalCFOPage() {
               </div>
             </div>
 
-            <div className="bg-emerald-50 border-l-4 border-emerald-600 p-6 mt-10">
+            <div className="bg-blue-950/20 border-l-4 border-blue-600 p-6 mt-10">
               <p className="text-lg font-semibold text-gray-900 mb-2">Timeline Expectations</p>
               <p className="text-gray-700 mb-0">
                 <strong>Average time to first client:</strong> 2-4 months from starting outreach. Some get lucky in 2 weeks (former colleague immediately hires them). Others take 6 months. Be patient and systematic.
@@ -532,9 +532,9 @@ export default function HowToBecomeFractionalCFOPage() {
                   <span>Client C (project): £30k/4 months</span>
                   <span className="font-bold">£7,500/month</span>
                 </div>
-                <div className="flex justify-between items-center pt-4 bg-emerald-50 px-4 py-3">
+                <div className="flex justify-between items-center pt-4 bg-blue-950/20 px-4 py-3">
                   <span className="font-bold text-lg">Total Monthly Income</span>
-                  <span className="font-bold text-2xl text-emerald-600">£23,700</span>
+                  <span className="font-bold text-2xl text-blue-600">£23,700</span>
                 </div>
                 <div className="flex justify-between items-center bg-gray-50 px-4 py-3">
                   <span className="font-bold">Annual Income (before tax)</span>

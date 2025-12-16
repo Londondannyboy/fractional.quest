@@ -125,7 +125,7 @@ export default function WhatIsFractionalCFOPage() {
           </div>
 
           {/* Featured Snippet Target */}
-          <div className="bg-emerald-50 border-l-4 border-emerald-600 p-8 mb-12">
+          <div className="bg-blue-950/20 border-l-4 border-blue-600 p-8 mb-12">
             <div className="prose prose-lg max-w-none">
               <p className="text-2xl md:text-3xl font-light text-gray-900 leading-relaxed mb-0">
                 A <strong className="font-bold">Fractional CFO</strong> is an experienced Chief Financial Officer who provides strategic financial leadership to companies on a <strong>part-time basis</strong>—typically working 1-3 days per week. Unlike consultants, fractional CFOs become embedded members of your leadership team, managing your finance function, building investor relationships, and driving financial outcomes at <strong>50-70% less cost</strong> than a full-time CFO hire.
@@ -139,7 +139,7 @@ export default function WhatIsFractionalCFOPage() {
             </p>
 
             <p>
-              The "fractional" model allows companies to access <strong>CFO-level expertise and experience</strong> (typically 15+ years in senior finance roles) without the commitment, cost, and overhead of a full-time executive hire. According to <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">Office for National Statistics</a> data, part-time senior executive roles have grown 43% since 2020. You pay only for the days you need, scale up or down as requirements change, and can start within days instead of the 3-6 month search process for full-time CFOs.
+              The "fractional" model allows companies to access <strong>CFO-level expertise and experience</strong> (typically 15+ years in senior finance roles) without the commitment, cost, and overhead of a full-time executive hire. According to <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Office for National Statistics</a> data, part-time senior executive roles have grown 43% since 2020. You pay only for the days you need, scale up or down as requirements change, and can start within days instead of the 3-6 month search process for full-time CFOs.
             </p>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">Key Characteristics</h3>
@@ -326,7 +326,7 @@ export default function WhatIsFractionalCFOPage() {
             </p>
 
             <div className="grid gap-6 my-10">
-              <div className="bg-gray-50 p-6 border-l-4 border-emerald-600">
+              <div className="bg-gray-50 p-6 border-l-4 border-blue-600">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">💰 Preparing for Fundraising</h3>
                 <p className="text-gray-700 mb-0">"We're raising a Series A in 6 months and need investor-ready financials, a compelling model, and someone who speaks VC language."</p>
               </div>
@@ -336,7 +336,7 @@ export default function WhatIsFractionalCFOPage() {
                 <p className="text-gray-700 mb-0">"We've gone from £2M to £8M ARR in 18 months. Our founder-led finance is breaking. We need real FP&A and systems."</p>
               </div>
 
-              <div className="bg-gray-50 p-6 border-l-4 border-emerald-600">
+              <div className="bg-gray-50 p-6 border-l-4 border-blue-600">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">⚠️ Cash Flow Crisis</h3>
                 <p className="text-gray-700 mb-0">"We have 7 months of runway and our board wants a credible plan to extend it to 18 months or we need to fundraise immediately."</p>
               </div>
@@ -346,7 +346,7 @@ export default function WhatIsFractionalCFOPage() {
                 <p className="text-gray-700 mb-0">"Our investors want monthly board packs with unit economics, cohort analysis, and scenario planning. We can't deliver that today."</p>
               </div>
 
-              <div className="bg-gray-50 p-6 border-l-4 border-emerald-600">
+              <div className="bg-gray-50 p-6 border-l-4 border-blue-600">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">🔄 M&A Activity</h3>
                 <p className="text-gray-700 mb-0">"We're acquiring two competitors and need someone to lead due diligence, valuation, and integration."</p>
               </div>
@@ -357,7 +357,7 @@ export default function WhatIsFractionalCFOPage() {
               </div>
             </div>
 
-            <div className="bg-emerald-50 border-l-4 border-emerald-600 p-6 my-10">
+            <div className="bg-blue-950/20 border-l-4 border-blue-600 p-6 my-10">
               <p className="text-lg font-semibold text-gray-900 mb-2">Sweet Spot for Fractional CFOs</p>
               <p className="text-gray-700 mb-0">Companies with <strong>£1M-£20M revenue</strong> who need strategic CFO expertise but don't require 40 hours weekly of CFO time. Below £1M, a good accountant often suffices. Above £20M, you typically need full-time.</p>
             </div>
@@ -493,70 +493,70 @@ export default function WhatIsFractionalCFOPage() {
               <tbody className="bg-white">
                 <tr className="border-b">
                   <td className="p-4 font-semibold">Time Commitment</td>
-                  <td className="p-4 bg-emerald-50">1-3 days/week</td>
+                  <td className="p-4 bg-blue-950/20">1-3 days/week</td>
                   <td className="p-4">5 days/week</td>
                   <td className="p-4">Varies, often hourly</td>
                   <td className="p-4">5 days/week</td>
                 </tr>
                 <tr className="border-b bg-gray-50">
                   <td className="p-4 font-semibold">Duration</td>
-                  <td className="p-4 bg-emerald-50">6-18+ months (ongoing)</td>
+                  <td className="p-4 bg-blue-950/20">6-18+ months (ongoing)</td>
                   <td className="p-4">3-12 months (temporary)</td>
                   <td className="p-4">Project-based</td>
                   <td className="p-4">Permanent</td>
                 </tr>
                 <tr className="border-b">
                   <td className="p-4 font-semibold">Annual Cost (UK)</td>
-                  <td className="p-4 bg-emerald-50">£36k-£120k</td>
+                  <td className="p-4 bg-blue-950/20">£36k-£120k</td>
                   <td className="p-4">£100k-£180k</td>
                   <td className="p-4">£50k-£200k</td>
                   <td className="p-4">£150k-£250k+</td>
                 </tr>
                 <tr className="border-b bg-gray-50">
                   <td className="p-4 font-semibold">Role Type</td>
-                  <td className="p-4 bg-emerald-50">Leadership team member</td>
+                  <td className="p-4 bg-blue-950/20">Leadership team member</td>
                   <td className="p-4">Gap-fill leadership</td>
                   <td className="p-4">External advisor</td>
                   <td className="p-4">Executive leadership</td>
                 </tr>
                 <tr className="border-b">
                   <td className="p-4 font-semibold">Ownership</td>
-                  <td className="p-4 bg-emerald-50">Full accountability</td>
+                  <td className="p-4 bg-blue-950/20">Full accountability</td>
                   <td className="p-4">Full accountability</td>
                   <td className="p-4">Advisory only</td>
                   <td className="p-4">Full accountability</td>
                 </tr>
                 <tr className="border-b bg-gray-50">
                   <td className="p-4 font-semibold">Team Management</td>
-                  <td className="p-4 bg-emerald-50">Yes, but delegates ops</td>
+                  <td className="p-4 bg-blue-950/20">Yes, but delegates ops</td>
                   <td className="p-4">Yes, full-time</td>
                   <td className="p-4">No</td>
                   <td className="p-4">Yes, full-time</td>
                 </tr>
                 <tr className="border-b">
                   <td className="p-4 font-semibold">Board Interaction</td>
-                  <td className="p-4 bg-emerald-50">Attends & presents</td>
+                  <td className="p-4 bg-blue-950/20">Attends & presents</td>
                   <td className="p-4">Attends & presents</td>
                   <td className="p-4">Rarely</td>
                   <td className="p-4">Attends & presents</td>
                 </tr>
                 <tr className="border-b bg-gray-50">
                   <td className="p-4 font-semibold">Notice Period</td>
-                  <td className="p-4 bg-emerald-50">30 days</td>
+                  <td className="p-4 bg-blue-950/20">30 days</td>
                   <td className="p-4">Defined end date</td>
                   <td className="p-4">Per project</td>
                   <td className="p-4">3-6 months</td>
                 </tr>
                 <tr className="border-b">
                   <td className="p-4 font-semibold">Experience Level</td>
-                  <td className="p-4 bg-emerald-50">Very senior (15+ yrs)</td>
+                  <td className="p-4 bg-blue-950/20">Very senior (15+ yrs)</td>
                   <td className="p-4">Senior (12+ years)</td>
                   <td className="p-4">Varies widely</td>
                   <td className="p-4">Varies (8+ years)</td>
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="p-4 font-semibold">Best For</td>
-                  <td className="p-4 bg-emerald-50">£1M-£20M revenue, strategic needs</td>
+                  <td className="p-4 bg-blue-950/20">£1M-£20M revenue, strategic needs</td>
                   <td className="p-4">Transition periods, emergencies</td>
                   <td className="p-4">Specific expertise, one-off projects</td>
                   <td className="p-4">£20M+ revenue, complex ops</td>

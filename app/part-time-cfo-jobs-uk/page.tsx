@@ -74,12 +74,12 @@ export default async function PartTimeCfoJobsUkPage() {
               <span className="mr-2">←</span> Back to Home
             </Link>
             <div className="max-w-4xl">
-              <span className="inline-block bg-emerald-500 text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
+              <span className="inline-block bg-blue-950/200 text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Finance Leadership
               </span>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Part-Time CFO<br />
-                <span className="text-emerald-400">Jobs UK</span>
+                <span className="text-blue-400">Jobs UK</span>
               </h1>
               <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mb-8">
                 <strong className="text-white">Part-time CFO jobs UK</strong> for experienced finance leaders.
@@ -87,7 +87,7 @@ export default async function PartTimeCfoJobsUkPage() {
               </p>
               <div className="flex flex-wrap gap-8 mb-10">
                 <div>
-                  <div className="text-4xl md:text-5xl font-black text-emerald-400">{stats.total}+</div>
+                  <div className="text-4xl md:text-5xl font-black text-blue-400">{stats.total}+</div>
                   <div className="text-white/60 text-sm uppercase tracking-wider">Live Roles</div>
                 </div>
                 <div>
@@ -100,7 +100,7 @@ export default async function PartTimeCfoJobsUkPage() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-4">
-                <Link href="#jobs" className="px-8 py-4 bg-emerald-500 text-black font-bold uppercase tracking-wider hover:bg-emerald-400 transition-colors">
+                <Link href="#jobs" className="px-8 py-4 bg-blue-950/200 text-black font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">
                   Browse Jobs Now
                 </Link>
                 <Link href="/fractional-cfo-salary" className="px-8 py-4 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">
@@ -163,7 +163,7 @@ export default async function PartTimeCfoJobsUkPage() {
             </div>
             <div className="flex flex-wrap justify-center gap-x-12 gap-y-6">
               {companies.map((company: string, index: number) => (
-                <span key={index} className="text-xl md:text-2xl font-light text-gray-400 hover:text-emerald-400 transition-colors cursor-default">{company}</span>
+                <span key={index} className="text-xl md:text-2xl font-light text-gray-400 hover:text-blue-400 transition-colors cursor-default">{company}</span>
               ))}
             </div>
           </div>
@@ -176,9 +176,9 @@ export default async function PartTimeCfoJobsUkPage() {
           <div className="mb-16">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-4 block">The Guide</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
-              Everything You Need to Know About<br /><span className="text-emerald-600">Part-Time CFO Jobs UK</span>
+              Everything You Need to Know About<br /><span className="text-blue-600">Part-Time CFO Jobs UK</span>
             </h2>
-            <div className="w-24 h-1 bg-emerald-500"></div>
+            <div className="w-24 h-1 bg-blue-950/200"></div>
           </div>
           <figure className="mb-16 -mx-6 lg:-mx-16">
             <img
@@ -202,7 +202,7 @@ export default async function PartTimeCfoJobsUkPage() {
               The demand for <strong>part-time CFO jobs UK</strong> has grown by over 180% in the past three years. This surge reflects how startups, scale-ups, and SMEs access senior finance talent—companies that need experienced financial leadership but cannot justify a full-time CFO salary of £150,000-£300,000.
             </p>
 
-            <div className="bg-gray-50 p-8 my-10 border-l-4 border-emerald-500">
+            <div className="bg-gray-50 p-8 my-10 border-l-4 border-blue-950/200">
               <p className="text-xl font-semibold text-gray-900 mb-0">"Part-time CFO jobs offer the same strategic expertise as full-time roles at a fraction of the cost—typically £2,000-£5,000/week vs £12,500+ monthly for full-time."</p>
             </div>
 
@@ -253,7 +253,7 @@ export default async function PartTimeCfoJobsUkPage() {
                 <div key={i} className="bg-gray-50 p-6 border border-gray-200">
                   <h4 className="font-bold text-gray-900 mb-1">{type.title}</h4>
                   <p className="text-gray-600 text-sm mb-2">{type.desc}</p>
-                  <span className="text-emerald-600 font-semibold text-sm">{type.rate}</span>
+                  <span className="text-blue-600 font-semibold text-sm">{type.rate}</span>
                 </div>
               ))}
             </div>
@@ -285,9 +285,9 @@ export default async function PartTimeCfoJobsUkPage() {
               Outside London, Manchester, Birmingham, Edinburgh, and Bristol have growing part-time CFO markets, though day rates are typically 15-25% lower than London equivalents.
             </p>
 
-            <div className="bg-emerald-50 p-6 border border-emerald-200 rounded-lg my-8 not-prose">
-              <p className="text-emerald-800 font-medium mb-3">Looking for fractional CFO positions?</p>
-              <Link href="/fractional-cfo-jobs-uk" className="inline-flex items-center text-emerald-700 font-bold hover:text-emerald-900">
+            <div className="bg-blue-950/20 p-6 border border-blue-800/40 rounded-lg my-8 not-prose">
+              <p className="text-blue-800 font-medium mb-3">Looking for fractional CFO positions?</p>
+              <Link href="/fractional-cfo-jobs-uk" className="inline-flex items-center text-blue-700 font-bold hover:text-blue-900">
                 Browse Fractional CFO Jobs UK →
               </Link>
             </div>
@@ -311,7 +311,7 @@ export default async function PartTimeCfoJobsUkPage() {
             </p>
             <div className="bg-black text-white p-6 rounded-lg my-8 not-prose">
               <p className="text-gray-300 mb-3">Browse remote CFO positions:</p>
-              <Link href="/remote" className="inline-flex items-center text-emerald-400 font-bold hover:text-emerald-300">
+              <Link href="/remote" className="inline-flex items-center text-blue-400 font-bold hover:text-blue-700">
                 View Remote Jobs →
               </Link>
             </div>
@@ -353,10 +353,10 @@ export default async function PartTimeCfoJobsUkPage() {
       <section className="py-20 md:py-28 bg-black text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-4 block">Ready?</span>
-          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Find Your Next<br /><span className="text-emerald-400">Part-Time CFO Role</span></h2>
+          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Find Your Next<br /><span className="text-blue-400">Part-Time CFO Role</span></h2>
           <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">Create your profile and get matched with companies seeking part-time finance leadership.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/handler/sign-up" className="px-10 py-5 bg-emerald-500 text-black font-bold uppercase tracking-wider hover:bg-emerald-400 transition-colors">Create Profile</Link>
+            <Link href="/handler/sign-up" className="px-10 py-5 bg-blue-950/200 text-black font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">Create Profile</Link>
             <Link href="/fractional-cfo-salary" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Salary Guide</Link>
           </div>
         </div>
@@ -368,11 +368,11 @@ export default async function PartTimeCfoJobsUkPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related</span>
             <div className="flex flex-wrap gap-4">
-              <Link href="/uk-fractional-jobs-uk-london-fractional-jobs-london" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Fractional Jobs UK</Link>
-              <Link href="/fractional-cfo-jobs-uk" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Fractional CFO Jobs</Link>
-              <Link href="/fractional-cfo-salary" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">CFO Salary Guide</Link>
-              <Link href="/part-time-cmo-jobs-uk" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Part-Time CMO Jobs</Link>
-              <Link href="/fractional-cto-jobs-uk" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">CTO Jobs UK</Link>
+              <Link href="/uk-fractional-jobs-uk-london-fractional-jobs-london" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Fractional Jobs UK</Link>
+              <Link href="/fractional-cfo-jobs-uk" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Fractional CFO Jobs</Link>
+              <Link href="/fractional-cfo-salary" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">CFO Salary Guide</Link>
+              <Link href="/part-time-cmo-jobs-uk" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Part-Time CMO Jobs</Link>
+              <Link href="/fractional-cto-jobs-uk" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">CTO Jobs UK</Link>
             </div>
           </div>
         </div>

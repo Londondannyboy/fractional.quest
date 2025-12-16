@@ -135,7 +135,7 @@ function VoiceWidget({
         disabled={isPending}
         className={`w-20 h-20 rounded-full flex items-center justify-center transition-all shadow-lg ${
           isConnected
-            ? 'bg-green-500 hover:bg-green-600 animate-pulse'
+            ? 'bg-blue-500 hover:bg-blue-600 animate-pulse'
             : isPending
             ? 'bg-gray-400 cursor-not-allowed'
             : 'bg-white hover:bg-purple-50 border-2 border-purple-200'
@@ -174,7 +174,7 @@ function VoiceWidget({
       )}
 
       {/* Debug Panel */}
-      <div className="mt-4 w-full max-w-md p-3 bg-black/60 rounded text-xs font-mono text-green-400">
+      <div className="mt-4 w-full max-w-md p-3 bg-black/60 rounded text-xs font-mono text-blue-400">
         <div className="text-yellow-400 mb-2">
           Debug (user: {userName || 'none'}, auth: {isAuthenticated ? 'yes' : 'no'})
         </div>

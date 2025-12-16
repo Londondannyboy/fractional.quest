@@ -49,12 +49,12 @@ export default function FractionalControllerJobsPage() {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50/30 to-slate-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-950/20/30 to-slate-50">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           <nav className="mb-8 flex items-center gap-2 text-sm text-slate-600">
-            <Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/fractional-cfo" className="hover:text-emerald-600 transition-colors">Fractional CFO</Link>
+            <Link href="/fractional-cfo" className="hover:text-blue-600 transition-colors">Fractional CFO</Link>
             <span>/</span>
             <span className="text-slate-900">Controller Jobs</span>
           </nav>
@@ -74,8 +74,8 @@ export default function FractionalControllerJobsPage() {
               Fractional controllers provide operational finance leadership part-time for multiple clients. Focus on accounting, reporting, compliance, and team management.
             </p>
             <div className="grid gap-4 md:grid-cols-3">
-              <div className="rounded-lg bg-emerald-50 p-4">
-                <div className="text-2xl font-bold text-emerald-700">£500-£1K</div>
+              <div className="rounded-lg bg-blue-950/20 p-4">
+                <div className="text-2xl font-bold text-blue-700">£500-£1K</div>
                 <div className="text-sm text-slate-700">Day rate range</div>
               </div>
               <div className="rounded-lg bg-blue-50 p-4">
@@ -123,16 +123,16 @@ export default function FractionalControllerJobsPage() {
               </div>
             </div>
             <p className="text-slate-700">
-              Learn more about <Link href="/how-to-become-fractional-cfo" className="text-emerald-600 hover:text-emerald-700 underline">becoming a fractional CFO</Link>.
+              Learn more about <Link href="/how-to-become-fractional-cfo" className="text-blue-600 hover:text-blue-700 underline">becoming a fractional CFO</Link>.
             </p>
           </section>
 
-          <div className="mb-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 p-8 text-white shadow-lg">
+          <div className="mb-12 rounded-xl bg-gradient-to-br from-blue-950/200 to-blue-600 p-8 text-white shadow-lg">
             <h2 className="mb-4 text-2xl font-bold">Find Controller Opportunities</h2>
-            <p className="mb-6 text-emerald-50">
+            <p className="mb-6 text-blue-950/20">
               Join Fractional Quest to access part-time financial controller opportunities across the UK.
             </p>
-            <Link href="/fractional-cfo-jobs-remote" className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-emerald-600 transition-all hover:bg-emerald-50">
+            <Link href="/fractional-cfo-jobs-remote" className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-blue-600 transition-all hover:bg-blue-950/20">
               Browse Finance Jobs
             </Link>
           </div>
@@ -143,11 +143,11 @@ export default function FractionalControllerJobsPage() {
             <h2 className="mb-6 text-2xl font-bold text-slate-900">Related Resources</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               <Link href="/fractional-cfo-jobs-remote" className="group rounded-lg bg-white p-4 shadow-sm hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Remote CFO Jobs</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Remote CFO Jobs</h3>
                 <p className="mt-1 text-sm text-slate-600">Progress to CFO-level opportunities</p>
               </Link>
               <Link href="/contract-cfo-jobs" className="group rounded-lg bg-white p-4 shadow-sm hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Contract Finance Jobs</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Contract Finance Jobs</h3>
                 <p className="mt-1 text-sm text-slate-600">Full-time interim positions</p>
               </Link>
             </div>

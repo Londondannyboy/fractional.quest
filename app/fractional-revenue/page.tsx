@@ -24,11 +24,11 @@ export default function FractionalRevenuePage() {
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <Link href="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm"><span className="mr-2">←</span> Back to Home</Link>
             <div className="max-w-4xl">
-              <span className="inline-block bg-green-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">Functional Leadership</span>
-              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9]">Fractional<br /><span className="text-green-400">Revenue</span></h1>
+              <span className="inline-block bg-blue-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">Functional Leadership</span>
+              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9]">Fractional<br /><span className="text-blue-400">Revenue</span></h1>
               <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">Access senior revenue leadership without the full-time commitment. From CROs to VPs of Sales, find the right level of sales expertise for your growth stage.</p>
               <div className="flex flex-wrap gap-4">
-                <Link href="#contact" className="px-8 py-4 bg-green-500 text-white font-bold uppercase tracking-wider hover:bg-green-400 transition-colors">Find Revenue Leadership</Link>
+                <Link href="#contact" className="px-8 py-4 bg-blue-500 text-white font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">Find Revenue Leadership</Link>
                 <Link href="/fractional-cro-services" className="px-8 py-4 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Fractional CRO Services</Link>
               </div>
             </div>
@@ -39,14 +39,14 @@ export default function FractionalRevenuePage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-black text-gray-900 mb-6">Fractional Revenue Leadership</h2>
-          <p className="text-xl text-gray-600 leading-relaxed mb-6">Revenue growth requires experienced leadership. Research from <a href="https://www.bridgegroupinc.com/insights" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline">The Bridge Group</a> demonstrates that structured sales leadership dramatically improves win rates and quota attainment. Fractional revenue leaders bring proven sales methodologies, GTM expertise, and team-building experience—helping you accelerate growth without the commitment of a full-time hire, applying <a href="https://www.winningbydesign.com/resources/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline">Winning by Design frameworks</a> for predictable revenue growth.</p>
+          <p className="text-xl text-gray-600 leading-relaxed mb-6">Revenue growth requires experienced leadership. Research from <a href="https://www.bridgegroupinc.com/insights" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">The Bridge Group</a> demonstrates that structured sales leadership dramatically improves win rates and quota attainment. Fractional revenue leaders bring proven sales methodologies, GTM expertise, and team-building experience—helping you accelerate growth without the commitment of a full-time hire, applying <a href="https://www.winningbydesign.com/resources/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Winning by Design frameworks</a> for predictable revenue growth.</p>
           <div className="grid md:grid-cols-3 gap-6 mt-10">
             {[
               { title: 'Fractional CRO', description: 'C-level revenue leadership for GTM strategy and growth.', link: '/fractional-cro-services' },
               { title: 'VP of Sales', description: 'Senior sales leadership for team scaling and process.', link: '#contact' },
               { title: 'Sales Director', description: 'Hands-on sales leadership and pipeline management.', link: '#contact' },
             ].map((item, i) => (
-              <Link key={i} href={item.link} className="block p-6 bg-gray-50 border border-gray-200 hover:border-green-500 transition-colors">
+              <Link key={i} href={item.link} className="block p-6 bg-gray-50 border border-gray-200 hover:border-blue-500 transition-colors">
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.description}</p>
               </Link>
@@ -67,7 +67,7 @@ export default function FractionalRevenuePage() {
               { title: 'Revenue Operations', description: 'Implement CRM, sales tools, and revenue analytics.' },
               { title: 'Partnership Strategy', description: 'Develop channel partnerships and alliance programmes.' },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white border-l-4 border-green-500">
+              <div key={i} className="p-6 bg-white border-l-4 border-blue-500">
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.description}</p>
               </div>
@@ -87,7 +87,7 @@ export default function FractionalRevenuePage() {
           <h2 className="text-4xl font-black mb-6">Find Revenue Leadership</h2>
           <p className="text-xl text-gray-400 mb-10">Tell us about your revenue challenges and we'll match you with the right fractional sales executive.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/handler/sign-up" className="px-10 py-5 bg-green-500 text-white font-bold uppercase tracking-wider hover:bg-green-400 transition-colors">Get Started</Link>
+            <Link href="/handler/sign-up" className="px-10 py-5 bg-blue-500 text-white font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">Get Started</Link>
             <Link href="/fractional-cro-services" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Learn About Fractional CROs</Link>
           </div>
         </div>

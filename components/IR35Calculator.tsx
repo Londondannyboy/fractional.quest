@@ -318,7 +318,7 @@ export function IR35Calculator({ defaultDayRate = 800, className = '' }: IR35Cal
             </div>
             <div className="flex justify-between pt-2 border-t border-gray-200">
               <dt className="text-gray-500">5% Expenses</dt>
-              <dd className="text-green-700">+{formatCurrency(insideIR35.expensesAllowance)}</dd>
+              <dd className="text-blue-700">+{formatCurrency(insideIR35.expensesAllowance)}</dd>
             </div>
           </dl>
 
@@ -332,7 +332,7 @@ export function IR35Calculator({ defaultDayRate = 800, className = '' }: IR35Cal
         {/* Outside IR35 */}
         <div className="p-6">
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-3 h-3 bg-emerald-500 rounded-full" />
+            <span className="w-3 h-3 bg-blue-950/200 rounded-full" />
             <h3 className="text-lg font-bold text-gray-900">Outside IR35</h3>
           </div>
           <p className="text-sm text-gray-600 mb-4">Limited company - optimal salary + dividends structure</p>
@@ -360,14 +360,14 @@ export function IR35Calculator({ defaultDayRate = 800, className = '' }: IR35Cal
             </div>
             <div className="flex justify-between pt-2 border-t border-gray-200">
               <dt className="text-gray-500">Dividends Available</dt>
-              <dd className="text-emerald-700">{formatCurrency(outsideIR35.availableForDividends)}</dd>
+              <dd className="text-blue-700">{formatCurrency(outsideIR35.availableForDividends)}</dd>
             </div>
           </dl>
 
-          <div className="mt-4 p-4 bg-emerald-50 border border-emerald-200">
-            <div className="text-sm text-emerald-700">Take-Home Pay</div>
-            <div className="text-3xl font-black text-emerald-700">{formatCurrency(outsideIR35.takeHome)}</div>
-            <div className="text-sm text-emerald-700">{outsideIR35.effectiveRate.toFixed(1)}% effective tax rate</div>
+          <div className="mt-4 p-4 bg-blue-950/20 border border-blue-800/40">
+            <div className="text-sm text-blue-700">Take-Home Pay</div>
+            <div className="text-3xl font-black text-blue-700">{formatCurrency(outsideIR35.takeHome)}</div>
+            <div className="text-sm text-blue-700">{outsideIR35.effectiveRate.toFixed(1)}% effective tax rate</div>
           </div>
         </div>
       </div>

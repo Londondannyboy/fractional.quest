@@ -76,13 +76,13 @@ export default function ContractCFOJobsPage() {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50/30 to-slate-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-950/20/30 to-slate-50">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <nav className="mb-8 flex items-center gap-2 text-sm text-slate-600">
-            <Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/fractional-cfo" className="hover:text-emerald-600 transition-colors">Fractional CFO</Link>
+            <Link href="/fractional-cfo" className="hover:text-blue-600 transition-colors">Fractional CFO</Link>
             <span>/</span>
             <span className="text-slate-900">Contract Jobs</span>
           </nav>
@@ -106,7 +106,7 @@ export default function ContractCFOJobsPage() {
                   <tr className="border-b-2 border-slate-200">
                     <th className="pb-3 pr-4 text-left font-semibold text-slate-900">Factor</th>
                     <th className="pb-3 px-4 text-left font-semibold text-blue-700">Contract CFO</th>
-                    <th className="pb-3 px-4 text-left font-semibold text-emerald-700">Fractional CFO</th>
+                    <th className="pb-3 px-4 text-left font-semibold text-blue-700">Fractional CFO</th>
                     <th className="pb-3 pl-4 text-left font-semibold text-purple-700">Permanent CFO</th>
                   </tr>
                 </thead>
@@ -190,10 +190,10 @@ export default function ContractCFOJobsPage() {
                 </div>
               </div>
 
-              <div className="rounded-xl bg-emerald-50 p-6 ring-1 ring-emerald-100">
+              <div className="rounded-xl bg-blue-950/20 p-6 ring-1 ring-blue-900/30">
                 <div className="mb-2 flex items-center gap-2">
                   <span className="text-2xl">🎯</span>
-                  <h3 className="text-lg font-bold text-emerald-900">2. Project-Based Assignments (30% of roles)</h3>
+                  <h3 className="text-lg font-bold text-blue-900">2. Project-Based Assignments (30% of roles)</h3>
                 </div>
                 <p className="mb-3 text-sm text-slate-700">
                   Specific initiatives requiring CFO-level oversight for defined period:
@@ -385,7 +385,7 @@ export default function ContractCFOJobsPage() {
               <div className="rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5">
                 <div className="mb-2 flex items-center justify-between">
                   <h4 className="font-bold text-slate-900">1. Limited Company (Personal Service Company)</h4>
-                  <span className="rounded bg-emerald-100 px-2 py-0.5 text-xs font-semibold text-emerald-700">Most Common</span>
+                  <span className="rounded bg-blue-900/30 px-2 py-0.5 text-xs font-semibold text-blue-700">Most Common</span>
                 </div>
                 <p className="mb-2 text-sm text-slate-600">
                   You invoice through your limited company. Most tax-efficient if genuinely outside IR35.
@@ -438,21 +438,21 @@ export default function ContractCFOJobsPage() {
           </section>
 
           {/* CTA Section */}
-          <div className="mb-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 p-8 text-white shadow-lg">
+          <div className="mb-12 rounded-xl bg-gradient-to-br from-blue-950/200 to-blue-600 p-8 text-white shadow-lg">
             <h2 className="mb-4 text-2xl font-bold">Find Your Next Contract CFO Role</h2>
-            <p className="mb-6 text-emerald-50">
+            <p className="mb-6 text-blue-950/20">
               Fractional Quest connects experienced finance professionals with contract and fractional CFO opportunities across the UK.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/fractional-cfo-jobs-remote"
-                className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-emerald-600 transition-all hover:bg-emerald-50"
+                className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-blue-600 transition-all hover:bg-blue-950/20"
               >
                 Browse Remote CFO Jobs
               </Link>
               <Link
                 href="/how-to-become-fractional-cfo"
-                className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-emerald-700"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-blue-700"
               >
                 Career Transition Guide
               </Link>
@@ -467,19 +467,19 @@ export default function ContractCFOJobsPage() {
             <h2 className="mb-6 text-2xl font-bold text-slate-900">Related Resources</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               <Link href="/fractional-cfo-jobs-remote" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Remote Fractional CFO Jobs</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Remote Fractional CFO Jobs</h3>
                 <p className="mt-1 text-sm text-slate-600">Find location-independent CFO opportunities</p>
               </Link>
               <Link href="/fractional-cfo-vs-full-time" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Fractional vs Full-Time CFO</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Fractional vs Full-Time CFO</h3>
                 <p className="mt-1 text-sm text-slate-600">Comprehensive comparison guide</p>
               </Link>
               <Link href="/fractional-cfo-hourly-rate" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">CFO Rate Benchmarks 2025</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">CFO Rate Benchmarks 2025</h3>
                 <p className="mt-1 text-sm text-slate-600">Day rate and hourly rate data</p>
               </Link>
               <Link href="/fractional-controller-jobs" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Fractional Controller Jobs</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Fractional Controller Jobs</h3>
                 <p className="mt-1 text-sm text-slate-600">Entry route to fractional finance</p>
               </Link>
             </div>

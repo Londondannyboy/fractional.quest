@@ -252,8 +252,8 @@ export default function HireFractionalCMOPage() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{index + 1}. {item.criteria}</h3>
                 <p className="text-gray-700 leading-relaxed mb-6">{item.description}</p>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-green-50 border border-green-200 p-4 rounded-lg">
-                    <div className="text-sm font-bold text-green-800 mb-2 flex items-center gap-2">
+                  <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg">
+                    <div className="text-sm font-bold text-blue-800 mb-2 flex items-center gap-2">
                       <span className="text-lg">✅</span> Look For
                     </div>
                     <p className="text-sm text-gray-700">{item.lookFor}</p>
@@ -305,7 +305,7 @@ export default function HireFractionalCMOPage() {
               </ul>
             </div>
 
-            <div className="bg-green-50 border-2 border-green-200 p-10 rounded-lg">
+            <div className="bg-blue-50 border-2 border-blue-200 p-10 rounded-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">📊 Metrics & Performance Questions</h3>
               <ul className="space-y-4">
                 <li className="text-gray-700">

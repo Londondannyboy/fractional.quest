@@ -49,12 +49,12 @@ export default function OutsourcedCFOServicesPage() {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50/30 to-slate-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-950/20/30 to-slate-50">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           <nav className="mb-8 flex items-center gap-2 text-sm text-slate-600">
-            <Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/fractional-cfo" className="hover:text-emerald-600 transition-colors">Fractional CFO</Link>
+            <Link href="/fractional-cfo" className="hover:text-blue-600 transition-colors">Fractional CFO</Link>
             <span>/</span>
             <span className="text-slate-900">Outsourced CFO Services</span>
           </nav>
@@ -119,8 +119,8 @@ export default function OutsourcedCFOServicesPage() {
             <h2 className="text-3xl font-bold text-slate-900">Benefits of Outsourcing Your CFO Function</h2>
 
             <div className="not-prose grid gap-6 md:grid-cols-2 mb-6">
-              <div className="rounded-xl bg-emerald-50 p-6 ring-1 ring-emerald-100">
-                <h3 className="mb-3 text-lg font-bold text-emerald-900">Cost Efficiency</h3>
+              <div className="rounded-xl bg-blue-950/20 p-6 ring-1 ring-blue-900/30">
+                <h3 className="mb-3 text-lg font-bold text-blue-900">Cost Efficiency</h3>
                 <p className="text-sm text-slate-700">
                   Save 60-80% vs full-time CFO. £30K-£120K annually instead of £150K-£300K+. No benefits, pension, NI, or recruitment costs.
                 </p>
@@ -153,7 +153,7 @@ export default function OutsourcedCFOServicesPage() {
                 <thead>
                   <tr className="border-b-2 border-slate-200">
                     <th className="pb-3 pr-4 text-left font-semibold text-slate-900">Factor</th>
-                    <th className="pb-3 px-4 text-left font-semibold text-emerald-700">Outsourced/Fractional CFO</th>
+                    <th className="pb-3 px-4 text-left font-semibold text-blue-700">Outsourced/Fractional CFO</th>
                     <th className="pb-3 pl-4 text-left font-semibold text-blue-700">In-House CFO</th>
                   </tr>
                 </thead>
@@ -182,20 +182,20 @@ export default function OutsourcedCFOServicesPage() {
               </table>
             </div>
             <p className="mt-4 text-sm text-slate-600">
-              See full comparison in our <Link href="/fractional-cfo-vs-full-time" className="text-emerald-600 hover:text-emerald-700 underline">fractional vs full-time CFO guide</Link>.
+              See full comparison in our <Link href="/fractional-cfo-vs-full-time" className="text-blue-600 hover:text-blue-700 underline">fractional vs full-time CFO guide</Link>.
             </p>
           </section>
 
-          <div className="mb-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 p-8 text-white shadow-lg">
+          <div className="mb-12 rounded-xl bg-gradient-to-br from-blue-950/200 to-blue-600 p-8 text-white shadow-lg">
             <h2 className="mb-4 text-2xl font-bold">Find Outsourced CFO Services</h2>
-            <p className="mb-6 text-emerald-50">
+            <p className="mb-6 text-blue-950/20">
               Fractional Quest connects businesses with experienced outsourced/fractional CFO professionals and firms across the UK.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Link href="/fractional-cfo" className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-emerald-600 transition-all hover:bg-emerald-50">
+              <Link href="/fractional-cfo" className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-blue-600 transition-all hover:bg-blue-950/20">
                 Explore CFO Services
               </Link>
-              <Link href="/fractional-cfo-cost" className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-emerald-700">
+              <Link href="/fractional-cfo-cost" className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-blue-700">
                 See Pricing
               </Link>
             </div>
@@ -207,19 +207,19 @@ export default function OutsourcedCFOServicesPage() {
             <h2 className="mb-6 text-2xl font-bold text-slate-900">Related Resources</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               <Link href="/fractional-cfo" className="group rounded-lg bg-white p-4 shadow-sm hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Fractional CFO Guide</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Fractional CFO Guide</h3>
                 <p className="mt-1 text-sm text-slate-600">Complete guide to fractional CFO services</p>
               </Link>
               <Link href="/fractional-cfo-companies" className="group rounded-lg bg-white p-4 shadow-sm hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">CFO Service Providers</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">CFO Service Providers</h3>
                 <p className="mt-1 text-sm text-slate-600">Compare CFO companies and platforms</p>
               </Link>
               <Link href="/fractional-cfo-cost" className="group rounded-lg bg-white p-4 shadow-sm hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">CFO Cost Guide</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">CFO Cost Guide</h3>
                 <p className="mt-1 text-sm text-slate-600">Detailed pricing breakdown</p>
               </Link>
               <Link href="/virtual-cfo-services" className="group rounded-lg bg-white p-4 shadow-sm hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Virtual CFO Services</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Virtual CFO Services</h3>
                 <p className="mt-1 text-sm text-slate-600">Remote CFO solutions</p>
               </Link>
             </div>

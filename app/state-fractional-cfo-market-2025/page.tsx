@@ -21,18 +21,18 @@ export default function StateFractionalCFOMarket2025Page() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({'@context': 'https://schema.org', '@type': 'Article', headline: 'State of Fractional CFO Market 2025 UK', description: 'Comprehensive market analysis and industry trends for fractional CFO services.', author: {'@type': 'Organization', name: 'Fractional Quest', url: 'https://fractional.quest'}, publisher: {'@type': 'Organization', name: 'Fractional Quest', url: 'https://fractional.quest'}, datePublished: '2025-01-16', dateModified: '2025-01-16'})}} />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50/30 to-slate-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-950/20/30 to-slate-50">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           <nav className="mb-8 flex items-center gap-2 text-sm text-slate-600">
-            <Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/fractional-cfo" className="hover:text-emerald-600 transition-colors">Fractional CFO</Link>
+            <Link href="/fractional-cfo" className="hover:text-blue-600 transition-colors">Fractional CFO</Link>
             <span>/</span>
             <span className="text-slate-900">Market Report 2025</span>
           </nav>
 
           <header className="mb-12">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-emerald-100 px-4 py-1.5 text-sm font-semibold text-emerald-700">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-blue-900/30 px-4 py-1.5 text-sm font-semibold text-blue-700">
               <span>📈</span>
               <span>2025 Market Analysis</span>
             </div>
@@ -47,8 +47,8 @@ export default function StateFractionalCFOMarket2025Page() {
           <div className="mb-12 rounded-xl bg-white p-8 shadow-sm ring-1 ring-slate-900/5">
             <h2 className="mb-6 text-2xl font-bold text-slate-900">Market Highlights 2025</h2>
             <div className="grid gap-6 md:grid-cols-3">
-              <div className="rounded-lg bg-emerald-50 p-6">
-                <div className="mb-2 text-3xl font-bold text-emerald-700">+18%</div>
+              <div className="rounded-lg bg-blue-950/20 p-6">
+                <div className="mb-2 text-3xl font-bold text-blue-700">+18%</div>
                 <div className="text-sm text-slate-700">Market growth (YoY)</div>
                 <div className="mt-2 text-xs text-slate-600">Compound annual growth rate</div>
               </div>
@@ -117,8 +117,8 @@ export default function StateFractionalCFOMarket2025Page() {
                 </div>
               </div>
 
-              <div className="rounded-xl bg-emerald-50 p-6 ring-1 ring-emerald-100">
-                <h3 className="mb-3 text-lg font-bold text-emerald-900">Individual Practitioners</h3>
+              <div className="rounded-xl bg-blue-950/20 p-6 ring-1 ring-blue-900/30">
+                <h3 className="mb-3 text-lg font-bold text-blue-900">Individual Practitioners</h3>
                 <div className="text-sm text-slate-700">
                   <div className="mb-2 font-semibold">Market Share: 50%</div>
                   <p>Independent fractional CFOs operating through limited companies. Competitive pricing, personalized service.</p>
@@ -161,16 +161,16 @@ export default function StateFractionalCFOMarket2025Page() {
             </ul>
           </section>
 
-          <div className="mb-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 p-8 text-white shadow-lg">
+          <div className="mb-12 rounded-xl bg-gradient-to-br from-blue-950/200 to-blue-600 p-8 text-white shadow-lg">
             <h2 className="mb-4 text-2xl font-bold">Stay Ahead of Market Trends</h2>
-            <p className="mb-6 text-emerald-50">
+            <p className="mb-6 text-blue-950/20">
               Access the latest fractional CFO market insights, salary benchmarks, and industry analysis to optimize your practice or hiring strategy.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Link href="/fractional-cfo-salary-report-2025" className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-emerald-600 transition-all hover:bg-emerald-50">
+              <Link href="/fractional-cfo-salary-report-2025" className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-blue-600 transition-all hover:bg-blue-950/20">
                 2025 Salary Report
               </Link>
-              <Link href="/fractional-cfo" className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-emerald-700">
+              <Link href="/fractional-cfo" className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-blue-700">
                 Explore CFO Services
               </Link>
             </div>
@@ -180,19 +180,19 @@ export default function StateFractionalCFOMarket2025Page() {
             <h2 className="mb-6 text-2xl font-bold text-slate-900">Related Resources</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               <Link href="/fractional-cfo-salary-report-2025" className="group rounded-lg bg-white p-4 shadow-sm hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">2025 Salary Report</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">2025 Salary Report</h3>
                 <p className="mt-1 text-sm text-slate-600">Comprehensive earnings data</p>
               </Link>
               <Link href="/fractional-cfo-companies" className="group rounded-lg bg-white p-4 shadow-sm hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">CFO Company Comparison</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">CFO Company Comparison</h3>
                 <p className="mt-1 text-sm text-slate-600">Market provider analysis</p>
               </Link>
               <Link href="/fractional-cfo-training" className="group rounded-lg bg-white p-4 shadow-sm hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Training & Certification</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Training & Certification</h3>
                 <p className="mt-1 text-sm text-slate-600">Professional development</p>
               </Link>
               <Link href="/how-to-become-fractional-cfo" className="group rounded-lg bg-white p-4 shadow-sm hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Career Transition Guide</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Career Transition Guide</h3>
                 <p className="mt-1 text-sm text-slate-600">Launch your practice</p>
               </Link>
             </div>

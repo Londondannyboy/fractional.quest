@@ -72,29 +72,29 @@ export default async function BelfastPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section with 3D Knowledge Graph */}
-      <section className="relative bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900 py-20 md:py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
           <JobsGraph3D locationFilter="belfast" limit={30} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <Link href="/" className="inline-flex items-center text-emerald-200 hover:text-white mb-6 transition-colors">
+          <Link href="/" className="inline-flex items-center text-blue-800/40 hover:text-white mb-6 transition-colors">
             ← Back to Home
           </Link>
           <div className="inline-block mb-6">
-            <span className="bg-emerald-700/50 backdrop-blur text-white px-5 py-2.5 rounded-full text-sm font-medium border border-emerald-500/30">
+            <span className="bg-blue-700/50 backdrop-blur text-white px-5 py-2.5 rounded-full text-sm font-medium border border-blue-950/200/30">
               {stats.totalBelfast}+ Jobs in Belfast
             </span>
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
             Fractional Jobs Belfast
           </h1>
-          <p className="max-w-2xl text-xl text-emerald-100 mb-10 leading-relaxed">
+          <p className="max-w-2xl text-xl text-blue-900/30 mb-10 leading-relaxed">
             {stats.totalBelfast}+ fractional executive opportunities in Northern Ireland. £500-£900 daily rates. Work with Europe's leading cyber security cluster.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/fractional-jobs?location=Belfast"
-              className="inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-lg bg-white text-emerald-900 hover:bg-emerald-50 transition-all duration-200"
+              className="inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-lg bg-white text-blue-900 hover:bg-blue-950/20 transition-all duration-200"
             >
               Browse All Belfast Jobs
             </Link>
@@ -113,19 +113,19 @@ export default async function BelfastPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-black text-emerald-700">100+</div>
+              <div className="text-4xl font-black text-blue-700">100+</div>
               <div className="text-gray-600 font-medium">cyber security firms</div>
             </div>
             <div>
-              <div className="text-4xl font-black text-emerald-700">£{stats.avgDayRate}</div>
+              <div className="text-4xl font-black text-blue-700">£{stats.avgDayRate}</div>
               <div className="text-gray-600 font-medium">average day rate</div>
             </div>
             <div>
-              <div className="text-4xl font-black text-emerald-700">+35%</div>
+              <div className="text-4xl font-black text-blue-700">+35%</div>
               <div className="text-gray-600 font-medium">cyber sector growth</div>
             </div>
             <div>
-              <div className="text-4xl font-black text-emerald-700">55%</div>
+              <div className="text-4xl font-black text-blue-700">55%</div>
               <div className="text-gray-600 font-medium">lower cost vs London</div>
             </div>
           </div>
@@ -143,11 +143,11 @@ export default async function BelfastPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {belfastAreas.map((area, i) => (
               <Link key={area.name} href={`/fractional-jobs?location=${encodeURIComponent(area.name)}`} className="group">
-                <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-200 border border-transparent hover:border-emerald-200">
-                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-emerald-700 transition-colors mb-2">
+                <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-200 border border-transparent hover:border-blue-800/40">
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors mb-2">
                     {area.name}
                   </h3>
-                  <p className="text-emerald-700 font-semibold mb-2">{Math.max(3, Math.round(stats.totalBelfast * (0.35 - i * 0.07)))} jobs</p>
+                  <p className="text-blue-700 font-semibold mb-2">{Math.max(3, Math.round(stats.totalBelfast * (0.35 - i * 0.07)))} jobs</p>
                   <p className="text-gray-600 text-sm mb-1">{area.description}</p>
                   <p className="text-gray-600 text-sm">{area.rateRange}</p>
                 </div>
@@ -211,10 +211,10 @@ export default async function BelfastPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {belfastIndustries.map((industry) => (
-              <div key={industry.name} className="bg-white rounded-xl p-6 text-center hover:bg-emerald-50 transition-colors">
+              <div key={industry.name} className="bg-white rounded-xl p-6 text-center hover:bg-blue-950/20 transition-colors">
                 <span className="text-4xl mb-3 block">{industry.icon}</span>
                 <h3 className="font-bold text-gray-900 mb-1">{industry.name}</h3>
-                <p className="text-emerald-700 text-sm font-semibold">{industry.growth}</p>
+                <p className="text-blue-700 text-sm font-semibold">{industry.growth}</p>
               </div>
             ))}
           </div>
@@ -222,7 +222,7 @@ export default async function BelfastPage() {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 md:py-28 bg-emerald-900">
+      <section className="py-20 md:py-28 bg-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Belfast Success Stories</h2>
@@ -233,13 +233,13 @@ export default async function BelfastPage() {
               <div key={i} className="bg-white/10 backdrop-blur rounded-xl p-8 border border-white/20">
                 <p className="text-white text-lg mb-6 italic">"{story.quote}"</p>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-emerald-700 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  <div className="w-12 h-12 bg-blue-700 rounded-full flex items-center justify-center text-white font-bold text-lg">
                     {story.name.charAt(0)}
                   </div>
                   <div>
                     <p className="font-bold text-white">{story.name}</p>
-                    <p className="text-emerald-200 text-sm">{story.role}</p>
-                    <p className="text-emerald-300 text-xs">{story.area} • {story.clients} Clients • {story.earnings}</p>
+                    <p className="text-blue-800/40 text-sm">{story.role}</p>
+                    <p className="text-blue-700 text-xs">{story.area} • {story.clients} Clients • {story.earnings}</p>
                   </div>
                 </div>
               </div>
@@ -259,7 +259,7 @@ export default async function BelfastPage() {
             <details className="group bg-gray-50 rounded-xl p-6 cursor-pointer">
               <summary className="flex justify-between items-center font-bold text-lg text-gray-900 list-none">
                 What is a fractional job in Belfast?
-                <span className="text-emerald-700 group-open:rotate-180 transition-transform">▼</span>
+                <span className="text-blue-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
                 A fractional job in Belfast is a part-time executive role working 1-3 days per week. Belfast's cyber security and fintech clusters make it ideal for fractional CTOs and CFOs.
@@ -269,7 +269,7 @@ export default async function BelfastPage() {
             <details className="group bg-gray-50 rounded-xl p-6 cursor-pointer">
               <summary className="flex justify-between items-center font-bold text-lg text-gray-900 list-none">
                 How much do fractional executives earn in Belfast?
-                <span className="text-emerald-700 group-open:rotate-180 transition-transform">▼</span>
+                <span className="text-blue-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
                 Belfast fractional executives earn £500-£900 per day. With 55% lower cost of living than London, take-home value is exceptional. Most earn £90,000-£150,000+ annually.
@@ -279,7 +279,7 @@ export default async function BelfastPage() {
             <details className="group bg-gray-50 rounded-xl p-6 cursor-pointer">
               <summary className="flex justify-between items-center font-bold text-lg text-gray-900 list-none">
                 Why is Belfast good for tech fractional roles?
-                <span className="text-emerald-700 group-open:rotate-180 transition-transform">▼</span>
+                <span className="text-blue-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
                 Belfast has Europe's largest cyber security cluster with 100+ companies. Global tech firms like Proofpoint and Rapid7 have major operations here, creating excellent fractional CTO and CISO opportunities.
@@ -309,26 +309,26 @@ export default async function BelfastPage() {
             <div>
               <h3 className="font-bold text-gray-900 mb-4">Roles by Function</h3>
               <ul className="space-y-2 text-gray-600">
-                <li><Link href="/cfo" className="hover:text-emerald-700">Fractional CFO Jobs</Link></li>
-                <li><Link href="/cto" className="hover:text-emerald-700">Fractional CTO Jobs</Link></li>
-                <li><Link href="/cmo" className="hover:text-emerald-700">Fractional CMO Jobs</Link></li>
+                <li><Link href="/cfo" className="hover:text-blue-700">Fractional CFO Jobs</Link></li>
+                <li><Link href="/cto" className="hover:text-blue-700">Fractional CTO Jobs</Link></li>
+                <li><Link href="/cmo" className="hover:text-blue-700">Fractional CMO Jobs</Link></li>
               </ul>
             </div>
 
             <div>
               <h3 className="font-bold text-gray-900 mb-4">Other UK Locations</h3>
               <ul className="space-y-2 text-gray-600">
-                <li><Link href="/fractional-jobs-london" className="hover:text-emerald-700">Fractional Jobs London</Link></li>
-                <li><Link href="/fractional-jobs-edinburgh" className="hover:text-emerald-700">Fractional Jobs Edinburgh</Link></li>
-                <li><Link href="/fractional-jobs-glasgow" className="hover:text-emerald-700">Fractional Jobs Glasgow</Link></li>
+                <li><Link href="/fractional-jobs-london" className="hover:text-blue-700">Fractional Jobs London</Link></li>
+                <li><Link href="/fractional-jobs-edinburgh" className="hover:text-blue-700">Fractional Jobs Edinburgh</Link></li>
+                <li><Link href="/fractional-jobs-glasgow" className="hover:text-blue-700">Fractional Jobs Glasgow</Link></li>
               </ul>
             </div>
 
             <div>
               <h3 className="font-bold text-gray-900 mb-4">Career Guides</h3>
               <ul className="space-y-2 text-gray-600">
-                <li><Link href="/guide" className="hover:text-emerald-700">Fractional Work Guide</Link></li>
-                <li><Link href="/fractional-executive-salary-uk" className="hover:text-emerald-700">Salary Guide</Link></li>
+                <li><Link href="/guide" className="hover:text-blue-700">Fractional Work Guide</Link></li>
+                <li><Link href="/fractional-executive-salary-uk" className="hover:text-blue-700">Salary Guide</Link></li>
               </ul>
             </div>
           </div>
@@ -336,17 +336,17 @@ export default async function BelfastPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 md:py-28 bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900">
+      <section className="py-20 md:py-28 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Work in Belfast?
           </h2>
-          <p className="text-xl text-emerald-100 mb-10">
+          <p className="text-xl text-blue-900/30 mb-10">
             {stats.totalBelfast}+ fractional opportunities in Northern Ireland's tech capital.
           </p>
           <Link
             href="/fractional-jobs?location=Belfast"
-            className="inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-lg bg-white text-emerald-900 hover:bg-emerald-50 transition-all duration-200"
+            className="inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-lg bg-white text-blue-900 hover:bg-blue-950/20 transition-all duration-200"
           >
             Browse Belfast Jobs →
           </Link>

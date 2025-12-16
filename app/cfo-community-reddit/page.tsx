@@ -37,12 +37,12 @@ export default function CFOCommunityRedditPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({'@context': 'https://schema.org', '@type': 'Article', headline: 'CFO Community & Reddit Resources 2025', description: 'Best communities and networks for CFO professionals.', author: {'@type': 'Organization', name: 'Fractional Quest', url: 'https://fractional.quest'}, publisher: {'@type': 'Organization', name: 'Fractional Quest', url: 'https://fractional.quest'}, datePublished: '2025-01-16', dateModified: '2025-01-16'})}} />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50/30 to-slate-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-950/20/30 to-slate-50">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           <nav className="mb-8 flex items-center gap-2 text-sm text-slate-600">
-            <Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/fractional-cfo" className="hover:text-emerald-600 transition-colors">Fractional CFO</Link>
+            <Link href="/fractional-cfo" className="hover:text-blue-600 transition-colors">Fractional CFO</Link>
             <span>/</span>
             <span className="text-slate-900">Community & Reddit</span>
           </nav>
@@ -62,7 +62,7 @@ export default function CFOCommunityRedditPage() {
               <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
                 <h3 className="text-lg font-bold text-slate-900 mb-2">CFO Connect UK</h3>
                 <p className="text-sm text-slate-600 mb-3">Peer network for CFOs with regional chapters across the UK. Monthly roundtables, annual conferences, and exclusive CFO forums.</p>
-                <span className="inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">Highly Recommended</span>
+                <span className="inline-block rounded-full bg-blue-900/30 px-3 py-1 text-xs font-semibold text-blue-700">Highly Recommended</span>
               </div>
 
               <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
@@ -110,12 +110,12 @@ export default function CFOCommunityRedditPage() {
             </ul>
           </section>
 
-          <div className="mb-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 p-8 text-white shadow-lg">
+          <div className="mb-12 rounded-xl bg-gradient-to-br from-blue-950/200 to-blue-600 p-8 text-white shadow-lg">
             <h2 className="mb-4 text-2xl font-bold">Join the Fractional Quest Community</h2>
-            <p className="mb-6 text-emerald-50">
+            <p className="mb-6 text-blue-950/20">
               Connect with fractional CFO professionals, access exclusive resources, and stay updated on opportunities.
             </p>
-            <Link href="/fractional-cfo" className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-emerald-600 transition-all hover:bg-emerald-50">
+            <Link href="/fractional-cfo" className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-blue-600 transition-all hover:bg-blue-950/20">
               Explore CFO Resources
             </Link>
           </div>

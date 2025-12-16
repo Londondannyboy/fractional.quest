@@ -31,17 +31,17 @@ export default function InterimCFOPage() {
               <span className="mr-2">←</span> Back to Home
             </Link>
             <div className="max-w-4xl">
-              <span className="inline-block bg-emerald-500 text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
+              <span className="inline-block bg-blue-950/200 text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Interim Leadership
               </span>
               <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9]">
-                Interim CFO<br /><span className="text-emerald-400">Services UK</span>
+                Interim CFO<br /><span className="text-blue-400">Services UK</span>
               </h1>
               <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
                 Full-time temporary CFO leadership for transitions, transformations, and critical periods. Expert financial executives available to start immediately.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="#contact" className="px-8 py-4 bg-emerald-500 text-black font-bold uppercase tracking-wider hover:bg-emerald-400 transition-colors">
+                <Link href="#contact" className="px-8 py-4 bg-blue-950/200 text-black font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">
                   Hire an Interim CFO
                 </Link>
                 <Link href="/fractional-cfo-services" className="px-8 py-4 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">
@@ -99,7 +99,7 @@ export default function InterimCFOPage() {
               <thead>
                 <tr className="bg-gray-50">
                   <th className="p-4 text-left font-bold">Aspect</th>
-                  <th className="p-4 text-left font-bold text-emerald-700">Interim CFO</th>
+                  <th className="p-4 text-left font-bold text-blue-700">Interim CFO</th>
                   <th className="p-4 text-left font-bold">Fractional CFO</th>
                 </tr>
               </thead>
@@ -112,10 +112,10 @@ export default function InterimCFOPage() {
               </tbody>
             </table>
           </div>
-          <div className="mt-8 p-6 bg-emerald-50 border border-emerald-200 rounded-lg">
-            <p className="text-emerald-800 font-medium mb-2">Not sure which is right for you?</p>
-            <p className="text-emerald-700 text-sm mb-4">If you need full-time focus for a specific project or transition, choose interim. If you need ongoing strategic CFO leadership at lower cost, choose fractional.</p>
-            <Link href="/fractional-cfo-services" className="text-emerald-700 font-bold hover:text-emerald-900">Learn about Fractional CFO Services →</Link>
+          <div className="mt-8 p-6 bg-blue-950/20 border border-blue-800/40 rounded-lg">
+            <p className="text-blue-800 font-medium mb-2">Not sure which is right for you?</p>
+            <p className="text-blue-700 text-sm mb-4">If you need full-time focus for a specific project or transition, choose interim. If you need ongoing strategic CFO leadership at lower cost, choose fractional.</p>
+            <Link href="/fractional-cfo-services" className="text-blue-700 font-bold hover:text-blue-900">Learn about Fractional CFO Services →</Link>
           </div>
         </div>
       </section>
@@ -134,7 +134,7 @@ export default function InterimCFOPage() {
           <h2 className="text-4xl font-black mb-6">Need an Interim CFO?</h2>
           <p className="text-xl text-gray-400 mb-10">Tell us about your situation and we'll help you find the right interim or fractional CFO.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/handler/sign-up" className="px-10 py-5 bg-emerald-500 text-black font-bold uppercase tracking-wider hover:bg-emerald-400 transition-colors">
+            <Link href="/handler/sign-up" className="px-10 py-5 bg-blue-950/200 text-black font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">
               Find an Interim CFO
             </Link>
             <Link href="/fractional-cfo-services" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">
@@ -148,10 +148,10 @@ export default function InterimCFOPage() {
       <section className="py-12 bg-white border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/fractional-cfo-services" className="text-gray-600 hover:text-emerald-600 font-medium">Fractional CFO</Link>
-            <Link href="/interim-cmo" className="text-gray-600 hover:text-emerald-600 font-medium">Interim CMO</Link>
-            <Link href="/interim-cto" className="text-gray-600 hover:text-emerald-600 font-medium">Interim CTO</Link>
-            <Link href="/interim-coo" className="text-gray-600 hover:text-emerald-600 font-medium">Interim COO</Link>
+            <Link href="/fractional-cfo-services" className="text-gray-600 hover:text-blue-600 font-medium">Fractional CFO</Link>
+            <Link href="/interim-cmo" className="text-gray-600 hover:text-blue-600 font-medium">Interim CMO</Link>
+            <Link href="/interim-cto" className="text-gray-600 hover:text-blue-600 font-medium">Interim CTO</Link>
+            <Link href="/interim-coo" className="text-gray-600 hover:text-blue-600 font-medium">Interim COO</Link>
           </div>
         </div>
       </section>

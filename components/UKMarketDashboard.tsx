@@ -112,8 +112,8 @@ export function UKMarketDashboard({ className = '', initialStats }: UKMarketDash
             <div className="text-3xl font-black text-purple-700">{stats.totalJobs}+</div>
             <div className="text-sm text-gray-600">Active Jobs</div>
           </div>
-          <div className="bg-green-50 rounded-xl p-4 text-center">
-            <div className="text-3xl font-black text-green-700">&pound;{stats.avgDayRate}</div>
+          <div className="bg-blue-50 rounded-xl p-4 text-center">
+            <div className="text-3xl font-black text-blue-700">&pound;{stats.avgDayRate}</div>
             <div className="text-sm text-gray-600">Avg Day Rate</div>
           </div>
           <div className="bg-blue-50 rounded-xl p-4 text-center">

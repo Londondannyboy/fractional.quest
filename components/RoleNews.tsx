@@ -231,7 +231,7 @@ export async function LatestNews({ limit = 6 }: { limit?: number }) {
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 md:p-12 text-center border border-emerald-100">
+        <div className="bg-gradient-to-br from-blue-950/20 to-teal-50 rounded-2xl p-8 md:p-12 text-center border border-blue-900/30">
           <div className="text-5xl mb-4">📰</div>
           <h3 className="text-xl font-bold text-gray-900 mb-2">News Coming Soon</h3>
           <p className="text-gray-600 max-w-md mx-auto mb-6">
@@ -240,13 +240,13 @@ export async function LatestNews({ limit = 6 }: { limit?: number }) {
           <div className="flex flex-wrap justify-center gap-3">
             <Link
               href="/fractional-jobs-articles"
-              className="inline-flex items-center px-5 py-2.5 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-colors"
+              className="inline-flex items-center px-5 py-2.5 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
             >
               Browse Existing Articles →
             </Link>
             <Link
               href="/fractional-jobs"
-              className="inline-flex items-center px-5 py-2.5 bg-white text-gray-700 font-medium rounded-lg border border-gray-200 hover:border-emerald-300 transition-colors"
+              className="inline-flex items-center px-5 py-2.5 bg-white text-gray-700 font-medium rounded-lg border border-gray-200 hover:border-blue-700 transition-colors"
             >
               View Jobs
             </Link>

@@ -88,7 +88,7 @@ export default function VisualizationsPage() {
         {/* 3. 3D Force Graph (existing) */}
         <section>
           <div className="mb-6">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-400 mb-2 block">Network</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-blue-400 mb-2 block">Network</span>
             <h2 className="text-3xl font-black text-white">Jobs Knowledge Graph</h2>
             <p className="text-gray-400 mt-2">3D force-directed graph of jobs, skills, and companies</p>
           </div>
@@ -112,7 +112,7 @@ export default function VisualizationsPage() {
         {/* 5. Rate Distribution */}
         <section>
           <div className="mb-6">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-400 mb-2 block">Salary</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-blue-400 mb-2 block">Salary</span>
             <h2 className="text-3xl font-black text-white">Day Rate Distribution</h2>
             <p className="text-gray-400 mt-2">Distribution of day rates across fractional jobs</p>
           </div>

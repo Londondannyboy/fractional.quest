@@ -76,13 +76,13 @@ export default function FractionalCFOCompaniesPage() {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50/30 to-slate-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-950/20/30 to-slate-50">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <nav className="mb-8 flex items-center gap-2 text-sm text-slate-600">
-            <Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/fractional-cfo" className="hover:text-emerald-600 transition-colors">Fractional CFO</Link>
+            <Link href="/fractional-cfo" className="hover:text-blue-600 transition-colors">Fractional CFO</Link>
             <span>/</span>
             <span className="text-slate-900">CFO Companies</span>
           </nav>
@@ -124,24 +124,24 @@ export default function FractionalCFOCompaniesPage() {
                 </div>
               </div>
 
-              <div className="rounded-lg bg-emerald-50 p-6 ring-1 ring-emerald-100">
-                <h3 className="mb-3 text-lg font-bold text-emerald-900">2. CFO Platforms</h3>
+              <div className="rounded-lg bg-blue-950/20 p-6 ring-1 ring-blue-900/30">
+                <h3 className="mb-3 text-lg font-bold text-blue-900">2. CFO Platforms</h3>
                 <p className="mb-4 text-sm text-slate-700">Marketplaces connecting businesses with vetted CFO talent</p>
                 <div className="space-y-2 text-sm text-slate-700">
                   <div className="flex items-start gap-2">
-                    <span className="mt-0.5 text-emerald-600">✓</span>
+                    <span className="mt-0.5 text-blue-600">✓</span>
                     <span>Vetted CFO network</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <span className="mt-0.5 text-emerald-600">✓</span>
+                    <span className="mt-0.5 text-blue-600">✓</span>
                     <span>Technology integration</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <span className="mt-0.5 text-emerald-600">✓</span>
+                    <span className="mt-0.5 text-blue-600">✓</span>
                     <span>Flexible matching</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <span className="mt-0.5 text-emerald-600">✓</span>
+                    <span className="mt-0.5 text-blue-600">✓</span>
                     <span>Mid-tier pricing</span>
                   </div>
                 </div>
@@ -203,7 +203,7 @@ export default function FractionalCFOCompaniesPage() {
                     <td className="py-3 pl-4 text-slate-600">£10M-£30M revenue</td>
                   </tr>
                   <tr>
-                    <td className="py-3 pr-4 font-medium text-emerald-700">CFO Platforms</td>
+                    <td className="py-3 pr-4 font-medium text-blue-700">CFO Platforms</td>
                     <td className="py-3 px-4 text-slate-600">£1,000-£1,600</td>
                     <td className="py-3 px-4 text-slate-600">£96K-£154K</td>
                     <td className="py-3 pl-4 text-slate-600">£5M-£25M revenue, tech-forward</td>
@@ -225,7 +225,7 @@ export default function FractionalCFOCompaniesPage() {
             </div>
 
             <p className="mt-6 text-sm text-slate-600">
-              Rates typically quoted exclude VAT. Most CFOs are VAT-registered, so add 20% if your business cannot reclaim VAT. See detailed pricing breakdown in our <Link href="/fractional-cfo-cost" className="text-emerald-600 hover:text-emerald-700 underline">CFO cost guide</Link>.
+              Rates typically quoted exclude VAT. Most CFOs are VAT-registered, so add 20% if your business cannot reclaim VAT. See detailed pricing breakdown in our <Link href="/fractional-cfo-cost" className="text-blue-600 hover:text-blue-700 underline">CFO cost guide</Link>.
             </p>
           </section>
 
@@ -333,15 +333,15 @@ export default function FractionalCFOCompaniesPage() {
             <p className="text-slate-700">
               Technology-enabled platforms that match businesses with independent CFOs from their vetted network:
             </p>
-            <div className="not-prose mb-6 rounded-xl bg-emerald-50 p-6 ring-1 ring-emerald-100">
-              <h4 className="mb-3 font-bold text-emerald-900">Characteristics:</h4>
+            <div className="not-prose mb-6 rounded-xl bg-blue-950/20 p-6 ring-1 ring-blue-900/30">
+              <h4 className="mb-3 font-bold text-blue-900">Characteristics:</h4>
               <ul className="space-y-2 text-sm text-slate-700">
-                <li className="flex gap-2"><span className="text-emerald-600">•</span> <span>Curated network of independent CFO professionals</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">•</span> <span>Technology-first approach with integrated dashboards</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">•</span> <span>Matching algorithms based on industry, stage, needs</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">•</span> <span>Flexible engagement terms and scaling</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">•</span> <span>Mid-tier pricing (£1,000-£1,600/day)</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">•</span> <span>Can switch CFOs within network if mismatch occurs</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">•</span> <span>Curated network of independent CFO professionals</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">•</span> <span>Technology-first approach with integrated dashboards</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">•</span> <span>Matching algorithms based on industry, stage, needs</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">•</span> <span>Flexible engagement terms and scaling</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">•</span> <span>Mid-tier pricing (£1,000-£1,600/day)</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">•</span> <span>Can switch CFOs within network if mismatch occurs</span></li>
               </ul>
               <p className="mt-4 text-sm text-slate-700">
                 <strong>Best for:</strong> Tech-forward companies £5M-£25M revenue who value transparency, technology integration, and flexible matching.
@@ -490,7 +490,7 @@ export default function FractionalCFOCompaniesPage() {
                   </tr>
                   <tr>
                     <td className="py-3 pr-4 text-slate-700">£8M-£25M tech scaleup</td>
-                    <td className="py-3 px-4 font-medium text-emerald-700">CFO Platform</td>
+                    <td className="py-3 px-4 font-medium text-blue-700">CFO Platform</td>
                     <td className="py-3 pl-4 text-slate-600">Tech integration, flexibility, quality vetted network</td>
                   </tr>
                   <tr>
@@ -519,21 +519,21 @@ export default function FractionalCFOCompaniesPage() {
           </section>
 
           {/* CTA Section */}
-          <div className="mb-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 p-8 text-white shadow-lg">
+          <div className="mb-12 rounded-xl bg-gradient-to-br from-blue-950/200 to-blue-600 p-8 text-white shadow-lg">
             <h2 className="mb-4 text-2xl font-bold">Find Your Perfect CFO Match</h2>
-            <p className="mb-6 text-emerald-50">
+            <p className="mb-6 text-blue-950/20">
               Fractional Quest connects you with vetted fractional CFO companies and individual practitioners matched to your industry, stage, and specific needs.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/fractional-cfo"
-                className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-emerald-600 transition-all hover:bg-emerald-50"
+                className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-blue-600 transition-all hover:bg-blue-950/20"
               >
                 Explore Fractional CFO Options
               </Link>
               <Link
                 href="/fractional-cfo-cost"
-                className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-emerald-700"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-blue-700"
               >
                 Compare Pricing
               </Link>
@@ -548,19 +548,19 @@ export default function FractionalCFOCompaniesPage() {
             <h2 className="mb-6 text-2xl font-bold text-slate-900">Related Resources</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               <Link href="/fractional-cfo-vs-full-time" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Fractional vs Full-Time CFO</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Fractional vs Full-Time CFO</h3>
                 <p className="mt-1 text-sm text-slate-600">Complete comparison to help you decide</p>
               </Link>
               <Link href="/fractional-cfo-cost" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Fractional CFO Cost Guide</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Fractional CFO Cost Guide</h3>
                 <p className="mt-1 text-sm text-slate-600">Detailed pricing breakdown by provider type</p>
               </Link>
               <Link href="/what-is-fractional-cfo" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">What is a Fractional CFO?</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">What is a Fractional CFO?</h3>
                 <p className="mt-1 text-sm text-slate-600">Understanding the fractional CFO role</p>
               </Link>
               <Link href="/fractional-cfo-hourly-rate" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">CFO Hourly Rate Benchmarks</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">CFO Hourly Rate Benchmarks</h3>
                 <p className="mt-1 text-sm text-slate-600">2025 rate data by experience and location</p>
               </Link>
             </div>

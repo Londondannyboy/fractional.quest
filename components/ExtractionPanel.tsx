@@ -182,7 +182,7 @@ export function ExtractionPanel({ userId, liveExtraction, isExtracting, onRefres
                       </span>
                       <span className="text-xs text-gray-300">•</span>
                       <span className={`text-xs ${
-                        item.confidence >= 0.8 ? 'text-green-600' :
+                        item.confidence >= 0.8 ? 'text-blue-600' :
                         item.confidence >= 0.6 ? 'text-yellow-600' : 'text-orange-600'
                       }`}>
                         {Math.round(item.confidence * 100)}% confident
@@ -196,7 +196,7 @@ export function ExtractionPanel({ userId, liveExtraction, isExtracting, onRefres
                   <button
                     onClick={() => handleConfirm(item.id, 'confirm')}
                     disabled={processingId === item.id}
-                    className="flex-1 px-3 py-1.5 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 disabled:opacity-50 transition-colors"
+                    className="flex-1 px-3 py-1.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 disabled:opacity-50 transition-colors"
                   >
                     ✓ Confirm
                   </button>

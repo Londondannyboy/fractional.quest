@@ -21,18 +21,18 @@ export default function FractionalCFOSalaryReport2025Page() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({'@context': 'https://schema.org', '@type': 'Article', headline: '2025 Fractional CFO Salary Report UK', description: 'Comprehensive salary and rate data for fractional CFOs in 2025.', author: {'@type': 'Organization', name: 'Fractional Quest', url: 'https://fractional.quest'}, publisher: {'@type': 'Organization', name: 'Fractional Quest', url: 'https://fractional.quest'}, datePublished: '2025-01-16', dateModified: '2025-01-16'})}} />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50/30 to-slate-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-950/20/30 to-slate-50">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           <nav className="mb-8 flex items-center gap-2 text-sm text-slate-600">
-            <Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/fractional-cfo" className="hover:text-emerald-600 transition-colors">Fractional CFO</Link>
+            <Link href="/fractional-cfo" className="hover:text-blue-600 transition-colors">Fractional CFO</Link>
             <span>/</span>
             <span className="text-slate-900">2025 Salary Report</span>
           </nav>
 
           <header className="mb-12">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-emerald-100 px-4 py-1.5 text-sm font-semibold text-emerald-700">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-blue-900/30 px-4 py-1.5 text-sm font-semibold text-blue-700">
               <span>📊</span>
               <span>2025 Data</span>
             </div>
@@ -47,8 +47,8 @@ export default function FractionalCFOSalaryReport2025Page() {
           <div className="mb-12 rounded-xl bg-white p-8 shadow-sm ring-1 ring-slate-900/5">
             <h2 className="mb-6 text-2xl font-bold text-slate-900">Key Findings 2025</h2>
             <div className="grid gap-6 md:grid-cols-3">
-              <div className="rounded-lg bg-emerald-50 p-6">
-                <div className="mb-2 text-3xl font-bold text-emerald-700">£1,200</div>
+              <div className="rounded-lg bg-blue-950/20 p-6">
+                <div className="mb-2 text-3xl font-bold text-blue-700">£1,200</div>
                 <div className="text-sm text-slate-700">Median day rate (UK)</div>
                 <div className="mt-2 text-xs text-slate-600">↑ 8% vs 2024</div>
               </div>
@@ -114,21 +114,21 @@ export default function FractionalCFOSalaryReport2025Page() {
               <div className="rounded-lg bg-white p-6 shadow-sm">
                 <div className="mb-2 flex items-center justify-between">
                   <span className="font-bold text-slate-900">Entry-Level Fractional CFO</span>
-                  <span className="text-2xl font-bold text-emerald-600">£91K-£106K</span>
+                  <span className="text-2xl font-bold text-blue-600">£91K-£106K</span>
                 </div>
                 <p className="text-sm text-slate-600">£950/day × 2 days × 48 weeks = £91K per client × 4-5 clients</p>
               </div>
               <div className="rounded-lg bg-white p-6 shadow-sm">
                 <div className="mb-2 flex items-center justify-between">
                   <span className="font-bold text-slate-900">Mid-Level Fractional CFO</span>
-                  <span className="text-2xl font-bold text-emerald-600">£125K-£156K</span>
+                  <span className="text-2xl font-bold text-blue-600">£125K-£156K</span>
                 </div>
                 <p className="text-sm text-slate-600">£1,300/day × 2 days × 48 weeks = £125K per client × 4-5 clients</p>
               </div>
               <div className="rounded-lg bg-white p-6 shadow-sm">
                 <div className="mb-2 flex items-center justify-between">
                   <span className="font-bold text-slate-900">Senior Fractional CFO</span>
-                  <span className="text-2xl font-bold text-emerald-600">£163K-£204K</span>
+                  <span className="text-2xl font-bold text-blue-600">£163K-£204K</span>
                 </div>
                 <p className="text-sm text-slate-600">£1,700/day × 2 days × 48 weeks = £163K per client × 4-5 clients</p>
               </div>
@@ -150,12 +150,12 @@ export default function FractionalCFOSalaryReport2025Page() {
                   <tr>
                     <td className="py-3 pr-4 text-slate-700">London</td>
                     <td className="py-3 px-4 font-semibold text-slate-900">£1,500</td>
-                    <td className="py-3 pl-4 text-emerald-600">+25%</td>
+                    <td className="py-3 pl-4 text-blue-600">+25%</td>
                   </tr>
                   <tr>
                     <td className="py-3 pr-4 text-slate-700">Southeast</td>
                     <td className="py-3 px-4 font-semibold text-slate-900">£1,300</td>
-                    <td className="py-3 pl-4 text-emerald-600">+8%</td>
+                    <td className="py-3 pl-4 text-blue-600">+8%</td>
                   </tr>
                   <tr>
                     <td className="py-3 pr-4 text-slate-700">Manchester/Leeds</td>
@@ -176,20 +176,20 @@ export default function FractionalCFOSalaryReport2025Page() {
               </table>
             </div>
             <p className="mt-4 text-sm text-slate-600">
-              Note: Remote work has reduced regional variations. Many regional CFOs now command London rates serving remote-first companies. See <Link href="/fractional-cfo-jobs-remote" className="text-emerald-600 hover:text-emerald-700 underline">remote CFO opportunities</Link>.
+              Note: Remote work has reduced regional variations. Many regional CFOs now command London rates serving remote-first companies. See <Link href="/fractional-cfo-jobs-remote" className="text-blue-600 hover:text-blue-700 underline">remote CFO opportunities</Link>.
             </p>
           </section>
 
-          <div className="mb-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 p-8 text-white shadow-lg">
+          <div className="mb-12 rounded-xl bg-gradient-to-br from-blue-950/200 to-blue-600 p-8 text-white shadow-lg">
             <h2 className="mb-4 text-2xl font-bold">Maximize Your CFO Earnings</h2>
-            <p className="mb-6 text-emerald-50">
+            <p className="mb-6 text-blue-950/20">
               Access salary benchmarks, rate negotiation guides, and client acquisition strategies to optimize your fractional CFO practice.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Link href="/fractional-cfo-hourly-rate" className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-emerald-600 transition-all hover:bg-emerald-50">
+              <Link href="/fractional-cfo-hourly-rate" className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-blue-600 transition-all hover:bg-blue-950/20">
                 View Rate Benchmarks
               </Link>
-              <Link href="/fractional-cfo-training" className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-emerald-700">
+              <Link href="/fractional-cfo-training" className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-blue-700">
                 Explore Training
               </Link>
             </div>
@@ -199,19 +199,19 @@ export default function FractionalCFOSalaryReport2025Page() {
             <h2 className="mb-6 text-2xl font-bold text-slate-900">Related Resources</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               <Link href="/fractional-cfo-hourly-rate" className="group rounded-lg bg-white p-4 shadow-sm hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Detailed Rate Guide</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Detailed Rate Guide</h3>
                 <p className="mt-1 text-sm text-slate-600">Hourly and day rate breakdowns</p>
               </Link>
               <Link href="/fractional-cfo-salary" className="group rounded-lg bg-white p-4 shadow-sm hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">CFO Salary Overview</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">CFO Salary Overview</h3>
                 <p className="mt-1 text-sm text-slate-600">Full salary analysis and trends</p>
               </Link>
               <Link href="/state-fractional-cfo-market-2025" className="group rounded-lg bg-white p-4 shadow-sm hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Market Report 2025</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Market Report 2025</h3>
                 <p className="mt-1 text-sm text-slate-600">Industry trends and outlook</p>
               </Link>
               <Link href="/how-to-become-fractional-cfo" className="group rounded-lg bg-white p-4 shadow-sm hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Career Transition Guide</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Career Transition Guide</h3>
                 <p className="mt-1 text-sm text-slate-600">Launch your fractional CFO practice</p>
               </Link>
             </div>

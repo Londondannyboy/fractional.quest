@@ -456,9 +456,9 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
         {/* Outer status ring */}
         <div className={`absolute inset-0 w-32 h-32 rounded-full border-4 transition-all duration-300 ${
           isConnected && isPlaying
-            ? 'border-green-400 animate-pulse shadow-lg shadow-green-400/50'
+            ? 'border-blue-400 animate-pulse shadow-lg shadow-green-400/50'
             : isConnected
-            ? 'border-green-500 shadow-lg shadow-green-500/30'
+            ? 'border-blue-500 shadow-lg shadow-green-500/30'
             : isConnecting
             ? 'border-yellow-400 animate-spin'
             : 'border-purple-400 opacity-50'
@@ -467,14 +467,14 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
         {/* Pulse rings when speaking */}
         {isConnected && isPlaying && (
           <>
-            <div className="absolute inset-0 w-32 h-32 rounded-full bg-green-400 animate-ping opacity-30" />
-            <div className="absolute inset-0 w-32 h-32 rounded-full bg-green-300 animate-pulse opacity-40" />
+            <div className="absolute inset-0 w-32 h-32 rounded-full bg-blue-400 animate-ping opacity-30" />
+            <div className="absolute inset-0 w-32 h-32 rounded-full bg-blue-300 animate-pulse opacity-40" />
           </>
         )}
 
         {/* Subtle pulse when listening (connected but not speaking) */}
         {isConnected && !isPlaying && (
-          <div className="absolute inset-0 w-32 h-32 rounded-full bg-green-400 animate-pulse opacity-20" />
+          <div className="absolute inset-0 w-32 h-32 rounded-full bg-blue-400 animate-pulse opacity-20" />
         )}
 
         <button
@@ -482,9 +482,9 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
           disabled={isConnecting}
           className={`relative w-32 h-32 rounded-full text-white font-bold text-lg shadow-2xl transition-all duration-300 ${
             isConnected && isPlaying
-              ? 'bg-gradient-to-br from-green-400 to-emerald-500 scale-110'
+              ? 'bg-gradient-to-br from-green-400 to-blue-950/200 scale-110'
               : isConnected
-              ? 'bg-gradient-to-br from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700'
+              ? 'bg-gradient-to-br from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700'
               : isConnecting
               ? 'bg-gradient-to-br from-yellow-400 to-orange-400 cursor-wait'
               : 'bg-gradient-to-br from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 hover:scale-105'
@@ -586,7 +586,7 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
                     key={i}
                     className={`flex items-center gap-2 p-2 rounded-lg ${
                       activity.status === 'confirmation_pending'
-                        ? 'bg-green-100 text-green-900 font-medium'
+                        ? 'bg-blue-100 text-blue-900 font-medium'
                         : activity.status === 'analyzing'
                         ? 'bg-yellow-100 text-yellow-900'
                         : activity.status === 'error'
@@ -678,7 +678,7 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
                       }
                       setPydanticConfirmation(null)
                     }}
-                    className="flex-1 px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg font-medium hover:shadow-lg transition-all transform hover:scale-105"
+                    className="flex-1 px-4 py-2 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg font-medium hover:shadow-lg transition-all transform hover:scale-105"
                   >
                     ✓ Confirm
                   </button>
@@ -739,13 +739,13 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
       {transcriptJobs.length > 0 && (
         <div className="w-full max-w-4xl mt-8 animate-fade-in">
           <div className="flex items-center gap-2 mb-4">
-            <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
             <h3 className="text-lg font-semibold text-gray-900">
               Jobs Found - Transcript Analysis ({transcriptJobs.length})
             </h3>
-            <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full font-medium">
+            <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full font-medium">
               Method B
             </span>
           </div>
@@ -883,7 +883,7 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-4">
               <h3 className="font-bold text-sm">🐛 DEBUG MODE</h3>
-              <div className={`px-2 py-1 rounded text-xs font-bold ${isConnected ? 'bg-green-600' : 'bg-red-600'}`}>
+              <div className={`px-2 py-1 rounded text-xs font-bold ${isConnected ? 'bg-blue-600' : 'bg-red-600'}`}>
                 {status.value}
               </div>
               <div className="text-purple-400">Method A (Hume): {displayedJobs.length}</div>
@@ -904,7 +904,7 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
             <div className="mb-2">
               <div className="text-yellow-400 font-bold mb-1">Recent Tool Calls:</div>
               {toolCalls.map((call, i) => (
-                <div key={i} className="text-green-400 ml-2">
+                <div key={i} className="text-blue-400 ml-2">
                   [{call.time}] {call.name} {call.params ? `(${JSON.stringify(call.params).substring(0, 50)})` : ''}
                 </div>
               ))}
@@ -919,7 +919,7 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
                 key={i}
                 className={`ml-2 ${
                   log.type === 'error' ? 'text-red-400' :
-                  log.type === 'success' ? 'text-green-400' :
+                  log.type === 'success' ? 'text-blue-400' :
                   log.type === 'tool' ? 'text-yellow-400' :
                   'text-gray-300'
                 }`}

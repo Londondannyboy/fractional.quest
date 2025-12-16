@@ -235,11 +235,11 @@ export function EmbeddedJobBoard({
               </span>
             )}
             {workType && (
-              <span className="inline-flex items-center gap-1 px-3 py-1 bg-emerald-100 text-emerald-800 text-sm rounded-full">
+              <span className="inline-flex items-center gap-1 px-3 py-1 bg-blue-900/30 text-blue-800 text-sm rounded-full">
                 {WORK_TYPE_OPTIONS.find(w => w.value === workType)?.label}
                 <button
                   onClick={() => setWorkType('')}
-                  className="hover:text-emerald-900"
+                  className="hover:text-blue-900"
                   aria-label="Remove work type filter"
                 >
                   ×

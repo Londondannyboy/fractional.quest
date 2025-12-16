@@ -732,7 +732,7 @@ export function RepoDisplay({ userId, refreshTrigger }: RepoDisplayProps) {
                       <ul className="mt-3 space-y-1">
                         {exp.achievements.slice(0, 3).map((achievement, i) => (
                           <li key={i} className="text-sm text-gray-600 flex items-start gap-2">
-                            <span className="text-green-500 mt-0.5">✓</span>
+                            <span className="text-blue-500 mt-0.5">✓</span>
                             {achievement}
                           </li>
                         ))}

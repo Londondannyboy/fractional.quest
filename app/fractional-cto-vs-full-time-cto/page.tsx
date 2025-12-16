@@ -274,7 +274,7 @@ export default function FractionalVsFullTimeCTOPage() {
                   <span className="text-red-500">✗</span>
                   <span>Misconception: "Fractional CTOs aren't as committed"</span>
                 </h4>
-                <p className="text-gray-700 ml-10 mb-0"><strong className="text-green-600">Reality:</strong> Fractional CTOs take full ownership and accountability. They're present and engaged on their working days, attend key meetings, and drive outcomes. The difference is hours worked, not commitment level.</p>
+                <p className="text-gray-700 ml-10 mb-0"><strong className="text-blue-600">Reality:</strong> Fractional CTOs take full ownership and accountability. They're present and engaged on their working days, attend key meetings, and drive outcomes. The difference is hours worked, not commitment level.</p>
               </div>
 
               <div className="bg-gray-50 p-6">
@@ -282,7 +282,7 @@ export default function FractionalVsFullTimeCTOPage() {
                   <span className="text-red-500">✗</span>
                   <span>Misconception: "You always need to transition to full-time"</span>
                 </h4>
-                <p className="text-gray-700 ml-10 mb-0"><strong className="text-green-600">Reality:</strong> Many companies keep fractional CTOs for years, even at £10M-£20M revenue. The decision depends on complexity and needs, not automatic at certain revenue.</p>
+                <p className="text-gray-700 ml-10 mb-0"><strong className="text-blue-600">Reality:</strong> Many companies keep fractional CTOs for years, even at £10M-£20M revenue. The decision depends on complexity and needs, not automatic at certain revenue.</p>
               </div>
 
               <div className="bg-gray-50 p-6">
@@ -290,7 +290,7 @@ export default function FractionalVsFullTimeCTOPage() {
                   <span className="text-red-500">✗</span>
                   <span>Misconception: "Full-time CTOs are always better quality"</span>
                 </h4>
-                <p className="text-gray-700 ml-10 mb-0"><strong className="text-green-600">Reality:</strong> Fractional CTOs are often MORE experienced (15-20+ years) than full-time candidates at your budget. You're accessing senior expertise you couldn't afford full-time.</p>
+                <p className="text-gray-700 ml-10 mb-0"><strong className="text-blue-600">Reality:</strong> Fractional CTOs are often MORE experienced (15-20+ years) than full-time candidates at your budget. You're accessing senior expertise you couldn't afford full-time.</p>
               </div>
             </div>
 

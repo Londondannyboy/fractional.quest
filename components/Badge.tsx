@@ -15,7 +15,7 @@ export function Badge({ variant = 'primary', size = 'md', role, className = '', 
 
   const variantStyles = {
     primary: 'bg-gray-200 text-gray-800',
-    success: 'bg-green-100 text-green-800',
+    success: 'bg-blue-100 text-blue-800',
     warning: 'bg-amber-100 text-amber-800',
     error: 'bg-red-100 text-red-800',
     gray: 'bg-gray-100 text-gray-800',

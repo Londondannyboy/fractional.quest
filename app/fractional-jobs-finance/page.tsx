@@ -86,13 +86,13 @@ export default async function FinanceJobsPage() {
                     <span className="mr-2">←</span> Back to Home
                   </Link>
 
-                  <span className="inline-block bg-emerald-500/20 backdrop-blur text-emerald-200 px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-widest mb-6">
+                  <span className="inline-block bg-blue-950/200/20 backdrop-blur text-blue-800/40 px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-widest mb-6">
                     {stats.total}+ Finance Leadership Roles
                   </span>
 
                   <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
                     Fractional<br />
-                    <span className="text-emerald-300">Finance</span> Jobs UK
+                    <span className="text-blue-700">Finance</span> Jobs UK
                   </h1>
 
                   <p className="text-lg text-white/70 mb-8 leading-relaxed max-w-lg">
@@ -169,8 +169,8 @@ export default async function FinanceJobsPage() {
               <div key={role.name} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{role.name}</h3>
                 <p className="text-gray-600 text-sm mb-2">{role.description}</p>
-                <p className="text-emerald-700 font-semibold mb-1">{role.rateRange}</p>
-                <span className="inline-block px-2 py-1 bg-emerald-100 text-emerald-700 text-xs rounded-full">Demand: {role.demand}</span>
+                <p className="text-blue-700 font-semibold mb-1">{role.rateRange}</p>
+                <span className="inline-block px-2 py-1 bg-blue-900/30 text-blue-700 text-xs rounded-full">Demand: {role.demand}</span>
               </div>
             ))}
           </div>
@@ -190,7 +190,7 @@ export default async function FinanceJobsPage() {
               <div key={sector.name} className="bg-white rounded-xl p-6 text-center hover:shadow-md transition-all">
                 <span className="text-4xl mb-3 block">{sector.icon}</span>
                 <h3 className="font-bold text-gray-900 mb-1">{sector.name}</h3>
-                <p className="text-emerald-700 text-sm font-semibold mb-1">{sector.growth}</p>
+                <p className="text-blue-700 text-sm font-semibold mb-1">{sector.growth}</p>
                 <p className="text-gray-600 text-xs">{sector.description}</p>
               </div>
             ))}
@@ -208,7 +208,7 @@ export default async function FinanceJobsPage() {
           </div>
           <div className="flex flex-wrap justify-center gap-3">
             {financeSkills.map((skill) => (
-              <span key={skill} className="px-4 py-2 bg-gray-50 rounded-full text-gray-700 border border-gray-200 hover:border-emerald-300 hover:bg-emerald-50 transition-colors">
+              <span key={skill} className="px-4 py-2 bg-gray-50 rounded-full text-gray-700 border border-gray-200 hover:border-blue-700 hover:bg-blue-950/20 transition-colors">
                 {skill}
               </span>
             ))}
@@ -225,7 +225,7 @@ export default async function FinanceJobsPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8">
-              <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-14 h-14 bg-blue-900/30 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-3xl">📈</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">PE/VC Demand</h3>
@@ -234,7 +234,7 @@ export default async function FinanceJobsPage() {
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8">
-              <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-14 h-14 bg-blue-900/30 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-3xl">💼</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Highest Demand</h3>
@@ -243,7 +243,7 @@ export default async function FinanceJobsPage() {
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8">
-              <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+              <div className="w-14 h-14 bg-blue-900/30 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-3xl">🎯</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Clear Value</h3>
@@ -254,10 +254,10 @@ export default async function FinanceJobsPage() {
           </div>
           <div className="mt-12 max-w-4xl mx-auto">
             <p className="text-gray-700 leading-relaxed mb-4">
-              The UK financial services sector is undergoing digital transformation. <a href="https://www.ukfinance.org.uk/news-and-insight" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">UK Finance</a> reports rapid growth in fintech, challenger banks, and digital wealth platforms—all requiring fractional CFO, compliance, and technical leadership to navigate complex regulatory environments.
+              The UK financial services sector is undergoing digital transformation. <a href="https://www.ukfinance.org.uk/news-and-insight" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK Finance</a> reports rapid growth in fintech, challenger banks, and digital wealth platforms—all requiring fractional CFO, compliance, and technical leadership to navigate complex regulatory environments.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Regulatory complexity drives fractional demand. <a href="https://www.fca.org.uk/publication/business-plans/business-plan-2023-24.pdf" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">FCA regulatory requirements</a> for financial services companies require senior expertise in governance, risk management, and compliance—expertise that early-stage and mid-market firms access cost-effectively through fractional executives rather than full-time C-suite hires.
+              Regulatory complexity drives fractional demand. <a href="https://www.fca.org.uk/publication/business-plans/business-plan-2023-24.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA regulatory requirements</a> for financial services companies require senior expertise in governance, risk management, and compliance—expertise that early-stage and mid-market firms access cost-effectively through fractional executives rather than full-time C-suite hires.
             </p>
             <p className="text-gray-700 leading-relaxed">
               Financial services fractional roles command premium rates (£900-£1,400) reflecting regulatory complexity and client sophistication. The sector's combination of established institutions and innovative challengers provides diverse portfolio opportunities for executives with financial services expertise.
@@ -299,7 +299,7 @@ export default async function FinanceJobsPage() {
               <Link
                 key={search}
                 href={`/fractional-jobs?q=${encodeURIComponent(search)}`}
-                className="px-4 py-2 bg-gray-50 rounded-full text-gray-700 hover:bg-emerald-100 hover:text-emerald-700 transition-colors text-sm border border-gray-200"
+                className="px-4 py-2 bg-gray-50 rounded-full text-gray-700 hover:bg-blue-900/30 hover:text-blue-700 transition-colors text-sm border border-gray-200"
               >
                 {search}
               </Link>

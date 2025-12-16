@@ -28,7 +28,7 @@ const ROLE_DEFAULTS: Record<string, {
     minDayRate: 800,
     maxDayRate: 1500,
     color: 'emerald',
-    colorDark: 'emerald-600',
+    colorDark: 'blue-600',
   },
   cto: {
     label: 'CTO',
@@ -328,13 +328,13 @@ export function RoleCalculator({ role, className = '' }: RoleCalculatorProps) {
                 </div>
 
                 {/* Fractional Cost */}
-                <div className="bg-emerald-900/30 border border-emerald-900/50 p-4">
+                <div className="bg-blue-900/30 border border-blue-900/50 p-4">
                   <div className="flex justify-between items-center">
                     <div>
                       <div className="text-sm text-gray-400">Fractional {roleData.label}</div>
                       <div className="text-xs text-gray-500">({daysPerWeekNeeded.toFixed(1)} days/week x 48 weeks)</div>
                     </div>
-                    <div className="text-2xl font-bold text-emerald-400">
+                    <div className="text-2xl font-bold text-blue-400">
                       {formatCurrency(fractionalAnnualCost)}
                     </div>
                   </div>

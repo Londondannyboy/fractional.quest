@@ -75,12 +75,12 @@ export default async function FractionalCfoJobsUkPage() {
               <span className="mr-2">←</span> Back to Home
             </Link>
             <div className="max-w-4xl">
-              <span className="inline-block bg-emerald-500 text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
+              <span className="inline-block bg-blue-950/200 text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Finance Leadership
               </span>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Fractional CFO<br />
-                <span className="text-emerald-400">Jobs UK</span>
+                <span className="text-blue-400">Jobs UK</span>
               </h1>
               <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mb-8">
                 <strong className="text-white">Fractional CFO jobs UK</strong> for experienced finance leaders.
@@ -88,7 +88,7 @@ export default async function FractionalCfoJobsUkPage() {
               </p>
               <div className="flex flex-wrap gap-8 mb-10">
                 <div>
-                  <div className="text-4xl md:text-5xl font-black text-emerald-400">{stats.total}+</div>
+                  <div className="text-4xl md:text-5xl font-black text-blue-400">{stats.total}+</div>
                   <div className="text-white/60 text-sm uppercase tracking-wider">Live Roles</div>
                 </div>
                 <div>
@@ -101,7 +101,7 @@ export default async function FractionalCfoJobsUkPage() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-4">
-                <Link href="#jobs" className="px-8 py-4 bg-emerald-500 text-black font-bold uppercase tracking-wider hover:bg-emerald-400 transition-colors">
+                <Link href="#jobs" className="px-8 py-4 bg-blue-950/200 text-black font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">
                   Browse Jobs Now
                 </Link>
                 <Link href="/fractional-cfo-salary" className="px-8 py-4 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">
@@ -164,7 +164,7 @@ export default async function FractionalCfoJobsUkPage() {
             </div>
             <div className="flex flex-wrap justify-center gap-x-12 gap-y-6">
               {companies.map((company: string, index: number) => (
-                <span key={index} className="text-xl md:text-2xl font-light text-gray-400 hover:text-emerald-400 transition-colors cursor-default">{company}</span>
+                <span key={index} className="text-xl md:text-2xl font-light text-gray-400 hover:text-blue-400 transition-colors cursor-default">{company}</span>
               ))}
             </div>
           </div>
@@ -177,9 +177,9 @@ export default async function FractionalCfoJobsUkPage() {
           <div className="mb-16">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-4 block">The Guide</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
-              Everything You Need to Know About<br /><span className="text-emerald-600">Fractional CFO Jobs UK</span>
+              Everything You Need to Know About<br /><span className="text-blue-600">Fractional CFO Jobs UK</span>
             </h2>
-            <div className="w-24 h-1 bg-emerald-500"></div>
+            <div className="w-24 h-1 bg-blue-950/200"></div>
           </div>
           <figure className="mb-16 -mx-6 lg:-mx-16">
             <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Fractional CFO jobs UK - finance executive reviewing company financial reports" className="w-full h-80 md:h-96 object-cover" />
@@ -187,11 +187,11 @@ export default async function FractionalCfoJobsUkPage() {
           </figure>
           <article className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              <strong className="font-semibold text-gray-900">Fractional CFO jobs</strong> represent the new frontier of finance leadership. Part-time Chief Financial Officer positions where experienced leaders provide strategic financial guidance to multiple companies simultaneously—delivering world-class expertise at a fraction of the cost. The growth of this sector is supported by <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">IPSE research on independent professionals</a> and <a href="https://www.britishbusinessbank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">British Business Bank data</a> showing SMEs increasingly leveraging flexible financial talent.
+              <strong className="font-semibold text-gray-900">Fractional CFO jobs</strong> represent the new frontier of finance leadership. Part-time Chief Financial Officer positions where experienced leaders provide strategic financial guidance to multiple companies simultaneously—delivering world-class expertise at a fraction of the cost. The growth of this sector is supported by <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IPSE research on independent professionals</a> and <a href="https://www.britishbusinessbank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank data</a> showing SMEs increasingly leveraging flexible financial talent.
             </p>
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">The Rise of Fractional CFO Jobs UK</h3>
-            <p>The UK market for <strong>fractional CFO jobs UK</strong> has grown by over 180% in the past three years. This surge reflects a fundamental shift in how companies access senior finance talent, particularly among <a href="https://www.gov.uk/business-finance-support" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">startups, scale-ups, and SMEs</a> that need experienced financial leadership but cannot justify a full-time CFO salary of £150,000-£300,000.</p>
-            <div className="bg-gray-50 p-8 my-10 border-l-4 border-emerald-500">
+            <p>The UK market for <strong>fractional CFO jobs UK</strong> has grown by over 180% in the past three years. This surge reflects a fundamental shift in how companies access senior finance talent, particularly among <a href="https://www.gov.uk/business-finance-support" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">startups, scale-ups, and SMEs</a> that need experienced financial leadership but cannot justify a full-time CFO salary of £150,000-£300,000.</p>
+            <div className="bg-gray-50 p-8 my-10 border-l-4 border-blue-950/200">
               <p className="text-xl font-semibold text-gray-900 mb-0">"Companies access CFO expertise for £2,000-£5,000/week instead of £12,500+ monthly for full-time."</p>
             </div>
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Why Fractional CFO Jobs Are Booming</h3>
@@ -200,7 +200,7 @@ export default async function FractionalCfoJobsUkPage() {
               <li><strong>Flexibility:</strong> Scale finance leadership based on current needs</li>
               <li><strong>Quality talent:</strong> Access CFOs with diverse, multi-industry experience</li>
               <li><strong>Speed to impact:</strong> No lengthy recruitment—start adding value within days</li>
-              <li><strong>PE/VC influence:</strong> <a href="https://www.bvca.co.uk" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">Investors mandate fractional CFOs</a> across portfolios</li>
+              <li><strong>PE/VC influence:</strong> <a href="https://www.bvca.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Investors mandate fractional CFOs</a> across portfolios</li>
             </ul>
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Types of Fractional CFO Jobs</h3>
             <div className="grid md:grid-cols-2 gap-6 not-prose my-8">
@@ -213,21 +213,21 @@ export default async function FractionalCfoJobsUkPage() {
                 <div key={i} className="bg-gray-50 p-6 border border-gray-200">
                   <h4 className="font-bold text-gray-900 mb-1">{type.title}</h4>
                   <p className="text-gray-600 text-sm mb-2">{type.desc}</p>
-                  <span className="text-emerald-600 font-semibold text-sm">{type.rate}</span>
+                  <span className="text-blue-600 font-semibold text-sm">{type.rate}</span>
                 </div>
               ))}
             </div>
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Requirements for Fractional CFO Jobs</h3>
             <p>
-              Most fractional CFO opportunities require extensive qualifications and experience. Professional bodies like <a href="https://www.icaew.com" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">ICAEW</a>, <a href="https://www.accaglobal.com" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">ACCA</a>, and <a href="https://www.cimaglobal.com" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">CIMA</a> provide the professional credibility essential for fractional work. Understanding <a href="https://www.gov.uk/guidance/understanding-off-payroll-working-ir35" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">IR35 regulations</a> is also critical for operating compliantly.
+              Most fractional CFO opportunities require extensive qualifications and experience. Professional bodies like <a href="https://www.icaew.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICAEW</a>, <a href="https://www.accaglobal.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACCA</a>, and <a href="https://www.cimaglobal.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIMA</a> provide the professional credibility essential for fractional work. Understanding <a href="https://www.gov.uk/guidance/understanding-off-payroll-working-ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35 regulations</a> is also critical for operating compliantly.
             </p>
             <ul className="space-y-2">
               <li>15+ years finance experience, 5+ in CFO or Finance Director roles</li>
               <li>Professional qualifications (ACA, ACCA, CIMA)</li>
               <li>Fundraising experience (Series A-C, debt facilities)</li>
-              <li>M&A and <a href="https://www.frc.org.uk" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">due diligence expertise</a> compliant with UK standards</li>
+              <li>M&A and <a href="https://www.frc.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">due diligence expertise</a> compliant with UK standards</li>
               <li>Board-level communication skills</li>
-              <li>Knowledge of <a href="https://www.fca.org.uk/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">FCA regulations</a> for financial services clients</li>
+              <li>Knowledge of <a href="https://www.fca.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA regulations</a> for financial services clients</li>
             </ul>
           </article>
         </div>
@@ -273,9 +273,9 @@ export default async function FractionalCfoJobsUkPage() {
               In practice, most <strong>part-time CFO jobs</strong> and fractional CFO jobs are the same roles. Companies may use either term in job postings. The key is that you're providing senior financial leadership on a part-time, ongoing basis—typically 1-3 days per week.
             </p>
 
-            <div className="bg-emerald-50 p-6 border border-emerald-200 rounded-lg my-8 not-prose">
-              <p className="text-emerald-800 font-medium mb-3">Looking specifically for part-time CFO opportunities?</p>
-              <Link href="/part-time-cfo" className="inline-flex items-center text-emerald-700 font-bold hover:text-emerald-900">
+            <div className="bg-blue-950/20 p-6 border border-blue-800/40 rounded-lg my-8 not-prose">
+              <p className="text-blue-800 font-medium mb-3">Looking specifically for part-time CFO opportunities?</p>
+              <Link href="/part-time-cfo" className="inline-flex items-center text-blue-700 font-bold hover:text-blue-900">
                 Read our Part-Time CFO Guide →
               </Link>
             </div>
@@ -309,15 +309,15 @@ export default async function FractionalCfoJobsUkPage() {
             <h3 className="text-xl font-black text-gray-900 mt-8 mb-4">Typical Engagement Structure</h3>
             <div className="grid md:grid-cols-3 gap-4 not-prose my-6">
               <div className="bg-gray-50 p-5 text-center">
-                <div className="text-2xl font-black text-emerald-600">1-3 days</div>
+                <div className="text-2xl font-black text-blue-600">1-3 days</div>
                 <div className="text-sm text-gray-600">Per week</div>
               </div>
               <div className="bg-gray-50 p-5 text-center">
-                <div className="text-2xl font-black text-emerald-600">6-12 months</div>
+                <div className="text-2xl font-black text-blue-600">6-12 months</div>
                 <div className="text-sm text-gray-600">Initial commitment</div>
               </div>
               <div className="bg-gray-50 p-5 text-center">
-                <div className="text-2xl font-black text-emerald-600">£800-£1,500</div>
+                <div className="text-2xl font-black text-blue-600">£800-£1,500</div>
                 <div className="text-sm text-gray-600">Day rate</div>
               </div>
             </div>
@@ -352,7 +352,7 @@ export default async function FractionalCfoJobsUkPage() {
 
             <div className="bg-black text-white p-6 rounded-lg my-8 not-prose">
               <p className="text-gray-300 mb-3">Browse remote CFO positions:</p>
-              <Link href="/remote" className="inline-flex items-center text-emerald-400 font-bold hover:text-emerald-300">
+              <Link href="/remote" className="inline-flex items-center text-blue-400 font-bold hover:text-blue-700">
                 View Remote Jobs →
               </Link>
             </div>
@@ -402,22 +402,22 @@ export default async function FractionalCfoJobsUkPage() {
           <div className="space-y-8">
             {/* Professional Bodies & Finance Organizations */}
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-emerald-500">Professional Bodies &amp; Finance Organizations</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-blue-950/200">Professional Bodies &amp; Finance Organizations</h3>
               <ul className="space-y-3 text-gray-600">
                 <li>
-                  <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                  <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline font-medium">
                     Institute of Directors (IoD)
                   </a>
                   {' '}&mdash; Professional development and networking for CFOs and C-level executives
                 </li>
                 <li>
-                  <a href="https://www.treasurers.org/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                  <a href="https://www.treasurers.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline font-medium">
                     Association of Corporate Treasurers (ACT)
                   </a>
                   {' '}&mdash; Professional body for treasury and cash management expertise
                 </li>
                 <li>
-                  <a href="https://www.ukfinance.org.uk/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                  <a href="https://www.ukfinance.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline font-medium">
                     UK Finance
                   </a>
                   {' '}&mdash; Industry insights and regulatory guidance for financial services
@@ -427,22 +427,22 @@ export default async function FractionalCfoJobsUkPage() {
 
             {/* Government & Regulation */}
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-emerald-500">Government Resources &amp; Regulation</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-blue-950/200">Government Resources &amp; Regulation</h3>
               <ul className="space-y-3 text-gray-600">
                 <li>
-                  <a href="https://www.gov.uk/set-up-business" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                  <a href="https://www.gov.uk/set-up-business" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline font-medium">
                     Gov.uk Business Setup Guide
                   </a>
                   {' '}&mdash; Official guidance for setting up a limited company as a fractional CFO
                 </li>
                 <li>
-                  <a href="https://www.companieshouse.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                  <a href="https://www.companieshouse.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline font-medium">
                     Companies House
                   </a>
                   {' '}&mdash; UK company registration and compliance requirements
                 </li>
                 <li>
-                  <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                  <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline font-medium">
                     ONS Employment Statistics
                   </a>
                   {' '}&mdash; Official UK labour market data including self-employment trends
@@ -452,22 +452,22 @@ export default async function FractionalCfoJobsUkPage() {
 
             {/* Industry Research & Market Data */}
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-emerald-500">Industry Research &amp; Market Data</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-blue-950/200">Industry Research &amp; Market Data</h3>
               <ul className="space-y-3 text-gray-600">
                 <li>
-                  <a href="https://www.beauhurst.com/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                  <a href="https://www.beauhurst.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline font-medium">
                     Beauhurst
                   </a>
                   {' '}&mdash; UK high-growth company data and startup ecosystem insights
                 </li>
                 <li>
-                  <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                  <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline font-medium">
                     Tech Nation
                   </a>
                   {' '}&mdash; Data and insights on the UK&apos;s digital economy and tech scaleups
                 </li>
                 <li>
-                  <a href="https://www.cipd.org/uk/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                  <a href="https://www.cipd.org/uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline font-medium">
                     CIPD
                   </a>
                   {' '}&mdash; Research on flexible working and employment trends for executives
@@ -476,7 +476,7 @@ export default async function FractionalCfoJobsUkPage() {
             </div>
           </div>
 
-          <div className="mt-10 p-6 bg-white rounded-lg border-l-4 border-emerald-500">
+          <div className="mt-10 p-6 bg-white rounded-lg border-l-4 border-blue-950/200">
             <p className="text-gray-700 leading-relaxed">
               <strong>Note:</strong> These resources provide valuable guidance for fractional CFO professionals, from regulatory compliance to professional development and market insights. All sources are official UK government, professional body, or recognized industry authorities.
             </p>
@@ -488,10 +488,10 @@ export default async function FractionalCfoJobsUkPage() {
       <section className="py-20 md:py-28 bg-black text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-4 block">Ready?</span>
-          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Find Your Next<br /><span className="text-emerald-400">Fractional CFO Role</span></h2>
+          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Find Your Next<br /><span className="text-blue-400">Fractional CFO Role</span></h2>
           <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">Create your profile and get matched with companies seeking fractional finance leadership.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/handler/sign-up" className="px-10 py-5 bg-emerald-500 text-black font-bold uppercase tracking-wider hover:bg-emerald-400 transition-colors">Create Profile</Link>
+            <Link href="/handler/sign-up" className="px-10 py-5 bg-blue-950/200 text-black font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">Create Profile</Link>
             <Link href="/fractional-cfo-salary" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Salary Guide</Link>
           </div>
         </div>
@@ -503,12 +503,12 @@ export default async function FractionalCfoJobsUkPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related</span>
             <div className="flex flex-wrap gap-4">
-              <Link href="/uk-fractional-jobs-uk-london-fractional-jobs-london" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Fractional Jobs</Link>
-              <Link href="/part-time-cfo" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Part-Time CFO Guide</Link>
-              <Link href="/fractional-cfo-salary" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">CFO Salary Guide</Link>
-              <Link href="/fractional-cmo-jobs-uk" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">CMO Jobs UK</Link>
-              <Link href="/fractional-cto-jobs-uk" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">CTO Jobs UK</Link>
-              <Link href="/fractional-coo-jobs-uk" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">COO Jobs UK</Link>
+              <Link href="/uk-fractional-jobs-uk-london-fractional-jobs-london" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Fractional Jobs</Link>
+              <Link href="/part-time-cfo" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Part-Time CFO Guide</Link>
+              <Link href="/fractional-cfo-salary" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">CFO Salary Guide</Link>
+              <Link href="/fractional-cmo-jobs-uk" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">CMO Jobs UK</Link>
+              <Link href="/fractional-cto-jobs-uk" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">CTO Jobs UK</Link>
+              <Link href="/fractional-coo-jobs-uk" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">COO Jobs UK</Link>
             </div>
           </div>
         </div>

@@ -95,33 +95,33 @@ export default function HowToBecomeFractionalCMOPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-green-50 p-8 rounded-lg border-2 border-green-200">
+            <div className="bg-blue-50 p-8 rounded-lg border-2 border-blue-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
                 <span className="text-3xl">✅</span> You're Ready If:
               </h3>
               <ul className="space-y-4 text-gray-700">
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600 font-bold mt-1">•</span>
+                  <span className="text-blue-600 font-bold mt-1">•</span>
                   <div><strong>15+ years marketing experience</strong> with 5+ years in leadership roles (VP Marketing, CMO, Head of Marketing)</div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600 font-bold mt-1">•</span>
+                  <span className="text-blue-600 font-bold mt-1">•</span>
                   <div><strong>Proven track record</strong> scaling companies (£1M to £10M+ ARR, reducing CAC, building teams from scratch)</div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600 font-bold mt-1">•</span>
+                  <span className="text-blue-600 font-bold mt-1">•</span>
                   <div><strong>Strategic mindset</strong> — can set direction, not just execute tactics</div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600 font-bold mt-1">•</span>
+                  <span className="text-blue-600 font-bold mt-1">•</span>
                   <div><strong>Team leadership experience</strong> — hired 5-10+ marketers, managed teams of 3-15</div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600 font-bold mt-1">•</span>
+                  <span className="text-blue-600 font-bold mt-1">•</span>
                   <div><strong>Strong network</strong> in startup/scale-up ecosystem for first clients</div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600 font-bold mt-1">•</span>
+                  <span className="text-blue-600 font-bold mt-1">•</span>
                   <div><strong>Self-motivated</strong> and comfortable with ambiguity and hustle</div>
                 </li>
               </ul>

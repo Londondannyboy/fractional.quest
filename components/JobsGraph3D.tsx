@@ -405,7 +405,7 @@ export function JobsGraph3D({
               <div className="font-mono text-[10px] space-y-1">
                 <div className="flex justify-between">
                   <span className="text-gray-500">Position:</span>
-                  <span className="text-emerald-400">{cameraInfo.x}, {cameraInfo.y}, {cameraInfo.z}</span>
+                  <span className="text-blue-400">{cameraInfo.x}, {cameraInfo.y}, {cameraInfo.z}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-500">Distance:</span>
@@ -434,7 +434,7 @@ export function JobsGraph3D({
               <span className="text-slate-300">Jobs</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <div className="w-2 h-2 rounded-full bg-emerald-500" />
+              <div className="w-2 h-2 rounded-full bg-blue-950/200" />
               <span className="text-slate-400">Skills</span>
             </div>
           </div>

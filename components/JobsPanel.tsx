@@ -174,7 +174,7 @@ function JobCard({ job, onClick }: { job: Job; onClick?: () => void }) {
           {job.location}
         </span>
         {job.isRemote && (
-          <span className="text-green-600">Remote</span>
+          <span className="text-blue-600">Remote</span>
         )}
       </div>
 

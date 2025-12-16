@@ -284,7 +284,7 @@ export default function ChatPage() {
             </p>
           )}
           {isAuthenticated && (
-            <p className="text-xs text-green-600 font-medium">
+            <p className="text-xs text-blue-600 font-medium">
               Unlimited messages
             </p>
           )}

@@ -225,7 +225,7 @@ export default function FractionalCmoSalaryPage() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Related Salary Guides</h2>
           <div className="flex flex-wrap gap-4">
-            <Link href="/fractional-cfo-salary" className="px-4 py-2 bg-white rounded-lg border hover:border-emerald-300">Fractional CFO Salary →</Link>
+            <Link href="/fractional-cfo-salary" className="px-4 py-2 bg-white rounded-lg border hover:border-blue-700">Fractional CFO Salary →</Link>
             <Link href="/fractional-jobs-london" className="px-4 py-2 bg-white rounded-lg border hover:border-purple-300">London CMO Jobs →</Link>
             <Link href="/part-time-cmo" className="px-4 py-2 bg-white rounded-lg border hover:border-purple-300">Part-Time CMO Guide →</Link>
           </div>

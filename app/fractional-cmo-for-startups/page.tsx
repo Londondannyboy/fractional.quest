@@ -217,7 +217,7 @@ export default function FractionalCMOForStartupsPage() {
                 <div className="flex-1">
                   <div className="flex items-center gap-4 mb-2">
                     <h3 className="text-3xl font-black text-gray-900">Post-Seed / Early Series A</h3>
-                    <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">Perfect Timing</span>
+                    <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-bold">Perfect Timing</span>
                   </div>
                   <div className="text-gray-600 mb-4">£500k-£3M ARR | PMF Proven | 10-30 employees</div>
                 </div>
@@ -264,7 +264,7 @@ export default function FractionalCMOForStartupsPage() {
                 <div className="flex-1">
                   <div className="flex items-center gap-4 mb-2">
                     <h3 className="text-3xl font-black text-gray-900">Series A / B</h3>
-                    <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">Still Makes Sense</span>
+                    <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-bold">Still Makes Sense</span>
                   </div>
                   <div className="text-gray-600 mb-4">£3M-£10M ARR | Scaling Fast | 30-100 employees</div>
                 </div>

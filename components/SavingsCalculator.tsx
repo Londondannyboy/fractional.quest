@@ -143,25 +143,25 @@ export function SavingsCalculator() {
           </div>
 
           {/* Fractional Cost */}
-          <div className="bg-green-500/20 rounded-xl p-4">
+          <div className="bg-blue-500/20 rounded-xl p-4">
             <div className="flex justify-between items-center">
               <div>
                 <div className="text-sm text-purple-200">Fractional {ROLE_DEFAULTS[role].label}</div>
                 <div className="text-xs text-purple-300">({hoursNeeded} hrs/week × 48 weeks)</div>
               </div>
-              <div className="text-2xl font-bold text-green-300">
+              <div className="text-2xl font-bold text-blue-300">
                 {formatCurrency(fractionalAnnualCost)}
               </div>
             </div>
           </div>
 
           {/* Savings */}
-          <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl p-5 text-center mt-6">
-            <div className="text-xs sm:text-sm font-medium text-green-100 mb-1">Your Annual Savings</div>
+          <div className="bg-gradient-to-r from-green-500 to-blue-950/200 rounded-xl p-5 text-center mt-6">
+            <div className="text-xs sm:text-sm font-medium text-blue-100 mb-1">Your Annual Savings</div>
             <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-1 break-words">
               {formatCurrency(savings)}
             </div>
-            <div className="text-sm sm:text-base lg:text-lg font-semibold text-green-100 break-words">
+            <div className="text-sm sm:text-base lg:text-lg font-semibold text-blue-100 break-words">
               That's {savingsPercent}% less than full-time
             </div>
           </div>

@@ -34,7 +34,7 @@ const calculators = [
     subtitle: 'Career Planning',
     description: 'Plan your fractional portfolio career. Calculate how many clients you need, optimize your schedule, and assess concentration risk.',
     icon: '📊',
-    color: 'from-emerald-500 to-teal-600',
+    color: 'from-blue-950/200 to-teal-600',
     features: ['Client number planning', 'Weekly allocation', 'Risk assessment', 'Income optimization']
   },
   {

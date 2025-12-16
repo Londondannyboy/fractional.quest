@@ -76,7 +76,7 @@ export function JobsGraph({ roleFilter, limit = 20 }: JobsGraphProps) {
       <div className="bg-white rounded-xl border border-gray-200 p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Jobs Knowledge Graph</h3>
         <div className="flex items-center justify-center h-64">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600" />
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600" />
         </div>
       </div>
     )
@@ -105,7 +105,7 @@ export function JobsGraph({ roleFilter, limit = 20 }: JobsGraphProps) {
         {stats && (
           <div className="flex gap-4 text-sm">
             <div className="text-center">
-              <span className="font-semibold text-green-600">{stats.totalJobs}</span>
+              <span className="font-semibold text-blue-600">{stats.totalJobs}</span>
               <p className="text-gray-600 text-xs">Jobs</p>
             </div>
             <div className="text-center">

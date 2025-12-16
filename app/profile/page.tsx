@@ -283,7 +283,7 @@ export default function ProfilePage() {
               {data?.qualifications && data.qualifications.length > 0 ? (
                 <div className="space-y-3">
                   {data.qualifications.map((qual) => (
-                    <div key={qual.id} className="border-l-2 border-green-300 pl-4">
+                    <div key={qual.id} className="border-l-2 border-blue-300 pl-4">
                       <p className="font-medium text-gray-900">{qual.qualification_name}</p>
                       {qual.institution && <p className="text-gray-600">{qual.institution}</p>}
                       {qual.year_obtained && <p className="text-gray-600 text-sm">{qual.year_obtained}</p>}
@@ -296,7 +296,7 @@ export default function ProfilePage() {
             </div>
 
             {/* Debug JSON */}
-            <details className="bg-gray-900 rounded-xl p-4 text-green-400 font-mono text-xs">
+            <details className="bg-gray-900 rounded-xl p-4 text-blue-400 font-mono text-xs">
               <summary className="cursor-pointer text-yellow-400">Raw JSON Data</summary>
               <pre className="mt-4 overflow-auto max-h-96">
                 {JSON.stringify(data, null, 2)}

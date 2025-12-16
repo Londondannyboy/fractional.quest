@@ -81,7 +81,7 @@ export default function FractionalCFOCostPage() {
                 <div className="text-white/60 text-sm uppercase tracking-wider">Monthly Cost</div>
               </div>
               <div>
-                <div className="text-4xl md:text-5xl font-black text-emerald-400">Save 50-70%</div>
+                <div className="text-4xl md:text-5xl font-black text-blue-400">Save 50-70%</div>
                 <div className="text-white/60 text-sm uppercase tracking-wider">vs Full-Time</div>
               </div>
               <div>
@@ -101,7 +101,7 @@ export default function FractionalCFOCostPage() {
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">How Much Does a Fractional CFO Cost?</h2>
           </div>
 
-          <div className="bg-emerald-50 border-l-4 border-emerald-600 p-8 mb-12">
+          <div className="bg-blue-950/20 border-l-4 border-blue-600 p-8 mb-12">
             <p className="text-2xl md:text-3xl font-light text-gray-900 leading-relaxed mb-0">
               UK fractional CFOs cost <strong className="font-bold">£3,000-£10,000 per month</strong> or <strong>£36,000-£120,000 annually</strong>, depending on days worked (1-3 days/week) and seniority. This is <strong>45-70% cheaper</strong> than a full-time CFO at £150,000-£250,000+ per year when including salary, bonus, benefits, and equity.
             </p>
@@ -161,7 +161,7 @@ export default function FractionalCFOCostPage() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-10">
-              Let's compare the TRUE all-in cost of fractional vs full-time, including hidden expenses most companies forget. According to <a href="https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2024-to-2025" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">HMRC guidance</a>, employer costs extend well beyond salary:
+              Let's compare the TRUE all-in cost of fractional vs full-time, including hidden expenses most companies forget. According to <a href="https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2024-to-2025" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">HMRC guidance</a>, employer costs extend well beyond salary:
             </p>
 
             <div className="bg-white p-8 border-2 border-gray-900 mb-10">
@@ -178,7 +178,7 @@ export default function FractionalCFOCostPage() {
                 </div>
                 <div className="flex justify-between items-center pb-3 border-b">
                   <span>Annual cost (52 weeks)</span>
-                  <span className="font-bold text-emerald-600">£109,200/year</span>
+                  <span className="font-bold text-blue-600">£109,200/year</span>
                 </div>
                 <div className="flex justify-between items-center pb-3 border-b">
                   <span>Benefits / National Insurance</span>
@@ -200,9 +200,9 @@ export default function FractionalCFOCostPage() {
                   <span>Notice period risk</span>
                   <span className="font-bold">30 days (vs 3-6 months)</span>
                 </div>
-                <div className="flex justify-between items-center pt-4 bg-emerald-50 px-4 py-3">
+                <div className="flex justify-between items-center pt-4 bg-blue-950/20 px-4 py-3">
                   <span className="font-bold text-lg">TOTAL ANNUAL COST</span>
-                  <span className="font-bold text-2xl text-emerald-600">£109,200</span>
+                  <span className="font-bold text-2xl text-blue-600">£109,200</span>
                 </div>
               </div>
             </div>
@@ -255,7 +255,7 @@ export default function FractionalCFOCostPage() {
             </div>
 
             <div className="bg-gray-900 text-white p-10 text-center">
-              <div className="text-5xl md:text-6xl font-black mb-4 text-emerald-400">Save £155,140</div>
+              <div className="text-5xl md:text-6xl font-black mb-4 text-blue-400">Save £155,140</div>
               <div className="text-2xl mb-6">That's 59% cost reduction with fractional CFO</div>
               <div className="text-gray-300">For 2 days/week fractional vs full-time CFO</div>
             </div>
@@ -293,14 +293,14 @@ export default function FractionalCFOCostPage() {
                   <td className="p-4">£73k-£99k/year</td>
                   <td className="p-4">£109k-£148k/year</td>
                 </tr>
-                <tr className="border-b bg-emerald-50">
+                <tr className="border-b bg-blue-950/20">
                   <td className="p-4">
                     <div className="font-semibold">Mid-Level CFO</div>
                     <div className="text-sm text-gray-600">12-18 years exp</div>
                   </td>
                   <td className="p-4 font-bold">£950-£1,250</td>
                   <td className="p-4">£49k-£65k/year</td>
-                  <td className="p-4 text-emerald-600 font-bold">£99k-£130k/year</td>
+                  <td className="p-4 text-blue-600 font-bold">£99k-£130k/year</td>
                   <td className="p-4">£148k-£195k/year</td>
                 </tr>
                 <tr className="border-b">
@@ -339,7 +339,7 @@ export default function FractionalCFOCostPage() {
             </p>
 
             <div className="grid gap-6 my-10">
-              <div className="bg-white p-8 border-l-4 border-emerald-600">
+              <div className="bg-white p-8 border-l-4 border-blue-600">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">1. No Recruitment Costs</h3>
                 <div className="space-y-2 text-gray-700">
                   <p className="mb-2"><strong>Full-Time CFO Recruitment:</strong></p>
@@ -349,7 +349,7 @@ export default function FractionalCFOCostPage() {
                     <li>• Average time to hire: 4-6 months (opportunity cost)</li>
                     <li>• Bad hire cost if wrong fit: £150k+ wasted</li>
                   </ul>
-                  <p className="mt-4 font-semibold text-emerald-600">Fractional: £0 recruitment fees. Start within 1-2 weeks.</p>
+                  <p className="mt-4 font-semibold text-blue-600">Fractional: £0 recruitment fees. Start within 1-2 weeks.</p>
                 </div>
               </div>
 
@@ -362,16 +362,16 @@ export default function FractionalCFOCostPage() {
                     <li>• Can't scale down if business slows</li>
                     <li>• Redundancy risk if company downsizes</li>
                   </ul>
-                  <p className="mt-4 font-semibold text-emerald-600">Fractional: 30-day notice. Scale from 1 to 3 days/week monthly. No redundancy liability.</p>
+                  <p className="mt-4 font-semibold text-blue-600">Fractional: 30-day notice. Scale from 1 to 3 days/week monthly. No redundancy liability.</p>
                 </div>
               </div>
 
-              <div className="bg-white p-8 border-l-4 border-emerald-600">
+              <div className="bg-white p-8 border-l-4 border-blue-600">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">3. More Experienced Talent</h3>
                 <div className="space-y-2 text-gray-700">
                   <p className="mb-2"><strong>Experience Paradox:</strong></p>
                   <p className="text-sm">At £150k full-time salary, you get a CFO with 10-15 years experience. For £100k fractional (2 days/week), you get a CFO with 18+ years and multiple prior CFO roles. Better talent, lower cost.</p>
-                  <p className="mt-4 font-semibold text-emerald-600">Fractional CFOs are typically more senior because they've "graduated" to fractional after successful full-time CFO careers.</p>
+                  <p className="mt-4 font-semibold text-blue-600">Fractional CFOs are typically more senior because they've "graduated" to fractional after successful full-time CFO careers.</p>
                 </div>
               </div>
 
@@ -384,16 +384,16 @@ export default function FractionalCFOCostPage() {
                     <li>• At £10M valuation: £50k-£200k value</li>
                     <li>• At exit (£50M): £250k-£1M dilution</li>
                   </ul>
-                  <p className="mt-4 font-semibold text-emerald-600">Fractional: Rarely ask for equity. Cash-only compensation.</p>
+                  <p className="mt-4 font-semibold text-blue-600">Fractional: Rarely ask for equity. Cash-only compensation.</p>
                 </div>
               </div>
 
-              <div className="bg-white p-8 border-l-4 border-emerald-600">
+              <div className="bg-white p-8 border-l-4 border-blue-600">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">5. Faster Value Realization</h3>
                 <div className="space-y-2 text-gray-700">
                   <p className="mb-2"><strong>Full-Time CFO Ramp Time:</strong></p>
                   <p className="text-sm">4-6 months to hire + 3-6 months to ramp = 7-12 months before delivering value. That's £87k-£150k in salary before they're fully productive.</p>
-                  <p className="mt-4 font-semibold text-emerald-600">Fractional: Productive from week 1. Hit the ground running with immediate impact.</p>
+                  <p className="mt-4 font-semibold text-blue-600">Fractional: Productive from week 1. Hit the ground running with immediate impact.</p>
                 </div>
               </div>
             </div>
@@ -431,7 +431,7 @@ export default function FractionalCFOCostPage() {
                 <p><strong className="text-white">Cost:</strong> £40,000 (6-month engagement, 2 days/week)</p>
                 <p><strong className="text-white">Value Delivered:</strong> Built investor model, managed due diligence, supported Series A pitch</p>
                 <p><strong className="text-white">Outcome:</strong> Raised £5M Series A at £25M valuation (vs potential £3M at £18M without CFO)</p>
-                <p className="text-emerald-400 font-bold text-xl">ROI: 125x (£2M additional capital raised + £7M valuation increase)</p>
+                <p className="text-blue-400 font-bold text-xl">ROI: 125x (£2M additional capital raised + £7M valuation increase)</p>
               </div>
             </div>
 
@@ -441,7 +441,7 @@ export default function FractionalCFOCostPage() {
                 <p><strong>Cost:</strong> £54,600 (12-month engagement, 1 day/week)</p>
                 <p><strong>Value Delivered:</strong> Implemented 13-week cash forecasting, renegotiated payment terms, optimized inventory</p>
                 <p><strong>Outcome:</strong> Extended runway from 8 to 18 months (avoided emergency fundraise at terrible terms), freed £200k working capital</p>
-                <p className="text-emerald-600 font-bold text-xl">ROI: 5.7x (£200k cash freed + avoided £100k dilution from emergency round)</p>
+                <p className="text-blue-600 font-bold text-xl">ROI: 5.7x (£200k cash freed + avoided £100k dilution from emergency round)</p>
               </div>
             </div>
 
@@ -451,7 +451,7 @@ export default function FractionalCFOCostPage() {
                 <p><strong>Cost:</strong> £30,000 (fixed fee, 3-month project)</p>
                 <p><strong>Value Delivered:</strong> Led buy-side due diligence on acquisition target</p>
                 <p><strong>Outcome:</strong> Identified £500k working capital hole and £300k revenue overstatement. Renegotiated price from £2M to £1.4M</p>
-                <p className="text-emerald-600 font-bold text-xl">ROI: 28x (£600k purchase price reduction + avoided £500k surprise cash call)</p>
+                <p className="text-blue-600 font-bold text-xl">ROI: 28x (£600k purchase price reduction + avoided £500k surprise cash call)</p>
               </div>
             </div>
           </div>

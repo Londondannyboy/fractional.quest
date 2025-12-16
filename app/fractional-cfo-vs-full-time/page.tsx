@@ -76,13 +76,13 @@ export default function FractionalVsFullTimeCFOPage() {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50/30 to-slate-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-950/20/30 to-slate-50">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <nav className="mb-8 flex items-center gap-2 text-sm text-slate-600">
-            <Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/fractional-cfo" className="hover:text-emerald-600 transition-colors">Fractional CFO</Link>
+            <Link href="/fractional-cfo" className="hover:text-blue-600 transition-colors">Fractional CFO</Link>
             <span>/</span>
             <span className="text-slate-900">Fractional vs Full-Time</span>
           </nav>
@@ -105,7 +105,7 @@ export default function FractionalVsFullTimeCFOPage() {
                 <thead>
                   <tr className="border-b-2 border-slate-200">
                     <th className="pb-3 pr-4 text-left font-semibold text-slate-900">Factor</th>
-                    <th className="pb-3 px-4 text-left font-semibold text-emerald-600">Fractional CFO</th>
+                    <th className="pb-3 px-4 text-left font-semibold text-blue-600">Fractional CFO</th>
                     <th className="pb-3 pl-4 text-left font-semibold text-blue-600">Full-Time CFO</th>
                   </tr>
                 </thead>
@@ -220,17 +220,17 @@ export default function FractionalVsFullTimeCFOPage() {
                 </div>
                 <div className="flex justify-between pt-3 text-lg font-bold text-slate-900">
                   <span>Total Annual Cost</span>
-                  <span className="text-emerald-600">£115,200</span>
+                  <span className="text-blue-600">£115,200</span>
                 </div>
               </div>
             </div>
 
-            <div className="not-prose rounded-xl bg-emerald-50 p-6">
-              <p className="text-lg font-semibold text-emerald-900">
+            <div className="not-prose rounded-xl bg-blue-950/20 p-6">
+              <p className="text-lg font-semibold text-blue-900">
                 Annual Savings: £187,640 (62% cost reduction)
               </p>
-              <p className="mt-2 text-sm text-emerald-700">
-                This saving can fund additional finance team members, systems, or be reinvested in growth initiatives. Learn more about <Link href="/fractional-cfo-cost" className="underline hover:text-emerald-900">fractional CFO costs</Link>.
+              <p className="mt-2 text-sm text-blue-700">
+                This saving can fund additional finance team members, systems, or be reinvested in growth initiatives. Learn more about <Link href="/fractional-cfo-cost" className="underline hover:text-blue-900">fractional CFO costs</Link>.
               </p>
             </div>
           </section>
@@ -240,35 +240,35 @@ export default function FractionalVsFullTimeCFOPage() {
             <h2 className="text-3xl font-bold text-slate-900">When to Choose Fractional vs Full-Time</h2>
 
             <div className="not-prose mb-8 grid gap-6 md:grid-cols-2">
-              <div className="rounded-xl bg-emerald-50 p-6 ring-1 ring-emerald-100">
-                <h3 className="mb-4 text-xl font-bold text-emerald-900">Choose Fractional CFO When:</h3>
+              <div className="rounded-xl bg-blue-950/20 p-6 ring-1 ring-blue-900/30">
+                <h3 className="mb-4 text-xl font-bold text-blue-900">Choose Fractional CFO When:</h3>
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 text-emerald-600">✓</span>
+                    <span className="mt-1 text-blue-600">✓</span>
                     <span>Revenue is £1M-£50M annually</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 text-emerald-600">✓</span>
+                    <span className="mt-1 text-blue-600">✓</span>
                     <span>You need strategic finance 1-3 days per week</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 text-emerald-600">✓</span>
+                    <span className="mt-1 text-blue-600">✓</span>
                     <span>Budget is limited (under £150K for CFO)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 text-emerald-600">✓</span>
+                    <span className="mt-1 text-blue-600">✓</span>
                     <span>You're in growth phase but not yet scaled</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 text-emerald-600">✓</span>
+                    <span className="mt-1 text-blue-600">✓</span>
                     <span>Need expertise for specific projects (fundraising, M&A)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 text-emerald-600">✓</span>
+                    <span className="mt-1 text-blue-600">✓</span>
                     <span>Want to test CFO capability before full-time hire</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 text-emerald-600">✓</span>
+                    <span className="mt-1 text-blue-600">✓</span>
                     <span>Require flexibility to scale up/down quickly</span>
                   </li>
                 </ul>
@@ -314,7 +314,7 @@ export default function FractionalVsFullTimeCFOPage() {
           <section className="prose prose-slate mb-12 max-w-none">
             <h2 className="text-3xl font-bold text-slate-900">Benefits & Drawbacks Comparison</h2>
 
-            <h3 className="text-2xl font-bold text-emerald-900">Fractional CFO Benefits</h3>
+            <h3 className="text-2xl font-bold text-blue-900">Fractional CFO Benefits</h3>
             <ul className="text-slate-700">
               <li><strong>Cost efficiency:</strong> 60-80% lower cost than full-time for same expertise level</li>
               <li><strong>Diverse experience:</strong> Cross-industry insights from working with multiple clients</li>
@@ -365,7 +365,7 @@ export default function FractionalVsFullTimeCFOPage() {
             <div className="not-prose mb-6 space-y-4">
               <div className="rounded-lg bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
                 <div className="mb-2 flex items-center gap-3">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-sm font-bold text-emerald-700">1</span>
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-900/30 text-sm font-bold text-blue-700">1</span>
                   <h3 className="font-bold text-slate-900">Start Fractional (£1M-£10M revenue)</h3>
                 </div>
                 <p className="ml-11 text-slate-600">
@@ -375,7 +375,7 @@ export default function FractionalVsFullTimeCFOPage() {
 
               <div className="rounded-lg bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
                 <div className="mb-2 flex items-center gap-3">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-sm font-bold text-emerald-700">2</span>
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-900/30 text-sm font-bold text-blue-700">2</span>
                   <h3 className="font-bold text-slate-900">Scale Fractional Time (£10M-£30M revenue)</h3>
                 </div>
                 <p className="ml-11 text-slate-600">
@@ -385,7 +385,7 @@ export default function FractionalVsFullTimeCFOPage() {
 
               <div className="rounded-lg bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
                 <div className="mb-2 flex items-center gap-3">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-sm font-bold text-emerald-700">3</span>
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-900/30 text-sm font-bold text-blue-700">3</span>
                   <h3 className="font-bold text-slate-900">Evaluate Full-Time Need (£30M-£50M revenue)</h3>
                 </div>
                 <p className="ml-11 text-slate-600">
@@ -420,7 +420,7 @@ export default function FractionalVsFullTimeCFOPage() {
               <h3 className="mb-4 text-xl font-bold text-slate-900">Hybrid Structure Example</h3>
               <div className="space-y-4">
                 <div className="rounded-lg bg-white p-4">
-                  <div className="mb-2 font-bold text-emerald-700">Fractional CFO (2 days/week) - £115K/year</div>
+                  <div className="mb-2 font-bold text-blue-700">Fractional CFO (2 days/week) - £115K/year</div>
                   <p className="text-sm text-slate-600">
                     Strategic leadership, board reporting, investor relations, major projects, team mentoring
                   </p>
@@ -432,8 +432,8 @@ export default function FractionalVsFullTimeCFOPage() {
                     Day-to-day operations, team management, process execution, management reporting
                   </p>
                 </div>
-                <div className="mt-4 rounded-lg bg-emerald-50 p-4">
-                  <div className="font-bold text-emerald-900">Total Cost: £195K/year</div>
+                <div className="mt-4 rounded-lg bg-blue-950/20 p-4">
+                  <div className="font-bold text-blue-900">Total Cost: £195K/year</div>
                   <p className="mt-2 text-sm text-slate-700">
                     vs £270K+ for full-time CFO alone. Provides strategic CFO expertise PLUS daily operational coverage - better capability at lower cost.
                   </p>
@@ -453,9 +453,9 @@ export default function FractionalVsFullTimeCFOPage() {
               <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
                 <h3 className="mb-3 text-lg font-bold text-slate-900">1. What is your current revenue and growth trajectory?</h3>
                 <ul className="ml-6 space-y-2 text-slate-700">
-                  <li className="flex gap-2"><span className="text-emerald-600">→</span> <span><strong>Under £10M:</strong> Fractional CFO (1-2 days/week)</span></li>
-                  <li className="flex gap-2"><span className="text-emerald-600">→</span> <span><strong>£10M-£30M:</strong> Fractional CFO (2-3 days/week)</span></li>
-                  <li className="flex gap-2"><span className="text-emerald-600">→</span> <span><strong>£30M-£50M:</strong> Senior Fractional CFO (3-4 days/week) or evaluate full-time</span></li>
+                  <li className="flex gap-2"><span className="text-blue-600">→</span> <span><strong>Under £10M:</strong> Fractional CFO (1-2 days/week)</span></li>
+                  <li className="flex gap-2"><span className="text-blue-600">→</span> <span><strong>£10M-£30M:</strong> Fractional CFO (2-3 days/week)</span></li>
+                  <li className="flex gap-2"><span className="text-blue-600">→</span> <span><strong>£30M-£50M:</strong> Senior Fractional CFO (3-4 days/week) or evaluate full-time</span></li>
                   <li className="flex gap-2"><span className="text-blue-600">→</span> <span><strong>£50M+:</strong> Full-time CFO</span></li>
                 </ul>
               </div>
@@ -463,7 +463,7 @@ export default function FractionalVsFullTimeCFOPage() {
               <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
                 <h3 className="mb-3 text-lg font-bold text-slate-900">2. How often do you need strategic financial leadership input?</h3>
                 <ul className="ml-6 space-y-2 text-slate-700">
-                  <li className="flex gap-2"><span className="text-emerald-600">→</span> <span><strong>Weekly strategic reviews sufficient:</strong> Fractional CFO</span></li>
+                  <li className="flex gap-2"><span className="text-blue-600">→</span> <span><strong>Weekly strategic reviews sufficient:</strong> Fractional CFO</span></li>
                   <li className="flex gap-2"><span className="text-blue-600">→</span> <span><strong>Daily strategic decisions required:</strong> Full-time CFO</span></li>
                 </ul>
               </div>
@@ -471,7 +471,7 @@ export default function FractionalVsFullTimeCFOPage() {
               <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
                 <h3 className="mb-3 text-lg font-bold text-slate-900">3. What is your budget for CFO-level expertise?</h3>
                 <ul className="ml-6 space-y-2 text-slate-700">
-                  <li className="flex gap-2"><span className="text-emerald-600">→</span> <span><strong>£30K-£150K annually:</strong> Fractional CFO (scalable by days/week)</span></li>
+                  <li className="flex gap-2"><span className="text-blue-600">→</span> <span><strong>£30K-£150K annually:</strong> Fractional CFO (scalable by days/week)</span></li>
                   <li className="flex gap-2"><span className="text-blue-600">→</span> <span><strong>£150K-£300K+ annually:</strong> Full-time CFO</span></li>
                 </ul>
               </div>
@@ -479,7 +479,7 @@ export default function FractionalVsFullTimeCFOPage() {
               <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
                 <h3 className="mb-3 text-lg font-bold text-slate-900">4. What is your immediate strategic priority?</h3>
                 <ul className="ml-6 space-y-2 text-slate-700">
-                  <li className="flex gap-2"><span className="text-emerald-600">→</span> <span><strong>Specific project:</strong> Fractional CFO with relevant experience (fundraising, M&A, IPO prep, system implementation)</span></li>
+                  <li className="flex gap-2"><span className="text-blue-600">→</span> <span><strong>Specific project:</strong> Fractional CFO with relevant experience (fundraising, M&A, IPO prep, system implementation)</span></li>
                   <li className="flex gap-2"><span className="text-blue-600">→</span> <span><strong>Ongoing transformation:</strong> Full-time CFO for continuous leadership</span></li>
                 </ul>
               </div>
@@ -487,7 +487,7 @@ export default function FractionalVsFullTimeCFOPage() {
               <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
                 <h3 className="mb-3 text-lg font-bold text-slate-900">5. How quickly do you need to fill the role?</h3>
                 <ul className="ml-6 space-y-2 text-slate-700">
-                  <li className="flex gap-2"><span className="text-emerald-600">→</span> <span><strong>Within 4 weeks:</strong> Fractional CFO (fast deployment)</span></li>
+                  <li className="flex gap-2"><span className="text-blue-600">→</span> <span><strong>Within 4 weeks:</strong> Fractional CFO (fast deployment)</span></li>
                   <li className="flex gap-2"><span className="text-blue-600">→</span> <span><strong>Can wait 3-6 months:</strong> Full-time CFO recruitment</span></li>
                 </ul>
               </div>
@@ -499,8 +499,8 @@ export default function FractionalVsFullTimeCFOPage() {
             <h2 className="text-3xl font-bold text-slate-900">Real-World Scenarios</h2>
 
             <div className="not-prose space-y-6">
-              <div className="rounded-xl bg-emerald-50 p-6 ring-1 ring-emerald-100">
-                <h3 className="mb-2 text-lg font-bold text-emerald-900">Scenario: Fast-Growing SaaS Startup - £8M ARR</h3>
+              <div className="rounded-xl bg-blue-950/20 p-6 ring-1 ring-blue-900/30">
+                <h3 className="mb-2 text-lg font-bold text-blue-900">Scenario: Fast-Growing SaaS Startup - £8M ARR</h3>
                 <p className="mb-3 text-slate-700"><strong>Challenge:</strong> Raising Series B (£20M round), need investor-ready financials and 3-year forecast model</p>
                 <p className="mb-3 text-slate-700"><strong>Solution:</strong> Fractional CFO (3 days/week for 6 months, then 2 days/week ongoing)</p>
                 <p className="text-slate-700"><strong>Outcome:</strong> Completed fundraise successfully, established board reporting, built finance team (hired FC and FP&A analyst). Saved £120K vs full-time while getting specialized fundraising expertise.</p>
@@ -513,8 +513,8 @@ export default function FractionalVsFullTimeCFOPage() {
                 <p className="text-slate-700"><strong>Outcome:</strong> Daily operational oversight, implemented ERP across 4 sites, led 3 bolt-on acquisitions, delivered 2.8x exit multiple. Required full-time presence for integration complexity and PE relationship management.</p>
               </div>
 
-              <div className="rounded-xl bg-emerald-50 p-6 ring-1 ring-emerald-100">
-                <h3 className="mb-2 text-lg font-bold text-emerald-900">Scenario: Professional Services Firm - £15M Revenue</h3>
+              <div className="rounded-xl bg-blue-950/20 p-6 ring-1 ring-blue-900/30">
+                <h3 className="mb-2 text-lg font-bold text-blue-900">Scenario: Professional Services Firm - £15M Revenue</h3>
                 <p className="mb-3 text-slate-700"><strong>Challenge:</strong> Managing cash flow across 40 projects, partner reporting, tax planning</p>
                 <p className="mb-3 text-slate-700"><strong>Solution:</strong> Fractional CFO (2 days/week) + full-time Financial Controller (hybrid model)</p>
                 <p className="text-slate-700"><strong>Outcome:</strong> CFO handles strategic planning and partner relations, FC manages daily operations. Total cost £195K vs £270K+ for CFO alone, with better operational coverage.</p>
@@ -523,21 +523,21 @@ export default function FractionalVsFullTimeCFOPage() {
           </section>
 
           {/* CTA Section */}
-          <div className="mb-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 p-8 text-white shadow-lg">
+          <div className="mb-12 rounded-xl bg-gradient-to-br from-blue-950/200 to-blue-600 p-8 text-white shadow-lg">
             <h2 className="mb-4 text-2xl font-bold">Ready to Find Your CFO Solution?</h2>
-            <p className="mb-6 text-emerald-50">
+            <p className="mb-6 text-blue-950/20">
               Whether you need fractional or full-time CFO expertise, Fractional Quest connects you with experienced financial leaders matched to your business stage and needs.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/fractional-cfo"
-                className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-emerald-600 transition-all hover:bg-emerald-50"
+                className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-blue-600 transition-all hover:bg-blue-950/20"
               >
                 Explore Fractional CFO Options
               </Link>
               <Link
                 href="/fractional-cfo-cost"
-                className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-emerald-700"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-blue-700"
               >
                 Calculate Your CFO Costs
               </Link>
@@ -552,19 +552,19 @@ export default function FractionalVsFullTimeCFOPage() {
             <h2 className="mb-6 text-2xl font-bold text-slate-900">Related Resources</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               <Link href="/what-is-fractional-cfo" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">What is a Fractional CFO?</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">What is a Fractional CFO?</h3>
                 <p className="mt-1 text-sm text-slate-600">Complete guide to fractional CFO roles and responsibilities</p>
               </Link>
               <Link href="/fractional-cfo-cost" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Fractional CFO Cost Guide</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Fractional CFO Cost Guide</h3>
                 <p className="mt-1 text-sm text-slate-600">Detailed cost breakdowns and ROI analysis</p>
               </Link>
               <Link href="/fractional-cfo-hourly-rate" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Fractional CFO Hourly Rates</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Fractional CFO Hourly Rates</h3>
                 <p className="mt-1 text-sm text-slate-600">2025 rate benchmarks by experience and location</p>
               </Link>
               <Link href="/fractional-cfo-for-startups" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Fractional CFO for Startups</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Fractional CFO for Startups</h3>
                 <p className="mt-1 text-sm text-slate-600">When and how startups should engage fractional CFOs</p>
               </Link>
             </div>

@@ -60,7 +60,7 @@ export default function TestGraphSplitPage() {
           <span className="text-gray-300">Jobs</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-emerald-500" />
+          <div className="w-2 h-2 rounded-full bg-blue-950/200" />
           <span className="text-gray-400">Skills</span>
         </div>
         <span className="text-gray-400 border-l border-gray-600 pl-4">Click nodes to explore</span>

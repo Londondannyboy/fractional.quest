@@ -81,7 +81,7 @@ export default function FractionalCFONearMePage() {
                   <div className="text-white/60 text-sm uppercase tracking-wider">Monthly Searches</div>
                 </div>
                 <div>
-                  <div className="text-4xl md:text-5xl font-black text-emerald-400">+586%</div>
+                  <div className="text-4xl md:text-5xl font-black text-blue-400">+586%</div>
                   <div className="text-white/60 text-sm uppercase tracking-wider">YoY Growth</div>
                 </div>
                 <div>
@@ -153,7 +153,7 @@ export default function FractionalCFONearMePage() {
               </div>
             </div>
 
-            <div className="bg-emerald-50 border-l-4 border-emerald-600 p-6 my-10">
+            <div className="bg-blue-950/20 border-l-4 border-blue-600 p-6 my-10">
               <p className="text-lg font-semibold text-gray-900 mb-2">Hybrid Model is Best Practice</p>
               <p className="text-gray-700 mb-0">Most successful fractional CFO engagements use a hybrid approach: <strong>1 day/week onsite</strong> for high-value in-person work (board meetings, team interactions, investor meetings) + <strong>1-2 days/week remote</strong> for focused work (modeling, reporting, analysis). This balances relationship building with cost-effectiveness.</p>
             </div>
@@ -179,12 +179,12 @@ export default function FractionalCFONearMePage() {
                 <p className="text-sm"><strong>Active CFOs:</strong> 200+ professionals</p>
               </div>
               <p className="text-gray-600 text-sm mb-4">Largest market for fractional CFOs. Strong VC ecosystem, high concentration of scale-ups and startups.</p>
-              <Link href="/fractional-cfo-jobs-uk?location=London" className="text-sm font-bold uppercase tracking-wider text-gray-900 hover:text-emerald-600">
+              <Link href="/fractional-cfo-jobs-uk?location=London" className="text-sm font-bold uppercase tracking-wider text-gray-900 hover:text-blue-600">
                 View London CFOs →
               </Link>
             </div>
 
-            <div className="bg-white p-8 border-l-4 border-emerald-600">
+            <div className="bg-white p-8 border-l-4 border-blue-600">
               <h3 className="text-2xl font-black text-gray-900 mb-3">Manchester</h3>
               <div className="space-y-2 text-gray-700 mb-4">
                 <p className="text-sm"><strong>Avg Day Rate:</strong> £800-£1,200</p>
@@ -192,7 +192,7 @@ export default function FractionalCFONearMePage() {
                 <p className="text-sm"><strong>Active CFOs:</strong> 45+ professionals</p>
               </div>
               <p className="text-gray-600 text-sm mb-4">Growing tech hub. Strong startup scene. Lower cost than London with quality talent.</p>
-              <Link href="/fractional-cfo-jobs-uk?location=Manchester" className="text-sm font-bold uppercase tracking-wider text-gray-900 hover:text-emerald-600">
+              <Link href="/fractional-cfo-jobs-uk?location=Manchester" className="text-sm font-bold uppercase tracking-wider text-gray-900 hover:text-blue-600">
                 View Manchester CFOs →
               </Link>
             </div>
@@ -205,7 +205,7 @@ export default function FractionalCFONearMePage() {
                 <p className="text-sm"><strong>Active CFOs:</strong> 30+ professionals</p>
               </div>
               <p className="text-gray-600 text-sm mb-4">Midlands commercial center. Strong SME market. Diverse industry base.</p>
-              <Link href="/fractional-cfo-jobs-uk?location=Birmingham" className="text-sm font-bold uppercase tracking-wider text-gray-900 hover:text-emerald-600">
+              <Link href="/fractional-cfo-jobs-uk?location=Birmingham" className="text-sm font-bold uppercase tracking-wider text-gray-900 hover:text-blue-600">
                 View Birmingham CFOs →
               </Link>
             </div>
@@ -218,7 +218,7 @@ export default function FractionalCFONearMePage() {
                 <p className="text-sm"><strong>Active CFOs:</strong> 25+ professionals</p>
               </div>
               <p className="text-gray-600 text-sm mb-4">Northern powerhouse. Growing FinTech scene. Strong professional services sector.</p>
-              <Link href="/fractional-cfo-jobs-uk?location=Leeds" className="text-sm font-bold uppercase tracking-wider text-gray-900 hover:text-emerald-600">
+              <Link href="/fractional-cfo-jobs-uk?location=Leeds" className="text-sm font-bold uppercase tracking-wider text-gray-900 hover:text-blue-600">
                 View Leeds CFOs →
               </Link>
             </div>
@@ -231,7 +231,7 @@ export default function FractionalCFONearMePage() {
                 <p className="text-sm"><strong>Active CFOs:</strong> 35+ professionals</p>
               </div>
               <p className="text-gray-600 text-sm mb-4">Scotland's commercial capital. Strong FinTech cluster. Established finance sector.</p>
-              <Link href="/fractional-cfo-jobs-uk?location=Edinburgh" className="text-sm font-bold uppercase tracking-wider text-gray-900 hover:text-emerald-600">
+              <Link href="/fractional-cfo-jobs-uk?location=Edinburgh" className="text-sm font-bold uppercase tracking-wider text-gray-900 hover:text-blue-600">
                 View Edinburgh CFOs →
               </Link>
             </div>
@@ -244,7 +244,7 @@ export default function FractionalCFONearMePage() {
                 <p className="text-sm"><strong>Active CFOs:</strong> 20+ professionals</p>
               </div>
               <p className="text-gray-600 text-sm mb-4">Southwest hub. Growing tech scene. Strong university ecosystem for startups.</p>
-              <Link href="/fractional-cfo-jobs-uk?location=Bristol" className="text-sm font-bold uppercase tracking-wider text-gray-900 hover:text-emerald-600">
+              <Link href="/fractional-cfo-jobs-uk?location=Bristol" className="text-sm font-bold uppercase tracking-wider text-gray-900 hover:text-blue-600">
                 View Bristol CFOs →
               </Link>
             </div>
@@ -257,12 +257,12 @@ export default function FractionalCFONearMePage() {
                 <p className="text-sm"><strong>Active CFOs:</strong> 25+ professionals</p>
               </div>
               <p className="text-gray-600 text-sm mb-4">UK's Silicon Fen. High-tech startups. Strong university spinout ecosystem.</p>
-              <Link href="/fractional-cfo-jobs-uk?location=Cambridge" className="text-sm font-bold uppercase tracking-wider text-gray-900 hover:text-emerald-600">
+              <Link href="/fractional-cfo-jobs-uk?location=Cambridge" className="text-sm font-bold uppercase tracking-wider text-gray-900 hover:text-blue-600">
                 View Cambridge CFOs →
               </Link>
             </div>
 
-            <div className="bg-white p-8 border-l-4 border-emerald-600">
+            <div className="bg-white p-8 border-l-4 border-blue-600">
               <h3 className="text-2xl font-black text-gray-900 mb-3">Remote (UK-Wide)</h3>
               <div className="space-y-2 text-gray-700 mb-4">
                 <p className="text-sm"><strong>Avg Day Rate:</strong> £700-£1,200</p>
@@ -270,7 +270,7 @@ export default function FractionalCFONearMePage() {
                 <p className="text-sm"><strong>Active CFOs:</strong> 150+ professionals</p>
               </div>
               <p className="text-gray-600 text-sm mb-4">Work with top CFOs from anywhere in the UK. Most cost-effective option.</p>
-              <Link href="/fractional-cfo-jobs-remote" className="text-sm font-bold uppercase tracking-wider text-gray-900 hover:text-emerald-600">
+              <Link href="/fractional-cfo-jobs-remote" className="text-sm font-bold uppercase tracking-wider text-gray-900 hover:text-blue-600">
                 View Remote CFOs →
               </Link>
             </div>
@@ -281,7 +281,7 @@ export default function FractionalCFONearMePage() {
                 <p className="text-sm">Glasgow, Newcastle, Liverpool, Cardiff, Oxford, Reading, Nottingham, Sheffield</p>
               </div>
               <p className="text-gray-600 text-sm mb-4">Fractional CFOs available across all major UK cities and regions.</p>
-              <Link href="/fractional-cfo-jobs-uk" className="text-sm font-bold uppercase tracking-wider text-gray-900 hover:text-emerald-600">
+              <Link href="/fractional-cfo-jobs-uk" className="text-sm font-bold uppercase tracking-wider text-gray-900 hover:text-blue-600">
                 Browse All Locations →
               </Link>
             </div>
@@ -311,56 +311,56 @@ export default function FractionalCFONearMePage() {
                 <tr className="border-b">
                   <td className="p-4 font-semibold">Day Rate</td>
                   <td className="p-4">£850-£1,500</td>
-                  <td className="p-4 text-emerald-600">£700-£1,200</td>
+                  <td className="p-4 text-blue-600">£700-£1,200</td>
                   <td className="p-4">£750-£1,300</td>
                 </tr>
                 <tr className="border-b bg-gray-50">
                   <td className="p-4 font-semibold">In-Person Meetings</td>
-                  <td className="p-4 text-emerald-600">Weekly/as needed</td>
+                  <td className="p-4 text-blue-600">Weekly/as needed</td>
                   <td className="p-4">Rare (extra cost)</td>
-                  <td className="p-4 text-emerald-600">1 day/week onsite</td>
+                  <td className="p-4 text-blue-600">1 day/week onsite</td>
                 </tr>
                 <tr className="border-b">
                   <td className="p-4 font-semibold">Travel Time/Cost</td>
-                  <td className="p-4 text-emerald-600">Minimal</td>
-                  <td className="p-4 text-emerald-600">None</td>
+                  <td className="p-4 text-blue-600">Minimal</td>
+                  <td className="p-4 text-blue-600">None</td>
                   <td className="p-4">Moderate</td>
                 </tr>
                 <tr className="border-b bg-gray-50">
                   <td className="p-4 font-semibold">Talent Pool</td>
                   <td className="p-4">Limited to local area</td>
-                  <td className="p-4 text-emerald-600">UK-wide/global</td>
+                  <td className="p-4 text-blue-600">UK-wide/global</td>
                   <td className="p-4">Broader than local</td>
                 </tr>
                 <tr className="border-b">
                   <td className="p-4 font-semibold">Team Integration</td>
-                  <td className="p-4 text-emerald-600">Excellent</td>
+                  <td className="p-4 text-blue-600">Excellent</td>
                   <td className="p-4">Good (video)</td>
-                  <td className="p-4 text-emerald-600">Excellent</td>
+                  <td className="p-4 text-blue-600">Excellent</td>
                 </tr>
                 <tr className="border-b bg-gray-50">
                   <td className="p-4 font-semibold">Response Time (emergencies)</td>
-                  <td className="p-4 text-emerald-600">Same-day onsite</td>
+                  <td className="p-4 text-blue-600">Same-day onsite</td>
                   <td className="p-4">Video call only</td>
                   <td className="p-4">1-2 days onsite</td>
                 </tr>
                 <tr className="border-b">
                   <td className="p-4 font-semibold">Board Presentations</td>
-                  <td className="p-4 text-emerald-600">In-person</td>
+                  <td className="p-4 text-blue-600">In-person</td>
                   <td className="p-4">Virtual</td>
-                  <td className="p-4 text-emerald-600">In-person</td>
+                  <td className="p-4 text-blue-600">In-person</td>
                 </tr>
                 <tr className="border-b bg-gray-50">
                   <td className="p-4 font-semibold">Cost Effectiveness</td>
                   <td className="p-4">Higher rate, less travel</td>
-                  <td className="p-4 text-emerald-600">Lower rate, no travel</td>
-                  <td className="p-4 text-emerald-600">Balanced</td>
+                  <td className="p-4 text-blue-600">Lower rate, no travel</td>
+                  <td className="p-4 text-blue-600">Balanced</td>
                 </tr>
                 <tr className="bg-white">
                   <td className="p-4 font-semibold">Best For</td>
                   <td className="p-4">Board-heavy roles, team leadership</td>
                   <td className="p-4">Model building, reporting, remote companies</td>
-                  <td className="p-4 text-emerald-600 font-bold">Most companies</td>
+                  <td className="p-4 text-blue-600 font-bold">Most companies</td>
                 </tr>
               </tbody>
             </table>
@@ -435,7 +435,7 @@ export default function FractionalCFONearMePage() {
                 </ul>
               </div>
 
-              <div className="bg-white p-8 border-l-4 border-emerald-600">
+              <div className="bg-white p-8 border-l-4 border-blue-600">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-4">2. Source Candidates</h3>
                 <ul className="space-y-2 text-gray-700 list-none pl-0">
                   <li className="flex items-start">
@@ -492,7 +492,7 @@ export default function FractionalCFONearMePage() {
                 </ul>
               </div>
 
-              <div className="bg-white p-8 border-l-4 border-emerald-600">
+              <div className="bg-white p-8 border-l-4 border-blue-600">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-4">4. Assess Cultural Fit</h3>
                 <p className="text-gray-700 mb-4">Interview questions to ask:</p>
                 <ul className="space-y-2 text-gray-700 list-none pl-0">
@@ -542,7 +542,7 @@ export default function FractionalCFONearMePage() {
                 </ul>
               </div>
 
-              <div className="bg-white p-8 border-l-4 border-emerald-600">
+              <div className="bg-white p-8 border-l-4 border-blue-600">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-4">6. Start with a Trial</h3>
                 <p className="text-gray-700 mb-0">Many fractional CFOs offer <strong>30-60 day trial periods</strong> before long-term commitment. This de-risks the engagement and allows both sides to assess fit. Expect to pay full rate during trial but with shorter notice period (1-2 weeks).</p>
               </div>

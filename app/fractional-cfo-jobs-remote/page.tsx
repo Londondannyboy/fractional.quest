@@ -76,20 +76,20 @@ export default function RemoteFractionalCFOJobsPage() {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50/30 to-slate-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-950/20/30 to-slate-50">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <nav className="mb-8 flex items-center gap-2 text-sm text-slate-600">
-            <Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/fractional-cfo" className="hover:text-emerald-600 transition-colors">Fractional CFO</Link>
+            <Link href="/fractional-cfo" className="hover:text-blue-600 transition-colors">Fractional CFO</Link>
             <span>/</span>
             <span className="text-slate-900">Remote Jobs</span>
           </nav>
 
           {/* Header */}
           <header className="mb-12">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-emerald-100 px-4 py-1.5 text-sm font-semibold text-emerald-700">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-blue-900/30 px-4 py-1.5 text-sm font-semibold text-blue-700">
               <span>📈</span>
               <span>+180% YoY Growth</span>
             </div>
@@ -105,8 +105,8 @@ export default function RemoteFractionalCFOJobsPage() {
           <div className="mb-12 rounded-xl bg-white p-8 shadow-sm ring-1 ring-slate-900/5">
             <h2 className="mb-6 text-2xl font-bold text-slate-900">Remote Fractional CFO Market Overview</h2>
             <div className="mb-6 grid gap-6 md:grid-cols-3">
-              <div className="rounded-lg bg-emerald-50 p-4 ring-1 ring-emerald-100">
-                <div className="mb-1 text-3xl font-bold text-emerald-700">85%</div>
+              <div className="rounded-lg bg-blue-950/20 p-4 ring-1 ring-blue-900/30">
+                <div className="mb-1 text-3xl font-bold text-blue-700">85%</div>
                 <div className="text-sm text-slate-700">of fractional CFO roles now offer remote/hybrid options</div>
               </div>
               <div className="rounded-lg bg-blue-50 p-4 ring-1 ring-blue-100">
@@ -138,7 +138,7 @@ export default function RemoteFractionalCFOJobsPage() {
               <div className="rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5">
                 <div className="mb-2 flex items-start justify-between">
                   <h4 className="font-bold text-slate-900">CFO Platform Marketplaces</h4>
-                  <span className="rounded bg-emerald-100 px-2 py-0.5 text-xs font-semibold text-emerald-700">Highly Recommended</span>
+                  <span className="rounded bg-blue-900/30 px-2 py-0.5 text-xs font-semibold text-blue-700">Highly Recommended</span>
                 </div>
                 <p className="mb-2 text-sm text-slate-600">
                   Platforms specifically for fractional finance leaders. Examples include specialized CFO networks, finance talent platforms, and boutique fractional executive services.
@@ -313,14 +313,14 @@ export default function RemoteFractionalCFOJobsPage() {
 
             <h3 className="text-2xl font-bold text-slate-900">Communication Cadence with Clients</h3>
             <div className="not-prose mb-6 space-y-4">
-              <div className="rounded-lg bg-emerald-50 p-6 ring-1 ring-emerald-100">
-                <h4 className="mb-3 font-bold text-emerald-900">Recommended Schedule (2 days/week engagement):</h4>
+              <div className="rounded-lg bg-blue-950/20 p-6 ring-1 ring-blue-900/30">
+                <h4 className="mb-3 font-bold text-blue-900">Recommended Schedule (2 days/week engagement):</h4>
                 <ul className="space-y-2 text-sm text-slate-700">
-                  <li className="flex gap-2"><span className="text-emerald-600">→</span> <span><strong>Weekly:</strong> 60-minute strategic meeting with CEO/founder (video call)</span></li>
-                  <li className="flex gap-2"><span className="text-emerald-600">→</span> <span><strong>Weekly:</strong> 30-minute finance team sync (if applicable)</span></li>
-                  <li className="flex gap-2"><span className="text-emerald-600">→</span> <span><strong>Monthly:</strong> Board/investor reporting and pack review</span></li>
-                  <li className="flex gap-2"><span className="text-emerald-600">→</span> <span><strong>Quarterly:</strong> Strategic planning and forecast review sessions</span></li>
-                  <li className="flex gap-2"><span className="text-emerald-600">→</span> <span><strong>Async:</strong> Slack/Teams for quick questions (set response SLA: 4-hour working hours)</span></li>
+                  <li className="flex gap-2"><span className="text-blue-600">→</span> <span><strong>Weekly:</strong> 60-minute strategic meeting with CEO/founder (video call)</span></li>
+                  <li className="flex gap-2"><span className="text-blue-600">→</span> <span><strong>Weekly:</strong> 30-minute finance team sync (if applicable)</span></li>
+                  <li className="flex gap-2"><span className="text-blue-600">→</span> <span><strong>Monthly:</strong> Board/investor reporting and pack review</span></li>
+                  <li className="flex gap-2"><span className="text-blue-600">→</span> <span><strong>Quarterly:</strong> Strategic planning and forecast review sessions</span></li>
+                  <li className="flex gap-2"><span className="text-blue-600">→</span> <span><strong>Async:</strong> Slack/Teams for quick questions (set response SLA: 4-hour working hours)</span></li>
                 </ul>
                 <p className="mt-4 text-sm text-slate-700">
                   <strong>Pro tip:</strong> Block fixed meeting times (e.g., every Tuesday 10am) to build routine and make scheduling across clients easier.
@@ -417,7 +417,7 @@ export default function RemoteFractionalCFOJobsPage() {
             </div>
 
             <p className="text-sm text-slate-600">
-              Note: Rates assume 48 working weeks (accounting for holidays). See comprehensive rate benchmarks in our <Link href="/fractional-cfo-hourly-rate" className="text-emerald-600 hover:text-emerald-700 underline">CFO hourly rate guide</Link>.
+              Note: Rates assume 48 working weeks (accounting for holidays). See comprehensive rate benchmarks in our <Link href="/fractional-cfo-hourly-rate" className="text-blue-600 hover:text-blue-700 underline">CFO hourly rate guide</Link>.
             </p>
 
             <div className="not-prose mt-6 rounded-xl bg-blue-50 p-6 ring-1 ring-blue-100">
@@ -439,13 +439,13 @@ export default function RemoteFractionalCFOJobsPage() {
             <div className="not-prose mb-6 rounded-lg bg-slate-50 p-6">
               <h4 className="mb-3 font-bold text-slate-900">Factors Strengthening Outside IR35 Status:</h4>
               <ul className="space-y-2 text-sm text-slate-700">
-                <li className="flex gap-2"><span className="text-emerald-600">✓</span> <span>Multiple concurrent clients (3-6 demonstrates genuine business)</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">✓</span> <span>Remote work using your own equipment and workspace</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">✓</span> <span>Control over working methods and deliverables</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">✓</span> <span>Flexibility to use substitutes (though rarely practical for CFO work)</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">✓</span> <span>Fixed-term engagements with clear end dates</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">✓</span> <span>No benefits, pension, or sick pay from clients</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">✓</span> <span>Business liability insurance and professional indemnity cover</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">✓</span> <span>Multiple concurrent clients (3-6 demonstrates genuine business)</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">✓</span> <span>Remote work using your own equipment and workspace</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">✓</span> <span>Control over working methods and deliverables</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">✓</span> <span>Flexibility to use substitutes (though rarely practical for CFO work)</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">✓</span> <span>Fixed-term engagements with clear end dates</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">✓</span> <span>No benefits, pension, or sick pay from clients</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">✓</span> <span>Business liability insurance and professional indemnity cover</span></li>
               </ul>
             </div>
 
@@ -467,7 +467,7 @@ export default function RemoteFractionalCFOJobsPage() {
               <li><strong>VAT:</strong> Register voluntarily or when revenue exceeds £90K (can reclaim VAT on business expenses)</li>
             </ul>
             <p className="text-sm text-slate-600">
-              See detailed guidance from <a href="https://www.gov.uk/guidance/check-employment-status-for-tax" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">HMRC on IR35</a> and always consult an accountant specialized in contractor taxation.
+              See detailed guidance from <a href="https://www.gov.uk/guidance/check-employment-status-for-tax" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">HMRC on IR35</a> and always consult an accountant specialized in contractor taxation.
             </p>
           </section>
 
@@ -479,8 +479,8 @@ export default function RemoteFractionalCFOJobsPage() {
             </p>
 
             <div className="not-prose mb-6 grid gap-6 md:grid-cols-2">
-              <div className="rounded-xl bg-emerald-50 p-6 ring-1 ring-emerald-100">
-                <h3 className="mb-3 text-lg font-bold text-emerald-900">Benefits of Remote Fractional Work</h3>
+              <div className="rounded-xl bg-blue-950/20 p-6 ring-1 ring-blue-900/30">
+                <h3 className="mb-3 text-lg font-bold text-blue-900">Benefits of Remote Fractional Work</h3>
                 <ul className="space-y-2 text-sm text-slate-700">
                   <li>✓ No commute (save 10-15 hours/week)</li>
                   <li>✓ Live anywhere in UK (or abroad with tax planning)</li>
@@ -516,21 +516,21 @@ export default function RemoteFractionalCFOJobsPage() {
           </section>
 
           {/* CTA Section */}
-          <div className="mb-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 p-8 text-white shadow-lg">
+          <div className="mb-12 rounded-xl bg-gradient-to-br from-blue-950/200 to-blue-600 p-8 text-white shadow-lg">
             <h2 className="mb-4 text-2xl font-bold">Ready to Find Remote Fractional CFO Opportunities?</h2>
-            <p className="mb-6 text-emerald-50">
+            <p className="mb-6 text-blue-950/20">
               Fractional Quest connects experienced finance professionals with remote fractional CFO opportunities across the UK. Join our network to access vetted opportunities.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/how-to-become-fractional-cfo"
-                className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-emerald-600 transition-all hover:bg-emerald-50"
+                className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-blue-600 transition-all hover:bg-blue-950/20"
               >
                 Launch Your CFO Career
               </Link>
               <Link
                 href="/fractional-cfo-training"
-                className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-emerald-700"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-blue-700"
               >
                 Explore Training Options
               </Link>
@@ -545,19 +545,19 @@ export default function RemoteFractionalCFOJobsPage() {
             <h2 className="mb-6 text-2xl font-bold text-slate-900">Related Resources</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               <Link href="/fractional-cfo-hourly-rate" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Fractional CFO Rates 2025</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Fractional CFO Rates 2025</h3>
                 <p className="mt-1 text-sm text-slate-600">Comprehensive rate benchmarks for pricing</p>
               </Link>
               <Link href="/contract-cfo-jobs" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Contract CFO Jobs</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Contract CFO Jobs</h3>
                 <p className="mt-1 text-sm text-slate-600">Fixed-term CFO contract opportunities</p>
               </Link>
               <Link href="/fractional-controller-jobs" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Fractional Controller Jobs</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Fractional Controller Jobs</h3>
                 <p className="mt-1 text-sm text-slate-600">Entry route to fractional finance work</p>
               </Link>
               <Link href="/how-to-become-fractional-cfo" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">How to Become a Fractional CFO</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">How to Become a Fractional CFO</h3>
                 <p className="mt-1 text-sm text-slate-600">Complete career transition guide</p>
               </Link>
             </div>

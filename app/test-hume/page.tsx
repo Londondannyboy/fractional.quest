@@ -254,10 +254,10 @@ function VoiceTest() {
         <div className="bg-gray-800 rounded-lg p-4 mb-4">
           <h2 className="font-semibold mb-2 text-yellow-400">Status</h2>
           <div className="grid grid-cols-2 gap-2 text-sm">
-            <div>Connection: <span className={`font-mono ${status.value === 'connected' ? 'text-green-400' : 'text-red-400'}`}>{status.value}</span></div>
+            <div>Connection: <span className={`font-mono ${status.value === 'connected' ? 'text-blue-400' : 'text-red-400'}`}>{status.value}</span></div>
             <div>Token: <span className="font-mono">{token ? '✅ Ready' : '⏳ Loading...'}</span></div>
-            <div>Microphone: <span className={`font-mono ${micPermission === 'granted' ? 'text-green-400' : 'text-red-400'}`}>{micPermission}</span></div>
-            <div>Muted: <span className={`font-mono ${isMuted ? 'text-yellow-400' : 'text-green-400'}`}>{isMuted ? 'YES' : 'NO'}</span></div>
+            <div>Microphone: <span className={`font-mono ${micPermission === 'granted' ? 'text-blue-400' : 'text-red-400'}`}>{micPermission}</span></div>
+            <div>Muted: <span className={`font-mono ${isMuted ? 'text-yellow-400' : 'text-blue-400'}`}>{isMuted ? 'YES' : 'NO'}</span></div>
             <div>Config: <span className="font-mono text-xs">{CONFIG_ID}</span></div>
             <div>Messages: <span className="font-mono">{messages.length}</span></div>
           </div>
@@ -341,7 +341,7 @@ function VoiceTest() {
             <button
               onClick={handleConnectWithAllVars}
               disabled={!token || status.value === 'connected'}
-              className="px-4 py-2 bg-green-600 text-white rounded disabled:opacity-50 hover:bg-green-700 text-sm font-bold"
+              className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50 hover:bg-blue-700 text-sm font-bold"
             >
               2. ALL 6 Vars at Connect ⭐
             </button>
@@ -383,7 +383,7 @@ function VoiceTest() {
           <h2 className="text-yellow-400 mb-2">Logs ({logs.length}):</h2>
           <div className="h-80 overflow-auto space-y-1">
             {logs.map((log, i) => (
-              <div key={i} className="text-green-400 whitespace-pre-wrap break-all">{log}</div>
+              <div key={i} className="text-blue-400 whitespace-pre-wrap break-all">{log}</div>
             ))}
             {logs.length === 0 && <div className="text-gray-600">No logs yet...</div>}
           </div>

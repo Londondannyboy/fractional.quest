@@ -170,7 +170,7 @@ export default async function TechJobsPage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{role.name}</h3>
                 <p className="text-gray-600 text-sm mb-2">{role.description}</p>
                 <p className="text-blue-700 font-semibold mb-1">{role.rateRange}</p>
-                <span className="inline-block px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Demand: {role.demand}</span>
+                <span className="inline-block px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Demand: {role.demand}</span>
               </div>
             ))}
           </div>

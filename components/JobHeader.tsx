@@ -68,7 +68,7 @@ export function JobHeader({
               📍 Location
             </div>
             <div className="text-lg font-semibold text-gray-900">{location}</div>
-            {isRemote && <div className="text-sm text-emerald-700 font-medium">Remote Available</div>}
+            {isRemote && <div className="text-sm text-blue-700 font-medium">Remote Available</div>}
           </div>
 
           {/* Compensation */}

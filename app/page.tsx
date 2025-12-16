@@ -960,28 +960,28 @@ export default async function Home() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4 pb-2 border-b-2 border-emerald-500">Government &amp; Professional Bodies</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-4 pb-2 border-b-2 border-blue-950/200">Government &amp; Professional Bodies</h3>
               <ul className="space-y-3 text-gray-600 text-sm">
                 <li>
-                  <a href="https://www.gov.uk/set-up-business" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                  <a href="https://www.gov.uk/set-up-business" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline font-medium">
                     Gov.uk Business Setup
                   </a>
                   {' '}&mdash; Official guide for setting up as a fractional executive
                 </li>
                 <li>
-                  <a href="https://www.acca.org/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                  <a href="https://www.acca.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline font-medium">
                     ACCA
                   </a>
                   {' '}&mdash; Professional body for finance executives and fractional CFOs
                 </li>
                 <li>
-                  <a href="https://www.icaew.com/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                  <a href="https://www.icaew.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline font-medium">
                     ICAEW
                   </a>
                   {' '}&mdash; Institute of Chartered Accountants supporting fractional finance leaders
                 </li>
                 <li>
-                  <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                  <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline font-medium">
                     Tech Nation
                   </a>
                   {' '}&mdash; UK tech ecosystem data and insights
@@ -990,28 +990,28 @@ export default async function Home() {
             </div>
 
             <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4 pb-2 border-b-2 border-emerald-500">Industry Research &amp; Data</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-4 pb-2 border-b-2 border-blue-950/200">Industry Research &amp; Data</h3>
               <ul className="space-y-3 text-gray-600 text-sm">
                 <li>
-                  <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                  <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline font-medium">
                     BVCA
                   </a>
                   {' '}&mdash; British Private Equity &amp; VC Association market insights
                 </li>
                 <li>
-                  <a href="https://www.uktech.news/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                  <a href="https://www.uktech.news/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline font-medium">
                     UK Tech News
                   </a>
                   {' '}&mdash; Latest news on the UK tech sector employing fractional talent
                 </li>
                 <li>
-                  <a href="https://www.greatermanchester-ca.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                  <a href="https://www.greatermanchester-ca.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline font-medium">
                     Greater Manchester CA
                   </a>
                   {' '}&mdash; Regional economic development and business support
                 </li>
                 <li>
-                  <a href="https://www.scottish-enterprise.com/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                  <a href="https://www.scottish-enterprise.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline font-medium">
                     Scottish Enterprise
                   </a>
                   {' '}&mdash; Scotland&apos;s business support and growth agency
@@ -1020,7 +1020,7 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className="mt-8 p-5 bg-white rounded-lg border-l-4 border-emerald-500">
+          <div className="mt-8 p-5 bg-white rounded-lg border-l-4 border-blue-950/200">
             <p className="text-gray-700 text-sm leading-relaxed">
               <strong>Note:</strong> These resources provide authoritative information to support your fractional career or hiring decisions. All links lead to official UK government, professional body, or recognized industry sources.
             </p>

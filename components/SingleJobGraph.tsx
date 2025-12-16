@@ -105,7 +105,7 @@ export function SingleJobGraph({ jobId, jobTitle, company, skills, location }: S
         </div>
         <div className="flex gap-3 text-sm">
           <div className="flex items-center gap-1.5">
-            <div className="w-3 h-3 rounded-full bg-green-500" />
+            <div className="w-3 h-3 rounded-full bg-blue-500" />
             <span className="text-gray-600">Job</span>
           </div>
           <div className="flex items-center gap-1.5">

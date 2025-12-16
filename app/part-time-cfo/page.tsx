@@ -58,7 +58,7 @@ export default async function PartTimeCfoPage() {
               Flexible Chief Financial Officer roles for experienced finance professionals. Work 1-3 days per week earning £800-£1,500 per day.
             </p>
             <div className="flex gap-4">
-              <Link href="/fractional-jobs?role=CFO" className="px-8 py-4 bg-white text-emerald-900 rounded-lg font-semibold hover:bg-emerald-50">
+              <Link href="/fractional-jobs?role=CFO" className="px-8 py-4 bg-white text-blue-900 rounded-lg font-semibold hover:bg-blue-950/20">
                 Browse {jobCount}+ CFO Jobs
               </Link>
             </div>
@@ -146,17 +146,17 @@ export default async function PartTimeCfoPage() {
                 <Link
                   key={job.id}
                   href={`/job/${job.slug}`}
-                  className="bg-white rounded-xl p-6 border hover:border-emerald-300 hover:shadow-lg transition-all"
+                  className="bg-white rounded-xl p-6 border hover:border-blue-700 hover:shadow-lg transition-all"
                 >
                   <h3 className="font-bold text-gray-900 mb-2">{job.title}</h3>
                   <p className="text-gray-600 mb-2">{job.company_name}</p>
                   <p className="text-gray-600 text-sm">{job.location}</p>
-                  {job.compensation && <p className="text-emerald-700 font-semibold mt-2">{job.compensation}</p>}
+                  {job.compensation && <p className="text-blue-700 font-semibold mt-2">{job.compensation}</p>}
                 </Link>
               ))}
             </div>
             <div className="text-center mt-8">
-              <Link href="/fractional-jobs?role=CFO" className="px-8 py-4 bg-emerald-700 text-white rounded-lg font-semibold hover:bg-emerald-800">
+              <Link href="/fractional-jobs?role=CFO" className="px-8 py-4 bg-blue-700 text-white rounded-lg font-semibold hover:bg-blue-800">
                 View All CFO Jobs →
               </Link>
             </div>

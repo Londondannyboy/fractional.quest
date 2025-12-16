@@ -197,28 +197,28 @@ export default function FractionalCTOMeaningPage() {
                     <span className="text-red-500">✗</span>
                     <span>Misconception: "Fractional means less experienced or junior"</span>
                   </h4>
-                  <p className="text-gray-700 ml-10 mb-0"><strong className="text-green-600">Reality:</strong> Fractional CTOs are typically MORE experienced than most full-time candidates—usually 15-20+ years with prior CTO roles. They work fractionally by choice, often earning more than full-time roles.</p>
+                  <p className="text-gray-700 ml-10 mb-0"><strong className="text-blue-600">Reality:</strong> Fractional CTOs are typically MORE experienced than most full-time candidates—usually 15-20+ years with prior CTO roles. They work fractionally by choice, often earning more than full-time roles.</p>
                 </div>
                 <div className="border-t pt-6">
                   <h4 className="text-lg font-bold text-gray-900 mb-2 flex items-start gap-3">
                     <span className="text-red-500">✗</span>
                     <span>Misconception: "Fractional CTOs aren't committed"</span>
                   </h4>
-                  <p className="text-gray-700 ml-10 mb-0"><strong className="text-green-600">Reality:</strong> Fractional CTOs take full ownership and accountability for technology outcomes. They're not "phoning it in"—they're focused, strategic, and fully engaged during their working days.</p>
+                  <p className="text-gray-700 ml-10 mb-0"><strong className="text-blue-600">Reality:</strong> Fractional CTOs take full ownership and accountability for technology outcomes. They're not "phoning it in"—they're focused, strategic, and fully engaged during their working days.</p>
                 </div>
                 <div className="border-t pt-6">
                   <h4 className="text-lg font-bold text-gray-900 mb-2 flex items-start gap-3">
                     <span className="text-red-500">✗</span>
                     <span>Misconception: "Fractional is just a consultant"</span>
                   </h4>
-                  <p className="text-gray-700 ml-10 mb-0"><strong className="text-green-600">Reality:</strong> Fractional CTOs are embedded leaders who make decisions, lead teams, and are accountable for outcomes. Consultants advise; fractional executives execute and own results.</p>
+                  <p className="text-gray-700 ml-10 mb-0"><strong className="text-blue-600">Reality:</strong> Fractional CTOs are embedded leaders who make decisions, lead teams, and are accountable for outcomes. Consultants advise; fractional executives execute and own results.</p>
                 </div>
                 <div className="border-t pt-6">
                   <h4 className="text-lg font-bold text-gray-900 mb-2 flex items-start gap-3">
                     <span className="text-red-500">✗</span>
                     <span>Misconception: "You need full-time CTO once you grow"</span>
                   </h4>
-                  <p className="text-gray-700 ml-10 mb-0"><strong className="text-green-600">Reality:</strong> Many companies keep fractional CTOs for years, even at £10M-£20M revenue. The decision to go full-time depends on complexity and team size, not just revenue. Some companies never need full-time.</p>
+                  <p className="text-gray-700 ml-10 mb-0"><strong className="text-blue-600">Reality:</strong> Many companies keep fractional CTOs for years, even at £10M-£20M revenue. The decision to go full-time depends on complexity and team size, not just revenue. Some companies never need full-time.</p>
                 </div>
               </div>
             </div>

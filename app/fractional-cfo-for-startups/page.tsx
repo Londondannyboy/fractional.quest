@@ -65,7 +65,7 @@ export default function FractionalCFOForStartupsPage() {
             <span className="mr-2">←</span> Back to CFO Hub
           </Link>
           <div className="max-w-4xl">
-            <span className="inline-block bg-emerald-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
+            <span className="inline-block bg-blue-950/200 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
               High-Value ($218 CPC)
             </span>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-[0.9] tracking-tight">
@@ -81,7 +81,7 @@ export default function FractionalCFOForStartupsPage() {
                 <div className="text-white/60 text-sm uppercase tracking-wider">Monthly Cost</div>
               </div>
               <div>
-                <div className="text-4xl md:text-5xl font-black text-emerald-400">$218</div>
+                <div className="text-4xl md:text-5xl font-black text-blue-400">$218</div>
                 <div className="text-white/60 text-sm uppercase tracking-wider">CPC Value</div>
               </div>
               <div>
@@ -106,7 +106,7 @@ export default function FractionalCFOForStartupsPage() {
               Most startups face a dilemma: <strong>You need CFO-level financial expertise to raise capital and scale, but you can't afford or justify a £150k+ full-time CFO.</strong> Fractional CFOs solve this perfectly.
             </p>
 
-            <div className="bg-emerald-50 border-l-4 border-emerald-600 p-8 mb-10">
+            <div className="bg-blue-950/20 border-l-4 border-blue-600 p-8 mb-10">
               <h3 className="text-2xl font-black text-gray-900 mt-0 mb-4">The Startup CFO Gap</h3>
               <div className="grid md:grid-cols-2 gap-6 text-gray-700">
                 <div>
@@ -145,7 +145,7 @@ export default function FractionalCFOForStartupsPage() {
                 <p className="text-gray-700 mb-0">You're planning a seed or Series A in the next year. You need to build credible financials NOW so investors take you seriously. Most successful raises start with 6+ months of financial preparation.</p>
               </div>
 
-              <div className="bg-white p-6 border-l-4 border-emerald-600">
+              <div className="bg-white p-6 border-l-4 border-blue-600">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Post-Seed, Pre-Series A</h4>
                 <p className="text-gray-700 mb-0">You've raised £500k-£2M seed. You're at £1-3M ARR. Investors want better reporting. You're hiring fast. Founder-led finance is breaking. This is the PERFECT time for fractional CFO.</p>
               </div>
@@ -155,7 +155,7 @@ export default function FractionalCFOForStartupsPage() {
                 <p className="text-gray-700 mb-0">Revenue growing 3x+ year-over-year. You've gone from 5 to 30 people in 12 months. Cash burn is £100k+/month. You need financial controls, forecasting, and systems ASAP.</p>
               </div>
 
-              <div className="bg-white p-6 border-l-4 border-emerald-600">
+              <div className="bg-white p-6 border-l-4 border-blue-600">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Investor Pressure</h4>
                 <p className="text-gray-700 mb-0">Your board wants monthly reporting on unit economics, cohort analysis, burn multiple, and scenario planning. You can't deliver this with your current setup.</p>
               </div>
@@ -304,12 +304,12 @@ export default function FractionalCFOForStartupsPage() {
                     <td className="p-4">£1,500-£4,500</td>
                     <td className="p-4">£18k-£54k</td>
                   </tr>
-                  <tr className="border-b bg-emerald-50">
+                  <tr className="border-b bg-blue-950/20">
                     <td className="p-4 font-semibold">Seed</td>
                     <td className="p-4">£500k-£2M</td>
                     <td className="p-4">1-1.5 days/week</td>
-                    <td className="p-4 text-emerald-600 font-bold">£3,000-£6,000</td>
-                    <td className="p-4 text-emerald-600 font-bold">£36k-£72k</td>
+                    <td className="p-4 text-blue-600 font-bold">£3,000-£6,000</td>
+                    <td className="p-4 text-blue-600 font-bold">£36k-£72k</td>
                   </tr>
                   <tr className="border-b">
                     <td className="p-4 font-semibold">Series A</td>
@@ -371,9 +371,9 @@ export default function FractionalCFOForStartupsPage() {
                 </ul>
               </div>
 
-              <div className="bg-white p-6 border-2 border-emerald-600">
+              <div className="bg-white p-6 border-2 border-blue-600">
                 <h4 className="text-lg font-bold text-gray-900 mb-3">Series A Support</h4>
-                <div className="text-3xl font-black text-emerald-600 mb-2">£25k-£50k</div>
+                <div className="text-3xl font-black text-blue-600 mb-2">£25k-£50k</div>
                 <div className="text-sm text-gray-600 mb-4">Fixed fee, 4-6 months</div>
                 <ul className="space-y-2 text-sm text-gray-700">
                   <li>• Full investor model</li>
@@ -398,7 +398,7 @@ export default function FractionalCFOForStartupsPage() {
 
           <div className="prose prose-lg max-w-none">
             <div className="space-y-8">
-              <div className="bg-white p-8 border-l-4 border-emerald-600">
+              <div className="bg-white p-8 border-l-4 border-blue-600">
                 <div className="flex items-start gap-4 mb-4">
                   <span className="text-4xl">🚀</span>
                   <div>
@@ -411,7 +411,7 @@ export default function FractionalCFOForStartupsPage() {
                   <p><strong>Fractional CFO Engagement:</strong> £40,000 (9 months, 2 days/week pre-raise + 1 day/week post-close)</p>
                   <p><strong>Deliverables:</strong> Built institutional-quality model, implemented FP&A, presented to 15 VCs, managed due diligence for 3 term sheets.</p>
                   <p><strong>Outcome:</strong> Raised £8M at £35M valuation (vs projected £6M at £25M without CFO). Additional £2M capital + £10M higher valuation.</p>
-                  <p className="text-emerald-600 font-bold text-lg">ROI: 300x (£12M additional value for £40k investment)</p>
+                  <p className="text-blue-600 font-bold text-lg">ROI: 300x (£12M additional value for £40k investment)</p>
                 </div>
               </div>
 
@@ -428,11 +428,11 @@ export default function FractionalCFOForStartupsPage() {
                   <p><strong>Fractional CFO Engagement:</strong> £28,000 (6 months, 1.5 days/week emergency engagement)</p>
                   <p><strong>Actions:</strong> Implemented weekly cash forecasting, cut burn to £45k/month, extended payment terms, secured £300k bridge from existing investors, built Series A model.</p>
                   <p><strong>Outcome:</strong> Extended runway from 6 to 16 months. Bought time to hit milestones for Series A. Currently raising £5M at 2x better terms than emergency round would have been.</p>
-                  <p className="text-emerald-600 font-bold text-lg">ROI: Company saved from insolvency. Avoided 40%+ dilution from emergency funding.</p>
+                  <p className="text-blue-600 font-bold text-lg">ROI: Company saved from insolvency. Avoided 40%+ dilution from emergency funding.</p>
                 </div>
               </div>
 
-              <div className="bg-white p-8 border-l-4 border-emerald-600">
+              <div className="bg-white p-8 border-l-4 border-blue-600">
                 <div className="flex items-start gap-4 mb-4">
                   <span className="text-4xl">📊</span>
                   <div>
@@ -446,7 +446,7 @@ export default function FractionalCFOForStartupsPage() {
                   <p><strong>Built:</strong> Implemented Xero + Fathom, hired Financial Controller, created unit economics dashboard, monthly board reporting, inventory forecasting model.</p>
                   <p><strong>Discovered:</strong> 40% of SKUs unprofitable. £200k inventory write-down needed. But identified 3 hero products driving all profit—doubled down on those.</p>
                   <p><strong>Outcome:</strong> Went from -5% EBITDA to +12% EBITDA in 8 months by cutting unprofitable lines. Grew from £4M to £7M revenue profitably.</p>
-                  <p className="text-emerald-600 font-bold text-lg">ROI: 10x+ (£650k additional profit vs £65k cost)</p>
+                  <p className="text-blue-600 font-bold text-lg">ROI: 10x+ (£650k additional profit vs £65k cost)</p>
                 </div>
               </div>
             </div>
@@ -538,7 +538,7 @@ export default function FractionalCFOForStartupsPage() {
               </div>
             </div>
 
-            <div className="bg-emerald-50 border-l-4 border-emerald-600 p-6">
+            <div className="bg-blue-950/20 border-l-4 border-blue-600 p-6">
               <p className="text-lg font-semibold text-gray-900 mb-2">Recommended Approach</p>
               <p className="text-gray-700 mb-0">
                 Interview 3-4 fractional CFO candidates. Ask each to review your financials (30-min free consultation) and propose what they'd do in first 90 days. Choose based on: (1) startup experience, (2) fundraising track record, (3) cultural fit, (4) clarity of proposed approach. Check references carefully.

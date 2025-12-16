@@ -432,7 +432,7 @@ function VoiceInterface({ token, userId, profile, memoryContext, graphData, onPr
           disabled={isConnecting}
           className={`w-32 h-32 rounded-full text-white font-bold text-lg shadow-xl transition-all ${
             isConnected
-              ? 'bg-green-500 hover:bg-green-600 animate-pulse'
+              ? 'bg-blue-500 hover:bg-blue-600 animate-pulse'
               : isConnecting
               ? 'bg-gray-400 cursor-not-allowed'
               : 'bg-purple-600 hover:bg-purple-700'
@@ -526,13 +526,13 @@ function VoiceInterface({ token, userId, profile, memoryContext, graphData, onPr
       {/* Preference Confirmation Card - fades and auto-saves */}
       {pendingPreference && (
         <div
-          className="border-t border-gray-200 bg-gradient-to-r from-green-50 to-emerald-50 p-4 transition-opacity duration-500"
+          className="border-t border-gray-200 bg-gradient-to-r from-green-50 to-blue-950/20 p-4 transition-opacity duration-500"
           style={{ opacity: preferenceOpacity }}
         >
           <div className="max-w-md mx-auto">
             <div className="flex items-start gap-3">
-              <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <svg className="w-4 h-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
@@ -555,7 +555,7 @@ function VoiceInterface({ token, userId, profile, memoryContext, graphData, onPr
               <button
                 onClick={() => handleSavePreference(true)}
                 disabled={savingPreference}
-                className="px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white text-xs font-medium rounded-full transition-colors disabled:opacity-50"
+                className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium rounded-full transition-colors disabled:opacity-50"
               >
                 {savingPreference ? 'Saving...' : 'Confirm'}
               </button>
@@ -861,7 +861,7 @@ export default function RepoPage() {
               onClick={() => setShowDebug(!showDebug)}
               className="w-full flex items-center gap-2 px-3 py-2 text-xs text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
             >
-              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
               Debug Panel
               <span className="ml-auto">{showDebug ? '▼' : '▶'}</span>
             </button>
@@ -869,23 +869,23 @@ export default function RepoPage() {
             {showDebug && (
               <div className="mt-2 p-3 bg-gray-900 rounded-lg text-xs font-mono text-gray-300 space-y-2">
                 <div className="flex items-center gap-2">
-                  <span className={`w-2 h-2 rounded-full ${debugInfo.profileLoaded ? 'bg-green-500' : 'bg-red-500'}`} />
+                  <span className={`w-2 h-2 rounded-full ${debugInfo.profileLoaded ? 'bg-blue-500' : 'bg-red-500'}`} />
                   <span>Profile: {debugInfo.profileLoaded ? 'Loaded' : 'Not loaded'}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className={`w-2 h-2 rounded-full ${debugInfo.zepLoaded ? 'bg-green-500' : 'bg-yellow-500'}`} />
+                  <span className={`w-2 h-2 rounded-full ${debugInfo.zepLoaded ? 'bg-blue-500' : 'bg-yellow-500'}`} />
                   <span>ZEP Graph: {debugInfo.zepLoaded ? `${debugInfo.zepLength} chars` : 'Empty'}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className={`w-2 h-2 rounded-full ${debugInfo.supermemoryLoaded ? 'bg-green-500' : 'bg-yellow-500'}`} />
+                  <span className={`w-2 h-2 rounded-full ${debugInfo.supermemoryLoaded ? 'bg-blue-500' : 'bg-yellow-500'}`} />
                   <span>Supermemory: {debugInfo.supermemoryLoaded ? `${debugInfo.supermemoryLength} chars` : 'Empty'}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className={`w-2 h-2 rounded-full ${debugInfo.humeResumeId ? 'bg-green-500' : 'bg-yellow-500'}`} />
+                  <span className={`w-2 h-2 rounded-full ${debugInfo.humeResumeId ? 'bg-blue-500' : 'bg-yellow-500'}`} />
                   <span>Hume Resume: {debugInfo.humeResumeId ? 'Yes' : 'New session'}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className={`w-2 h-2 rounded-full ${debugInfo.extractionEndpoint?.includes('Pydantic') ? 'bg-green-500' : 'bg-yellow-500'}`} />
+                  <span className={`w-2 h-2 rounded-full ${debugInfo.extractionEndpoint?.includes('Pydantic') ? 'bg-blue-500' : 'bg-yellow-500'}`} />
                   <span>Extraction: {debugInfo.extractionEndpoint || 'Checking...'}</span>
                 </div>
                 {zepContext && (

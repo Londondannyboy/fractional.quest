@@ -310,7 +310,7 @@ export default async function JobsPage({ searchParams }: JobsPageProps) {
 
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
               <div>
-                <span className="inline-block bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider mb-3">
+                <span className="inline-block bg-blue-950/200/20 text-blue-400 px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider mb-3">
                   {total}+ Live Positions
                 </span>
 
@@ -368,7 +368,7 @@ export default async function JobsPage({ searchParams }: JobsPageProps) {
                     {searchQuery && <span className="ml-2 px-2 py-0.5 bg-blue-500/20 rounded text-blue-300">"{searchQuery}"</span>}
                     {roleFilter && <span className="ml-2 px-2 py-0.5 bg-amber-500/20 rounded text-amber-300">{roleFilter}</span>}
                     {locationFilter && <span className="ml-2 px-2 py-0.5 bg-purple-500/20 rounded text-purple-300">{locationFilter}</span>}
-                    {industryFilter && <span className="ml-2 px-2 py-0.5 bg-emerald-500/20 rounded text-emerald-300">{industryFilter}</span>}
+                    {industryFilter && <span className="ml-2 px-2 py-0.5 bg-blue-950/200/20 rounded text-blue-700">{industryFilter}</span>}
                   </span>
                 </div>
                 <Link href="/fractional-jobs" className="text-sm text-gray-400 hover:text-white transition-colors">

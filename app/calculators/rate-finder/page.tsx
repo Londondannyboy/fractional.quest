@@ -75,7 +75,7 @@ export default function RateFinderCalculator() {
 
   const positioningColors = {
     below: 'text-amber-600',
-    at: 'text-green-600',
+    at: 'text-blue-600',
     above: 'text-purple-600'
   }
 

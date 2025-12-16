@@ -52,7 +52,7 @@ function VoiceInterface({ token, userId, profile }: { token: string; userId?: st
         disabled={isConnecting}
         className={`w-32 h-32 rounded-full text-white font-bold text-lg shadow-xl ${
           isConnected
-            ? 'bg-green-500 hover:bg-green-600'
+            ? 'bg-blue-500 hover:bg-blue-600'
             : isConnecting
             ? 'bg-gray-400'
             : 'bg-purple-600 hover:bg-purple-700'

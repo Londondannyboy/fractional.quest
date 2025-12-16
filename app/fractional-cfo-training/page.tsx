@@ -76,13 +76,13 @@ export default function FractionalCFOTrainingPage() {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50/30 to-slate-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-950/20/30 to-slate-50">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <nav className="mb-8 flex items-center gap-2 text-sm text-slate-600">
-            <Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/fractional-cfo" className="hover:text-emerald-600 transition-colors">Fractional CFO</Link>
+            <Link href="/fractional-cfo" className="hover:text-blue-600 transition-colors">Fractional CFO</Link>
             <span>/</span>
             <span className="text-slate-900">Training</span>
           </nav>
@@ -138,7 +138,7 @@ export default function FractionalCFOTrainingPage() {
               <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
                 <div className="mb-3 flex items-center justify-between">
                   <h3 className="text-xl font-bold text-slate-900">ACA (ICAEW) - Institute of Chartered Accountants in England and Wales</h3>
-                  <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">Gold Standard</span>
+                  <span className="rounded-full bg-blue-900/30 px-3 py-1 text-xs font-semibold text-blue-700">Gold Standard</span>
                 </div>
                 <p className="mb-3 text-slate-600">
                   Most prestigious UK accounting qualification. Widely recognized, particularly strong for audit, financial reporting, and governance.
@@ -162,7 +162,7 @@ export default function FractionalCFOTrainingPage() {
                   </div>
                 </div>
                 <p className="mt-3 text-sm text-slate-600">
-                  Learn more: <a href="https://www.icaew.com" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">ICAEW website</a>
+                  Learn more: <a href="https://www.icaew.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICAEW website</a>
                 </p>
               </div>
 
@@ -193,7 +193,7 @@ export default function FractionalCFOTrainingPage() {
                   </div>
                 </div>
                 <p className="mt-3 text-sm text-slate-600">
-                  Learn more: <a href="https://www.accaglobal.com/gb/en.html" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">ACCA website</a>
+                  Learn more: <a href="https://www.accaglobal.com/gb/en.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACCA website</a>
                 </p>
               </div>
 
@@ -224,7 +224,7 @@ export default function FractionalCFOTrainingPage() {
                   </div>
                 </div>
                 <p className="mt-3 text-sm text-slate-600">
-                  Learn more: <a href="https://www.cimaglobal.com" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">CIMA website</a>
+                  Learn more: <a href="https://www.cimaglobal.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIMA website</a>
                 </p>
               </div>
             </div>
@@ -241,28 +241,28 @@ export default function FractionalCFOTrainingPage() {
             <p className="text-slate-700">
               Programs focused on the business of being a fractional CFO: client acquisition, engagement management, pricing, and service delivery.
             </p>
-            <div className="not-prose mb-6 rounded-lg bg-emerald-50 p-6 ring-1 ring-emerald-100">
-              <h4 className="mb-3 font-bold text-emerald-900">Typical Curriculum Includes:</h4>
+            <div className="not-prose mb-6 rounded-lg bg-blue-950/20 p-6 ring-1 ring-blue-900/30">
+              <h4 className="mb-3 font-bold text-blue-900">Typical Curriculum Includes:</h4>
               <ul className="space-y-2 text-sm text-slate-700">
-                <li className="flex gap-2"><span className="text-emerald-600">•</span> <span>Positioning and niche selection (choosing your sector/stage specialization)</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">•</span> <span>Service packaging and pricing strategies (day rates, retainers, project fees)</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">•</span> <span>Client acquisition (personal brand, LinkedIn, referrals, partnerships)</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">•</span> <span>Engagement scoping and proposal writing</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">•</span> <span>Contract templates and T&Cs</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">•</span> <span>Client onboarding frameworks (first 30-60-90 days)</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">•</span> <span>Consulting skills (stakeholder management, difficult conversations)</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">•</span> <span>Managing multiple clients and time management</span></li>
-                <li className="flex gap-2"><span className="text-emerald-600">•</span> <span>IR35 compliance and business structure (Ltd company vs umbrella)</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">•</span> <span>Positioning and niche selection (choosing your sector/stage specialization)</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">•</span> <span>Service packaging and pricing strategies (day rates, retainers, project fees)</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">•</span> <span>Client acquisition (personal brand, LinkedIn, referrals, partnerships)</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">•</span> <span>Engagement scoping and proposal writing</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">•</span> <span>Contract templates and T&Cs</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">•</span> <span>Client onboarding frameworks (first 30-60-90 days)</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">•</span> <span>Consulting skills (stakeholder management, difficult conversations)</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">•</span> <span>Managing multiple clients and time management</span></li>
+                <li className="flex gap-2"><span className="text-blue-600">•</span> <span>IR35 compliance and business structure (Ltd company vs umbrella)</span></li>
               </ul>
               <div className="mt-4 grid gap-2 md:grid-cols-3 text-sm">
                 <div>
-                  <span className="font-semibold text-emerald-900">Duration:</span> 3-6 months
+                  <span className="font-semibold text-blue-900">Duration:</span> 3-6 months
                 </div>
                 <div>
-                  <span className="font-semibold text-emerald-900">Cost:</span> £3,000-£8,000
+                  <span className="font-semibold text-blue-900">Cost:</span> £3,000-£8,000
                 </div>
                 <div>
-                  <span className="font-semibold text-emerald-900">Format:</span> Online/hybrid
+                  <span className="font-semibold text-blue-900">Format:</span> Online/hybrid
                 </div>
               </div>
             </div>
@@ -370,8 +370,8 @@ export default function FractionalCFOTrainingPage() {
                 </ul>
               </div>
 
-              <div className="rounded-xl bg-emerald-50 p-6 ring-1 ring-emerald-100">
-                <h3 className="mb-3 text-lg font-bold text-emerald-900">2. Strategic & Commercial Acumen</h3>
+              <div className="rounded-xl bg-blue-950/20 p-6 ring-1 ring-blue-900/30">
+                <h3 className="mb-3 text-lg font-bold text-blue-900">2. Strategic & Commercial Acumen</h3>
                 <ul className="space-y-2 text-sm text-slate-700">
                   <li>✓ Business model analysis and unit economics</li>
                   <li>✓ Competitive positioning and market dynamics</li>
@@ -442,7 +442,7 @@ export default function FractionalCFOTrainingPage() {
             <div className="not-prose space-y-4">
               <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
                 <div className="mb-3 flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 font-bold text-emerald-700">M1-3</span>
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-900/30 font-bold text-blue-700">M1-3</span>
                   <h3 className="text-lg font-bold text-slate-900">Foundation & Positioning (Months 1-3)</h3>
                 </div>
                 <ul className="ml-13 space-y-2 text-sm text-slate-700">
@@ -457,7 +457,7 @@ export default function FractionalCFOTrainingPage() {
 
               <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
                 <div className="mb-3 flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 font-bold text-emerald-700">M4-6</span>
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-900/30 font-bold text-blue-700">M4-6</span>
                   <h3 className="text-lg font-bold text-slate-900">First Clients & Validation (Months 4-6)</h3>
                 </div>
                 <ul className="ml-13 space-y-2 text-sm text-slate-700">
@@ -472,7 +472,7 @@ export default function FractionalCFOTrainingPage() {
 
               <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
                 <div className="mb-3 flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 font-bold text-emerald-700">M7-9</span>
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-900/30 font-bold text-blue-700">M7-9</span>
                   <h3 className="text-lg font-bold text-slate-900">Scale to 3-4 Clients (Months 7-9)</h3>
                 </div>
                 <ul className="ml-13 space-y-2 text-sm text-slate-700">
@@ -487,7 +487,7 @@ export default function FractionalCFOTrainingPage() {
 
               <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5">
                 <div className="mb-3 flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 font-bold text-emerald-700">M10-12</span>
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-900/30 font-bold text-blue-700">M10-12</span>
                   <h3 className="text-lg font-bold text-slate-900">Optimize & Systematize (Months 10-12)</h3>
                 </div>
                 <ul className="ml-13 space-y-2 text-sm text-slate-700">
@@ -593,7 +593,7 @@ export default function FractionalCFOTrainingPage() {
                   </div>
                   <div className="flex justify-between border-t border-slate-200 pt-2 font-bold">
                     <span>Total Year 1 Investment</span>
-                    <span className="text-emerald-600">£7,800-£22,000</span>
+                    <span className="text-blue-600">£7,800-£22,000</span>
                   </div>
                 </div>
               </div>
@@ -623,32 +623,32 @@ export default function FractionalCFOTrainingPage() {
                   </div>
                   <div className="flex justify-between border-t border-slate-200 pt-2 font-bold">
                     <span>Total Annual Ongoing</span>
-                    <span className="text-emerald-600">£6,100-£14,500</span>
+                    <span className="text-blue-600">£6,100-£14,500</span>
                   </div>
                 </div>
               </div>
             </div>
             <p className="mt-6 text-sm text-slate-600">
-              ROI is typically achieved within 6-12 months as day rates (£800-£1,800) significantly exceed employed salary on a pro-rata basis. Learn more about <Link href="/fractional-cfo-hourly-rate" className="text-emerald-600 hover:text-emerald-700 underline">fractional CFO rates</Link>.
+              ROI is typically achieved within 6-12 months as day rates (£800-£1,800) significantly exceed employed salary on a pro-rata basis. Learn more about <Link href="/fractional-cfo-hourly-rate" className="text-blue-600 hover:text-blue-700 underline">fractional CFO rates</Link>.
             </p>
           </div>
 
           {/* CTA Section */}
-          <div className="mb-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 p-8 text-white shadow-lg">
+          <div className="mb-12 rounded-xl bg-gradient-to-br from-blue-950/200 to-blue-600 p-8 text-white shadow-lg">
             <h2 className="mb-4 text-2xl font-bold">Ready to Launch Your Fractional CFO Career?</h2>
-            <p className="mb-6 text-emerald-50">
+            <p className="mb-6 text-blue-950/20">
               Fractional Quest supports finance professionals transitioning to fractional work, offering resources, training recommendations, and client opportunities.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/how-to-become-fractional-cfo"
-                className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-emerald-600 transition-all hover:bg-emerald-50"
+                className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-blue-600 transition-all hover:bg-blue-950/20"
               >
                 Read Career Transition Guide
               </Link>
               <Link
                 href="/fractional-cfo"
-                className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-emerald-700"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-blue-700"
               >
                 Explore Fractional CFO Resources
               </Link>
@@ -663,19 +663,19 @@ export default function FractionalCFOTrainingPage() {
             <h2 className="mb-6 text-2xl font-bold text-slate-900">Related Resources</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               <Link href="/how-to-become-fractional-cfo" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">How to Become a Fractional CFO</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">How to Become a Fractional CFO</h3>
                 <p className="mt-1 text-sm text-slate-600">Complete career transition roadmap</p>
               </Link>
               <Link href="/fractional-cfo-jobs-remote" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Remote Fractional CFO Jobs</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Remote Fractional CFO Jobs</h3>
                 <p className="mt-1 text-sm text-slate-600">Find fractional CFO opportunities</p>
               </Link>
               <Link href="/fractional-cfo-hourly-rate" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Fractional CFO Rates 2025</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Fractional CFO Rates 2025</h3>
                 <p className="mt-1 text-sm text-slate-600">Benchmark your pricing strategy</p>
               </Link>
               <Link href="/fractional-cfo-companies" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Fractional CFO Companies</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Fractional CFO Companies</h3>
                 <p className="mt-1 text-sm text-slate-600">Compare joining a firm vs going solo</p>
               </Link>
             </div>

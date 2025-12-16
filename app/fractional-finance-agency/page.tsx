@@ -22,11 +22,11 @@ export default function FractionalFinanceAgencyPage() {
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <Link href="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm"><span className="mr-2">←</span> Back to Home</Link>
             <div className="max-w-4xl">
-              <span className="inline-block bg-emerald-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">Finance Agency</span>
-              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9]">Fractional<br /><span className="text-emerald-400">Finance Agency</span></h1>
+              <span className="inline-block bg-blue-950/200 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">Finance Agency</span>
+              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9]">Fractional<br /><span className="text-blue-400">Finance Agency</span></h1>
               <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">Access finance expertise on a fractional basis. Get CFO-level financial strategy, planning, and operations without the cost of a full-time finance team.</p>
               <div className="flex flex-wrap gap-4">
-                <Link href="#contact" className="px-8 py-4 bg-emerald-500 text-white font-bold uppercase tracking-wider hover:bg-emerald-400 transition-colors">Get Started</Link>
+                <Link href="#contact" className="px-8 py-4 bg-blue-950/200 text-white font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">Get Started</Link>
                 <Link href="/fractional-cfo-services" className="px-8 py-4 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Fractional CFO</Link>
               </div>
             </div>
@@ -54,7 +54,7 @@ export default function FractionalFinanceAgencyPage() {
               { title: 'Financial Operations', description: 'Accounting oversight, month-end close, and financial controls.' },
               { title: 'M&A Support', description: 'Financial due diligence, valuation, and deal structuring.' },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white border-l-4 border-emerald-500">
+              <div key={i} className="p-6 bg-white border-l-4 border-blue-950/200">
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.description}</p>
               </div>
@@ -71,7 +71,7 @@ export default function FractionalFinanceAgencyPage() {
               <thead>
                 <tr className="bg-gray-100">
                   <th className="p-4 text-left font-bold">Aspect</th>
-                  <th className="p-4 text-left font-bold text-emerald-700">Fractional Finance</th>
+                  <th className="p-4 text-left font-bold text-blue-700">Fractional Finance</th>
                   <th className="p-4 text-left font-bold">Full-Time CFO + Team</th>
                 </tr>
               </thead>
@@ -92,7 +92,7 @@ export default function FractionalFinanceAgencyPage() {
           <h2 className="text-4xl font-black mb-6">Get Fractional Finance Support</h2>
           <p className="text-xl text-gray-400 mb-10">Tell us about your financial needs and we'll match you with the right fractional finance expertise.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/handler/sign-up" className="px-10 py-5 bg-emerald-500 text-white font-bold uppercase tracking-wider hover:bg-emerald-400 transition-colors">Get Started</Link>
+            <Link href="/handler/sign-up" className="px-10 py-5 bg-blue-950/200 text-white font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">Get Started</Link>
             <Link href="/fractional-finance" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Finance Leadership</Link>
           </div>
         </div>

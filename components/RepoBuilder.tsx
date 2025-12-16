@@ -249,7 +249,7 @@ export default function RepoBuilder({ userId, voiceTranscript, onPreferenceSaved
       {/* Header */}
       <div className="px-4 py-3 bg-gradient-to-r from-purple-50 to-amber-50 border-b border-gray-100">
         <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+          <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
           <h3 className="text-sm font-semibold text-gray-800">Building your Repo</h3>
           {isExtracting && (
             <span className="text-xs text-gray-500 ml-auto">Analyzing...</span>
@@ -277,7 +277,7 @@ export default function RepoBuilder({ userId, voiceTranscript, onPreferenceSaved
               key={item.id}
               className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-500 ${
                 item.status === 'confirmed'
-                  ? 'bg-green-50 border border-green-200'
+                  ? 'bg-blue-50 border border-blue-200'
                   : item.status === 'hard'
                   ? 'bg-amber-50 border border-amber-200'
                   : 'bg-gray-50 border border-gray-200'
@@ -297,12 +297,12 @@ export default function RepoBuilder({ userId, voiceTranscript, onPreferenceSaved
 
               {/* Actions */}
               {item.status === 'confirmed' ? (
-                <span className="text-green-600 text-sm">✓ Added</span>
+                <span className="text-blue-600 text-sm">✓ Added</span>
               ) : item.status === 'hard' ? (
                 <div className="flex gap-2">
                   <button
                     onClick={() => confirmValidation(item.id)}
-                    className="px-3 py-1 bg-green-600 hover:bg-green-700 text-white text-xs font-medium rounded-full transition-colors"
+                    className="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium rounded-full transition-colors"
                   >
                     Confirm
                   </button>
@@ -318,7 +318,7 @@ export default function RepoBuilder({ userId, voiceTranscript, onPreferenceSaved
               ) : (
                 <button
                   onClick={() => confirmValidation(item.id)}
-                  className="px-3 py-1 bg-gray-200 hover:bg-green-100 text-gray-600 hover:text-green-700 text-xs font-medium rounded-full transition-colors"
+                  className="px-3 py-1 bg-gray-200 hover:bg-blue-100 text-gray-600 hover:text-blue-700 text-xs font-medium rounded-full transition-colors"
                 >
                   ✓
                 </button>

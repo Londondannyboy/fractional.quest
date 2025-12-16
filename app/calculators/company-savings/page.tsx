@@ -246,25 +246,25 @@ export default function CompanySavingsCalculator() {
                 <h3 className="text-lg font-bold text-gray-900 mb-4">Key Benefits</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <span className="text-green-500 mt-0.5">✓</span>
+                    <span className="text-blue-500 mt-0.5">✓</span>
                     <span className="text-gray-600">
                       <strong className="text-gray-900">Same strategic impact</strong> — Get experienced C-level expertise
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-500 mt-0.5">✓</span>
+                    <span className="text-blue-500 mt-0.5">✓</span>
                     <span className="text-gray-600">
                       <strong className="text-gray-900">Flexibility</strong> — Scale up or down as needs change
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-500 mt-0.5">✓</span>
+                    <span className="text-blue-500 mt-0.5">✓</span>
                     <span className="text-gray-600">
                       <strong className="text-gray-900">No long-term commitment</strong> — Month-to-month arrangements
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-500 mt-0.5">✓</span>
+                    <span className="text-blue-500 mt-0.5">✓</span>
                     <span className="text-gray-600">
                       <strong className="text-gray-900">Immediate availability</strong> — No 3-month notice periods
                     </span>

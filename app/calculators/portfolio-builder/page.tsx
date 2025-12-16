@@ -64,7 +64,7 @@ export default function PortfolioBuilderCalculator() {
   }, [targetIncome, dayRate, maxDaysPerWeek, clientMix])
 
   const riskColors = {
-    low: 'text-green-600 bg-green-50',
+    low: 'text-blue-600 bg-blue-50',
     medium: 'text-amber-600 bg-amber-50',
     high: 'text-red-600 bg-red-50'
   }
@@ -84,13 +84,13 @@ export default function PortfolioBuilderCalculator() {
       </div>
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-emerald-600 via-emerald-500 to-teal-500 py-16 md:py-24">
+      <section className="bg-gradient-to-br from-blue-600 via-blue-950/200 to-teal-500 py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <span className="section-label text-emerald-100 mb-4 block">Career Planning</span>
+          <span className="section-label text-blue-900/30 mb-4 block">Career Planning</span>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Portfolio Builder Calculator
           </h1>
-          <p className="text-xl text-emerald-100 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-900/30 max-w-2xl mx-auto">
             Plan your fractional portfolio career. See how many clients you need
             and optimize your work-life balance.
           </p>

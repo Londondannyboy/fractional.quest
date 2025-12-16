@@ -23,11 +23,11 @@ export default function FinanceConsultantsPage() {
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <Link href="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm"><span className="mr-2">←</span> Back to Home</Link>
             <div className="max-w-4xl">
-              <span className="inline-block bg-emerald-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">Popular Roles</span>
-              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9]">Finance<br /><span className="text-emerald-400">Consultants</span></h1>
+              <span className="inline-block bg-blue-950/200 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">Popular Roles</span>
+              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9]">Finance<br /><span className="text-blue-400">Consultants</span></h1>
               <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">Hire experienced finance professionals on a fractional basis. Get expert financial strategy, planning, and analysis without the cost of a full finance team.</p>
               <div className="flex flex-wrap gap-4">
-                <Link href="#contact" className="px-8 py-4 bg-emerald-500 text-white font-bold uppercase tracking-wider hover:bg-emerald-400 transition-colors">Find a Consultant</Link>
+                <Link href="#contact" className="px-8 py-4 bg-blue-950/200 text-white font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">Find a Consultant</Link>
                 <Link href="/fractional-cfo-services" className="px-8 py-4 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Fractional CFO</Link>
               </div>
             </div>
@@ -48,7 +48,7 @@ export default function FinanceConsultantsPage() {
               { title: 'Systems Implementation', description: 'Select and implement accounting and financial planning systems.' },
               { title: 'M&A Support', description: 'Financial due diligence, valuation, and deal support.' },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-gray-50 border-l-4 border-emerald-500">
+              <div key={i} className="p-6 bg-gray-50 border-l-4 border-blue-950/200">
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.description}</p>
               </div>
@@ -70,7 +70,7 @@ export default function FinanceConsultantsPage() {
               'Navigating M&A transactions or exit planning',
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-3 p-4 bg-white border border-gray-200">
-                <span className="text-emerald-500 font-bold">✓</span>
+                <span className="text-blue-950/200 font-bold">✓</span>
                 <span className="text-gray-700">{item}</span>
               </div>
             ))}
@@ -83,7 +83,7 @@ export default function FinanceConsultantsPage() {
           <h2 className="text-4xl font-black mb-6">Find a Finance Consultant</h2>
           <p className="text-xl text-gray-400 mb-10">Tell us about your financial needs and we'll match you with experienced finance professionals.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/handler/sign-up" className="px-10 py-5 bg-emerald-500 text-white font-bold uppercase tracking-wider hover:bg-emerald-400 transition-colors">Get Started</Link>
+            <Link href="/handler/sign-up" className="px-10 py-5 bg-blue-950/200 text-white font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">Get Started</Link>
             <Link href="/fractional-finance" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Explore Finance Leadership</Link>
           </div>
         </div>

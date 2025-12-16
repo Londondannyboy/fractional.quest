@@ -170,16 +170,16 @@ export function FractionalVsFullTimeComparison({ className = '' }: FractionalVsF
           </div>
 
           {/* Fractional Cost */}
-          <div className="bg-green-50 border border-green-200 rounded-xl p-6">
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
               <h4 className="font-semibold text-gray-900">Fractional {role.label}</h4>
             </div>
-            <div className="text-3xl font-bold text-green-700 mb-2">
+            <div className="text-3xl font-bold text-blue-700 mb-2">
               {formatCurrency(fractionalAnnualCost)}
             </div>
             <p className="text-sm text-gray-600">per year ({daysNeeded} days/week x 48 weeks)</p>
-            <div className="mt-4 pt-4 border-t border-green-200 space-y-2 text-sm text-gray-600">
+            <div className="mt-4 pt-4 border-t border-blue-200 space-y-2 text-sm text-gray-600">
               <div className="flex justify-between">
                 <span>Day rate</span>
                 <span>{formatCurrency(role.avgDayRate)}</span>
@@ -226,27 +226,27 @@ export function FractionalVsFullTimeComparison({ className = '' }: FractionalVsF
               <tr>
                 <td className="px-4 py-3 text-gray-600">Time to hire</td>
                 <td className="px-4 py-3 text-center text-red-600">3-6 months</td>
-                <td className="px-4 py-3 text-center text-green-700">2-4 weeks</td>
+                <td className="px-4 py-3 text-center text-blue-700">2-4 weeks</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 text-gray-600">Commitment</td>
                 <td className="px-4 py-3 text-center text-red-600">Permanent</td>
-                <td className="px-4 py-3 text-center text-green-700">Flexible</td>
+                <td className="px-4 py-3 text-center text-blue-700">Flexible</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 text-gray-600">Experience level</td>
                 <td className="px-4 py-3 text-center text-gray-900">Varies</td>
-                <td className="px-4 py-3 text-center text-green-700">15+ years typical</td>
+                <td className="px-4 py-3 text-center text-blue-700">15+ years typical</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 text-gray-600">Scale up/down</td>
                 <td className="px-4 py-3 text-center text-red-600">Difficult</td>
-                <td className="px-4 py-3 text-center text-green-700">Easy</td>
+                <td className="px-4 py-3 text-center text-blue-700">Easy</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 text-gray-600">Equity required</td>
                 <td className="px-4 py-3 text-center text-red-600">Usually yes</td>
-                <td className="px-4 py-3 text-center text-green-700">Rarely</td>
+                <td className="px-4 py-3 text-center text-blue-700">Rarely</td>
               </tr>
             </tbody>
           </table>

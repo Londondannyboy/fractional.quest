@@ -367,7 +367,7 @@ export default function OnboardingPage() {
                         onClick={() => handleInterestToggle(role)}
                         className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
                           formData.interests.includes(role)
-                            ? 'bg-green-600 text-white'
+                            ? 'bg-blue-600 text-white'
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                         }`}
                       >

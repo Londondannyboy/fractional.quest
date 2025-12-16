@@ -184,7 +184,7 @@ export function SkillGraph({ userId }: { userId?: string }) {
             <p>Category: <span className="capitalize">{selectedNode.category}</span></p>
             <p>Level: {selectedNode.level === 1 ? 'Core Skill' : 'Specialization'}</p>
             {data.userSkillIds.includes(selectedNode.id) && (
-              <p className="text-green-600 mt-1">You have this skill</p>
+              <p className="text-blue-600 mt-1">You have this skill</p>
             )}
           </div>
         </div>

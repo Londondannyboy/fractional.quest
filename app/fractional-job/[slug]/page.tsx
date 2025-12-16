@@ -552,7 +552,7 @@ export default async function JobDetailPage({ params }: PageProps) {
                   <ul className="space-y-3">
                     {job.requirements.map((item: string, idx: number) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <svg className="flex-shrink-0 w-5 h-5 text-emerald-500 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="flex-shrink-0 w-5 h-5 text-blue-950/200 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                         <span className="text-gray-700 leading-7">{item}</span>

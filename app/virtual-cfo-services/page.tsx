@@ -49,12 +49,12 @@ export default function VirtualCFOServicesPage() {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50/30 to-slate-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-950/20/30 to-slate-50">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           <nav className="mb-8 flex items-center gap-2 text-sm text-slate-600">
-            <Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/fractional-cfo" className="hover:text-emerald-600 transition-colors">Fractional CFO</Link>
+            <Link href="/fractional-cfo" className="hover:text-blue-600 transition-colors">Fractional CFO</Link>
             <span>/</span>
             <span className="text-slate-900">Virtual CFO Services</span>
           </nav>
@@ -118,8 +118,8 @@ export default function VirtualCFOServicesPage() {
             <h2 className="text-3xl font-bold text-slate-900">Benefits of Virtual CFO Services</h2>
 
             <div className="not-prose grid gap-6 md:grid-cols-2 mb-6">
-              <div className="rounded-xl bg-emerald-50 p-6 ring-1 ring-emerald-100">
-                <h3 className="mb-3 text-lg font-bold text-emerald-900">Geographic Flexibility</h3>
+              <div className="rounded-xl bg-blue-950/20 p-6 ring-1 ring-blue-900/30">
+                <h3 className="mb-3 text-lg font-bold text-blue-900">Geographic Flexibility</h3>
                 <p className="text-sm text-slate-700">
                   Access top CFO talent nationwide regardless of location. Not limited to local candidates. Companies in smaller cities can access London-caliber expertise virtually.
                 </p>
@@ -162,16 +162,16 @@ export default function VirtualCFOServicesPage() {
             </ul>
           </section>
 
-          <div className="mb-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 p-8 text-white shadow-lg">
+          <div className="mb-12 rounded-xl bg-gradient-to-br from-blue-950/200 to-blue-600 p-8 text-white shadow-lg">
             <h2 className="mb-4 text-2xl font-bold">Find Virtual CFO Services</h2>
-            <p className="mb-6 text-emerald-50">
+            <p className="mb-6 text-blue-950/20">
               Fractional Quest connects businesses with experienced virtual/remote CFO professionals across the UK.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Link href="/fractional-cfo" className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-emerald-600 transition-all hover:bg-emerald-50">
+              <Link href="/fractional-cfo" className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-blue-600 transition-all hover:bg-blue-950/20">
                 Explore CFO Services
               </Link>
-              <Link href="/fractional-cfo-jobs-remote" className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-emerald-700">
+              <Link href="/fractional-cfo-jobs-remote" className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-all hover:bg-blue-700">
                 Browse Remote CFO Jobs
               </Link>
             </div>
@@ -183,19 +183,19 @@ export default function VirtualCFOServicesPage() {
             <h2 className="mb-6 text-2xl font-bold text-slate-900">Related Resources</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               <Link href="/fractional-cfo" className="group rounded-lg bg-white p-4 shadow-sm hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Fractional CFO Guide</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Fractional CFO Guide</h3>
                 <p className="mt-1 text-sm text-slate-600">Complete guide to fractional CFO services</p>
               </Link>
               <Link href="/fractional-cfo-jobs-remote" className="group rounded-lg bg-white p-4 shadow-sm hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Remote CFO Jobs</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Remote CFO Jobs</h3>
                 <p className="mt-1 text-sm text-slate-600">Find virtual CFO opportunities</p>
               </Link>
               <Link href="/outsourced-cfo-services" className="group rounded-lg bg-white p-4 shadow-sm hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">Outsourced CFO Services</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Outsourced CFO Services</h3>
                 <p className="mt-1 text-sm text-slate-600">External CFO solutions</p>
               </Link>
               <Link href="/fractional-cfo-companies" className="group rounded-lg bg-white p-4 shadow-sm hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-emerald-600">CFO Service Providers</h3>
+                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">CFO Service Providers</h3>
                 <p className="mt-1 text-sm text-slate-600">Compare virtual CFO companies</p>
               </Link>
             </div>

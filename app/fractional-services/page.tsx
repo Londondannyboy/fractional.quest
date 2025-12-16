@@ -22,10 +22,10 @@ export default function FractionalServicesPage() {
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <Link href="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm"><span className="mr-2">←</span> Back to Home</Link>
             <div className="max-w-4xl">
-              <span className="inline-block bg-emerald-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">Executive Services</span>
-              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9]">Fractional<br /><span className="text-emerald-400">Services</span></h1>
+              <span className="inline-block bg-blue-950/200 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">Executive Services</span>
+              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9]">Fractional<br /><span className="text-blue-400">Services</span></h1>
               <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">Access senior executive talent on a part-time basis. Get the leadership expertise your business needs without the full-time cost or commitment.</p>
-              <Link href="#services" className="px-8 py-4 bg-emerald-500 text-white font-bold uppercase tracking-wider hover:bg-emerald-400 transition-colors inline-block">Explore Services</Link>
+              <Link href="#services" className="px-8 py-4 bg-blue-950/200 text-white font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors inline-block">Explore Services</Link>
             </div>
           </div>
         </div>
@@ -34,19 +34,19 @@ export default function FractionalServicesPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-black text-gray-900 mb-6">What Are Fractional Services?</h2>
-          <p className="text-xl text-gray-600 leading-relaxed mb-6">Fractional services provide businesses access to experienced executives who work part-time—typically 1-3 days per week. Instead of hiring a full-time executive, you get senior expertise at a fraction of the cost. The <a href="https://www.rec.uk.com/our-view/news/press-releases/flexible-working-trends" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">REC research</a> shows UK businesses increasingly embrace flexible executive arrangements as the future of senior talent.</p>
-          <p className="text-gray-600 mb-6">This model is ideal for growing businesses that need strategic leadership but aren't ready for (or don't need) full-time executive hires. Fractional executives bring experience from multiple companies and industries, offering perspective that full-time hires often lack. As highlighted by <a href="https://www.ft.com/work-careers" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">Financial Times analysis</a>, the portfolio career model represents a fundamental shift in how senior executives structure their work.</p>
+          <p className="text-xl text-gray-600 leading-relaxed mb-6">Fractional services provide businesses access to experienced executives who work part-time—typically 1-3 days per week. Instead of hiring a full-time executive, you get senior expertise at a fraction of the cost. The <a href="https://www.rec.uk.com/our-view/news/press-releases/flexible-working-trends" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">REC research</a> shows UK businesses increasingly embrace flexible executive arrangements as the future of senior talent.</p>
+          <p className="text-gray-600 mb-6">This model is ideal for growing businesses that need strategic leadership but aren't ready for (or don't need) full-time executive hires. Fractional executives bring experience from multiple companies and industries, offering perspective that full-time hires often lack. As highlighted by <a href="https://www.ft.com/work-careers" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Financial Times analysis</a>, the portfolio career model represents a fundamental shift in how senior executives structure their work.</p>
           <div className="grid md:grid-cols-3 gap-6 mt-10">
             <div className="p-6 bg-gray-50 text-center">
-              <div className="text-4xl font-black text-emerald-500 mb-2">60%</div>
+              <div className="text-4xl font-black text-blue-950/200 mb-2">60%</div>
               <p className="text-gray-600 text-sm">Cost savings vs full-time</p>
             </div>
             <div className="p-6 bg-gray-50 text-center">
-              <div className="text-4xl font-black text-emerald-500 mb-2">1-3</div>
+              <div className="text-4xl font-black text-blue-950/200 mb-2">1-3</div>
               <p className="text-gray-600 text-sm">Days per week typical</p>
             </div>
             <div className="p-6 bg-gray-50 text-center">
-              <div className="text-4xl font-black text-emerald-500 mb-2">2 wks</div>
+              <div className="text-4xl font-black text-blue-950/200 mb-2">2 wks</div>
               <p className="text-gray-600 text-sm">Average time to start</p>
             </div>
           </div>
@@ -68,7 +68,7 @@ export default function FractionalServicesPage() {
               { title: 'Fractional CISO', description: 'Security strategy, compliance, and risk leadership.', link: '/fractional-ciso-services', color: 'red' },
               { title: 'Fractional CDO', description: 'Data strategy, analytics, and AI leadership.', link: '/fractional-cdo-services', color: 'cyan' },
             ].map((item, i) => (
-              <Link key={i} href={item.link} className="block p-6 bg-white border border-gray-200 hover:border-emerald-500 transition-colors">
+              <Link key={i} href={item.link} className="block p-6 bg-white border border-gray-200 hover:border-blue-950/200 transition-colors">
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.description}</p>
               </Link>
@@ -87,7 +87,7 @@ export default function FractionalServicesPage() {
               { title: 'PE Portfolio Companies', description: 'Need rapid value creation with experienced operators.' },
               { title: 'Companies in Transition', description: 'Facing strategic challenges that need expert guidance.' },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-gray-50 border-l-4 border-emerald-500">
+              <div key={i} className="p-6 bg-gray-50 border-l-4 border-blue-950/200">
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.description}</p>
               </div>
@@ -100,7 +100,7 @@ export default function FractionalServicesPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-black mb-6">Find Fractional Executive Services</h2>
           <p className="text-xl text-gray-400 mb-10">Tell us what leadership expertise you need and we'll match you with experienced fractional executives.</p>
-          <Link href="/handler/sign-up" className="px-10 py-5 bg-emerald-500 text-white font-bold uppercase tracking-wider hover:bg-emerald-400 transition-colors inline-block">Get Started</Link>
+          <Link href="/handler/sign-up" className="px-10 py-5 bg-blue-950/200 text-white font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors inline-block">Get Started</Link>
         </div>
       </section>
     </div>

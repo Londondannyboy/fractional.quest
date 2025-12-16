@@ -63,12 +63,12 @@ export default function FractionalCROServicesPage() {
               <span className="mr-2">←</span> Back to Home
             </Link>
             <div className="max-w-4xl">
-              <span className="inline-block bg-green-500 text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
+              <span className="inline-block bg-blue-500 text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Revenue Leadership
               </span>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Fractional CRO<br />
-                <span className="text-green-400">Services UK</span>
+                <span className="text-blue-400">Services UK</span>
               </h1>
               <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mb-8">
                 Hire a <strong className="text-white">Fractional CRO</strong> to accelerate your revenue.
@@ -76,7 +76,7 @@ export default function FractionalCROServicesPage() {
               </p>
               <div className="flex flex-wrap gap-8 mb-10">
                 <div>
-                  <div className="text-4xl md:text-5xl font-black text-green-400">50%</div>
+                  <div className="text-4xl md:text-5xl font-black text-blue-400">50%</div>
                   <div className="text-white/60 text-sm uppercase tracking-wider">Cost Savings</div>
                 </div>
                 <div>
@@ -89,7 +89,7 @@ export default function FractionalCROServicesPage() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-4">
-                <Link href="#contact" className="px-8 py-4 bg-green-500 text-black font-bold uppercase tracking-wider hover:bg-green-400 transition-colors">
+                <Link href="#contact" className="px-8 py-4 bg-blue-500 text-black font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">
                   Hire a Fractional CRO
                 </Link>
                 <Link href="#responsibilities" className="px-8 py-4 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">
@@ -113,16 +113,16 @@ export default function FractionalCROServicesPage() {
               A <strong className="font-semibold text-gray-900">Fractional CRO</strong> (Chief Revenue Officer) is an experienced revenue executive who works with your company on a part-time basis—typically 1-3 days per week. You get strategic leadership across your entire revenue engine—sales, marketing, and customer success—without the commitment and cost of a full-time hire.
             </p>
             <p>
-              Unlike a VP of Sales who focuses only on selling, a fractional CRO takes a holistic view of revenue. They align all customer-facing functions, optimise the full buyer journey, and build the systems for predictable, scalable revenue growth. Applying insights from <a href="https://www.salesmanagementstudy.com/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline">Sales Management Association</a> research and <a href="https://www.pavilion.io/resources" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline">Pavilion frameworks</a>, they bring proven revenue methodologies to growing companies.
+              Unlike a VP of Sales who focuses only on selling, a fractional CRO takes a holistic view of revenue. They align all customer-facing functions, optimise the full buyer journey, and build the systems for predictable, scalable revenue growth. Applying insights from <a href="https://www.salesmanagementstudy.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Sales Management Association</a> research and <a href="https://www.pavilion.io/resources" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Pavilion frameworks</a>, they bring proven revenue methodologies to growing companies.
             </p>
-            <div className="bg-gray-50 p-8 my-10 border-l-4 border-green-500">
+            <div className="bg-gray-50 p-8 my-10 border-l-4 border-blue-500">
               <p className="text-xl font-semibold text-gray-900 mb-0">
                 "A fractional CRO connects the dots between marketing, sales, and customer success to create a true revenue machine."
               </p>
             </div>
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Beyond Siloed Sales and Marketing</h3>
             <p>
-              In many companies, sales and marketing operate as separate functions with different goals and metrics. This creates friction, blame games, and leaked revenue. A fractional CRO breaks down these silos, creating unified revenue operations that drive predictable growth. Using <a href="https://www.aa-isp.org/resources/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline">AA-ISP best practices</a> and <a href="https://www.saastr.com/blog/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline">SaaStr insights</a>, they implement the revenue operations that scale efficiently.
+              In many companies, sales and marketing operate as separate functions with different goals and metrics. This creates friction, blame games, and leaked revenue. A fractional CRO breaks down these silos, creating unified revenue operations that drive predictable growth. Using <a href="https://www.aa-isp.org/resources/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">AA-ISP best practices</a> and <a href="https://www.saastr.com/blog/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">SaaStr insights</a>, they implement the revenue operations that scale efficiently.
             </p>
           </div>
         </div>
@@ -174,7 +174,7 @@ export default function FractionalCROServicesPage() {
                 icon: '❤️',
               },
             ].map((item, index) => (
-              <div key={index} className="bg-white p-6 border border-gray-200 hover:border-green-300 transition-colors">
+              <div key={index} className="bg-white p-6 border border-gray-200 hover:border-blue-300 transition-colors">
                 <div className="text-3xl mb-4">{item.icon}</div>
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.description}</p>
@@ -224,9 +224,9 @@ export default function FractionalCROServicesPage() {
                 statLabel: 'GTM Playbooks',
               },
             ].map((benefit, index) => (
-              <div key={index} className="flex gap-6 p-6 bg-gray-50 border-l-4 border-green-500">
+              <div key={index} className="flex gap-6 p-6 bg-gray-50 border-l-4 border-blue-500">
                 <div className="flex-shrink-0 text-center">
-                  <div className="text-3xl font-black text-green-600">{benefit.stat}</div>
+                  <div className="text-3xl font-black text-blue-600">{benefit.stat}</div>
                   <div className="text-xs text-gray-500 uppercase tracking-wider">{benefit.statLabel}</div>
                 </div>
                 <div>
@@ -282,7 +282,7 @@ export default function FractionalCROServicesPage() {
               <div key={index} className="bg-white p-6 border border-gray-200">
                 <h3 className="font-bold text-gray-900 mb-2">{item.scenario}</h3>
                 <p className="text-gray-600 text-sm mb-3">{item.description}</p>
-                <span className="inline-block text-xs font-bold text-green-600 uppercase tracking-wider">{item.timing}</span>
+                <span className="inline-block text-xs font-bold text-blue-600 uppercase tracking-wider">{item.timing}</span>
               </div>
             ))}
           </div>
@@ -327,13 +327,13 @@ export default function FractionalCROServicesPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-4 block">Get Started</span>
           <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
-            Ready to Hire a<br /><span className="text-green-400">Fractional CRO?</span>
+            Ready to Hire a<br /><span className="text-blue-400">Fractional CRO?</span>
           </h2>
           <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
             Tell us about your revenue challenges and we'll match you with pre-vetted fractional CROs who have solved them before.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/handler/sign-up" className="px-10 py-5 bg-green-500 text-black font-bold uppercase tracking-wider hover:bg-green-400 transition-colors">
+            <Link href="/handler/sign-up" className="px-10 py-5 bg-blue-500 text-black font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">
               Find a Fractional CRO
             </Link>
             <Link href="/fractional-cro-jobs-uk" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">
@@ -349,9 +349,9 @@ export default function FractionalCROServicesPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related Services</span>
             <div className="flex flex-wrap gap-4">
-              <Link href="/fractional-cmo-services" className="text-gray-600 hover:text-green-600 font-medium transition-colors">Fractional CMO</Link>
-              <Link href="/fractional-coo-services" className="text-gray-600 hover:text-green-600 font-medium transition-colors">Fractional COO</Link>
-              <Link href="/fractional-cfo-services" className="text-gray-600 hover:text-green-600 font-medium transition-colors">Fractional CFO</Link>
+              <Link href="/fractional-cmo-services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Fractional CMO</Link>
+              <Link href="/fractional-coo-services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Fractional COO</Link>
+              <Link href="/fractional-cfo-services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Fractional CFO</Link>
             </div>
           </div>
         </div>

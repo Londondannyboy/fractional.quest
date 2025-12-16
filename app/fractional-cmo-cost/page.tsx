@@ -50,39 +50,39 @@ export default function FractionalCMOCostPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-emerald-600 to-emerald-500 py-24">
+      <section className="bg-gradient-to-br from-blue-600 to-blue-950/200 py-24">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <Link href="/fractional-cmo" className="text-emerald-100 hover:text-white mb-8 inline-flex items-center text-sm">
+          <Link href="/fractional-cmo" className="text-blue-900/30 hover:text-white mb-8 inline-flex items-center text-sm">
             <span className="mr-2">←</span> Back to Fractional CMO Guide
           </Link>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="inline-block bg-black text-emerald-400 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
+              <span className="inline-block bg-black text-blue-400 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Pricing Guide 2025
               </span>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight">
                 Fractional CMO<br />Cost
               </h1>
-              <p className="text-2xl md:text-3xl text-emerald-50 leading-relaxed font-light mb-8">
+              <p className="text-2xl md:text-3xl text-blue-950/20 leading-relaxed font-light mb-8">
                 Complete UK pricing guide. Day rates, monthly retainers, and ROI comparison vs full-time.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-white/10 backdrop-blur p-6 rounded-lg border border-white/20">
                 <div className="text-4xl font-black text-white mb-2">£700-1.4k</div>
-                <div className="text-emerald-100 text-sm">Day Rate Range</div>
+                <div className="text-blue-900/30 text-sm">Day Rate Range</div>
               </div>
               <div className="bg-white/10 backdrop-blur p-6 rounded-lg border border-white/20">
                 <div className="text-4xl font-black text-white mb-2">£3-5.5k</div>
-                <div className="text-emerald-100 text-sm">Monthly Retainer</div>
+                <div className="text-blue-900/30 text-sm">Monthly Retainer</div>
               </div>
               <div className="bg-white/10 backdrop-blur p-6 rounded-lg border border-white/20">
                 <div className="text-4xl font-black text-white mb-2">40-60%</div>
-                <div className="text-emerald-100 text-sm">Cost Savings</div>
+                <div className="text-blue-900/30 text-sm">Cost Savings</div>
               </div>
               <div className="bg-white/10 backdrop-blur p-6 rounded-lg border border-white/20">
                 <div className="text-4xl font-black text-white mb-2">£70-140k</div>
-                <div className="text-emerald-100 text-sm">Annual Cost</div>
+                <div className="text-blue-900/30 text-sm">Annual Cost</div>
               </div>
             </div>
           </div>
@@ -116,8 +116,8 @@ export default function FractionalCMOCostPage() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Day Rate */}
-            <div className="bg-white p-8 rounded-lg shadow-sm border-2 border-gray-200 hover:border-emerald-300 transition-all">
-              <div className="text-emerald-600 font-bold text-sm uppercase tracking-wider mb-4">Option 1</div>
+            <div className="bg-white p-8 rounded-lg shadow-sm border-2 border-gray-200 hover:border-blue-700 transition-all">
+              <div className="text-blue-600 font-bold text-sm uppercase tracking-wider mb-4">Option 1</div>
               <h3 className="text-2xl font-black text-gray-900 mb-4">Day Rate</h3>
               <div className="mb-6">
                 <div className="text-5xl font-black text-gray-900">£700-£1,400</div>
@@ -141,11 +141,11 @@ export default function FractionalCMOCostPage() {
             </div>
 
             {/* Monthly Retainer */}
-            <div className="bg-emerald-50 p-8 rounded-lg shadow-md border-2 border-emerald-400 relative">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-600 text-white px-4 py-1 text-xs font-bold uppercase rounded-full">
+            <div className="bg-blue-950/20 p-8 rounded-lg shadow-md border-2 border-blue-400 relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-4 py-1 text-xs font-bold uppercase rounded-full">
                 Most Popular
               </div>
-              <div className="text-emerald-700 font-bold text-sm uppercase tracking-wider mb-4">Option 2</div>
+              <div className="text-blue-700 font-bold text-sm uppercase tracking-wider mb-4">Option 2</div>
               <h3 className="text-2xl font-black text-gray-900 mb-4">Monthly Retainer</h3>
               <div className="mb-6">
                 <div className="text-5xl font-black text-gray-900">£3k-£5.5k</div>
@@ -160,7 +160,7 @@ export default function FractionalCMOCostPage() {
                   <li>• Team management & strategy</li>
                 </ul>
               </div>
-              <div className="border-t border-emerald-200 pt-6">
+              <div className="border-t border-blue-800/40 pt-6">
                 <div className="text-sm font-bold text-gray-900 mb-2">Example Cost:</div>
                 <div className="text-gray-700 text-sm">
                   £4,500/month retainer (6-8 days) = £54,000/year
@@ -169,8 +169,8 @@ export default function FractionalCMOCostPage() {
             </div>
 
             {/* Project-Based */}
-            <div className="bg-white p-8 rounded-lg shadow-sm border-2 border-gray-200 hover:border-emerald-300 transition-all">
-              <div className="text-emerald-600 font-bold text-sm uppercase tracking-wider mb-4">Option 3</div>
+            <div className="bg-white p-8 rounded-lg shadow-sm border-2 border-gray-200 hover:border-blue-700 transition-all">
+              <div className="text-blue-600 font-bold text-sm uppercase tracking-wider mb-4">Option 3</div>
               <h3 className="text-2xl font-black text-gray-900 mb-4">Project-Based</h3>
               <div className="mb-6">
                 <div className="text-5xl font-black text-gray-900">£10k-£50k</div>
@@ -194,7 +194,7 @@ export default function FractionalCMOCostPage() {
             </div>
           </div>
 
-          <div className="bg-emerald-50 border-l-4 border-emerald-600 p-8 rounded-lg">
+          <div className="bg-blue-950/20 border-l-4 border-blue-600 p-8 rounded-lg">
             <div className="flex items-start gap-4">
               <div className="text-3xl">💡</div>
               <div>
@@ -223,7 +223,7 @@ export default function FractionalCMOCostPage() {
           <div className="overflow-x-auto mb-12">
             <table className="w-full border-collapse bg-white shadow-sm rounded-lg overflow-hidden">
               <thead>
-                <tr className="bg-emerald-50 border-b-2 border-emerald-600">
+                <tr className="bg-blue-950/20 border-b-2 border-blue-600">
                   <th className="text-left p-6 font-bold text-gray-900">Experience Level</th>
                   <th className="text-left p-6 font-bold text-gray-900">Day Rate</th>
                   <th className="text-left p-6 font-bold text-gray-900">Annual Cost (2 days/week)</th>
@@ -233,19 +233,19 @@ export default function FractionalCMOCostPage() {
               <tbody>
                 <tr className="border-b hover:bg-gray-50">
                   <td className="p-6 font-semibold text-gray-900">Entry-Level Fractional CMO</td>
-                  <td className="p-6 text-emerald-700 font-bold text-lg">£700-£900</td>
+                  <td className="p-6 text-blue-700 font-bold text-lg">£700-£900</td>
                   <td className="p-6 text-gray-700">£70k-£95k</td>
                   <td className="p-6 text-gray-600">10-15 years</td>
                 </tr>
                 <tr className="border-b hover:bg-gray-50">
                   <td className="p-6 font-semibold text-gray-900">Mid-Level Fractional CMO</td>
-                  <td className="p-6 text-emerald-700 font-bold text-lg">£900-£1,200</td>
+                  <td className="p-6 text-blue-700 font-bold text-lg">£900-£1,200</td>
                   <td className="p-6 text-gray-700">£95k-£125k</td>
                   <td className="p-6 text-gray-600">15-20 years</td>
                 </tr>
                 <tr className="border-b hover:bg-gray-50">
                   <td className="p-6 font-semibold text-gray-900">Senior Fractional CMO</td>
-                  <td className="p-6 text-emerald-700 font-bold text-lg">£1,200-£1,400</td>
+                  <td className="p-6 text-blue-700 font-bold text-lg">£1,200-£1,400</td>
                   <td className="p-6 text-gray-700">£125k-£145k</td>
                   <td className="p-6 text-gray-600">20+ years</td>
                 </tr>
@@ -300,10 +300,10 @@ export default function FractionalCMOCostPage() {
                 premium: '+10-15%',
               },
             ].map((item, index) => (
-              <div key={index} className="bg-white p-8 border-l-4 border-emerald-500 shadow-sm">
+              <div key={index} className="bg-white p-8 border-l-4 border-blue-950/200 shadow-sm">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl font-bold text-gray-900">{item.factor}</h3>
-                  <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-bold">
+                  <span className="bg-blue-900/30 text-blue-700 px-3 py-1 rounded-full text-sm font-bold">
                     {item.premium}
                   </span>
                 </div>
@@ -334,9 +334,9 @@ export default function FractionalCMOCostPage() {
               { location: 'Edinburgh', range: '£750-£1,000/day', note: 'FinTech hub, rates reflect sector specialization' },
               { location: 'Remote UK', range: '£650-£950/day', note: 'Fully remote CMOs often charge 10-15% less' },
             ].map((region, index) => (
-              <div key={index} className="bg-gray-50 p-6 border border-gray-200 rounded-lg hover:border-emerald-300 transition-colors">
+              <div key={index} className="bg-gray-50 p-6 border border-gray-200 rounded-lg hover:border-blue-700 transition-colors">
                 <h3 className="font-bold text-gray-900 mb-2">{region.location}</h3>
-                <div className="text-2xl font-black text-emerald-600 mb-3">{region.range}</div>
+                <div className="text-2xl font-black text-blue-600 mb-3">{region.range}</div>
                 <p className="text-gray-600 text-sm">{region.note}</p>
               </div>
             ))}
@@ -357,7 +357,7 @@ export default function FractionalCMOCostPage() {
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Fractional */}
-            <div className="bg-white p-10 rounded-lg shadow-lg border-2 border-emerald-400">
+            <div className="bg-white p-10 rounded-lg shadow-lg border-2 border-blue-400">
               <h3 className="text-2xl font-black text-gray-900 mb-6">Fractional CMO</h3>
               <div className="space-y-4 mb-8">
                 <div className="flex justify-between items-center pb-3 border-b">
@@ -381,10 +381,10 @@ export default function FractionalCMOCostPage() {
                   <span className="font-bold text-gray-900">£0</span>
                 </div>
               </div>
-              <div className="pt-6 border-t-2 border-emerald-600">
+              <div className="pt-6 border-t-2 border-blue-600">
                 <div className="flex justify-between items-center">
                   <span className="text-xl font-bold text-gray-900">Total Annual Cost:</span>
-                  <span className="text-4xl font-black text-emerald-600">£104k</span>
+                  <span className="text-4xl font-black text-blue-600">£104k</span>
                 </div>
               </div>
             </div>
@@ -423,10 +423,10 @@ export default function FractionalCMOCostPage() {
             </div>
           </div>
 
-          <div className="bg-emerald-600 text-white p-10 rounded-lg text-center">
+          <div className="bg-blue-600 text-white p-10 rounded-lg text-center">
             <div className="text-6xl font-black mb-4">£210,000</div>
             <p className="text-2xl mb-2">Annual Savings with Fractional</p>
-            <p className="text-emerald-100 text-lg">
+            <p className="text-blue-900/30 text-lg">
               That's a <strong>67% cost reduction</strong> while still getting strategic CMO-level expertise
             </p>
           </div>
@@ -447,7 +447,7 @@ export default function FractionalCMOCostPage() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 my-10 not-prose">
-              <div className="bg-green-50 border-2 border-green-200 p-6 rounded-lg">
+              <div className="bg-blue-50 border-2 border-blue-200 p-6 rounded-lg">
                 <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
                   <span className="text-2xl">✅</span> No Hidden Costs
                 </h3>
@@ -494,19 +494,19 @@ export default function FractionalCMOCostPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-emerald-600 text-white">
+      <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">
             Ready to Hire a Fractional CMO?
           </h2>
-          <p className="text-xl text-emerald-100 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-900/30 mb-10 max-w-2xl mx-auto">
             Browse 100+ live fractional CMO opportunities or post your role to find pre-vetted marketing leaders.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/fractional-cmo-jobs-uk" className="px-10 py-5 bg-white text-emerald-600 font-bold uppercase tracking-wider hover:bg-emerald-50 transition-colors">
+            <Link href="/fractional-cmo-jobs-uk" className="px-10 py-5 bg-white text-blue-600 font-bold uppercase tracking-wider hover:bg-blue-950/20 transition-colors">
               Browse CMO Jobs
             </Link>
-            <Link href="/handler/sign-up" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-emerald-600 transition-colors">
+            <Link href="/handler/sign-up" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-blue-600 transition-colors">
               Post a CMO Role
             </Link>
           </div>
@@ -519,19 +519,19 @@ export default function FractionalCMOCostPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related Resources</span>
             <div className="flex flex-wrap gap-4">
-              <Link href="/fractional-cmo" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">
+              <Link href="/fractional-cmo" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
                 Fractional CMO Guide
               </Link>
-              <Link href="/fractional-cmo-salary" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">
+              <Link href="/fractional-cmo-salary" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
                 CMO Salary Data
               </Link>
-              <Link href="/fractional-cmo-services" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">
+              <Link href="/fractional-cmo-services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
                 CMO Services
               </Link>
-              <Link href="/hire-fractional-cmo" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">
+              <Link href="/hire-fractional-cmo" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
                 How to Hire
               </Link>
-              <Link href="/fractional-cmo-meaning" className="text-gray-600 hover:text-emerald-600 font-medium transition-colors">
+              <Link href="/fractional-cmo-meaning" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
                 What is a Fractional CMO?
               </Link>
             </div>

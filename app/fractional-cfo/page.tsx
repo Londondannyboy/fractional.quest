@@ -159,7 +159,7 @@ export default function FractionalCFOGuidePage() {
           </div>
 
           <div className="prose prose-lg max-w-none">
-            <div className="bg-emerald-50 border-l-4 border-emerald-600 p-6 mb-8">
+            <div className="bg-blue-950/20 border-l-4 border-blue-600 p-6 mb-8">
               <p className="text-xl font-semibold text-gray-900 mb-2">Featured Snippet Definition</p>
               <p className="text-lg text-gray-700 mb-0">
                 A <strong>Fractional CFO</strong> is an experienced Chief Financial Officer who provides strategic financial leadership to companies on a part-time basis—typically working 1-3 days per week. Unlike consultants, fractional CFOs become embedded members of your leadership team, managing your finance function and driving outcomes at 50-70% less cost than a full-time hire.
@@ -294,7 +294,7 @@ export default function FractionalCFOGuidePage() {
                 <tbody className="bg-white">
                   <tr className="border-b">
                     <td className="p-4 font-semibold">Annual Cost</td>
-                    <td className="p-4 text-emerald-600 font-bold">£36,000-£120,000</td>
+                    <td className="p-4 text-blue-600 font-bold">£36,000-£120,000</td>
                     <td className="p-4 text-gray-600">£150,000-£250,000+</td>
                   </tr>
                   <tr className="border-b bg-gray-50">
@@ -304,27 +304,27 @@ export default function FractionalCFOGuidePage() {
                   </tr>
                   <tr className="border-b">
                     <td className="p-4 font-semibold">Flexibility</td>
-                    <td className="p-4 text-emerald-600">Scale up/down monthly</td>
+                    <td className="p-4 text-blue-600">Scale up/down monthly</td>
                     <td className="p-4 text-gray-600">Fixed commitment</td>
                   </tr>
                   <tr className="border-b bg-gray-50">
                     <td className="p-4 font-semibold">Notice Period</td>
-                    <td className="p-4 text-emerald-600">30 days typical</td>
+                    <td className="p-4 text-blue-600">30 days typical</td>
                     <td className="p-4 text-gray-600">3-6 months</td>
                   </tr>
                   <tr className="border-b">
                     <td className="p-4 font-semibold">Equity Required</td>
-                    <td className="p-4 text-emerald-600">Rarely</td>
+                    <td className="p-4 text-blue-600">Rarely</td>
                     <td className="p-4 text-gray-600">Often 0.5-2%</td>
                   </tr>
                   <tr className="border-b bg-gray-50">
                     <td className="p-4 font-semibold">Start Timeline</td>
-                    <td className="p-4 text-emerald-600">1-2 weeks</td>
+                    <td className="p-4 text-blue-600">1-2 weeks</td>
                     <td className="p-4 text-gray-600">3-6 months</td>
                   </tr>
                   <tr className="border-b">
                     <td className="p-4 font-semibold">Experience Level</td>
-                    <td className="p-4 text-emerald-600">Very senior (15+ years)</td>
+                    <td className="p-4 text-blue-600">Very senior (15+ years)</td>
                     <td className="p-4">Varies (8+ years)</td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -339,23 +339,23 @@ export default function FractionalCFOGuidePage() {
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">When to Choose Fractional</h3>
             <ul className="space-y-3 text-gray-700">
               <li className="flex items-start">
-                <span className="mr-3 text-emerald-600 font-bold">✓</span>
+                <span className="mr-3 text-blue-600 font-bold">✓</span>
                 <span>You're pre-Series B or under £20M revenue</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-3 text-emerald-600 font-bold">✓</span>
+                <span className="mr-3 text-blue-600 font-bold">✓</span>
                 <span>You need CFO expertise for fundraising, M&A, or strategic projects</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-3 text-emerald-600 font-bold">✓</span>
+                <span className="mr-3 text-blue-600 font-bold">✓</span>
                 <span>Your finance function is relatively straightforward</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-3 text-emerald-600 font-bold">✓</span>
+                <span className="mr-3 text-blue-600 font-bold">✓</span>
                 <span>You want flexibility to scale up or down</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-3 text-emerald-600 font-bold">✓</span>
+                <span className="mr-3 text-blue-600 font-bold">✓</span>
                 <span>Budget constraints prevent full-time hire</span>
               </li>
             </ul>
@@ -446,7 +446,7 @@ export default function FractionalCFOGuidePage() {
               </div>
             </div>
 
-            <div className="bg-emerald-50 border-l-4 border-emerald-600 p-6 my-8">
+            <div className="bg-blue-950/20 border-l-4 border-blue-600 p-6 my-8">
               <p className="text-lg font-semibold text-gray-900 mb-2">Quick Decision Framework</p>
               <p className="text-gray-700 mb-0">If you answered "yes" to 2+ scenarios above, you likely need fractional CFO support. Most companies engage a fractional CFO for 6-18 months, then either transition to full-time or continue fractionally as needed.</p>
             </div>
@@ -524,7 +524,7 @@ export default function FractionalCFOGuidePage() {
                     </div>
                     <div className="flex justify-between border-t pt-2">
                       <span className="font-bold">Annual cost</span>
-                      <span className="font-bold text-emerald-600">£100,800-£113,400</span>
+                      <span className="font-bold text-blue-600">£100,800-£113,400</span>
                     </div>
                   </div>
                 </div>
@@ -555,7 +555,7 @@ export default function FractionalCFOGuidePage() {
                 </div>
               </div>
               <div className="mt-8 pt-8 border-t border-gray-200 text-center">
-                <div className="text-3xl font-black text-emerald-600 mb-2">Save £93,600-£107,000 Annually</div>
+                <div className="text-3xl font-black text-blue-600 mb-2">Save £93,600-£107,000 Annually</div>
                 <div className="text-gray-600">That's 45-52% cost reduction vs full-time</div>
               </div>
             </div>
@@ -632,29 +632,29 @@ export default function FractionalCFOGuidePage() {
               <h4 className="text-xl font-bold text-gray-900 mb-4 mt-0">Minimum Requirements</h4>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
-                  <span className="mr-3 text-emerald-600 font-bold">✓</span>
+                  <span className="mr-3 text-blue-600 font-bold">✓</span>
                   <span><strong>15+ years finance experience</strong> including senior leadership roles</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-3 text-emerald-600 font-bold">✓</span>
+                  <span className="mr-3 text-blue-600 font-bold">✓</span>
                   <span><strong>Prior CFO or Finance Director role</strong> (or very senior Controller)</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-3 text-emerald-600 font-bold">✓</span>
+                  <span className="mr-3 text-blue-600 font-bold">✓</span>
                   <span><strong>Track record in fundraising, M&A, or scaling</strong> companies</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-3 text-emerald-600 font-bold">✓</span>
+                  <span className="mr-3 text-blue-600 font-bold">✓</span>
                   <span><strong>Strong communication skills</strong>—you'll pitch clients and present to boards</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-3 text-emerald-600 font-bold">✓</span>
+                  <span className="mr-3 text-blue-600 font-bold">✓</span>
                   <span><strong>Self-starter mentality</strong>—you're running a solo business</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-white p-8 my-8 border-l-4 border-emerald-600">
+            <div className="bg-white p-8 my-8 border-l-4 border-blue-600">
               <h4 className="text-xl font-bold text-gray-900 mb-4 mt-0">Helpful But Not Required</h4>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
@@ -744,7 +744,7 @@ export default function FractionalCFOGuidePage() {
                   <span className="font-semibold">Years 15-18:</span>
                   <span>First CFO role at startup/SME</span>
                 </div>
-                <div className="flex justify-between items-center pb-4 border-b bg-emerald-50 px-4 py-2">
+                <div className="flex justify-between items-center pb-4 border-b bg-blue-950/20 px-4 py-2">
                   <span className="font-semibold">Year 18+:</span>
                   <span className="font-bold">Transition to Fractional CFO</span>
                 </div>
@@ -786,7 +786,7 @@ export default function FractionalCFOGuidePage() {
                 </Link>
               </div>
 
-              <div className="bg-gray-50 p-6 border-l-4 border-emerald-600">
+              <div className="bg-gray-50 p-6 border-l-4 border-blue-600">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">2. Remote Fractional CFO Jobs</h4>
                 <p className="text-gray-700 mb-4">140+ remote fractional CFO roles—work from anywhere with UK, EU, or US companies.</p>
                 <Link href="/fractional-cfo-jobs-remote" className="inline-block px-4 py-2 bg-gray-900 text-white font-bold text-sm uppercase tracking-wider hover:bg-gray-700">
@@ -798,19 +798,19 @@ export default function FractionalCFOGuidePage() {
                 <h4 className="text-lg font-bold text-gray-900 mb-3">3. Related Role Opportunities</h4>
                 <div className="space-y-3">
                   <div>
-                    <Link href="/part-time-cfo-jobs-uk" className="font-semibold text-gray-900 hover:text-emerald-600">Part-Time CFO Jobs (170/mo)</Link>
+                    <Link href="/part-time-cfo-jobs-uk" className="font-semibold text-gray-900 hover:text-blue-600">Part-Time CFO Jobs (170/mo)</Link>
                     <p className="text-sm text-gray-600">Similar to fractional but often W-2/PAYE employment</p>
                   </div>
                   <div>
-                    <Link href="/contract-cfo-jobs" className="font-semibold text-gray-900 hover:text-emerald-600">Contract CFO Jobs (40/mo)</Link>
+                    <Link href="/contract-cfo-jobs" className="font-semibold text-gray-900 hover:text-blue-600">Contract CFO Jobs (40/mo)</Link>
                     <p className="text-sm text-gray-600">Fixed-term contracts, typically 6-18 months</p>
                   </div>
                   <div>
-                    <Link href="/fractional-controller-jobs" className="font-semibold text-gray-900 hover:text-emerald-600">Fractional Controller Jobs (140/mo)</Link>
+                    <Link href="/fractional-controller-jobs" className="font-semibold text-gray-900 hover:text-blue-600">Fractional Controller Jobs (140/mo)</Link>
                     <p className="text-sm text-gray-600">Step up from Controller to fractional CFO roles</p>
                   </div>
                   <div>
-                    <Link href="/interim-cfo" className="font-semibold text-gray-900 hover:text-emerald-600">Interim CFO Jobs</Link>
+                    <Link href="/interim-cfo" className="font-semibold text-gray-900 hover:text-blue-600">Interim CFO Jobs</Link>
                     <p className="text-sm text-gray-600">Temporary full-time coverage during transitions</p>
                   </div>
                 </div>
@@ -862,7 +862,7 @@ export default function FractionalCFOGuidePage() {
                 <div className="text-sm text-gray-600">Monthly job searches</div>
               </div>
               <div className="bg-gray-50 p-6 text-center">
-                <div className="text-4xl font-black text-emerald-600 mb-2">+50%</div>
+                <div className="text-4xl font-black text-blue-600 mb-2">+50%</div>
                 <div className="text-sm text-gray-600">YoY growth in "services"</div>
               </div>
               <div className="bg-gray-50 p-6 text-center">

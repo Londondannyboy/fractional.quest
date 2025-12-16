@@ -66,7 +66,7 @@ export function ShareButtons({ title, company, slug }: ShareButtonsProps) {
         onClick={copyLink}
         className={`flex-1 p-3 transition-colors ${
           copied
-            ? 'bg-green-500 text-white'
+            ? 'bg-blue-500 text-white'
             : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
         }`}
         title={copied ? 'Copied!' : 'Copy Link'}

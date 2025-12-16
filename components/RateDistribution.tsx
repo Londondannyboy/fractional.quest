@@ -101,7 +101,7 @@ export function RateDistribution({ height = '400px', roleFilter }: RateDistribut
           <p className="text-xs text-gray-500 mt-1">Median Day Rate</p>
         </div>
         <div className="bg-gray-900/50 rounded-lg p-4 text-center">
-          <p className="text-3xl font-bold text-emerald-400">100%</p>
+          <p className="text-3xl font-bold text-blue-400">100%</p>
           <p className="text-xs text-gray-500 mt-1">Market Coverage</p>
         </div>
       </div>

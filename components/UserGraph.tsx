@@ -160,7 +160,7 @@ export function UserGraph({ userId, refreshTrigger = 0 }: UserGraphProps) {
                   <p className="text-gray-600 text-xs">Companies</p>
                 </div>
                 <div className="text-center">
-                  <span className="font-semibold text-green-600">{stats.matchedJobCount}</span>
+                  <span className="font-semibold text-blue-600">{stats.matchedJobCount}</span>
                   <p className="text-gray-600 text-xs">Matches</p>
                 </div>
               </>

@@ -101,7 +101,7 @@ export default function FractionalCFOHourlyRatePage() {
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional CFO Hourly Rate: 2025 Benchmarks</h2>
           </div>
 
-          <div className="bg-emerald-50 border-l-4 border-emerald-600 p-8 mb-12">
+          <div className="bg-blue-950/20 border-l-4 border-blue-600 p-8 mb-12">
             <p className="text-2xl md:text-3xl font-light text-gray-900 leading-relaxed mb-0">
               UK fractional CFOs charge <strong className="font-bold">£150-£500 per hour</strong> with an average of <strong>£200-£350/hour</strong>. Rates depend on experience level, industry expertise, location, and project complexity. Most fractional CFOs prefer <strong>day rates</strong> (£700-£1,500/day) over hourly billing due to better value and less admin.
             </p>
@@ -222,9 +222,9 @@ export default function FractionalCFOHourlyRatePage() {
               <p className="text-sm text-gray-700">DeepTech hub. Life sciences. Premium rates for specialized expertise.</p>
             </div>
 
-            <div className="bg-white p-6 border-2 border-emerald-600">
+            <div className="bg-white p-6 border-2 border-blue-600">
               <h3 className="text-lg font-bold text-gray-900 mb-3">Remote (UK)</h3>
-              <div className="text-3xl font-black text-emerald-600 mb-2">£150-£350</div>
+              <div className="text-3xl font-black text-blue-600 mb-2">£150-£350</div>
               <p className="text-sm text-gray-600 mb-4">per hour</p>
               <p className="text-sm text-gray-700">Best value. Access to UK-wide talent. 20-30% cost savings vs London.</p>
             </div>
@@ -251,9 +251,9 @@ export default function FractionalCFOHourlyRatePage() {
                 </tr>
               </thead>
               <tbody className="text-gray-700">
-                <tr className="border-b bg-emerald-50">
+                <tr className="border-b bg-blue-950/20">
                   <td className="p-4 font-semibold">SaaS / Tech</td>
-                  <td className="p-4 text-emerald-600 font-bold">£250-£500</td>
+                  <td className="p-4 text-blue-600 font-bold">£250-£500</td>
                   <td className="p-4">+20-30%</td>
                   <td className="p-4 text-sm">High demand, specialized metrics (ARR, CAC, LTV), fundraising expertise</td>
                 </tr>
@@ -322,7 +322,7 @@ export default function FractionalCFOHourlyRatePage() {
                 <p className="text-gray-700 mb-0">Premium rates due to high-stakes nature. CFO builds investor model, manages due diligence, presents to VCs. Often structured as fixed-fee project (£25-50k for Series A).</p>
               </div>
 
-              <div className="bg-white p-8 border-l-4 border-emerald-600">
+              <div className="bg-white p-8 border-l-4 border-blue-600">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">M&A / Due Diligence</h3>
                 <div className="flex items-baseline gap-4 mb-4">
                   <span className="text-3xl font-black text-gray-900">£350-£500</span>
@@ -340,7 +340,7 @@ export default function FractionalCFOHourlyRatePage() {
                 <p className="text-gray-700 mb-0">Top-tier rates for rare expertise. Building audit controls, implementing SOX compliance, preparing for public company reporting.</p>
               </div>
 
-              <div className="bg-white p-8 border-l-4 border-emerald-600">
+              <div className="bg-white p-8 border-l-4 border-blue-600">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">Turnaround / Restructuring</h3>
                 <div className="flex items-baseline gap-4 mb-4">
                   <span className="text-3xl font-black text-gray-900">£300-£450</span>
@@ -358,7 +358,7 @@ export default function FractionalCFOHourlyRatePage() {
                 <p className="text-gray-700 mb-0">Standard rates for ongoing fractional work. Board reporting, FP&A, team leadership, systems implementation. Usually structured as day rate instead.</p>
               </div>
 
-              <div className="bg-white p-8 border-l-4 border-emerald-600">
+              <div className="bg-white p-8 border-l-4 border-blue-600">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">Advisory / Consulting Only</h3>
                 <div className="flex items-baseline gap-4 mb-4">
                   <span className="text-3xl font-black text-gray-900">£150-£300</span>
@@ -483,11 +483,11 @@ export default function FractionalCFOHourlyRatePage() {
                 </div>
 
                 <div className="border-t border-gray-700 pt-6">
-                  <h4 className="text-lg font-semibold text-emerald-400 mb-3">Option 2: Day Rate (£1,200/day) ✓ BEST VALUE</h4>
+                  <h4 className="text-lg font-semibold text-blue-400 mb-3">Option 2: Day Rate (£1,200/day) ✓ BEST VALUE</h4>
                   <div className="space-y-1 text-gray-300 text-sm">
                     <p>• £1,200 × 2 days = £2,400/week</p>
-                    <p>• £2,400 × 12 weeks = <strong className="text-emerald-400 text-xl">£28,800 total</strong></p>
-                    <p className="text-emerald-400 font-bold">Saves £28,800 (50% cheaper than hourly!)</p>
+                    <p>• £2,400 × 12 weeks = <strong className="text-blue-400 text-xl">£28,800 total</strong></p>
+                    <p className="text-blue-400 font-bold">Saves £28,800 (50% cheaper than hourly!)</p>
                   </div>
                 </div>
 
@@ -495,7 +495,7 @@ export default function FractionalCFOHourlyRatePage() {
                   <h4 className="text-lg font-semibold text-white mb-3">Option 3: Monthly Retainer (£9,000/month)</h4>
                   <div className="space-y-1 text-gray-300 text-sm">
                     <p>• £9,000 × 3 months = <strong className="text-white text-xl">£27,000 total</strong></p>
-                    <p className="text-emerald-400 font-bold">Saves £30,600 vs hourly (53% cheaper)</p>
+                    <p className="text-blue-400 font-bold">Saves £30,600 vs hourly (53% cheaper)</p>
                     <p className="text-gray-400">But less flexible—locked into 3-month commitment</p>
                   </div>
                 </div>
@@ -521,7 +521,7 @@ export default function FractionalCFOHourlyRatePage() {
                     <td className="p-4 text-sm">Very flexible, pay per hour</td>
                     <td className="p-4 text-sm">Most expensive, admin overhead, incentive misalignment</td>
                   </tr>
-                  <tr className="border-b bg-emerald-50">
+                  <tr className="border-b bg-blue-950/20">
                     <td className="p-4 font-semibold">Day Rate</td>
                     <td className="p-4">1-3 days/week ongoing</td>
                     <td className="p-4 text-sm">50% cheaper than hourly, flexible, outcome-focused</td>
@@ -537,7 +537,7 @@ export default function FractionalCFOHourlyRatePage() {
               </table>
             </div>
 
-            <div className="bg-emerald-50 border-l-4 border-emerald-600 p-6">
+            <div className="bg-blue-950/20 border-l-4 border-blue-600 p-6">
               <p className="text-lg font-semibold text-gray-900 mb-2">Recommendation</p>
               <p className="text-gray-700 mb-0">
                 <strong>Start with day rates</strong> for first 2-3 months to test fit, then move to monthly retainer if it's working well. Avoid hourly unless you truly only need 3-5 hours/month of advisory.

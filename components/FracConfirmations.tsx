@@ -170,7 +170,7 @@ export function FracConfirmations({ confirmation, onClose, onConfirm }: Confirma
 
         {/* Success indicator (shown after confirmation, before close) */}
         {isLoading === false && error === null && (
-          <div className="mt-3 text-center text-sm text-green-600 font-medium animate-in fade-in duration-200">
+          <div className="mt-3 text-center text-sm text-blue-600 font-medium animate-in fade-in duration-200">
             ✓ Saved successfully!
           </div>
         )}
