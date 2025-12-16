@@ -22,8 +22,8 @@ const IR35Calculator = dynamic(() => import('@/components/IR35Calculator').then(
 export const revalidate = 3600 // Revalidate every hour
 
 export const metadata: Metadata = {
-  title: 'Fractional Jobs UK: CFO, CTO, CMO Executive Roles 2025',
-  description: 'Find 17+ fractional executive jobs across UK. Part-time CFO, CTO, CMO, COO roles with £700-£1,500 day rates. London, Manchester, Birmingham. Interactive tools & market insights.',
+  title: 'Fractional Jobs UK: CFO, CTO, CMO Roles 2025',
+  description: 'Fractional jobs UK: 17+ CFO, CTO, CMO roles with £700-£1,500 day rates. Part-time executive opportunities in London, Manchester, Birmingham. Apply to fractional jobs today.',
   keywords: 'fractional jobs UK, fractional CFO jobs UK, fractional CTO jobs UK, fractional CMO jobs UK, part-time executive jobs UK, interim executive jobs UK, fractional COO jobs UK',
   alternates: {
     canonical: 'https://fractional.quest/fractional-jobs-uk',
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
     'link': '<https://stream.mux.com>; rel=preconnect; crossorigin',
   },
   openGraph: {
-    title: 'Fractional Jobs UK: CFO, CTO, CMO Executive Roles 2025',
-    description: 'Find 17+ fractional executive jobs UK. £700-£1,500 day rates. Interactive calculators and market insights.',
+    title: 'Fractional Jobs UK: CFO, CTO, CMO Roles 2025',
+    description: 'Fractional jobs UK: 17+ CFO, CTO, CMO roles with £700-£1,500 day rates. Apply to fractional jobs today.',
     type: 'website',
     url: 'https://fractional.quest/fractional-jobs-uk',
     siteName: 'Fractional Quest',
@@ -219,8 +219,77 @@ export default async function FractionalJobsUKPage() {
     getUKJobs()
   ])
 
+  // Generate JobPosting JSON-LD schema for all jobs
+  const jobPostingsSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'itemListElement': (ukJobs as any[]).slice(0, 15).map((job, index) => {
+      const estimatedRate = !job.compensation ? estimateRateByRole(job.role_category) : null
+      const minRate = estimatedRate ? estimatedRate.min : 700
+      const maxRate = estimatedRate ? estimatedRate.max : 1500
+
+      return {
+        '@type': 'ListItem',
+        'position': index + 1,
+        'item': {
+          '@type': 'JobPosting',
+          'title': job.normalized_title || job.title,
+          'description': job.description_snippet || `${job.normalized_title || job.title} position at ${job.company_name}. Fractional executive role with competitive day rates and flexible working arrangements.`,
+          'identifier': {
+            '@type': 'PropertyValue',
+            'name': job.company_name,
+            'value': job.id
+          },
+          'datePosted': job.posted_date ? new Date(job.posted_date).toISOString() : new Date().toISOString(),
+          'validThrough': new Date(Date.now() + 90 * 24 * 60 * 60 * 1000).toISOString(),
+          'employmentType': ['CONTRACTOR', 'PART_TIME'],
+          'hiringOrganization': {
+            '@type': 'Organization',
+            'name': job.company_name,
+            'sameAs': job.company_domain ? `https://${job.company_domain}` : undefined,
+            'logo': job.company_domain ? `https://logo.clearbit.com/${job.company_domain}` : undefined
+          },
+          'jobLocation': {
+            '@type': 'Place',
+            'address': {
+              '@type': 'PostalAddress',
+              'addressLocality': job.location || 'London',
+              'addressRegion': job.location?.includes('London') ? 'Greater London' : 'UK',
+              'addressCountry': 'GB'
+            }
+          },
+          'baseSalary': {
+            '@type': 'MonetaryAmount',
+            'currency': 'GBP',
+            'value': {
+              '@type': 'QuantitativeValue',
+              'minValue': minRate,
+              'maxValue': maxRate,
+              'unitText': 'DAY'
+            }
+          },
+          'workHours': job.is_remote ? 'Remote' : job.workplace_type || 'Flexible',
+          'jobLocationType': job.is_remote ? 'TELECOMMUTE' : undefined,
+          'skills': job.skills_required?.join(', ') || 'Executive Leadership, Strategic Planning, Financial Management',
+          'qualifications': `Senior ${job.role_category || 'Executive'} experience required. Proven track record in fractional or interim roles preferred.`,
+          'responsibilities': job.key_deliverables?.join('. ') || 'Lead strategic initiatives. Provide executive-level guidance. Drive business growth.',
+          'url': `https://fractional.quest/fractional-job/${job.slug}`,
+          'directApply': true,
+          'industry': 'Professional Services, Executive Search',
+          'occupationalCategory': job.role_category || 'Executive'
+        }
+      }
+    })
+  }
+
   return (
     <div className="min-h-screen bg-gray-950">
+      {/* JobPosting JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostingsSchema) }}
+      />
+
       {/* Hero Section with Subtle Mux Video Background */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-950 to-black">
         {/* Mux Video Background - Desktop Only */}
@@ -249,7 +318,7 @@ export default async function FractionalJobsUKPage() {
           </span>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white !text-white mb-6 leading-[0.95] tracking-tight">
-            Fractional Jobs UK: CFO, CTO, CMO Executive Roles
+            Fractional Jobs UK: CFO, CTO, CMO
           </h1>
 
           {/* Search Bar - Preset to UK */}
@@ -433,7 +502,7 @@ export default async function FractionalJobsUKPage() {
       <section className="py-12 md:py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white !text-white mb-8 text-center">
-            UK Fractional Market 2025
+            UK Fractional Jobs Market 2025
           </h2>
 
           {/* Stats Grid */}
