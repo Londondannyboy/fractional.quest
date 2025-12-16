@@ -69,7 +69,7 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
       const transcript = messages
         .filter((m: any) => m.type === 'user_message' || m.type === 'assistant_message')
         .map((m: any) => {
-          const role = m.type === 'user_message' ? 'User' : 'Repo'
+          const role = m.type === 'user_message' ? 'User' : 'Frac'
           return `${role}: ${m.message?.content || ''}`
         })
         .join('\n')
@@ -118,6 +118,40 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
   useEffect(() => {
     console.log('=== HUME isPlaying ===', isPlaying)
   }, [isPlaying])
+
+  // Parse messages for structured data (job results, confirmations)
+  useEffect(() => {
+    messages.forEach((m: any) => {
+      // Check for tool responses (these contain our structured data)
+      if (m.type === 'tool_response' && m.tool_name === 'search_jobs' && m.content) {
+        try {
+          const parsed = JSON.parse(m.content)
+
+          // Check if it's job results
+          if (parsed.data?.type === 'job_results') {
+            console.log('[Voice UI] Found job results:', parsed.data.jobs.length)
+            setDisplayedJobs(parsed.data.jobs)
+          }
+        } catch (e) {
+          // Not JSON, just text - ignore
+          console.log('[Voice UI] Tool response not JSON, skipping')
+        }
+      }
+
+      // Check for confirmation requests
+      if (m.type === 'tool_response' && m.content) {
+        try {
+          const parsed = JSON.parse(m.content)
+          if (parsed.data?.type === 'confirmation') {
+            console.log('[Voice UI] Found confirmation request')
+            setConfirmation(parsed.data)
+          }
+        } catch (e) {
+          // Not JSON or not a confirmation
+        }
+      }
+    })
+  }, [messages])
 
   const handleConnect = useCallback(async () => {
     // Pass user_id and profile data to Hume
@@ -275,11 +309,110 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
               }`}
             >
               <p className="text-sm font-medium mb-1 opacity-60">
-                {m.type === 'user_message' ? 'You' : 'Assistant'}
+                {m.type === 'user_message' ? 'You' : 'Frac'}
               </p>
               <p>{m.content}</p>
             </div>
           ))}
+        </div>
+      )}
+
+      {/* Visual Job Display */}
+      {displayedJobs.length > 0 && (
+        <div className="w-full max-w-4xl mt-8 animate-fade-in">
+          <div className="flex items-center gap-2 mb-4">
+            <svg className="w-5 h-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <h3 className="text-lg font-semibold text-gray-900">
+              Jobs Found ({displayedJobs.length})
+            </h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {displayedJobs.map((job) => (
+              <JobCard
+                key={job.id}
+                jobId={job.id}
+                title={job.title}
+                company={job.company}
+                location={job.location}
+                isRemote={job.isRemote}
+                dayRate={job.dayRate}
+                currency={job.currency}
+                onClick={() => window.location.href = `/fractional-job/${job.slug}`}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Confirmation Modal (Human-in-the-loop) */}
+      {confirmation && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl animate-scale-in">
+            <div className="flex items-start gap-3 mb-4">
+              <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
+                <svg className="w-5 h-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-gray-900 mb-1">Confirm Your Preference</h3>
+                <p className="text-gray-600">{confirmation.details}</p>
+              </div>
+            </div>
+
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-6">
+              <div className="text-sm text-purple-900">
+                <span className="font-medium">Preference Type:</span> {confirmation.preference_type}
+              </div>
+              <div className="text-sm text-purple-900 mt-1">
+                <span className="font-medium">Values:</span> {Array.isArray(confirmation.values) ? confirmation.values.join(', ') : confirmation.values}
+              </div>
+            </div>
+
+            <div className="flex gap-3">
+              <button
+                className="flex-1 px-4 py-3 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-colors flex items-center justify-center gap-2"
+                onClick={async () => {
+                  // Call API to save preference
+                  if (confirmation.user_id && confirmation.preference_type && confirmation.values) {
+                    try {
+                      // Save to database via save_user_preference tool
+                      await fetch('/api/hume-tool', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                          type: 'tool_call',
+                          name: 'save_user_preference',
+                          parameters: {
+                            user_id: confirmation.user_id,
+                            field: 'interests',  // Map preference_type to field
+                            value: Array.isArray(confirmation.values) ? confirmation.values.join(', ') : confirmation.values
+                          }
+                        })
+                      })
+                      console.log('[Confirmation] Preference saved to database')
+                    } catch (e) {
+                      console.error('[Confirmation] Failed to save:', e)
+                    }
+                  }
+                  setConfirmation(null)
+                }}
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                Yes, Confirm
+              </button>
+              <button
+                className="flex-1 px-4 py-3 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition-colors"
+                onClick={() => setConfirmation(null)}
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>
@@ -348,11 +481,13 @@ export default function VoicePage() {
         <div className="max-w-4xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">Your Voice Assistant</h1>
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                Meet Frac
+              </h1>
               <p className="text-gray-600 mt-1">
                 {profile?.first_name
-                  ? `Welcome back, ${profile.first_name}`
-                  : 'Talk to discover your perfect role'}
+                  ? `Welcome back, ${profile.first_name}! Your AI guide to fractional executive roles`
+                  : 'Your AI guide to fractional executive roles'}
               </p>
             </div>
             <Link

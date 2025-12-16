@@ -413,16 +413,28 @@ function confirmPreference(params: {
     ? params.extracted_values
     : params.extracted_values.split(',').map(v => v.trim())
 
-  // Create structured response that client can parse
-  const confirmData = {
-    action: 'CONFIRM_PREFERENCE',
-    preference_type: params.preference_type,
-    values: values,
-    user_id: params.user_id
-  }
+  const preferenceLabel = params.preference_type === 'role' ? 'roles like'
+    : params.preference_type === 'industry' ? 'industries like'
+    : params.preference_type === 'location' ? 'locations like'
+    : params.preference_type === 'day_rate' ? 'a day rate of'
+    : params.preference_type
 
-  // Return in a format Hume will speak naturally while client can parse the JSON
-  return `[CONFIRM_PREFERENCE:${JSON.stringify(confirmData)}] I want to make sure I've got this right. You're interested in ${params.preference_type === 'role' ? 'roles like' : params.preference_type === 'industry' ? 'industries like' : ''} ${values.join(', ')}. Is that correct?`
+  const displayText = params.preference_type === 'day_rate'
+    ? values[0]  // For day rate, just show the value
+    : values.join(', ')  // For lists, join with commas
+
+  // Return JSON with both text (for Frac to speak) and data (for UI confirmation)
+  return JSON.stringify({
+    text: `Let me confirm that with you. You're interested in ${preferenceLabel} ${displayText}. Please check your screen to confirm.`,
+    data: {
+      type: 'confirmation',
+      action: 'save_preference',
+      preference_type: params.preference_type,
+      values: values,
+      user_id: params.user_id,
+      details: `You're interested in ${preferenceLabel} ${displayText}`
+    }
+  })
 }
 
 // Also support GET for testing
