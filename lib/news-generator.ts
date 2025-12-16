@@ -188,6 +188,9 @@ export async function generateArticle(
     throw new Error('No response from AI')
   }
 
+  // Log the raw response for debugging
+  console.log('[News Generator] Raw AI response:', text.substring(0, 500))
+
   // Extract JSON from response (handle markdown code blocks)
   let jsonStr = text.trim()
 
