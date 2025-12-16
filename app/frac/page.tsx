@@ -150,6 +150,19 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
         body: JSON.stringify({ transcript, user_id: userId })
       })
 
+      // Check if response is OK before parsing JSON
+      if (!response.ok) {
+        addDebugLog(`⚠️ Method C: API error ${response.status}`, 'error')
+        return
+      }
+
+      // Check content-type to ensure it's JSON
+      const contentType = response.headers.get('content-type')
+      if (!contentType || !contentType.includes('application/json')) {
+        addDebugLog(`⚠️ Method C: Got ${contentType || 'HTML'} instead of JSON (endpoint may not be deployed)`, 'error')
+        return
+      }
+
       const result = await response.json()
       addDebugLog(`📊 Method C result: ${result.type || 'unknown'}`, 'info')
 
@@ -167,8 +180,9 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
         addDebugLog(`🎯 Method C found ${result.data.jobs.length} jobs!`, 'success')
         setPydanticJobs(result.data.jobs)
       }
-    } catch (e) {
-      addDebugLog(`❌ Method C failed: ${e}`, 'error')
+    } catch (e: any) {
+      // Graceful failure - Methods A & B still work
+      addDebugLog(`⚠️ Method C unavailable (${e.message || 'endpoint error'})`, 'error')
     }
   }, [userId, addDebugLog])
 
