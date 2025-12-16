@@ -19,6 +19,7 @@
   "dependencies": {
     "@ai-sdk/anthropic": "^2.0.56",
     "@ai-sdk/google": "^2.0.47",
+    "@anthropic-ai/sdk": "^0.71.2",
     "@copilotkit/react-core": "^1.50.0",
     "@copilotkit/react-ui": "^1.50.0",
     "@copilotkit/runtime": "^1.50.0",
