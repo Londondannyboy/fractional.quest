@@ -318,7 +318,7 @@ export function IR35Calculator({ defaultDayRate = 800, className = '' }: IR35Cal
             </div>
             <div className="flex justify-between pt-2 border-t border-gray-200">
               <dt className="text-gray-500">5% Expenses</dt>
-              <dd className="text-green-600">+{formatCurrency(insideIR35.expensesAllowance)}</dd>
+              <dd className="text-green-700">+{formatCurrency(insideIR35.expensesAllowance)}</dd>
             </div>
           </dl>
 
@@ -360,7 +360,7 @@ export function IR35Calculator({ defaultDayRate = 800, className = '' }: IR35Cal
             </div>
             <div className="flex justify-between pt-2 border-t border-gray-200">
               <dt className="text-gray-500">Dividends Available</dt>
-              <dd className="text-emerald-600">{formatCurrency(outsideIR35.availableForDividends)}</dd>
+              <dd className="text-emerald-700">{formatCurrency(outsideIR35.availableForDividends)}</dd>
             </div>
           </dl>
 

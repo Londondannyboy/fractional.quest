@@ -44,6 +44,7 @@ export function CompanyLogo({
           alt={`${companyName} logo`}
           className="w-full h-full object-contain p-2"
           onError={() => setImageError(true)}
+          loading="lazy"
         />
       )}
       {showFallback && (
@@ -93,6 +94,7 @@ export function CompanyLogoLarge({
           alt={`${companyName} logo`}
           className="w-full h-full object-contain p-3"
           onError={() => setImageError(true)}
+          loading="lazy"
         />
       )}
       {showFallback && (

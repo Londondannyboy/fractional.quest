@@ -5,18 +5,18 @@ import { createDbQuery } from '@/lib/db'
 import { JobCard } from '@/components/JobCard'
 import { FAQ } from '@/components/FAQ'
 
-// Lazy load below-the-fold components for better initial load
+// Aggressive lazy loading for mobile performance - show black placeholder immediately
 const FractionalRateCalculatorUK = dynamic(() => import('@/components/FractionalRateCalculatorUK').then(mod => ({ default: mod.FractionalRateCalculatorUK })), {
-  loading: () => <div className="animate-pulse bg-gray-800 h-96 rounded-xl" />
+  loading: () => <div className="bg-gray-950 h-96 rounded-xl border border-gray-800" />,
 })
 const SavingsCalculator = dynamic(() => import('@/components/SavingsCalculator').then(mod => ({ default: mod.SavingsCalculator })), {
-  loading: () => <div className="animate-pulse bg-gray-800 h-96 rounded-xl" />
+  loading: () => <div className="bg-gray-950 h-96 rounded-xl border border-gray-800" />,
 })
 const SkillsRadar = dynamic(() => import('@/components/SkillsRadar').then(mod => ({ default: mod.SkillsRadar })), {
-  loading: () => <div className="animate-pulse bg-gray-900 h-96 rounded-xl" />
+  loading: () => <div className="bg-gray-950 h-96 rounded-xl border border-gray-800" />,
 })
 const IR35Calculator = dynamic(() => import('@/components/IR35Calculator').then(mod => ({ default: mod.IR35Calculator })), {
-  loading: () => <div className="animate-pulse bg-white h-96 rounded-xl border border-gray-200" />
+  loading: () => <div className="bg-gray-950 h-96 rounded-xl border border-gray-800" />,
 })
 
 export const revalidate = 3600 // Revalidate every hour
@@ -38,10 +38,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  other: {
-    // Preconnect to Mux CDN for video streaming
-    'link': '<https://stream.mux.com>; rel=preconnect; crossorigin',
   },
   openGraph: {
     title: 'Fractional Jobs UK: CFO, CTO, CMO Roles 2025',

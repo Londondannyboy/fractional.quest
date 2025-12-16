@@ -1,0 +1,186 @@
+import { Metadata } from 'next'
+import Link from 'next/link'
+import { Suspense } from 'react'
+import { RateDistribution } from '@/components/RateDistribution'
+
+export const metadata: Metadata = {
+  title: 'Fractional COO Salary 2025 - Day Rates, Annual Earnings & Pay Guide',
+  description: 'Fractional COO salary guide for 2025. Day rates $1,000-$1,800. Annual earnings $150k-$300k+. Compare rates by location, industry and experience level.',
+  keywords: 'fractional coo salary, fractional coo day rate, fractional coo pay, part time coo salary, fractional coo earnings',
+  openGraph: {
+    title: 'Fractional COO Salary 2025 - Complete Pay Guide',
+    description: 'Fractional COO salary guide. Day rates $1,000-$1,800. Annual earnings $150k-$300k+.',
+  },
+}
+
+const salaryData = {
+  dayRates: [
+    { level: 'Entry-level Fractional COO', range: '$800-$1,200/day', annual: '$120k-$180k', experience: '10-15 years' },
+    { level: 'Mid-level Fractional COO', range: '$1,200-$1,500/day', annual: '$180k-$240k', experience: '15-20 years' },
+    { level: 'Senior Fractional COO', range: '$1,500-$1,800/day', annual: '$240k-$300k+', experience: '20+ years' },
+  ],
+  byLocation: [
+    { location: 'San Francisco / Silicon Valley', range: '$1,500-$2,200/day', premium: '+35%' },
+    { location: 'New York City', range: '$1,400-$2,000/day', premium: '+25%' },
+    { location: 'Boston / Cambridge', range: '$1,200-$1,700/day', premium: '+15%' },
+    { location: 'Los Angeles', range: '$1,100-$1,600/day', premium: '+10%' },
+    { location: 'Chicago', range: '$1,000-$1,400/day', premium: 'Base' },
+    { location: 'Austin', range: '$1,000-$1,400/day', premium: 'Base' },
+    { location: 'Remote US', range: '$900-$1,300/day', premium: '-10%' },
+  ],
+  byIndustry: [
+    { industry: 'Private Equity / VC Portfolio', range: '$1,500-$2,200/day', demand: 'Very High' },
+    { industry: 'SaaS / Tech', range: '$1,300-$1,800/day', demand: 'Very High' },
+    { industry: 'E-commerce / DTC', range: '$1,200-$1,600/day', demand: 'High' },
+    { industry: 'FinTech', range: '$1,400-$1,900/day', demand: 'Very High' },
+    { industry: 'Healthcare / Pharma', range: '$1,100-$1,500/day', demand: 'Medium' },
+    { industry: 'Manufacturing', range: '$1,000-$1,400/day', demand: 'Medium' },
+    { industry: 'Professional Services', range: '$1,000-$1,400/day', demand: 'Medium' },
+  ],
+}
+
+export default function FractionalCooSalaryPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-emerald-900 to-emerald-800 py-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <Link href="/" className="text-emerald-200 hover:text-white mb-6 inline-block">← Back to Home</Link>
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Fractional COO Salary 2025</h1>
+          <p className="text-xl text-emerald-100 mb-8">
+            Complete guide to fractional COO pay rates, day rates, and annual earnings in the US market.
+          </p>
+        </div>
+      </section>
+
+      {/* Key Stats */}
+      <section className="bg-white border-b">
+        <div className="max-w-4xl mx-auto px-4 py-8">
+          <div className="grid grid-cols-3 gap-8 text-center">
+            <div>
+              <div className="text-4xl font-black text-emerald-700">$1,300</div>
+              <div className="text-gray-600">Average Day Rate</div>
+            </div>
+            <div>
+              <div className="text-4xl font-black text-emerald-700">$195k</div>
+              <div className="text-gray-600">Average Annual</div>
+            </div>
+            <div>
+              <div className="text-4xl font-black text-emerald-700">2-3</div>
+              <div className="text-gray-600">Days Per Client</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Live Rate Distribution */}
+      <section className="py-12 bg-gray-950">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-400 mb-2 block">Live Market Data</span>
+            <h2 className="text-3xl md:text-4xl font-black text-white">Real Fractional COO Salaries</h2>
+            <p className="text-emerald-200 mt-2">From actual job postings on Fractional Quest</p>
+          </div>
+          <Suspense fallback={<div className="text-white text-center">Loading rate data...</div>}>
+            <RateDistribution roleFilter="COO" />
+          </Suspense>
+        </div>
+      </section>
+
+      {/* Day Rate Breakdown */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-black mb-8">Fractional COO Day Rates by Experience</h2>
+
+          <div className="space-y-4">
+            {salaryData.dayRates.map((tier) => (
+              <div key={tier.level} className="border border-gray-200 p-6">
+                <div className="flex justify-between items-start mb-2">
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">{tier.level}</h3>
+                    <p className="text-sm text-gray-600">{tier.experience} experience</p>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-black text-emerald-700">{tier.range}</div>
+                    <div className="text-sm text-gray-600">{tier.annual}/year</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* By Location */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-black mb-8">Fractional COO Rates by Location</h2>
+
+          <div className="space-y-3">
+            {salaryData.byLocation.map((loc) => (
+              <div key={loc.location} className="bg-white border border-gray-200 p-5 flex justify-between items-center">
+                <div>
+                  <div className="font-bold text-gray-900">{loc.location}</div>
+                  <div className="text-sm text-gray-600">Premium: {loc.premium}</div>
+                </div>
+                <div className="text-xl font-black text-emerald-700">{loc.range}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* By Industry */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-black mb-8">Fractional COO Rates by Industry</h2>
+
+          <div className="space-y-3">
+            {salaryData.byIndustry.map((ind) => (
+              <div key={ind.industry} className="border border-gray-200 p-5 flex justify-between items-center">
+                <div>
+                  <div className="font-bold text-gray-900">{ind.industry}</div>
+                  <div className="text-sm text-gray-600">Demand: {ind.demand}</div>
+                </div>
+                <div className="text-xl font-black text-emerald-700">{ind.range}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Earnings Calculator */}
+      <section className="py-16 bg-emerald-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-black mb-6">Calculate Your Fractional COO Earnings</h2>
+          <p className="text-xl text-emerald-100 mb-8">
+            2-3 clients × 2 days/week × $1,300/day = $156k-$234k annually<br />
+            4 clients × 2 days/week = $312k/year
+          </p>
+          <Link
+            href="/fractional-coo-jobs-uk"
+            className="inline-block bg-white text-emerald-700 font-bold py-4 px-8 hover:bg-emerald-50 transition-colors"
+          >
+            Browse Fractional COO Jobs →
+          </Link>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-black mb-6">Ready to Become a Fractional COO?</h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Learn how to transition from full-time to fractional operations leadership.
+          </p>
+          <Link
+            href="/how-to-become-fractional-coo"
+            className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-8 transition-colors"
+          >
+            Read the Career Guide →
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}
