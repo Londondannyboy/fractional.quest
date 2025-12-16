@@ -252,6 +252,17 @@ export default async function FinanceJobsPage() {
               </p>
             </div>
           </div>
+          <div className="mt-12 max-w-4xl mx-auto">
+            <p className="text-gray-700 leading-relaxed mb-4">
+              The UK financial services sector is undergoing digital transformation. <a href="https://www.ukfinance.org.uk/news-and-insight" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">UK Finance</a> reports rapid growth in fintech, challenger banks, and digital wealth platforms—all requiring fractional CFO, compliance, and technical leadership to navigate complex regulatory environments.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Regulatory complexity drives fractional demand. <a href="https://www.fca.org.uk/publication/business-plans/business-plan-2023-24.pdf" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">FCA regulatory requirements</a> for financial services companies require senior expertise in governance, risk management, and compliance—expertise that early-stage and mid-market firms access cost-effectively through fractional executives rather than full-time C-suite hires.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              Financial services fractional roles command premium rates (£900-£1,400) reflecting regulatory complexity and client sophistication. The sector's combination of established institutions and innovative challengers provides diverse portfolio opportunities for executives with financial services expertise.
+            </p>
+          </div>
         </div>
       </section>
 

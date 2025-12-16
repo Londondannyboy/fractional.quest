@@ -262,6 +262,17 @@ export default async function HealthcarePage() {
               </p>
             </div>
           </div>
+          <div className="mt-12 max-w-4xl mx-auto">
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Healthcare is experiencing transformational change. <a href="https://www.nuffieldtrust.org.uk/research" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline">Nuffield Trust research</a> highlights growing private healthcare markets, digital health adoption, and NHS transformation—all creating demand for fractional executives who understand healthcare operations, clinical governance, and regulatory compliance.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Digital health particularly drives fractional opportunities. <a href="https://www.health.org.uk/publications" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline">The Health Foundation</a> tracks rapid growth in healthtech startups requiring fractional expertise in NHS commercialization, clinical validation, and MHRA/CE marking processes. Telehealth, remote monitoring, and AI diagnostics companies seek fractional CTOs and CMOs who bridge technical and clinical worlds.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              Healthcare fractional roles require specialized knowledge but offer strong rates (£800-£1,200) and meaningful impact. <a href="https://www.cqc.org.uk/about-us/our-strategy-plans" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline">CQC regulatory frameworks</a> demand senior governance expertise—creating consistent demand for fractional COO and compliance leadership in care providers and healthtech companies.
+            </p>
+          </div>
         </div>
       </section>
 
