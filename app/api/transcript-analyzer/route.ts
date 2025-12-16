@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { neon } from '@neondatabase/serverless'
 import { z } from 'zod'
+import { generateObject } from 'ai'
+import { google } from '@ai-sdk/google'
 
 const sql = neon(process.env.DATABASE_URL!)
-const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY
 
 /**
  * Transcript Analyzer - Pydantic AI Alternative
@@ -98,8 +99,8 @@ export async function POST(request: NextRequest) {
 }
 
 /**
- * Extract intent from conversation transcript using Google Gemini Flash
- * Fast, cheap, and accurate AI intent extraction
+ * Extract intent from conversation transcript using Vercel AI SDK + Google Gemini
+ * Clean, type-safe, Pydantic-style structured outputs
  */
 async function extractIntent(transcript: string): Promise<ExtractedIntent> {
   // Skip if transcript is too short
@@ -112,7 +113,10 @@ async function extractIntent(transcript: string): Promise<ExtractedIntent> {
   }
 
   try {
-    const prompt = `Analyze this conversation transcript and extract the user's intent.
+    const result = await generateObject({
+      model: google('gemini-1.5-flash'),
+      schema: ExtractedIntentSchema,
+      prompt: `Analyze this conversation transcript and extract the user's intent.
 
 Transcript: "${transcript}"
 
@@ -147,57 +151,13 @@ Examples:
 "I'm interested in fractional jobs in the UK" → search_jobs, roleType: null, location: "UK" (user wants to see jobs)
 "I'm looking for Marketing Director positions" → search_jobs, roleType: "Marketing Director", location: null
 "What jobs do you have?" → search_jobs, roleType: null, location: null
-"I'm interested in CMO and CFO roles for my career" → confirm_preference, preferenceType: "role", values: ["CMO", "CFO"]
-
-Respond with ONLY valid JSON matching this structure:
-{
-  "action": "search_jobs" | "confirm_preference" | "unknown",
-  "roleType": "CFO" or null,
-  "location": "London" or null,
-  "preferenceType": "role" or null,
-  "values": ["CFO", "CMO"] or null,
-  "confidence": 0.85,
-  "reasoning": "User asking about fractional jobs in UK"
-}`
-
-    // Use Google Gemini Flash - cheaper and faster!
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GOOGLE_API_KEY}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        contents: [{
-          parts: [{
-            text: prompt
-          }]
-        }],
-        generationConfig: {
-          temperature: 0.1,
-          maxOutputTokens: 512,
-          responseMimeType: 'application/json'
-        }
-      })
+"I'm interested in CMO and CFO roles for my career" → confirm_preference, preferenceType: "role", values: ["CMO", "CFO"]`,
+      temperature: 0.1,
+      maxTokens: 512
     })
 
-    if (!response.ok) {
-      const error = await response.text()
-      throw new Error(`Google Gemini API error: ${response.status} - ${error}`)
-    }
-
-    const data = await response.json()
-    const text = data.candidates?.[0]?.content?.parts?.[0]?.text
-
-    if (!text) {
-      throw new Error('No response from Google Gemini')
-    }
-
-    // Parse and validate with Zod (like Pydantic for TypeScript)
-    const parsed = JSON.parse(text)
-    const validated = ExtractedIntentSchema.parse(parsed)
-
-    console.log('[Transcript Analyzer] AI extracted intent:', validated)
-    return validated
+    console.log('[Transcript Analyzer] AI extracted intent:', result.object)
+    return result.object
 
   } catch (error) {
     console.error('[Transcript Analyzer] AI extraction failed:', error)
