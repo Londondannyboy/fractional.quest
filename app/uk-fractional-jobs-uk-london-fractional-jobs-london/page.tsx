@@ -311,7 +311,7 @@ export default async function FractionalJobsUKPage() {
           <div className="prose prose-lg prose-gray max-w-none">
             <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">What Are Fractional Jobs?</h3>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Fractional jobs represent a fundamental shift in how senior executives structure their careers. Unlike traditional full-time roles, fractional positions allow experienced professionals to work with multiple organisations simultaneously, typically dedicating 1-3 days per week to each client. This model has gained significant traction in the UK since 2020, driven by changing workplace dynamics and companies seeking flexible access to senior expertise.
+              Fractional jobs represent a fundamental shift in how senior executives structure their careers. Unlike traditional full-time roles, fractional positions allow experienced professionals to work with multiple organisations simultaneously, typically dedicating 1-3 days per week to each client. This model has gained significant traction in the UK since 2020, driven by changing workplace dynamics and companies seeking flexible access to senior expertise. The <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/latest" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Office for National Statistics UK labour market data</a> shows evolving employment patterns, with fractional work representing a sophisticated evolution of professional services.
             </p>
             <p className="text-gray-600 leading-relaxed mb-6">
               The term &ldquo;fractional&rdquo; distinguishes these roles from interim positions, which are typically full-time temporary engagements lasting 6-12 months. Fractional executives maintain ongoing relationships with multiple clients, often for years, becoming embedded strategic partners rather than temporary fixes. This creates stability for both parties while preserving flexibility.
@@ -319,7 +319,7 @@ export default async function FractionalJobsUKPage() {
 
             <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">The Evolution of the UK Fractional Market</h3>
             <p className="text-gray-600 leading-relaxed mb-6">
-              The UK fractional executive market has evolved dramatically since the early 2020s. What began as a niche concept, primarily serving startups unable to afford full-time C-suite hires, has expanded into a mainstream career choice. Today, fractional jobs UK span every sector and company stage, from seed-funded startups to PE-backed mid-market businesses and even FTSE 250 subsidiaries seeking specialised expertise.
+              The UK fractional executive market has evolved dramatically since the early 2020s. What began as a niche concept, primarily serving startups unable to afford full-time C-suite hires, has expanded into a mainstream career choice. Today, fractional jobs UK span every sector and company stage, from seed-funded startups to PE-backed mid-market businesses and even <a href="https://www.londonstockexchange.com/indices/ftse-250" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">FTSE 250</a> subsidiaries seeking specialised expertise.
             </p>
             <p className="text-gray-600 leading-relaxed mb-6">
               Industry data suggests the UK fractional executive market has grown approximately 40% year-over-year since 2021. London remains the epicentre, accounting for roughly 60% of opportunities, but regional markets in Manchester, Birmingham, Edinburgh, and Bristol have developed robust fractional ecosystems. The rise of remote and hybrid work has accelerated this expansion, enabling fractional executives to serve clients across multiple regions without geographic constraints.
@@ -332,7 +332,7 @@ export default async function FractionalJobsUKPage() {
             <ul className="list-disc pl-6 mb-6 text-gray-600 space-y-2">
               <li><strong>Series A-C startups</strong> that need senior expertise but cannot justify full-time C-suite costs (typically £180,000-£300,000+ fully loaded)</li>
               <li><strong>PE and VC portfolio companies</strong> undergoing transformation or preparing for exit</li>
-              <li><strong>SMEs scaling rapidly</strong> that have outgrown their founder-led functions but aren&apos;t ready for full-time executives</li>
+              <li><strong><a href="https://www.gov.uk/government/statistics/business-population-estimates-2024" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">SMEs scaling rapidly</a></strong> that have outgrown their founder-led functions but aren&apos;t ready for full-time executives</li>
               <li><strong>Established companies</strong> needing specialised expertise for specific initiatives (digital transformation, market expansion, fundraising)</li>
             </ul>
 
@@ -671,7 +671,7 @@ export default async function FractionalJobsUKPage() {
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Define Your Fractional Offering</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Successful fractional executives have clear, compelling offerings. Define the specific problems you solve, the outcomes you deliver, and the types of companies you serve best. For example: &ldquo;I help Series A-B SaaS companies build their first proper finance function and prepare for fundraising&rdquo; is more compelling than &ldquo;I&apos;m a fractional CFO.&rdquo; This clarity helps potential clients quickly understand whether you&apos;re the right fit.
+                  Successful fractional executives have clear, compelling offerings. Define the specific problems you solve, the outcomes you deliver, and the types of companies you serve best. For example: &ldquo;I help <a href="https://www.gov.uk/guidance/venture-capital-schemes-apply-for-advance-assurance" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Series A-B SaaS companies</a> build their first proper finance function and prepare for fundraising&rdquo; is more compelling than &ldquo;I&apos;m a fractional CFO.&rdquo; This clarity helps potential clients quickly understand whether you&apos;re the right fit.
                 </p>
               </div>
             </div>
@@ -682,7 +682,7 @@ export default async function FractionalJobsUKPage() {
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Build Your Network and Personal Brand</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Most fractional opportunities come through referrals and network connections. Start building your personal brand on LinkedIn by sharing insights from your experience. Connect with PE and VC firms in your sector, as they frequently place fractional executives into portfolio companies. Join fractional executive communities and attend relevant industry events. Your reputation and visibility directly correlate with the quality and quantity of opportunities you receive.
+                  Most fractional opportunities come through referrals and network connections. Start building your personal brand on <a href="https://www.linkedin.com/business/talent/blog/product-tips/linkedin-profile-summaries-that-we-love-and-how-to-boost-your-own" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">LinkedIn by sharing insights from your experience</a>. Connect with PE and VC firms in your sector, as they frequently place fractional executives into portfolio companies. Join fractional executive communities and attend relevant industry events. Your reputation and visibility directly correlate with the quality and quantity of opportunities you receive.
                 </p>
               </div>
             </div>
@@ -693,7 +693,7 @@ export default async function FractionalJobsUKPage() {
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Navigate IR35 and Legal Structure</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Most fractional executives operate through a limited company for tax efficiency and professional credibility. Work with an accountant who understands IR35 legislation and fractional work structures. Properly structured fractional roles typically fall outside IR35 due to multiple clients, control over delivery, and absence of employment characteristics. However, each engagement should be individually assessed to ensure compliance.
+                  Most fractional executives operate through a <a href="https://www.gov.uk/limited-company-formation" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">limited company</a> for tax efficiency and professional credibility. Work with an accountant who understands <a href="https://www.gov.uk/guidance/understanding-off-payroll-working-ir35" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">IR35 legislation</a> and fractional work structures. Properly structured fractional roles typically fall outside IR35 due to multiple clients, control over delivery, and absence of employment characteristics. However, each engagement should be individually assessed to ensure compliance.
                 </p>
               </div>
             </div>
