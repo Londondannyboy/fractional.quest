@@ -39,7 +39,7 @@ export default function FractionalProductPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-black text-gray-900 mb-6">Fractional Product Leadership</h2>
-          <p className="text-xl text-gray-600 leading-relaxed mb-6">Product-led companies need strong product leadership to succeed. Fractional product leaders bring strategic product thinking, team leadership, and execution experience—without requiring a full-time hire.</p>
+          <p className="text-xl text-gray-600 leading-relaxed mb-6">Product-led companies need strong product leadership to succeed. Research from <a href="https://openviewpartners.com/product-led-growth/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">OpenView</a> shows that product-led growth requires senior product strategy, not just execution. Fractional product leaders bring strategic product thinking, team leadership, and execution experience—without requiring a full-time hire, following <a href="https://www.productboard.com/blog/product-excellence/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">product excellence principles</a> from leading product organizations.</p>
           <div className="grid md:grid-cols-3 gap-6 mt-10">
             {[
               { title: 'Fractional CPO', description: 'C-level product leadership for strategy and vision.', link: '/fractional-cpo-services' },

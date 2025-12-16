@@ -39,7 +39,7 @@ export default function FractionalSecurityPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-black text-gray-900 mb-6">Fractional Security Leadership</h2>
-          <p className="text-xl text-gray-600 leading-relaxed mb-6">Cyber security is a board-level concern, but not every company can afford a full-time CISO. Fractional security leaders provide the expertise to build security programmes, achieve compliance, and manage risk—on a part-time basis.</p>
+          <p className="text-xl text-gray-600 leading-relaxed mb-6">Cyber security is a board-level concern, but not every company can afford a full-time CISO. The <a href="https://www.gov.uk/government/statistics/cyber-security-breaches-survey-2024" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:text-red-700 underline">UK Cyber Security Breaches Survey</a> shows that businesses with security leadership experience significantly fewer breaches. Fractional security leaders provide the expertise to build security programmes, achieve compliance, and manage risk—on a part-time basis, following <a href="https://cloudsecurityalliance.org/research/guidance/" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:text-red-700 underline">Cloud Security Alliance guidance</a>.</p>
           <div className="grid md:grid-cols-3 gap-6 mt-10">
             {[
               { title: 'Fractional CISO', description: 'C-level security leadership for strategy and governance.', link: '/fractional-ciso-services' },
