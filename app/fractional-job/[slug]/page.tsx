@@ -606,6 +606,28 @@ export default async function JobDetailPage({ params }: PageProps) {
                   )}
                 </section>
               )}
+
+              {/* How to Apply Section */}
+              <section className="mb-12">
+                <h2 className="text-2xl font-black text-gray-900 mb-6">How to Apply</h2>
+                <div className="bg-blue-50 border-l-4 border-blue-600 p-6">
+                  <p className="text-gray-700 leading-7 mb-4">
+                    <strong>Note:</strong> This is a syndicated job post. Fractional Quest found it on the web{job.url && (() => {
+                      const url = job.url.toLowerCase()
+                      if (url.includes('linkedin.com')) return ' via LinkedIn'
+                      if (url.includes('indeed.com') || url.includes('indeed.co.uk')) return ' via Indeed'
+                      if (url.includes('greenhouse.io')) return ' via Greenhouse'
+                      if (url.includes('lever.co')) return ' via Lever'
+                      if (url.includes('workable.com')) return ' via Workable'
+                      if (job.company_domain && url.includes(job.company_domain)) return ` from ${job.company_name}'s website`
+                      return ' from a company web page'
+                    })()}, but we are not working with the client directly, so we don't have control over or knowledge of the application process.
+                  </p>
+                  <p className="text-gray-700 leading-7">
+                    To apply, click on the <strong>"Apply for This Role"</strong> button above and follow the application's instructions. Let us know how it goes!
+                  </p>
+                </div>
+              </section>
             </div>
 
             {/* Sidebar - Fixed Sticky */}
