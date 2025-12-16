@@ -30,7 +30,7 @@ const INTERNAL_LINKS: Record<ArticleCategory, { services: string; jobs: string; 
 export const GeneratedArticle = z.object({
   title: z.string().max(100),
   excerpt: z.string().max(300),
-  content: z.string(), // Markdown content
+  content: z.string(), // Plain text content
   category: z.enum(['Finance', 'Marketing', 'Engineering', 'Operations', 'HR', 'Sales', 'General']),
   suggested_slug: z.string()
 })
@@ -73,8 +73,8 @@ Make links contextual and natural - don't force them.`
 // Base prompt for all content types
 const BASE_INSTRUCTIONS = `
 Format: JSON with ONLY these fields: title, excerpt, content, category, suggested_slug
-CRITICAL: Escape all quotes and newlines properly in the content field.
-Use \\n for newlines, \\" for quotes. Keep content under 500 words.
+Content should be PLAIN TEXT (not markdown) - just paragraphs separated by newlines.
+Keep content under 500 words.
 Write for UK audience. Use £ for currency. Be factual and professional.`
 
 // Prompts for each content type
