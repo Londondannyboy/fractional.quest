@@ -40,6 +40,16 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
   // State for visual displays
   const [displayedJobs, setDisplayedJobs] = useState<any[]>([])
   const [confirmation, setConfirmation] = useState<any | null>(null)
+  const [debugMode, setDebugMode] = useState(true)  // Enable debug by default
+  const [debugLogs, setDebugLogs] = useState<string[]>([])
+  const [toolCalls, setToolCalls] = useState<any[]>([])
+
+  // Helper to add debug logs
+  const addDebugLog = useCallback((message: string, type: 'info' | 'success' | 'error' | 'tool' = 'info') => {
+    const timestamp = new Date().toLocaleTimeString()
+    setDebugLogs(prev => [...prev.slice(-30), { timestamp, message, type }])
+    console.log(`[${timestamp}] ${message}`)
+  }, [])
 
   // Debug: Log all status changes with timestamp
   useEffect(() => {
@@ -121,37 +131,52 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
 
   // Parse messages for structured data (job results, confirmations)
   useEffect(() => {
-    messages.forEach((m: any) => {
-      // Check for tool responses (these contain our structured data)
-      if (m.type === 'tool_response' && m.tool_name === 'search_jobs' && m.content) {
+    if (messages.length === 0) return
+
+    const latestMessage = messages[messages.length - 1]
+
+    // Log all message types for debugging
+    addDebugLog(`Message type: ${latestMessage.type}`, 'info')
+
+    // Track tool calls
+    if (latestMessage.type === 'tool_call') {
+      addDebugLog(`🔧 Tool called: ${latestMessage.tool_name || latestMessage.name}`, 'tool')
+      setToolCalls(prev => [...prev.slice(-10), {
+        name: latestMessage.tool_name || latestMessage.name,
+        params: latestMessage.parameters,
+        time: new Date().toLocaleTimeString()
+      }])
+    }
+
+    // Check for tool responses (these contain our structured data)
+    if (latestMessage.type === 'tool_response') {
+      const toolName = latestMessage.tool_name || 'unknown'
+      addDebugLog(`📥 Tool response from: ${toolName}`, 'tool')
+
+      if (latestMessage.content) {
         try {
-          const parsed = JSON.parse(m.content)
+          // Try to parse as JSON
+          const parsed = JSON.parse(latestMessage.content)
+          addDebugLog(`✅ Parsed JSON response from ${toolName}`, 'success')
 
           // Check if it's job results
           if (parsed.data?.type === 'job_results') {
-            console.log('[Voice UI] Found job results:', parsed.data.jobs.length)
+            addDebugLog(`🎯 Found ${parsed.data.jobs.length} job results!`, 'success')
             setDisplayedJobs(parsed.data.jobs)
           }
-        } catch (e) {
-          // Not JSON, just text - ignore
-          console.log('[Voice UI] Tool response not JSON, skipping')
-        }
-      }
 
-      // Check for confirmation requests
-      if (m.type === 'tool_response' && m.content) {
-        try {
-          const parsed = JSON.parse(m.content)
+          // Check if it's a confirmation request
           if (parsed.data?.type === 'confirmation') {
-            console.log('[Voice UI] Found confirmation request')
+            addDebugLog(`✋ Confirmation requested`, 'success')
             setConfirmation(parsed.data)
           }
         } catch (e) {
-          // Not JSON or not a confirmation
+          // Not JSON, just text
+          addDebugLog(`⚠️ Tool response is text, not JSON: ${latestMessage.content?.substring(0, 50)}`, 'info')
         }
       }
-    })
-  }, [messages])
+    }
+  }, [messages, addDebugLog])
 
   const handleConnect = useCallback(async () => {
     // Pass user_id and profile data to Hume
@@ -222,25 +247,43 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
 
   return (
     <div className="flex flex-col items-center">
-      {/* Voice Button */}
+      {/* Voice Button with Status Indicator */}
       <div className="relative mb-8">
-        {/* Pulse rings when connected */}
-        {isConnected && (
+        {/* Outer status ring */}
+        <div className={`absolute inset-0 w-32 h-32 rounded-full border-4 transition-all duration-300 ${
+          isConnected && isPlaying
+            ? 'border-green-400 animate-pulse shadow-lg shadow-green-400/50'
+            : isConnected
+            ? 'border-green-500 shadow-lg shadow-green-500/30'
+            : isConnecting
+            ? 'border-yellow-400 animate-spin'
+            : 'border-purple-400 opacity-50'
+        }`} style={{ animationDuration: isConnecting ? '2s' : undefined }} />
+
+        {/* Pulse rings when speaking */}
+        {isConnected && isPlaying && (
           <>
-            <div className="absolute inset-0 w-32 h-32 rounded-full bg-purple-400 animate-ping opacity-20" />
-            <div className="absolute inset-0 w-32 h-32 rounded-full bg-purple-500 animate-pulse opacity-30" />
+            <div className="absolute inset-0 w-32 h-32 rounded-full bg-green-400 animate-ping opacity-30" />
+            <div className="absolute inset-0 w-32 h-32 rounded-full bg-green-300 animate-pulse opacity-40" />
           </>
+        )}
+
+        {/* Subtle pulse when listening (connected but not speaking) */}
+        {isConnected && !isPlaying && (
+          <div className="absolute inset-0 w-32 h-32 rounded-full bg-green-400 animate-pulse opacity-20" />
         )}
 
         <button
           onClick={isConnected ? disconnect : handleConnect}
           disabled={isConnecting}
-          className={`relative w-32 h-32 rounded-full text-white font-bold text-lg shadow-xl transition-all duration-300 ${
-            isConnected
+          className={`relative w-32 h-32 rounded-full text-white font-bold text-lg shadow-2xl transition-all duration-300 ${
+            isConnected && isPlaying
+              ? 'bg-gradient-to-br from-green-400 to-emerald-500 scale-110'
+              : isConnected
               ? 'bg-gradient-to-br from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700'
               : isConnecting
-              ? 'bg-gray-400 cursor-wait'
-              : 'bg-gradient-to-br from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 hover:scale-105'
+              ? 'bg-gradient-to-br from-yellow-400 to-orange-400 cursor-wait'
+              : 'bg-gradient-to-br from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 hover:scale-105'
           }`}
         >
           {isConnected ? (
@@ -414,6 +457,68 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
             </div>
           </div>
         </div>
+      )}
+
+      {/* Debug Panel */}
+      {debugMode && (
+        <div className="fixed bottom-0 left-0 right-0 bg-black/95 text-white p-4 max-h-64 overflow-y-auto z-40 font-mono text-xs">
+          <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center gap-4">
+              <h3 className="font-bold text-sm">🐛 DEBUG MODE</h3>
+              <div className={`px-2 py-1 rounded text-xs font-bold ${isConnected ? 'bg-green-600' : 'bg-red-600'}`}>
+                {status.value}
+              </div>
+              <div className="text-gray-400">Jobs: {displayedJobs.length}</div>
+              <div className="text-gray-400">Messages: {messages.length}</div>
+            </div>
+            <button
+              onClick={() => setDebugMode(false)}
+              className="px-2 py-1 bg-white/10 rounded hover:bg-white/20"
+            >
+              Hide
+            </button>
+          </div>
+
+          {/* Tool Calls */}
+          {toolCalls.length > 0 && (
+            <div className="mb-2">
+              <div className="text-yellow-400 font-bold mb-1">Recent Tool Calls:</div>
+              {toolCalls.map((call, i) => (
+                <div key={i} className="text-green-400 ml-2">
+                  [{call.time}] {call.name} {call.params ? `(${JSON.stringify(call.params).substring(0, 50)})` : ''}
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Debug Logs */}
+          <div>
+            <div className="text-blue-400 font-bold mb-1">Recent Logs:</div>
+            {debugLogs.slice(-15).map((log: any, i) => (
+              <div
+                key={i}
+                className={`ml-2 ${
+                  log.type === 'error' ? 'text-red-400' :
+                  log.type === 'success' ? 'text-green-400' :
+                  log.type === 'tool' ? 'text-yellow-400' :
+                  'text-gray-300'
+                }`}
+              >
+                [{log.timestamp}] {log.message}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Debug Toggle (when hidden) */}
+      {!debugMode && (
+        <button
+          onClick={() => setDebugMode(true)}
+          className="fixed bottom-4 left-4 px-3 py-2 bg-black/80 text-white rounded-lg text-xs font-mono hover:bg-black z-40"
+        >
+          🐛 Show Debug
+        </button>
       )}
     </div>
   )
