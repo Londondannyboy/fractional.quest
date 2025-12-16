@@ -189,6 +189,11 @@ export async function generateArticle(
 
   // Extract JSON from response (handle markdown code blocks)
   let jsonStr = text.trim()
+
+  // Remove markdown code blocks if present
+  jsonStr = jsonStr.replace(/^```json\s*/i, '').replace(/\s*```$/i, '')
+
+  // Extract JSON object
   const jsonMatch = jsonStr.match(/\{[\s\S]*\}/)
   if (jsonMatch) {
     jsonStr = jsonMatch[0]
