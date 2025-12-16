@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 
-export async function GET() {
+async function getHumeToken() {
   const apiKey = process.env.NEXT_PUBLIC_HUME_API_KEY
   const secretKey = process.env.HUME_SECRET_KEY
 
@@ -35,7 +35,7 @@ export async function GET() {
     }
 
     const data = await response.json()
-    return NextResponse.json({ accessToken: data.access_token })
+    return NextResponse.json({ token: data.access_token })
   } catch (error) {
     console.error('Hume token error:', error)
     return NextResponse.json(
@@ -43,4 +43,12 @@ export async function GET() {
       { status: 500 }
     )
   }
+}
+
+export async function GET() {
+  return getHumeToken()
+}
+
+export async function POST() {
+  return getHumeToken()
 }

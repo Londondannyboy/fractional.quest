@@ -154,7 +154,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased bg-black text-white`}
       >
         <StackProvider app={stackServerApp}>
-          <StackTheme>
+          <StackTheme appearance="light">
             <Suspense fallback={<div className="h-16 bg-black border-b border-gray-900" />}>
               <Navigation />
             </Suspense>
