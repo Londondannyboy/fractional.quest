@@ -267,12 +267,24 @@ export function SkillsRadar({ height = '500px', roles = DEFAULT_ROLES }: SkillsR
             {roles.map(role => (
               <button
                 key={role}
-                onClick={() => setSelectedRole(selectedRole === role ? null : role)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center gap-2`}
+                onClick={() => {
+                  // Navigate to role-specific page
+                  const rolePageMap: Record<string, string> = {
+                    'CFO': '/fractional-cfo-jobs-uk',
+                    'CTO': '/fractional-cto-jobs-uk',
+                    'CMO': '/fractional-cmo-jobs-uk',
+                    'COO': '/fractional-coo-jobs-uk',
+                  }
+                  if (rolePageMap[role]) {
+                    window.location.href = rolePageMap[role]
+                  }
+                }}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2 hover:scale-105 cursor-pointer`}
                 style={{
                   backgroundColor: selectedRole === role ? ROLE_COLORS[role] : '#1f2937',
                   color: selectedRole === role ? 'white' : '#9ca3af'
                 }}
+                title={`View all ${role} jobs`}
               >
                 <div
                   className="w-3 h-3 rounded-full"

@@ -339,50 +339,53 @@ export default async function FractionalJobsUKPage() {
         </section>
       )}
 
+      {/* Rate Calculator Section */}
+      <section id="rate-calculator" className="py-16 md:py-24 bg-gray-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white !text-white mb-4">
+              Calculate Your Fractional Rate
+            </h2>
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+              Understand your earning potential as a fractional executive. Input your role and location to see realistic day rates, weekly earnings, and annual income projections based on current UK market data.
+            </p>
+          </div>
+          <div className="bg-gray-950 rounded-2xl p-8 border border-gray-800">
+            <FractionalRateCalculatorUK />
+          </div>
+        </div>
+      </section>
+
+      {/* Savings Calculator Section */}
+      <section id="savings-calculator" className="py-16 md:py-24 bg-gray-950">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white !text-white mb-4">
+              Calculate Your Cost Savings
+            </h2>
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+              Discover how much you can save by hiring fractional executives versus full-time. Compare total employment costs including salary, NI, benefits, and overhead against flexible fractional rates.
+            </p>
+          </div>
+          <div className="bg-gray-900 rounded-2xl p-8 border border-gray-800">
+            <SavingsCalculator />
+          </div>
+        </div>
+      </section>
+
       {/* Interactive Tools Section */}
-      <section id="tools" className="py-16 md:py-24 bg-gray-950">
+      <section id="tools" className="py-16 md:py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
             <span className="text-blue-400 text-xs font-semibold uppercase tracking-wider block mb-4">
               Platform Tools
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white !text-white mb-4">
-              Calculate, Compare, Decide
+              Market Insights & Analysis
             </h2>
             <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
-              Interactive tools to help you understand the fractional market
+              Interactive tools to help you understand UK fractional market trends
             </p>
-          </div>
-
-          {/* Calculators Section - For Candidates & Employers */}
-          <div className="mb-16">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* For Candidates */}
-              <div>
-                <div className="mb-6">
-                  <h2 className="text-2xl font-bold text-white !text-white mb-2">For Candidates: Calculate Your Fractional Rate</h2>
-                  <p className="text-gray-300 text-sm">
-                    Understand your earning potential as a fractional executive. Input your role and location to see realistic day rates, weekly earnings, and annual income projections based on current UK market data.
-                  </p>
-                </div>
-                <div className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800 hover:border-blue-600/50 transition-colors">
-                  <FractionalRateCalculatorUK />
-                </div>
-              </div>
-
-              {/* For Employers */}
-              <div>
-                <div className="mb-6">
-                  <h2 className="text-2xl font-bold text-white !text-white mb-2">For Employers: Calculate Cost Savings</h2>
-                  <p className="text-gray-300 text-sm">
-                    Discover how much you can save by hiring fractional executives versus full-time. Compare total employment costs including salary, NI, benefits, and overhead against flexible fractional rates.
-                  </p>
-                </div>
-                <div className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800 hover:border-blue-600/50 transition-colors">
-                  <SavingsCalculator />
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Market Insights - 2 Column Grid */}
@@ -517,7 +520,6 @@ export default async function FractionalJobsUKPage() {
           <h2 className="text-xl md:text-2xl font-bold text-white !text-white mb-8 md:mb-12 text-center">Explore More</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             <div>
-              <h3 className="text-white !text-white mb-4 text-xs font-semibold uppercase tracking-wider opacity-70">By Role</h3>
               <ul className="space-y-3 text-gray-400 text-sm">
                 <li><Link href="/fractional-cfo-jobs-uk" className="hover:text-blue-400 transition-colors">Fractional CFO Jobs UK</Link></li>
                 <li><Link href="/fractional-cmo-jobs-uk" className="hover:text-blue-400 transition-colors">Fractional CMO Jobs UK</Link></li>
@@ -526,7 +528,6 @@ export default async function FractionalJobsUKPage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-white !text-white mb-4 text-xs font-semibold uppercase tracking-wider opacity-70">By Location</h3>
               <ul className="space-y-3 text-gray-400 text-sm">
                 <li><Link href="/fractional-jobs?location=London" className="hover:text-blue-400 transition-colors">Fractional Jobs London</Link></li>
                 <li><Link href="/fractional-jobs-manchester" className="hover:text-blue-400 transition-colors">Fractional Jobs Manchester</Link></li>
@@ -535,7 +536,6 @@ export default async function FractionalJobsUKPage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-white !text-white mb-4 text-xs font-semibold uppercase tracking-wider opacity-70">Resources</h3>
               <ul className="space-y-3 text-gray-400 text-sm">
                 <li><Link href="/fractional-jobs" className="hover:text-blue-400 transition-colors">All Fractional Jobs UK</Link></li>
                 <li><Link href="/how-to-become-a-fractional-executive" className="hover:text-blue-400 transition-colors">How to Go Fractional</Link></li>
