@@ -39,7 +39,7 @@ export default function FractionalRevenuePage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-black text-gray-900 mb-6">Fractional Revenue Leadership</h2>
-          <p className="text-xl text-gray-600 leading-relaxed mb-6">Revenue growth requires experienced leadership. Fractional revenue leaders bring proven sales methodologies, GTM expertise, and team-building experience—helping you accelerate growth without the commitment of a full-time hire.</p>
+          <p className="text-xl text-gray-600 leading-relaxed mb-6">Revenue growth requires experienced leadership. Research from <a href="https://www.bridgegroupinc.com/insights" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline">The Bridge Group</a> demonstrates that structured sales leadership dramatically improves win rates and quota attainment. Fractional revenue leaders bring proven sales methodologies, GTM expertise, and team-building experience—helping you accelerate growth without the commitment of a full-time hire, applying <a href="https://www.winningbydesign.com/resources/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline">Winning by Design frameworks</a> for predictable revenue growth.</p>
           <div className="grid md:grid-cols-3 gap-6 mt-10">
             {[
               { title: 'Fractional CRO', description: 'C-level revenue leadership for GTM strategy and growth.', link: '/fractional-cro-services' },

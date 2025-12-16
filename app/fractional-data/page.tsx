@@ -39,7 +39,7 @@ export default function FractionalDataPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-black text-gray-900 mb-6">Fractional Data Leadership</h2>
-          <p className="text-xl text-gray-600 leading-relaxed mb-6">Data is your competitive advantage—but only if you can use it effectively. Fractional data leaders help you build data capabilities, implement analytics, and make data-driven decisions without the cost of a full-time data executive.</p>
+          <p className="text-xl text-gray-600 leading-relaxed mb-6">Data is your competitive advantage—but only if you can use it effectively. Research from <a href="https://mitsloan.mit.edu/ideas-made-to-matter/why-companies-that-wait-to-become-data-driven-will-lose" target="_blank" rel="noopener noreferrer" className="text-cyan-600 hover:text-cyan-700 underline">MIT Sloan</a> shows that companies with dedicated data leadership outperform competitors significantly. Fractional data leaders help you build data capabilities, implement analytics, and make data-driven decisions without the cost of a full-time data executive, following <a href="https://tdwi.org/pages/maturity-model/data-management-maturity-model.aspx" target="_blank" rel="noopener noreferrer" className="text-cyan-600 hover:text-cyan-700 underline">TDWI data maturity frameworks</a>.</p>
           <div className="grid md:grid-cols-3 gap-6 mt-10">
             {[
               { title: 'Fractional CDO', description: 'C-level data leadership for strategy and governance.', link: '/fractional-cdo-services' },
