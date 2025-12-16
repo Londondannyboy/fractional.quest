@@ -171,7 +171,7 @@ export default async function JobDetailPage({ params }: PageProps) {
             <p className="text-xl text-gray-600 mb-8 max-w-md mx-auto">
               This position may have been filled or is no longer available.
             </p>
-            <Link href="/fractional-jobs">
+            <Link href="/fractional-jobs-uk">
               <button className="px-8 py-3 bg-black text-white font-semibold hover:bg-gray-800 transition-colors">
                 Browse All Jobs
               </button>
@@ -338,7 +338,7 @@ export default async function JobDetailPage({ params }: PageProps) {
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
               {/* Breadcrumb */}
               <Link
-                href="/fractional-jobs"
+                href="/fractional-jobs-uk"
                 className="inline-flex items-center mb-6 text-sm font-medium transition-colors hover:opacity-80"
                 style={{ color: colors.text, opacity: 0.7 }}
               >
@@ -840,7 +840,7 @@ export default async function JobDetailPage({ params }: PageProps) {
                     </svg>
                   </a>
                   <Link
-                    href="/fractional-jobs"
+                    href="/fractional-jobs-uk"
                     className="px-8 py-4 border-2 font-bold transition-colors rounded-lg"
                     style={{
                       borderColor: colors.text,
@@ -871,7 +871,7 @@ export default async function JobDetailPage({ params }: PageProps) {
           <p className="text-xl text-gray-600 mb-8 max-w-md mx-auto">
             There was an error loading this job. Please try again later.
           </p>
-          <Link href="/fractional-jobs">
+          <Link href="/fractional-jobs-uk">
             <button className="px-8 py-3 bg-black text-white font-semibold hover:bg-gray-800 transition-colors">
               Browse All Jobs
             </button>

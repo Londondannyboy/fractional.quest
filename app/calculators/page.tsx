@@ -216,7 +216,7 @@ export default function CalculatorsHub() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/fractional-jobs"
+              href="/fractional-jobs-uk"
               className="btn-gradient inline-flex items-center justify-center gap-2"
             >
               Browse Fractional Jobs

@@ -124,7 +124,7 @@ export default async function PartTimeCmoPage() {
             Transitioning to a <strong>part-time CMO career</strong> typically requires 12-15+ years of marketing experience, including significant time in senior leadership roles (VP Marketing, Marketing Director, or CMO). The most successful fractional CMOs have deep expertise in specific areas—such as B2B SaaS growth, brand building, or performance marketing—that make them highly valuable to target clients.
           </p>
           <p>
-            Building a fractional practice takes time. Many part-time CMOs start with one or two engagements while consulting or between full-time roles, gradually building their client portfolio through referrals, networking, and platforms like <Link href="/fractional-jobs">Fractional Quest</Link>.
+            Building a fractional practice takes time. Many part-time CMOs start with one or two engagements while consulting or between full-time roles, gradually building their client portfolio through referrals, networking, and platforms like <Link href="/fractional-jobs-uk">Fractional Quest</Link>.
           </p>
 
           <h2>Part-Time CMO Jobs in London</h2>

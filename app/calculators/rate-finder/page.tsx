@@ -295,7 +295,7 @@ export default function RateFinderCalculator() {
                   Browse current fractional roles and see what companies are offering.
                 </p>
                 <Link
-                  href="/fractional-jobs"
+                  href="/fractional-jobs-uk"
                   className="btn-gradient inline-flex items-center gap-2"
                 >
                   Browse Jobs

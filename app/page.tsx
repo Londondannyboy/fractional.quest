@@ -173,10 +173,10 @@ export default async function Home() {
       },
       {
         "@type": "Question",
-        name: "Do I need to be based in London for fractional work?",
+        name: "Do I need to be in a specific location for fractional work?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `No, while London has the most fractional opportunities (${detailedStats.londonJobs}+ roles), many positions are remote or hybrid. Currently there are ${detailedStats.remoteJobs}+ remote fractional positions available across the UK.`
+          text: "No, many fractional positions are remote or hybrid. Fractional executives often work with clients globally, with engagements structured around 1-3 days per week which allows for flexible location arrangements."
         }
       },
       {
@@ -316,7 +316,7 @@ export default async function Home() {
               </Link>
 
               <Link
-                href="/fractional-jobs"
+                href="/fractional-jobs-uk"
                 className="inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-xl bg-white/5 backdrop-blur border border-blue-500/30 text-white hover:bg-white/10 hover:border-blue-500/50 transition-all duration-200"
               >
                 Browse Jobs
@@ -770,7 +770,7 @@ export default async function Home() {
             </div>
             <div className="text-center">
               <Link
-                href="/fractional-jobs"
+                href="/fractional-jobs-uk"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg bg-white text-gray-900 hover:bg-gray-100 transition-all duration-200"
               >
                 {totalJobs > 0 ? `View All ${totalJobs} Jobs →` : 'View All Jobs →'}
@@ -935,7 +935,7 @@ export default async function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/fractional-jobs"
+              href="/fractional-jobs-uk"
               className="inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-lg border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-200"
             >
               I'm a Fractional Executive

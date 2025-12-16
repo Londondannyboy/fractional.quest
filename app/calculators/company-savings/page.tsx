@@ -281,7 +281,7 @@ export default function CompanySavingsCalculator() {
                   Browse our network of experienced fractional CFOs, CTOs, CMOs and more.
                 </p>
                 <Link
-                  href="/fractional-jobs"
+                  href="/fractional-jobs-uk"
                   className="btn-gradient inline-flex items-center gap-2"
                 >
                   Browse Fractional Executives

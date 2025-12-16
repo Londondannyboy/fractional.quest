@@ -230,7 +230,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             {/* Back link */}
             <Link
-              href="/fractional-jobs"
+              href="/fractional-jobs-uk"
               className="inline-flex items-center mb-8 text-sm font-medium transition-colors hover:opacity-80"
               style={{ color: colors.text, opacity: 0.7 }}
             >

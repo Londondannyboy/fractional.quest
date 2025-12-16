@@ -478,7 +478,7 @@ export default async function LiverpoolPage() {
             <div>
               <h3 className="font-bold text-gray-900 mb-4">Other UK Locations</h3>
               <ul className="space-y-2 text-gray-600">
-                <li><Link href="/fractional-jobs" className="hover:text-red-700 transition-colors">All Fractional Jobs UK</Link></li>
+                <li><Link href="/fractional-jobs-uk" className="hover:text-red-700 transition-colors">All Fractional Jobs UK</Link></li>
                 <li><Link href="/fractional-jobs-manchester" className="hover:text-red-700 transition-colors">Fractional Jobs Manchester</Link></li>
                 <li><Link href="/fractional-jobs-london" className="hover:text-red-700 transition-colors">Fractional Jobs London</Link></li>
                 <li><Link href="/fractional-jobs-leeds" className="hover:text-red-700 transition-colors">Fractional Jobs Leeds</Link></li>

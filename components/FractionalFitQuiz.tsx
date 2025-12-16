@@ -239,7 +239,7 @@ export function FractionalFitQuiz({ className = '' }: FractionalFitQuizProps) {
               Retake Quiz
             </button>
             <Link
-              href="/fractional-jobs"
+              href="/fractional-jobs-uk"
               className="px-6 py-3 bg-purple-700 text-white rounded-lg font-semibold hover:bg-purple-800 transition-colors text-center"
             >
               Browse Fractional Jobs UK

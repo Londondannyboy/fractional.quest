@@ -328,7 +328,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                 Join the Platform
               </Link>
               <Link
-                href="/fractional-jobs"
+                href="/fractional-jobs-uk"
                 className="inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-lg border border-white/20 text-white hover:bg-white/10 transition-all duration-200"
               >
                 Browse Jobs

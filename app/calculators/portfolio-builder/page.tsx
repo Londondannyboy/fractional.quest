@@ -278,7 +278,7 @@ export default function PortfolioBuilderCalculator() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
-                    href="/fractional-jobs"
+                    href="/fractional-jobs-uk"
                     className="btn-gradient inline-flex items-center justify-center gap-2"
                   >
                     Browse Jobs

@@ -123,7 +123,7 @@ export default async function PartTimeCfoPage() {
             Transitioning to a <strong>part-time CFO career</strong> typically requires 15+ years of finance experience, including at least 5 years in senior leadership roles. Most successful part-time CFOs hold professional qualifications (ACA, ACCA, CIMA) and have experience across multiple industries.
           </p>
           <p>
-            Building a portfolio of clients takes time. Many part-time CFOs start by taking on one or two fractional engagements alongside consulting work, gradually building their client base through referrals and networking. Platforms like <Link href="/fractional-jobs">Fractional Quest</Link> can help connect experienced CFOs with companies seeking part-time finance leadership.
+            Building a portfolio of clients takes time. Many part-time CFOs start by taking on one or two fractional engagements alongside consulting work, gradually building their client base through referrals and networking. Platforms like <Link href="/fractional-jobs-uk">Fractional Quest</Link> can help connect experienced CFOs with companies seeking part-time finance leadership.
           </p>
 
           <h2>Part-Time CFO Jobs in London</h2>

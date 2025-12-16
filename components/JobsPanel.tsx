@@ -133,7 +133,7 @@ export function JobsPanel({ searchQuery, roleFilter, locationFilter, onJobSelect
       {/* Footer */}
       <div className="p-4 border-t border-gray-200 bg-gray-50">
         <Link
-          href="/fractional-jobs"
+          href="/fractional-jobs-uk"
           className="block w-full text-center py-2 px-4 bg-purple-600 text-white text-sm font-medium rounded-lg hover:bg-purple-700 transition-colors"
         >
           View All Jobs →

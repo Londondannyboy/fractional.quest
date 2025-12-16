@@ -371,7 +371,7 @@ export default async function JobsPage({ searchParams }: JobsPageProps) {
                     {industryFilter && <span className="ml-2 px-2 py-0.5 bg-blue-950/200/20 rounded text-blue-700">{industryFilter}</span>}
                   </span>
                 </div>
-                <Link href="/fractional-jobs" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link href="/fractional-jobs-uk" className="text-sm text-gray-400 hover:text-white transition-colors">
                   Clear all ×
                 </Link>
               </div>
@@ -402,7 +402,7 @@ export default async function JobsPage({ searchParams }: JobsPageProps) {
                 <div className="text-6xl mb-4">🔍</div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">No jobs match your filters</h2>
                 <p className="text-gray-600 mb-6">Try adjusting your search criteria</p>
-                <Link href="/fractional-jobs">
+                <Link href="/fractional-jobs-uk">
                   <button className="px-6 py-2.5 bg-gray-900 text-white rounded-lg hover:bg-black font-semibold transition-colors">
                     Clear All Filters
                   </button>

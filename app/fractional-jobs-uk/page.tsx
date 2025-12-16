@@ -401,7 +401,7 @@ export default async function FractionalJobsUKPage() {
                 </p>
               </div>
               <Link
-                href="/fractional-jobs"
+                href="/fractional-jobs-uk"
                 className="text-blue-400 hover:text-blue-300 font-semibold transition-colors whitespace-nowrap"
               >
                 View all &rarr;
@@ -668,7 +668,7 @@ export default async function FractionalJobsUKPage() {
             </div>
             <div>
               <ul className="space-y-3 text-gray-400 text-sm">
-                <li><Link href="/fractional-jobs" className="hover:text-blue-400 transition-colors">All Fractional Jobs UK</Link></li>
+                <li><Link href="/fractional-jobs-uk" className="hover:text-blue-400 transition-colors">All Fractional Jobs UK</Link></li>
                 <li><Link href="/how-to-become-a-fractional-executive" className="hover:text-blue-400 transition-colors">How to Go Fractional</Link></li>
                 <li><Link href="/fractional-executive-salary-uk" className="hover:text-blue-400 transition-colors">UK Salary Guide</Link></li>
                 <li><Link href="/fractional-jobs-articles" className="hover:text-blue-400 transition-colors">All Articles</Link></li>
@@ -1100,7 +1100,7 @@ export default async function FractionalJobsUKPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/fractional-jobs"
+              href="/fractional-jobs-uk"
               className="inline-flex items-center justify-center px-8 md:px-10 py-4 md:py-5 text-base md:text-lg font-semibold rounded-lg bg-white text-gray-900 hover:bg-gray-100 transition-all duration-200"
             >
               Browse All Jobs

@@ -64,7 +64,7 @@ export function Navigation() {
           <div className="flex items-center gap-2 sm:gap-3">
             {/* Jobs link - always visible, prominent on mobile */}
             <Link
-              href="/fractional-jobs"
+              href="/fractional-jobs-uk"
               className={`md:hidden px-3 py-2 rounded-lg font-semibold text-sm transition-colors ${
                 isActive('/fractional-jobs')
                   ? 'bg-gray-200 text-gray-900'

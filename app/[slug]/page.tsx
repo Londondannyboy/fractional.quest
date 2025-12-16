@@ -165,7 +165,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
               <h3 className="text-2xl font-bold mb-2">Ready to find fractional talent?</h3>
               <p className="text-purple-100">Browse our curated list of fractional executive opportunities.</p>
             </div>
-            <Link href="/fractional-jobs">
+            <Link href="/fractional-jobs-uk">
               <button className="px-8 py-4 bg-white text-purple-700 rounded-xl font-bold hover:bg-purple-50 transition-colors whitespace-nowrap shadow-lg">
                 Browse Jobs →
               </button>
