@@ -154,8 +154,8 @@ export async function generateArticle(
 
   const fullPrompt = `${systemPrompt}\n\n${userPrompt}`
 
-  // Use Google Gemini API
-  const url = `https://generativelanguage.googleapis.com/v1/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`
+  // Use Google Gemini API (v1beta supports gemini-1.5-flash)
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`
 
   const response = await fetch(url, {
     method: 'POST',
