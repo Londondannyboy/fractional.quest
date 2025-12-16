@@ -49,6 +49,8 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
   const [debugMode, setDebugMode] = useState(true)  // Enable debug by default
   const [debugLogs, setDebugLogs] = useState<Array<{timestamp: string; message: string; type: string}>>([])
   const [toolCalls, setToolCalls] = useState<any[]>([])
+  const [methodCActivity, setMethodCActivity] = useState<Array<{timestamp: string; status: string; intent?: string; confidence?: number}>>([])
+  const [methodCAnalyzing, setMethodCAnalyzing] = useState(false)
 
   // Helper to add debug logs
   const addDebugLog = useCallback((message: string, type: 'info' | 'success' | 'error' | 'tool' = 'info') => {
@@ -141,6 +143,9 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
   const analyzePydanticAI = useCallback(async (transcript: string) => {
     if (!transcript || transcript.length < 10) return
 
+    const timestamp = new Date().toLocaleTimeString()
+    setMethodCAnalyzing(true)
+    setMethodCActivity(prev => [...prev.slice(-5), { timestamp, status: 'analyzing' }])
     addDebugLog('🐍 Method C: Pydantic AI analyzing...', 'tool')
 
     try {
@@ -152,6 +157,8 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
 
       // Check if response is OK before parsing JSON
       if (!response.ok) {
+        setMethodCActivity(prev => [...prev.slice(-5), { timestamp, status: 'error' }])
+        setMethodCAnalyzing(false)
         addDebugLog(`⚠️ Method C: API error ${response.status}`, 'error')
         return
       }
@@ -159,6 +166,8 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
       // Check content-type to ensure it's JSON
       const contentType = response.headers.get('content-type')
       if (!contentType || !contentType.includes('application/json')) {
+        setMethodCActivity(prev => [...prev.slice(-5), { timestamp, status: 'unavailable' }])
+        setMethodCAnalyzing(false)
         addDebugLog(`⚠️ Method C: Got ${contentType || 'HTML'} instead of JSON (endpoint may not be deployed)`, 'error')
         return
       }
@@ -168,11 +177,19 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
 
       // Check if it's a confirmation request
       if (result.type === 'confirmation_required') {
+        setMethodCActivity(prev => [...prev.slice(-5), {
+          timestamp,
+          status: 'confirmation_pending',
+          intent: result.action,
+          confidence: result.confidence || 0.95
+        }])
         addDebugLog(`✋ Method C: Confirmation requested - ${result.action}`, 'success')
         setPydanticConfirmation({
           ...result,
           user_id: userId
         })
+      } else {
+        setMethodCActivity(prev => [...prev.slice(-5), { timestamp, status: 'no_action_needed' }])
       }
 
       // Check if it's job results
@@ -180,8 +197,12 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
         addDebugLog(`🎯 Method C found ${result.data.jobs.length} jobs!`, 'success')
         setPydanticJobs(result.data.jobs)
       }
+
+      setMethodCAnalyzing(false)
     } catch (e: any) {
       // Graceful failure - Methods A & B still work
+      setMethodCActivity(prev => [...prev.slice(-5), { timestamp, status: 'error' }])
+      setMethodCAnalyzing(false)
       addDebugLog(`⚠️ Method C unavailable (${e.message || 'endpoint error'})`, 'error')
     }
   }, [userId, addDebugLog])
@@ -541,6 +562,64 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
               <p>{m.content}</p>
             </div>
           ))}
+        </div>
+      )}
+
+      {/* Method C Activity Panel - Live Feedback */}
+      {isConnected && (
+        <div className="w-full max-w-lg mb-8">
+          <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-2 border-yellow-200 rounded-xl p-4 shadow-md">
+            <div className="flex items-center gap-3 mb-3">
+              <div className={`w-3 h-3 rounded-full ${methodCAnalyzing ? 'bg-yellow-500 animate-pulse' : 'bg-gray-300'}`} />
+              <h3 className="font-bold text-gray-900">Method C: Human-in-the-Loop</h3>
+              <span className="px-2 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-medium">
+                Pydantic AI
+              </span>
+            </div>
+
+            {/* Activity Feed */}
+            <div className="space-y-2 text-sm">
+              {methodCActivity.length === 0 ? (
+                <div className="text-gray-500 italic">Waiting for conversation...</div>
+              ) : (
+                methodCActivity.slice(-3).map((activity, i) => (
+                  <div
+                    key={i}
+                    className={`flex items-center gap-2 p-2 rounded-lg ${
+                      activity.status === 'confirmation_pending'
+                        ? 'bg-green-100 text-green-900 font-medium'
+                        : activity.status === 'analyzing'
+                        ? 'bg-yellow-100 text-yellow-900'
+                        : activity.status === 'error'
+                        ? 'bg-red-100 text-red-900'
+                        : 'bg-gray-100 text-gray-600'
+                    }`}
+                  >
+                    <span className="text-xs text-gray-500">{activity.timestamp}</span>
+                    <span>
+                      {activity.status === 'analyzing' && '🔄 Analyzing transcript...'}
+                      {activity.status === 'confirmation_pending' && `✋ Confirmation: ${activity.intent} (${Math.round((activity.confidence || 0) * 100)}%)`}
+                      {activity.status === 'no_action_needed' && '✓ No confirmation needed'}
+                      {activity.status === 'error' && '⚠️ Endpoint error'}
+                      {activity.status === 'unavailable' && '⚠️ Service unavailable'}
+                    </span>
+                  </div>
+                ))
+              )}
+            </div>
+
+            {/* Pending Confirmation Indicator */}
+            {pydanticConfirmation && (
+              <div className="mt-3 p-3 bg-white border-2 border-yellow-400 rounded-lg">
+                <div className="flex items-center gap-2 text-yellow-800 font-medium">
+                  <svg className="w-5 h-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                  <span>Waiting for your confirmation!</span>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       )}
 
