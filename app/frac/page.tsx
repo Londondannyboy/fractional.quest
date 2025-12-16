@@ -20,7 +20,7 @@ function setChatGroupId(userId: string, chatGroupId: string) {
   localStorage.setItem(`hume_chat_group_${userId}`, chatGroupId)
 }
 
-function VoiceInterface({ token, profile, userId, previousContext }: { token: string; profile: any; userId?: string; previousContext?: string }) {
+function VoiceInterface({ token, profile, userId, previousContext, isLoggedIn }: { token: string; profile: any; userId?: string; previousContext?: string; isLoggedIn: boolean }) {
   const {
     connect,
     disconnect,
@@ -424,6 +424,9 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
   const isConnected = status.value === 'connected'
   const isConnecting = status.value === 'connecting'
 
+  // Message limits
+  const MESSAGE_LIMIT = isLoggedIn ? 30 : 10
+
   // Combine message segments into complete messages
   const combinedMessages: { type: string; content: string }[] = []
   let currentAssistant = ''
@@ -447,10 +450,52 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
     combinedMessages.push({ type: 'assistant_message', content: currentAssistant.trim() })
   }
 
+  // Count user messages
+  const userMessageCount = combinedMessages.filter(m => m.type === 'user_message').length
+  const messagesRemaining = MESSAGE_LIMIT - userMessageCount
+  const isNearLimit = messagesRemaining <= 3 && messagesRemaining > 0
+  const hasReachedLimit = userMessageCount >= MESSAGE_LIMIT
+
+  // Disconnect if limit reached
+  useEffect(() => {
+    if (hasReachedLimit && isConnected) {
+      disconnect()
+      addDebugLog(`Message limit reached (${MESSAGE_LIMIT} messages)`, 'info')
+    }
+  }, [hasReachedLimit, isConnected, disconnect, MESSAGE_LIMIT, addDebugLog])
+
   const recentMessages = combinedMessages.slice(-4)
 
   return (
     <div className="flex flex-col items-center">
+      {/* Message Limit Warning */}
+      {hasReachedLimit && (
+        <div className="bg-red-900/30 border border-red-700 rounded-xl p-4 mb-6 max-w-md text-center">
+          <p className="text-red-200 font-semibold mb-2">Message Limit Reached</p>
+          <p className="text-red-300 text-sm mb-3">
+            You've reached the {MESSAGE_LIMIT} message limit for {isLoggedIn ? 'logged-in' : 'guest'} users.
+          </p>
+          {!isLoggedIn && (
+            <Link
+              href="/handler/sign-in"
+              className="inline-block px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            >
+              Sign In for 30 Messages
+            </Link>
+          )}
+        </div>
+      )}
+
+      {/* Near Limit Warning */}
+      {isNearLimit && !hasReachedLimit && (
+        <div className="bg-yellow-900/30 border border-yellow-700 rounded-xl p-3 mb-4 max-w-md text-center">
+          <p className="text-yellow-200 text-sm">
+            ⚠️ {messagesRemaining} message{messagesRemaining !== 1 ? 's' : ''} remaining
+            {!isLoggedIn && ' (Sign in for 30 messages)'}
+          </p>
+        </div>
+      )}
+
       {/* Voice Button with Status Indicator */}
       <div className="relative mb-8">
         {/* Outer status ring */}
@@ -1059,7 +1104,7 @@ export default function VoicePage() {
               }}
               onMessage={handleHumeMessage}
             >
-              <VoiceInterface token={token} profile={profile} userId={user?.id} previousContext={previousContext} />
+              <VoiceInterface token={token} profile={profile} userId={user?.id} previousContext={previousContext} isLoggedIn={!!user} />
             </VoiceProvider>
           )}
         </div>
