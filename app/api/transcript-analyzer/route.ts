@@ -183,13 +183,21 @@ async function searchJobsFromDB(roleType: string, location?: string) {
     const jobs = await sql`
       SELECT
         id, slug, title, company_name, location, is_remote,
-        salary_min, salary_max, salary_currency
+        salary_min, salary_max, salary_currency,
+        CASE
+          WHEN is_fractional = true THEN 1
+          WHEN LOWER(title) LIKE '%fractional%' THEN 2
+          WHEN LOWER(title) LIKE '%part%time%' OR LOWER(title) LIKE '%interim%' OR LOWER(title) LIKE '%contract%' THEN 3
+          ELSE 4
+        END as priority
       FROM jobs
       WHERE is_active = true
-        AND (is_fractional = true OR LOWER(title) LIKE '%fractional%')
-        AND LOWER(title) LIKE LOWER(${rolePattern})
+        AND (
+          LOWER(title) LIKE LOWER(${rolePattern})
+          OR LOWER(role_category) LIKE LOWER(${rolePattern})
+        )
         AND LOWER(COALESCE(location, '')) LIKE LOWER(${locationPattern})
-      ORDER BY posted_date DESC NULLS LAST
+      ORDER BY priority ASC, posted_date DESC NULLS LAST
       LIMIT 5
     `
 
