@@ -2,14 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { neon } from '@neondatabase/serverless'
 import { z } from 'zod'
 import { generateObject } from 'ai'
-import { createGoogleGenerativeAI } from '@ai-sdk/google'
+import { anthropic } from '@ai-sdk/anthropic'
 
 const sql = neon(process.env.DATABASE_URL!)
-
-// Initialize Google AI with API key
-const google = createGoogleGenerativeAI({
-  apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GOOGLE_API_KEY || ''
-})
 
 /**
  * Transcript Analyzer - Pydantic AI Alternative
@@ -119,7 +114,7 @@ async function extractIntent(transcript: string): Promise<ExtractedIntent> {
 
   try {
     const result = await generateObject({
-      model: google('gemini-1.5-flash'),
+      model: anthropic('claude-3-5-haiku-20241022'),
       schema: ExtractedIntentSchema,
       prompt: `Analyze this conversation transcript and extract the user's intent.
 
