@@ -170,8 +170,7 @@ export async function generateArticle(
       }],
       generationConfig: {
         temperature: 0.7,
-        maxOutputTokens: 2000,
-        responseMimeType: 'application/json'
+        maxOutputTokens: 2000
       }
     })
   })
