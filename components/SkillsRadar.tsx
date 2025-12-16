@@ -305,7 +305,7 @@ export function SkillsRadar({ height = '500px', roles = DEFAULT_ROLES }: SkillsR
           </div>
 
           {/* Legend */}
-          <div className="mt-4 text-center text-xs text-gray-500">
+          <div className="mt-4 text-center text-xs text-gray-400">
             Percentage of jobs in each role requiring each skill
           </div>
         </>

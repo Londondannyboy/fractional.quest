@@ -217,8 +217,10 @@ export default async function FractionalJobsUKPage() {
             playsInline
             preload="metadata"
             className="w-full h-full object-cover opacity-30"
+            aria-label="Background video showing fractional executives at work"
           >
             <source src="https://stream.mux.com/qIS6PGKxIZyzjrDBzxQuqPRBOhHofDnXq1chdsqAY9Y.m3u8" type="application/x-mpegURL" />
+            <track kind="captions" label="English captions" srcLang="en" />
           </video>
         </div>
 
@@ -467,9 +469,9 @@ export default async function FractionalJobsUKPage() {
       <section className="py-16 md:py-24 bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
-            <span className="text-xs font-medium uppercase tracking-wider text-gray-500 mb-4 block">Success Stories</span>
+            <span className="text-xs font-medium uppercase tracking-wider text-gray-400 mb-4 block">Success Stories</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white !text-white mb-2">Fractional Executives in Action</h2>
-            <p className="text-gray-500 text-sm">Examples from around the web</p>
+            <p className="text-gray-400 text-sm">Examples from around the web</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -497,7 +499,7 @@ export default async function FractionalJobsUKPage() {
       <section className="py-16 md:py-24 bg-gray-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
-            <span className="text-xs font-medium uppercase tracking-wider text-gray-500 mb-4 block">FAQ</span>
+            <span className="text-xs font-medium uppercase tracking-wider text-gray-400 mb-4 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white !text-white mb-4">Common Questions</h2>
             <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
               Everything you need to know about fractional executive careers in the UK
@@ -550,7 +552,7 @@ export default async function FractionalJobsUKPage() {
       {/* Final CTA */}
       <section className="py-16 md:py-24 bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-xs font-medium uppercase tracking-wider text-gray-500 mb-6 block">Get Started</span>
+          <span className="text-xs font-medium uppercase tracking-wider text-gray-400 mb-6 block">Get Started</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white !text-white mb-6 leading-tight">
             Find Fractional Jobs UK Today
           </h2>

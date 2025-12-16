@@ -217,9 +217,10 @@ export function IR35Calculator({ defaultDayRate = 800, className = '' }: IR35Cal
         <div className="grid md:grid-cols-3 gap-6">
           {/* Day Rate */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Day Rate</label>
+            <label htmlFor="ir35-day-rate" className="block text-sm font-medium text-gray-700 mb-2">Day Rate</label>
             <div className="text-2xl font-black text-gray-900 mb-2">{formatCurrency(dayRate)}</div>
             <input
+              id="ir35-day-rate"
               type="range"
               min="400"
               max="2000"
@@ -227,6 +228,7 @@ export function IR35Calculator({ defaultDayRate = 800, className = '' }: IR35Cal
               value={dayRate}
               onChange={(e) => setDayRate(Number(e.target.value))}
               className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-amber-500"
+              aria-label={`Day rate: ${formatCurrency(dayRate)}`}
             />
             <div className="flex justify-between text-xs text-gray-500 mt-1">
               <span>£400</span>
@@ -236,9 +238,10 @@ export function IR35Calculator({ defaultDayRate = 800, className = '' }: IR35Cal
 
           {/* Days Per Week */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Days Per Week</label>
+            <label htmlFor="ir35-days-per-week" className="block text-sm font-medium text-gray-700 mb-2">Days Per Week</label>
             <div className="text-2xl font-black text-gray-900 mb-2">{daysPerWeek} days</div>
             <input
+              id="ir35-days-per-week"
               type="range"
               min="1"
               max="5"
@@ -246,6 +249,7 @@ export function IR35Calculator({ defaultDayRate = 800, className = '' }: IR35Cal
               value={daysPerWeek}
               onChange={(e) => setDaysPerWeek(Number(e.target.value))}
               className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-amber-500"
+              aria-label={`Days per week: ${daysPerWeek} days`}
             />
             <div className="flex justify-between text-xs text-gray-500 mt-1">
               <span>1 day</span>
@@ -255,9 +259,10 @@ export function IR35Calculator({ defaultDayRate = 800, className = '' }: IR35Cal
 
           {/* Weeks Per Year */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Weeks Per Year</label>
+            <label htmlFor="ir35-weeks-per-year" className="block text-sm font-medium text-gray-700 mb-2">Weeks Per Year</label>
             <div className="text-2xl font-black text-gray-900 mb-2">{weeksPerYear} weeks</div>
             <input
+              id="ir35-weeks-per-year"
               type="range"
               min="40"
               max="52"
@@ -265,6 +270,7 @@ export function IR35Calculator({ defaultDayRate = 800, className = '' }: IR35Cal
               value={weeksPerYear}
               onChange={(e) => setWeeksPerYear(Number(e.target.value))}
               className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-amber-500"
+              aria-label={`Weeks per year: ${weeksPerYear} weeks`}
             />
             <div className="flex justify-between text-xs text-gray-500 mt-1">
               <span>40 weeks</span>
@@ -319,7 +325,7 @@ export function IR35Calculator({ defaultDayRate = 800, className = '' }: IR35Cal
           <div className="mt-4 p-4 bg-red-50 border border-red-200">
             <div className="text-sm text-red-700">Take-Home Pay</div>
             <div className="text-3xl font-black text-red-700">{formatCurrency(insideIR35.takeHome)}</div>
-            <div className="text-sm text-red-600">{insideIR35.effectiveRate.toFixed(1)}% effective tax rate</div>
+            <div className="text-sm text-red-700">{insideIR35.effectiveRate.toFixed(1)}% effective tax rate</div>
           </div>
         </div>
 
@@ -361,7 +367,7 @@ export function IR35Calculator({ defaultDayRate = 800, className = '' }: IR35Cal
           <div className="mt-4 p-4 bg-emerald-50 border border-emerald-200">
             <div className="text-sm text-emerald-700">Take-Home Pay</div>
             <div className="text-3xl font-black text-emerald-700">{formatCurrency(outsideIR35.takeHome)}</div>
-            <div className="text-sm text-emerald-600">{outsideIR35.effectiveRate.toFixed(1)}% effective tax rate</div>
+            <div className="text-sm text-emerald-700">{outsideIR35.effectiveRate.toFixed(1)}% effective tax rate</div>
           </div>
         </div>
       </div>

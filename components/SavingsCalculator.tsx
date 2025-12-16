@@ -76,13 +76,14 @@ export function SavingsCalculator() {
 
           {/* Full-Time Salary */}
           <div>
-            <label className="block text-sm font-medium text-purple-200 mb-2">
+            <label htmlFor="salary-slider" className="block text-sm font-medium text-purple-200 mb-2">
               Full-Time {ROLE_DEFAULTS[role].label} Salary (Base)
             </label>
             <div className="text-3xl font-bold mb-3">
               {formatCurrency(fullTimeSalary)}
             </div>
             <input
+              id="salary-slider"
               type="range"
               min="80000"
               max="250000"
@@ -90,6 +91,7 @@ export function SavingsCalculator() {
               value={fullTimeSalary}
               onChange={(e) => setFullTimeSalary(Number(e.target.value))}
               className="w-full h-3 bg-purple-700 rounded-lg appearance-none cursor-pointer accent-white"
+              aria-label={`Full-time ${ROLE_DEFAULTS[role].label} salary: ${formatCurrency(fullTimeSalary)}`}
             />
             <div className="flex justify-between text-xs text-purple-300 mt-1">
               <span>£80k</span>
@@ -99,13 +101,14 @@ export function SavingsCalculator() {
 
           {/* Hours Needed */}
           <div>
-            <label className="block text-sm font-medium text-purple-200 mb-2">
+            <label htmlFor="hours-slider" className="block text-sm font-medium text-purple-200 mb-2">
               Hours Per Week You Actually Need
             </label>
             <div className="text-3xl font-bold mb-3">
               {hoursNeeded} hours <span className="text-lg font-normal text-purple-300">({(hoursNeeded / 8).toFixed(1)} days)</span>
             </div>
             <input
+              id="hours-slider"
               type="range"
               min="4"
               max="40"
@@ -113,6 +116,7 @@ export function SavingsCalculator() {
               value={hoursNeeded}
               onChange={(e) => setHoursNeeded(Number(e.target.value))}
               className="w-full h-3 bg-purple-700 rounded-lg appearance-none cursor-pointer accent-white"
+              aria-label={`Hours per week needed: ${hoursNeeded} hours (${(hoursNeeded / 8).toFixed(1)} days)`}
             />
             <div className="flex justify-between text-xs text-purple-300 mt-1">
               <span>4 hrs (0.5 days)</span>
