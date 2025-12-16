@@ -201,6 +201,13 @@ export async function generateArticle(
     }
   }
 
+  // Clean up control characters before parsing
+  jsonStr = jsonStr
+    .replace(/[\x00-\x1F\x7F]/g, '') // Remove control characters
+    .replace(/\n/g, '\\n') // Escape newlines if any remain
+    .replace(/\r/g, '\\r') // Escape carriage returns
+    .replace(/\t/g, '\\t') // Escape tabs
+
   // Parse and validate with Zod
   const parsed = JSON.parse(jsonStr)
   return GeneratedArticle.parse(parsed)
