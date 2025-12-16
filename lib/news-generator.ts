@@ -7,7 +7,7 @@ import { z } from 'zod'
 import { createDbQuery } from '@/lib/db'
 
 const GEMINI_API_KEY = process.env.GOOGLE_API_KEY || process.env.GEMINI_API_KEY
-const GEMINI_MODEL = 'gemini-1.5-flash-latest'
+const GEMINI_MODEL = 'gemini-2.5-flash' // Stable, best price-performance model
 
 // Article categories - matches job role_category
 export type ArticleCategory = 'Finance' | 'Marketing' | 'Engineering' | 'Operations' | 'HR' | 'Sales' | 'General'
