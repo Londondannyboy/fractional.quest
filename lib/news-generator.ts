@@ -190,13 +190,14 @@ export async function generateArticle(
   // Extract JSON from response (handle markdown code blocks)
   let jsonStr = text.trim()
 
-  // Remove markdown code blocks if present
-  jsonStr = jsonStr.replace(/^```json\s*/i, '').replace(/\s*```$/i, '')
-
-  // Extract JSON object
-  const jsonMatch = jsonStr.match(/\{[\s\S]*\}/)
-  if (jsonMatch) {
-    jsonStr = jsonMatch[0]
+  // Remove markdown code blocks if present (handle both ```json and ``` variants)
+  if (jsonStr.startsWith('```')) {
+    // Find the first { and last }
+    const startIdx = jsonStr.indexOf('{')
+    const endIdx = jsonStr.lastIndexOf('}')
+    if (startIdx !== -1 && endIdx !== -1) {
+      jsonStr = jsonStr.substring(startIdx, endIdx + 1)
+    }
   }
 
   // Parse and validate with Zod
