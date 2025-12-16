@@ -17,6 +17,7 @@
     "not dead"
   ],
   "dependencies": {
+    "@ai-sdk/anthropic": "^2.0.56",
     "@ai-sdk/google": "^2.0.47",
     "@getzep/zep-cloud": "^3.13.0",
     "@humeai/voice-react": "^0.2.11",
