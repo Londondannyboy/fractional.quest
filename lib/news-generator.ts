@@ -6,8 +6,8 @@
 import { z } from 'zod'
 import { createDbQuery } from '@/lib/db'
 
-const GATEWAY_URL = 'https://gateway.pydantic.dev/v1/chat/completions'
-const GATEWAY_API_KEY = process.env.PYDANTIC_AI_GATEWAY_API_KEY
+const GEMINI_API_KEY = process.env.GOOGLE_API_KEY || process.env.GEMINI_API_KEY
+const GEMINI_MODEL = 'gemini-2.5-flash'
 
 // Article categories - matches job role_category
 export type ArticleCategory = 'Finance' | 'Marketing' | 'Engineering' | 'Operations' | 'HR' | 'Sales' | 'General'
@@ -124,8 +124,8 @@ export async function generateArticle(
   jobs: JobData[],
   targetCategory?: ArticleCategory
 ): Promise<GeneratedArticle> {
-  if (!GATEWAY_API_KEY) {
-    throw new Error('PYDANTIC_AI_GATEWAY_API_KEY is required')
+  if (!GEMINI_API_KEY) {
+    throw new Error('GEMINI_API_KEY is required')
   }
 
   // Determine the category for internal links
@@ -152,21 +152,27 @@ export async function generateArticle(
     ? `Generate a ${contentType.replace('_', ' ')} article for the ${targetCategory} category.\n\nJobs data:\n${JSON.stringify(jobsFormatted, null, 2)}`
     : `Generate a ${contentType.replace('_', ' ')} article.\n\nJobs data:\n${JSON.stringify(jobsFormatted, null, 2)}`
 
-  const response = await fetch(GATEWAY_URL, {
+  const fullPrompt = `${systemPrompt}\n\n${userPrompt}`
+
+  // Use Google Gemini API
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`
+
+  const response = await fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${GATEWAY_API_KEY}`,
     },
     body: JSON.stringify({
-      model: 'google-gla:gemini-1.5-flash',
-      messages: [
-        { role: 'system', content: systemPrompt },
-        { role: 'user', content: userPrompt }
-      ],
-      temperature: 0.7,
-      max_tokens: 2000,
-      response_format: { type: 'json_object' }
+      contents: [{
+        parts: [{
+          text: fullPrompt
+        }]
+      }],
+      generationConfig: {
+        temperature: 0.7,
+        maxOutputTokens: 2000,
+        responseMimeType: 'application/json'
+      }
     })
   })
 
@@ -176,7 +182,7 @@ export async function generateArticle(
   }
 
   const data = await response.json()
-  const text = data.choices?.[0]?.message?.content
+  const text = data.candidates?.[0]?.content?.parts?.[0]?.text
 
   if (!text) {
     throw new Error('No response from AI')
