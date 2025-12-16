@@ -359,19 +359,19 @@ export default async function Home() {
             </h1>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Fractional jobs are transforming how executives work in the UK. As the leading platform for fractional executive opportunities, we connect experienced professionals with companies seeking part-time leadership. Whether you're looking for fractional CFO, CMO, CTO, or COO roles, our marketplace offers hundreds of verified opportunities across the United Kingdom.
+              Fractional jobs are transforming how executives work in the UK. As the leading platform for fractional executive opportunities, we connect experienced professionals with companies seeking part-time leadership. The growth of this market is supported by data from <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">ONS employment statistics</a> showing evolving work patterns, and <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">IPSE research</a> on the UK&apos;s independent professional sector. Whether you're looking for fractional CFO, CMO, CTO, or COO roles, our marketplace offers hundreds of verified opportunities across the United Kingdom.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Fractional work differs from traditional employment by allowing executives to work with 2-4 companies simultaneously, typically dedicating 1-3 days per week to each client. This model has gained significant traction in the UK market, with fractional jobs now commanding day rates between £600-£1,500 depending on role and experience. Fractional executives can earn £150,000-£300,000+ annually while maintaining flexibility and work-life balance that full-time positions cannot offer.
+              Fractional work differs from traditional employment by allowing executives to work with 2-4 companies simultaneously, typically dedicating 1-3 days per week to each client. This model has gained significant traction in the UK market, supported by <a href="https://www.cipd.org/uk/knowledge/reports/flexible-hybrid-working/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">CIPD research on flexible working</a>, with fractional jobs now commanding day rates between £600-£1,500 depending on role and experience. Understanding <a href="https://www.gov.uk/guidance/understanding-off-payroll-working-ir35" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">IR35 compliance</a> is essential for fractional executives, who can earn £150,000-£300,000+ annually while maintaining flexibility and work-life balance that full-time positions cannot offer.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              For companies, hiring fractional executives provides access to senior talent without the commitment and cost of full-time hires. Fractional jobs enable businesses to secure strategic leadership at 40-60% less expense than permanent executives, with engagements starting within days rather than months. This approach has proven particularly valuable for startups, scale-ups, and SMEs across London, Manchester, Birmingham, and throughout the UK.
+              For companies, hiring fractional executives provides access to senior talent without the commitment and cost of full-time hires. The <a href="https://www.britishbusinessbank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">British Business Bank&apos;s</a> research shows UK SMEs increasingly leverage flexible talent models. Fractional jobs enable businesses to secure strategic leadership at 40-60% less expense than permanent executives, with engagements starting within days rather than months. This approach has proven particularly valuable for startups tracked by <a href="https://www.beauhurst.com/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">Beauhurst</a>, scale-ups, and SMEs across London, Manchester, Birmingham, and throughout the UK.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              Our platform serves both sides of the fractional market: executives seeking flexible, high-value opportunities and companies requiring strategic leadership without full-time overhead. Browse our curated fractional jobs, explore fractional executive services, or learn more about how fractional work can transform your career or business.
+              Our platform serves both sides of the fractional market: executives seeking flexible, high-value opportunities and companies requiring strategic leadership without full-time overhead. Professional bodies like the <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">Institute of Directors</a> and <a href="https://www.cim.co.uk/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">Chartered Institute of Marketing</a> increasingly recognize fractional work as a viable executive career path. Browse our curated fractional jobs, explore fractional executive services, or learn more about how fractional work can transform your career or business.
             </p>
           </div>
         </div>
@@ -822,6 +822,84 @@ export default async function Home() {
             >
               Learn About Services
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Resources & Further Reading - Compact Homepage Version */}
+      <section className="py-16 bg-gray-50 border-t border-gray-200">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">Resources &amp; Further Reading</h2>
+            <p className="text-lg text-gray-600">Authoritative sources on fractional work and UK employment trends</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-lg font-bold text-gray-900 mb-4 pb-2 border-b-2 border-emerald-500">Government &amp; Professional Bodies</h3>
+              <ul className="space-y-3 text-gray-600 text-sm">
+                <li>
+                  <a href="https://www.gov.uk/set-up-business" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                    Gov.uk Business Setup
+                  </a>
+                  {' '}&mdash; Official guide for setting up as a fractional executive
+                </li>
+                <li>
+                  <a href="https://www.acca.org/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                    ACCA
+                  </a>
+                  {' '}&mdash; Professional body for finance executives and fractional CFOs
+                </li>
+                <li>
+                  <a href="https://www.icaew.com/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                    ICAEW
+                  </a>
+                  {' '}&mdash; Institute of Chartered Accountants supporting fractional finance leaders
+                </li>
+                <li>
+                  <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                    Tech Nation
+                  </a>
+                  {' '}&mdash; UK tech ecosystem data and insights
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-bold text-gray-900 mb-4 pb-2 border-b-2 border-emerald-500">Industry Research &amp; Data</h3>
+              <ul className="space-y-3 text-gray-600 text-sm">
+                <li>
+                  <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                    BVCA
+                  </a>
+                  {' '}&mdash; British Private Equity &amp; VC Association market insights
+                </li>
+                <li>
+                  <a href="https://www.uktech.news/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                    UK Tech News
+                  </a>
+                  {' '}&mdash; Latest news on the UK tech sector employing fractional talent
+                </li>
+                <li>
+                  <a href="https://www.greatermanchester-ca.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                    Greater Manchester CA
+                  </a>
+                  {' '}&mdash; Regional economic development and business support
+                </li>
+                <li>
+                  <a href="https://www.scottish-enterprise.com/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                    Scottish Enterprise
+                  </a>
+                  {' '}&mdash; Scotland&apos;s business support and growth agency
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-8 p-5 bg-white rounded-lg border-l-4 border-emerald-500">
+            <p className="text-gray-700 text-sm leading-relaxed">
+              <strong>Note:</strong> These resources provide authoritative information to support your fractional career or hiring decisions. All links lead to official UK government, professional body, or recognized industry sources.
+            </p>
           </div>
         </div>
       </section>
