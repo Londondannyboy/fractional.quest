@@ -321,6 +321,17 @@ export default async function FractionalJobsUKPage() {
             Fractional Jobs UK: CFO, CTO, CMO
           </h1>
 
+          {/* Hero Image for SEO - Unsplash */}
+          <div className="hidden">
+            <img
+              src="https://source.unsplash.com/800x600/?business,executive,office"
+              alt="Fractional jobs UK - executive professionals working in modern office environment"
+              width="800"
+              height="600"
+              loading="eager"
+            />
+          </div>
+
           {/* Search Bar - Preset to UK */}
           <div className="max-w-2xl mx-auto mb-6">
             <form action="/fractional-jobs" method="GET" className="relative">
@@ -399,6 +410,7 @@ export default async function FractionalJobsUKPage() {
                 return (
                   <Link key={job.id} href={`/fractional-job/${job.slug}`}>
                     <JobCard
+                      jobId={job.id}
                       title={job.normalized_title || job.title}
                       company={job.company_name}
                       location={job.location || 'UK'}

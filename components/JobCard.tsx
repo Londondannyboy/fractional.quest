@@ -1,11 +1,13 @@
 'use client'
 import React, { useState } from 'react'
+import { useUser } from '@stackframe/stack'
 import { Badge } from './Badge'
 import { CompanyLogo } from './CompanyLogo'
 import { MiniSkillsChart } from './MiniSkillsChart'
 import { MiniCompanyGraph } from './MiniCompanyGraph'
 
 interface JobCardProps {
+  jobId?: string | number  // Optional for backwards compatibility
   title: string
   company: string
   location: string
@@ -32,6 +34,7 @@ interface JobCardProps {
 }
 
 export function JobCard({
+  jobId,
   title,
   company,
   location,
@@ -55,8 +58,44 @@ export function JobCard({
   appealSummary,
   keyDeliverables,
 }: JobCardProps) {
+  const user = useUser()  // Don't redirect, just check if logged in
+
   // State for expandable graphs
   const [showGraphs, setShowGraphs] = useState(false)
+  const [isSaved, setIsSaved] = useState(false)
+  const [isSaving, setIsSaving] = useState(false)
+
+  const handleSave = async (e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+
+    if (!jobId) {
+      console.warn('JobCard: jobId is required to save jobs')
+      return
+    }
+
+    if (!user) {
+      window.location.href = '/handler/sign-in?returnUrl=' + encodeURIComponent(window.location.pathname)
+      return
+    }
+
+    setIsSaving(true)
+    try {
+      const response = await fetch('/api/save-job', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ jobId, action: isSaved ? 'remove' : 'add' })
+      })
+
+      if (response.ok) {
+        setIsSaved(!isSaved)
+      }
+    } catch (error) {
+      console.error('Failed to save job:', error)
+    } finally {
+      setIsSaving(false)
+    }
+  }
 
   // Enhanced compensation display with estimation
   const displayedCompensation = compensation || (dayRate ? `${currency}${dayRate}/day` : null)
@@ -100,6 +139,29 @@ export function JobCard({
         hover:-translate-y-1 transition-all duration-300 cursor-pointer
         overflow-hidden flex flex-col min-h-[600px] ${className}`}
     >
+      {/* Save button - only show if jobId is provided */}
+      {jobId && (
+        <button
+          onClick={handleSave}
+          disabled={isSaving}
+          className="absolute top-2 right-2 p-2 bg-gray-900/80 backdrop-blur rounded-lg
+            hover:bg-blue-600/20 border border-gray-700 hover:border-blue-500
+            transition-all duration-200 group/save z-20"
+          title={isSaved ? 'Remove from saved jobs' : 'Save job for later'}
+        >
+          <svg
+            className={`w-5 h-5 transition-all ${
+              isSaved
+                ? 'fill-blue-400 text-blue-400'
+                : 'fill-none text-gray-400 group-hover/save:text-blue-400'
+            } ${isSaving ? 'animate-pulse' : ''}`}
+            viewBox="0 0 20 20"
+          >
+            <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
+          </svg>
+        </button>
+      )}
+
       {/* Neon gradient overlay on hover */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-600/0 via-blue-500/0 to-blue-600/0
         group-hover:from-blue-600/5 group-hover:via-blue-500/5 group-hover:to-blue-600/5
