@@ -188,8 +188,15 @@ export async function generateArticle(
     throw new Error('No response from AI')
   }
 
+  // Extract JSON from response (handle markdown code blocks)
+  let jsonStr = text.trim()
+  const jsonMatch = jsonStr.match(/\{[\s\S]*\}/)
+  if (jsonMatch) {
+    jsonStr = jsonMatch[0]
+  }
+
   // Parse and validate with Zod
-  const parsed = JSON.parse(text)
+  const parsed = JSON.parse(jsonStr)
   return GeneratedArticle.parse(parsed)
 }
 
