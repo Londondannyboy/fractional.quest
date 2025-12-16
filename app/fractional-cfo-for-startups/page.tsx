@@ -149,7 +149,7 @@ export default function FractionalCFOForStartupsPage() {
               </div>
 
               <div className="bg-white p-6 border-l-4 border-gray-900">
-                <h4 className="text-lg font-bold text-gray-900 mb-2">Cash Runway <12 Months</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-2">Cash Runway &lt;12 Months</h4>
                 <p className="text-gray-700 mb-0">You're burning faster than expected. Runway is under 12 months. You need credible cash flow forecasts, expense management, and potentially bridge financing. Emergency CFO help required.</p>
               </div>
             </div>

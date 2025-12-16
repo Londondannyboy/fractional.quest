@@ -144,7 +144,7 @@ export default function HowToBecomeFractionalCFOPage() {
                     <li>• CPA, CMA (International)</li>
                     <li>• MBA from top school</li>
                   </ul>
-                  <p className="text-sm mt-3 mb-0">Adds credibility, especially early in fractional career, but experience > qualifications.</p>
+                  <p className="text-sm mt-3 mb-0">Adds credibility, especially early in fractional career, but experience &gt; qualifications.</p>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-900 mb-3">Specialized Experience:</p>

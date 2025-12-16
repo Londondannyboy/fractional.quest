@@ -410,7 +410,7 @@ export default function FractionalCFOGuidePage() {
 
               <div className="bg-gray-50 p-8 border-l-4 border-gray-900">
                 <h3 className="text-xl font-black text-gray-900 mb-3 mt-0">4. Cash Flow Crisis</h3>
-                <p className="text-gray-700 mb-0">Cash runway is <12 months, you're burning faster than planned, or you need to extend your runway. A fractional CFO can implement cash management discipline and build credible forecasts.</p>
+                <p className="text-gray-700 mb-0">Cash runway is &lt;12 months, you're burning faster than planned, or you need to extend your runway. A fractional CFO can implement cash management discipline and build credible forecasts.</p>
               </div>
 
               <div className="bg-gray-50 p-8 border-l-4 border-gray-900">

@@ -505,7 +505,7 @@ export default function FractionalCFOHourlyRatePage() {
                 <tbody className="text-gray-700">
                   <tr className="border-b">
                     <td className="p-4 font-semibold">Hourly Rate</td>
-                    <td className="p-4">Ad-hoc advisory, <5hrs/month</td>
+                    <td className="p-4">Ad-hoc advisory, &lt;5hrs/month</td>
                     <td className="p-4 text-sm">Very flexible, pay per hour</td>
                     <td className="p-4 text-sm">Most expensive, admin overhead, incentive misalignment</td>
                   </tr>
