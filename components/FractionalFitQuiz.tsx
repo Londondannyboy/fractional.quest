@@ -133,7 +133,7 @@ export function FractionalFitQuiz({ className = '' }: FractionalFitQuizProps) {
     if (percentage >= 80) {
       return {
         title: 'Highly Suited for Fractional Work',
-        color: 'green',
+        color: 'blue',
         message: 'You have the experience, mindset, and circumstances that make fractional work an excellent fit. You\'re likely to thrive in a portfolio career.',
         recommendation: 'Start building your fractional practice now. Focus on defining your niche and reaching out to your network.',
         roles: ['Fractional CFO', 'Fractional CMO', 'Fractional CTO', 'Fractional COO']
@@ -188,7 +188,7 @@ export function FractionalFitQuiz({ className = '' }: FractionalFitQuizProps) {
         />
 
         <div className={`p-6 text-white ${
-          results.color === 'green' ? 'bg-gradient-to-r from-green-600 to-green-800' :
+          results.color === 'blue' ? 'bg-gradient-to-r from-blue-600 to-blue-800' :
           results.color === 'amber' ? 'bg-gradient-to-r from-amber-500 to-amber-700' :
           results.color === 'orange' ? 'bg-gradient-to-r from-orange-500 to-orange-700' :
           'bg-gradient-to-r from-red-500 to-red-700'

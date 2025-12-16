@@ -587,7 +587,7 @@ export default async function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: '💰', name: 'Fractional CFO', description: 'Financial strategy, fundraising, investor relations, and reporting. Perfect for Series A-C companies.', link: '/fractional-cfo-services', color: 'emerald' },
+              { icon: '💰', name: 'Fractional CFO', description: 'Financial strategy, fundraising, investor relations, and reporting. Perfect for Series A-C companies.', link: '/fractional-cfo-services', color: 'blue' },
               { icon: '📢', name: 'Fractional CMO', description: 'Marketing strategy, growth leadership, brand building, and team management for scaling companies.', link: '/fractional-cmo-services', color: 'amber' },
               { icon: '💻', name: 'Fractional CTO', description: 'Technical leadership, architecture decisions, team building, and technical due diligence.', link: '/fractional-cto-services', color: 'blue' },
               { icon: '⚙️', name: 'Fractional COO', description: 'Operations excellence, process optimisation, and scaling infrastructure for growth.', link: '/fractional-coo-services', color: 'orange' },

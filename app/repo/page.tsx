@@ -526,7 +526,7 @@ function VoiceInterface({ token, userId, profile, memoryContext, graphData, onPr
       {/* Preference Confirmation Card - fades and auto-saves */}
       {pendingPreference && (
         <div
-          className="border-t border-gray-200 bg-gradient-to-r from-green-50 to-blue-950/20 p-4 transition-opacity duration-500"
+          className="border-t border-gray-200 bg-gradient-to-r from-blue-50 to-blue-950/20 p-4 transition-opacity duration-500"
           style={{ opacity: preferenceOpacity }}
         >
           <div className="max-w-md mx-auto">

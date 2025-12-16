@@ -27,7 +27,7 @@ const ROLE_DEFAULTS: Record<string, {
     avgSalary: 145000,
     minDayRate: 800,
     maxDayRate: 1500,
-    color: 'emerald',
+    color: 'blue',
     colorDark: 'blue-600',
   },
   cto: {

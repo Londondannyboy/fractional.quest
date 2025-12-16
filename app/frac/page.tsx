@@ -456,9 +456,9 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
         {/* Outer status ring */}
         <div className={`absolute inset-0 w-32 h-32 rounded-full border-4 transition-all duration-300 ${
           isConnected && isPlaying
-            ? 'border-blue-400 animate-pulse shadow-lg shadow-green-400/50'
+            ? 'border-blue-400 animate-pulse shadow-lg shadow-blue-400/50'
             : isConnected
-            ? 'border-blue-500 shadow-lg shadow-green-500/30'
+            ? 'border-blue-500 shadow-lg shadow-blue-500/30'
             : isConnecting
             ? 'border-yellow-400 animate-spin'
             : 'border-purple-400 opacity-50'
@@ -482,9 +482,9 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
           disabled={isConnecting}
           className={`relative w-32 h-32 rounded-full text-white font-bold text-lg shadow-2xl transition-all duration-300 ${
             isConnected && isPlaying
-              ? 'bg-gradient-to-br from-green-400 to-blue-950/200 scale-110'
+              ? 'bg-gradient-to-br from-blue-400 to-blue-950/200 scale-110'
               : isConnected
-              ? 'bg-gradient-to-br from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700'
+              ? 'bg-gradient-to-br from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700'
               : isConnecting
               ? 'bg-gradient-to-br from-yellow-400 to-orange-400 cursor-wait'
               : 'bg-gradient-to-br from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 hover:scale-105'
@@ -678,7 +678,7 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
                       }
                       setPydanticConfirmation(null)
                     }}
-                    className="flex-1 px-4 py-2 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg font-medium hover:shadow-lg transition-all transform hover:scale-105"
+                    className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg font-medium hover:shadow-lg transition-all transform hover:scale-105"
                   >
                     ✓ Confirm
                   </button>

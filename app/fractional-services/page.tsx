@@ -58,13 +58,13 @@ export default function FractionalServicesPage() {
           <h2 className="text-3xl font-black text-gray-900 mb-8">Available Fractional Services</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { title: 'Fractional CFO', description: 'Financial strategy, fundraising, and FP&A leadership.', link: '/fractional-cfo-services', color: 'emerald' },
+              { title: 'Fractional CFO', description: 'Financial strategy, fundraising, and FP&A leadership.', link: '/fractional-cfo-services', color: 'blue' },
               { title: 'Fractional CMO', description: 'Marketing strategy, brand, and growth leadership.', link: '/fractional-cmo-services', color: 'amber' },
               { title: 'Fractional CTO', description: 'Technical strategy, architecture, and engineering leadership.', link: '/fractional-cto-services', color: 'blue' },
               { title: 'Fractional COO', description: 'Operations, scaling, and process leadership.', link: '/fractional-coo-services', color: 'orange' },
               { title: 'Fractional CPO', description: 'Product strategy, roadmap, and team leadership.', link: '/fractional-cpo-services', color: 'purple' },
               { title: 'Fractional CHRO', description: 'People strategy, culture, and HR leadership.', link: '/fractional-chro-services', color: 'pink' },
-              { title: 'Fractional CRO', description: 'Revenue strategy, sales, and GTM leadership.', link: '/fractional-cro-services', color: 'green' },
+              { title: 'Fractional CRO', description: 'Revenue strategy, sales, and GTM leadership.', link: '/fractional-cro-services', color: 'blue' },
               { title: 'Fractional CISO', description: 'Security strategy, compliance, and risk leadership.', link: '/fractional-ciso-services', color: 'red' },
               { title: 'Fractional CDO', description: 'Data strategy, analytics, and AI leadership.', link: '/fractional-cdo-services', color: 'cyan' },
             ].map((item, i) => (

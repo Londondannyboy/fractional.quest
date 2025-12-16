@@ -156,7 +156,7 @@ export function SavingsCalculator() {
           </div>
 
           {/* Savings */}
-          <div className="bg-gradient-to-r from-green-500 to-blue-950/200 rounded-xl p-5 text-center mt-6">
+          <div className="bg-gradient-to-r from-blue-500 to-blue-950/200 rounded-xl p-5 text-center mt-6">
             <div className="text-xs sm:text-sm font-medium text-blue-100 mb-1">Your Annual Savings</div>
             <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-1 break-words">
               {formatCurrency(savings)}
