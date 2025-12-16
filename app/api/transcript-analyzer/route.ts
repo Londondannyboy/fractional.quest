@@ -3,7 +3,7 @@ import { neon } from '@neondatabase/serverless'
 import { z } from 'zod'
 
 const sql = neon(process.env.DATABASE_URL!)
-const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY
+const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY
 
 /**
  * Transcript Analyzer - Pydantic AI Alternative
@@ -98,8 +98,8 @@ export async function POST(request: NextRequest) {
 }
 
 /**
- * Extract intent from conversation transcript using Claude AI
- * This replaces dumb keyword matching with actual AI understanding
+ * Extract intent from conversation transcript using Google Gemini Flash
+ * Fast, cheap, and accurate AI intent extraction
  */
 async function extractIntent(transcript: string): Promise<ExtractedIntent> {
   // Skip if transcript is too short
@@ -160,33 +160,36 @@ Respond with ONLY valid JSON matching this structure:
   "reasoning": "User asking about fractional jobs in UK"
 }`
 
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
+    // Use Google Gemini Flash - cheaper and faster!
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GOOGLE_API_KEY}`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': ANTHROPIC_API_KEY!,
-        'anthropic-version': '2023-06-01'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        model: 'claude-3-5-haiku-20241022',
-        max_tokens: 512,
-        temperature: 0.1,
-        messages: [{
-          role: 'user',
-          content: prompt
-        }]
+        contents: [{
+          parts: [{
+            text: prompt
+          }]
+        }],
+        generationConfig: {
+          temperature: 0.1,
+          maxOutputTokens: 512,
+          responseMimeType: 'application/json'
+        }
       })
     })
 
     if (!response.ok) {
-      throw new Error(`Claude API error: ${response.status}`)
+      const error = await response.text()
+      throw new Error(`Google Gemini API error: ${response.status} - ${error}`)
     }
 
     const data = await response.json()
-    const text = data.content?.[0]?.text
+    const text = data.candidates?.[0]?.content?.parts?.[0]?.text
 
     if (!text) {
-      throw new Error('No response from Claude')
+      throw new Error('No response from Google Gemini')
     }
 
     // Parse and validate with Zod (like Pydantic for TypeScript)
