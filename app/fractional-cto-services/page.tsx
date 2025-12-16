@@ -96,10 +96,10 @@ export default function FractionalCTOServicesPage() {
             </div>
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Fractional CTO vs Technical Consultant</h3>
             <p>
-              A technical consultant gives advice on specific problems—they might review your architecture, assess technical debt, or recommend a technology stack. But they don't take ongoing ownership or lead your team.
+              A technical consultant gives advice on specific problems—they might review your architecture, assess technical debt, or recommend a technology stack. But they don't take ongoing ownership or lead your team. As <a href="https://technation.io/insights/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">TechNation research</a> shows, UK tech companies increasingly need strategic technical leadership, not just project-based consulting.
             </p>
             <p>
-              A fractional CTO is an embedded leader. They're accountable for technical outcomes, make decisions (not just recommendations), mentor your engineers, and represent technology to your board and investors. They're part of your leadership team.
+              A fractional CTO is an embedded leader. They're accountable for technical outcomes, make decisions (not just recommendations), mentor your engineers, and represent technology to your board and investors. With UK government support for <a href="https://www.ukri.org/councils/innovate-uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">innovation and R&D</a>, fractional CTOs help companies access funding and navigate <a href="https://www.ncsc.gov.uk/collection/cyber-essentials" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">cyber security requirements</a>. They're part of your leadership team.
             </p>
           </div>
         </div>

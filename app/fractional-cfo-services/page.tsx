@@ -96,10 +96,10 @@ export default function FractionalCFOServicesPage() {
             </div>
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Fractional CFO vs Full-Time CFO</h3>
             <p>
-              A full-time CFO costs £150,000-£250,000 in salary alone, plus benefits, equity, office space, and management overhead. For many growing companies, that's overkill—you need CFO-level thinking on capital strategy and fundraising, but not 40 hours a week of it.
+              A full-time CFO costs £150,000-£250,000 in salary alone, plus benefits, equity, office space, and management overhead. According to <a href="https://www.bankofengland.co.uk/statistics/research-datasets" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">Bank of England research</a>, UK SMEs increasingly access senior finance expertise through flexible arrangements. For many growing companies, full-time is overkill—you need CFO-level thinking on capital strategy and fundraising, but not 40 hours weekly.
             </p>
             <p>
-              A fractional CFO gives you exactly what you need: senior financial leadership scaled to your actual requirements. As your company grows, you can increase their time—or transition to a full-time hire when the role justifies it.
+              A fractional CFO gives you exactly what you need: senior financial leadership scaled to your actual requirements. The <a href="https://ifs.org.uk/publications" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">Institute for Fiscal Studies</a> notes the UK trend toward part-time senior executives, particularly in high-growth sectors. As your company grows, you can increase their time—or transition to a full-time hire when the role justifies it. Most fractional CFOs work through <a href="https://www.gov.uk/limited-company-formation" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">limited companies</a>, ensuring tax efficiency and professional structure.
             </p>
           </div>
         </div>

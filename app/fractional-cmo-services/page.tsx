@@ -96,10 +96,10 @@ export default function FractionalCMOServicesPage() {
             </div>
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Fractional CMO vs Marketing Agency</h3>
             <p>
-              A marketing agency executes tactics—they run ads, create content, manage social media. But they don't set your overall strategy, hire your team, or sit in your leadership meetings. They're vendors, not leaders.
+              A marketing agency executes tactics—they run ads, create content, manage social media. But they don't set your overall strategy, hire your team, or sit in your leadership meetings. They're vendors, not leaders. Understanding this distinction is crucial for UK businesses, as the <a href="https://www.instituteofentrepreneurship.co.uk" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">Institute of Entrepreneurship</a> reports that strategic marketing leadership drives significantly better growth outcomes than tactical execution alone.
             </p>
             <p>
-              A fractional CMO is an embedded executive. They own your marketing strategy, build and lead your team, manage agency relationships, and are accountable for growth. Many companies use both: a fractional CMO to lead, with agencies handling execution.
+              A fractional CMO is an embedded executive. They own your marketing strategy, build and lead your team, manage agency relationships, and are accountable for growth. Working within UK <a href="https://www.asa.org.uk/codes-and-rulings.html" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">advertising regulations</a> and <a href="https://www.gov.uk/marketing-advertising-law" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">marketing law</a>, they ensure compliance while driving growth. Many companies use both: a fractional CMO to lead, with agencies handling execution.
             </p>
           </div>
         </div>
