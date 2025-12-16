@@ -120,38 +120,43 @@ async function extractIntent(transcript: string): Promise<ExtractedIntent> {
 
 Transcript: "${transcript}"
 
+CRITICAL RULE: If the user mentions a SPECIFIC role (CFO, CMO, CTO, etc.) and/or location (London, UK, etc.), it is ALWAYS search_jobs - they want to see jobs NOW!
+
 Determine if the user is:
 
-1. **search_jobs**: User wants to SEE jobs NOW
+1. **search_jobs**: User wants to SEE jobs NOW (90% of cases)
    - "Show me...", "Find...", "What jobs...", "I want to see..."
+   - "I'm interested in [SPECIFIC ROLE] in [LOCATION]" ← THIS IS SEARCH_JOBS!
+   - "I'm interested in CMO jobs" ← THIS IS SEARCH_JOBS!
+   - "I'm looking for..."
+   - ANY mention of specific roles or locations
    - Action: Query database and display jobs immediately
 
-2. **confirm_preference**: User is STATING a preference that needs HUMAN confirmation (HITL)
-   - "I'm interested in...", "I prefer...", "I like...", "My background is..."
-   - Action: Show confirmation modal asking "You're interested in X. Confirm?"
-   - ONLY use this if user is stating a lasting preference, not a one-time search
+2. **confirm_preference**: User is stating a GENERAL career preference (RARE - only 5% of cases)
+   - "I'm interested in [ROLE] for my career going forward"
+   - "I prefer to work in [INDUSTRY] long-term"
+   - ONLY use this if they're stating a vague preference WITHOUT asking to see jobs
+   - If in doubt, use search_jobs instead!
 
 3. **unknown**: Neither of the above
 
-IMPORTANT:
-- "I'm interested in fractional jobs in the UK" → Most likely search_jobs (wants to see jobs)
-- "I'm interested in CMO and CFO roles going forward" → confirm_preference (stating preference to save)
-- When in doubt, prefer search_jobs (users want results, not confirmation dialogs)
+EXAMPLES - STUDY THESE CAREFULLY:
+"Show me CFO jobs in London" → search_jobs (obvious)
+"I'm interested in CMO jobs in London" → search_jobs (specific role + location = wants to see jobs)
+"interested in cmo jobs" → search_jobs (specific role = wants to see jobs)
+"I'm interested in fractional jobs in the UK" → search_jobs (wants to see jobs)
+"What jobs do you have?" → search_jobs (wants to see jobs)
+"I'm looking for Marketing Director positions" → search_jobs (wants to see jobs)
+
+ONLY confirm_preference if very general:
+"I'm interested in CMO and CFO roles for my long-term career" → confirm_preference (no immediate job search)
+"I prefer finance roles generally" → confirm_preference (vague, no specific search)
 
 If search_jobs, extract:
 - roleType: Executive title (CFO, CMO, CTO, Finance Director, Marketing Director, VP Finance, etc.) or null
 - location: City (London, Manchester, Birmingham, etc.) or country (UK, USA) or null
 
-If confirm_preference, extract:
-- preferenceType: What kind of preference (role, industry, location, etc.)
-- values: List of values they're confirming
-
-Examples:
-"Show me CFO jobs in London" → search_jobs, roleType: "CFO", location: "London"
-"I'm interested in fractional jobs in the UK" → search_jobs, roleType: null, location: "UK" (user wants to see jobs)
-"I'm looking for Marketing Director positions" → search_jobs, roleType: "Marketing Director", location: null
-"What jobs do you have?" → search_jobs, roleType: null, location: null
-"I'm interested in CMO and CFO roles for my career" → confirm_preference, preferenceType: "role", values: ["CMO", "CFO"]`
+DEFAULT TO search_jobs WHEN IN DOUBT!`
     })
 
     console.log('[Transcript Analyzer] AI extracted intent:', result.object)
