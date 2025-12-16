@@ -9,8 +9,8 @@ import { neon } from '@neondatabase/serverless'
 import { z } from 'zod'
 
 const sql = neon(process.env.DATABASE_URL!)
-const GATEWAY_URL = process.env.GATEWAY_URL || 'https://gateway.pydantic.dev/proxy/chat/'
-const GATEWAY_API_KEY = process.env.PYDANTIC_AI_GATEWAY_API_KEY
+// Use Claude API directly (most reliable)
+const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY
 
 // Valid values from your database
 const INDUSTRIES = [
@@ -31,18 +31,68 @@ const INDUSTRIES = [
   'Other'
 ] as const
 
+// Function areas (broad categories)
 const ROLE_CATEGORIES = [
+  'Engineering',
+  'Marketing',
+  'Finance',
+  'Operations',
+  'Sales',
+  'HR',
+  'Product',
+  'Design',
+  'Data',
+  'Legal',
+  'Customer Success',
+  'Executive',
+  'Other'
+] as const
+
+// Executive titles (specific C-level roles)
+const EXECUTIVE_TITLES = [
   'CFO',
   'CMO',
   'CTO',
   'COO',
-  'CPO',  // Chief Product Officer
-  'CHRO', // Chief Human Resources Officer
-  'CIO',  // Chief Information Officer
-  'CDO',  // Chief Data Officer
-  'CSO',  // Chief Security Officer
-  'CCO',  // Chief Commercial Officer
+  'CPO',
+  'CHRO',
+  'CIO',
+  'CDO',
+  'CSO',
+  'CCO',
+  'CEO',
+  'Managing Director',
+  'VP Finance',
+  'VP Marketing',
+  'VP Engineering',
+  'VP Operations',
+  'VP Product',
+  'Finance Director',
+  'Marketing Director',
+  'Technology Director',
+  'Operations Director',
+  'Product Director',
+  'HR Director',
   'Other'
+] as const
+
+// Major UK cities only
+const MAJOR_UK_CITIES = [
+  'London',
+  'Manchester',
+  'Birmingham',
+  'Edinburgh',
+  'Glasgow',
+  'Leeds',
+  'Bristol',
+  'Liverpool',
+  'Newcastle',
+  'Cardiff',
+  'Belfast',
+  'Cambridge',
+  'Oxford',
+  'Remote',
+  'UK-wide'
 ] as const
 
 const EMPLOYMENT_TYPES = [
@@ -56,21 +106,23 @@ const EMPLOYMENT_TYPES = [
 ] as const
 
 const SENIORITY_LEVELS = [
-  'C-Level',
-  'VP',
+  'Executive',  // C-level, VPs
   'Director',
-  'Senior Manager',
   'Manager',
-  'Other'
+  'Senior',
+  'Mid',
+  'Junior',
+  'Intern'
 ] as const
 
 const JobClassification = z.object({
   // Geographic
   country: z.string().describe('Country code or name (e.g., "UK", "USA", "Germany")'),
-  city: z.string().nullable().describe('City name if mentioned (e.g., "London", "Manchester", "Birmingham") or null'),
+  city: z.enum(MAJOR_UK_CITIES).nullable().describe('Major UK city only (London, Manchester, Birmingham, etc.) or null if not a major city'),
 
   // Role classification
-  role_category: z.enum(ROLE_CATEGORIES).describe('Primary C-level role type'),
+  executive_title: z.enum(EXECUTIVE_TITLES).describe('Specific executive title (CFO, CMO, CTO, VP Finance, Finance Director, etc.)'),
+  role_category: z.enum(ROLE_CATEGORIES).describe('Broad function area (Finance, Marketing, Engineering, Operations, etc.)'),
   seniority_level: z.enum(SENIORITY_LEVELS).describe('Seniority level'),
 
   // Business classification
@@ -111,30 +163,58 @@ Classify into these categories:
    - Extract from location or infer from context
    - Use standard names: "UK", "USA", "Germany", etc.
 
-2. CITY:
-   - Extract specific city if mentioned: "London", "Manchester", "Birmingham", "Edinburgh", "Remote", etc.
-   - Return null if no specific city mentioned
+2. CITY (Major UK cities only):
+   - ONLY use if city is one of: London, Manchester, Birmingham, Edinburgh, Glasgow, Leeds, Bristol, Liverpool, Newcastle, Cardiff, Belfast, Cambridge, Oxford
+   - Use "Remote" if explicitly remote
+   - Use "UK-wide" if covers multiple cities or whole UK
+   - Use null if city mentioned but NOT in the major cities list
 
-3. ROLE_CATEGORY (choose ONE):
-   - CFO: Chief Financial Officer, Finance Director
-   - CMO: Chief Marketing Officer, Marketing Director
-   - CTO: Chief Technology Officer, Technology Director, VP Engineering
-   - COO: Chief Operating Officer, Operations Director
-   - CPO: Chief Product Officer, Product Director
-   - CHRO: Chief HR Officer, People Director, HR Director
+3. EXECUTIVE_TITLE (Specific C-level role - choose ONE):
+   - CFO: Chief Financial Officer
+   - Finance Director: Finance Director
+   - VP Finance: VP Finance
+   - CMO: Chief Marketing Officer
+   - Marketing Director: Marketing Director
+   - VP Marketing: VP Marketing
+   - CTO: Chief Technology Officer, Chief Technical Officer
+   - Technology Director: Technology Director, Tech Director
+   - VP Engineering: VP Engineering
+   - COO: Chief Operating Officer
+   - Operations Director: Operations Director
+   - VP Operations: VP Operations
+   - CPO: Chief Product Officer
+   - Product Director: Product Director
+   - VP Product: VP Product
+   - CHRO: Chief HR Officer, Chief People Officer
+   - HR Director: HR Director, People Director
    - CIO: Chief Information Officer
    - CDO: Chief Data Officer
    - CSO: Chief Security Officer
-   - CCO: Chief Commercial Officer, Chief Customer Officer
-   - Other: Any other role
+   - CCO: Chief Commercial Officer
+   - CEO: Chief Executive Officer
+   - Managing Director: Managing Director, MD
+   - Other: Any non-C-suite or unclear title
 
-4. SENIORITY_LEVEL:
-   - C-Level: Chief X Officer, C-suite
-   - VP: Vice President, VP of X
+4. ROLE_CATEGORY (Broad function area - choose ONE):
+   - Finance: All finance/accounting roles (CFO, Finance Director, etc.)
+   - Marketing: All marketing roles (CMO, Marketing Director, etc.)
+   - Engineering: All tech/engineering roles (CTO, VP Engineering, etc.)
+   - Operations: All operations roles (COO, Operations Director, etc.)
+   - Product: All product roles (CPO, Product Director, etc.)
+   - HR: All people/HR roles (CHRO, HR Director, etc.)
+   - Sales: All sales roles
+   - Data: Data/analytics roles (CDO, etc.)
+   - Executive: General executive roles (CEO, Managing Director)
+   - Other: Everything else
+
+5. SENIORITY_LEVEL:
+   - Executive: Chief X Officer, C-suite, VPs
    - Director: Director-level roles
-   - Senior Manager: Senior management
-   - Manager: Management roles
-   - Other: Non-management or unclear
+   - Manager: Manager-level roles
+   - Senior: Senior individual contributor
+   - Mid: Mid-level
+   - Junior: Junior level
+   - Intern: Internship
 
 5. INDUSTRY:
    - Technology: Pure tech, software, IT services
@@ -167,18 +247,21 @@ Classify into these categories:
    - false: If Full-time or Other
 
 Important context:
-- "Fractional CFO" → role_category: CFO, employment_type: Fractional, is_fractional: true
-- "Part-time CTO in London" → city: London, country: UK, employment_type: Part-time, is_fractional: true
-- "Interim CMO" → employment_type: Interim, is_fractional: true
+- "Fractional CFO" → executive_title: CFO, role_category: Finance, employment_type: Fractional, is_fractional: true
+- "Part-time CTO in London" → executive_title: CTO, role_category: Engineering, city: London, country: UK, employment_type: Part-time, is_fractional: true
+- "Interim CMO" → executive_title: CMO, role_category: Marketing, employment_type: Interim, is_fractional: true
+- "Finance Director at Oxfordshire company" → executive_title: Finance Director, role_category: Finance, city: null (Oxfordshire not a major city), country: UK
 - If location mentions "UK" or UK cities → country: UK
-- If no city but "Remote" or "UK-wide" → city: null, country: UK
+- If no city OR city is not in major cities list → city: null
+- If "Remote" or "UK-wide" → use those values for city
 
 Respond with JSON matching this exact structure:
 {
   "country": "UK",
   "city": "London",
-  "role_category": "CFO",
-  "seniority_level": "C-Level",
+  "executive_title": "CFO",
+  "role_category": "Finance",
+  "seniority_level": "Executive",
   "industry": "FinTech",
   "employment_type": "Fractional",
   "is_fractional": true,
@@ -186,29 +269,31 @@ Respond with JSON matching this exact structure:
   "reasoning": "Fractional CFO role at FinTech company in London"
 }`
 
-  const response = await fetch(GATEWAY_URL, {
+  const response = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${GATEWAY_API_KEY}`,
+      'x-api-key': ANTHROPIC_API_KEY,
+      'anthropic-version': '2023-06-01'
     },
     body: JSON.stringify({
-      model: 'google-gla:gemini-1.5-flash',
+      model: 'claude-3-5-haiku-20241022',
+      max_tokens: 1024,
+      temperature: 0.1,
       messages: [{
         role: 'user',
-        content: prompt
-      }],
-      temperature: 0.1,
-      response_format: { type: 'json_object' }
+        content: prompt + '\n\nRespond with ONLY valid JSON, no other text.'
+      }]
     })
   })
 
   if (!response.ok) {
-    throw new Error(`API error: ${response.status}`)
+    const error = await response.text()
+    throw new Error(`API error: ${response.status} - ${error}`)
   }
 
   const data = await response.json()
-  const text = data.choices?.[0]?.message?.content
+  const text = data.content?.[0]?.text
 
   if (!text) {
     throw new Error('No response from AI')
@@ -218,8 +303,8 @@ Respond with JSON matching this exact structure:
 }
 
 async function main() {
-  if (!GATEWAY_API_KEY) {
-    console.error('❌ PYDANTIC_AI_GATEWAY_API_KEY required')
+  if (!ANTHROPIC_API_KEY) {
+    console.error('❌ ANTHROPIC_API_KEY required')
     console.error('Set in your .env.local file')
     process.exit(1)
   }
@@ -260,6 +345,7 @@ async function main() {
         SET
           country = ${classification.country},
           city = ${classification.city},
+          executive_title = ${classification.executive_title},
           role_category = ${classification.role_category},
           seniority_level = ${classification.seniority_level},
           industry = ${classification.industry},
@@ -282,7 +368,7 @@ async function main() {
 
       updated++
 
-      console.log(`  ✓ ${classification.country}${classification.city ? ` / ${classification.city}` : ''} | ${classification.role_category} | ${classification.employment_type} | ${classification.industry}`)
+      console.log(`  ✓ ${classification.country}${classification.city ? ` / ${classification.city}` : ''} | ${classification.executive_title} (${classification.role_category}) | ${classification.employment_type} | ${classification.industry}`)
       console.log(`    Fractional: ${classification.is_fractional ? 'Yes' : 'No'} | Confidence: ${(classification.confidence * 100).toFixed(0)}%`)
       console.log(`    ${classification.reasoning}\n`)
 
