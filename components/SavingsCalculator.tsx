@@ -153,11 +153,11 @@ export function SavingsCalculator() {
 
           {/* Savings */}
           <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl p-5 text-center mt-6">
-            <div className="text-sm font-medium text-green-100 mb-1">Your Annual Savings</div>
-            <div className="text-4xl font-bold text-white mb-1">
+            <div className="text-xs sm:text-sm font-medium text-green-100 mb-1">Your Annual Savings</div>
+            <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-1 break-words">
               {formatCurrency(savings)}
             </div>
-            <div className="text-lg font-semibold text-green-100">
+            <div className="text-sm sm:text-base lg:text-lg font-semibold text-green-100 break-words">
               That's {savingsPercent}% less than full-time
             </div>
           </div>

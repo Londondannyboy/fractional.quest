@@ -139,10 +139,15 @@ async function getUKJobs() {
     const sql = createDbQuery()
     const jobs = await sql`
       SELECT
-        id, slug, title, company_name, location, is_remote, workplace_type,
-        compensation, role_category, skills_required, posted_date, company_domain, description_snippet
+        id, slug, title, normalized_title, company_name, location, is_remote, workplace_type,
+        compensation, role_category, skills_required, posted_date, company_domain, description_snippet,
+        job_source, is_syndicated, company_type, appeal_summary
       FROM jobs
       WHERE is_active = true
+        AND skills_required IS NOT NULL
+        AND array_length(skills_required, 1) > 0
+        AND company_domain IS NOT NULL
+        AND description_snippet IS NOT NULL
       ORDER BY
         CASE WHEN location ILIKE '%london%' THEN 0 ELSE 1 END,
         posted_date DESC NULLS LAST
@@ -152,6 +157,33 @@ async function getUKJobs() {
   } catch (error) {
     return []
   }
+}
+
+// Helper to estimate day rates based on role category
+function estimateRateByRole(roleCategory?: string): { min: number; max: number } | undefined {
+  if (!roleCategory) return undefined
+
+  const rateMap: Record<string, { min: number; max: number }> = {
+    'CFO': { min: 900, max: 1500 },
+    'CTO': { min: 850, max: 1400 },
+    'CMO': { min: 800, max: 1300 },
+    'COO': { min: 850, max: 1350 },
+    'CHRO': { min: 700, max: 1200 },
+    'CPO': { min: 800, max: 1300 },
+    'CISO': { min: 900, max: 1500 },
+    'Head of Finance': { min: 700, max: 1100 },
+    'Head of Marketing': { min: 650, max: 1000 },
+  }
+
+  // Try to match role category
+  for (const [role, rates] of Object.entries(rateMap)) {
+    if (roleCategory.toUpperCase().includes(role.toUpperCase())) {
+      return rates
+    }
+  }
+
+  // Default estimate
+  return { min: 700, max: 1200 }
 }
 
 export default async function FractionalJobsUKPage() {
@@ -183,28 +215,32 @@ export default async function FractionalJobsUKPage() {
 
         {/* Hero Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block bg-purple-500/20 backdrop-blur text-purple-300 px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-widest mb-6">
+          <span className="inline-block bg-blue-600/20 backdrop-blur text-blue-300 px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-widest mb-6">
             UK's Fractional Executive Platform
           </span>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
-            Fractional Jobs UK
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white !text-white mb-6 leading-[0.95] tracking-tight">
+            Fractional Jobs UK: CFO, CTO, CMO Executive Roles
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-            CFO, CTO, CMO roles with interactive tools and market insights. £800-£1,500 day rates. Build your portfolio career.
+          <p className="text-base sm:text-lg md:text-xl text-white !text-white mb-4 max-w-3xl mx-auto leading-relaxed">
+            Find {stats.totalUK}+ fractional executive jobs across the UK. Part-time CFO, CTO, CMO, and COO opportunities with £800-£1,500 day rates.
+          </p>
+
+          <p className="text-sm sm:text-base text-gray-300 mb-8 max-w-2xl mx-auto">
+            Interactive tools, market insights, and real-time opportunities. Build your portfolio career with the UK's leading fractional jobs platform.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="#jobs"
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg bg-white text-black hover:bg-gray-100 transition-all duration-200"
+              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg bg-white text-black hover:bg-gray-100 transition-all duration-200 shadow-lg"
             >
               Browse Jobs &darr;
             </Link>
             <Link
               href="#tools"
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg bg-purple-500 text-white hover:bg-purple-600 transition-all duration-200"
+              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-all duration-200 shadow-lg shadow-blue-600/30"
             >
               Explore Tools
             </Link>
@@ -233,17 +269,20 @@ export default async function FractionalJobsUKPage() {
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {(ukJobs as any[]).slice(0, 15).map((job: any) => {
                 const postedDate = job.posted_date ? new Date(job.posted_date) : null
                 const postedDaysAgo = postedDate
                   ? Math.floor((Date.now() - postedDate.getTime()) / (1000 * 60 * 60 * 24))
                   : undefined
 
+                // Estimate salary if missing
+                const estimatedRate = !job.compensation ? estimateRateByRole(job.role_category) : undefined
+
                 return (
                   <Link key={job.id} href={`/fractional-job/${job.slug}`}>
                     <JobCard
-                      title={job.title}
+                      title={job.normalized_title || job.title}
                       company={job.company_name}
                       location={job.location || 'UK'}
                       isRemote={job.is_remote || job.workplace_type === 'Remote'}
@@ -253,6 +292,12 @@ export default async function FractionalJobsUKPage() {
                       postedDaysAgo={postedDaysAgo}
                       companyDomain={job.company_domain}
                       description={job.description_snippet}
+                      jobSource={job.job_source || 'LinkedIn'}
+                      isSyndicated={job.is_syndicated ?? true}
+                      postedDate={postedDate || undefined}
+                      estimatedDayRate={estimatedRate}
+                      companyType={job.company_type as 'direct' | 'recruiter' | 'job_board' || 'recruiter'}
+                      appealSummary={job.appeal_summary}
                     />
                   </Link>
                 )
@@ -262,7 +307,7 @@ export default async function FractionalJobsUKPage() {
         </section>
       )}
 
-      {/* Interactive Tools Section - 2x2 Grid */}
+      {/* Interactive Tools Section */}
       <section id="tools" className="py-16 md:py-24 bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
@@ -277,27 +322,56 @@ export default async function FractionalJobsUKPage() {
             </p>
           </div>
 
-          {/* 2x2 Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Rate Calculator - Full width on mobile, half on desktop */}
-            <div className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800 hover:border-purple-500/50 transition-colors">
-              <FractionalRateCalculatorUK />
-            </div>
+          {/* Calculators Section - For Candidates & Employers */}
+          <div className="mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* For Candidates */}
+              <div>
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">For Candidates</h3>
+                  <p className="text-gray-400 text-sm">
+                    Calculate your earning potential as a fractional executive based on your role and location
+                  </p>
+                </div>
+                <div className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800 hover:border-purple-500/50 transition-colors">
+                  <FractionalRateCalculatorUK />
+                </div>
+              </div>
 
-            {/* Employer Savings - Full width on mobile, half on desktop */}
-            <div className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800 hover:border-purple-500/50 transition-colors">
-              <SavingsCalculator />
+              {/* For Employers */}
+              <div>
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">For Employers</h3>
+                  <p className="text-gray-400 text-sm">
+                    Calculate your savings by hiring a fractional executive versus full-time
+                  </p>
+                </div>
+                <div className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800 hover:border-purple-500/50 transition-colors">
+                  <SavingsCalculator />
+                </div>
+              </div>
             </div>
+          </div>
 
-            {/* Skills Radar - Full width on mobile, half on desktop */}
-            <div className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800 hover:border-purple-500/50 transition-colors">
-              <h3 className="text-xl font-bold text-white mb-4">Market Skills Demand</h3>
-              <SkillsRadar height="350px" roles={['CFO', 'CTO', 'CMO', 'COO']} />
+          {/* Market Insights - 2 Column Grid */}
+          <div>
+            <div className="mb-6 text-center">
+              <h3 className="text-2xl font-bold text-white mb-2">Market Insights</h3>
+              <p className="text-gray-400 text-sm">
+                Understand UK market trends and tax implications
+              </p>
             </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* Skills Radar */}
+              <div className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800 hover:border-purple-500/50 transition-colors">
+                <h4 className="text-xl font-bold text-white mb-4">Skills Demand by Role</h4>
+                <SkillsRadar height="350px" roles={['CFO', 'CTO', 'CMO', 'COO']} />
+              </div>
 
-            {/* IR35 Calculator - Full width on mobile, half on desktop */}
-            <div className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800 hover:border-purple-500/50 transition-colors">
-              <IR35Calculator defaultDayRate={stats.avgDayRate} />
+              {/* IR35 Calculator */}
+              <div className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800 hover:border-purple-500/50 transition-colors">
+                <IR35Calculator defaultDayRate={stats.avgDayRate} />
+              </div>
             </div>
           </div>
         </div>
