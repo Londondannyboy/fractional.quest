@@ -209,6 +209,17 @@ export default async function EdinburghPage() {
               </p>
             </div>
           </div>
+          <div className="mt-12 max-w-4xl mx-auto">
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Edinburgh's position as Scotland's capital and financial hub creates unique opportunities for fractional executives. <a href="https://www.scottish-enterprise.com/learning-zone/research-and-publications" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Scottish Enterprise research</a> shows Scotland's business base has grown by 12,000+ companies in the past three years, with Edinburgh leading in professional services, fintech, and technology sectors—all requiring senior fractional expertise.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              The city's fintech cluster is particularly significant. <a href="https://fintechscotland.com/insights/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">FinTech Scotland</a> reports Edinburgh hosts over 150 fintech companies including major players like Skyscanner, FreeAgent, and Travelex, creating strong demand for fractional CFOs who understand regulated financial services and scale-up growth dynamics. The presence of major financial institutions (Standard Life, Baillie Gifford, HSBC) also drives need for fractional compliance and risk leadership.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              For executives considering Edinburgh, the combination of competitive day rates (£700-£1,200) and superior quality of life makes portfolio careers highly attractive. <a href="https://www.edinburghchamber.co.uk/insights-and-research/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Edinburgh Chamber of Commerce</a> data shows continued business optimism and growth, with particular strength in sectors like renewables, life sciences, and data/AI—all areas seeking fractional CTO and product expertise.
+            </p>
+          </div>
         </div>
       </section>
 

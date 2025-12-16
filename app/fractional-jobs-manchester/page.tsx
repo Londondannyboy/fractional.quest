@@ -231,6 +231,17 @@ export default async function ManchesterPage() {
               </p>
             </div>
           </div>
+          <div className="mt-12 max-w-4xl mx-auto">
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Manchester's economy is experiencing transformational growth. According to <a href="https://www.greatermanchester-ca.gov.uk/what-we-do/economy/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Greater Manchester Combined Authority</a>, the city-region's GVA has grown 23% faster than the UK average over the past five years, creating exceptional demand for fractional executive talent who can help scale-ups and established businesses navigate rapid growth.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              The tech sector particularly drives fractional opportunities. <a href="https://www.manchesterdigital.com/insights" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Manchester Digital</a> reports that the Greater Manchester tech sector now employs over 65,000 people across 10,000+ companies, with growing demand for fractional CTOs and product leaders who bring specialist expertise in AI, cybersecurity, and cloud architecture. MediaCityUK alone has created a cluster of 250+ creative and digital businesses requiring marketing and growth expertise.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              For fractional executives, Manchester offers strong day rates (£700-£1,200 averaging £900) with significantly lower living costs than London—particularly attractive for those building portfolio careers. The <a href="https://www.investinmanchester.com/business-manchester" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">MIDAS investment agency</a> tracks consistent growth in professional services, fintech, and healthtech sectors, all of which actively hire fractional CFOs, CMOs, and operational leaders.
+            </p>
+          </div>
         </div>
       </section>
 
