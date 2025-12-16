@@ -6,43 +6,41 @@ import { FAQ } from '@/components/FAQ'
 import { FractionalRateCalculatorUK } from '@/components/FractionalRateCalculatorUK'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { SkillsRadar } from '@/components/SkillsRadar'
+import { SavingsCalculator } from '@/components/SavingsCalculator'
 
 export const revalidate = 3600 // Revalidate every hour
 
 export const metadata: Metadata = {
-  title: 'Fractional Jobs UK 2025: 200+ Executive Roles | CFO, CTO, CMO',
-  description: 'Find 200+ fractional jobs UK in 2025. CFO, CTO, CMO executive roles in London, Manchester & UK-wide. Day rates £800-£1,500. Interactive tools & real-time insights.',
+  title: 'Fractional Jobs UK 2025: CFO, CTO, CMO Executive Roles',
+  description: 'Find fractional executive jobs UK. CFO, CTO, CMO roles with £800-£1,500 day rates. Interactive tools, market insights, and real-time opportunities.',
   keywords: 'fractional jobs UK, fractional jobs London, fractional executive jobs UK, fractional CFO jobs UK, fractional CMO jobs UK, fractional CTO jobs UK, fractional jobs 2025',
   alternates: {
     canonical: 'https://fractional.quest/fractional-jobs-uk',
   },
   openGraph: {
-    title: 'Fractional Jobs UK 2025: 200+ Executive Roles | CFO, CTO, CMO',
-    description: 'Find 200+ fractional jobs UK in 2025. CFO, CTO, CMO executive roles with interactive tools and market insights.',
+    title: 'Fractional Jobs UK 2025: CFO, CTO, CMO Executive Roles',
+    description: 'Find fractional executive jobs UK. CFO, CTO, CMO roles with interactive tools and market insights.',
     type: 'website',
     url: 'https://fractional.quest/fractional-jobs-uk',
   },
 }
 
-// Success stories
+// Success stories - examples from around the web
 const successStories = [
   {
-    quote: "Fractional jobs UK offer incredible flexibility. I work with clients in London and Manchester, combining the best of both markets.",
+    quote: "Fractional jobs UK offer incredible flexibility. I work with multiple clients, combining the best of different markets and building a diverse portfolio.",
     name: "Rachel S.",
     role: "Fractional CFO",
-    area: "London & Manchester",
   },
   {
-    quote: "The UK fractional market has exploded. I started with fractional jobs London but now work across the whole country remotely.",
+    quote: "The UK fractional market has exploded. Working across the whole country remotely gives me incredible opportunities and variety.",
     name: "Michael C.",
     role: "Fractional CTO",
-    area: "UK-wide",
   },
   {
-    quote: "Fractional jobs UK let me build a portfolio career. London rates with the flexibility to work from anywhere.",
+    quote: "Fractional jobs UK let me build a portfolio career with flexibility to work from anywhere while commanding premium rates.",
     name: "Sophie W.",
     role: "Fractional CMO",
-    area: "London",
   },
 ]
 
@@ -132,7 +130,7 @@ async function getUKStats() {
       avgDayRate: Math.round(parseFloat((avgRateResult[0] as any)?.avg || '900'))
     }
   } catch (error) {
-    return { totalUK: 200, totalLondon: 85, roleStats: [], avgDayRate: 900 }
+    return { totalUK: 22, totalLondon: 12, roleStats: [], avgDayRate: 950 }
   }
 }
 
@@ -186,7 +184,7 @@ export default async function FractionalJobsUKPage() {
         {/* Hero Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-block bg-purple-500/20 backdrop-blur text-purple-300 px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-widest mb-6">
-            {stats.totalUK}+ Executive Opportunities
+            UK's Fractional Executive Platform
           </span>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
@@ -194,7 +192,7 @@ export default async function FractionalJobsUKPage() {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-            CFO, CTO, CMO roles with interactive tools, market insights, and real-time opportunities. £800-£1,500 day rates across London, Manchester, and UK-wide.
+            CFO, CTO, CMO roles with interactive tools and market insights. £800-£1,500 day rates. Build your portfolio career.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -224,7 +222,7 @@ export default async function FractionalJobsUKPage() {
                   Featured Fractional Jobs UK
                 </h2>
                 <p className="text-gray-400 text-sm md:text-base">
-                  {stats.totalUK}+ opportunities • Updated hourly
+                  Updated hourly • {stats.totalUK} active opportunities
                 </p>
               </div>
               <Link
@@ -264,7 +262,7 @@ export default async function FractionalJobsUKPage() {
         </section>
       )}
 
-      {/* Interactive Tools Section */}
+      {/* Interactive Tools Section - 2x2 Grid */}
       <section id="tools" className="py-16 md:py-24 bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
@@ -279,20 +277,26 @@ export default async function FractionalJobsUKPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Rate Calculator */}
+          {/* 2x2 Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Rate Calculator - Full width on mobile, half on desktop */}
             <div className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800 hover:border-purple-500/50 transition-colors">
               <FractionalRateCalculatorUK />
             </div>
 
-            {/* Skills Radar */}
+            {/* Employer Savings - Full width on mobile, half on desktop */}
             <div className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800 hover:border-purple-500/50 transition-colors">
-              <h3 className="text-xl font-bold text-white mb-4">Market Skills Demand</h3>
-              <SkillsRadar height="400px" roles={['CFO', 'CTO', 'CMO', 'COO']} />
+              <SavingsCalculator />
             </div>
 
-            {/* IR35 Calculator */}
-            <div className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800 hover:border-purple-500/50 transition-colors md:col-span-2 lg:col-span-1">
+            {/* Skills Radar - Full width on mobile, half on desktop */}
+            <div className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800 hover:border-purple-500/50 transition-colors">
+              <h3 className="text-xl font-bold text-white mb-4">Market Skills Demand</h3>
+              <SkillsRadar height="350px" roles={['CFO', 'CTO', 'CMO', 'COO']} />
+            </div>
+
+            {/* IR35 Calculator - Full width on mobile, half on desktop */}
+            <div className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800 hover:border-purple-500/50 transition-colors">
               <IR35Calculator defaultDayRate={stats.avgDayRate} />
             </div>
           </div>
@@ -354,8 +358,9 @@ export default async function FractionalJobsUKPage() {
       <section className="py-16 md:py-24 bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
-            <span className="text-xs font-medium uppercase tracking-wider text-gray-500 mb-4 block">Perspectives</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">Success Stories</h2>
+            <span className="text-xs font-medium uppercase tracking-wider text-gray-500 mb-4 block">Success Stories</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Fractional Executives in Action</h2>
+            <p className="text-gray-500 text-sm">Examples from around the web</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -370,7 +375,7 @@ export default async function FractionalJobsUKPage() {
                   </div>
                   <div>
                     <cite className="font-semibold text-white not-italic block text-sm md:text-base">{story.name}</cite>
-                    <span className="text-gray-400 text-xs md:text-sm">{story.role} &bull; {story.area}</span>
+                    <span className="text-gray-400 text-xs md:text-sm">{story.role}</span>
                   </div>
                 </footer>
               </article>
@@ -379,9 +384,9 @@ export default async function FractionalJobsUKPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Section - Wider and more dynamic */}
       <section className="py-16 md:py-24 bg-gray-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
             <span className="text-xs font-medium uppercase tracking-wider text-gray-500 mb-4 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Common Questions</h2>
@@ -390,22 +395,24 @@ export default async function FractionalJobsUKPage() {
             </p>
           </div>
 
-          <FAQ
-            items={ukFractionalJobsFAQs}
-            title=""
-            className="max-w-3xl mx-auto"
-          />
+          <div className="bg-gray-950 rounded-2xl p-6 md:p-8 border border-gray-800">
+            <FAQ
+              items={ukFractionalJobsFAQs}
+              title=""
+              className=""
+            />
+          </div>
         </div>
       </section>
 
-      {/* Internal Links */}
+      {/* Internal Links - Subtle footer */}
       <section className="py-12 md:py-16 bg-gray-950 border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 md:mb-12 text-center">Explore More</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-white mb-8 md:mb-12 text-center">Explore More</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             <div>
-              <h3 className="font-bold text-white mb-4 text-sm uppercase tracking-wider">By Role</h3>
-              <ul className="space-y-3 text-gray-400 text-sm md:text-base">
+              <h3 className="text-white mb-4 text-xs font-semibold uppercase tracking-wider opacity-70">By Role</h3>
+              <ul className="space-y-3 text-gray-400 text-sm">
                 <li><Link href="/fractional-cfo-jobs-uk" className="hover:text-purple-400 transition-colors">Fractional CFO Jobs UK</Link></li>
                 <li><Link href="/fractional-cmo-jobs-uk" className="hover:text-purple-400 transition-colors">Fractional CMO Jobs UK</Link></li>
                 <li><Link href="/fractional-cto-jobs-uk" className="hover:text-purple-400 transition-colors">Fractional CTO Jobs UK</Link></li>
@@ -413,8 +420,8 @@ export default async function FractionalJobsUKPage() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-white mb-4 text-sm uppercase tracking-wider">By Location</h3>
-              <ul className="space-y-3 text-gray-400 text-sm md:text-base">
+              <h3 className="text-white mb-4 text-xs font-semibold uppercase tracking-wider opacity-70">By Location</h3>
+              <ul className="space-y-3 text-gray-400 text-sm">
                 <li><Link href="/fractional-jobs?location=London" className="hover:text-purple-400 transition-colors">Fractional Jobs London</Link></li>
                 <li><Link href="/fractional-jobs-manchester" className="hover:text-purple-400 transition-colors">Fractional Jobs Manchester</Link></li>
                 <li><Link href="/fractional-jobs-birmingham" className="hover:text-purple-400 transition-colors">Fractional Jobs Birmingham</Link></li>
@@ -422,8 +429,8 @@ export default async function FractionalJobsUKPage() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-white mb-4 text-sm uppercase tracking-wider">Resources</h3>
-              <ul className="space-y-3 text-gray-400 text-sm md:text-base">
+              <h3 className="text-white mb-4 text-xs font-semibold uppercase tracking-wider opacity-70">Resources</h3>
+              <ul className="space-y-3 text-gray-400 text-sm">
                 <li><Link href="/fractional-jobs" className="hover:text-purple-400 transition-colors">All Fractional Jobs UK</Link></li>
                 <li><Link href="/how-to-become-a-fractional-executive" className="hover:text-purple-400 transition-colors">How to Go Fractional</Link></li>
                 <li><Link href="/fractional-executive-salary-uk" className="hover:text-purple-400 transition-colors">UK Salary Guide</Link></li>
@@ -442,7 +449,7 @@ export default async function FractionalJobsUKPage() {
             Find Fractional Jobs UK Today
           </h2>
           <p className="text-base md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
-            {stats.totalUK}+ fractional jobs UK including {stats.totalLondon}+ fractional jobs London. Join the UK&apos;s fastest-growing executive job market.
+            Join the UK&apos;s fastest-growing executive job market. Build your portfolio career with flexibility and premium rates.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

@@ -96,7 +96,7 @@ export default function FractionalCFOServicesPage() {
             </div>
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Fractional CFO vs Full-Time CFO</h3>
             <p>
-              A full-time CFO costs £150,000-£250,000 in salary alone, plus benefits, equity, office space, and management overhead. According to <a href="https://www.bankofengland.co.uk/statistics/research-datasets" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">Bank of England research</a>, UK SMEs increasingly access senior finance expertise through flexible arrangements. For many growing companies, full-time is overkill—you need CFO-level thinking on capital strategy and fundraising, but not 40 hours weekly.
+              A full-time CFO costs £150,000-£250,000 in salary alone, plus benefits, equity, office space, and management overhead. According to <a href="https://www.bankofengland.co.uk/statistics/research-datasets" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">Bank of England research</a>, UK SMEs increasingly access senior finance expertise through flexible arrangements. For many growing companies, full-time is overkill—you need CFO-level thinking on capital strategy and fundraising, but not 40 hours weekly. See our complete <Link href="/fractional-cfo-vs-full-time" className="text-emerald-600 hover:text-emerald-700 underline">fractional vs full-time CFO comparison</Link> for detailed analysis.
             </p>
             <p>
               A fractional CFO gives you exactly what you need: senior financial leadership scaled to your actual requirements. The <a href="https://ifs.org.uk/publications" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">Institute for Fiscal Studies</a> notes the UK trend toward part-time senior executives, particularly in high-growth sectors. As your company grows, you can increase their time—or transition to a full-time hire when the role justifies it. Most fractional CFOs work through <a href="https://www.gov.uk/limited-company-formation" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 underline">limited companies</a>, ensuring tax efficiency and professional structure.
@@ -387,17 +387,50 @@ export default function FractionalCFOServicesPage() {
         </div>
       </section>
 
-      {/* Related Links */}
-      <section className="py-12 bg-white border-t border-gray-200">
+      {/* Related CFO Resources */}
+      <section className="py-16 bg-gray-50 border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related Services</span>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/fractional-cmo-services" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">Fractional CMO</Link>
-              <Link href="/fractional-cto-services" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">Fractional CTO</Link>
-              <Link href="/fractional-coo-services" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">Fractional COO</Link>
-              <Link href="/fractional-cfo-jobs-uk" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">CFO Jobs</Link>
-              <Link href="/fractional-cfo-salary" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">CFO Salary Guide</Link>
+          <div className="mb-8">
+            <h2 className="text-2xl font-black text-gray-900 mb-2">Complete CFO Resource Hub</h2>
+            <p className="text-gray-600">Explore our comprehensive guides for businesses and CFO professionals</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3">For Businesses</h3>
+              <div className="space-y-2">
+                <Link href="/fractional-cfo-vs-full-time" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">Fractional vs Full-Time CFO</Link>
+                <Link href="/fractional-cfo-companies" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">CFO Service Providers</Link>
+                <Link href="/fractional-cfo-cost" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">CFO Cost Guide</Link>
+                <Link href="/fractional-cfo-hourly-rate" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">CFO Rates 2025</Link>
+                <Link href="/fractional-cfo-for-startups" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">CFO for Startups</Link>
+                <Link href="/outsourced-cfo-services" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">Outsourced CFO Services</Link>
+                <Link href="/virtual-cfo-services" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">Virtual CFO Services</Link>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3">For CFO Professionals</h3>
+              <div className="space-y-2">
+                <Link href="/how-to-become-fractional-cfo" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">Become a Fractional CFO</Link>
+                <Link href="/fractional-cfo-training" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">CFO Training & Certification</Link>
+                <Link href="/fractional-cfo-jobs-remote" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">Remote CFO Jobs</Link>
+                <Link href="/contract-cfo-jobs" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">Contract CFO Jobs</Link>
+                <Link href="/fractional-controller-jobs" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">Controller Jobs</Link>
+                <Link href="/fractional-cfo-salary" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">CFO Salary Guide</Link>
+                <Link href="/cfo-community-reddit" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">CFO Communities</Link>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3">Market Insights</h3>
+              <div className="space-y-2">
+                <Link href="/fractional-cfo-salary-report-2025" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">2025 Salary Report</Link>
+                <Link href="/state-fractional-cfo-market-2025" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">2025 Market Report</Link>
+              </div>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3 mt-6">Other Fractional Roles</h3>
+              <div className="space-y-2">
+                <Link href="/fractional-cmo-services" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">Fractional CMO</Link>
+                <Link href="/fractional-cto-services" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">Fractional CTO</Link>
+                <Link href="/fractional-coo-services" className="block text-gray-600 hover:text-emerald-600 font-medium transition-colors">Fractional COO</Link>
+              </div>
             </div>
           </div>
         </div>

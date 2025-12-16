@@ -503,6 +503,72 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.85,
     },
+    {
+      url: `${baseUrl}/fractional-cfo-vs-full-time`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/fractional-cfo-companies`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.87,
+    },
+    {
+      url: `${baseUrl}/fractional-cfo-training`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.84,
+    },
+    {
+      url: `${baseUrl}/fractional-cfo-jobs-remote`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.89,
+    },
+    {
+      url: `${baseUrl}/contract-cfo-jobs`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.83,
+    },
+    {
+      url: `${baseUrl}/fractional-controller-jobs`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.84,
+    },
+    {
+      url: `${baseUrl}/outsourced-cfo-services`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/virtual-cfo-services`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/cfo-community-reddit`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.82,
+    },
+    {
+      url: `${baseUrl}/fractional-cfo-salary-report-2025`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/state-fractional-cfo-market-2025`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
     // Short URL redirects (keep for backlinks)
     {
       url: `${baseUrl}/cfo`,
