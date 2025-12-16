@@ -59,6 +59,7 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
   // Handle tool calls from Hume - call API and send response back via WebSocket
   const handleToolCall = useCallback(async (toolName: string, toolCallId: string, parameters: string) => {
     try {
+      console.log('[handleToolCall] Starting...', { toolName, toolCallId, parameters, hasSendToolMessage: !!sendToolMessage })
       addDebugLog(`🔄 Executing tool: ${toolName}`, 'tool')
 
       // Call our API endpoint
@@ -74,18 +75,24 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
       })
 
       const result = await response.json()
+      console.log('[handleToolCall] API response:', result)
       addDebugLog(`✅ Tool executed: ${toolName}`, 'success')
 
       // Send tool response back to Hume via WebSocket
       if (sendToolMessage && result.content) {
+        console.log('[handleToolCall] Sending tool response via WebSocket...', { toolCallId, contentLength: result.content.length })
         sendToolMessage({
           type: 'tool_response',
           toolCallId: toolCallId,
           content: result.content
         })
         addDebugLog(`📤 Tool response sent to Hume`, 'success')
+      } else {
+        console.error('[handleToolCall] Cannot send response:', { hasSendToolMessage: !!sendToolMessage, hasContent: !!result.content })
+        addDebugLog(`❌ Cannot send tool response: ${!sendToolMessage ? 'sendToolMessage missing' : 'no content'}`, 'error')
       }
     } catch (error) {
+      console.error('[handleToolCall] Error:', error)
       addDebugLog(`❌ Tool error: ${error}`, 'error')
 
       // Send error response to Hume
