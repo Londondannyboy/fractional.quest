@@ -113,8 +113,11 @@ async function extractIntent(transcript: string): Promise<ExtractedIntent> {
   }
 
   try {
+    // Use GOOGLE_API_KEY if GOOGLE_GENERATIVE_AI_API_KEY is not set
+    const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GOOGLE_API_KEY
+
     const result = await generateObject({
-      model: google('models/gemini-1.5-flash'),
+      model: google('models/gemini-1.5-flash', { apiKey }),
       schema: ExtractedIntentSchema,
       prompt: `Analyze this conversation transcript and extract the user's intent.
 

@@ -26,7 +26,9 @@ class JobSearchIntent(BaseModel):
 
 
 # Initialize Pydantic AI Agent with Gemini
-model = GeminiModel('gemini-1.5-flash', api_key=os.environ.get('GOOGLE_API_KEY'))
+# Use GOOGLE_GENERATIVE_AI_API_KEY or fall back to GOOGLE_API_KEY
+api_key = os.environ.get('GOOGLE_GENERATIVE_AI_API_KEY') or os.environ.get('GOOGLE_API_KEY')
+model = GeminiModel('gemini-1.5-flash', api_key=api_key)
 agent = Agent(
     model=model,
     result_type=JobSearchIntent,
