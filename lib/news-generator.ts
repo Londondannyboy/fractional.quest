@@ -218,7 +218,7 @@ export async function generateArticle(
         // Remove any trailing commas before closing braces/brackets
         .replace(/,(\s*[}\]])/g, '$1')
         // Escape unescaped quotes in string values (basic attempt)
-        .replace(/: "([^"]*)"([^,}\]]*)/g, (match, p1, p2) => {
+        .replace(/: "([^"]*)"([^,}\]]*)/g, (match: string, p1: string, p2: string) => {
           // If p2 contains content before comma/brace, it might be an unescaped quote
           if (p2.includes('"')) {
             return match.replace(/"([^,}\]]*)"/, '\\"$1\\"')
