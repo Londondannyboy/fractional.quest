@@ -116,7 +116,6 @@ async function extractIntent(transcript: string): Promise<ExtractedIntent> {
     const result = await generateObject({
       model: google('gemini-1.5-flash'),
       schema: ExtractedIntentSchema,
-      mode: 'json',
       prompt: `Analyze this conversation transcript and extract the user's intent.
 
 Transcript: "${transcript}"
