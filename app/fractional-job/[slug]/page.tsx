@@ -8,6 +8,7 @@ import { SimilarJobs } from '@/components/SimilarJobs'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { DesktopOnly } from '@/components/DesktopOnly'
 import { ShareButtons } from '@/components/ShareButtons'
+import { JobMarketContext } from '@/components/JobMarketContext'
 
 // Revalidate every hour for job details
 export const revalidate = 3600
@@ -507,6 +508,14 @@ export default async function JobDetailPage({ params }: PageProps) {
 
         {/* Main Content */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          {/* Market Context - Authoritative Industry Insights */}
+          <JobMarketContext
+            roleCategory={job.role_category}
+            location={job.location}
+            isRemote={job.is_remote || false}
+            companyName={job.company_name}
+          />
+
           {/* Two Column Layout */}
           <div className="lg:grid lg:grid-cols-3 lg:gap-12">
             {/* Main Content Column */}
