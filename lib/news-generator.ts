@@ -76,12 +76,13 @@ Return ONLY valid JSON in this EXACT format (no markdown, no code blocks):
 {
   "title": "your title here",
   "excerpt": "brief summary here",
-  "content": "Write content as a single string. Use space-space for paragraph breaks instead of newlines.",
+  "content": "Write 3-4 SHORT paragraphs. Separate each paragraph with ||BREAK|| (example: First paragraph.||BREAK||Second paragraph.||BREAK||Third paragraph.)",
   "category": "Finance|Marketing|Engineering|Operations|HR|Sales|General",
   "suggested_slug": "url-slug-here"
 }
 
-Keep content under 400 words. Write for UK audience. Use £ for currency.`
+IMPORTANT: Content MUST have multiple paragraphs separated by ||BREAK||
+Keep total under 400 words. Write for UK audience. Use £ for currency.`
 
 // Prompts for each content type
 const PROMPTS: Record<ContentType, string> = {
@@ -214,9 +215,9 @@ export async function generateArticle(
   // Parse and validate with Zod
   try {
     const parsed = JSON.parse(jsonStr)
-    // Convert space-space to actual newlines for paragraphs
+    // Convert ||BREAK|| to actual paragraph breaks
     if (parsed.content) {
-      parsed.content = parsed.content.replace(/  /g, '\n\n')
+      parsed.content = parsed.content.replace(/\|\|BREAK\|\|/g, '\n\n').trim()
     }
     return GeneratedArticle.parse(parsed)
   } catch (error) {
