@@ -243,18 +243,28 @@ function VoiceInterface({ token, profile, userId, previousContext }: { token: st
 
     // NEW: Trigger transcript analysis after user messages
     if (latestMessage.type === 'user_message' || latestMessage.type === 'assistant_message') {
-      // Build full transcript from recent messages
-      const transcript = messages
-        .filter((m: any) => m.type === 'user_message' || m.type === 'assistant_message')
-        .map((m: any) => {
-          // DEBUG: Try multiple message properties
-          const text = m.message?.content || m.message?.text || m.content || ''
-          if (m.type === 'user_message') {
-            console.log('[DEBUG] User message:', { type: m.type, message: m.message, extracted: text })
+      // Build combinedMessages (same logic used for display)
+      const combinedMessages: any[] = []
+      let currentAssistant = ''
+
+      for (const m of messages) {
+        if (m.type === 'user_message' && m.message?.content) {
+          if (currentAssistant) {
+            combinedMessages.push({ type: 'assistant_message', content: currentAssistant.trim() })
+            currentAssistant = ''
           }
-          return text
-        })
-        .filter(Boolean)
+          combinedMessages.push({ type: 'user_message', content: m.message.content })
+        } else if (m.type === 'assistant_message' && m.message?.content) {
+          currentAssistant += m.message.content + ' '
+        }
+      }
+      if (currentAssistant) {
+        combinedMessages.push({ type: 'assistant_message', content: currentAssistant.trim() })
+      }
+
+      // Build transcript from the SAME text that's displayed on screen
+      const transcript = combinedMessages
+        .map((m: any) => m.content)
         .join(' ')
 
       addDebugLog(`📝 Transcript (${transcript.length} chars): "${transcript.substring(0, 80)}..."`, 'info')
