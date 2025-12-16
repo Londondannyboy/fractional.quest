@@ -237,8 +237,112 @@ export default async function ProfessionalServicesPage() {
         </div>
       </section>
 
+      {/* Why Professional Services Firms Hire Fractional Executives */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-12">
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">Industry Context</span>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Professional Services Firms Hire Fractional Executives</h2>
+          </div>
+          <div className="prose prose-lg max-w-none">
+            <p className="text-xl text-gray-600 leading-relaxed mb-6">
+              Professional services firms face a structural challenge: the traditional partnership model struggles to support specialist executive functions. According to <a href="https://www.lawsociety.org.uk/topics/research/the-state-of-legal-services" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-700 underline">Law Society research</a>, UK legal firms with dedicated COO or CFO leadership see 40% higher profitability and 60% better partner retention than peer firms relying solely on managing partners to handle operations.
+            </p>
+            <p className="text-gray-700 mb-6">
+              The partner promotion path creates experts in client service—lawyers, accountants, consultants who excel at billable work. But running a modern professional services firm requires expertise these traditional career paths don't develop: financial planning, marketing and business development, technology implementation, HR and talent development. Research from <a href="https://www.sra.org.uk/sra/research-publications/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-700 underline">the Solicitors Regulation Authority</a> shows that mismanagement of firm operations, not lack of legal expertise, is the primary cause of law firm failures.
+            </p>
+            <p className="text-gray-700 mb-6">
+              Mid-market firms (£5m-£50m revenue) feel this pain acutely. They've grown beyond the stage where partners can manage operations alongside client work, but aren't yet large enough to justify £150k-£200k C-level salaries. A 30-partner law firm with £15m revenue and 12% margins generates £1.8m profit. Hiring a full-time COO at £160k represents 9% of profits—difficult to justify when it directly reduces partner distributions.
+            </p>
+            <p className="text-gray-700 mb-6">
+              Digital transformation amplifies this need. <a href="https://www2.deloitte.com/uk/en/pages/about-deloitte-uk/articles/alternative-legal-services-providers.html" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-700 underline">Deloitte research on legal services</a> shows that alternative business structures and legal tech adoption are forcing traditional firms to modernize or face obsolescence. But implementing practice management systems, document automation, client portals, and AI-powered research tools requires technical and change management expertise that most professional services leaders lack.
+            </p>
+            <p className="text-gray-700">
+              Fractional executives solve this elegantly. A fractional COO working 2 days/week (£100-120k annually) provides the operational leadership, frees partners to focus on high-value client work, and typically pays for themselves through improved realization rates, better resource utilization, and reduced overhead inefficiency. They bring experience from multiple firms, knowing what works and what expensive mistakes to avoid.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What Professional Services Fractional Executives Do */}
+      <section className="py-24 md:py-32 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-12">
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">Role Requirements</span>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">What Professional Services Fractional Executives Do Differently</h2>
+          </div>
+          <div className="prose prose-lg max-w-none">
+            <p className="text-xl text-gray-600 leading-relaxed mb-6">
+              Fractional executives in professional services need to understand the unique economics, culture, and operational rhythms that differentiate these firms from traditional businesses.
+            </p>
+            <p className="text-gray-700 mb-6">
+              <strong>They understand billable hours and realization rates.</strong> Professional services firms live and die by utilization (target: 65-75% for senior staff), realization (actual revenue vs standard rates), and collection rates (cash collected vs invoiced). A fractional CFO doesn't just track revenue—they analyze realization by practice area, identify write-off patterns, and implement pricing strategies that improve margins without losing clients. They know that a 5-point improvement in realization can increase firm profits by 20-30%.
+            </p>
+            <p className="text-gray-700 mb-6">
+              <strong>They navigate partner dynamics diplomatically.</strong> Professional services firms aren't hierarchical corporations—they're partnerships where "bosses" don't exist in the traditional sense. According to <a href="https://www.acca-global.com/gb/en/professional-insights/pro-accountants-the-future/pafuture5.html" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-700 underline">ACCA research on professional firms</a>, successful operational changes require partner buy-in, not top-down mandates. Fractional executives who succeed in this environment know how to build consensus, demonstrate value quickly, and influence without formal authority.
+            </p>
+            <p className="text-gray-700 mb-6">
+              <strong>They implement technology that professionals will actually use.</strong> Lawyers and accountants are notoriously resistant to new systems. A fractional CTO or COO choosing practice management software knows which systems offer genuine efficiency gains vs glorified filing cabinets, how to structure change management for professional skeptics, and which automation quick wins (automated time tracking, document assembly) build momentum for larger transformations.
+            </p>
+            <p className="text-gray-700 mb-6">
+              <strong>They improve business development without alienating partners.</strong> Many professional services partners view business development as "selling," which conflicts with professional identity. Fractional CMOs and BD Directors who succeed reframe this: they implement client feedback systems, create thought leadership programs, build referral networks, and develop account planning processes that feel like strategic client relationship management, not sales. They know the difference between techniques that work in B2B SaaS vs professional services.
+            </p>
+            <p className="text-gray-700">
+              <strong>They address succession planning and talent development.</strong> Aging partner demographics create succession crises. Fractional CHROs help firms identify high-potential associates, create clear paths to partnership, implement compensation structures that retain talent, and plan for partner retirements that preserve institutional knowledge and client relationships. They've seen successful and failed transitions and can navigate the sensitive politics involved.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Hiring Guide */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-12">
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">Hiring Guide</span>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Hiring Fractional Executives for Professional Services: What to Look For</h2>
+          </div>
+          <div className="prose prose-lg max-w-none">
+            <p className="text-xl text-gray-600 leading-relaxed mb-6">
+              Professional services firms have unique cultures and economics. Here's how to identify fractional executives who understand this environment—not generic corporate leaders.
+            </p>
+
+            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Green Flags: Professional Services Experience</h3>
+            <ul className="space-y-3 text-gray-700 mb-6">
+              <li><strong>Multi-firm PS experience:</strong> They've worked with 3+ professional services firms (law, accounting, consulting, architecture). This isn't learned theory—it's pattern recognition</li>
+              <li><strong>Fluent in PS metrics:</strong> They naturally discuss utilization, realization, leverage ratios, and partner compensation structures without needing definitions</li>
+              <li><strong>Successful technology implementations:</strong> They can name specific practice management systems they've implemented and actual adoption rates achieved (70%+ is good; 95%+ is exceptional)</li>
+              <li><strong>Partner references:</strong> They can connect you with managing partners or practice leaders they've worked with. Strong fractionals have partners who call them for advice years later</li>
+              <li><strong>Understanding of professional culture:</strong> They articulate the difference between corporate hierarchy and partnership consensus-building. They get why "because I said so" doesn't work</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Red Flags: Corporate Thinking</h3>
+            <ul className="space-y-3 text-gray-700 mb-6">
+              <li><strong>Only corporate experience:</strong> Someone from a FTSE 100 company won't understand partnership dynamics, billable hours culture, or professional services economics</li>
+              <li><strong>Aggressive timelines:</strong> "We'll transform the firm in 90 days" shows they don't understand professional services change management. Real transformation takes 12-24 months</li>
+              <li><strong>Generic business advice:</strong> If they're quoting Harvard Business Review without contextualizing for PS firms, they lack depth</li>
+              <li><strong>Disrespect for billable work:</strong> Comments like "partners need to stop doing client work and focus on management" show fundamental misunderstanding. Client work is the business</li>
+              <li><strong>No understanding of professional regulation:</strong> Lack of knowledge about SRA, FRC, or relevant professional bodies suggests surface-level experience</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Structuring PS Engagements</h3>
+            <p className="text-gray-700 mb-4">
+              Start with a diagnostic (2-4 weeks, £5k-£12k fixed fee). A good fractional executive will interview partners, review financials, assess systems and processes, then deliver a prioritized action plan. This diagnostic proves their understanding of your specific firm dynamics and gives you a roadmap even if you don't proceed.
+            </p>
+            <p className="text-gray-700 mb-4">
+              <strong>Ongoing engagement structure:</strong> Most successful PS fractional engagements run 1-2 days/week for 12-18 months. This matches partner meeting cadences and gives time for relationship building essential in partnership environments. For firms under £10m revenue, 1 day/week is typically sufficient. £10m-£30m: 1.5-2 days/week.
+            </p>
+            <p className="text-gray-700 mb-4">
+              <strong>Day rates by role:</strong> Fractional COO: £700-£1,000. CFO: £800-£1,100. CMO/BD Director: £600-£900. CTO/Technology Director: £750-£1,000. CHRO: £650-£900. Rates reflect both expertise and the complexity of driving change in partnership environments.
+            </p>
+            <p className="text-gray-700">
+              <strong>Define metrics that matter to partners.</strong> For a COO: "Improve average partner profit by £30k through efficiency gains" or "Reduce accounts receivable over 90 days by 40%." For a CMO: "Generate £2M in new client revenue from existing relationships" or "Achieve 15 inbound qualified leads per quarter." Frame outcomes in partner economics—that's what drives buy-in.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
