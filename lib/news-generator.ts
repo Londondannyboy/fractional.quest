@@ -189,14 +189,13 @@ export async function generateArticle(
   }
 
   // Log the raw response for debugging
-  console.log('[News Generator] Raw AI response:', text.substring(0, 500))
+  console.log('[News Generator] Raw AI response (first 500 chars):', text.substring(0, 500))
 
   // Extract JSON from response (handle markdown code blocks)
   let jsonStr = text.trim()
 
-  // Remove markdown code blocks if present (handle both ```json and ``` variants)
+  // Remove markdown code blocks if present
   if (jsonStr.startsWith('```')) {
-    // Find the first { and last }
     const startIdx = jsonStr.indexOf('{')
     const endIdx = jsonStr.lastIndexOf('}')
     if (startIdx !== -1 && endIdx !== -1) {
@@ -205,8 +204,14 @@ export async function generateArticle(
   }
 
   // Parse and validate with Zod
-  const parsed = JSON.parse(jsonStr)
-  return GeneratedArticle.parse(parsed)
+  try {
+    const parsed = JSON.parse(jsonStr)
+    return GeneratedArticle.parse(parsed)
+  } catch (parseError) {
+    console.error('[News Generator] JSON parse error:', parseError)
+    console.error('[News Generator] Failed to parse:', jsonStr.substring(0, 1000))
+    throw new Error(`Failed to parse AI response as JSON: ${parseError}`)
+  }
 }
 
 /**
