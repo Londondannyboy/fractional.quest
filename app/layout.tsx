@@ -151,11 +151,11 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased bg-white text-gray-900`}
+        className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased bg-gray-950 text-white`}
       >
         <StackProvider app={stackServerApp}>
           <StackTheme>
-            <Suspense fallback={<div className="h-16 bg-white border-b border-gray-200" />}>
+            <Suspense fallback={<div className="h-16 bg-gray-950 border-b border-gray-800" />}>
               <Navigation />
             </Suspense>
             <main className="min-h-screen">
