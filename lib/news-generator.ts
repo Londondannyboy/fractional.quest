@@ -269,6 +269,9 @@ async function getUnsplashImage(
     if (titleLower.includes('data') || titleLower.includes('analytics')) {
       contextKeywords.push('data', 'analytics')
     }
+    if (titleLower.includes('engineering') || titleLower.includes('software')) {
+      contextKeywords.push('technology', 'programming')
+    }
   }
 
   // Extract from job titles
@@ -290,23 +293,32 @@ async function getUnsplashImage(
     ? contextKeywords.slice(0, 2).join(' ') // Use top 2 keywords
     : getCategoryKeyword(category)
 
-  // Use Unsplash API (free tier, no key needed)
+  const PEXELS_API_KEY = process.env.PEXELS_API_KEY
+
+  if (!PEXELS_API_KEY) {
+    console.error('[Pexels] API key not found')
+    return null
+  }
+
+  // Use Pexels API
   try {
     const response = await fetch(
-      `https://api.unsplash.com/photos/random?query=${encodeURIComponent(searchQuery)}&orientation=landscape`,
+      `https://api.pexels.com/v1/search?query=${encodeURIComponent(searchQuery)}&per_page=1&orientation=landscape`,
       {
         headers: {
-          'Authorization': 'Client-ID 5K_rHaCkHFVF7VJMHYKXgHLvvf7AqPZzviuhE6LlRlU'
+          'Authorization': PEXELS_API_KEY
         }
       }
     )
 
     if (response.ok) {
       const data = await response.json()
-      return data.urls?.regular || null
+      return data.photos?.[0]?.src?.large || null
+    } else {
+      console.error('[Pexels] API error:', response.status, await response.text())
     }
   } catch (error) {
-    console.error('[Unsplash] API error:', error)
+    console.error('[Pexels] API error:', error)
   }
 
   // Fallback to category-based keyword

@@ -79,7 +79,8 @@ function VoiceInterface({ token, userId, userName }: VoiceInterfaceProps) {
     return () => {
       disconnect()
     }
-  }, [token, userId, userName]) // Removed connect/disconnect to prevent loop
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [token, userId, userName]) // Only token/user deps, not connect/disconnect
 
   // Track connection state
   useEffect(() => {

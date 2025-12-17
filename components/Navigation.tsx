@@ -22,7 +22,7 @@ export function Navigation() {
     { href: '/frac', label: 'Meet Frac' },
     { href: '/fractional-services', label: 'Services' },
     { href: '/fractional-jobs', label: 'Fractional Jobs' },
-    { href: '/fractional-jobs-articles', label: 'Knowledge Base' }
+    { href: '/fractional-jobs-articles', label: 'Resources' }
   ]
 
   const isActive = (href: string) => {
