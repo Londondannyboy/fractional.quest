@@ -106,17 +106,22 @@ function VoiceInterface({ token, userId, userName }: VoiceInterfaceProps) {
         const toolName = message.name
         const toolInput = message.parameters
 
+        console.log('[ONBOARDING] Tool called:', toolName, toolInput)
+
         // Handle different onboarding tools
         switch (toolName) {
           case 'set_user_type':
+            console.log('[ONBOARDING] Setting user type:', toolInput.user_type)
             handleSetUserType(toolInput.user_type)
             break
 
           case 'add_skill':
+            console.log('[ONBOARDING] Adding skill:', toolInput.skill_name)
             handleAddSkill(toolInput.skill_name, toolInput.confidence)
             break
 
           case 'add_company':
+            console.log('[ONBOARDING] Adding company:', toolInput.company_name)
             handleAddCompany(
               toolInput.company_name,
               toolInput.role,
@@ -125,10 +130,12 @@ function VoiceInterface({ token, userId, userName }: VoiceInterfaceProps) {
             break
 
           case 'add_role_preference':
+            console.log('[ONBOARDING] Adding role preference:', toolInput.role_title)
             handleAddRolePreference(toolInput.role_title)
             break
 
           case 'set_company_info':
+            console.log('[ONBOARDING] Setting company info:', toolInput.company_name)
             handleSetCompanyInfo(
               toolInput.company_name,
               toolInput.industry
@@ -136,6 +143,7 @@ function VoiceInterface({ token, userId, userName }: VoiceInterfaceProps) {
             break
 
           case 'add_role_needed':
+            console.log('[ONBOARDING] Adding role needed:', toolInput.role_title)
             handleAddRoleNeeded(
               toolInput.role_title,
               toolInput.priority,
@@ -144,6 +152,7 @@ function VoiceInterface({ token, userId, userName }: VoiceInterfaceProps) {
             break
 
           case 'add_requirement':
+            console.log('[ONBOARDING] Adding requirement:', toolInput.requirement_type)
             handleAddRequirement(
               toolInput.requirement_type,
               toolInput.value,
@@ -152,8 +161,12 @@ function VoiceInterface({ token, userId, userName }: VoiceInterfaceProps) {
             break
 
           case 'complete_onboarding':
+            console.log('[ONBOARDING] Completing onboarding')
             handleCompleteOnboarding()
             break
+
+          default:
+            console.log('[ONBOARDING] Unknown tool:', toolName)
         }
       }
     })
@@ -176,6 +189,7 @@ function VoiceInterface({ token, userId, userName }: VoiceInterfaceProps) {
 
       // Check if skill already exists
       if (skills.some(s => s.name.toLowerCase() === skillName.toLowerCase())) {
+        console.log('[ONBOARDING] Skill already exists:', skillName)
         return prev
       }
 
@@ -183,8 +197,11 @@ function VoiceInterface({ token, userId, userName }: VoiceInterfaceProps) {
 
       // Show graph after 2+ skills
       if (newSkills.length >= 2 && !showRepoGraph) {
+        console.log('[ONBOARDING] Showing graph! Skills:', newSkills.length)
         setShowRepoGraph(true)
       }
+
+      console.log('[ONBOARDING] Updated skills:', newSkills)
 
       return {
         ...prev,
