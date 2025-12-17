@@ -85,8 +85,118 @@ const PM_FAQS = [
 export default async function FractionalProjectManagerPage() {
   const [stats, companies] = await Promise.all([getPMStats(), getFeaturedCompanies()])
 
+  // Schema markup for the hub page
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Fractional Project Manager UK - Complete Resource Hub",
+    "description": "Comprehensive guide to fractional project management in the UK: jobs, responsibilities, certifications, salaries, and career advice.",
+    "url": "https://fractional.quest/fractional-project-manager",
+    "inLanguage": "en-GB",
+    "about": {
+      "@type": "Occupation",
+      "name": "Fractional Project Manager",
+      "occupationLocation": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
+      "estimatedSalary": {
+        "@type": "MonetaryAmountDistribution",
+        "name": "Day Rate",
+        "currency": "GBP",
+        "duration": "P1D",
+        "median": 750,
+        "percentile10": 500,
+        "percentile90": 1200
+      }
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Article",
+            "name": "Part-Time Project Manager Jobs UK",
+            "url": "https://fractional.quest/part-time-project-manager-jobs-uk"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Article",
+            "name": "What is a Fractional Project Manager?",
+            "url": "https://fractional.quest/what-is-fractional-project-manager"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Article",
+            "name": "Interim vs Fractional Project Manager",
+            "url": "https://fractional.quest/interim-vs-fractional-project-manager"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Article",
+            "name": "Fractional PM Salary UK",
+            "url": "https://fractional.quest/fractional-project-manager-salary-uk"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Article",
+            "name": "How to Become a Fractional Project Manager",
+            "url": "https://fractional.quest/how-to-become-fractional-project-manager"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Article",
+            "name": "Fractional Project Manager Jobs UK",
+            "url": "https://fractional.quest/fractional-project-manager-jobs-uk"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Article",
+            "name": "Fractional Project Manager Responsibilities",
+            "url": "https://fractional.quest/fractional-project-manager-responsibilities"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "Article",
+            "name": "Fractional Project Manager Certification UK",
+            "url": "https://fractional.quest/fractional-project-manager-certification-uk"
+          }
+        }
+      ]
+    }
+  }
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Schema.org JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+      />
+
       {/* Hero with 3D Knowledge Graph */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
