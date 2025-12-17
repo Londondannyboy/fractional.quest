@@ -30,18 +30,25 @@ export async function FreshJobs({
   title = "Fresh Jobs This Week",
   showViewAll = true
 }: FreshJobsProps) {
-  const sql = createDbQuery()
+  let jobs: Job[] = []
 
-  const jobs = await sql`
-    SELECT id, slug, title, company_name, location, is_remote,
-           compensation, role_category, posted_date, description_snippet
-    FROM jobs
-    WHERE is_active = true AND is_fractional = true
-    ORDER BY posted_date DESC NULLS LAST
-    LIMIT ${limit}
-  ` as Job[]
+  try {
+    const sql = createDbQuery()
+    jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote,
+             compensation, role_category, posted_date, description_snippet
+      FROM jobs
+      WHERE is_active = true AND is_fractional = true
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT ${limit}
+    ` as Job[]
+  } catch (error) {
+    console.error('[FreshJobs] Failed to fetch jobs:', error)
+    return null
+  }
 
   if (jobs.length === 0) {
+    console.log('[FreshJobs] No jobs found')
     return null
   }
 
