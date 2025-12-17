@@ -25,6 +25,11 @@ const nextConfig: NextConfig = {
         destination: '/fractional-jobs-uk',
         permanent: true, // 301 redirect for SEO
       },
+      {
+        source: '/london',
+        destination: '/fractional-jobs-uk',
+        permanent: true, // 301 redirect for SEO
+      },
       // Redirect part-time pages to new SEO-optimized URLs with "jobs-uk" suffix
       {
         source: '/part-time-cfo',
