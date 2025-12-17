@@ -92,10 +92,12 @@ export async function GET(request: Request) {
     slug = `${slug}-${timestamp}`
 
     // Get company logo for featured image (use first job's company)
-    // Falls back to Unsplash if no company logo available
+    // Falls back to contextual Unsplash if no company logo available
     const featuredImageUrl = await getCompanyLogo(
       jobs[0]?.company_domain || '',
-      article.category as ArticleCategory
+      article.category as ArticleCategory,
+      article.title,
+      jobs
     )
 
     // Insert article into database

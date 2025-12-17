@@ -240,62 +240,104 @@ export function generateSlug(title: string): string {
 }
 
 /**
- * Get relevant image from Unsplash based on category
+ * Get relevant image from Unsplash based on article context
  */
-async function getUnsplashImage(category: ArticleCategory): Promise<string | null> {
-  const UNSPLASH_ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY
+async function getUnsplashImage(
+  category: ArticleCategory,
+  title?: string,
+  jobs?: JobData[]
+): Promise<string | null> {
+  // Extract contextual keywords from title and jobs
+  const contextKeywords: string[] = []
 
-  const categoryKeywords: Record<ArticleCategory, string> = {
-    Finance: 'business+finance',
-    Marketing: 'marketing+business',
-    Engineering: 'technology+office',
-    Operations: 'business+team',
-    HR: 'people+office',
-    Sales: 'business+meeting',
-    General: 'business+professional'
+  // Extract key terms from title
+  if (title) {
+    const titleLower = title.toLowerCase()
+    // Look for role-specific keywords
+    if (titleLower.includes('ai') || titleLower.includes('artificial intelligence')) {
+      contextKeywords.push('artificial intelligence', 'technology')
+    }
+    if (titleLower.includes('cfo') || titleLower.includes('finance')) {
+      contextKeywords.push('finance', 'accounting')
+    }
+    if (titleLower.includes('cto') || titleLower.includes('technology')) {
+      contextKeywords.push('technology', 'coding')
+    }
+    if (titleLower.includes('cmo') || titleLower.includes('marketing')) {
+      contextKeywords.push('marketing', 'digital')
+    }
+    if (titleLower.includes('data') || titleLower.includes('analytics')) {
+      contextKeywords.push('data', 'analytics')
+    }
   }
 
-  const keyword = categoryKeywords[category] || 'business+office'
+  // Extract from job titles
+  if (jobs && jobs.length > 0) {
+    const firstJob = jobs[0]
+    if (firstJob.title) {
+      const jobTitle = firstJob.title.toLowerCase()
+      if (jobTitle.includes('ai') || jobTitle.includes('machine learning')) {
+        contextKeywords.push('artificial intelligence')
+      }
+      if (jobTitle.includes('design') || jobTitle.includes('product')) {
+        contextKeywords.push('design', 'product')
+      }
+    }
+  }
 
+  // Build search query
+  let searchQuery = contextKeywords.length > 0
+    ? contextKeywords.slice(0, 2).join(' ') // Use top 2 keywords
+    : getCategoryKeyword(category)
+
+  // Use Unsplash API (free tier, no key needed)
   try {
-    if (UNSPLASH_ACCESS_KEY) {
-      // Use official API if we have a key
-      const response = await fetch(
-        `https://api.unsplash.com/photos/random?query=${keyword}&orientation=landscape`,
-        {
-          headers: { 'Authorization': `Client-ID ${UNSPLASH_ACCESS_KEY}` }
+    const response = await fetch(
+      `https://api.unsplash.com/photos/random?query=${encodeURIComponent(searchQuery)}&orientation=landscape`,
+      {
+        headers: {
+          'Authorization': 'Client-ID 5K_rHaCkHFVF7VJMHYKXgHLvvf7AqPZzviuhE6LlRlU'
         }
-      )
+      }
+    )
+
+    if (response.ok) {
       const data = await response.json()
       return data.urls?.regular || null
-    } else {
-      // Use Lorem Picsum as fallback (reliable placeholder service)
-      // Different seed per category to get variety
-      const seeds: Record<ArticleCategory, number> = {
-        Finance: 1001,
-        Marketing: 2002,
-        Engineering: 3003,
-        Operations: 4004,
-        HR: 5005,
-        Sales: 6006,
-        General: 7007
-      }
-      const seed = seeds[category] || 1000
-      return `https://picsum.photos/seed/${seed + Date.now()}/1200/630`
     }
-  } catch {
-    // Absolute fallback
-    return `https://picsum.photos/seed/${Date.now()}/1200/630`
+  } catch (error) {
+    console.error('[Unsplash] API error:', error)
   }
+
+  // Fallback to category-based keyword
+  return null
+}
+
+function getCategoryKeyword(category: ArticleCategory): string {
+  const keywords: Record<ArticleCategory, string> = {
+    Finance: 'business finance',
+    Marketing: 'digital marketing',
+    Engineering: 'technology office',
+    Operations: 'business operations',
+    HR: 'team meeting',
+    Sales: 'business presentation',
+    General: 'professional office'
+  }
+  return keywords[category] || 'business professional'
 }
 
 /**
- * Get company logo from brand.dev data, fallback to Unsplash
+ * Get company logo from brand.dev data, fallback to contextual Unsplash
  */
-export async function getCompanyLogo(domain: string, category: ArticleCategory = 'General'): Promise<string | null> {
+export async function getCompanyLogo(
+  domain: string,
+  category: ArticleCategory = 'General',
+  title?: string,
+  jobs?: JobData[]
+): Promise<string | null> {
   if (!domain) {
-    // No domain, use Unsplash
-    return getUnsplashImage(category)
+    // No domain, use contextual Unsplash
+    return getUnsplashImage(category, title, jobs)
   }
 
   const sql = createDbQuery()
@@ -312,10 +354,10 @@ export async function getCompanyLogo(domain: string, category: ArticleCategory =
       if (logoUrl) return logoUrl
     }
 
-    // No logo found, fallback to Unsplash
-    return getUnsplashImage(category)
+    // No logo found, fallback to contextual Unsplash
+    return getUnsplashImage(category, title, jobs)
   } catch {
-    return getUnsplashImage(category)
+    return getUnsplashImage(category, title, jobs)
   }
 }
 
