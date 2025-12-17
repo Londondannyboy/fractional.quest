@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import Link from 'next'
+import Link from 'next/link'
 import { Suspense } from 'react'
 import { createDbQuery } from '@/lib/db'
 import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
