@@ -61,7 +61,16 @@ function VoiceInterface({ token, userId, userName }: VoiceInterfaceProps) {
       sessionSettings: {
         type: 'session_settings' as const,
         variables: {
-          user_id: userId
+          user_id: userId,
+          first_name: userName.split(' ')[0] || userName,
+          last_name: userName.split(' ')[1] || '',
+          is_authenticated: 'true',
+          current_country: 'United Kingdom',
+          interests: '',
+          timeline: '',
+          budget: '',
+          email: userName.includes('@') ? userName : '',
+          previous_context: ''
         }
       }
     })
