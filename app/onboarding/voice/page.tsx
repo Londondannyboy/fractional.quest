@@ -7,8 +7,7 @@ import Link from 'next/link'
 import { RepoLiveBuilder, type RepoData } from '@/components/RepoLiveBuilder'
 
 // Onboarding-specific Hume configuration
-// TEMPORARILY using /frac config to test
-const CONFIG_ID = 'd57ceb71-4cf5-47e9-87cd-6052445a031c' // was: 5da7f806-2f21-4450-b4db-ab7509b3c38a
+const CONFIG_ID = '5da7f806-2f21-4450-b4db-ab7509b3c38a'
 
 // Store chat_group_id per user for Hume resume functionality
 function getChatGroupId(userId: string): string | null {
