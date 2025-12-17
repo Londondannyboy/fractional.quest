@@ -21,6 +21,9 @@ export const metadata: Metadata = {
 interface ArticlesPageProps {
   searchParams: Promise<{
     page?: string
+    sort?: string
+    category?: string
+    type?: string
   }>
 }
 
@@ -44,8 +47,24 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
   const page = parseInt(params.page || '1')
   const offset = (page - 1) * limit
 
+  const sort = params.sort || 'recent'
+  const category = params.category
+  const type = params.type
+
   try {
     const sql = createDbQuery()
+
+    // Build WHERE clause
+    const whereConditions = ['status = \'published\'', 'app = \'fractional\'']
+    if (category) {
+      whereConditions.push(`category = '${category}'`)
+    }
+    if (type) {
+      whereConditions.push(`article_type = '${type}'`)
+    }
+
+    // Build ORDER BY clause
+    const orderBy = sort === 'oldest' ? 'published_at ASC' : 'published_at DESC'
 
     const [articles, totalCount] = await Promise.all([
       sql`
@@ -58,17 +77,21 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
           hero_asset_url,
           hero_asset_alt,
           published_at,
-          word_count
+          word_count,
+          category,
+          article_type,
+          featured_asset_url
         FROM articles
-        WHERE status = 'published'
-          AND app = 'fractional'
-        ORDER BY published_at DESC
+        WHERE ${sql.unsafe(whereConditions.join(' AND '))}
+        ORDER BY ${sql.unsafe(orderBy)}
         LIMIT ${limit} OFFSET ${offset}
       `,
-      getArticleStats()
+      sql`SELECT COUNT(*) as count FROM articles WHERE ${sql.unsafe(whereConditions.join(' AND '))}`
     ])
 
-    const totalPages = Math.ceil(totalCount / limit)
+    const totalArticles = parseInt((totalCount[0] as any)?.count || '0')
+
+    const totalPages = Math.ceil(totalArticles / limit)
 
     return (
       <div className="min-h-screen bg-black">
@@ -88,7 +111,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                   </Link>
 
                   <span className="inline-block bg-white/10 backdrop-blur text-white/90 px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-widest mb-6">
-                    {totalCount}+ Expert Guides
+                    {totalArticles}+ Expert Guides
                   </span>
 
                   <h1 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
@@ -120,30 +143,63 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
           </div>
         </section>
 
-        {/* Categories */}
-        <section className="py-12 bg-black border-b border-gray-800">
+        {/* Filters & Sort */}
+        <section className="py-8 bg-black border-b border-gray-800">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="flex flex-wrap justify-center gap-3">
-              {[
-                { label: 'All Guides', href: '/fractional-jobs-articles', active: true },
-                { label: 'CFO Guides', href: '/fractional-jobs-articles?category=cfo' },
-                { label: 'CTO Guides', href: '/fractional-jobs-articles?category=cto' },
-                { label: 'CMO Guides', href: '/fractional-jobs-articles?category=cmo' },
-                { label: 'Salary Guides', href: '/fractional-jobs-articles?category=salary' },
-                { label: 'Career Tips', href: '/fractional-jobs-articles?category=career' },
-              ].map((cat) => (
+            <div className="flex flex-col md:flex-row gap-4 justify-between items-start md:items-center">
+              {/* Sort */}
+              <div className="flex items-center gap-3">
+                <span className="text-gray-400 text-sm font-medium">Sort by:</span>
+                <div className="flex gap-2">
+                  <Link
+                    href={`/fractional-jobs-articles?sort=recent${category ? `&category=${category}` : ''}${type ? `&type=${type}` : ''}`}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      sort === 'recent' || !sort
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-900 text-gray-300 hover:bg-gray-800 border border-gray-800'
+                    }`}
+                  >
+                    Most Recent
+                  </Link>
+                  <Link
+                    href={`/fractional-jobs-articles?sort=oldest${category ? `&category=${category}` : ''}${type ? `&type=${type}` : ''}`}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      sort === 'oldest'
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-900 text-gray-300 hover:bg-gray-800 border border-gray-800'
+                    }`}
+                  >
+                    Oldest First
+                  </Link>
+                </div>
+              </div>
+
+              {/* Category Filter */}
+              <div className="flex flex-wrap gap-2">
                 <Link
-                  key={cat.label}
-                  href={cat.href}
-                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-colors ${
-                    cat.active
-                      ? 'bg-blue-600 text-white'
+                  href={`/fractional-jobs-articles?sort=${sort}${type ? `&type=${type}` : ''}`}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                    !category
+                      ? 'bg-purple-600 text-white'
                       : 'bg-gray-900 text-gray-300 hover:bg-gray-800 border border-gray-800'
                   }`}
                 >
-                  {cat.label}
+                  All
                 </Link>
-              ))}
+                {['Finance', 'Marketing', 'Engineering', 'Operations', 'HR', 'Sales'].map((cat) => (
+                  <Link
+                    key={cat}
+                    href={`/fractional-jobs-articles?sort=${sort}&category=${cat}${type ? `&type=${type}` : ''}`}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      category === cat
+                        ? 'bg-purple-600 text-white'
+                        : 'bg-gray-900 text-gray-300 hover:bg-gray-800 border border-gray-800'
+                    }`}
+                  >
+                    {cat}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </section>
