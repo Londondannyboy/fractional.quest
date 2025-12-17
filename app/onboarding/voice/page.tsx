@@ -440,6 +440,14 @@ function VoiceInterface({ token, userId, userName }: VoiceInterfaceProps) {
       {/* Right side - Live Repo Builder */}
       <div className="lg:w-1/2 bg-gray-950 p-6 lg:p-12 flex flex-col">
         <div className="flex-1 flex flex-col justify-center">
+          {/* Debug: Always show graph status */}
+          <div className="mb-4 p-3 bg-gray-900 rounded text-xs">
+            <div>Graph visible: {showRepoGraph ? 'YES' : 'NO'}</div>
+            <div>User type: {repoData.userType}</div>
+            <div>Skills: {repoData.candidate?.skills?.length || 0}</div>
+            <div>Companies: {repoData.candidate?.companies?.length || 0}</div>
+          </div>
+
           {showRepoGraph ? (
             <div className="animate-fade-in">
               <RepoLiveBuilder
@@ -465,8 +473,18 @@ function VoiceInterface({ token, userId, userName }: VoiceInterfaceProps) {
   )
 }
 
+// Demo user for local development (static object to prevent re-renders)
+const DEMO_USER = {
+  id: 'demo-user-local',
+  displayName: 'Demo User',
+  primaryEmail: 'demo@example.com'
+}
+
 export default function VoiceOnboardingPage() {
-  const user = useUser({ or: 'redirect' })
+  // Bypass auth in development
+  const isDev = process.env.NODE_ENV === 'development'
+  const realUser = useUser({ or: isDev ? undefined : 'redirect' })
+  const user = isDev && !realUser ? DEMO_USER : realUser
   const [token, setToken] = useState<string | null>(null)
 
   // Fetch Hume access token
