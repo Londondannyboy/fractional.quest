@@ -3,6 +3,17 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   async redirects() {
     return [
+      // Redirect old voice onboarding paths to /frac
+      {
+        source: '/voice/new',
+        destination: '/frac',
+        permanent: true,
+      },
+      {
+        source: '/new-voice',
+        destination: '/frac',
+        permanent: true,
+      },
       // Redirect old /articles/[slug] to root-level /[slug] for SEO preservation
       {
         source: '/articles/:slug',
