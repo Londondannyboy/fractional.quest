@@ -275,7 +275,7 @@ const ForceGraph3DRepo = forwardRef<any, Props>(({ data }, ref) => {
     console.log('[ForceGraph3D] Rendering with data:', {
       nodeCount: graphData.nodes?.length || 0,
       linkCount: graphData.links?.length || 0,
-      nodes: graphData.nodes?.map(n => n.label)
+      nodes: graphData.nodes?.map((n: any) => n.label)
     })
   }, [graphData])
 
