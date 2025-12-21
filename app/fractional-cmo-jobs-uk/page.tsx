@@ -185,7 +185,7 @@ export default async function FractionalCmoJobsUkPage() {
 
       {/* CMO Jobs Knowledge Graph - Desktop Only */}
       <DesktopOnly>
-        <section className="py-16 bg-gray-950">
+        <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="mb-10 text-center">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Interactive Network</span>
@@ -347,7 +347,7 @@ export default async function FractionalCmoJobsUkPage() {
               <li>Knowledge of <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">data protection regulations (GDPR)</a> for marketing activities</li>
             </ul>
 
-            <div className="bg-gray-900 text-white p-6 rounded-lg my-10 not-prose">
+            <div className="bg-gray-50 text-white p-6 rounded-lg my-10 not-prose">
               <p className="text-gray-300 mb-3">Want to understand fractional CMO pricing?</p>
               <Link href="/fractional-cmo-cost" className="inline-flex items-center text-amber-400 font-bold hover:text-amber-300">
                 View Fractional CMO Cost Guide →

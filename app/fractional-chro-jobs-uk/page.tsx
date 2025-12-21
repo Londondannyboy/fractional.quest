@@ -167,7 +167,7 @@ export default async function FractionalCHROJobsUKPage() {
 
       {/* 3D Graph */}
       <DesktopOnly>
-        <section className="py-16 bg-gray-950">
+        <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="mb-10 text-center">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Interactive Network</span>
@@ -262,7 +262,7 @@ export default async function FractionalCHROJobsUKPage() {
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">Step 4: Find Your First Clients</h3>
 
-            <div className="bg-gray-900 text-white p-8 my-10">
+            <div className="bg-gray-50 text-white p-8 my-10">
               <h4 className="text-xl font-bold text-white mb-4">Top Client Sources for Fractional CHROs</h4>
               <div className="grid md:grid-cols-2 gap-6 text-gray-300">
                 <div>
@@ -291,7 +291,7 @@ export default async function FractionalCHROJobsUKPage() {
             <div className="overflow-x-auto my-10">
               <table className="w-full border-collapse">
                 <thead>
-                  <tr className="bg-gray-900 text-white">
+                  <tr className="bg-gray-50 text-white">
                     <th className="p-4 text-left">Experience Level</th>
                     <th className="p-4 text-left">Day Rate</th>
                     <th className="p-4 text-left">2-3 Clients Annual</th>

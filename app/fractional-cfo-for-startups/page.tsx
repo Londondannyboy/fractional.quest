@@ -59,7 +59,7 @@ export default function FractionalCFOForStartupsPage() {
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       {/* Hero */}
-      <section className="relative bg-gray-900 text-white py-20 md:py-28">
+      <section className="relative bg-gray-50 text-white py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <Link href="/fractional-cfo" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm tracking-wide">
             <span className="mr-2">←</span> Back to CFO Hub
@@ -288,7 +288,7 @@ export default function FractionalCFOForStartupsPage() {
             <div className="overflow-x-auto my-10">
               <table className="w-full border-collapse">
                 <thead>
-                  <tr className="bg-gray-900 text-white">
+                  <tr className="bg-gray-50 text-white">
                     <th className="p-4 text-left">Stage</th>
                     <th className="p-4 text-left">Typical ARR</th>
                     <th className="p-4 text-left">CFO Time Needed</th>
@@ -336,7 +336,7 @@ export default function FractionalCFOForStartupsPage() {
               </table>
             </div>
 
-            <div className="bg-gray-900 text-white p-8 my-10">
+            <div className="bg-gray-50 text-white p-8 my-10">
               <h3 className="text-2xl font-bold text-white mb-4">Sweet Spot: Seed to Series A</h3>
               <p className="text-gray-300 mb-4">
                 The PERFECT time for fractional CFO is <strong className="text-white">post-seed, pre-Series A</strong>. You have revenue (£500k-£3M ARR), you're preparing to raise Series A in 6-18 months, and you need institutional-quality finance but can't afford £150k+ full-time.
@@ -560,7 +560,7 @@ export default function FractionalCFOForStartupsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-gray-900 text-white">
+      <section className="py-20 md:py-28 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Hire a Fractional CFO for Your Startup?</h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">

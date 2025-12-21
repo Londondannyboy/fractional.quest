@@ -74,7 +74,7 @@ export default function FractionalCooSalaryPage() {
       </section>
 
       {/* Live Rate Distribution */}
-      <section className="py-12 bg-gray-950">
+      <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-8">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-blue-400 mb-2 block">Live Market Data</span>

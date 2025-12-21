@@ -145,7 +145,7 @@ export default function FractionalCTOForStartupsPage() {
             <div className="overflow-x-auto my-10">
               <table className="w-full border-collapse text-left text-sm">
                 <thead>
-                  <tr className="bg-gray-900 text-white">
+                  <tr className="bg-gray-50 text-white">
                     <th className="p-4">Factor</th>
                     <th className="p-4">Fractional CTO</th>
                     <th className="p-4">Full-Time CTO</th>
@@ -265,7 +265,7 @@ export default function FractionalCTOForStartupsPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-900 text-white">
+      <section className="py-20 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Hire a Fractional CTO?</h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">

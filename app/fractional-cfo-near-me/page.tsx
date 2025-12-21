@@ -55,7 +55,7 @@ export default function FractionalCFONearMePage() {
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       {/* Hero Section with Globe */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gray-900">
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gray-50">
         <div className="absolute inset-0">
           <JobsGlobe />
         </div>
@@ -300,7 +300,7 @@ export default function FractionalCFONearMePage() {
           <div className="overflow-x-auto">
             <table className="w-full border-collapse text-left">
               <thead>
-                <tr className="bg-gray-900 text-white">
+                <tr className="bg-gray-50 text-white">
                   <th className="p-4">Factor</th>
                   <th className="p-4">Local CFO</th>
                   <th className="p-4">Remote CFO</th>
@@ -366,7 +366,7 @@ export default function FractionalCFONearMePage() {
             </table>
           </div>
 
-          <div className="bg-gray-900 text-white p-8 my-10">
+          <div className="bg-gray-50 text-white p-8 my-10">
             <h3 className="text-2xl font-bold mb-4">Recommended Hybrid Model</h3>
             <div className="space-y-4 text-gray-300">
               <div className="flex items-start gap-4">
@@ -563,7 +563,7 @@ export default function FractionalCFONearMePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-gray-900 text-white">
+      <section className="py-20 md:py-28 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Find Your Local CFO?</h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">

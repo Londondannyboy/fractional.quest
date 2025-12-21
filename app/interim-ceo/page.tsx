@@ -74,7 +74,7 @@ export default function InterimCEOPage() {
               { title: 'Drive Performance', description: 'Maintain or improve business performance during the transition period.' },
               { title: 'Prepare Succession', description: 'Set up the organisation for success under permanent leadership.' },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-gray-50 border-l-4 border-gray-800">
+              <div key={i} className="p-6 bg-gray-50 border-l-4 border-gray-200">
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.description}</p>
               </div>

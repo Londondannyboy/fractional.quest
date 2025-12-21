@@ -256,7 +256,7 @@ export default function FractionalCTOMeaningPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-gray-900 text-white">
+      <section className="py-20 md:py-28 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Explore More About Fractional CTOs</h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">

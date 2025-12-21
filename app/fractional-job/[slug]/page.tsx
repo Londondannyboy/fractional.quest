@@ -681,7 +681,7 @@ export default async function JobDetailPage({ params }: PageProps) {
                 )}
 
                 {/* Quick Apply Card */}
-                <div className="bg-gray-900 text-white p-6 rounded-lg">
+                <div className="bg-gray-50 text-white p-6 rounded-lg">
                   <h3 className="text-lg font-bold mb-2">Ready to Apply?</h3>
                   <p className="text-gray-300 text-sm mb-4">
                     Apply for {job.title} at {job.company_name}
@@ -783,7 +783,7 @@ export default async function JobDetailPage({ params }: PageProps) {
 
                 {/* Skills Preview - Links to 3D graph below */}
                 {job.skills_required && Array.isArray(job.skills_required) && job.skills_required.length > 2 && (
-                  <div className="bg-gray-900 p-4 rounded-lg">
+                  <div className="bg-gray-50 p-4 rounded-lg">
                     <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3">
                       Related Jobs Network
                     </h3>
@@ -816,7 +816,7 @@ export default async function JobDetailPage({ params }: PageProps) {
 
           {/* 3D Jobs Knowledge Graph - Desktop Only */}
           <DesktopOnly>
-            <section id="jobs-graph" className="mt-16 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-16 bg-gray-950">
+            <section id="jobs-graph" className="mt-16 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-16 bg-white">
               <div className="mb-8 text-center">
                 <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 block mb-2">Interactive Network</span>
                 <h2 className="text-2xl md:text-3xl font-black text-white">

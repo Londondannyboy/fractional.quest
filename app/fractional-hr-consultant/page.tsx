@@ -119,7 +119,7 @@ export default function FractionalHRConsultantPage() {
             <div className="overflow-x-auto my-10">
               <table className="w-full border-collapse text-sm">
                 <thead>
-                  <tr className="bg-gray-900 text-white">
+                  <tr className="bg-gray-50 text-white">
                     <th className="p-4 text-left">Factor</th>
                     <th className="p-4 text-left">Fractional HR Consultant</th>
                     <th className="p-4 text-left">Fractional HR Director</th>
@@ -318,7 +318,7 @@ export default function FractionalHRConsultantPage() {
               </div>
             </div>
 
-            <div className="bg-gray-900 text-white p-8 my-10">
+            <div className="bg-gray-50 text-white p-8 my-10">
               <h4 className="text-xl font-bold text-white mb-4">When to Use Both</h4>
               <p className="text-gray-300 mb-0">
                 Companies with 100+ employees often have a Fractional HR Director for ongoing leadership while bringing in HR Consultants for specialist projects. For example: HR Director handles day-to-day leadership while a Compensation Consultant runs a salary benchmarking project, or an HRIS Consultant implements new HR technology.

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function FractionalCOOForStartupsPage() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="bg-gray-900 text-white py-20">
+      <section className="bg-gray-50 text-white py-20">
         <div className="max-w-4xl mx-auto px-4">
           <Link href="/fractional-coo" className="text-gray-400 hover:text-white mb-6 inline-block">← Back to COO Hub</Link>
           <h1 className="text-5xl font-black mb-6">Fractional COO for Startups</h1>
@@ -117,7 +117,7 @@ export default function FractionalCOOForStartupsPage() {
             <div className="overflow-x-auto not-prose my-8">
               <table className="w-full border-collapse">
                 <thead>
-                  <tr className="bg-gray-900 text-white">
+                  <tr className="bg-gray-50 text-white">
                     <th className="py-3 px-4 text-left">Scenario</th>
                     <th className="py-3 px-4 text-left">Fractional COO</th>
                     <th className="py-3 px-4 text-left">Full-Time COO</th>

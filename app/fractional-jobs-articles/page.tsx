@@ -144,7 +144,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
         </section>
 
         {/* Filters & Sort */}
-        <section className="py-8 bg-black border-b border-gray-800">
+        <section className="py-8 bg-black border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="flex flex-col md:flex-row gap-4 justify-between items-start md:items-center">
               {/* Sort */}
@@ -156,7 +156,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       sort === 'recent' || !sort
                         ? 'bg-blue-600 text-white'
-                        : 'bg-gray-900 text-gray-300 hover:bg-gray-800 border border-gray-800'
+                        : 'bg-gray-50 text-gray-300 hover:bg-gray-800 border border-gray-200'
                     }`}
                   >
                     Most Recent
@@ -166,7 +166,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       sort === 'oldest'
                         ? 'bg-blue-600 text-white'
-                        : 'bg-gray-900 text-gray-300 hover:bg-gray-800 border border-gray-800'
+                        : 'bg-gray-50 text-gray-300 hover:bg-gray-800 border border-gray-200'
                     }`}
                   >
                     Oldest First
@@ -181,7 +181,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                     !category
                       ? 'bg-purple-600 text-white'
-                      : 'bg-gray-900 text-gray-300 hover:bg-gray-800 border border-gray-800'
+                      : 'bg-gray-50 text-gray-300 hover:bg-gray-800 border border-gray-200'
                   }`}
                 >
                   All
@@ -193,7 +193,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       category === cat
                         ? 'bg-purple-600 text-white'
-                        : 'bg-gray-900 text-gray-300 hover:bg-gray-800 border border-gray-800'
+                        : 'bg-gray-50 text-gray-300 hover:bg-gray-800 border border-gray-200'
                     }`}
                   >
                     {cat}
@@ -205,7 +205,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
         </section>
 
         {/* Job Posting Activity Calendar */}
-        <section className="py-16 bg-gray-950">
+        <section className="py-16 bg-white">
           <div className="max-w-5xl mx-auto px-6 lg:px-8">
             <div className="text-center mb-8">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-blue-400 mb-2 block">Market Activity</span>
@@ -213,7 +213,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
               <p className="text-gray-400 mt-2 text-sm">When fractional jobs are posted throughout the year</p>
             </div>
             <Suspense fallback={
-              <div className="flex items-center justify-center h-48 bg-gray-900 rounded-xl">
+              <div className="flex items-center justify-center h-48 bg-gray-50 rounded-xl">
                 <div className="text-center">
                   <div className="w-8 h-8 border-4 border-blue-500/30 border-t-blue-500 rounded-full animate-spin mx-auto mb-3" />
                   <p className="text-blue-300 text-xs">Loading calendar...</p>
@@ -245,7 +245,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                   {articles.map((article: any) => (
                     <Link key={article.id} href={`/${article.slug}`} className="group">
-                      <article className="bg-gray-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-800 hover:border-blue-600 h-full flex flex-col">
+                      <article className="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-600 h-full flex flex-col">
                         {article.hero_asset_url ? (
                           <div className="aspect-[16/9] overflow-hidden bg-gray-100">
                             <img
@@ -266,7 +266,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                           <p className="text-gray-400 text-sm line-clamp-3 flex-1">
                             {article.excerpt || article.meta_description}
                           </p>
-                          <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-800">
+                          <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-200">
                             {article.published_at && (
                               <time className="text-xs text-gray-500">
                                 {new Date(article.published_at).toLocaleDateString('en-GB', {
@@ -293,7 +293,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                   <div className="flex justify-center items-center gap-2">
                     {page > 1 && (
                       <Link href={`/fractional-jobs-articles?page=${page - 1}`}>
-                        <button className="px-5 py-2.5 border border-gray-800 rounded-lg hover:bg-gray-800 text-sm font-medium text-gray-300">
+                        <button className="px-5 py-2.5 border border-gray-200 rounded-lg hover:bg-gray-800 text-sm font-medium text-gray-300">
                           ← Previous
                         </button>
                       </Link>
@@ -310,7 +310,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                               className={`w-10 h-10 rounded-lg text-sm font-medium ${
                                 pageNum === page
                                   ? 'bg-blue-600 text-white'
-                                  : 'border border-gray-800 hover:bg-gray-800 text-gray-300'
+                                  : 'border border-gray-200 hover:bg-gray-800 text-gray-300'
                               }`}
                             >
                               {pageNum}
@@ -322,7 +322,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
 
                     {page < totalPages && (
                       <Link href={`/fractional-jobs-articles?page=${page + 1}`}>
-                        <button className="px-5 py-2.5 border border-gray-800 rounded-lg hover:bg-gray-800 text-sm font-medium text-gray-300">
+                        <button className="px-5 py-2.5 border border-gray-200 rounded-lg hover:bg-gray-800 text-sm font-medium text-gray-300">
                           Next →
                         </button>
                       </Link>
@@ -354,7 +354,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                 { icon: '🤝', title: 'Hiring Guides', desc: 'How companies hire fractional executives', link: '/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter' },
               ].map((topic) => (
                 <Link key={topic.title} href={topic.link} className="group">
-                  <article className="bg-gray-900 rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-800 hover:border-blue-600">
+                  <article className="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-600">
                     <span className="text-4xl mb-6 block">{topic.icon}</span>
                     <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-2">
                       {topic.title}
@@ -368,7 +368,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 md:py-32 bg-gray-900">
+        <section className="py-24 md:py-32 bg-gray-50">
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-500 mb-6 block">Stay Updated</span>
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 leading-tight">

@@ -59,7 +59,7 @@ export default function FractionalCFOHourlyRatePage() {
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       {/* Hero Section */}
-      <section className="relative bg-gray-900 text-white py-20 md:py-28">
+      <section className="relative bg-gray-50 text-white py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <Link href="/fractional-cfo" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm tracking-wide">
             <span className="mr-2">←</span> Back to CFO Hub
@@ -123,7 +123,7 @@ export default function FractionalCFOHourlyRatePage() {
                 </ul>
               </div>
 
-              <div className="bg-gray-900 text-white p-6 border-2 border-gray-900">
+              <div className="bg-gray-50 text-white p-6 border-2 border-gray-900">
                 <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">Mid-Level CFO</div>
                 <div className="text-4xl font-black mb-2">£250-£400</div>
                 <div className="text-sm text-gray-300 mb-4">per hour</div>
@@ -243,7 +243,7 @@ export default function FractionalCFOHourlyRatePage() {
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
-                <tr className="bg-gray-900 text-white">
+                <tr className="bg-gray-50 text-white">
                   <th className="p-4 text-left">Industry</th>
                   <th className="p-4 text-left">Hourly Rate Range</th>
                   <th className="p-4 text-left">Premium vs Baseline</th>
@@ -469,7 +469,7 @@ export default function FractionalCFOHourlyRatePage() {
               Understanding which pricing model saves you the most money:
             </p>
 
-            <div className="bg-gray-900 text-white p-8 mb-10">
+            <div className="bg-gray-50 text-white p-8 mb-10">
               <h3 className="text-2xl font-bold text-white mb-6">Example: Senior CFO, 2 Days/Week, 3 Months</h3>
 
               <div className="space-y-6">
@@ -507,7 +507,7 @@ export default function FractionalCFOHourlyRatePage() {
             <div className="overflow-x-auto my-8">
               <table className="w-full border-collapse">
                 <thead>
-                  <tr className="bg-gray-900 text-white">
+                  <tr className="bg-gray-50 text-white">
                     <th className="p-4 text-left">Model</th>
                     <th className="p-4 text-left">Best For</th>
                     <th className="p-4 text-left">Pros</th>
@@ -567,19 +567,19 @@ export default function FractionalCFOHourlyRatePage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Link href="/fractional-cfo-salary" className="bg-gray-50 p-8 hover:bg-gray-900 hover:text-white transition-all group">
+            <Link href="/fractional-cfo-salary" className="bg-gray-50 p-8 hover:bg-gray-50 hover:text-white transition-all group">
               <h3 className="text-xl font-black mb-3">Day Rate & Salary Guide</h3>
               <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Complete day rate benchmarks by experience and location</p>
               <div className="text-sm font-bold uppercase tracking-wider">View Rates →</div>
             </Link>
 
-            <Link href="/fractional-cfo-cost" className="bg-gray-50 p-8 hover:bg-gray-900 hover:text-white transition-all group">
+            <Link href="/fractional-cfo-cost" className="bg-gray-50 p-8 hover:bg-gray-50 hover:text-white transition-all group">
               <h3 className="text-xl font-black mb-3">Fractional CFO Cost</h3>
               <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Employer perspective—total cost of hiring a fractional CFO</p>
               <div className="text-sm font-bold uppercase tracking-wider">Calculate Cost →</div>
             </Link>
 
-            <Link href="/fractional-cfo" className="bg-gray-50 p-8 hover:bg-gray-900 hover:text-white transition-all group">
+            <Link href="/fractional-cfo" className="bg-gray-50 p-8 hover:bg-gray-50 hover:text-white transition-all group">
               <h3 className="text-xl font-black mb-3">Complete CFO Guide</h3>
               <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Everything about fractional CFOs—from hiring to becoming one</p>
               <div className="text-sm font-bold uppercase tracking-wider">Read Guide →</div>
@@ -589,7 +589,7 @@ export default function FractionalCFOHourlyRatePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-gray-900 text-white">
+      <section className="py-20 md:py-28 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Hire or Become a Fractional CFO?</h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">

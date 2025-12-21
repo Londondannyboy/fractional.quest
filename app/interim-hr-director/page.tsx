@@ -119,7 +119,7 @@ export default async function InterimHRDirectorPage() {
           <div className="overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
-                <tr className="bg-gray-900 text-white">
+                <tr className="bg-gray-50 text-white">
                   <th className="p-4 text-left">Factor</th>
                   <th className="p-4 text-left">Interim HR Director</th>
                   <th className="p-4 text-left bg-pink-600">Fractional HR Director</th>
@@ -223,7 +223,7 @@ export default async function InterimHRDirectorPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gray-900 text-white">
+      <section className="py-16 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Explore HR Leadership Options</h2>
           <p className="text-gray-300 mb-8">Whether you need interim or fractional, find the right HR leader for your situation.</p>

@@ -58,7 +58,7 @@ export default function HowToBecomeFractionalCFOPage() {
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       {/* Hero */}
-      <section className="relative bg-gray-900 text-white py-20 md:py-28">
+      <section className="relative bg-gray-50 text-white py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <Link href="/fractional-cfo" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm tracking-wide">
             <span className="mr-2">←</span> Back to CFO Hub
@@ -203,7 +203,7 @@ export default function HowToBecomeFractionalCFOPage() {
 
             <div className="space-y-8">
               <div className="flex gap-6">
-                <div className="flex-shrink-0 w-20 h-20 bg-gray-900 text-white flex items-center justify-center text-3xl font-black rounded-full">1</div>
+                <div className="flex-shrink-0 w-20 h-20 bg-gray-50 text-white flex items-center justify-center text-3xl font-black rounded-full">1</div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-black text-gray-900 mb-3">Build Foundation Finance Experience (Years 0-10)</h3>
                   <div className="bg-white p-6">
@@ -219,7 +219,7 @@ export default function HowToBecomeFractionalCFOPage() {
               </div>
 
               <div className="flex gap-6">
-                <div className="flex-shrink-0 w-20 h-20 bg-gray-900 text-white flex items-center justify-center text-3xl font-black rounded-full">2</div>
+                <div className="flex-shrink-0 w-20 h-20 bg-gray-50 text-white flex items-center justify-center text-3xl font-black rounded-full">2</div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-black text-gray-900 mb-3">Progress to Finance Director / VP Finance (Years 10-15)</h3>
                   <div className="bg-white p-6">
@@ -254,7 +254,7 @@ export default function HowToBecomeFractionalCFOPage() {
               </div>
 
               <div className="flex gap-6">
-                <div className="flex-shrink-0 w-20 h-20 bg-gray-900 text-white flex items-center justify-center text-3xl font-black rounded-full">4</div>
+                <div className="flex-shrink-0 w-20 h-20 bg-gray-50 text-white flex items-center justify-center text-3xl font-black rounded-full">4</div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-black text-gray-900 mb-3">Develop Specialized Expertise (Years 18-20)</h3>
                   <div className="bg-white p-6">
@@ -287,7 +287,7 @@ export default function HowToBecomeFractionalCFOPage() {
               </div>
 
               <div className="flex gap-6">
-                <div className="flex-shrink-0 w-20 h-20 bg-gray-900 text-white flex items-center justify-center text-3xl font-black rounded-full">5</div>
+                <div className="flex-shrink-0 w-20 h-20 bg-gray-50 text-white flex items-center justify-center text-3xl font-black rounded-full">5</div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-black text-gray-900 mb-3">Build Your Network (Ongoing, Years 15-25)</h3>
                   <div className="bg-white p-6">
@@ -339,7 +339,7 @@ export default function HowToBecomeFractionalCFOPage() {
               </div>
 
               <div className="flex gap-6">
-                <div className="flex-shrink-0 w-20 h-20 bg-gray-900 text-white flex items-center justify-center text-3xl font-black rounded-full">7</div>
+                <div className="flex-shrink-0 w-20 h-20 bg-gray-50 text-white flex items-center justify-center text-3xl font-black rounded-full">7</div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-black text-gray-900 mb-3">Build Portfolio (2-4 Clients)</h3>
                   <div className="bg-white p-6">
@@ -371,7 +371,7 @@ export default function HowToBecomeFractionalCFOPage() {
               This is the hardest part. Your first client validates you as a fractional CFO. Here's how to land it:
             </p>
 
-            <div className="bg-gray-900 text-white p-8 mb-10">
+            <div className="bg-gray-50 text-white p-8 mb-10">
               <h3 className="text-2xl font-bold text-white mb-6">Where First Clients Come From (Real Data)</h3>
               <div className="space-y-4 text-gray-300">
                 <div className="flex justify-between items-center pb-3 border-b border-gray-700">
@@ -492,7 +492,7 @@ export default function HowToBecomeFractionalCFOPage() {
                 </ul>
               </div>
 
-              <div className="bg-gray-900 text-white p-6 border-2 border-gray-900">
+              <div className="bg-gray-50 text-white p-6 border-2 border-gray-900">
                 <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">Established Fractional</div>
                 <div className="text-4xl font-black mb-2">£150k-£250k</div>
                 <div className="text-sm text-gray-300 mb-4">annually</div>
@@ -561,7 +561,7 @@ export default function HowToBecomeFractionalCFOPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-gray-900 text-white">
+      <section className="py-20 md:py-28 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Start Your Fractional CFO Career?</h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">

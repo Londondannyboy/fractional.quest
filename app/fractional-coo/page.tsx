@@ -199,7 +199,7 @@ export default function FractionalCOOPage() {
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
-                <tr className="bg-gray-900 text-white">
+                <tr className="bg-gray-50 text-white">
                   <th className="py-4 px-6 text-left">Aspect</th>
                   <th className="py-4 px-6 text-left">Fractional COO</th>
                   <th className="py-4 px-6 text-left">Full-Time COO</th>
@@ -405,7 +405,7 @@ export default function FractionalCOOPage() {
             </Link>
             <Link
               href="/fractional-coo-rates"
-              className="inline-block bg-gray-900 hover:bg-gray-800 text-white font-bold py-4 px-8 transition-colors"
+              className="inline-block bg-gray-50 hover:bg-gray-800 text-white font-bold py-4 px-8 transition-colors"
             >
               See Pricing Guide →
             </Link>

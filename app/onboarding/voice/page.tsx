@@ -401,7 +401,7 @@ function VoiceInterface({ token, userId, userName }: VoiceInterfaceProps) {
           </div>
 
           {/* Transcript */}
-          <div className="bg-gray-900/50 rounded-xl p-6 max-h-96 overflow-y-auto mb-6">
+          <div className="bg-gray-50/50 rounded-xl p-6 max-h-96 overflow-y-auto mb-6">
             {messages.length === 0 ? (
               <p className="text-gray-500 text-sm italic">
                 Conversation will appear here...
@@ -439,10 +439,10 @@ function VoiceInterface({ token, userId, userName }: VoiceInterfaceProps) {
       </div>
 
       {/* Right side - Live Repo Builder */}
-      <div className="lg:w-1/2 bg-gray-950 p-6 lg:p-12 flex flex-col">
+      <div className="lg:w-1/2 bg-white p-6 lg:p-12 flex flex-col">
         <div className="flex-1 flex flex-col justify-center">
           {/* Debug: Always show graph status */}
-          <div className="mb-4 p-3 bg-gray-900 rounded text-xs">
+          <div className="mb-4 p-3 bg-gray-50 rounded text-xs">
             <div>Graph visible: {showRepoGraph ? 'YES' : 'NO'}</div>
             <div>User type: {repoData.userType}</div>
             <div>Skills: {repoData.candidate?.skills?.length || 0}</div>

@@ -141,7 +141,7 @@ export default async function PartTimeCmoJobsUkPage() {
 
       {/* CMO Jobs Knowledge Graph - Desktop Only */}
       <DesktopOnly>
-        <section className="py-16 bg-gray-950">
+        <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="mb-10 text-center">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Interactive Network</span>
@@ -206,7 +206,7 @@ export default async function PartTimeCmoJobsUkPage() {
               <p className="text-xl font-semibold text-gray-900 mb-0">"Part-time CMO jobs deliver the same strategic marketing expertise as full-time roles at a fraction of the cost—typically £1,500-£4,500/week vs £10,000+ monthly for full-time."</p>
             </div>
 
-            <div className="bg-gray-900 text-white p-6 rounded-lg my-8 not-prose">
+            <div className="bg-gray-50 text-white p-6 rounded-lg my-8 not-prose">
               <p className="text-gray-300 mb-3">Looking for fractional CMO positions instead?</p>
               <Link href="/fractional-cmo-jobs-uk" className="inline-flex items-center text-amber-400 font-bold hover:text-amber-300">
                 View All Fractional CMO Jobs UK →

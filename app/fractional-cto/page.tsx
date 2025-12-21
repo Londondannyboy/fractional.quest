@@ -524,19 +524,19 @@ export default function FractionalCTOPage() {
           <ServiceComparisonTable role="CTO" accentColor="blue" />
 
           <div className="mt-10 grid md:grid-cols-3 gap-6">
-            <Link href="/fractional-cto-vs-full-time-cto" className="p-6 bg-white hover:bg-gray-900 hover:text-white transition-all group border border-gray-200">
+            <Link href="/fractional-cto-vs-full-time-cto" className="p-6 bg-white hover:bg-gray-50 hover:text-white transition-all group border border-gray-200">
               <h3 className="text-lg font-bold mb-2">Fractional vs Full-Time</h3>
               <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Detailed comparison with decision framework</p>
               <div className="text-sm font-bold uppercase tracking-wider">Read Comparison →</div>
             </Link>
 
-            <Link href="/interim-cto" className="p-6 bg-white hover:bg-gray-900 hover:text-white transition-all group border border-gray-200">
+            <Link href="/interim-cto" className="p-6 bg-white hover:bg-gray-50 hover:text-white transition-all group border border-gray-200">
               <h3 className="text-lg font-bold mb-2">What is an Interim CTO?</h3>
               <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">When to use interim vs fractional</p>
               <div className="text-sm font-bold uppercase tracking-wider">Learn More →</div>
             </Link>
 
-            <Link href="/what-is-a-fractional-cto" className="p-6 bg-white hover:bg-gray-900 hover:text-white transition-all group border border-gray-200">
+            <Link href="/what-is-a-fractional-cto" className="p-6 bg-white hover:bg-gray-50 hover:text-white transition-all group border border-gray-200">
               <h3 className="text-lg font-bold mb-2">Complete Definition Guide</h3>
               <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Deep dive into what fractional CTOs do</p>
               <div className="text-sm font-bold uppercase tracking-wider">Read Guide →</div>
@@ -714,7 +714,7 @@ export default function FractionalCTOPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-gray-900 text-white">
+      <section className="py-20 md:py-28 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Explore Fractional CTO Options?</h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">

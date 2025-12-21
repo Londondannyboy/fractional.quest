@@ -76,7 +76,7 @@ export default function FractionalCMOPage() {
       </section>
 
       {/* Quick Navigation */}
-      <section className="bg-gray-900 border-b border-gray-800">
+      <section className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 py-6">
           <nav className="flex flex-wrap gap-6 text-sm">
             <a href="#what-is" className="text-gray-400 hover:text-amber-400 transition-colors">What is a Fractional CMO?</a>

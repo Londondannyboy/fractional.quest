@@ -285,7 +285,7 @@ export default function WhatIsFractionalCFOPage() {
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">A Day in the Life</h3>
 
-            <div className="bg-gray-900 text-white p-8">
+            <div className="bg-gray-50 text-white p-8">
               <h4 className="text-xl font-bold mb-4 text-white">Tuesday (Typical CFO Day at Client Company)</h4>
               <div className="space-y-4 text-gray-300">
                 <div>
@@ -482,7 +482,7 @@ export default function WhatIsFractionalCFOPage() {
           <div className="overflow-x-auto">
             <table className="w-full border-collapse text-left text-sm">
               <thead>
-                <tr className="bg-gray-900 text-white">
+                <tr className="bg-gray-50 text-white">
                   <th className="p-4">Factor</th>
                   <th className="p-4">Fractional CFO</th>
                   <th className="p-4">Interim CFO</th>
@@ -566,19 +566,19 @@ export default function WhatIsFractionalCFOPage() {
           </div>
 
           <div className="mt-10 grid md:grid-cols-3 gap-6">
-            <Link href="/fractional-cfo-vs-full-time" className="p-6 bg-gray-50 hover:bg-gray-900 hover:text-white transition-all group">
+            <Link href="/fractional-cfo-vs-full-time" className="p-6 bg-gray-50 hover:bg-gray-50 hover:text-white transition-all group">
               <h3 className="text-lg font-bold mb-2">Fractional vs Full-Time CFO</h3>
               <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Detailed comparison with cost analysis</p>
               <div className="text-sm font-bold uppercase tracking-wider">Read More →</div>
             </Link>
 
-            <Link href="/interim-cfo" className="p-6 bg-gray-50 hover:bg-gray-900 hover:text-white transition-all group">
+            <Link href="/interim-cfo" className="p-6 bg-gray-50 hover:bg-gray-50 hover:text-white transition-all group">
               <h3 className="text-lg font-bold mb-2">What is an Interim CFO?</h3>
               <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">When to use interim vs fractional</p>
               <div className="text-sm font-bold uppercase tracking-wider">Learn More →</div>
             </Link>
 
-            <Link href="/fractional-cfo-services" className="p-6 bg-gray-50 hover:bg-gray-900 hover:text-white transition-all group">
+            <Link href="/fractional-cfo-services" className="p-6 bg-gray-50 hover:bg-gray-50 hover:text-white transition-all group">
               <h3 className="text-lg font-bold mb-2">Hire a Fractional CFO</h3>
               <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Find and engage fractional CFO services</p>
               <div className="text-sm font-bold uppercase tracking-wider">Get Started →</div>
@@ -683,7 +683,7 @@ export default function WhatIsFractionalCFOPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-gray-900 text-white">
+      <section className="py-20 md:py-28 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Hire or Become a Fractional CFO?</h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">

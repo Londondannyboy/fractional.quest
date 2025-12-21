@@ -23,7 +23,7 @@ export default function FractionalHRVsFullTimePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-gray-900 py-20">
+      <section className="bg-gray-50 py-20">
         <div className="max-w-4xl mx-auto px-6">
           <Link href="/fractional-hr" className="text-gray-400 hover:text-white mb-6 inline-block text-sm">← Back to HR Hub</Link>
           <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
@@ -54,7 +54,7 @@ export default function FractionalHRVsFullTimePage() {
           <div className="overflow-x-auto mb-12">
             <table className="w-full border-collapse text-sm">
               <thead>
-                <tr className="bg-gray-900 text-white">
+                <tr className="bg-gray-50 text-white">
                   <th className="p-4 text-left">Factor</th>
                   <th className="p-4 text-left bg-pink-600">Fractional HR</th>
                   <th className="p-4 text-left">Full-Time HR</th>
@@ -179,7 +179,7 @@ export default function FractionalHRVsFullTimePage() {
             </div>
           </div>
 
-          <div className="bg-gray-900 text-white p-10 text-center">
+          <div className="bg-gray-50 text-white p-10 text-center">
             <div className="text-5xl font-black mb-4 text-pink-400">Save £59,900/year</div>
             <div className="text-xl mb-2">That's 37% cost reduction with fractional HR</div>
             <div className="text-gray-400">Plus more experienced talent and faster start</div>
@@ -288,7 +288,7 @@ export default function FractionalHRVsFullTimePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gray-900 text-white">
+      <section className="py-16 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Explore Fractional HR?</h2>
           <p className="text-gray-300 mb-8">Find experienced fractional HR professionals or learn more about the model.</p>

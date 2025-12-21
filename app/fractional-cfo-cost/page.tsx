@@ -59,7 +59,7 @@ export default function FractionalCFOCostPage() {
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       {/* Hero */}
-      <section className="relative bg-gray-900 text-white py-20 md:py-28">
+      <section className="relative bg-gray-50 text-white py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <Link href="/fractional-cfo" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm tracking-wide">
             <span className="mr-2">←</span> Back to CFO Hub
@@ -123,7 +123,7 @@ export default function FractionalCFOCostPage() {
                 </ul>
               </div>
 
-              <div className="bg-gray-900 text-white p-6 border-2 border-gray-900">
+              <div className="bg-gray-50 text-white p-6 border-2 border-gray-900">
                 <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">2 Days/Week</div>
                 <div className="text-4xl font-black mb-2">£6,300-£12,000</div>
                 <div className="text-sm text-gray-300 mb-4">per month (8-10 days)</div>
@@ -254,7 +254,7 @@ export default function FractionalCFOCostPage() {
               </div>
             </div>
 
-            <div className="bg-gray-900 text-white p-10 text-center">
+            <div className="bg-gray-50 text-white p-10 text-center">
               <div className="text-5xl md:text-6xl font-black mb-4 text-blue-400">Save £155,140</div>
               <div className="text-2xl mb-6">That's 59% cost reduction with fractional CFO</div>
               <div className="text-gray-300">For 2 days/week fractional vs full-time CFO</div>
@@ -274,7 +274,7 @@ export default function FractionalCFOCostPage() {
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
-                <tr className="bg-gray-900 text-white">
+                <tr className="bg-gray-50 text-white">
                   <th className="p-4 text-left">Seniority</th>
                   <th className="p-4 text-left">Day Rate</th>
                   <th className="p-4 text-left">1 Day/Week</th>
@@ -425,7 +425,7 @@ export default function FractionalCFOCostPage() {
               Fractional CFOs typically deliver 3-10x ROI. Here are real examples:
             </p>
 
-            <div className="bg-gray-900 text-white p-8 mb-10">
+            <div className="bg-gray-50 text-white p-8 mb-10">
               <h3 className="text-2xl font-bold text-white mb-6">ROI Scenario 1: Fundraising</h3>
               <div className="space-y-4 text-gray-300">
                 <p><strong className="text-white">Cost:</strong> £40,000 (6-month engagement, 2 days/week)</p>
@@ -470,7 +470,7 @@ export default function FractionalCFOCostPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-gray-900 text-white">
+      <section className="py-20 md:py-28 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Hire a Fractional CFO?</h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">

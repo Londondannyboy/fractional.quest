@@ -867,7 +867,7 @@ export default function RepoPage() {
             </button>
 
             {showDebug && (
-              <div className="mt-2 p-3 bg-gray-900 rounded-lg text-xs font-mono text-gray-300 space-y-2">
+              <div className="mt-2 p-3 bg-gray-50 rounded-lg text-xs font-mono text-gray-300 space-y-2">
                 <div className="flex items-center gap-2">
                   <span className={`w-2 h-2 rounded-full ${debugInfo.profileLoaded ? 'bg-blue-500' : 'bg-red-500'}`} />
                   <span>Profile: {debugInfo.profileLoaded ? 'Loaded' : 'Not loaded'}</span>

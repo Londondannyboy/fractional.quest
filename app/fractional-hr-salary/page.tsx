@@ -82,7 +82,7 @@ export default function FractionalHRSalaryPage() {
       </section>
 
       {/* Live Rate Distribution */}
-      <section className="py-12 bg-gray-950">
+      <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-8">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-pink-400 mb-2 block">Live Market Data</span>
@@ -90,7 +90,7 @@ export default function FractionalHRSalaryPage() {
             <p className="text-gray-400 mt-2 text-sm">From current job listings</p>
           </div>
           <Suspense fallback={
-            <div className="flex items-center justify-center h-64 bg-gray-900 rounded-xl">
+            <div className="flex items-center justify-center h-64 bg-gray-50 rounded-xl">
               <div className="w-8 h-8 border-4 border-pink-500/30 border-t-pink-500 rounded-full animate-spin" />
             </div>
           }>

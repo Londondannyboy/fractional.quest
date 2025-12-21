@@ -201,7 +201,7 @@ export default async function FractionalHRRolesPage() {
               </div>
 
               <div className="flex items-start gap-6">
-                <div className="w-16 h-16 bg-gray-900 text-white font-black text-lg flex items-center justify-center flex-shrink-0">18+</div>
+                <div className="w-16 h-16 bg-gray-50 text-white font-black text-lg flex items-center justify-center flex-shrink-0">18+</div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">CHRO</h3>
                   <p className="text-gray-600">Board-level leadership. Org-wide transformation. Multiple CHRO roles under your belt. Premium rates but narrower market.</p>
@@ -213,7 +213,7 @@ export default async function FractionalHRRolesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gray-900 text-white">
+      <section className="py-16 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Find Your Fractional HR Role</h2>
           <p className="text-gray-300 mb-8">Browse opportunities across all HR role types.</p>

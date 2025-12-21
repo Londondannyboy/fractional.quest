@@ -141,7 +141,7 @@ export default async function PartTimeCfoJobsUkPage() {
 
       {/* CFO Jobs Knowledge Graph - Desktop Only */}
       <DesktopOnly>
-        <section className="py-16 bg-gray-950">
+        <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="mb-10 text-center">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Interactive Network</span>

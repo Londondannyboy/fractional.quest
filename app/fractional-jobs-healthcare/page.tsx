@@ -319,7 +319,7 @@ export default async function HealthcarePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 md:py-32 bg-gray-900">
+      <section className="py-24 md:py-32 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-500 mb-6 block">Get Started</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">

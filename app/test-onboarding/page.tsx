@@ -20,12 +20,12 @@ export default function TestOnboardingPage() {
             <p className="text-gray-400 text-sm">Choose between voice and manual</p>
           </Link>
 
-          <div className="block w-full p-6 bg-gray-900/50 border-2 border-gray-600 rounded-xl opacity-50 cursor-not-allowed">
+          <div className="block w-full p-6 bg-gray-50/50 border-2 border-gray-600 rounded-xl opacity-50 cursor-not-allowed">
             <h2 className="text-xl font-bold text-white mb-2">Voice Onboarding (Requires Auth)</h2>
             <p className="text-gray-400 text-sm">Must be logged in - configure Stack Auth localhost first</p>
           </div>
 
-          <div className="block w-full p-6 bg-gray-900/50 border-2 border-gray-600 rounded-xl opacity-50 cursor-not-allowed">
+          <div className="block w-full p-6 bg-gray-50/50 border-2 border-gray-600 rounded-xl opacity-50 cursor-not-allowed">
             <h2 className="text-xl font-bold text-white mb-2">Manual Onboarding (Requires Auth)</h2>
             <p className="text-gray-400 text-sm">Must be logged in - configure Stack Auth localhost first</p>
           </div>

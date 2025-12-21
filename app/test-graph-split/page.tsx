@@ -11,7 +11,7 @@ export default function TestGraphSplitPage() {
   return (
     <div className="min-h-screen bg-black">
       {/* Header */}
-      <div className="bg-gray-900 border-b border-gray-800 p-4">
+      <div className="bg-gray-50 border-b border-gray-200 p-4">
         <h1 className="text-white text-xl font-bold">Split Screen Graph Test</h1>
         <p className="text-gray-400 text-sm">Two graphs with different viewpoints side by side</p>
       </div>
@@ -19,7 +19,7 @@ export default function TestGraphSplitPage() {
       {/* Split Screen Layout */}
       <div className="flex flex-col lg:flex-row h-[calc(100vh-80px)]">
         {/* Left Panel - CFO Jobs */}
-        <div className="flex-1 relative border-r border-gray-800">
+        <div className="flex-1 relative border-r border-gray-200">
           <div className="absolute top-4 left-4 z-20 bg-black/70 backdrop-blur px-4 py-2 rounded-lg">
             <h2 className="text-white font-semibold">CFO Jobs</h2>
             <p className="text-gray-400 text-xs">Finance leadership roles</p>

@@ -37,7 +37,7 @@ const JobsGraph3D = dynamic(() => import('@/components/JobsGraph3D').then(m => m
 
 function LoadingPlaceholder({ text }: { text: string }) {
   return (
-    <div className="flex items-center justify-center h-96 bg-gray-950 rounded-xl">
+    <div className="flex items-center justify-center h-96 bg-white rounded-xl">
       <div className="text-center">
         <div className="w-10 h-10 border-4 border-indigo-500/30 border-t-indigo-500 rounded-full animate-spin mx-auto mb-3" />
         <p className="text-indigo-300 text-sm">{text}</p>
@@ -48,9 +48,9 @@ function LoadingPlaceholder({ text }: { text: string }) {
 
 export default function VisualizationsPage() {
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-black/50 border-b border-gray-800">
+      <header className="bg-black/50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <Link href="/" className="text-gray-400 hover:text-white text-sm mb-4 inline-block">
             ← Back to Home

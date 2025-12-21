@@ -152,7 +152,7 @@ export default async function FractionalCHROPage() {
             <div className="overflow-x-auto my-10">
               <table className="w-full border-collapse text-sm">
                 <thead>
-                  <tr className="bg-gray-900 text-white">
+                  <tr className="bg-gray-50 text-white">
                     <th className="p-4 text-left">Factor</th>
                     <th className="p-4 text-left">Fractional CHRO</th>
                     <th className="p-4 text-left">Fractional HR Director</th>

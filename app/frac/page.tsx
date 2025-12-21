@@ -1047,7 +1047,7 @@ export default function VoicePage() {
   return (
     <div className="min-h-screen bg-black">
       {/* Header */}
-      <div className="bg-black border-b border-gray-800">
+      <div className="bg-black border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div>
@@ -1072,7 +1072,7 @@ export default function VoicePage() {
 
       {/* Voice Interface */}
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="bg-gray-900 rounded-2xl shadow-lg border border-gray-800 p-8 mb-8">
+        <div className="bg-gray-50 rounded-2xl shadow-lg border border-gray-200 p-8 mb-8">
           {error ? (
             <div className="text-center py-12">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -1111,7 +1111,7 @@ export default function VoicePage() {
 
         {/* ZEP Knowledge Graph */}
         {user && (
-          <div className="bg-gray-900 rounded-2xl shadow-lg border border-gray-800 p-8">
+          <div className="bg-gray-50 rounded-2xl shadow-lg border border-gray-200 p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-purple-900 rounded-lg flex items-center justify-center">
                 <svg className="w-5 h-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">

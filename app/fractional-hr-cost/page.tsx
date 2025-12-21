@@ -60,7 +60,7 @@ export default function FractionalHRCostPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
       {/* Hero */}
-      <section className="relative bg-gray-900 text-white py-20 md:py-28">
+      <section className="relative bg-gray-50 text-white py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <Link href="/fractional-hr" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm tracking-wide">
             <span className="mr-2">←</span> Back to HR Hub
@@ -124,7 +124,7 @@ export default function FractionalHRCostPage() {
                 </ul>
               </div>
 
-              <div className="bg-gray-900 text-white p-6 border-2 border-gray-900">
+              <div className="bg-gray-50 text-white p-6 border-2 border-gray-900">
                 <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">2 Days/Week</div>
                 <div className="text-4xl font-black mb-2">£5,600-£11,200</div>
                 <div className="text-sm text-gray-300 mb-4">per month (8-10 days)</div>
@@ -243,7 +243,7 @@ export default function FractionalHRCostPage() {
               </div>
             </div>
 
-            <div className="bg-gray-900 text-white p-10 text-center">
+            <div className="bg-gray-50 text-white p-10 text-center">
               <div className="text-5xl md:text-6xl font-black mb-4 text-pink-400">Save £77,944</div>
               <div className="text-2xl mb-6">That's 43% cost reduction with fractional HR</div>
               <div className="text-gray-300">For 2 days/week fractional vs full-time HR Director</div>
@@ -263,7 +263,7 @@ export default function FractionalHRCostPage() {
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
-                <tr className="bg-gray-900 text-white">
+                <tr className="bg-gray-50 text-white">
                   <th className="p-4 text-left">Role Level</th>
                   <th className="p-4 text-left">Day Rate</th>
                   <th className="p-4 text-left">1 Day/Week</th>
@@ -381,7 +381,7 @@ export default function FractionalHRCostPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-gray-900 text-white">
+      <section className="py-20 md:py-28 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Hire Fractional HR?</h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">

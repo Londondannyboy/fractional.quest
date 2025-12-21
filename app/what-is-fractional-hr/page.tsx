@@ -140,7 +140,7 @@ export default function WhatIsFractionalHRPage() {
 
             <p>A typical engagement looks like this:</p>
 
-            <div className="bg-gray-900 text-white p-8 my-10">
+            <div className="bg-gray-50 text-white p-8 my-10">
               <h4 className="text-xl font-bold text-white mb-4">Example: Fractional HR Director, 2 Days/Week</h4>
               <div className="grid md:grid-cols-2 gap-6 text-gray-300">
                 <div>
@@ -196,7 +196,7 @@ export default function WhatIsFractionalHRPage() {
             <div className="overflow-x-auto my-10">
               <table className="w-full border-collapse text-sm">
                 <thead>
-                  <tr className="bg-gray-900 text-white">
+                  <tr className="bg-gray-50 text-white">
                     <th className="p-4 text-left">Model</th>
                     <th className="p-4 text-left">Time</th>
                     <th className="p-4 text-left">Role</th>

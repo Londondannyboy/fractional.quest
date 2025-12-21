@@ -245,7 +245,7 @@ export default function FractionalCMOMeaningPage() {
 
             <h2 className="text-3xl font-black text-gray-900 mt-16">The Bottom Line</h2>
 
-            <div className="bg-gray-900 text-white p-10 rounded-lg my-8">
+            <div className="bg-gray-50 text-white p-10 rounded-lg my-8">
               <p className="text-xl leading-relaxed mb-6">
                 <strong className="text-amber-400">Fractional CMO meaning in one sentence:</strong>
               </p>

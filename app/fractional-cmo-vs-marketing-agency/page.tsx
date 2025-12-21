@@ -348,7 +348,7 @@ export default function FractionalCMOvsAgencyPage() {
             </div>
           </div>
 
-          <div className="bg-gray-900 text-white p-10 rounded-lg">
+          <div className="bg-gray-50 text-white p-10 rounded-lg">
             <h3 className="text-2xl font-bold mb-6">Real Example: Series A SaaS Company</h3>
             <div className="grid md:grid-cols-3 gap-6 text-sm">
               <div>

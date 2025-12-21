@@ -19,7 +19,7 @@ export default function DualAgentTest() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col">
       {/* Header */}
-      <div className="p-6 border-b border-gray-800">
+      <div className="p-6 border-b border-gray-200">
         <Link href="/" className="text-blue-400 hover:text-blue-300 text-sm">
           ← Back to Home
         </Link>
@@ -69,7 +69,7 @@ export default function DualAgentTest() {
           </div>
 
           {/* Active Agent Status */}
-          <div className="bg-gray-900 rounded-xl p-8 border border-gray-800">
+          <div className="bg-gray-50 rounded-xl p-8 border border-gray-200">
             <div className="flex items-center justify-between mb-6">
               <div>
                 <h2 className="text-2xl font-bold">
@@ -114,7 +114,7 @@ export default function DualAgentTest() {
             </div>
 
             {/* Debug Info */}
-            <div className="mt-6 p-4 bg-gray-950 rounded-lg border border-gray-800">
+            <div className="mt-6 p-4 bg-white rounded-lg border border-gray-200">
               <h4 className="text-sm font-bold text-gray-400 mb-2">Debug Info:</h4>
               <pre className="text-xs text-gray-500">
                 {JSON.stringify({

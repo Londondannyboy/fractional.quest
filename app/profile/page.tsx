@@ -296,7 +296,7 @@ export default function ProfilePage() {
             </div>
 
             {/* Debug JSON */}
-            <details className="bg-gray-900 rounded-xl p-4 text-blue-400 font-mono text-xs">
+            <details className="bg-gray-50 rounded-xl p-4 text-blue-400 font-mono text-xs">
               <summary className="cursor-pointer text-yellow-400">Raw JSON Data</summary>
               <pre className="mt-4 overflow-auto max-h-96">
                 {JSON.stringify(data, null, 2)}

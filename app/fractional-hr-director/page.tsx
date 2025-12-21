@@ -243,7 +243,7 @@ export default async function FractionalHRDirectorPage() {
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">What They Delegate</h3>
 
-            <div className="bg-gray-900 text-white p-8 my-10">
+            <div className="bg-gray-50 text-white p-8 my-10">
               <p className="text-gray-300 mb-4">Fractional HR Directors focus on strategic work and delegate operational tasks:</p>
               <ul className="space-y-2 text-gray-300">
                 <li>• <strong className="text-white">HR administration:</strong> Contracts, letters, filing → HR Coordinator or outsourced</li>
@@ -303,7 +303,7 @@ export default async function FractionalHRDirectorPage() {
             <div className="overflow-x-auto my-10">
               <table className="w-full border-collapse text-sm">
                 <thead>
-                  <tr className="bg-gray-900 text-white">
+                  <tr className="bg-gray-50 text-white">
                     <th className="p-4 text-left">Factor</th>
                     <th className="p-4 text-left">Fractional HR Director</th>
                     <th className="p-4 text-left">Fractional CHRO</th>
