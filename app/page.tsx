@@ -255,10 +255,10 @@ export default async function Home() {
                     alt={exec.role}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 text-left">
-                    <h3 className="font-bold text-white text-lg mb-1">{exec.role}</h3>
-                    <p className="text-white/80 text-sm">{exec.tagline}</p>
+                    <h3 className="font-bold text-white text-xl drop-shadow-lg mb-1" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>{exec.role}</h3>
+                    <p className="text-white/90 text-sm drop-shadow-md">{exec.tagline}</p>
                   </div>
                 </div>
               </Link>
