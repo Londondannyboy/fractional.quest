@@ -296,11 +296,11 @@ export default async function Home() {
 
           {/* Image Grid */}
           <div className="grid md:grid-cols-3 gap-4 mb-12">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+            <Link href="/calculators/rate-finder" className="relative aspect-[4/3] rounded-2xl overflow-hidden block group">
               <img
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80"
                 alt="Team collaboration"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent flex items-end p-6">
                 <div className="text-white">
@@ -308,12 +308,12 @@ export default async function Home() {
                   <div className="text-white/80 text-sm">Annual earnings potential</div>
                 </div>
               </div>
-            </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+            </Link>
+            <Link href="/destinations" className="relative aspect-[4/3] rounded-2xl overflow-hidden block group">
               <img
-                src="https://images.unsplash.com/photo-1531746790095-e6a4c9a4b6f3?w=800&q=80"
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
                 alt="Working remotely in Lisbon"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent flex items-end p-6">
                 <div className="text-white">
@@ -321,12 +321,12 @@ export default async function Home() {
                   <div className="text-white/80 text-sm">Lisbon, Bali, your home</div>
                 </div>
               </div>
-            </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+            </Link>
+            <Link href="/fractional-jobs-uk" className="relative aspect-[4/3] rounded-2xl overflow-hidden block group">
               <img
                 src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80"
                 alt="Work life balance"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent flex items-end p-6">
                 <div className="text-white">
@@ -334,7 +334,7 @@ export default async function Home() {
                   <div className="text-white/80 text-sm">Per client, per week</div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -377,82 +377,61 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Why Fractional */}
       <section className="py-16 md:py-24 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2 block">
-              Success Stories
+              The Benefits
             </span>
             <h2 className="font-editorial text-4xl font-bold text-gray-900">
-              What Executives Are Saying
+              Why Go Fractional?
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 rounded-xl p-8">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8">
+              <div className="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
               </div>
-              <blockquote className="text-gray-700 mb-6">
-                "Going fractional was the best career decision I've made. I work with three amazing startups, earn more than my old full-time role, and finally have time for my family."
-              </blockquote>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold">
-                  SC
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Sarah Chen</div>
-                  <div className="text-sm text-gray-500">Fractional CFO, ex-Stripe</div>
-                </div>
-              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Higher Earnings</h3>
+              <p className="text-gray-600 mb-4">
+                Work with 2-4 clients at £700-1,500/day. Most fractional executives earn £150-300k annually - often more than full-time equivalents.
+              </p>
+              <Link href="/calculators/rate-finder" className="text-blue-600 font-semibold hover:underline">
+                Calculate your potential →
+              </Link>
             </div>
 
-            <div className="bg-gray-50 rounded-xl p-8">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
+            <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-8">
+              <div className="w-14 h-14 bg-teal-500 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
               </div>
-              <blockquote className="text-gray-700 mb-6">
-                "The variety of work keeps me sharp. Every client brings different challenges. I'm learning more now than I did in 10 years at a single company."
-              </blockquote>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white font-bold">
-                  MT
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Marcus Thompson</div>
-                  <div className="text-sm text-gray-500">Fractional CTO, 4 clients</div>
-                </div>
-              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Work From Anywhere</h3>
+              <p className="text-gray-600 mb-4">
+                Lisbon, Bali, or your home office. Fractional work is location-independent. Deliver results from wherever suits your lifestyle.
+              </p>
+              <Link href="/destinations" className="text-teal-600 font-semibold hover:underline">
+                Explore destinations →
+              </Link>
             </div>
 
-            <div className="bg-gray-50 rounded-xl p-8">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
+            <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-8">
+              <div className="w-14 h-14 bg-amber-500 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
               </div>
-              <blockquote className="text-gray-700 mb-6">
-                "I split my time between London and Lisbon now. My clients don't mind where I work from as long as I deliver results. That's the fractional promise."
-              </blockquote>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-white font-bold">
-                  AP
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Aisha Patel</div>
-                  <div className="text-sm text-gray-500">Fractional CMO, remote from Portugal</div>
-                </div>
-              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Portfolio Variety</h3>
+              <p className="text-gray-600 mb-4">
+                Work across multiple industries and challenges. Every client brings new problems to solve. Stay sharp, keep learning, avoid burnout.
+              </p>
+              <Link href="/fractional-jobs-uk" className="text-amber-600 font-semibold hover:underline">
+                Browse opportunities →
+              </Link>
             </div>
           </div>
         </div>

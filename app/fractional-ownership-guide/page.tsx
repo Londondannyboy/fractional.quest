@@ -13,29 +13,39 @@ export const metadata: Metadata = {
 export default function FractionalOwnershipGuidePage() {
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero */}
-      <section className="bg-white border-b border-gray-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
-            <Link href="/" className="hover:text-gray-700">Home</Link>
-            <span>/</span>
-            <span className="text-gray-900">Fractional Ownership Guide</span>
-          </nav>
-          <span className="inline-block text-sm font-semibold text-amber-600 uppercase tracking-wider mb-4">
-            Complete Guide
-          </span>
-          <h1 className="font-editorial text-5xl md:text-6xl font-bold text-gray-900 leading-[1.1] mb-6">
-            What is Fractional Ownership?
-          </h1>
-          <p className="text-xl text-gray-600 leading-relaxed">
-            Fractional ownership allows multiple investors to share ownership of high-value assets
-            like property, aircraft, or luxury goods. This guide explains how it works, the different
-            types, and whether it's right for you.
-          </p>
-          <div className="mt-8 flex items-center gap-4 text-sm text-gray-500">
-            <span>Updated December 2024</span>
-            <span>•</span>
-            <span>12 min read</span>
+      {/* Hero with Aspirational Image */}
+      <section className="relative min-h-[50vh] flex items-center overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80')`,
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-amber-700/90 via-orange-600/80 to-amber-500/60" />
+        </div>
+        <div className="relative z-10 w-full py-16">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav className="flex items-center gap-2 text-sm text-white/70 mb-8">
+              <Link href="/" className="hover:text-white">Home</Link>
+              <span>/</span>
+              <span className="text-white">Fractional Ownership Guide</span>
+            </nav>
+            <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+              Complete Guide
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
+              What is Fractional Ownership?
+            </h1>
+            <p className="text-xl text-white/90 leading-relaxed max-w-2xl">
+              Fractional ownership allows multiple investors to share ownership of high-value assets
+              like property, aircraft, or luxury goods. This guide explains how it works, the different
+              types, and whether it's right for you.
+            </p>
+            <div className="mt-8 flex items-center gap-4 text-sm text-white/70">
+              <span>Updated December 2024</span>
+              <span>•</span>
+              <span>12 min read</span>
+            </div>
           </div>
         </div>
       </section>
