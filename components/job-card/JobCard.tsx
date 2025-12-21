@@ -1,11 +1,54 @@
 'use client'
 
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import { useUser } from '@stackframe/stack'
 import { AspirationalBadge } from './AspirationalBadge'
 import { generateAspirationalMessage } from '@/lib/aspirational-messages'
 import type { AspirationalMessageData } from '@/lib/types'
+
+// Dream destinations for remote workers - suggest lifestyle possibilities
+const DREAM_DESTINATIONS = [
+  { name: 'Lisbon', country: 'Portugal', slug: 'lisbon', image: 'https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=80&h=80&fit=crop' },
+  { name: 'Barcelona', country: 'Spain', slug: 'barcelona', image: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?w=80&h=80&fit=crop' },
+  { name: 'Bali', country: 'Indonesia', slug: 'bali', image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=80&h=80&fit=crop' },
+  { name: 'Dubai', country: 'UAE', slug: 'dubai', image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=80&h=80&fit=crop' },
+  { name: 'Albufeira', country: 'Portugal', slug: 'albufeira', image: 'https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=80&h=80&fit=crop' },
+  { name: 'Split', country: 'Croatia', slug: 'split', image: 'https://images.unsplash.com/photo-1555990538-a7d0c5b46f9e?w=80&h=80&fit=crop' },
+]
+
+// Get a random dream destination for this job (consistent based on job ID)
+function getDreamDestination(jobId: string | number | undefined) {
+  const hash = String(jobId || Math.random()).split('').reduce((a, b) => {
+    a = ((a << 5) - a) + b.charCodeAt(0)
+    return a & a
+  }, 0)
+  return DREAM_DESTINATIONS[Math.abs(hash) % DREAM_DESTINATIONS.length]
+}
+
+// Parse hours per week to determine flexibility level
+function getFlexibilityInfo(hoursPerWeek?: string): { days: string; isPartTime: boolean } | null {
+  if (!hoursPerWeek) return null
+
+  const lower = hoursPerWeek.toLowerCase()
+
+  // Extract numbers
+  const numbers = lower.match(/\d+/g)
+  if (numbers && numbers.length > 0) {
+    const hours = parseInt(numbers[0])
+    if (hours <= 16) return { days: '1-2 days/week', isPartTime: true }
+    if (hours <= 24) return { days: '2-3 days/week', isPartTime: true }
+    if (hours <= 32) return { days: '3-4 days/week', isPartTime: true }
+  }
+
+  // Check for day mentions
+  if (lower.includes('1 day') || lower.includes('one day')) return { days: '1 day/week', isPartTime: true }
+  if (lower.includes('2 day') || lower.includes('two day')) return { days: '2 days/week', isPartTime: true }
+  if (lower.includes('3 day') || lower.includes('three day')) return { days: '3 days/week', isPartTime: true }
+  if (lower.includes('part-time') || lower.includes('part time')) return { days: 'Part-time', isPartTime: true }
+
+  return null
+}
 
 // Aspirational images for different role categories - professional people working
 const ROLE_IMAGES: Record<string, string[]> = {
@@ -135,6 +178,32 @@ export function JobCard({
   const user = useUser()
   const [isSaved, setIsSaved] = useState(false)
   const [isSaving, setIsSaving] = useState(false)
+  const [viewCount, setViewCount] = useState<number | null>(null)
+
+  // Fetch view count on mount
+  useEffect(() => {
+    if (jobId) {
+      fetch(`/api/job-view?jobId=${jobId}`)
+        .then(res => res.json())
+        .then(data => {
+          if (data.views7Days > 0) {
+            setViewCount(data.views7Days)
+          }
+        })
+        .catch(() => {}) // Silently fail
+    }
+  }, [jobId])
+
+  // Get dream destination for remote jobs
+  const dreamDestination = useMemo(() => {
+    if (isRemote) {
+      return getDreamDestination(jobId)
+    }
+    return null
+  }, [isRemote, jobId])
+
+  // Get flexibility info
+  const flexibilityInfo = useMemo(() => getFlexibilityInfo(hoursPerWeek), [hoursPerWeek])
 
   // Get image for this job
   const jobImage = useMemo(() => {
@@ -248,7 +317,7 @@ export function JobCard({
 
         {/* Top badges row */}
         <div className="absolute top-3 left-3 right-3 flex items-start justify-between">
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             {/* Role category badge */}
             {roleCategory && (
               <span className="bg-white/95 backdrop-blur-sm text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
@@ -261,19 +330,37 @@ export function JobCard({
                 New
               </span>
             )}
-            {/* Hot badge for posts 3-7 days old with good engagement */}
+            {/* Hot badge for posts 3-7 days old */}
             {postedDaysAgo !== undefined && postedDaysAgo > 2 && postedDaysAgo <= 7 && (
               <span className="bg-orange-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
                 Hot
               </span>
             )}
+            {/* View count - social proof */}
+            {viewCount && viewCount > 5 && (
+              <span className="bg-gray-900/70 backdrop-blur-sm text-white text-xs font-medium px-2.5 py-1 rounded-full flex items-center gap-1">
+                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                  <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
+                </svg>
+                {viewCount}
+              </span>
+            )}
           </div>
-          {/* Remote badge */}
-          {isRemote && (
-            <span className="bg-teal-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
-              Remote
-            </span>
-          )}
+          <div className="flex flex-col items-end gap-2">
+            {/* Remote badge */}
+            {isRemote && (
+              <span className="bg-teal-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                Remote
+              </span>
+            )}
+            {/* Flexibility badge */}
+            {flexibilityInfo && (
+              <span className="bg-purple-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                {flexibilityInfo.days}
+              </span>
+            )}
+          </div>
         </div>
 
         {/* Title overlay at bottom of image - with text shadow for readability */}
@@ -326,6 +413,44 @@ export function JobCard({
                 +{skills.length - 3}
               </span>
             )}
+          </div>
+        )}
+
+        {/* Dream destination suggestion for remote roles - sell the lifestyle */}
+        {dreamDestination && flexibilityInfo && (
+          <div className="mb-3 p-3 bg-gradient-to-r from-teal-50 to-blue-50 rounded-lg border border-teal-100 flex items-center gap-3">
+            <img
+              src={dreamDestination.image}
+              alt={dreamDestination.name}
+              className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+            />
+            <p className="text-xs text-teal-800">
+              <span className="font-semibold">{flexibilityInfo.days}?</span> Work from {dreamDestination.name}
+            </p>
+          </div>
+        )}
+
+        {/* Remote-only dream suggestion (when no flexibility info but is remote) */}
+        {dreamDestination && !flexibilityInfo && (
+          <div className="mb-3 p-3 bg-gradient-to-r from-teal-50 to-blue-50 rounded-lg border border-teal-100 flex items-center gap-3">
+            <img
+              src={dreamDestination.image}
+              alt={dreamDestination.name}
+              className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+            />
+            <p className="text-xs text-teal-800">
+              <span className="font-semibold">Work anywhere.</span> Why not {dreamDestination.name}?
+            </p>
+          </div>
+        )}
+
+        {/* Syndicated job indicator */}
+        {isSyndicated && (
+          <div className="mb-3 flex items-center gap-1.5 text-xs text-gray-500">
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+            </svg>
+            via {jobSource || 'partner'}
           </div>
         )}
 

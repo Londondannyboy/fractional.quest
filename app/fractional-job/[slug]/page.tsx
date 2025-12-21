@@ -781,6 +781,42 @@ export default async function JobDetailPage({ params }: PageProps) {
                   </Suspense>
                 </div>
 
+                {/* Work From Anywhere - For remote jobs */}
+                {job.is_remote && (
+                  <div className="bg-gradient-to-br from-teal-50 to-blue-50 p-5 rounded-xl border border-teal-100">
+                    <h3 className="text-sm font-bold uppercase tracking-wider text-teal-800 mb-3">
+                      Work From Anywhere
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-4">
+                      This role is remote-friendly. Imagine working from:
+                    </p>
+                    <div className="grid grid-cols-2 gap-3">
+                      <Link href="/destinations/lisbon" className="flex items-center gap-2 text-sm text-teal-700 hover:text-teal-900 font-medium group">
+                        <img src="https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=40&h=40&fit=crop" alt="Lisbon" className="w-8 h-8 rounded-full object-cover group-hover:ring-2 ring-teal-400" />
+                        Lisbon
+                      </Link>
+                      <Link href="/destinations/barcelona" className="flex items-center gap-2 text-sm text-teal-700 hover:text-teal-900 font-medium group">
+                        <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?w=40&h=40&fit=crop" alt="Barcelona" className="w-8 h-8 rounded-full object-cover group-hover:ring-2 ring-teal-400" />
+                        Barcelona
+                      </Link>
+                      <Link href="/destinations/bali" className="flex items-center gap-2 text-sm text-teal-700 hover:text-teal-900 font-medium group">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=40&h=40&fit=crop" alt="Bali" className="w-8 h-8 rounded-full object-cover group-hover:ring-2 ring-teal-400" />
+                        Bali
+                      </Link>
+                      <Link href="/destinations/dubai" className="flex items-center gap-2 text-sm text-teal-700 hover:text-teal-900 font-medium group">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=40&h=40&fit=crop" alt="Dubai" className="w-8 h-8 rounded-full object-cover group-hover:ring-2 ring-teal-400" />
+                        Dubai
+                      </Link>
+                    </div>
+                    <Link
+                      href="/destinations"
+                      className="mt-4 block text-center text-xs text-teal-600 hover:text-teal-800 font-medium"
+                    >
+                      View all destinations →
+                    </Link>
+                  </div>
+                )}
+
                 {/* Skills Preview - Links to 3D graph below */}
                 {job.skills_required && Array.isArray(job.skills_required) && job.skills_required.length > 2 && (
                   <div className="bg-gray-50 p-4 rounded-lg">

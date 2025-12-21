@@ -96,8 +96,39 @@ export default async function DestinationPage({ params }: Props) {
   const imageUrl = getDestinationImage(destination)
   const bestMonthsDisplay = destination.best_months?.map(m => MONTH_NAMES[m - 1]).join(', ')
 
+  // Breadcrumb schema for SEO
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': 'Home',
+        'item': 'https://fractional.quest'
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': 'Destinations',
+        'item': 'https://fractional.quest/destinations'
+      },
+      {
+        '@type': 'ListItem',
+        'position': 3,
+        'name': destination.name,
+        'item': `https://fractional.quest/destinations/${slug}`
+      }
+    ]
+  }
+
   return (
     <main className="min-h-screen bg-white">
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero with Background Image */}
       <section className="relative min-h-[60vh] flex items-end">
         {/* Background Image */}
@@ -260,6 +291,31 @@ export default async function DestinationPage({ params }: Props) {
                     className="inline-flex items-center gap-2 px-6 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
                   >
                     Create Your Profile
+                  </Link>
+                </div>
+              </div>
+
+              {/* Role-specific job links for SEO and internal linking */}
+              <div className="mt-8 p-6 bg-gray-50 rounded-xl">
+                <h4 className="font-bold text-gray-900 mb-4">Popular Remote Fractional Roles</h4>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                  <Link href="/fractional-cfo-jobs-uk" className="text-sm text-teal-700 hover:text-teal-900 font-medium">
+                    Fractional CFO Jobs →
+                  </Link>
+                  <Link href="/fractional-cto-jobs-uk" className="text-sm text-teal-700 hover:text-teal-900 font-medium">
+                    Fractional CTO Jobs →
+                  </Link>
+                  <Link href="/fractional-cmo-jobs-uk" className="text-sm text-teal-700 hover:text-teal-900 font-medium">
+                    Fractional CMO Jobs →
+                  </Link>
+                  <Link href="/fractional-coo-jobs-uk" className="text-sm text-teal-700 hover:text-teal-900 font-medium">
+                    Fractional COO Jobs →
+                  </Link>
+                  <Link href="/fractional-chro-jobs-uk" className="text-sm text-teal-700 hover:text-teal-900 font-medium">
+                    Fractional CHRO Jobs →
+                  </Link>
+                  <Link href="/fractional-jobs-uk" className="text-sm text-gray-600 hover:text-gray-900 font-medium">
+                    All Fractional Jobs →
                   </Link>
                 </div>
               </div>
