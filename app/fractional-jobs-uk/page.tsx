@@ -6,6 +6,7 @@ import { JobCard } from '@/components/JobCard'
 import { FAQ } from '@/components/FAQ'
 import { RecommendedArticles } from '@/components/RecommendedArticles'
 import { PropertyOverlay } from '@/components/PropertyOverlay'
+import { JobSearch } from '@/components/JobSearch'
 
 // Aggressive lazy loading for mobile performance
 const FractionalRateCalculatorUK = dynamic(() => import('@/components/FractionalRateCalculatorUK').then(mod => ({ default: mod.FractionalRateCalculatorUK })), {
@@ -385,24 +386,24 @@ export default async function FractionalJobsUKPage() {
       </section>
 
       {/* Stats Bar */}
-      <section className="bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 py-4">
+      <section className="bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 py-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-8 text-center text-sm">
+          <div className="flex flex-wrap justify-center gap-10 text-center text-base">
             <div>
-              <span className="font-bold text-white">{stats.totalUK}+</span>
-              <span className="text-white/80 ml-1">Live Jobs</span>
+              <span className="font-black text-white">{stats.totalUK}+</span>
+              <span className="font-bold text-white ml-1">Live Jobs</span>
             </div>
             <div>
-              <span className="font-bold text-white">£700-1,500</span>
-              <span className="text-white/80 ml-1">Day Rates</span>
+              <span className="font-black text-white">£700-1,500</span>
+              <span className="font-bold text-white ml-1">Day Rates</span>
             </div>
             <div>
-              <span className="font-bold text-white">2-3 Days</span>
-              <span className="text-white/80 ml-1">Per Week</span>
+              <span className="font-black text-white">2-3 Days</span>
+              <span className="font-bold text-white ml-1">Per Week</span>
             </div>
             <div>
-              <span className="font-bold text-white">Global</span>
-              <span className="text-white/80 ml-1">Remote Options</span>
+              <span className="font-black text-white">Global</span>
+              <span className="font-bold text-white ml-1">Remote Options</span>
             </div>
           </div>
         </div>
@@ -420,25 +421,26 @@ export default async function FractionalJobsUKPage() {
                 {stats.totalUK} active opportunities • Updated hourly
               </p>
 
-              {/* Role Filters */}
-              <div className="flex flex-wrap gap-3">
+              {/* Advanced Job Search */}
+              <JobSearch totalJobs={stats.totalUK} className="mb-6" />
+
+              {/* Quick Role Links */}
+              <div className="flex flex-wrap gap-2 mt-4">
                 {[
                   { label: 'All Roles', href: '/fractional-jobs-uk', active: true },
                   { label: 'CFO', href: '/fractional-cfo-jobs-uk' },
                   { label: 'CTO', href: '/fractional-cto-jobs-uk' },
                   { label: 'CMO', href: '/fractional-cmo-jobs-uk' },
                   { label: 'COO', href: '/fractional-coo-jobs-uk' },
-                  { label: 'Project Manager', href: '/fractional-project-manager' },
                   { label: 'HR/CHRO', href: '/fractional-hr-jobs-uk' },
-                  { label: 'Remote', href: '/fractional-jobs?remote=true' },
                 ].map((filter) => (
                   <Link
                     key={filter.label}
                     href={filter.href}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                    className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
                       filter.active
-                        ? 'bg-blue-600 text-gray-900'
-                        : 'bg-gray-800 text-gray-600 hover:bg-gray-700 border border-gray-700'
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                     }`}
                   >
                     {filter.label}
