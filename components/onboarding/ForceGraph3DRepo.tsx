@@ -46,9 +46,9 @@ const NODE_SIZES: Record<string, number> = {
 }
 
 const ForceGraph3DRepo = forwardRef<any, Props>(({ data }, ref) => {
-  const graphRef = useRef<any>()
+  const graphRef = useRef<any>(null)
   const [isInitialized, setIsInitialized] = useState(false)
-  const previousNodeCount = useRef(0)
+  const previousNodeCount = useRef<number>(0)
   const [stableGraphData, setStableGraphData] = useState<any>({ nodes: [], links: [] })
   const [hasError, setHasError] = useState(false)
 
