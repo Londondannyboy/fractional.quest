@@ -1,8 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Suspense } from 'react'
 import { createDbQuery } from '@/lib/db'
-import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
 import { FAQ, CTO_FAQS } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
 import { DesktopOnly } from '@/components/DesktopOnly'
@@ -53,8 +51,41 @@ async function getFeaturedCompanies() {
   }
 }
 
+// Server-side job fetch for SEO - renders in initial HTML for crawlers
+async function getTechJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote, workplace_type,
+        compensation, role_category, skills_required, posted_date, hours_per_week,
+        description_snippet
+      FROM jobs
+      WHERE is_active = true AND role_category = 'Engineering'
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 12
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
+// Calculate days ago for posted date
+function getDaysAgo(postedDate: string | null): number | undefined {
+  if (!postedDate) return undefined
+  const posted = new Date(postedDate)
+  const now = new Date()
+  const diffTime = Math.abs(now.getTime() - posted.getTime())
+  return Math.floor(diffTime / (1000 * 60 * 60 * 24))
+}
+
 export default async function FractionalCtoJobsUkPage() {
-  const [stats, companies] = await Promise.all([getEngineeringStats(), getFeaturedCompanies()])
+  const [stats, companies, jobs] = await Promise.all([
+    getEngineeringStats(),
+    getFeaturedCompanies(),
+    getTechJobs()
+  ])
 
   return (
     <div className="min-h-screen bg-white">
@@ -123,19 +154,95 @@ export default async function FractionalCtoJobsUkPage() {
         </div>
       </section>
 
-      {/* Jobs */}
+      {/* JOBS SECTION - Server-rendered for SEO */}
       <section id="jobs" className="py-16 md:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Browse</span>
-              <h2 className="text-3xl md:text-4xl font-black text-gray-900">Engineering & CTO Jobs</h2>
+              <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional CTO Jobs UK Listings</h2>
             </div>
-            <p className="text-gray-500">Pre-filtered to Engineering. Change filters to explore.</p>
+            <p className="text-gray-500">{jobs.length}+ live fractional CTO jobs in the UK</p>
           </div>
-          <Suspense fallback={<div className="bg-white rounded-2xl border border-gray-200 p-8"><div className="animate-pulse space-y-4"><div className="h-10 bg-gray-200 rounded w-1/3"></div><div className="grid grid-cols-2 gap-4"><div className="h-48 bg-gray-200 rounded"></div><div className="h-48 bg-gray-200 rounded"></div></div></div></div>}>
-            <EmbeddedJobBoard defaultDepartment="Engineering" pageSlug="fractional-cto-jobs-uk" jobsPerPage={10} title="Latest Engineering & CTO Jobs" allJobsLinkText="View All Engineering Jobs" />
-          </Suspense>
+
+          {/* Server-rendered job grid - visible to search engines */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {jobs.slice(0, 9).map((job) => (
+              <article
+                key={job.id}
+                className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow"
+              >
+                <Link href={`/fractional-job/${job.slug}`} className="block">
+                  {/* Job image header */}
+                  <div className="relative h-40 bg-gradient-to-br from-blue-500 to-indigo-600">
+                    <img
+                      src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=200&fit=crop"
+                      alt={`${job.title} - Fractional CTO job UK at ${job.company_name}`}
+                      className="w-full h-full object-cover opacity-60"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
+                    <div className="absolute bottom-3 left-3 right-3">
+                      <h3 className="text-white font-bold text-lg line-clamp-2" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
+                        {job.title}
+                      </h3>
+                    </div>
+                    {/* Badges */}
+                    <div className="absolute top-3 left-3 flex gap-2">
+                      {job.role_category && (
+                        <span className="bg-white/90 text-gray-900 text-xs font-bold px-2 py-1 rounded-full">
+                          {job.role_category}
+                        </span>
+                      )}
+                      {getDaysAgo(job.posted_date) !== undefined && getDaysAgo(job.posted_date)! <= 3 && (
+                        <span className="bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                          New
+                        </span>
+                      )}
+                    </div>
+                    {job.is_remote && (
+                      <span className="absolute top-3 right-3 bg-teal-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        Remote
+                      </span>
+                    )}
+                  </div>
+                  {/* Job content */}
+                  <div className="p-4">
+                    <p className="text-gray-700 font-medium mb-2">{job.company_name}</p>
+                    <div className="flex items-center gap-3 text-sm text-gray-500 mb-3">
+                      <span className="flex items-center gap-1">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        </svg>
+                        {job.location || 'UK'}
+                      </span>
+                      {job.compensation && (
+                        <span className="font-semibold text-gray-900">{job.compensation}</span>
+                      )}
+                    </div>
+                    {job.description_snippet && (
+                      <p className="text-sm text-gray-600 line-clamp-2 mb-3">{job.description_snippet}</p>
+                    )}
+                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 hover:text-blue-700">
+                      View fractional CTO job →
+                    </span>
+                  </div>
+                </Link>
+              </article>
+            ))}
+          </div>
+
+          {/* CTA to view all */}
+          <div className="text-center">
+            <Link
+              href="/fractional-jobs-uk?department=Engineering"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition-colors"
+            >
+              View All {stats.total}+ Fractional CTO Jobs UK
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </section>
 
