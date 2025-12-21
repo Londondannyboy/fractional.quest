@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
-import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { RoleCalculator } from '@/components/RoleCalculator'
 import { HireProcessStepper } from '@/components/HireProcessStepper'
 import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
@@ -53,10 +52,15 @@ export const metadata: Metadata = {
 export default function FractionalCHROServicesPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section with 3D Knowledge Graph */}
-      <section className="relative min-h-[75vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <JobsGraph3D roleFilter="CHRO" limit={25} height="100%" isHero={true} showOverlay={true} />
+      {/* Hero Section with Aspirational Image */}
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1920&q=80')`,
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-700/90 via-purple-600/80 to-purple-500/60" />
         </div>
         <div className="relative z-10 w-full py-20">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -67,9 +71,9 @@ export default function FractionalCHROServicesPage() {
               <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 People Leadership
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Fractional CHRO<br />
-                <span className="text-pink-400">Services UK</span>
+                <span className="text-white/70">Services UK</span>
               </h1>
               <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mb-8">
                 Hire a <strong className="text-white">Fractional CHRO</strong> to lead your people function.
@@ -77,7 +81,7 @@ export default function FractionalCHROServicesPage() {
               </p>
               <div className="flex flex-wrap gap-8 mb-10">
                 <div>
-                  <div className="text-4xl md:text-5xl font-black text-pink-400">55%</div>
+                  <div className="text-4xl md:text-5xl font-black text-white">55%</div>
                   <div className="text-white/60 text-sm uppercase tracking-wider">Cost Savings</div>
                 </div>
                 <div>
