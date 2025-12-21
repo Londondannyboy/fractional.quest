@@ -371,8 +371,8 @@ function convertZepToGraphData(
       color: clusterConfig?.color || '#666',
       type: zepNode.type,
       cluster,
-      validated: zepNode.data?.validated || false,
-      pending: zepNode.data?.pending || false
+      validated: Boolean(zepNode.data?.validated),
+      pending: Boolean(zepNode.data?.pending)
     }
   })
 

@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 import { createDbQuery } from '@/lib/db'
 import { JobCard } from '@/components/JobCard'
 import { FAQ } from '@/components/FAQ'
+import { RecommendedArticles } from '@/components/RecommendedArticles'
 
 // Aggressive lazy loading for mobile performance - show black placeholder immediately
 const FractionalRateCalculatorUK = dynamic(() => import('@/components/FractionalRateCalculatorUK').then(mod => ({ default: mod.FractionalRateCalculatorUK })), {
@@ -369,41 +370,90 @@ export default async function FractionalJobsUKPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 auto-rows-fr">
-              {(ukJobs as any[]).slice(0, 15).map((job: any) => {
-                const postedDate = job.posted_date ? new Date(job.posted_date) : null
-                const postedDaysAgo = postedDate
-                  ? Math.floor((Date.now() - postedDate.getTime()) / (1000 * 60 * 60 * 24))
-                  : undefined
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {/* Main Jobs Column */}
+              <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-fr">
+                {(ukJobs as any[]).slice(0, 15).map((job: any) => {
+                  const postedDate = job.posted_date ? new Date(job.posted_date) : null
+                  const postedDaysAgo = postedDate
+                    ? Math.floor((Date.now() - postedDate.getTime()) / (1000 * 60 * 60 * 24))
+                    : undefined
 
-                // Estimate salary if missing
-                const estimatedRate = !job.compensation ? estimateRateByRole(job.role_category) : undefined
+                  // Estimate salary if missing
+                  const estimatedRate = !job.compensation ? estimateRateByRole(job.role_category) : undefined
 
-                return (
-                  <Link key={job.id} href={`/fractional-job/${job.slug}`} className="flex">
-                    <JobCard
-                      jobId={job.id}
-                      title={job.normalized_title || job.title}
-                      company={job.company_name}
-                      location={job.location || 'UK'}
-                      isRemote={job.is_remote || job.workplace_type === 'Remote'}
-                      compensation={job.compensation}
-                      roleCategory={job.role_category}
-                      skills={job.skills_required || []}
-                      postedDaysAgo={postedDaysAgo}
-                      companyDomain={job.company_domain}
-                      description={job.description_snippet}
-                      jobSource={job.job_source || 'LinkedIn'}
-                      isSyndicated={job.is_syndicated ?? true}
-                      postedDate={postedDate || undefined}
-                      estimatedDayRate={estimatedRate}
-                      companyType={job.company_type as 'direct' | 'recruiter' | 'job_board' || 'recruiter'}
-                      appealSummary={job.appeal_summary}
-                      keyDeliverables={job.key_deliverables || []}
-                    />
+                  return (
+                    <Link key={job.id} href={`/fractional-job/${job.slug}`} className="flex">
+                      <JobCard
+                        jobId={job.id}
+                        title={job.normalized_title || job.title}
+                        company={job.company_name}
+                        location={job.location || 'UK'}
+                        isRemote={job.is_remote || job.workplace_type === 'Remote'}
+                        compensation={job.compensation}
+                        roleCategory={job.role_category}
+                        skills={job.skills_required || []}
+                        postedDaysAgo={postedDaysAgo}
+                        companyDomain={job.company_domain}
+                        description={job.description_snippet}
+                        jobSource={job.job_source || 'LinkedIn'}
+                        isSyndicated={job.is_syndicated ?? true}
+                        postedDate={postedDate || undefined}
+                        estimatedDayRate={estimatedRate}
+                        companyType={job.company_type as 'direct' | 'recruiter' | 'job_board' || 'recruiter'}
+                        appealSummary={job.appeal_summary}
+                        keyDeliverables={job.key_deliverables || []}
+                      />
+                    </Link>
+                  )
+                })}
+              </div>
+
+              {/* Right Sidebar */}
+              <div className="lg:col-span-1 space-y-6">
+                <RecommendedArticles limit={5} title="Recommended Reading" />
+
+                {/* Quick Links */}
+                <div className="bg-gray-950 rounded-xl border border-gray-800 p-6">
+                  <h3 className="text-lg font-bold text-white mb-4">Quick Links</h3>
+                  <ul className="space-y-3">
+                    <li>
+                      <Link href="/fractional-cfo-jobs-uk" className="text-sm text-gray-300 hover:text-blue-400 transition-colors">
+                        Fractional CFO Jobs UK →
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/fractional-cto-jobs-uk" className="text-sm text-gray-300 hover:text-blue-400 transition-colors">
+                        Fractional CTO Jobs UK →
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/fractional-cmo-jobs-uk" className="text-sm text-gray-300 hover:text-blue-400 transition-colors">
+                        Fractional CMO Jobs UK →
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/how-to-become-a-fractional-executive" className="text-sm text-gray-300 hover:text-blue-400 transition-colors">
+                        How to Go Fractional →
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* CTA */}
+                <div className="bg-gradient-to-br from-blue-900 to-blue-950 rounded-xl border border-blue-800 p-6">
+                  <h3 className="text-lg font-bold text-white mb-2">Join Our Network</h3>
+                  <p className="text-sm text-gray-300 mb-4">
+                    Create your profile and get matched with fractional opportunities.
+                  </p>
+                  <Link
+                    href="/profile/edit"
+                    className="block w-full text-center px-4 py-2 bg-white text-gray-900 font-medium rounded-lg hover:bg-gray-100 transition-colors"
+                  >
+                    Create Profile
                   </Link>
-                )
-              })}
+                </div>
+              </div>
             </div>
           </div>
         </section>
