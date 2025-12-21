@@ -20,7 +20,7 @@ export default function ForceGraphVRWrapper({ graphData, width = 650, height = 7
 
     // Dynamically import the VR library
     import('3d-force-graph-vr').then((mod) => {
-      const ForceGraphVR = mod.default
+      const ForceGraphVR = mod.default as any
 
       if (!graphRef.current) {
         graphRef.current = ForceGraphVR()(containerRef.current!)
