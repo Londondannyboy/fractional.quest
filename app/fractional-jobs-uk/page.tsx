@@ -6,18 +6,18 @@ import { JobCard } from '@/components/JobCard'
 import { FAQ } from '@/components/FAQ'
 import { RecommendedArticles } from '@/components/RecommendedArticles'
 
-// Aggressive lazy loading for mobile performance - show black placeholder immediately
+// Aggressive lazy loading for mobile performance
 const FractionalRateCalculatorUK = dynamic(() => import('@/components/FractionalRateCalculatorUK').then(mod => ({ default: mod.FractionalRateCalculatorUK })), {
-  loading: () => <div className="bg-gray-950 h-96 rounded-xl border border-gray-800" />,
+  loading: () => <div className="bg-gray-50 h-96 rounded-xl border border-gray-200" />,
 })
 const SavingsCalculator = dynamic(() => import('@/components/SavingsCalculator').then(mod => ({ default: mod.SavingsCalculator })), {
-  loading: () => <div className="bg-gray-950 h-96 rounded-xl border border-gray-800" />,
+  loading: () => <div className="bg-gray-50 h-96 rounded-xl border border-gray-200" />,
 })
 const SkillsRadar = dynamic(() => import('@/components/SkillsRadar').then(mod => ({ default: mod.SkillsRadar })), {
-  loading: () => <div className="bg-gray-950 h-96 rounded-xl border border-gray-800" />,
+  loading: () => <div className="bg-gray-50 h-96 rounded-xl border border-gray-200" />,
 })
 const IR35Calculator = dynamic(() => import('@/components/IR35Calculator').then(mod => ({ default: mod.IR35Calculator })), {
-  loading: () => <div className="bg-gray-950 h-96 rounded-xl border border-gray-800" />,
+  loading: () => <div className="bg-gray-50 h-96 rounded-xl border border-gray-200" />,
 })
 
 export const revalidate = 3600 // Revalidate every hour
@@ -280,7 +280,7 @@ export default async function FractionalJobsUKPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-950">
+    <div className="min-h-screen bg-white">
       {/* JobPosting JSON-LD Schema */}
       <script
         type="application/ld+json"
@@ -314,17 +314,17 @@ export default async function FractionalJobsUKPage() {
             UK's Fractional Executive Platform
           </span>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             Fractional Jobs UK
           </h1>
 
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             {stats.totalUK}+ fractional CFO, CTO, CMO roles • £700-£1,500 day rates
           </p>
 
           <Link
             href="#jobs"
-            className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-all duration-200 shadow-lg"
+            className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg bg-blue-600 text-gray-900 hover:bg-blue-700 transition-all duration-200 shadow-lg"
           >
             Browse Jobs ↓
           </Link>
@@ -333,10 +333,10 @@ export default async function FractionalJobsUKPage() {
 
       {/* Featured Jobs Section with Filters */}
       {(ukJobs as any[]).length > 0 && (
-        <section id="jobs" className="py-12 md:py-16 bg-gray-900">
+        <section id="jobs" className="py-12 md:py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 Fractional Jobs UK
               </h2>
               <p className="text-gray-400 text-sm mb-6">
@@ -360,8 +360,8 @@ export default async function FractionalJobsUKPage() {
                     href={filter.href}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                       filter.active
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'
+                        ? 'bg-blue-600 text-gray-900'
+                        : 'bg-gray-800 text-gray-600 hover:bg-gray-700 border border-gray-700'
                     }`}
                   >
                     {filter.label}
@@ -414,26 +414,26 @@ export default async function FractionalJobsUKPage() {
                 <RecommendedArticles limit={5} title="Recommended Reading" />
 
                 {/* Quick Links */}
-                <div className="bg-gray-950 rounded-xl border border-gray-800 p-6">
-                  <h3 className="text-lg font-bold text-white mb-4">Quick Links</h3>
+                <div className="bg-white rounded-xl border border-gray-200 p-6">
+                  <h3 className="text-lg font-bold text-gray-900 mb-4">Quick Links</h3>
                   <ul className="space-y-3">
                     <li>
-                      <Link href="/fractional-cfo-jobs-uk" className="text-sm text-gray-300 hover:text-blue-400 transition-colors">
+                      <Link href="/fractional-cfo-jobs-uk" className="text-sm text-gray-600 hover:text-blue-400 transition-colors">
                         Fractional CFO Jobs UK →
                       </Link>
                     </li>
                     <li>
-                      <Link href="/fractional-cto-jobs-uk" className="text-sm text-gray-300 hover:text-blue-400 transition-colors">
+                      <Link href="/fractional-cto-jobs-uk" className="text-sm text-gray-600 hover:text-blue-400 transition-colors">
                         Fractional CTO Jobs UK →
                       </Link>
                     </li>
                     <li>
-                      <Link href="/fractional-cmo-jobs-uk" className="text-sm text-gray-300 hover:text-blue-400 transition-colors">
+                      <Link href="/fractional-cmo-jobs-uk" className="text-sm text-gray-600 hover:text-blue-400 transition-colors">
                         Fractional CMO Jobs UK →
                       </Link>
                     </li>
                     <li>
-                      <Link href="/how-to-become-a-fractional-executive" className="text-sm text-gray-300 hover:text-blue-400 transition-colors">
+                      <Link href="/how-to-become-a-fractional-executive" className="text-sm text-gray-600 hover:text-blue-400 transition-colors">
                         How to Go Fractional →
                       </Link>
                     </li>
@@ -442,8 +442,8 @@ export default async function FractionalJobsUKPage() {
 
                 {/* CTA */}
                 <div className="bg-gradient-to-br from-blue-900 to-blue-950 rounded-xl border border-blue-800 p-6">
-                  <h3 className="text-lg font-bold text-white mb-2">Join Our Network</h3>
-                  <p className="text-sm text-gray-300 mb-4">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Join Our Network</h3>
+                  <p className="text-sm text-gray-600 mb-4">
                     Create your profile and get matched with fractional opportunities.
                   </p>
                   <Link
@@ -460,12 +460,12 @@ export default async function FractionalJobsUKPage() {
       )}
 
       {/* About Fractional Jobs UK - Moved Below Jobs */}
-      <section className="py-16 md:py-20 bg-gray-950">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
             About Fractional Jobs UK
           </h2>
-          <div className="space-y-4 text-gray-300 leading-relaxed">
+          <div className="space-y-4 text-gray-600 leading-relaxed">
             <p>
               Browse {stats.totalUK}+ fractional executive jobs across the United Kingdom. Find part-time CFO, CTO, CMO, and COO roles with
               £700-£1,500 daily rates from London to Edinburgh.
@@ -486,50 +486,50 @@ export default async function FractionalJobsUKPage() {
       </section>
 
       {/* Rate Calculator Section */}
-      <section id="rate-calculator" className="py-16 md:py-24 bg-gray-900">
+      <section id="rate-calculator" className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white !text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 !text-gray-900 mb-4">
               Calculate Your Fractional Rate
             </h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Understand your earning potential as a fractional executive. Input your role and location to see realistic day rates, weekly earnings, and annual income projections based on current UK market data.
             </p>
           </div>
-          <div className="bg-gray-950 rounded-2xl p-8 border border-gray-800">
+          <div className="bg-white rounded-2xl p-8 border border-gray-200">
             <FractionalRateCalculatorUK />
           </div>
         </div>
       </section>
 
       {/* Savings Calculator Section */}
-      <section id="savings-calculator" className="py-16 md:py-24 bg-gray-950">
+      <section id="savings-calculator" className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white !text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 !text-gray-900 mb-4">
               Calculate Your Cost Savings
             </h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Discover how much you can save by hiring fractional executives versus full-time. Compare total employment costs including salary, NI, benefits, and overhead against flexible fractional rates.
             </p>
           </div>
-          <div className="bg-gray-900 rounded-2xl p-8 border border-gray-800">
+          <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
             <SavingsCalculator />
           </div>
         </div>
       </section>
 
       {/* Skills Demand Analysis Section */}
-      <section id="skills-demand" className="py-16 md:py-24 bg-gray-900">
+      <section id="skills-demand" className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="text-blue-400 text-xs font-semibold uppercase tracking-wider block mb-4">
               Market Analysis
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white !text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 !text-gray-900 mb-4">
               Skills Demand by Fractional Role
             </h2>
-            <p className="text-gray-300 text-base md:text-lg max-w-3xl mx-auto mb-6">
+            <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto mb-6">
               Discover which skills are most in-demand across fractional CFO, CTO, CMO, and COO positions in the UK market.
               This radar chart shows the percentage of jobs requiring each skill category.
             </p>
@@ -538,7 +538,7 @@ export default async function FractionalJobsUKPage() {
             </p>
           </div>
 
-          <div className="bg-gray-950 rounded-2xl p-6 md:p-8 border border-gray-800">
+          <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-200">
             <SkillsRadar height="400px" roles={['CFO', 'CTO', 'CMO', 'COO']} />
             <p className="text-xs text-gray-400 text-center mt-6 italic">
               Click role buttons to explore {stats.totalUK}+ specific job opportunities
@@ -548,7 +548,7 @@ export default async function FractionalJobsUKPage() {
       </section>
 
       {/* IR35 Calculator Section */}
-      <section id="ir35-calculator" className="py-16 md:py-24 bg-gray-950">
+      <section id="ir35-calculator" className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -559,10 +559,10 @@ export default async function FractionalJobsUKPage() {
                 BETA
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white !text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 !text-gray-900 mb-4">
               IR35 Tax Calculator
             </h2>
-            <p className="text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-6">
+            <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto mb-6">
               Compare your take-home pay inside vs outside IR35. Understand the tax implications of different working arrangements
               to make informed decisions about your fractional career structure.
             </p>
@@ -574,42 +574,42 @@ export default async function FractionalJobsUKPage() {
             </div>
           </div>
 
-          <div className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-gray-800">
+          <div className="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-200">
             <IR35Calculator defaultDayRate={stats.avgDayRate} />
           </div>
         </div>
       </section>
 
       {/* UK Market Dashboard */}
-      <section className="py-12 md:py-16 bg-gray-900">
+      <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white !text-white mb-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 !text-gray-900 mb-8 text-center">
             UK Fractional Jobs Market 2025
           </h2>
 
           {/* Stats Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
-            <div className="bg-gray-950 rounded-xl p-4 md:p-6 border border-gray-800">
-              <div className="text-3xl md:text-4xl font-bold text-white font-mono">{stats.totalUK}+</div>
+            <div className="bg-white rounded-xl p-4 md:p-6 border border-gray-200">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 font-mono">{stats.totalUK}+</div>
               <div className="text-gray-400 text-xs md:text-sm mt-2">Active Jobs</div>
             </div>
-            <div className="bg-gray-950 rounded-xl p-4 md:p-6 border border-gray-800">
-              <div className="text-3xl md:text-4xl font-bold text-white font-mono">£{stats.avgDayRate}</div>
+            <div className="bg-white rounded-xl p-4 md:p-6 border border-gray-200">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 font-mono">£{stats.avgDayRate}</div>
               <div className="text-gray-400 text-xs md:text-sm mt-2">Avg Day Rate</div>
             </div>
-            <div className="bg-gray-950 rounded-xl p-4 md:p-6 border border-gray-800">
-              <div className="text-3xl md:text-4xl font-bold text-white font-mono">2.5</div>
+            <div className="bg-white rounded-xl p-4 md:p-6 border border-gray-200">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 font-mono">2.5</div>
               <div className="text-gray-400 text-xs md:text-sm mt-2">Avg Clients</div>
             </div>
-            <div className="bg-gray-950 rounded-xl p-4 md:p-6 border border-gray-800">
-              <div className="text-3xl md:text-4xl font-bold text-white font-mono">+40%</div>
+            <div className="bg-white rounded-xl p-4 md:p-6 border border-gray-200">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 font-mono">+40%</div>
               <div className="text-gray-400 text-xs md:text-sm mt-2">YoY Growth</div>
             </div>
           </div>
 
           {/* Top 3 Markets */}
           <div>
-            <h3 className="text-xl md:text-2xl font-bold text-white !text-white mb-6">Top UK Markets</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 !text-gray-900 mb-6">Top UK Markets</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 { name: 'London', jobs: stats.totalLondon, rate: '£900-£1,500/day', link: '/fractional-jobs?location=London' },
@@ -619,9 +619,9 @@ export default async function FractionalJobsUKPage() {
                 <Link
                   key={region.name}
                   href={region.link}
-                  className="bg-gray-950 rounded-xl p-6 border border-gray-800 hover:border-blue-600 transition-colors group"
+                  className="bg-white rounded-xl p-6 border border-gray-200 hover:border-blue-600 transition-colors group"
                 >
-                  <h4 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">{region.name}</h4>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-400 transition-colors">{region.name}</h4>
                   <p className="text-gray-400 text-sm mb-4">{region.jobs}+ jobs</p>
                   <p className="text-blue-400 text-sm font-semibold">{region.rate}</p>
                 </Link>
@@ -632,26 +632,26 @@ export default async function FractionalJobsUKPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 md:py-24 bg-gray-950">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
             <span className="text-xs font-medium uppercase tracking-wider text-gray-400 mb-4 block">Success Stories</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white !text-white mb-2">Fractional Executives in Action</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 !text-gray-900 mb-2">Fractional Executives in Action</h2>
             <p className="text-gray-400 text-sm">Examples from around the web</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {successStories.map((story, i) => (
-              <article key={i} className="bg-gray-900 rounded-xl p-6 md:p-8 border border-gray-800">
-                <blockquote className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 leading-relaxed italic">
+              <article key={i} className="bg-gray-50 rounded-xl p-6 md:p-8 border border-gray-200">
+                <blockquote className="text-gray-600 text-base md:text-lg mb-6 md:mb-8 leading-relaxed italic">
                   &ldquo;{story.quote}&rdquo;
                 </blockquote>
                 <footer className="flex items-center gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-white font-bold text-base md:text-lg flex-shrink-0">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-gray-900 font-bold text-base md:text-lg flex-shrink-0">
                     {story.name.charAt(0)}
                   </div>
                   <div>
-                    <cite className="font-semibold text-white not-italic block text-sm md:text-base">{story.name}</cite>
+                    <cite className="font-semibold text-gray-900 not-italic block text-sm md:text-base">{story.name}</cite>
                     <span className="text-gray-400 text-xs md:text-sm">{story.role}</span>
                   </div>
                 </footer>
@@ -662,17 +662,17 @@ export default async function FractionalJobsUKPage() {
       </section>
 
       {/* FAQ Section - Wider and more dynamic */}
-      <section className="py-16 md:py-24 bg-gray-900">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
             <span className="text-xs font-medium uppercase tracking-wider text-gray-400 mb-4 block">FAQ</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white !text-white mb-4">Common Questions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 !text-gray-900 mb-4">Common Questions</h2>
             <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
               Everything you need to know about fractional executive careers in the UK
             </p>
           </div>
 
-          <div className="bg-gray-950 rounded-2xl p-6 md:p-8 border border-gray-800">
+          <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-200">
             <FAQ
               items={ukFractionalJobsFAQs}
               title=""
@@ -683,9 +683,9 @@ export default async function FractionalJobsUKPage() {
       </section>
 
       {/* Internal Links - Subtle footer */}
-      <section className="py-12 md:py-16 bg-gray-950 border-t border-gray-800">
+      <section className="py-12 md:py-16 bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl md:text-2xl font-bold text-white !text-white mb-8 md:mb-12 text-center">Explore More</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 !text-gray-900 mb-8 md:mb-12 text-center">Explore More</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             <div>
               <ul className="space-y-3 text-gray-400 text-sm">
@@ -716,15 +716,15 @@ export default async function FractionalJobsUKPage() {
       </section>
 
       {/* Comprehensive Guide: Understanding Fractional Jobs UK */}
-      <section className="py-16 md:py-20 bg-gray-900">
+      <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-white !text-white mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 !text-gray-900 mb-8">
             Understanding Fractional Jobs in the United Kingdom
           </h2>
 
-          <div className="space-y-8 text-gray-300 leading-relaxed">
+          <div className="space-y-8 text-gray-600 leading-relaxed">
             <div>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-4">What Are Fractional Jobs UK?</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">What Are Fractional Jobs UK?</h3>
               <p className="mb-4">
                 Fractional jobs UK represent a transformative model of executive employment where senior leaders provide strategic guidance
                 to multiple organizations simultaneously. Unlike traditional full-time roles, fractional executives work part-time—typically
@@ -738,32 +738,32 @@ export default async function FractionalJobsUKPage() {
             </div>
 
             <div>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-4">Key Differences: Fractional vs Interim vs Part-Time</h3>
-              <div className="bg-gray-950 rounded-xl p-6 mb-4">
-                <h4 className="text-lg font-bold text-white mb-3">Fractional Executive</h4>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">Key Differences: Fractional vs Interim vs Part-Time</h3>
+              <div className="bg-white rounded-xl p-6 mb-4">
+                <h4 className="text-lg font-bold text-gray-900 mb-3">Fractional Executive</h4>
                 <p className="mb-2">Ongoing strategic partnership with multiple clients. Proactive, long-term relationship focused on growth and development.
                 Typical engagement: 12-36 months with 1-3 days per week per client.</p>
               </div>
-              <div className="bg-gray-950 rounded-xl p-6 mb-4">
-                <h4 className="text-lg font-bold text-white mb-3">Interim Executive</h4>
+              <div className="bg-white rounded-xl p-6 mb-4">
+                <h4 className="text-lg font-bold text-gray-900 mb-3">Interim Executive</h4>
                 <p className="mb-2">Temporary full-time role to address specific crisis or transition. Reactive, short-term assignment typically 3-6 months.
                 Often covering maternity leave, M&A transitions, or turnaround situations.</p>
               </div>
-              <div className="bg-gray-950 rounded-xl p-6">
-                <h4 className="text-lg font-bold text-white mb-3">Part-Time Employee</h4>
+              <div className="bg-white rounded-xl p-6">
+                <h4 className="text-lg font-bold text-gray-900 mb-3">Part-Time Employee</h4>
                 <p>Permanent reduced-hours position with single employer. Benefits and employment rights under UK law per
                 <a href="https://www.gov.uk/part-time-worker-rights" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline ml-1">government part-time worker rights</a>.</p>
               </div>
             </div>
 
             <div>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-4">Fractional Job Roles in High Demand</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">Fractional Job Roles in High Demand</h3>
               <p className="mb-4">
                 The UK fractional jobs market encompasses various C-suite functions, each with distinct characteristics and compensation ranges:
               </p>
               <div className="space-y-4">
                 <div className="border-l-4 border-blue-600 pl-4">
-                  <h4 className="text-lg font-bold text-white mb-2">Fractional CFO Jobs UK</h4>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">Fractional CFO Jobs UK</h4>
                   <p className="mb-2">
                     Financial strategy, fundraising, cash flow management, financial modeling. Average day rate: £900-£1,500.
                     Particularly sought after by scale-ups preparing for Series A/B funding rounds and PE-backed portfolio companies requiring
@@ -771,7 +771,7 @@ export default async function FractionalJobsUKPage() {
                   </p>
                 </div>
                 <div className="border-l-4 border-blue-600 pl-4">
-                  <h4 className="text-lg font-bold text-white mb-2">Fractional CTO Jobs UK</h4>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">Fractional CTO Jobs UK</h4>
                   <p className="mb-2">
                     Technology roadmap, technical architecture, engineering team leadership, digital transformation. Average day rate: £850-£1,400.
                     Essential for businesses undergoing cloud migration, building technical teams, or requiring strategic technology guidance
@@ -779,7 +779,7 @@ export default async function FractionalJobsUKPage() {
                   </p>
                 </div>
                 <div className="border-l-4 border-blue-600 pl-4">
-                  <h4 className="text-lg font-bold text-white mb-2">Fractional CMO Jobs UK</h4>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">Fractional CMO Jobs UK</h4>
                   <p className="mb-2">
                     Marketing strategy, brand development, demand generation, go-to-market planning. Average day rate: £800-£1,300.
                     Particularly valuable for businesses launching new products, entering new markets, or pivoting positioning without
@@ -787,7 +787,7 @@ export default async function FractionalJobsUKPage() {
                   </p>
                 </div>
                 <div className="border-l-4 border-blue-600 pl-4">
-                  <h4 className="text-lg font-bold text-white mb-2">Fractional COO Jobs UK</h4>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">Fractional COO Jobs UK</h4>
                   <p className="mb-2">
                     Operational excellence, process optimization, team scaling, systems implementation. Average day rate: £850-£1,400.
                     Critical during rapid growth phases when operational complexity outpaces existing management capacity.
@@ -800,25 +800,25 @@ export default async function FractionalJobsUKPage() {
       </section>
 
       {/* Editorial Content: Evolution of Fractional Jobs */}
-      <section className="py-16 md:py-20 bg-gray-950">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-white !text-white mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 !text-gray-900 mb-6">
             The Evolution of Fractional Jobs in the UK
           </h2>
           <div className="prose prose-invert prose-lg max-w-none">
-            <p className="text-gray-300 leading-relaxed mb-4">
+            <p className="text-gray-600 leading-relaxed mb-4">
               The concept of fractional work has transformed dramatically over the past decade. What began as "interim management"
               has evolved into a sophisticated ecosystem of fractional executives who provide strategic leadership to multiple
               organizations simultaneously. This shift reflects fundamental changes in how businesses access talent and how
               experienced executives structure their careers.
             </p>
-            <p className="text-gray-300 leading-relaxed mb-4">
+            <p className="text-gray-600 leading-relaxed mb-4">
               Today's fractional jobs UK market is characterized by highly specialized professionals—fractional CFOs managing
               financial strategy for 3-4 companies, fractional CTOs architecting technology roadmaps, and fractional CMOs driving
               growth initiatives. These roles offer businesses access to senior expertise without full-time employment costs, while
               giving executives portfolio careers with diverse challenges and premium day rates.
             </p>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-600 leading-relaxed">
               The COVID-19 pandemic accelerated this transformation, normalizing remote work and demonstrating that strategic
               leadership doesn't require physical presence five days per week. As a result, fractional jobs UK has grown by over
               40% year-on-year, with London leading the market but opportunities expanding rapidly across Manchester, Birmingham,
@@ -829,15 +829,15 @@ export default async function FractionalJobsUKPage() {
       </section>
 
       {/* Editorial Content: Benefits of Fractional Jobs */}
-      <section className="py-16 md:py-20 bg-gray-950">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-white !text-white mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 !text-gray-900 mb-6">
             The Benefits of Fractional Jobs for Executives and Companies
           </h2>
           <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-gray-900 rounded-xl p-6 border border-gray-800">
-              <h3 className="text-xl font-bold text-white mb-4">For Executives</h3>
-              <ul className="space-y-3 text-gray-300">
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">For Executives</h3>
+              <ul className="space-y-3 text-gray-600">
                 <li className="flex items-start gap-3">
                   <span className="text-blue-400 mt-1">✓</span>
                   <span><strong>Premium Earnings:</strong> £700-£1,500 daily rates enable £150,000-£300,000+ annual income</span>
@@ -856,9 +856,9 @@ export default async function FractionalJobsUKPage() {
                 </li>
               </ul>
             </div>
-            <div className="bg-gray-900 rounded-xl p-6 border border-gray-800">
-              <h3 className="text-xl font-bold text-white mb-4">For Companies</h3>
-              <ul className="space-y-3 text-gray-300">
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">For Companies</h3>
+              <ul className="space-y-3 text-gray-600">
                 <li className="flex items-start gap-3">
                   <span className="text-blue-400 mt-1">✓</span>
                   <span><strong>Cost Efficiency:</strong> Save 40-60% versus full-time hire including salary, NI, benefits, and overhead</span>
@@ -878,7 +878,7 @@ export default async function FractionalJobsUKPage() {
               </ul>
             </div>
           </div>
-          <p className="text-gray-300 leading-relaxed">
+          <p className="text-gray-600 leading-relaxed">
             The fractional model creates a win-win scenario. Companies gain access to seasoned leadership at a fraction of
             full-time cost, while executives build rewarding portfolio careers with higher earnings and greater autonomy.
             This alignment of interests explains why fractional jobs UK continues to be one of the fastest-growing segments
@@ -888,23 +888,23 @@ export default async function FractionalJobsUKPage() {
       </section>
 
       {/* Legal and Tax Considerations for Fractional Jobs UK */}
-      <section className="py-16 md:py-20 bg-gray-900">
+      <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-white !text-white mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 !text-gray-900 mb-8">
             Legal and Tax Considerations for Fractional Jobs UK
           </h2>
 
-          <div className="space-y-8 text-gray-300 leading-relaxed">
+          <div className="space-y-8 text-gray-600 leading-relaxed">
             <div>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-4">IR35 and Fractional Executive Work</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">IR35 and Fractional Executive Work</h3>
               <p className="mb-4">
                 Understanding IR35 legislation is critical for fractional executives operating in the UK. The <a href="https://www.gov.uk/guidance/understanding-off-payroll-working-ir35" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">HMRC IR35 rules</a> determine
                 whether a contractor should be treated as an employee for tax purposes. Properly structured fractional arrangements typically fall
                 outside IR35 due to multiple concurrent clients, control over delivery methods, and genuine business-to-business relationships.
               </p>
 
-              <div className="bg-gray-950 rounded-xl p-6 mb-4">
-                <h4 className="text-lg font-bold text-white mb-3">Key IR35 Factors for Fractional Jobs</h4>
+              <div className="bg-white rounded-xl p-6 mb-4">
+                <h4 className="text-lg font-bold text-gray-900 mb-3">Key IR35 Factors for Fractional Jobs</h4>
                 <div className="space-y-3">
                   <div>
                     <h5 className="text-base font-semibold text-blue-400 mb-1">Multiple Clients</h5>
@@ -927,7 +927,7 @@ export default async function FractionalJobsUKPage() {
             </div>
 
             <div>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-4">Structuring Your Fractional Practice</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">Structuring Your Fractional Practice</h3>
               <p className="mb-4">
                 Most UK fractional executives operate through limited companies to optimize tax efficiency and maintain IR35 compliance.
                 According to <a href="https://www.gov.uk/set-up-limited-company" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Companies House guidance</a>,
@@ -935,8 +935,8 @@ export default async function FractionalJobsUKPage() {
               </p>
 
               <div className="grid md:grid-cols-2 gap-4 mb-4">
-                <div className="bg-gray-950 rounded-xl p-5">
-                  <h4 className="text-base font-bold text-white mb-2">Limited Company Benefits</h4>
+                <div className="bg-white rounded-xl p-5">
+                  <h4 className="text-base font-bold text-gray-900 mb-2">Limited Company Benefits</h4>
                   <ul className="space-y-1 text-sm">
                     <li>• Corporation tax at 19-25% vs income tax up to 45%</li>
                     <li>• Dividend tax efficiency on profit extraction</li>
@@ -945,8 +945,8 @@ export default async function FractionalJobsUKPage() {
                     <li>• Pension contributions up to £60,000 annually</li>
                   </ul>
                 </div>
-                <div className="bg-gray-950 rounded-xl p-5">
-                  <h4 className="text-base font-bold text-white mb-2">Sole Trader Considerations</h4>
+                <div className="bg-white rounded-xl p-5">
+                  <h4 className="text-base font-bold text-gray-900 mb-2">Sole Trader Considerations</h4>
                   <ul className="space-y-1 text-sm">
                     <li>• Simpler administration and lower costs</li>
                     <li>• All profits taxed as personal income</li>
@@ -959,7 +959,7 @@ export default async function FractionalJobsUKPage() {
             </div>
 
             <div>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-4">Employment Law and Fractional Contracts</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">Employment Law and Fractional Contracts</h3>
               <p className="mb-4">
                 Fractional executives should ensure contracts clearly establish contractor status rather than employment. Key contractual elements include
                 defined deliverables rather than time-based obligations, notice periods appropriate for business relationships (typically 30-90 days),
@@ -968,20 +968,20 @@ export default async function FractionalJobsUKPage() {
               </p>
 
               <div className="bg-blue-950/30 border border-blue-800/30 rounded-xl p-6">
-                <h4 className="text-lg font-bold text-white mb-3">Essential Contract Clauses for Fractional Work</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">Essential Contract Clauses for Fractional Work</h4>
                 <div className="space-y-2 text-sm">
-                  <p><strong className="text-white">Scope of Services:</strong> Define specific deliverables and outcomes rather than hours worked</p>
-                  <p><strong className="text-white">Non-Exclusivity:</strong> Explicit confirmation of right to serve other clients</p>
-                  <p><strong className="text-white">Payment Terms:</strong> Day rate or project fee structure, typically net 30 days</p>
-                  <p><strong className="text-white">Intellectual Property:</strong> Clear ownership and licensing arrangements for work product</p>
-                  <p><strong className="text-white">Professional Indemnity:</strong> Specification of required insurance coverage (typically £1-2M)</p>
-                  <p><strong className="text-white">Data Protection:</strong> GDPR compliance obligations per <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-blue-200 underline">ICO guidance</a></p>
+                  <p><strong className="text-gray-900">Scope of Services:</strong> Define specific deliverables and outcomes rather than hours worked</p>
+                  <p><strong className="text-gray-900">Non-Exclusivity:</strong> Explicit confirmation of right to serve other clients</p>
+                  <p><strong className="text-gray-900">Payment Terms:</strong> Day rate or project fee structure, typically net 30 days</p>
+                  <p><strong className="text-gray-900">Intellectual Property:</strong> Clear ownership and licensing arrangements for work product</p>
+                  <p><strong className="text-gray-900">Professional Indemnity:</strong> Specification of required insurance coverage (typically £1-2M)</p>
+                  <p><strong className="text-gray-900">Data Protection:</strong> GDPR compliance obligations per <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-blue-200 underline">ICO guidance</a></p>
                 </div>
               </div>
             </div>
 
             <div>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-4">Insurance and Professional Protection</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">Insurance and Professional Protection</h3>
               <p className="mb-4">
                 Fractional executives should maintain comprehensive insurance coverage to protect against professional risks. Most clients require
                 evidence of professional indemnity insurance before engagement commencement, with £1 million minimum coverage standard for
@@ -989,15 +989,15 @@ export default async function FractionalJobsUKPage() {
               </p>
               <div className="space-y-3">
                 <div className="border-l-4 border-blue-600 pl-4">
-                  <h4 className="text-base font-bold text-white mb-1">Professional Indemnity Insurance</h4>
+                  <h4 className="text-base font-bold text-gray-900 mb-1">Professional Indemnity Insurance</h4>
                   <p className="text-sm">Protects against claims of professional negligence, errors in advice, or breach of professional duty. Essential for all fractional executive work.</p>
                 </div>
                 <div className="border-l-4 border-blue-600 pl-4">
-                  <h4 className="text-base font-bold text-white mb-1">Public Liability Insurance</h4>
+                  <h4 className="text-base font-bold text-gray-900 mb-1">Public Liability Insurance</h4>
                   <p className="text-sm">Covers third-party injury or property damage claims. Required for on-site client work and typically £2-5 million coverage.</p>
                 </div>
                 <div className="border-l-4 border-blue-600 pl-4">
-                  <h4 className="text-base font-bold text-white mb-1">Cyber Liability Insurance</h4>
+                  <h4 className="text-base font-bold text-gray-900 mb-1">Cyber Liability Insurance</h4>
                   <p className="text-sm">Increasingly important for fractional CTOs and executives handling sensitive data. Covers data breach costs and regulatory fines.</p>
                 </div>
               </div>
@@ -1007,12 +1007,12 @@ export default async function FractionalJobsUKPage() {
       </section>
 
       {/* Editorial Content: How to Succeed in Fractional Jobs UK */}
-      <section className="py-16 md:py-20 bg-gray-950">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-white !text-white mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 !text-gray-900 mb-6">
             How to Get Started with Fractional Jobs UK
           </h2>
-          <div className="space-y-6 text-gray-300">
+          <div className="space-y-6 text-gray-600">
             <p className="leading-relaxed">
               Breaking into the fractional jobs UK market requires strategic positioning and demonstrable expertise. Most successful
               fractional executives have 15+ years of experience in their domain, with at least 5 years in senior leadership roles.
@@ -1020,14 +1020,14 @@ export default async function FractionalJobsUKPage() {
               building scalable systems that persist after your engagement ends.
             </p>
 
-            <div className="bg-gray-950 rounded-xl p-6 border border-gray-800">
-              <h3 className="text-xl font-bold text-white mb-4">Essential Steps to Launch Your Fractional Jobs UK Career</h3>
-              <ol className="space-y-4 text-gray-300 list-decimal list-inside">
-                <li><strong className="text-white">Build Your Portfolio:</strong> Document 3-5 significant achievements with quantified results. Fractional clients want evidence of transformation, not just task completion.</li>
-                <li><strong className="text-white">Establish Your Niche:</strong> The most successful fractional executives specialize. Whether it's SaaS financial modeling, B2B growth marketing, or technical architecture for scale-ups, depth beats breadth.</li>
-                <li><strong className="text-white">Set Your Rate Structure:</strong> UK fractional jobs typically command £700-£1,500 per day depending on role and experience. Start conservative, then adjust based on demand and value delivered.</li>
-                <li><strong className="text-white">Develop Client Acquisition:</strong> Your first 2-3 clients often come from existing networks. Beyond that, content marketing, speaking engagements, and strategic partnerships become critical.</li>
-                <li><strong className="text-white">Master the Delivery Model:</strong> Fractional work demands asynchronous productivity. You'll need systems for documentation, knowledge transfer, and maintaining momentum across 2-4 concurrent clients.</li>
+            <div className="bg-white rounded-xl p-6 border border-gray-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Essential Steps to Launch Your Fractional Jobs UK Career</h3>
+              <ol className="space-y-4 text-gray-600 list-decimal list-inside">
+                <li><strong className="text-gray-900">Build Your Portfolio:</strong> Document 3-5 significant achievements with quantified results. Fractional clients want evidence of transformation, not just task completion.</li>
+                <li><strong className="text-gray-900">Establish Your Niche:</strong> The most successful fractional executives specialize. Whether it's SaaS financial modeling, B2B growth marketing, or technical architecture for scale-ups, depth beats breadth.</li>
+                <li><strong className="text-gray-900">Set Your Rate Structure:</strong> UK fractional jobs typically command £700-£1,500 per day depending on role and experience. Start conservative, then adjust based on demand and value delivered.</li>
+                <li><strong className="text-gray-900">Develop Client Acquisition:</strong> Your first 2-3 clients often come from existing networks. Beyond that, content marketing, speaking engagements, and strategic partnerships become critical.</li>
+                <li><strong className="text-gray-900">Master the Delivery Model:</strong> Fractional work demands asynchronous productivity. You'll need systems for documentation, knowledge transfer, and maintaining momentum across 2-4 concurrent clients.</li>
               </ol>
             </div>
 
@@ -1048,12 +1048,12 @@ export default async function FractionalJobsUKPage() {
       </section>
 
       {/* Editorial Content: Market Outlook */}
-      <section className="py-16 md:py-20 bg-gray-950">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-white !text-white mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 !text-gray-900 mb-6">
             The Future of Fractional Jobs in the UK Market
           </h2>
-          <div className="space-y-6 text-gray-300">
+          <div className="space-y-6 text-gray-600">
             <p className="leading-relaxed">
               The fractional executive model is experiencing structural acceleration across the UK. Economic uncertainty drives companies
               to optimize fixed costs while maintaining access to strategic capabilities. Simultaneously, experienced executives increasingly
@@ -1069,9 +1069,9 @@ export default async function FractionalJobsUKPage() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gray-900 rounded-xl p-6 border border-gray-800">
-                <h3 className="text-lg font-bold text-white mb-3">Key Market Drivers</h3>
-                <ul className="space-y-2 text-sm text-gray-300">
+              <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">Key Market Drivers</h3>
+                <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">→</span>
                     <span>Remote work infrastructure enables seamless fractional engagement</span>
@@ -1091,9 +1091,9 @@ export default async function FractionalJobsUKPage() {
                 </ul>
               </div>
 
-              <div className="bg-gray-900 rounded-xl p-6 border border-gray-800">
-                <h3 className="text-lg font-bold text-white mb-3">Emerging Opportunities</h3>
-                <ul className="space-y-2 text-sm text-gray-300">
+              <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">Emerging Opportunities</h3>
+                <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">→</span>
                     <span>Fractional Chief People Officers for HR transformation</span>
@@ -1126,10 +1126,10 @@ export default async function FractionalJobsUKPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 md:py-24 bg-gray-900">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-xs font-medium uppercase tracking-wider text-gray-400 mb-6 block">Get Started</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white !text-white mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 !text-gray-900 mb-6 leading-tight">
             Find Fractional Jobs UK Today
           </h2>
           <p className="text-base md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
@@ -1144,7 +1144,7 @@ export default async function FractionalJobsUKPage() {
             </Link>
             <Link
               href="/handler/sign-up"
-              className="inline-flex items-center justify-center px-8 md:px-10 py-4 md:py-5 text-base md:text-lg font-semibold rounded-lg border border-gray-700 text-white hover:bg-gray-800 transition-all duration-200"
+              className="inline-flex items-center justify-center px-8 md:px-10 py-4 md:py-5 text-base md:text-lg font-semibold rounded-lg border border-gray-700 text-gray-900 hover:bg-gray-800 transition-all duration-200"
             >
               Join Platform
             </Link>
