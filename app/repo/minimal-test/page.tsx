@@ -32,8 +32,8 @@ export default function MinimalTestPage() {
         <h1 className="text-2xl font-bold mb-4">Minimal Test Page</h1>
 
         <div className="space-y-4">
-          <div className="p-4 bg-black/40 rounded">
-            <div className="text-sm text-gray-400 mb-2">Hume Token Status:</div>
+          <div className="p-4 bg-gray-50/40 rounded">
+            <div className="text-sm text-gray-600 mb-2">Hume Token Status:</div>
             {loading && <div className="text-yellow-400">Loading...</div>}
             {error && <div className="text-red-400">Error: {error}</div>}
             {token && (
@@ -43,8 +43,8 @@ export default function MinimalTestPage() {
             )}
           </div>
 
-          <div className="p-4 bg-black/40 rounded">
-            <div className="text-sm text-gray-400 mb-2">Console Output:</div>
+          <div className="p-4 bg-gray-50/40 rounded">
+            <div className="text-sm text-gray-600 mb-2">Console Output:</div>
             <div className="text-xs text-gray-300">
               Check browser console for detailed logs
             </div>

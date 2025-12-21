@@ -269,7 +269,7 @@ function VoiceTest() {
           <h2 className="font-semibold mb-3 text-yellow-400">Test Variables (All 6 for Quest prompt)</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
             <div>
-              <label className="block text-gray-400 mb-1">first_name</label>
+              <label className="block text-gray-600 mb-1">first_name</label>
               <input
                 type="text"
                 value={testVars.first_name}
@@ -278,7 +278,7 @@ function VoiceTest() {
               />
             </div>
             <div>
-              <label className="block text-gray-400 mb-1">is_authenticated</label>
+              <label className="block text-gray-600 mb-1">is_authenticated</label>
               <select
                 value={testVars.is_authenticated}
                 onChange={(e) => setTestVars(v => ({ ...v, is_authenticated: e.target.value }))}
@@ -289,7 +289,7 @@ function VoiceTest() {
               </select>
             </div>
             <div>
-              <label className="block text-gray-400 mb-1">current_country</label>
+              <label className="block text-gray-600 mb-1">current_country</label>
               <input
                 type="text"
                 value={testVars.current_country}
@@ -298,7 +298,7 @@ function VoiceTest() {
               />
             </div>
             <div>
-              <label className="block text-gray-400 mb-1">interests</label>
+              <label className="block text-gray-600 mb-1">interests</label>
               <input
                 type="text"
                 value={testVars.interests}
@@ -307,7 +307,7 @@ function VoiceTest() {
               />
             </div>
             <div>
-              <label className="block text-gray-400 mb-1">timeline</label>
+              <label className="block text-gray-600 mb-1">timeline</label>
               <input
                 type="text"
                 value={testVars.timeline}
@@ -316,7 +316,7 @@ function VoiceTest() {
               />
             </div>
             <div>
-              <label className="block text-gray-400 mb-1">budget</label>
+              <label className="block text-gray-600 mb-1">budget</label>
               <input
                 type="text"
                 value={testVars.budget}
@@ -379,7 +379,7 @@ function VoiceTest() {
         </div>
 
         {/* Logs Panel - FULL WIDTH */}
-        <div className="bg-black rounded-lg p-4 font-mono text-sm mb-4">
+        <div className="bg-gray-50 rounded-lg p-4 font-mono text-sm mb-4">
           <h2 className="text-yellow-400 mb-2">Logs ({logs.length}):</h2>
           <div className="h-80 overflow-auto space-y-1">
             {logs.map((log, i) => (

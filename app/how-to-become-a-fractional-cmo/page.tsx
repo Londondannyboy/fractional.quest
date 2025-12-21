@@ -87,7 +87,7 @@ export default function HowToBecomeFractionalCMOPage() {
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="mb-16 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Prerequisites</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Prerequisites</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Are You Ready to Go Fractional?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Honest assessment: becoming a fractional CMO isn't for everyone. Here's what you need.
@@ -174,7 +174,7 @@ export default function HowToBecomeFractionalCMOPage() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-16 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Skills</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Skills</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Essential Skills for Fractional CMOs</h2>
           </div>
 
@@ -276,7 +276,7 @@ export default function HowToBecomeFractionalCMOPage() {
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="mb-16 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Transition Plan</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Transition Plan</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">7 Steps to Become a Fractional CMO</h2>
           </div>
 
@@ -405,7 +405,7 @@ export default function HowToBecomeFractionalCMOPage() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Earning Potential</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Earning Potential</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">How Much Can You Earn?</h2>
           </div>
 

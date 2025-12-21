@@ -98,7 +98,7 @@ export default async function FractionalHRServicesPage() {
               <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Services
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
                 Fractional HR<br />
                 <span className="text-pink-400">Services</span>
               </h1>
@@ -131,7 +131,7 @@ export default async function FractionalHRServicesPage() {
       <section id="services" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">What We Offer</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">What We Offer</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional HR Services</h2>
           </div>
 
@@ -159,7 +159,7 @@ export default async function FractionalHRServicesPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Process</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Process</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">How Fractional HR Services Work</h2>
           </div>
 
@@ -203,7 +203,7 @@ export default async function FractionalHRServicesPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Pricing</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Pricing</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Calculate Your Investment</h2>
           </div>
           <RoleCalculator role="hr" />
@@ -214,7 +214,7 @@ export default async function FractionalHRServicesPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Common Questions</h2>
           </div>
           <FAQ items={SERVICES_FAQS} title="" />
@@ -225,7 +225,7 @@ export default async function FractionalHRServicesPage() {
       <section className="py-20 bg-gray-50 text-gray-900">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-black mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Find the right fractional HR leader for your business or list your services.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

@@ -57,7 +57,7 @@ export default function FractionalCMOCostPage() {
           </Link>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="inline-block bg-black text-blue-400 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
+              <span className="inline-block bg-gray-50 text-blue-400 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Pricing Guide 2025
               </span>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight">
@@ -69,19 +69,19 @@ export default function FractionalCMOCostPage() {
             </div>
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-white/10 backdrop-blur p-6 rounded-lg border border-white/20">
-                <div className="text-4xl font-black text-white mb-2">£700-1.4k</div>
+                <div className="text-4xl font-black text-gray-900 mb-2">£700-1.4k</div>
                 <div className="text-blue-900/30 text-sm">Day Rate Range</div>
               </div>
               <div className="bg-white/10 backdrop-blur p-6 rounded-lg border border-white/20">
-                <div className="text-4xl font-black text-white mb-2">£3-5.5k</div>
+                <div className="text-4xl font-black text-gray-900 mb-2">£3-5.5k</div>
                 <div className="text-blue-900/30 text-sm">Monthly Retainer</div>
               </div>
               <div className="bg-white/10 backdrop-blur p-6 rounded-lg border border-white/20">
-                <div className="text-4xl font-black text-white mb-2">40-60%</div>
+                <div className="text-4xl font-black text-gray-900 mb-2">40-60%</div>
                 <div className="text-blue-900/30 text-sm">Cost Savings</div>
               </div>
               <div className="bg-white/10 backdrop-blur p-6 rounded-lg border border-white/20">
-                <div className="text-4xl font-black text-white mb-2">£70-140k</div>
+                <div className="text-4xl font-black text-gray-900 mb-2">£70-140k</div>
                 <div className="text-blue-900/30 text-sm">Annual Cost</div>
               </div>
             </div>
@@ -93,7 +93,7 @@ export default function FractionalCMOCostPage() {
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Cost Calculator</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Cost Calculator</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Calculate Your Savings</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Compare the cost of hiring a fractional CMO vs full-time. See potential savings in real-time.
@@ -107,7 +107,7 @@ export default function FractionalCMOCostPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-16 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Pricing Models</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Pricing Models</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">How Fractional CMOs Charge</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Three common pricing models. Choose based on your needs, budget, and engagement timeline.
@@ -213,7 +213,7 @@ export default function FractionalCMOCostPage() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Rate Breakdown</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Rate Breakdown</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Fractional CMO Day Rates by Experience</h2>
             <p className="text-xl text-gray-600 max-w-3xl">
               Pricing varies significantly based on years of experience, track record, and specialization.
@@ -263,7 +263,7 @@ export default function FractionalCMOCostPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Pricing Factors</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Pricing Factors</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">What Affects Fractional CMO Pricing?</h2>
           </div>
 
@@ -318,7 +318,7 @@ export default function FractionalCMOCostPage() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Regional Pricing</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Regional Pricing</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">UK Regional Rate Variations</h2>
             <p className="text-xl text-gray-600 max-w-3xl">
               Location impacts pricing, though remote work has reduced regional differences significantly.
@@ -348,7 +348,7 @@ export default function FractionalCMOCostPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">ROI Analysis</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">ROI Analysis</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Fractional vs Full-Time CMO Cost</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               The true cost of a full-time CMO goes far beyond salary. Here's the full breakdown.
@@ -437,7 +437,7 @@ export default function FractionalCMOCostPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Hidden Costs</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Hidden Costs</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Are There Hidden Costs?</h2>
           </div>
 

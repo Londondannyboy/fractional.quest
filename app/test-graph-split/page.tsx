@@ -13,14 +13,14 @@ export default function TestGraphSplitPage() {
       {/* Header */}
       <div className="bg-gray-50 border-b border-gray-200 p-4">
         <h1 className="text-white text-xl font-bold">Split Screen Graph Test</h1>
-        <p className="text-gray-400 text-sm">Two graphs with different viewpoints side by side</p>
+        <p className="text-gray-600 text-sm">Two graphs with different viewpoints side by side</p>
       </div>
 
       {/* Split Screen Layout */}
       <div className="flex flex-col lg:flex-row h-[calc(100vh-80px)]">
         {/* Left Panel - CFO Jobs */}
         <div className="flex-1 relative border-r border-gray-200">
-          <div className="absolute top-4 left-4 z-20 bg-black/70 backdrop-blur px-4 py-2 rounded-lg">
+          <div className="absolute top-4 left-4 z-20 bg-gray-50/70 backdrop-blur px-4 py-2 rounded-lg">
             <h2 className="text-white font-semibold">CFO Jobs</h2>
             <p className="text-gray-400 text-xs">Finance leadership roles</p>
           </div>
@@ -35,7 +35,7 @@ export default function TestGraphSplitPage() {
 
         {/* Right Panel - CTO Jobs */}
         <div className="flex-1 relative">
-          <div className="absolute top-4 left-4 z-20 bg-black/70 backdrop-blur px-4 py-2 rounded-lg">
+          <div className="absolute top-4 left-4 z-20 bg-gray-50/70 backdrop-blur px-4 py-2 rounded-lg">
             <h2 className="text-white font-semibold">CTO Jobs</h2>
             <p className="text-gray-400 text-xs">Technology leadership roles</p>
           </div>
@@ -50,7 +50,7 @@ export default function TestGraphSplitPage() {
       </div>
 
       {/* Legend */}
-      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-sm px-6 py-3 rounded-full text-xs z-30 flex items-center gap-6">
+      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-gray-50/80 backdrop-blur-sm px-6 py-3 rounded-full text-xs z-30 flex items-center gap-6">
         <div className="flex items-center gap-2">
           <div className="w-4 h-4 rounded-full bg-amber-500" />
           <span className="text-white">Companies</span>

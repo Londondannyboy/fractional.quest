@@ -32,22 +32,22 @@ export default function FractionalHRHourlyRatePage() {
       {/* Hero */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-4xl mx-auto px-6">
-          <Link href="/fractional-hr" className="text-gray-400 hover:text-white mb-6 inline-block text-sm">← Back to HR Hub</Link>
+          <Link href="/fractional-hr" className="text-gray-400 hover:text-gray-900 mb-6 inline-block text-sm">← Back to HR Hub</Link>
           <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             Pricing Guide 2025
           </span>
-          <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Fractional HR<br />Hourly Rate</h1>
-          <p className="text-xl text-gray-300 mb-8">
+          <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">Fractional HR<br />Hourly Rate</h1>
+          <p className="text-xl text-gray-600 mb-8">
             UK fractional HR hourly rates from <strong className="text-white">£75-£163 per hour</strong> depending on seniority and specialisation.
           </p>
           <div className="flex flex-wrap gap-8">
             <div>
               <div className="text-4xl font-black text-pink-400">£113-£138</div>
-              <div className="text-gray-400 text-sm">HR Director Hourly</div>
+              <div className="text-gray-600 text-sm">HR Director Hourly</div>
             </div>
             <div>
               <div className="text-4xl font-black text-white">£119</div>
-              <div className="text-gray-400 text-sm">Market Average</div>
+              <div className="text-gray-600 text-sm">Market Average</div>
             </div>
           </div>
         </div>
@@ -151,7 +151,7 @@ export default function FractionalHRHourlyRatePage() {
       <section className="py-16 bg-gray-50 text-gray-900">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Explore Fractional HR Opportunities</h2>
-          <p className="text-gray-300 mb-8">Browse roles or learn more about fractional HR pricing.</p>
+          <p className="text-gray-600 mb-8">Browse roles or learn more about fractional HR pricing.</p>
           <div className="flex justify-center gap-4 flex-wrap">
             <Link href="/fractional-hr-jobs-uk" className="px-8 py-4 bg-pink-500 text-white font-semibold hover:bg-pink-400 transition-colors">
               Browse HR Jobs

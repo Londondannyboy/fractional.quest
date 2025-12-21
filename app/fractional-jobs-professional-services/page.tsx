@@ -73,8 +73,8 @@ export default async function ProfessionalServicesPage() {
           <JobsGraph3D limit={30} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="bg-black/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10 max-w-3xl">
-            <Link href="/" className="inline-flex items-center text-white/70 hover:text-white mb-6 transition-colors">
+          <div className="bg-gray-50/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10 max-w-3xl">
+            <Link href="/" className="inline-flex items-center text-white/70 hover:text-gray-900 mb-6 transition-colors">
               ← Back to Home
             </Link>
             <div className="inline-block mb-6">
@@ -82,7 +82,7 @@ export default async function ProfessionalServicesPage() {
                 {stats.totalPS}+ Professional Services Jobs
               </span>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
               Fractional Jobs Professional Services
             </h1>
             <p className="max-w-2xl text-xl text-white/80 mb-10 leading-relaxed">
@@ -214,7 +214,7 @@ export default async function ProfessionalServicesPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Success Stories</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -241,7 +241,7 @@ export default async function ProfessionalServicesPage() {
       <section className="py-24 md:py-32 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">Industry Context</span>
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">Industry Context</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Professional Services Firms Hire Fractional Executives</h2>
           </div>
           <div className="prose prose-lg max-w-none">
@@ -268,7 +268,7 @@ export default async function ProfessionalServicesPage() {
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">Role Requirements</span>
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">Role Requirements</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">What Professional Services Fractional Executives Do Differently</h2>
           </div>
           <div className="prose prose-lg max-w-none">
@@ -298,7 +298,7 @@ export default async function ProfessionalServicesPage() {
       <section className="py-24 md:py-32 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">Hiring Guide</span>
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">Hiring Guide</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Hiring Fractional Executives for Professional Services: What to Look For</h2>
           </div>
           <div className="prose prose-lg max-w-none">
@@ -421,7 +421,7 @@ export default async function ProfessionalServicesPage() {
       {/* Final CTA */}
       <section className="py-20 md:py-28 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Ready for Professional Services Leadership?
           </h2>
           <p className="text-xl text-gray-100 mb-10">

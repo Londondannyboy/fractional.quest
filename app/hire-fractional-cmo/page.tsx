@@ -120,7 +120,7 @@ export default function HireFractionalCMOPage() {
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-16 text-center max-w-3xl mx-auto">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Sourcing</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Sourcing</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Where to Find Fractional CMOs</h2>
             <p className="text-xl text-gray-600">
               Five proven channels for finding pre-vetted, experienced fractional marketing leaders.
@@ -202,7 +202,7 @@ export default function HireFractionalCMOPage() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="mb-16">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Evaluation Criteria</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Evaluation Criteria</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">What to Look For in a Fractional CMO</h2>
             <p className="text-xl text-gray-600 max-w-3xl">
               Not all experienced marketers make good fractional CMOs. Here's what separates the best from the rest.
@@ -275,7 +275,7 @@ export default function HireFractionalCMOPage() {
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="mb-16">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Interview Guide</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Interview Guide</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Interview Questions to Ask</h2>
             <p className="text-xl text-gray-600 max-w-3xl">
               These questions separate strategic CMOs from tactical marketers. Use them to assess expertise, results, and fit.
@@ -378,7 +378,7 @@ export default function HireFractionalCMOPage() {
       <section id="process" className="py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Process</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Process</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">The Fractional CMO Hiring Process</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               From first conversation to start date in 2-4 weeks. Here's the proven process.
@@ -434,7 +434,7 @@ export default function HireFractionalCMOPage() {
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="mb-16">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Contracts</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Contracts</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Contract Terms & Structure</h2>
             <p className="text-xl text-gray-600 max-w-3xl">
               Standard terms for fractional CMO engagements. Adapt based on your needs and the candidate's preferences.

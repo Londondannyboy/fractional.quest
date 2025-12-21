@@ -45,7 +45,7 @@ export default function DualAgentTest() {
 
               <div className="mt-6 text-center">
                 <h3 className="text-xl font-bold mb-2">Frac</h3>
-                <p className="text-gray-400 text-sm max-w-xs">
+                <p className="text-gray-600 text-sm max-w-xs">
                   Your general career assistant. Search jobs, get advice, explore opportunities.
                 </p>
               </div>
@@ -61,7 +61,7 @@ export default function DualAgentTest() {
 
               <div className="mt-6 text-center">
                 <h3 className="text-xl font-bold mb-2">Onboarding Coach</h3>
-                <p className="text-gray-400 text-sm max-w-xs">
+                <p className="text-gray-600 text-sm max-w-xs">
                   Build your profile step-by-step. Share your skills, experience, and preferences.
                 </p>
               </div>
@@ -96,7 +96,7 @@ export default function DualAgentTest() {
             </div>
 
             {/* Conversation Area */}
-            <div className="bg-black/50 rounded-lg p-6 min-h-[300px]">
+            <div className="bg-gray-50/50 rounded-lg p-6 min-h-[300px]">
               <div className="text-gray-500 text-center">
                 <div className="text-6xl mb-4">
                   {activeAgent === 'frac' ? '🤖' : '👨‍💼'}
@@ -115,7 +115,7 @@ export default function DualAgentTest() {
 
             {/* Debug Info */}
             <div className="mt-6 p-4 bg-white rounded-lg border border-gray-200">
-              <h4 className="text-sm font-bold text-gray-400 mb-2">Debug Info:</h4>
+              <h4 className="text-sm font-bold text-gray-600 mb-2">Debug Info:</h4>
               <pre className="text-xs text-gray-500">
                 {JSON.stringify({
                   activeAgent,

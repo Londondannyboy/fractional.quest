@@ -194,10 +194,10 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-16 md:py-24 bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-editorial text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="font-editorial text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Ready to Start Your Journey?
           </h2>
-          <p className="text-xl text-gray-300 mb-10">
+          <p className="text-xl text-gray-600 mb-10">
             Whether you're an executive exploring fractional work or a company looking for talent,
             we're here to help.
           </p>

@@ -90,7 +90,7 @@ export default async function FractionalCHROPage() {
               <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Executive Guide
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
                 Fractional<br />
                 <span className="text-pink-400">CHRO</span>
               </h1>
@@ -128,7 +128,7 @@ export default async function FractionalCHROPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Definition</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Definition</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">What is a Fractional CHRO?</h2>
           </div>
 
@@ -200,7 +200,7 @@ export default async function FractionalCHROPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Responsibilities</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Responsibilities</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">What Does a Fractional CHRO Do?</h2>
           </div>
 
@@ -264,7 +264,7 @@ export default async function FractionalCHROPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Use Cases</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Use Cases</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">When to Hire a Fractional CHRO</h2>
           </div>
 
@@ -303,7 +303,7 @@ export default async function FractionalCHROPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Costs</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Costs</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional CHRO Costs</h2>
           </div>
 
@@ -344,7 +344,7 @@ export default async function FractionalCHROPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
           <FAQ items={CHRO_FAQS} title="" />
@@ -352,10 +352,10 @@ export default async function FractionalCHROPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-black text-white">
+      <section className="py-20 md:py-28 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Find a Fractional CHRO</h2>
-          <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Access executive-level people leadership without full-time cost.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

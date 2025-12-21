@@ -181,7 +181,7 @@ function VoiceInterface() {
             <span className="text-blue-400">Demo</span>
           </h1>
 
-          <p className="text-lg text-gray-400 mb-8">
+          <p className="text-lg text-gray-600 mb-8">
             Talk to Frac and watch your knowledge graph build in real-time!
           </p>
 

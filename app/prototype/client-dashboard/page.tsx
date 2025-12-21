@@ -236,7 +236,7 @@ export default function ClientDashboard() {
         {/* CENTER: Matching Candidates Graph */}
         <div className="col-span-5 bg-gradient-to-br from-green-900/20 to-black rounded-2xl border border-green-500/30 p-6">
           <h2 className="text-2xl font-bold mb-4">Matching Candidates</h2>
-          <div className="bg-black rounded-xl" style={{ height: 600 }}>
+          <div className="bg-gray-50 rounded-xl" style={{ height: 600 }}>
             <ForceGraph2D
               graphData={candidateGraph}
               nodeLabel={(node: any) => `${node.name}${node.fit ? ` (${node.fit}% fit)` : ''}`}

@@ -128,7 +128,7 @@ export default function FractionalCMOvsAgencyPage() {
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-16 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Detailed Comparison</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Detailed Comparison</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Side-by-Side Breakdown</h2>
           </div>
 
@@ -212,7 +212,7 @@ export default function FractionalCMOvsAgencyPage() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-16 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Decision Framework</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Decision Framework</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">When to Choose Each</h2>
           </div>
 
@@ -310,7 +310,7 @@ export default function FractionalCMOvsAgencyPage() {
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Best Practice</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Best Practice</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Can You Use Both Together?</h2>
             <p className="text-2xl text-teal-600 font-bold">Yes—and this is often the ideal setup.</p>
           </div>
@@ -394,7 +394,7 @@ export default function FractionalCMOvsAgencyPage() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Avoid These</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Avoid These</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Common Mistakes to Avoid</h2>
           </div>
 

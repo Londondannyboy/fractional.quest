@@ -68,7 +68,7 @@ export default function FractionalCFONearMePage() {
               <span className="inline-block bg-white text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Local Services
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
                 Fractional CFO<br />
                 <span className="text-gray-400">Services Near You</span>
               </h1>
@@ -106,7 +106,7 @@ export default function FractionalCFONearMePage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Benefits</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Benefits</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Why Choose a Local Fractional CFO?</h2>
           </div>
 
@@ -165,7 +165,7 @@ export default function FractionalCFONearMePage() {
       <section id="locations" className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">UK Coverage</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">UK Coverage</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional CFO Services by Location</h2>
             <p className="text-xl text-gray-600 mt-4">Find fractional CFOs in major UK cities and regions</p>
           </div>
@@ -293,7 +293,7 @@ export default function FractionalCFONearMePage() {
       <section id="local-vs-remote" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Comparison</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Comparison</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Local vs Remote Fractional CFO</h2>
           </div>
 
@@ -399,7 +399,7 @@ export default function FractionalCFONearMePage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Selection Guide</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Selection Guide</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">How to Choose a Local Fractional CFO</h2>
           </div>
 
@@ -555,7 +555,7 @@ export default function FractionalCFONearMePage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
           <FAQ items={NEAR_ME_FAQS} title="" />
@@ -566,7 +566,7 @@ export default function FractionalCFONearMePage() {
       <section className="py-20 md:py-28 bg-gray-50 text-gray-900">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Find Your Local CFO?</h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Browse hundreds of fractional CFO opportunities across the UK or post your requirements.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

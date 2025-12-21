@@ -97,7 +97,7 @@ export default async function FractionalHRGuidePage() {
               <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Complete Guide 2025
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
                 Fractional<br />
                 <span className="text-pink-400">HR</span>
               </h1>
@@ -135,7 +135,7 @@ export default async function FractionalHRGuidePage() {
       <section id="what-is" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Chapter 1</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Chapter 1</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">What is Fractional HR?</h2>
           </div>
 
@@ -195,10 +195,10 @@ export default async function FractionalHRGuidePage() {
             </div>
 
             <div className="bg-gray-50 text-gray-900 p-8 my-10">
-              <h4 className="text-xl font-bold text-white mb-4">Fractional HR vs Full-Time HR: Quick Comparison</h4>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Fractional HR vs Full-Time HR: Quick Comparison</h4>
               <div className="grid md:grid-cols-2 gap-6 text-gray-300">
                 <div>
-                  <p className="font-semibold text-white mb-2">Fractional HR:</p>
+                  <p className="font-semibold text-gray-900 mb-2">Fractional HR:</p>
                   <ul className="space-y-1 text-sm list-none pl-0">
                     <li>• 1-3 days/week (8-24 hours)</li>
                     <li>• £67k-£125k annually (2 days/week)</li>
@@ -209,7 +209,7 @@ export default async function FractionalHRGuidePage() {
                   </ul>
                 </div>
                 <div>
-                  <p className="font-semibold text-white mb-2">Full-Time CHRO:</p>
+                  <p className="font-semibold text-gray-900 mb-2">Full-Time CHRO:</p>
                   <ul className="space-y-1 text-sm list-none pl-0">
                     <li>• 5 days/week (40+ hours)</li>
                     <li>• £150k-£250k+ total comp</li>
@@ -229,7 +229,7 @@ export default async function FractionalHRGuidePage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Chapter 2</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Chapter 2</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Types of Fractional HR Roles</h2>
           </div>
 
@@ -321,7 +321,7 @@ export default async function FractionalHRGuidePage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Chapter 3</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Chapter 3</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">When Your Business Needs Fractional HR</h2>
           </div>
 
@@ -363,8 +363,8 @@ export default async function FractionalHRGuidePage() {
             </div>
 
             <div className="bg-gray-50 text-gray-900 p-8 my-10">
-              <h4 className="text-xl font-bold text-white mb-4">The Sweet Spot for Fractional HR</h4>
-              <p className="text-gray-300 mb-4">
+              <h4 className="text-xl font-bold text-gray-900 mb-4">The Sweet Spot for Fractional HR</h4>
+              <p className="text-gray-600 mb-4">
                 Companies with <strong className="text-white">20-150 employees and £2M-£20M revenue</strong> who need strategic HR expertise but don't require 40 hours weekly of CHRO time.
               </p>
               <ul className="space-y-2 text-gray-300 text-sm">
@@ -383,7 +383,7 @@ export default async function FractionalHRGuidePage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Chapter 4</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Chapter 4</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional HR Costs & Pricing Models in the UK</h2>
           </div>
 
@@ -493,7 +493,7 @@ export default async function FractionalHRGuidePage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Chapter 5</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Chapter 5</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">UK Employment Law Considerations</h2>
           </div>
 
@@ -549,8 +549,8 @@ export default async function FractionalHRGuidePage() {
             </div>
 
             <div className="bg-gray-50 text-gray-900 p-8 my-10">
-              <h4 className="text-xl font-bold text-white mb-4">Why Senior ER Experience Matters</h4>
-              <p className="text-gray-300 mb-0">
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Why Senior ER Experience Matters</h4>
+              <p className="text-gray-600 mb-0">
                 <a href="https://www.gov.uk/government/collections/employment-tribunal-media-reports" target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:text-pink-300 underline">Employment tribunal claims</a> cost UK businesses an average of £8,500 in legal fees even when successful, and £25,000+ when claims succeed. Fractional HR leaders with tribunal experience can identify risks early, manage processes correctly, and often avoid litigation entirely. This expertise pays for itself many times over.
               </p>
             </div>
@@ -562,7 +562,7 @@ export default async function FractionalHRGuidePage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Chapter 6</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Chapter 6</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">How to Hire a Fractional HR Professional</h2>
           </div>
 
@@ -662,7 +662,7 @@ export default async function FractionalHRGuidePage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
           <FAQ items={HR_GUIDE_FAQS} title="" />
@@ -673,44 +673,44 @@ export default async function FractionalHRGuidePage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Continue Learning</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Continue Learning</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Related HR Resources</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/fractional-hr-jobs-uk" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
               <h3 className="text-lg font-bold mb-2">Fractional HR Jobs UK</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Browse live fractional HR roles and career opportunities</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Browse live fractional HR roles and career opportunities</p>
               <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">Browse Jobs →</div>
             </Link>
 
             <Link href="/fractional-hr-cost" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
               <h3 className="text-lg font-bold mb-2">Fractional HR Cost Guide</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Detailed pricing breakdown and ROI analysis</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Detailed pricing breakdown and ROI analysis</p>
               <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">View Costs →</div>
             </Link>
 
             <Link href="/fractional-hr-for-startups" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
               <h3 className="text-lg font-bold mb-2">Fractional HR for Startups</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Startup-specific guidance and pricing</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Startup-specific guidance and pricing</p>
               <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">Learn More →</div>
             </Link>
 
             <Link href="/fractional-hr-director" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
               <h3 className="text-lg font-bold mb-2">Fractional HR Director</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">What they do and when to hire one</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">What they do and when to hire one</p>
               <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">Read Guide →</div>
             </Link>
 
             <Link href="/fractional-chro-services" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
               <h3 className="text-lg font-bold mb-2">Fractional CHRO Services</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Executive-level HR leadership</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Executive-level HR leadership</p>
               <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">Explore →</div>
             </Link>
 
             <Link href="/what-is-fractional-hr" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
               <h3 className="text-lg font-bold mb-2">What is Fractional HR?</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Quick definition and overview</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Quick definition and overview</p>
               <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">Read More →</div>
             </Link>
           </div>
@@ -718,13 +718,13 @@ export default async function FractionalHRGuidePage() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-20 md:py-28 bg-black text-white">
+      <section id="contact" className="py-20 md:py-28 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-4 block">Ready?</span>
           <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
             Find Your<br /><span className="text-pink-400">Fractional HR Leader</span>
           </h2>
-          <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Access senior HR expertise at 50-70% less than full-time cost. Browse opportunities or create your profile today.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">

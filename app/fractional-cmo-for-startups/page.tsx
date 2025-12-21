@@ -96,7 +96,7 @@ export default function FractionalCMOForStartupsPage() {
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-16 text-center max-w-3xl mx-auto">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Why Fractional?</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Why Fractional?</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Why Startups Choose Fractional CMOs</h2>
             <p className="text-xl text-gray-600">
               Startups face unique constraints. Fractional CMOs solve the "too expensive for full-time, too important to ignore" problem.
@@ -163,7 +163,7 @@ export default function FractionalCMOForStartupsPage() {
       <section id="when-to-hire" className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-16 text-center max-w-3xl mx-auto">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Stage-by-Stage</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Stage-by-Stage</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">When to Hire a Fractional CMO</h2>
             <p className="text-xl text-gray-600">
               The right timing depends on your stage, ARR, and marketing maturity. Here's what works at each stage.
@@ -314,7 +314,7 @@ export default function FractionalCMOForStartupsPage() {
       <section id="cost" className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Startup Pricing</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Startup Pricing</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">What Startups Pay for Fractional CMOs</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Pricing varies by stage, with many fractional CMOs offering equity options for early-stage startups.
@@ -433,7 +433,7 @@ export default function FractionalCMOForStartupsPage() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-16 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Case Studies</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Case Studies</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Startup Success Stories</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Real examples of startups that hired fractional CMOs and scaled successfully.

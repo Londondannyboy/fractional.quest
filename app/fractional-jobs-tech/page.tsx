@@ -81,8 +81,8 @@ export default async function TechJobsPage() {
             <div className="flex flex-col lg:flex-row justify-between items-end gap-8">
               {/* Left: Main content */}
               <div className="max-w-2xl">
-                <div className="bg-black/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10">
-                  <Link href="/" className="inline-flex items-center text-white/70 hover:text-white mb-6 transition-colors text-sm tracking-wide">
+                <div className="bg-gray-50/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10">
+                  <Link href="/" className="inline-flex items-center text-white/70 hover:text-gray-900 mb-6 transition-colors text-sm tracking-wide">
                     <span className="mr-2">←</span> Back to Home
                   </Link>
 
@@ -90,7 +90,7 @@ export default async function TechJobsPage() {
                     {stats.total}+ Tech Leadership Roles
                   </span>
 
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
                     Fractional<br />
                     <span className="text-blue-300">Tech</span> Jobs UK
                   </h1>
@@ -118,7 +118,7 @@ export default async function TechJobsPage() {
 
               {/* Right: Stats panel */}
               <div className="w-full lg:w-auto">
-                <div className="bg-black/40 backdrop-blur-md rounded-2xl p-6 border border-white/10">
+                <div className="bg-gray-50/40 backdrop-blur-md rounded-2xl p-6 border border-white/10">
                   <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                     <div className="text-center">
                       <div className="text-3xl md:text-4xl font-bold text-white font-mono">25%</div>
@@ -148,7 +148,7 @@ export default async function TechJobsPage() {
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">Opportunities</span>
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">Opportunities</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Fractional Tech Jobs</h2>
             <p className="text-xl text-gray-500">Browse {stats.total}+ tech leadership opportunities</p>
           </div>
@@ -160,7 +160,7 @@ export default async function TechJobsPage() {
       <section className="py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">By Role</span>
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">By Role</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Fractional Tech Roles</h2>
             <p className="text-xl text-gray-500">Technology leadership positions available</p>
           </div>
@@ -181,7 +181,7 @@ export default async function TechJobsPage() {
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">By Sector</span>
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">By Sector</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Tech Sectors Hiring</h2>
             <p className="text-xl text-gray-500">Industries with highest demand for fractional tech leaders</p>
           </div>
@@ -202,7 +202,7 @@ export default async function TechJobsPage() {
       <section className="py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">Skills</span>
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">Skills</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">In-Demand Tech Skills</h2>
             <p className="text-xl text-gray-500">Skills that command premium fractional rates</p>
           </div>
@@ -220,7 +220,7 @@ export default async function TechJobsPage() {
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">The Opportunity</span>
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">The Opportunity</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Fractional Tech Leadership?</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -259,7 +259,7 @@ export default async function TechJobsPage() {
       <section className="py-24 md:py-32 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">Industry Context</span>
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">Industry Context</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Tech Companies Hire Fractional Executives</h2>
           </div>
           <div className="prose prose-lg max-w-none">
@@ -286,7 +286,7 @@ export default async function TechJobsPage() {
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">Role Requirements</span>
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">Role Requirements</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">What Tech Fractional Executives Do Differently</h2>
           </div>
           <div className="prose prose-lg max-w-none">
@@ -316,7 +316,7 @@ export default async function TechJobsPage() {
       <section className="py-24 md:py-32 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">Hiring Guide</span>
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">Hiring Guide</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Hiring Fractional Tech Executives: What to Look For</h2>
           </div>
           <div className="prose prose-lg max-w-none">
@@ -363,7 +363,7 @@ export default async function TechJobsPage() {
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">Tax Planning</span>
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">Tax Planning</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">IR35 Calculator</h2>
             <p className="text-xl text-gray-500">Understand your take-home as a fractional tech leader</p>
           </div>
@@ -375,7 +375,7 @@ export default async function TechJobsPage() {
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400 mb-4 block">FAQ</span>
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">FAQ</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Tech Fractional FAQs</h2>
             <p className="text-xl text-gray-500">Common questions about fractional tech roles</p>
           </div>
@@ -405,10 +405,10 @@ export default async function TechJobsPage() {
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-500 mb-6 block">Get Started</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Ready for Fractional Tech Leadership?
           </h2>
-          <p className="text-xl text-gray-400 mb-10">
+          <p className="text-xl text-gray-600 mb-10">
             {stats.total}+ CTO, VP Engineering, and Tech Director opportunities
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

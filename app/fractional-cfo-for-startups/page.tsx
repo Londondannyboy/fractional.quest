@@ -97,7 +97,7 @@ export default function FractionalCFOForStartupsPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">The Startup Challenge</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">The Startup Challenge</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Why Startups Need Fractional CFOs</h2>
           </div>
 
@@ -173,7 +173,7 @@ export default function FractionalCFOForStartupsPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Responsibilities</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Responsibilities</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">What Fractional CFOs Do for Startups</h2>
           </div>
 
@@ -278,7 +278,7 @@ export default function FractionalCFOForStartupsPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Pricing</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Pricing</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional CFO Cost for Startups</h2>
           </div>
 
@@ -337,8 +337,8 @@ export default function FractionalCFOForStartupsPage() {
             </div>
 
             <div className="bg-gray-50 text-gray-900 p-8 my-10">
-              <h3 className="text-2xl font-bold text-white mb-4">Sweet Spot: Seed to Series A</h3>
-              <p className="text-gray-300 mb-4">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Sweet Spot: Seed to Series A</h3>
+              <p className="text-gray-600 mb-4">
                 The PERFECT time for fractional CFO is <strong className="text-white">post-seed, pre-Series A</strong>. You have revenue (£500k-£3M ARR), you're preparing to raise Series A in 6-18 months, and you need institutional-quality finance but can't afford £150k+ full-time.
               </p>
               <div className="bg-white/10 p-6">
@@ -392,7 +392,7 @@ export default function FractionalCFOForStartupsPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Value</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Value</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">ROI: Real Startup Examples</h2>
           </div>
 
@@ -458,7 +458,7 @@ export default function FractionalCFOForStartupsPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Interactive Tool</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Interactive Tool</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Calculate Your Startup CFO Costs</h2>
           </div>
           <RoleCalculator role="CFO" />
@@ -469,7 +469,7 @@ export default function FractionalCFOForStartupsPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Selection Guide</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Selection Guide</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">How to Choose a Fractional CFO for Your Startup</h2>
           </div>
 
@@ -552,7 +552,7 @@ export default function FractionalCFOForStartupsPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
           <FAQ items={STARTUP_CFO_FAQS} title="" />
@@ -563,7 +563,7 @@ export default function FractionalCFOForStartupsPage() {
       <section className="py-20 md:py-28 bg-gray-50 text-gray-900">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Hire a Fractional CFO for Your Startup?</h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Find experienced startup CFOs who've raised £100M+ and scaled companies from seed to Series C.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

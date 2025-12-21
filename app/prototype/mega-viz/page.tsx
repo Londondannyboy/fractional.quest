@@ -184,7 +184,7 @@ export default function MegaVizDashboard() {
         {/* CENTER: Main Force Graph (Huge!) */}
         <div className="col-span-8 row-span-2 bg-gradient-to-br from-purple-900/20 to-black rounded-2xl border border-purple-500/30 p-6">
           <h2 className="text-2xl font-bold mb-4">Knowledge Graph</h2>
-          <div className="bg-black rounded-xl" style={{ height: 700 }}>
+          <div className="bg-gray-50 rounded-xl" style={{ height: 700 }}>
             <ForceGraph2D
               graphData={graphData}
               nodeLabel="name"
@@ -218,7 +218,7 @@ export default function MegaVizDashboard() {
         {/* TOP RIGHT: Spinning Globe */}
         <div className="col-span-4 bg-gradient-to-br from-green-900/20 to-black rounded-2xl border border-green-500/30 p-6">
           <h2 className="text-xl font-bold mb-4">🌍 Locations</h2>
-          <div className="bg-black rounded-xl overflow-hidden" style={{ height: 300 }}>
+          <div className="bg-gray-50 rounded-xl overflow-hidden" style={{ height: 300 }}>
             <JobsGlobe height="300px" focusCity={focusLocation as any} />
           </div>
           <div className="mt-4 flex gap-2">
@@ -241,7 +241,7 @@ export default function MegaVizDashboard() {
         {/* MIDDLE RIGHT: Skills Sunburst */}
         <div className="col-span-4 bg-gradient-to-br from-blue-900/20 to-black rounded-2xl border border-blue-500/30 p-6">
           <h2 className="text-xl font-bold mb-4">⚡ Skills</h2>
-          <div className="bg-black rounded-xl overflow-hidden" style={{ height: 300 }}>
+          <div className="bg-gray-50 rounded-xl overflow-hidden" style={{ height: 300 }}>
             <JobsSunburst height="300" />
           </div>
         </div>
@@ -249,7 +249,7 @@ export default function MegaVizDashboard() {
         {/* BOTTOM LEFT: Timeline Heatmap */}
         <div className="col-span-6 bg-gradient-to-br from-orange-900/20 to-black rounded-2xl border border-orange-500/30 p-6">
           <h2 className="text-xl font-bold mb-4">📅 Activity Timeline</h2>
-          <div className="bg-black rounded-xl overflow-hidden">
+          <div className="bg-gray-50 rounded-xl overflow-hidden">
             <JobsCalendarHeatmap />
           </div>
         </div>
@@ -257,7 +257,7 @@ export default function MegaVizDashboard() {
         {/* BOTTOM RIGHT: Personality Radar */}
         <div className="col-span-6 bg-gradient-to-br from-pink-900/20 to-black rounded-2xl border border-pink-500/30 p-6">
           <h2 className="text-xl font-bold mb-4">🧠 Profile Personality</h2>
-          <div className="bg-black rounded-xl overflow-hidden">
+          <div className="bg-gray-50 rounded-xl overflow-hidden">
             <SkillsRadar />
           </div>
         </div>

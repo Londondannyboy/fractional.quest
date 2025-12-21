@@ -98,7 +98,7 @@ export default function FractionalHRCostPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Quick Answer</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Quick Answer</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">How Much Does Fractional HR Cost?</h2>
           </div>
 
@@ -113,7 +113,7 @@ export default function FractionalHRCostPage() {
 
             <div className="grid md:grid-cols-3 gap-6 my-10 not-prose">
               <div className="bg-white p-6 border-2 border-gray-200">
-                <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">1 Day/Week</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">1 Day/Week</div>
                 <div className="text-4xl font-black text-gray-900 mb-2">£3,000-£5,600</div>
                 <div className="text-sm text-gray-600 mb-4">per month (4-5 days)</div>
                 <ul className="space-y-2 text-sm text-gray-700">
@@ -125,9 +125,9 @@ export default function FractionalHRCostPage() {
               </div>
 
               <div className="bg-gray-50 text-gray-900 p-6 border-2 border-gray-900">
-                <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">2 Days/Week</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">2 Days/Week</div>
                 <div className="text-4xl font-black mb-2">£5,600-£11,200</div>
-                <div className="text-sm text-gray-300 mb-4">per month (8-10 days)</div>
+                <div className="text-sm text-gray-600 mb-4">per month (8-10 days)</div>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li>• Full HR leadership</li>
                   <li>• Team management</li>
@@ -137,7 +137,7 @@ export default function FractionalHRCostPage() {
               </div>
 
               <div className="bg-white p-6 border-2 border-gray-200">
-                <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">3 Days/Week</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">3 Days/Week</div>
                 <div className="text-4xl font-black text-gray-900 mb-2">£8,400-£16,800</div>
                 <div className="text-sm text-gray-600 mb-4">per month (12-15 days)</div>
                 <ul className="space-y-2 text-sm text-gray-700">
@@ -156,7 +156,7 @@ export default function FractionalHRCostPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Detailed Breakdown</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Detailed Breakdown</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional HR vs Full-Time: True Cost Comparison</h2>
           </div>
 
@@ -256,7 +256,7 @@ export default function FractionalHRCostPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">By Role Level</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">By Role Level</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional HR Cost by Seniority</h2>
           </div>
 
@@ -318,7 +318,7 @@ export default function FractionalHRCostPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Value</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Value</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Is the Cost Worth It? ROI Examples</h2>
           </div>
 
@@ -362,7 +362,7 @@ export default function FractionalHRCostPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Interactive Tool</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Interactive Tool</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Calculate Your Fractional HR Costs</h2>
           </div>
           <RoleCalculator role="hr" />
@@ -373,7 +373,7 @@ export default function FractionalHRCostPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
           <FAQ items={COST_FAQS} title="" />
@@ -384,7 +384,7 @@ export default function FractionalHRCostPage() {
       <section className="py-20 md:py-28 bg-gray-50 text-gray-900">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Hire Fractional HR?</h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Find experienced fractional HR professionals at £700-£1,300/day. Save 35-55% vs full-time while getting senior expertise.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

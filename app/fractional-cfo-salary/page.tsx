@@ -45,8 +45,8 @@ export default function FractionalCfoSalaryPage() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-blue-900 to-blue-800 py-20">
         <div className="max-w-4xl mx-auto px-4">
-          <Link href="/" className="text-blue-800/40 hover:text-white mb-6 inline-block">← Back to Home</Link>
-          <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Fractional CFO Salary UK 2025</h1>
+          <Link href="/" className="text-blue-800/40 hover:text-gray-900 mb-6 inline-block">← Back to Home</Link>
+          <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">Fractional CFO Salary UK 2025</h1>
           <p className="text-xl text-blue-900/30 mb-8">
             Complete guide to fractional CFO pay rates, day rates, and annual earnings in the UK market.
           </p>
@@ -226,28 +226,28 @@ export default function FractionalCfoSalaryPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3">Salary & Rates</h3>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-3">Salary & Rates</h3>
               <div className="space-y-2">
                 <Link href="/fractional-cfo-hourly-rate" className="block text-gray-600 hover:text-blue-600 font-medium transition-colors">CFO Hourly Rates 2025</Link>
                 <Link href="/fractional-cfo-cost" className="block text-gray-600 hover:text-blue-600 font-medium transition-colors">CFO Cost Breakdown</Link>
                 <Link href="/fractional-cfo-salary-report-2025" className="block text-gray-600 hover:text-blue-600 font-medium transition-colors">2025 Salary Report</Link>
                 <Link href="/state-fractional-cfo-market-2025" className="block text-gray-600 hover:text-blue-600 font-medium transition-colors">2025 Market Report</Link>
               </div>
-              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3 mt-6">Other Roles</h3>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-3 mt-6">Other Roles</h3>
               <div className="space-y-2">
                 <Link href="/fractional-cmo-salary" className="block text-gray-600 hover:text-blue-600 font-medium transition-colors">CMO Salary Guide</Link>
                 <Link href="/fractional-controller-jobs" className="block text-gray-600 hover:text-blue-600 font-medium transition-colors">Controller Jobs</Link>
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3">Job Opportunities</h3>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-3">Job Opportunities</h3>
               <div className="space-y-2">
                 <Link href="/fractional-cfo-jobs-remote" className="block text-gray-600 hover:text-blue-600 font-medium transition-colors">Remote CFO Jobs</Link>
                 <Link href="/contract-cfo-jobs" className="block text-gray-600 hover:text-blue-600 font-medium transition-colors">Contract CFO Jobs</Link>
                 <Link href="/fractional-cfo-jobs-uk" className="block text-gray-600 hover:text-blue-600 font-medium transition-colors">UK CFO Jobs</Link>
                 <Link href="/fractional-jobs-london" className="block text-gray-600 hover:text-blue-600 font-medium transition-colors">London Jobs</Link>
               </div>
-              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3 mt-6">Career Development</h3>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-3 mt-6">Career Development</h3>
               <div className="space-y-2">
                 <Link href="/how-to-become-fractional-cfo" className="block text-gray-600 hover:text-blue-600 font-medium transition-colors">Become a Fractional CFO</Link>
                 <Link href="/fractional-cfo-training" className="block text-gray-600 hover:text-blue-600 font-medium transition-colors">Training & Certification</Link>
@@ -255,7 +255,7 @@ export default function FractionalCfoSalaryPage() {
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3">CFO Services</h3>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-3">CFO Services</h3>
               <div className="space-y-2">
                 <Link href="/fractional-cfo-services" className="block text-gray-600 hover:text-blue-600 font-medium transition-colors">CFO Services Overview</Link>
                 <Link href="/fractional-cfo-vs-full-time" className="block text-gray-600 hover:text-blue-600 font-medium transition-colors">Fractional vs Full-Time</Link>

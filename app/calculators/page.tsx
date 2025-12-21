@@ -56,7 +56,7 @@ export default function CalculatorsHub() {
       <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 py-20 md:py-32">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <span className="section-label text-purple-300 mb-4 block">Free Tools</span>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Fractional Executive Calculators
           </h1>
           <p className="text-xl text-purple-200 max-w-3xl mx-auto leading-relaxed">

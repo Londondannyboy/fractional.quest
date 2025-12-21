@@ -890,19 +890,19 @@ export default function RepoPage() {
                 </div>
                 {zepContext && (
                   <div className="pt-2 border-t border-gray-700">
-                    <p className="text-gray-400 mb-1">ZEP Context:</p>
+                    <p className="text-gray-600 mb-1">ZEP Context:</p>
                     <p className="text-gray-500 text-[10px] break-all">{zepContext.substring(0, 100)}...</p>
                   </div>
                 )}
                 {memoryContext && (
                   <div className="pt-2 border-t border-gray-700">
-                    <p className="text-gray-400 mb-1">Combined Memory:</p>
+                    <p className="text-gray-600 mb-1">Combined Memory:</p>
                     <p className="text-gray-500 text-[10px] break-all">{memoryContext.substring(0, 150)}...</p>
                   </div>
                 )}
                 {debugInfo.humeResumeId && (
                   <div className="pt-2 border-t border-gray-700">
-                    <p className="text-gray-400 mb-1">Chat ID:</p>
+                    <p className="text-gray-600 mb-1">Chat ID:</p>
                     <p className="text-gray-500 text-[10px] break-all">{debugInfo.humeResumeId}</p>
                   </div>
                 )}

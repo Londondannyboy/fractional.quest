@@ -96,7 +96,7 @@ export default function HowToBecomeFractionalCFOPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Prerequisites</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Prerequisites</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Required Experience & Qualifications</h2>
           </div>
 
@@ -192,7 +192,7 @@ export default function HowToBecomeFractionalCFOPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Career Roadmap</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Career Roadmap</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Step-by-Step: How to Become a Fractional CFO</h2>
           </div>
 
@@ -362,7 +362,7 @@ export default function HowToBecomeFractionalCFOPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Client Acquisition</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Client Acquisition</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">How to Get Your First Fractional CFO Client</h2>
           </div>
 
@@ -372,7 +372,7 @@ export default function HowToBecomeFractionalCFOPage() {
             </p>
 
             <div className="bg-gray-50 text-gray-900 p-8 mb-10">
-              <h3 className="text-2xl font-bold text-white mb-6">Where First Clients Come From (Real Data)</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Where First Clients Come From (Real Data)</h3>
               <div className="space-y-4 text-gray-300">
                 <div className="flex justify-between items-center pb-3 border-b border-gray-700">
                   <span>Former colleagues / employers</span>
@@ -474,14 +474,14 @@ export default function HowToBecomeFractionalCFOPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Earnings Potential</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Earnings Potential</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">How Much Do Fractional CFOs Earn?</h2>
           </div>
 
           <div className="prose prose-lg max-w-none">
             <div className="grid md:grid-cols-3 gap-6 my-10 not-prose">
               <div className="bg-white p-6 border-2 border-gray-200">
-                <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">Entry Level Fractional</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">Entry Level Fractional</div>
                 <div className="text-4xl font-black text-gray-900 mb-2">£100k-£150k</div>
                 <div className="text-sm text-gray-600 mb-4">annually</div>
                 <ul className="space-y-2 text-sm text-gray-700">
@@ -493,9 +493,9 @@ export default function HowToBecomeFractionalCFOPage() {
               </div>
 
               <div className="bg-gray-50 text-gray-900 p-6 border-2 border-gray-900">
-                <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">Established Fractional</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">Established Fractional</div>
                 <div className="text-4xl font-black mb-2">£150k-£250k</div>
-                <div className="text-sm text-gray-300 mb-4">annually</div>
+                <div className="text-sm text-gray-600 mb-4">annually</div>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li>• 2-3 clients</li>
                   <li>• 3-4 days/week total</li>
@@ -505,7 +505,7 @@ export default function HowToBecomeFractionalCFOPage() {
               </div>
 
               <div className="bg-white p-6 border-2 border-gray-200">
-                <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">Top Tier Fractional</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">Top Tier Fractional</div>
                 <div className="text-4xl font-black text-gray-900 mb-2">£250k-£400k+</div>
                 <div className="text-sm text-gray-600 mb-4">annually</div>
                 <ul className="space-y-2 text-sm text-gray-700">
@@ -553,7 +553,7 @@ export default function HowToBecomeFractionalCFOPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
           <FAQ items={BECOME_CFO_FAQS} title="" />
@@ -564,7 +564,7 @@ export default function HowToBecomeFractionalCFOPage() {
       <section className="py-20 md:py-28 bg-gray-50 text-gray-900">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Start Your Fractional CFO Career?</h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Explore fractional CFO opportunities and learn more about the career path.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

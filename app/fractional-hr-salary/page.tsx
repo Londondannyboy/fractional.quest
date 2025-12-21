@@ -53,8 +53,8 @@ export default function FractionalHRSalaryPage() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-pink-900 to-pink-800 py-20">
         <div className="max-w-4xl mx-auto px-6">
-          <Link href="/fractional-hr" className="text-pink-300 hover:text-white mb-6 inline-block text-sm">← Back to HR Hub</Link>
-          <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Fractional HR Salary UK 2025</h1>
+          <Link href="/fractional-hr" className="text-pink-300 hover:text-gray-900 mb-6 inline-block text-sm">← Back to HR Hub</Link>
+          <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">Fractional HR Salary UK 2025</h1>
           <p className="text-xl text-pink-200 mb-8">
             Complete guide to fractional HR pay rates, day rates, and annual earnings in the UK market.
           </p>
@@ -241,14 +241,14 @@ export default function FractionalHRSalaryPage() {
           <h2 className="text-2xl font-black text-gray-900 mb-8">Related HR Resources</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3">Salary & Rates</h3>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-3">Salary & Rates</h3>
               <div className="space-y-2">
                 <Link href="/fractional-hr-hourly-rate" className="block text-gray-600 hover:text-pink-600 font-medium transition-colors">HR Hourly Rates 2025</Link>
                 <Link href="/fractional-hr-cost" className="block text-gray-600 hover:text-pink-600 font-medium transition-colors">HR Cost Breakdown</Link>
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3">Job Opportunities</h3>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-3">Job Opportunities</h3>
               <div className="space-y-2">
                 <Link href="/fractional-hr-jobs-uk" className="block text-gray-600 hover:text-pink-600 font-medium transition-colors">UK HR Jobs</Link>
                 <Link href="/fractional-hr-jobs-remote" className="block text-gray-600 hover:text-pink-600 font-medium transition-colors">Remote HR Jobs</Link>
@@ -256,7 +256,7 @@ export default function FractionalHRSalaryPage() {
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3">HR Guides</h3>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-3">HR Guides</h3>
               <div className="space-y-2">
                 <Link href="/fractional-hr" className="block text-gray-600 hover:text-pink-600 font-medium transition-colors">Complete HR Guide</Link>
                 <Link href="/fractional-hr-director" className="block text-gray-600 hover:text-pink-600 font-medium transition-colors">HR Director Guide</Link>

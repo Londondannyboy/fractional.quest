@@ -50,7 +50,7 @@ export default function VisualizationsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-black/50 border-b border-gray-200">
+      <header className="bg-gray-50/50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <Link href="/" className="text-gray-400 hover:text-white text-sm mb-4 inline-block">
             ← Back to Home
@@ -135,10 +135,10 @@ export default function VisualizationsPage() {
 
         {/* Summary */}
         <section className="bg-gray-800/50 rounded-2xl p-8 border border-gray-700">
-          <h2 className="text-2xl font-bold text-white mb-4">About These Visualizations</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">About These Visualizations</h2>
           <div className="grid md:grid-cols-2 gap-6 text-gray-300">
             <div>
-              <h3 className="font-semibold text-white mb-2">Technologies Used</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">Technologies Used</h3>
               <ul className="space-y-1 text-sm">
                 <li>• <span className="text-indigo-400">globe.gl</span> - 3D globe visualization</li>
                 <li>• <span className="text-indigo-400">sunburst-chart</span> - Hierarchical sunburst</li>
@@ -148,7 +148,7 @@ export default function VisualizationsPage() {
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-white mb-2">Data Sources</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">Data Sources</h3>
               <ul className="space-y-1 text-sm">
                 <li>• Live job data from the database</li>
                 <li>• Skills extracted from job descriptions</li>

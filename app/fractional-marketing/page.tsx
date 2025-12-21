@@ -25,7 +25,7 @@ export default function FractionalMarketingPage() {
             <Link href="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm"><span className="mr-2">←</span> Back to Home</Link>
             <div className="max-w-4xl">
               <span className="inline-block bg-amber-500 text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">Functional Leadership</span>
-              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9]">Fractional<br /><span className="text-amber-400">Marketing</span></h1>
+              <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9]">Fractional<br /><span className="text-amber-400">Marketing</span></h1>
               <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">Access senior marketing leadership without the full-time commitment. From CMOs to VPs of Marketing, find the right level of expertise for your growth stage.</p>
               <div className="flex flex-wrap gap-4">
                 <Link href="#contact" className="px-8 py-4 bg-amber-500 text-black font-bold uppercase tracking-wider hover:bg-amber-400 transition-colors">Find Marketing Leadership</Link>
@@ -82,10 +82,10 @@ export default function FractionalMarketingPage() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 bg-black text-white">
+      <section id="contact" className="py-20 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-black mb-6">Find Marketing Leadership</h2>
-          <p className="text-xl text-gray-400 mb-10">Tell us about your marketing challenges and we'll match you with the right fractional marketing executive.</p>
+          <p className="text-xl text-gray-600 mb-10">Tell us about your marketing challenges and we'll match you with the right fractional marketing executive.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/handler/sign-up" className="px-10 py-5 bg-amber-500 text-black font-bold uppercase tracking-wider hover:bg-amber-400 transition-colors">Get Started</Link>
             <Link href="/fractional-cmo-services" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Learn About Fractional CMOs</Link>

@@ -77,7 +77,7 @@ export default function FractionalCISOGuidePage() {
               <span className="inline-block bg-white text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Complete Guide 2025
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
                 Fractional CISO:<br />
                 <span className="text-gray-400">Security Leadership On Demand</span>
               </h1>
@@ -154,7 +154,7 @@ export default function FractionalCISOGuidePage() {
       <section id="what-is" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Section 01</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Section 01</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900">What is a Fractional CISO?</h2>
           </div>
 
@@ -246,7 +246,7 @@ export default function FractionalCISOGuidePage() {
       <section id="vs-fulltime" className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Section 02</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Section 02</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900">vCISO vs Full-Time CISO</h2>
           </div>
 
@@ -316,7 +316,7 @@ export default function FractionalCISOGuidePage() {
       <section id="when-to-hire" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Section 03</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Section 03</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900">When Your Business Needs a Fractional CISO</h2>
           </div>
 
@@ -375,7 +375,7 @@ export default function FractionalCISOGuidePage() {
       <section id="pricing" className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Section 04</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Section 04</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900">Fractional CISO Pricing & Costs</h2>
           </div>
 
@@ -467,7 +467,7 @@ export default function FractionalCISOGuidePage() {
       <section id="become" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Section 05</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Section 05</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900">How to Become a Fractional CISO</h2>
           </div>
 
@@ -534,7 +534,7 @@ export default function FractionalCISOGuidePage() {
       <section id="jobs" className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Section 06</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Section 06</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900">Find Fractional CISO Jobs</h2>
           </div>
 
@@ -585,7 +585,7 @@ export default function FractionalCISOGuidePage() {
       <section id="calculator" className="py-20 md:py-28 bg-white border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Interactive Tool</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Interactive Tool</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900">Fractional CISO Earnings Calculator</h2>
             <p className="text-xl text-gray-600 mt-4">
               Calculate potential earnings as a fractional CISO based on clients, hours, and rates.

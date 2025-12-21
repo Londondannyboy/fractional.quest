@@ -51,9 +51,9 @@ export default async function PartTimeCfoPage() {
           <JobsGraph3D roleFilter="CFO" limit={30} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="max-w-4xl mx-auto px-4 relative z-10">
-          <div className="bg-black/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10">
-            <Link href="/" className="text-white/70 hover:text-white mb-6 inline-block">← Back to Home</Link>
-            <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Part-Time CFO Jobs UK</h1>
+          <div className="bg-gray-50/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10">
+            <Link href="/" className="text-white/70 hover:text-gray-900 mb-6 inline-block">← Back to Home</Link>
+            <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">Part-Time CFO Jobs UK</h1>
             <p className="text-xl text-white/80 mb-8">
               Flexible Chief Financial Officer roles for experienced finance professionals. Work 1-3 days per week earning £800-£1,500 per day.
             </p>

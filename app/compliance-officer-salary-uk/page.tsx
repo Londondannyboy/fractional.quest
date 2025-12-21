@@ -102,7 +102,7 @@ export default function ComplianceOfficerSalaryUKPage() {
           <span className="inline-block bg-indigo-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             2025 Salary Guide
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
             Compliance Officer<br />
             <span className="text-indigo-400">Salary UK 2025</span>
           </h1>

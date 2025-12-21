@@ -24,7 +24,7 @@ export default function InterimCIOPage() {
             <Link href="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm"><span className="mr-2">←</span> Back to Home</Link>
             <div className="max-w-4xl">
               <span className="inline-block bg-indigo-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">Interim Leadership</span>
-              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9]">Interim CIO<br /><span className="text-indigo-400">Services UK</span></h1>
+              <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9]">Interim CIO<br /><span className="text-indigo-400">Services UK</span></h1>
               <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">Full-time temporary IT leadership for digital transformations, system migrations, and critical technology periods. Expert IT executives available immediately.</p>
               <div className="flex flex-wrap gap-4">
                 <Link href="#contact" className="px-8 py-4 bg-indigo-500 text-white font-bold uppercase tracking-wider hover:bg-indigo-400 transition-colors">Hire an Interim CIO</Link>
@@ -69,10 +69,10 @@ export default function InterimCIOPage() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 bg-black text-white">
+      <section id="contact" className="py-20 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-black mb-6">Need an Interim CIO?</h2>
-          <p className="text-xl text-gray-400 mb-10">Tell us about your IT challenges and we'll help you find the right interim or fractional CIO.</p>
+          <p className="text-xl text-gray-600 mb-10">Tell us about your IT challenges and we'll help you find the right interim or fractional CIO.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/handler/sign-up" className="px-10 py-5 bg-indigo-500 text-white font-bold uppercase tracking-wider hover:bg-indigo-400 transition-colors">Find an Interim CIO</Link>
             <Link href="/fractional-cio-services" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Explore Fractional CIO</Link>

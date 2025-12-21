@@ -23,7 +23,7 @@ export default function FractionalAgencyPage() {
             <Link href="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm"><span className="mr-2">←</span> Back to Home</Link>
             <div className="max-w-4xl">
               <span className="inline-block bg-violet-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">Agency Services</span>
-              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9]">Fractional<br /><span className="text-violet-400">Agency</span></h1>
+              <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9]">Fractional<br /><span className="text-violet-400">Agency</span></h1>
               <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">Access agency-level expertise on a fractional basis. Get strategic and creative support without the overhead of traditional agency retainers.</p>
               <Link href="#contact" className="px-8 py-4 bg-violet-500 text-white font-bold uppercase tracking-wider hover:bg-violet-400 transition-colors inline-block">Find Agency Support</Link>
             </div>
@@ -82,10 +82,10 @@ export default function FractionalAgencyPage() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 bg-black text-white">
+      <section id="contact" className="py-20 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-black mb-6">Find Fractional Agency Support</h2>
-          <p className="text-xl text-gray-400 mb-10">Tell us what agency expertise you need and we'll match you with the right fractional support.</p>
+          <p className="text-xl text-gray-600 mb-10">Tell us what agency expertise you need and we'll match you with the right fractional support.</p>
           <Link href="/handler/sign-up" className="px-10 py-5 bg-violet-500 text-white font-bold uppercase tracking-wider hover:bg-violet-400 transition-colors inline-block">Get Started</Link>
         </div>
       </section>

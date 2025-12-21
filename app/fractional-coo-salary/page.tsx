@@ -45,8 +45,8 @@ export default function FractionalCooSalaryPage() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-blue-900 to-blue-800 py-20">
         <div className="max-w-4xl mx-auto px-4">
-          <Link href="/" className="text-blue-200 hover:text-white mb-6 inline-block">← Back to Home</Link>
-          <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Fractional COO Salary 2025</h1>
+          <Link href="/" className="text-blue-200 hover:text-gray-900 mb-6 inline-block">← Back to Home</Link>
+          <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">Fractional COO Salary 2025</h1>
           <p className="text-xl text-blue-100 mb-8">
             Complete guide to fractional COO pay rates, day rates, and annual earnings in the US market.
           </p>

@@ -47,7 +47,7 @@ export default function HowToBecomeFractionalCTOPage() {
             <span className="mr-2">←</span> Back to CTO Hub
           </Link>
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Career Guide</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Career Guide</span>
             <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">How to Become a Fractional CTO</h1>
             <p className="text-xl text-gray-600">Complete guide to transitioning into a successful fractional CTO career</p>
           </div>
@@ -234,7 +234,7 @@ export default function HowToBecomeFractionalCTOPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
           <FAQ items={BECOME_CTO_FAQS} title="" />
@@ -244,7 +244,7 @@ export default function HowToBecomeFractionalCTOPage() {
       <section className="py-20 bg-gray-50 text-gray-900">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Start Your Fractional CTO Journey?</h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Explore opportunities and resources to launch your fractional CTO career.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

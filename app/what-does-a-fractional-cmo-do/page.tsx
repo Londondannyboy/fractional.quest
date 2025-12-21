@@ -122,7 +122,7 @@ export default function WhatDoesAFractionalCMODoPage() {
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-16 text-center max-w-3xl mx-auto">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Core Responsibilities</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Core Responsibilities</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">8 Things Fractional CMOs Own</h2>
             <p className="text-xl text-gray-600">
               These are the high-leverage activities fractional CMOs focus on to drive maximum impact.
@@ -216,7 +216,7 @@ export default function WhatDoesAFractionalCMODoPage() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-16 text-center max-w-3xl mx-auto">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Timeline</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Timeline</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">The First 90 Days</h2>
             <p className="text-xl text-gray-600">
               What a fractional CMO does in the critical first three months to build the foundation for growth.
@@ -353,7 +353,7 @@ export default function WhatDoesAFractionalCMODoPage() {
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="mb-16">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-3 block">Day in the Life</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Day in the Life</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">A Typical Week for a Fractional CMO</h2>
             <p className="text-xl text-gray-600 max-w-3xl">
               Here's how a fractional CMO working 2 days/week might structure their time across a typical week.

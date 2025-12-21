@@ -189,7 +189,7 @@ export default function MultiGraphCandidate() {
             <h2 className="text-xl font-bold text-blue-300">Your Skills & Experience</h2>
             <p className="text-sm text-blue-300/60">What you bring</p>
           </div>
-          <div className="flex-1 bg-black rounded-xl overflow-hidden">
+          <div className="flex-1 bg-gray-50 rounded-xl overflow-hidden">
             <ForceGraph2D
               graphData={skillsGraph}
               nodeLabel={(node: any) => `${node.name}${node.years ? ` (${node.years}y)` : ''}`}
@@ -237,7 +237,7 @@ export default function MultiGraphCandidate() {
             <h2 className="text-2xl font-bold text-purple-300">Job Interests</h2>
             <p className="text-sm text-purple-300/60">What you're looking for</p>
           </div>
-          <div className="flex-1 bg-black rounded-xl overflow-hidden">
+          <div className="flex-1 bg-gray-50 rounded-xl overflow-hidden">
             <ForceGraph2D
               graphData={interestsGraph}
               nodeLabel={(node: any) => {
@@ -289,7 +289,7 @@ export default function MultiGraphCandidate() {
             <h2 className="text-xl font-bold text-green-300">Preferences & Priorities</h2>
             <p className="text-sm text-green-300/60">What matters to you</p>
           </div>
-          <div className="flex-1 bg-black rounded-xl overflow-hidden">
+          <div className="flex-1 bg-gray-50 rounded-xl overflow-hidden">
             <ForceGraph2D
               graphData={preferencesGraph}
               nodeLabel="name"

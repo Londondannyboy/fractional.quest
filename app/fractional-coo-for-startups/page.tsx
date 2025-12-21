@@ -12,7 +12,7 @@ export default function FractionalCOOForStartupsPage() {
     <div className="min-h-screen bg-white">
       <section className="bg-gray-50 text-gray-900 py-20">
         <div className="max-w-4xl mx-auto px-4">
-          <Link href="/fractional-coo" className="text-gray-400 hover:text-white mb-6 inline-block">← Back to COO Hub</Link>
+          <Link href="/fractional-coo" className="text-gray-400 hover:text-gray-900 mb-6 inline-block">← Back to COO Hub</Link>
           <h1 className="text-5xl font-black mb-6">Fractional COO for Startups</h1>
           <p className="text-xl text-gray-300">
             Get senior operational leadership that scales your startup from product-market fit to $20M+ revenue—without the $250k+ full-time cost.

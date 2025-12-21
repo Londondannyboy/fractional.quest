@@ -207,7 +207,7 @@ export default function SingleGraphOrganic() {
 
       {/* Single large graph */}
       <div className="p-6 flex items-center justify-center" style={{ height: 'calc(100vh - 240px)' }}>
-        <div className="bg-black rounded-2xl border border-purple-500/30" style={{ width: '100%', height: '100%' }}>
+        <div className="bg-gray-50 rounded-2xl border border-purple-500/30" style={{ width: '100%', height: '100%' }}>
           <ForceGraph2D
             ref={fgRef}
             graphData={graphData}

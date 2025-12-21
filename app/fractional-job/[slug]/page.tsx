@@ -172,7 +172,7 @@ export default async function JobDetailPage({ params }: PageProps) {
               This position may have been filled or is no longer available.
             </p>
             <Link href="/fractional-jobs-uk">
-              <button className="px-8 py-3 bg-black text-white font-semibold hover:bg-gray-800 transition-colors">
+              <button className="px-8 py-3 bg-gray-50 text-white font-semibold hover:bg-gray-100 transition-colors">
                 Browse All Jobs
               </button>
             </Link>
@@ -784,7 +784,7 @@ export default async function JobDetailPage({ params }: PageProps) {
                 {/* Skills Preview - Links to 3D graph below */}
                 {job.skills_required && Array.isArray(job.skills_required) && job.skills_required.length > 2 && (
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3">
+                    <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-3">
                       Related Jobs Network
                     </h3>
                     <p className="text-gray-300 text-sm mb-3">
@@ -894,7 +894,7 @@ export default async function JobDetailPage({ params }: PageProps) {
             There was an error loading this job. Please try again later.
           </p>
           <Link href="/fractional-jobs-uk">
-            <button className="px-8 py-3 bg-black text-white font-semibold hover:bg-gray-800 transition-colors">
+            <button className="px-8 py-3 bg-gray-50 text-white font-semibold hover:bg-gray-100 transition-colors">
               Browse All Jobs
             </button>
           </Link>

@@ -25,22 +25,22 @@ export default function FractionalHRVsFullTimePage() {
       {/* Hero */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-4xl mx-auto px-6">
-          <Link href="/fractional-hr" className="text-gray-400 hover:text-white mb-6 inline-block text-sm">← Back to HR Hub</Link>
+          <Link href="/fractional-hr" className="text-gray-400 hover:text-gray-900 mb-6 inline-block text-sm">← Back to HR Hub</Link>
           <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             Comparison Guide
           </span>
-          <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Fractional HR vs<br />Full-Time HR</h1>
-          <p className="text-xl text-gray-300 mb-8">
+          <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">Fractional HR vs<br />Full-Time HR</h1>
+          <p className="text-xl text-gray-600 mb-8">
             Should you hire fractional or full-time? A comprehensive comparison to help you make the right decision for your business.
           </p>
           <div className="flex flex-wrap gap-8">
             <div>
               <div className="text-4xl font-black text-pink-400">35-55%</div>
-              <div className="text-gray-400 text-sm">Cost Savings</div>
+              <div className="text-gray-600 text-sm">Cost Savings</div>
             </div>
             <div>
               <div className="text-4xl font-black text-white">1-2 Weeks</div>
-              <div className="text-gray-400 text-sm">Time to Start</div>
+              <div className="text-gray-600 text-sm">Time to Start</div>
             </div>
           </div>
         </div>
@@ -291,7 +291,7 @@ export default function FractionalHRVsFullTimePage() {
       <section className="py-16 bg-gray-50 text-gray-900">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Explore Fractional HR?</h2>
-          <p className="text-gray-300 mb-8">Find experienced fractional HR professionals or learn more about the model.</p>
+          <p className="text-gray-600 mb-8">Find experienced fractional HR professionals or learn more about the model.</p>
           <div className="flex justify-center gap-4 flex-wrap">
             <Link href="/fractional-hr-jobs-uk" className="px-8 py-4 bg-pink-500 text-white font-semibold hover:bg-pink-400 transition-colors">
               Browse HR Professionals

@@ -133,7 +133,7 @@ export default function FractionalMLROUKPage() {
           <span className="inline-block bg-amber-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             AML Services
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
             Fractional MLRO<br />
             <span className="text-amber-400">Services UK</span>
           </h1>

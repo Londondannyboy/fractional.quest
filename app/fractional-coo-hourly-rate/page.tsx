@@ -14,7 +14,7 @@ export default function FractionalCOOHourlyRatePage() {
     <div className="min-h-screen bg-white">
       <section className="bg-gray-50 text-gray-900 py-20">
         <div className="max-w-4xl mx-auto px-4">
-          <Link href="/fractional-coo" className="text-gray-400 hover:text-white mb-6 inline-block">← Back to COO Hub</Link>
+          <Link href="/fractional-coo" className="text-gray-400 hover:text-gray-900 mb-6 inline-block">← Back to COO Hub</Link>
           <h1 className="text-5xl font-black mb-6">Fractional COO Hourly Rate 2025</h1>
           <p className="text-xl text-gray-300">
             Complete guide to fractional COO hourly rates: $125-$250/hour depending on experience and engagement type.

@@ -28,7 +28,7 @@ export default function TestGraphPipPage() {
 
       {/* Mini Graph - Picture in Picture (Top Right) */}
       <div className="absolute top-24 right-6 w-80 h-64 rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl z-30">
-        <div className="absolute top-2 left-2 z-10 bg-black/70 backdrop-blur px-3 py-1 rounded text-xs">
+        <div className="absolute top-2 left-2 z-10 bg-gray-50/70 backdrop-blur px-3 py-1 rounded text-xs">
           <span className="text-white font-medium">CFO Focus</span>
         </div>
         <JobsGraph3D
@@ -42,7 +42,7 @@ export default function TestGraphPipPage() {
 
       {/* Mini Graph - Picture in Picture (Bottom Right) */}
       <div className="absolute bottom-24 right-6 w-80 h-64 rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl z-30">
-        <div className="absolute top-2 left-2 z-10 bg-black/70 backdrop-blur px-3 py-1 rounded text-xs">
+        <div className="absolute top-2 left-2 z-10 bg-gray-50/70 backdrop-blur px-3 py-1 rounded text-xs">
           <span className="text-white font-medium">London Focus</span>
         </div>
         <JobsGraph3D
@@ -55,7 +55,7 @@ export default function TestGraphPipPage() {
       </div>
 
       {/* Legend */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-sm px-6 py-3 rounded-full text-xs z-30 flex items-center gap-6">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-gray-50/80 backdrop-blur-sm px-6 py-3 rounded-full text-xs z-30 flex items-center gap-6">
         <div className="flex items-center gap-2">
           <div className="w-4 h-4 rounded-full bg-amber-500" />
           <span className="text-white">Companies</span>

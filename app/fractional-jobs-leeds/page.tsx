@@ -85,7 +85,7 @@ export default async function LeedsPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <Link href="/" className="inline-flex items-center text-purple-200 hover:text-white mb-6 transition-colors">
+          <Link href="/" className="inline-flex items-center text-purple-200 hover:text-gray-900 mb-6 transition-colors">
             ← Back to Home
           </Link>
           <div className="inline-block mb-6">
@@ -93,7 +93,7 @@ export default async function LeedsPage() {
               {stats.total}+ Jobs in Yorkshire
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
             Fractional Jobs Leeds</h1>
           <img src="/logo.svg" alt="Fractional Jobs Leeds - Executive roles in Yorkshire" className="hidden" width={1} height={1} />
           
@@ -311,7 +311,7 @@ export default async function LeedsPage() {
       {/* CTA */}
       <section className="py-20 md:py-28 bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Ready to Work in Yorkshire?
           </h2>
           <p className="text-xl text-purple-100 mb-10">

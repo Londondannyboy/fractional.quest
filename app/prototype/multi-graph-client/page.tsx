@@ -186,7 +186,7 @@ export default function MultiGraphClient() {
             <h2 className="text-xl font-bold text-pink-300">Skills & Requirements</h2>
             <p className="text-sm text-pink-300/60">What they're looking for</p>
           </div>
-          <div className="flex-1 bg-black rounded-xl overflow-hidden">
+          <div className="flex-1 bg-gray-50 rounded-xl overflow-hidden">
             <ForceGraph2D
               graphData={skillsGraph}
               nodeLabel="name"
@@ -225,7 +225,7 @@ export default function MultiGraphClient() {
             <h2 className="text-2xl font-bold text-green-300">Candidate Matches</h2>
             <p className="text-sm text-green-300/60">Who fits best</p>
           </div>
-          <div className="flex-1 bg-black rounded-xl overflow-hidden">
+          <div className="flex-1 bg-gray-50 rounded-xl overflow-hidden">
             <ForceGraph2D
               graphData={matchingGraph}
               nodeLabel={(node: any) => `${node.name}${node.fit ? ` (${node.fit}%)` : ''}`}
@@ -273,7 +273,7 @@ export default function MultiGraphClient() {
             <h2 className="text-xl font-bold text-orange-300">Culture & Personality</h2>
             <p className="text-sm text-orange-300/60">Team fit requirements</p>
           </div>
-          <div className="flex-1 bg-black rounded-xl overflow-hidden">
+          <div className="flex-1 bg-gray-50 rounded-xl overflow-hidden">
             <ForceGraph2D
               graphData={cultureGraph}
               nodeLabel="name"

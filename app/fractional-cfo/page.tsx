@@ -77,7 +77,7 @@ export default function FractionalCFOGuidePage() {
               <span className="inline-block bg-white text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Complete Guide 2025
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
                 Fractional CFO:<br />
                 <span className="text-gray-400">Everything You Need to Know</span>
               </h1>
@@ -154,7 +154,7 @@ export default function FractionalCFOGuidePage() {
       <section id="what-is" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Section 01</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Section 01</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900">What is a Fractional CFO?</h2>
           </div>
 
@@ -260,7 +260,7 @@ export default function FractionalCFOGuidePage() {
 
             <div className="bg-gray-50 text-gray-900 p-8 my-10">
               <p className="text-2xl font-bold mb-4">Want to learn more?</p>
-              <p className="text-lg text-gray-300 mb-6">Read our comprehensive guide on what fractional CFOs do, day-to-day responsibilities, and real-world examples.</p>
+              <p className="text-lg text-gray-600 mb-6">Read our comprehensive guide on what fractional CFOs do, day-to-day responsibilities, and real-world examples.</p>
               <Link href="/what-is-fractional-cfo" className="inline-block px-6 py-3 bg-white text-black font-bold uppercase tracking-wider hover:bg-gray-100 transition-colors">
                 Read Full Guide →
               </Link>
@@ -273,7 +273,7 @@ export default function FractionalCFOGuidePage() {
       <section id="vs-fulltime" className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Section 02</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Section 02</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900">Fractional CFO vs Full-Time CFO</h2>
           </div>
 
@@ -382,7 +382,7 @@ export default function FractionalCFOGuidePage() {
 
             <div className="bg-gray-50 text-gray-900 p-8 my-10">
               <p className="text-2xl font-bold mb-4">Need help deciding?</p>
-              <p className="text-lg text-gray-300 mb-6">Read our detailed comparison guide with real cost breakdowns and decision framework.</p>
+              <p className="text-lg text-gray-600 mb-6">Read our detailed comparison guide with real cost breakdowns and decision framework.</p>
               <Link href="/fractional-cfo-vs-full-time" className="inline-block px-6 py-3 bg-white text-black font-bold uppercase tracking-wider hover:bg-gray-100 transition-colors">
                 Compare in Detail →
               </Link>
@@ -395,7 +395,7 @@ export default function FractionalCFOGuidePage() {
       <section id="when-to-hire" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Section 03</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Section 03</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900">When to Hire a Fractional CFO</h2>
           </div>
 
@@ -458,7 +458,7 @@ export default function FractionalCFOGuidePage() {
       <section id="pricing" className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Section 04</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Section 04</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900">Fractional CFO Pricing & Costs</h2>
           </div>
 
@@ -471,7 +471,7 @@ export default function FractionalCFOGuidePage() {
 
             <div className="grid md:grid-cols-3 gap-6 my-10 not-prose">
               <div className="bg-white p-6 border-2 border-gray-200">
-                <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">Junior CFO</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">Junior CFO</div>
                 <div className="text-4xl font-black text-gray-900 mb-2">£700-£950</div>
                 <div className="text-sm text-gray-600 mb-4">per day</div>
                 <ul className="space-y-2 text-sm text-gray-700">
@@ -483,9 +483,9 @@ export default function FractionalCFOGuidePage() {
               </div>
 
               <div className="bg-gray-50 text-gray-900 p-6 border-2 border-gray-900">
-                <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">Mid-Level CFO</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">Mid-Level CFO</div>
                 <div className="text-4xl font-black mb-2">£950-£1,250</div>
-                <div className="text-sm text-gray-300 mb-4">per day</div>
+                <div className="text-sm text-gray-600 mb-4">per day</div>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li>• 12-18 years experience</li>
                   <li>• Prior CFO role</li>
@@ -495,7 +495,7 @@ export default function FractionalCFOGuidePage() {
               </div>
 
               <div className="bg-white p-6 border-2 border-gray-200">
-                <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">Senior CFO</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">Senior CFO</div>
                 <div className="text-4xl font-black text-gray-900 mb-2">£1,250-£1,500+</div>
                 <div className="text-sm text-gray-600 mb-4">per day</div>
                 <ul className="space-y-2 text-sm text-gray-700">
@@ -606,7 +606,7 @@ export default function FractionalCFOGuidePage() {
       <section id="calculator" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Interactive Tool</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Interactive Tool</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900">Calculate Your Earnings or Savings</h2>
           </div>
           <RoleCalculator role="CFO" />
@@ -617,7 +617,7 @@ export default function FractionalCFOGuidePage() {
       <section id="become" className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Section 05</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Section 05</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900">How to Become a Fractional CFO</h2>
           </div>
 
@@ -753,7 +753,7 @@ export default function FractionalCFOGuidePage() {
 
             <div className="bg-gray-50 text-gray-900 p-8 my-10">
               <p className="text-2xl font-bold mb-4">Ready to make the transition?</p>
-              <p className="text-lg text-gray-300 mb-6">Read our complete guide on becoming a fractional CFO, including how to price yourself, find clients, and build your practice.</p>
+              <p className="text-lg text-gray-600 mb-6">Read our complete guide on becoming a fractional CFO, including how to price yourself, find clients, and build your practice.</p>
               <Link href="/how-to-become-fractional-cfo" className="inline-block px-6 py-3 bg-white text-black font-bold uppercase tracking-wider hover:bg-gray-100 transition-colors">
                 Read Career Guide →
               </Link>
@@ -766,7 +766,7 @@ export default function FractionalCFOGuidePage() {
       <section id="jobs" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Section 06</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Section 06</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900">Find Fractional CFO Jobs</h2>
           </div>
 
@@ -878,44 +878,44 @@ export default function FractionalCFOGuidePage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Resources</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Resources</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900">Fractional CFO Tools & Resources</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <Link href="/fractional-cfo-services" className="bg-white p-8 hover:bg-gray-100 hover:text-gray-900 transition-all group">
               <h3 className="text-xl font-black mb-3">Hire a Fractional CFO</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">For companies looking to engage fractional CFO services</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">For companies looking to engage fractional CFO services</p>
               <div className="text-sm font-bold uppercase tracking-wider">Learn More →</div>
             </Link>
 
             <Link href="/fractional-cfo-salary" className="bg-white p-8 hover:bg-gray-100 hover:text-gray-900 transition-all group">
               <h3 className="text-xl font-black mb-3">Salary & Rates Guide</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Comprehensive day rate and salary benchmarks by experience</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Comprehensive day rate and salary benchmarks by experience</p>
               <div className="text-sm font-bold uppercase tracking-wider">View Rates →</div>
             </Link>
 
             <Link href="/2025-fractional-cfo-salary-report" className="bg-white p-8 hover:bg-gray-100 hover:text-gray-900 transition-all group">
               <h3 className="text-xl font-black mb-3">2025 Salary Report</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Annual market research and compensation trends</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Annual market research and compensation trends</p>
               <div className="text-sm font-bold uppercase tracking-wider">Download Report →</div>
             </Link>
 
             <Link href="/fractional-cfo-training" className="bg-white p-8 hover:bg-gray-100 hover:text-gray-900 transition-all group">
               <h3 className="text-xl font-black mb-3">Training & Certification</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Courses, programs, and skills development for aspiring fractionals</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Courses, programs, and skills development for aspiring fractionals</p>
               <div className="text-sm font-bold uppercase tracking-wider">Explore Training →</div>
             </Link>
 
             <Link href="/fractional-cfo-community" className="bg-white p-8 hover:bg-gray-100 hover:text-gray-900 transition-all group">
               <h3 className="text-xl font-black mb-3">Community & Reddit</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Join discussions, share experiences, learn from peers</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Join discussions, share experiences, learn from peers</p>
               <div className="text-sm font-bold uppercase tracking-wider">Join Community →</div>
             </Link>
 
             <Link href="/what-is-fractional-cfo" className="bg-white p-8 hover:bg-gray-100 hover:text-gray-900 transition-all group">
               <h3 className="text-xl font-black mb-3">What is a Fractional CFO?</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Comprehensive definition and role overview</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Comprehensive definition and role overview</p>
               <div className="text-sm font-bold uppercase tracking-wider">Learn More →</div>
             </Link>
           </div>
@@ -926,7 +926,7 @@ export default function FractionalCFOGuidePage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
           <FAQ items={CFO_FAQS} title="" />
@@ -937,7 +937,7 @@ export default function FractionalCFOGuidePage() {
       <section className="py-20 md:py-28 bg-gray-50 text-gray-900">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Whether you're hiring a fractional CFO or becoming one, we have the resources and job board to help you succeed.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

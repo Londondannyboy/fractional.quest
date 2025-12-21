@@ -239,9 +239,9 @@ function VoiceInterface({ token, userId, profile, memoryContext, graphData, onPr
   }, [graphData])
 
   return (
-    <div className="h-screen relative bg-black overflow-hidden">
+    <div className="h-screen relative bg-gray-50 overflow-hidden">
       {/* Debug info */}
-      <div className="absolute top-4 right-4 z-50 bg-black/80 text-white text-xs p-2 rounded">
+      <div className="absolute top-4 right-4 z-50 bg-gray-50/80 text-white text-xs p-2 rounded">
         Graph nodes: {graphData?.nodes?.length || 0} | Status: {status.value}
       </div>
 
@@ -279,7 +279,7 @@ function VoiceInterface({ token, userId, profile, memoryContext, graphData, onPr
                       return acc
                     }, {})
                 ).map(([type, nodes]: [string, any]) => (
-                  <div key={type} className="bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
+                  <div key={type} className="bg-gray-50/40 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
                     <h3 className="text-lg font-semibold text-purple-300 mb-4 capitalize">
                       {type === 'role' && '💼 Roles'}
                       {type === 'location' && '📍 Locations'}
@@ -467,7 +467,7 @@ function VoiceInterface({ token, userId, profile, memoryContext, graphData, onPr
 
       {/* Celebration Overlay */}
       {showCelebration && (
-        <div className="absolute inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm pointer-events-none z-50">
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-50/50 backdrop-blur-sm pointer-events-none z-50">
           <div className="text-6xl font-bold text-white animate-bounce">
             {showCelebration}
           </div>
@@ -475,7 +475,7 @@ function VoiceInterface({ token, userId, profile, memoryContext, graphData, onPr
       )}
 
       {/* Info Overlay - Top Left */}
-      <div className="absolute top-6 left-6 bg-black/60 backdrop-blur-md rounded-xl p-4 border border-white/20 text-white z-40">
+      <div className="absolute top-6 left-6 bg-gray-50/60 backdrop-blur-md rounded-xl p-4 border border-white/20 text-white z-40">
         <div className="text-sm space-y-1">
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-purple-500" />

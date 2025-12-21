@@ -96,7 +96,7 @@ export default async function NewcastlePage() {
           <JobsGraph3D locationFilter="newcastle" limit={30} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <Link href="/" className="inline-flex items-center text-slate-200 hover:text-white mb-6 transition-colors">
+          <Link href="/" className="inline-flex items-center text-slate-200 hover:text-gray-900 mb-6 transition-colors">
             ← Back to Home
           </Link>
           <div className="inline-block mb-6">
@@ -104,7 +104,7 @@ export default async function NewcastlePage() {
               {stats.totalNewcastle}+ Jobs in Newcastle
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
             Fractional Jobs Newcastle
           </h1>
           <p className="max-w-2xl text-xl text-slate-100 mb-10 leading-relaxed">
@@ -245,7 +245,7 @@ export default async function NewcastlePage() {
       <section className="py-20 md:py-28 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Newcastle Success Stories</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Newcastle Success Stories</h2>
             <p className="text-xl text-slate-200">Real fractional professionals thriving in Newcastle</p>
           </div>
 
@@ -348,7 +348,7 @@ export default async function NewcastlePage() {
       {/* Final CTA */}
       <section className="py-20 md:py-28 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Ready to Work in Newcastle?
           </h2>
           <p className="text-xl text-slate-100 mb-10">

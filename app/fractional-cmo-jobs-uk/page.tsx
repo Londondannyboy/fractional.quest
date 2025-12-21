@@ -86,7 +86,7 @@ export default async function FractionalCmoJobsUkPage() {
                 Marketing Leadership
               </span>
 
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
                 Fractional CMO Jobs UK
               </h1>
 
@@ -135,7 +135,7 @@ export default async function FractionalCmoJobsUkPage() {
       <section className="py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-8 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Calculator</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
             <h2 className="text-2xl md:text-3xl font-black text-gray-900">
               Fractional CMO Jobs UK Earnings Calculator
             </h2>
@@ -150,7 +150,7 @@ export default async function FractionalCmoJobsUkPage() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Browse</span>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Browse</span>
               <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional CMO Jobs UK Listings</h2>
             </div>
             <p className="text-gray-500">Browse live fractional CMO jobs in the UK. Pre-filtered to Marketing roles.</p>
@@ -188,7 +188,7 @@ export default async function FractionalCmoJobsUkPage() {
         <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="mb-10 text-center">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Interactive Network</span>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Interactive Network</span>
               <h2 className="text-3xl md:text-4xl font-black text-white">Fractional CMO Jobs UK Knowledge Graph</h2>
               <p className="text-gray-400 mt-2">Explore fractional CMO jobs, skills, and UK companies in 3D</p>
             </div>
@@ -199,7 +199,7 @@ export default async function FractionalCmoJobsUkPage() {
 
       {/* Companies Hiring - Editorial Style */}
       {companies.length > 0 && (
-        <section className="py-16 bg-black text-white">
+        <section className="py-16 bg-gray-50 text-white">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-2 block">Who's Hiring</span>
@@ -225,7 +225,7 @@ export default async function FractionalCmoJobsUkPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           {/* Lead-in */}
           <div className="mb-16">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-4 block">The Guide</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-4 block">The Guide</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
               Everything You Need to Know About<br />
               <span className="text-amber-600">Fractional CMO Jobs UK</span>
@@ -348,7 +348,7 @@ export default async function FractionalCmoJobsUkPage() {
             </ul>
 
             <div className="bg-gray-50 text-gray-900 p-6 rounded-lg my-10 not-prose">
-              <p className="text-gray-300 mb-3">Want to understand fractional CMO pricing?</p>
+              <p className="text-gray-600 mb-3">Want to understand fractional CMO pricing?</p>
               <Link href="/fractional-cmo-cost" className="inline-flex items-center text-amber-400 font-bold hover:text-amber-300">
                 View Fractional CMO Cost Guide →
               </Link>
@@ -361,7 +361,7 @@ export default async function FractionalCmoJobsUkPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">UK Tax</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">UK Tax</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">
               UK IR35 Calculator for Fractional CMO Jobs
             </h2>
@@ -384,7 +384,7 @@ export default async function FractionalCmoJobsUkPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">
               Common Questions About Fractional CMO Jobs UK
             </h2>
@@ -397,7 +397,7 @@ export default async function FractionalCmoJobsUkPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Additional Resources</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Additional Resources</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">UK Resources for Fractional CMO Jobs</h2>
             <p className="text-xl text-gray-500">Authoritative UK sources for fractional CMO professionals seeking marketing leadership jobs</p>
           </div>
@@ -507,13 +507,13 @@ export default async function FractionalCmoJobsUkPage() {
       </section>
 
       {/* CTA Section - Bold Editorial */}
-      <section className="py-20 md:py-28 bg-black text-white">
+      <section className="py-20 md:py-28 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-4 block">Ready?</span>
           <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
             Find Fractional CMO Jobs UK
           </h2>
-          <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Create your profile and get matched with UK companies seeking fractional CMO leadership for their marketing teams.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">

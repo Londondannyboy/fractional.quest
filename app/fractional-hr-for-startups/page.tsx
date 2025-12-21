@@ -98,7 +98,7 @@ export default function FractionalHRForStartupsPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">The Startup Challenge</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">The Startup Challenge</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Why Startups Need Fractional HR</h2>
           </div>
 
@@ -174,7 +174,7 @@ export default function FractionalHRForStartupsPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Responsibilities</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Responsibilities</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">What Fractional HR Does for Startups</h2>
           </div>
 
@@ -248,7 +248,7 @@ export default function FractionalHRForStartupsPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Pricing</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Pricing</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional HR Cost by Startup Stage</h2>
           </div>
 
@@ -298,8 +298,8 @@ export default function FractionalHRForStartupsPage() {
           </div>
 
           <div className="bg-gray-50 text-gray-900 p-8 my-10">
-            <h3 className="text-2xl font-bold text-white mb-4">Sweet Spot: Seed to Series A</h3>
-            <p className="text-gray-300 mb-4">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Sweet Spot: Seed to Series A</h3>
+            <p className="text-gray-600 mb-4">
               The PERFECT time for fractional HR is <strong className="text-white">post-Seed, pre-Series A</strong>. You have 20-40 people, you're hiring regularly, and you need professional HR but can't justify £150k+ full-time.
             </p>
             <div className="bg-white/10 p-6">
@@ -319,7 +319,7 @@ export default function FractionalHRForStartupsPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Value</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Value</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">ROI: Real Startup Examples</h2>
           </div>
 
@@ -360,7 +360,7 @@ export default function FractionalHRForStartupsPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Interactive Tool</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Interactive Tool</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Calculate Your Startup HR Costs</h2>
           </div>
           <RoleCalculator role="hr" />
@@ -371,7 +371,7 @@ export default function FractionalHRForStartupsPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
           <FAQ items={STARTUP_HR_FAQS} title="" />
@@ -382,7 +382,7 @@ export default function FractionalHRForStartupsPage() {
       <section className="py-20 md:py-28 bg-gray-50 text-gray-900">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready for Fractional HR for Your Startup?</h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Find experienced startup HR leaders who've scaled companies from Seed to Series C.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

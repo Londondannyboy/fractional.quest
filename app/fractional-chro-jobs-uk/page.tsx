@@ -104,7 +104,7 @@ export default async function FractionalCHROJobsUKPage() {
               <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Career Guide
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
                 Fractional CHRO<br />
                 <span className="text-pink-400">Jobs UK</span>
               </h1>
@@ -142,7 +142,7 @@ export default async function FractionalCHROJobsUKPage() {
       <section className="py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-8 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Calculator</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
             <h2 className="text-2xl md:text-3xl font-black text-gray-900">How Much Can You Earn as a Fractional CHRO?</h2>
           </div>
           <RoleCalculator role="hr" />
@@ -154,7 +154,7 @@ export default async function FractionalCHROJobsUKPage() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Browse</span>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Browse</span>
               <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional CHRO & HR Leadership Jobs</h2>
             </div>
             <p className="text-gray-500">Pre-filtered to HR. Change filters to explore.</p>
@@ -170,7 +170,7 @@ export default async function FractionalCHROJobsUKPage() {
         <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="mb-10 text-center">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Interactive Network</span>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Interactive Network</span>
               <h2 className="text-3xl md:text-4xl font-black text-white">HR Leadership Knowledge Graph</h2>
               <p className="text-gray-400 mt-2">Explore CHRO roles, skills, and companies in 3D</p>
             </div>
@@ -181,7 +181,7 @@ export default async function FractionalCHROJobsUKPage() {
 
       {/* Companies Hiring */}
       {companies.length > 0 && (
-        <section className="py-16 bg-black text-white">
+        <section className="py-16 bg-gray-50 text-white">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-2 block">Who's Hiring</span>
@@ -200,7 +200,7 @@ export default async function FractionalCHROJobsUKPage() {
       <section id="how-to-become" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-16">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-4 block">Career Guide</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-4 block">Career Guide</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
               How to Become a<br /><span className="text-pink-600">Fractional CHRO</span>
             </h2>
@@ -263,10 +263,10 @@ export default async function FractionalCHROJobsUKPage() {
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">Step 4: Find Your First Clients</h3>
 
             <div className="bg-gray-50 text-gray-900 p-8 my-10">
-              <h4 className="text-xl font-bold text-white mb-4">Top Client Sources for Fractional CHROs</h4>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Top Client Sources for Fractional CHROs</h4>
               <div className="grid md:grid-cols-2 gap-6 text-gray-300">
                 <div>
-                  <p className="font-semibold text-white mb-2">Direct Outreach:</p>
+                  <p className="font-semibold text-gray-900 mb-2">Direct Outreach:</p>
                   <ul className="space-y-1 text-sm">
                     <li>• VC/PE firms (portfolio company support)</li>
                     <li>• CEO/founder networks</li>
@@ -275,7 +275,7 @@ export default async function FractionalCHROJobsUKPage() {
                   </ul>
                 </div>
                 <div>
-                  <p className="font-semibold text-white mb-2">Platforms & Communities:</p>
+                  <p className="font-semibold text-gray-900 mb-2">Platforms & Communities:</p>
                   <ul className="space-y-1 text-sm">
                     <li>• Fractional Quest</li>
                     <li>• CIPD HR Directors network</li>
@@ -334,7 +334,7 @@ export default async function FractionalCHROJobsUKPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">UK Tax</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">UK Tax</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">IR35: Inside vs Outside</h2>
             <p className="text-gray-600 mt-4">As a fractional CHRO, your IR35 status significantly impacts your take-home pay</p>
           </div>
@@ -346,7 +346,7 @@ export default async function FractionalCHROJobsUKPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Common Questions About Fractional CHRO Careers</h2>
           </div>
           <FAQ items={CHRO_CAREER_FAQS} title="" />
@@ -354,11 +354,11 @@ export default async function FractionalCHROJobsUKPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-black text-white">
+      <section className="py-20 md:py-28 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-4 block">Ready?</span>
           <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Start Your<br /><span className="text-pink-400">Fractional CHRO Career</span></h2>
-          <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">Create your profile and get matched with companies seeking fractional people leadership.</p>
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">Create your profile and get matched with companies seeking fractional people leadership.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/handler/sign-up" className="px-10 py-5 bg-pink-500 text-white font-bold uppercase tracking-wider hover:bg-pink-400 transition-colors">Create Profile</Link>
             <Link href="/fractional-chro" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">CHRO Guide</Link>

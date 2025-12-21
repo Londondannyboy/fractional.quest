@@ -78,7 +78,7 @@ export default function ForceGraphsComparison() {
     <div className="min-h-screen bg-white p-8">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-white mb-2">
+        <h1 className="text-4xl font-bold text-gray-900 mb-2">
           React Force Graph: All Variants (2D, 3D, VR, AR)
         </h1>
         <p className="text-purple-300 mb-4">
@@ -96,7 +96,7 @@ export default function ForceGraphsComparison() {
       <div className="grid grid-cols-2 gap-8">
         {/* 2D Force Graph */}
         <div className="bg-purple-900/20 rounded-2xl p-6 border border-purple-500/30">
-          <h2 className="text-2xl font-bold text-white mb-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
             ⭐ 2D Force Graph (Recommended)
           </h2>
           <div className="space-y-2 text-sm text-purple-300 mb-4">
@@ -105,7 +105,7 @@ export default function ForceGraphsComparison() {
             <div>✅ Pan by dragging background</div>
             <div>✅ Smooth, no lag</div>
           </div>
-          <div className="bg-black rounded-xl" style={{ height: 700 }}>
+          <div className="bg-gray-50 rounded-xl" style={{ height: 700 }}>
             <ForceGraph2D
               graphData={graphData}
               nodeLabel="name"
@@ -138,7 +138,7 @@ export default function ForceGraphsComparison() {
 
         {/* 3D Force Graph */}
         <div className="bg-indigo-900/20 rounded-2xl p-6 border border-indigo-500/30">
-          <h2 className="text-2xl font-bold text-white mb-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
             🚀 3D Force Graph (Immersive)
           </h2>
           <div className="space-y-2 text-sm text-indigo-300 mb-4">
@@ -147,7 +147,7 @@ export default function ForceGraphsComparison() {
             <div>✅ Drag nodes in 3D space</div>
             <div>⚠️ More complex (3D rendering)</div>
           </div>
-          <div className="bg-black rounded-xl" style={{ height: 700 }}>
+          <div className="bg-gray-50 rounded-xl" style={{ height: 700 }}>
             <ForceGraph3D
               graphData={graphData}
               nodeLabel="name"
@@ -164,7 +164,7 @@ export default function ForceGraphsComparison() {
 
         {/* VR Force Graph */}
         <div className="bg-cyan-900/20 rounded-2xl p-6 border border-cyan-500/30">
-          <h2 className="text-2xl font-bold text-white mb-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
             🥽 VR Force Graph (Virtual Reality)
           </h2>
           <div className="space-y-2 text-sm text-cyan-300 mb-4">
@@ -173,7 +173,7 @@ export default function ForceGraphsComparison() {
             <div>✅ Immersive 3D navigation</div>
             <div>⚠️ WebXR required</div>
           </div>
-          <div className="bg-black rounded-xl flex items-center justify-center" style={{ height: 700 }}>
+          <div className="bg-gray-50 rounded-xl flex items-center justify-center" style={{ height: 700 }}>
             <ForceGraphVRWrapper
               graphData={graphData}
               width={650}
@@ -184,7 +184,7 @@ export default function ForceGraphsComparison() {
 
         {/* AR Force Graph */}
         <div className="bg-emerald-900/20 rounded-2xl p-6 border border-emerald-500/30">
-          <h2 className="text-2xl font-bold text-white mb-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
             📱 AR Force Graph (Augmented Reality)
           </h2>
           <div className="space-y-2 text-sm text-emerald-300 mb-4">
@@ -193,7 +193,7 @@ export default function ForceGraphsComparison() {
             <div>✅ AR camera integration</div>
             <div>⚠️ WebXR AR required</div>
           </div>
-          <div className="bg-black rounded-xl flex items-center justify-center" style={{ height: 700 }}>
+          <div className="bg-gray-50 rounded-xl flex items-center justify-center" style={{ height: 700 }}>
             <ForceGraphARWrapper
               graphData={graphData}
               width={650}

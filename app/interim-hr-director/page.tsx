@@ -66,14 +66,14 @@ export default async function InterimHRDirectorPage() {
         </div>
         <div className="relative z-10 w-full py-16">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
-            <Link href="/fractional-hr" className="inline-flex items-center text-white/60 hover:text-white mb-6 transition-colors text-sm">
+            <Link href="/fractional-hr" className="inline-flex items-center text-white/60 hover:text-gray-900 mb-6 transition-colors text-sm">
               <span className="mr-2">←</span> Back to HR Hub
             </Link>
             <div className="max-w-4xl">
               <span className="inline-block bg-gray-700 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Interim Guide
               </span>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
                 Interim<br />
                 <span className="text-pink-400">HR Director</span>
               </h1>
@@ -215,7 +215,7 @@ export default async function InterimHRDirectorPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Common Questions</h2>
           </div>
           <FAQ items={INTERIM_FAQS} title="" />
@@ -226,7 +226,7 @@ export default async function InterimHRDirectorPage() {
       <section className="py-16 bg-gray-50 text-gray-900">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Explore HR Leadership Options</h2>
-          <p className="text-gray-300 mb-8">Whether you need interim or fractional, find the right HR leader for your situation.</p>
+          <p className="text-gray-600 mb-8">Whether you need interim or fractional, find the right HR leader for your situation.</p>
           <div className="flex justify-center gap-4 flex-wrap">
             <Link href="/fractional-hr-jobs-uk" className="px-8 py-4 bg-pink-500 text-white font-semibold hover:bg-pink-400 transition-colors">
               Browse HR Leaders

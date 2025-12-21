@@ -348,7 +348,7 @@ function VoiceInterface({ token, userId, userName }: VoiceInterfaceProps) {
         <div className="text-center max-w-md">
           <div className="text-6xl mb-6">✨</div>
           <h2 className="text-3xl font-bold mb-4">Onboarding Complete!</h2>
-          <p className="text-lg text-gray-400 mb-8">
+          <p className="text-lg text-gray-600 mb-8">
             Your profile is ready. Redirecting to your knowledge graph...
           </p>
           <div className="w-16 h-16 border-4 border-blue-500/30 border-t-blue-500 rounded-full animate-spin mx-auto"></div>
@@ -374,7 +374,7 @@ function VoiceInterface({ token, userId, userName }: VoiceInterfaceProps) {
             <span className="text-blue-400">profile together</span>
           </h1>
 
-          <p className="text-lg text-gray-400 mb-8">
+          <p className="text-lg text-gray-600 mb-8">
             Just have a natural conversation with Frac. I'll ask a few questions to understand your background and preferences.
           </p>
 

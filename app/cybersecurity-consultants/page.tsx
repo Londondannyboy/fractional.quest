@@ -24,7 +24,7 @@ export default function CybersecurityConsultantsPage() {
             <Link href="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm"><span className="mr-2">←</span> Back to Home</Link>
             <div className="max-w-4xl">
               <span className="inline-block bg-red-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">Popular Roles</span>
-              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9]">Cybersecurity<br /><span className="text-red-400">Consultants</span></h1>
+              <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9]">Cybersecurity<br /><span className="text-red-400">Consultants</span></h1>
               <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">Hire experienced cybersecurity professionals on a fractional basis. Get expert security guidance without the cost of a full-time security team.</p>
               <div className="flex flex-wrap gap-4">
                 <Link href="#contact" className="px-8 py-4 bg-red-500 text-white font-bold uppercase tracking-wider hover:bg-red-400 transition-colors">Find a Consultant</Link>
@@ -78,10 +78,10 @@ export default function CybersecurityConsultantsPage() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 bg-black text-white">
+      <section id="contact" className="py-20 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-black mb-6">Find a Cybersecurity Consultant</h2>
-          <p className="text-xl text-gray-400 mb-10">Tell us about your security needs and we'll match you with experienced cybersecurity professionals.</p>
+          <p className="text-xl text-gray-600 mb-10">Tell us about your security needs and we'll match you with experienced cybersecurity professionals.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/handler/sign-up" className="px-10 py-5 bg-red-500 text-white font-bold uppercase tracking-wider hover:bg-red-400 transition-colors">Get Started</Link>
             <Link href="/fractional-security" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Explore Security Leadership</Link>

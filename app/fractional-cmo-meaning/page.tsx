@@ -51,7 +51,7 @@ export default function FractionalCMOMeaningPage() {
             <span className="mr-2">←</span> Back to Fractional CMO Guide
           </Link>
           <div className="max-w-3xl">
-            <span className="inline-block bg-black text-amber-400 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
+            <span className="inline-block bg-gray-50 text-amber-400 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
               Definition
             </span>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight">

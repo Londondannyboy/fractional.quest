@@ -77,7 +77,7 @@ export default async function OxfordPage() {
           <JobsGraph3D locationFilter="oxford" limit={30} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <Link href="/" className="inline-flex items-center text-indigo-200 hover:text-white mb-6 transition-colors">
+          <Link href="/" className="inline-flex items-center text-indigo-200 hover:text-gray-900 mb-6 transition-colors">
             ← Back to Home
           </Link>
           <div className="inline-block mb-6">
@@ -85,7 +85,7 @@ export default async function OxfordPage() {
               {stats.totalOxford}+ Jobs in Oxford
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
             Fractional Jobs Oxford
           </h1>
           <p className="max-w-2xl text-xl text-indigo-100 mb-10 leading-relaxed">
@@ -214,7 +214,7 @@ export default async function OxfordPage() {
       <section className="py-20 md:py-28 bg-indigo-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Oxford Success Stories</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Oxford Success Stories</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -316,7 +316,7 @@ export default async function OxfordPage() {
       {/* Final CTA */}
       <section className="py-20 md:py-28 bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Ready to Work in Oxford?
           </h2>
           <p className="text-xl text-indigo-100 mb-10">

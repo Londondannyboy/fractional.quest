@@ -91,27 +91,36 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero - Newspaper Style */}
-      <section className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="inline-block text-sm font-semibold text-amber-600 uppercase tracking-wider mb-4">
+      {/* Hero with Background Image */}
+      <section className="relative min-h-[85vh] flex items-center">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80')`,
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-gray-900/60" />
+        </div>
+
+        <div className="relative z-10 w-full">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="max-w-3xl">
+              <span className="inline-block bg-amber-500/90 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-6 rounded-full">
                 The Fractional Revolution
               </span>
-              <h1 className="font-editorial text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] mb-6">
+              <h1 className="font-editorial text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-6">
                 Design Your Life.<br />
-                <span className="text-amber-600">Not Your Commute.</span>
+                <span className="text-amber-400">Not Your Commute.</span>
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed mb-8">
+              <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-10 max-w-2xl">
                 Join thousands of executives who've traded the 9-5 grind for freedom,
-                flexibility, and a portfolio career. Work 2-3 days a week with multiple
-                clients. Earn £150-300k. Live anywhere.
+                flexibility, and a portfolio career. Work 2-3 days a week. Earn £150-300k. Live anywhere.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/fractional-jobs-uk"
-                  className="inline-flex items-center px-8 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors"
+                  className="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   Browse {stats.jobs}+ Jobs
                   <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -120,26 +129,21 @@ export default async function Home() {
                 </Link>
                 <Link
                   href="/profile/edit"
-                  className="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg border-2 border-gray-900 hover:bg-gray-50 transition-colors"
+                  className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur text-white font-semibold rounded-lg border border-white/30 hover:bg-white/20 transition-colors"
                 >
                   Create Your Profile
                 </Link>
               </div>
-            </div>
 
-            {/* Hero Image Placeholder */}
-            <div className="relative">
-              <div className="aspect-[4/3] bg-gradient-to-br from-amber-50 via-white to-teal-50 rounded-2xl overflow-hidden border border-gray-100">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-amber-100 to-teal-100 flex items-center justify-center">
-                      <svg className="w-16 h-16 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                      </svg>
-                    </div>
-                    <p className="text-gray-500 text-sm">Fractional executives working from anywhere</p>
-                  </div>
+              {/* Mini testimonial */}
+              <div className="mt-12 flex items-center gap-4">
+                <div className="flex -space-x-3">
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="" className="w-10 h-10 rounded-full border-2 border-white" />
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="" className="w-10 h-10 rounded-full border-2 border-white" />
+                  <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&h=100&fit=crop" alt="" className="w-10 h-10 rounded-full border-2 border-white" />
+                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop" alt="" className="w-10 h-10 rounded-full border-2 border-white" />
                 </div>
+                <p className="text-white/70 text-sm">Join 500+ fractional executives in the UK</p>
               </div>
             </div>
           </div>
@@ -215,10 +219,64 @@ export default async function Home() {
         </section>
       )}
 
-      {/* The Fractional Lifestyle */}
-      <section className="py-16 md:py-24 bg-amber-50">
+      {/* Featured Executive Roles with Photos */}
+      <section className="py-16 md:py-24 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
+            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-2 block">
+              Meet Our Executives
+            </span>
+            <h2 className="font-editorial text-4xl font-bold text-gray-900 mb-4">
+              Fractional Leaders Across Every Function
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              From CFOs to CTOs, our community includes experienced executives ready to make an impact
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: 'Sarah Mitchell', role: 'Fractional CFO', company: 'Ex-Stripe, Monzo', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop', color: 'amber' },
+              { name: 'James Chen', role: 'Fractional CTO', company: 'Ex-Google, Deliveroo', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop', color: 'blue' },
+              { name: 'Emma Williams', role: 'Fractional CMO', company: 'Ex-Meta, Wise', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop', color: 'teal' },
+              { name: 'Marcus Thompson', role: 'Fractional COO', company: 'Ex-McKinsey, Revolut', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop', color: 'purple' },
+            ].map((exec, i) => (
+              <div key={i} className="group text-center">
+                <div className="relative mb-4 overflow-hidden rounded-2xl aspect-square">
+                  <img
+                    src={exec.image}
+                    alt={exec.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <span className={`inline-block bg-${exec.color}-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-2`}>
+                      {exec.role}
+                    </span>
+                  </div>
+                </div>
+                <h3 className="font-bold text-gray-900 text-lg">{exec.name}</h3>
+                <p className="text-gray-500 text-sm">{exec.company}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+              href="/people"
+              className="inline-flex items-center px-6 py-3 border-2 border-gray-900 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white transition-colors"
+            >
+              View All Executives
+              <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Lifestyle Image Grid */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
             <span className="text-sm font-semibold text-amber-600 uppercase tracking-wider mb-2 block">
               Why Go Fractional?
             </span>
@@ -229,6 +287,49 @@ export default async function Home() {
               Stop trading time for money. Start building a portfolio career that gives you
               freedom, variety, and the income to match.
             </p>
+          </div>
+
+          {/* Image Grid */}
+          <div className="grid md:grid-cols-3 gap-4 mb-12">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80"
+                alt="Team collaboration"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent flex items-end p-6">
+                <div className="text-white">
+                  <div className="text-3xl font-bold">£150-300k</div>
+                  <div className="text-white/80 text-sm">Annual earnings potential</div>
+                </div>
+              </div>
+            </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1531746790095-e6a4c9a4b6f3?w=800&q=80"
+                alt="Working remotely in Lisbon"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent flex items-end p-6">
+                <div className="text-white">
+                  <div className="text-3xl font-bold">Work Anywhere</div>
+                  <div className="text-white/80 text-sm">Lisbon, Bali, your home</div>
+                </div>
+              </div>
+            </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80"
+                alt="Work life balance"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent flex items-end p-6">
+                <div className="text-white">
+                  <div className="text-3xl font-bold">2-3 Days</div>
+                  <div className="text-white/80 text-sm">Per client, per week</div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -426,7 +527,7 @@ export default async function Home() {
             <div className="mt-10 text-center">
               <Link
                 href="/fractional-jobs-uk"
-                className="inline-flex items-center px-8 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors"
+                className="inline-flex items-center px-8 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
                 Browse All Jobs
                 <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -490,10 +591,10 @@ export default async function Home() {
       {/* CTA - Join the Community */}
       <section className="py-16 md:py-24 bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-editorial text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="font-editorial text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Ready to Go Fractional?
           </h2>
-          <p className="text-xl text-gray-300 mb-10">
+          <p className="text-xl text-gray-600 mb-10">
             Create your profile and join the fractional executive community.
             It only takes a few minutes.
           </p>

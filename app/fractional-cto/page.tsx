@@ -89,7 +89,7 @@ export default function FractionalCTOPage() {
               <span className="inline-block bg-blue-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Complete CTO Hub
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
                 Fractional CTO<br />
                 <span className="text-blue-400">Complete Guide</span>
               </h1>
@@ -145,7 +145,7 @@ export default function FractionalCTOPage() {
       <section id="definition" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Definition</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Definition</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">What is a Fractional CTO?</h2>
           </div>
 
@@ -219,7 +219,7 @@ export default function FractionalCTOPage() {
       <section id="responsibilities" className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Responsibilities</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Responsibilities</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">What Does a Fractional CTO Do?</h2>
             <p className="text-xl text-gray-600 mt-4">Core responsibilities your fractional CTO will own</p>
           </div>
@@ -317,7 +317,7 @@ export default function FractionalCTOPage() {
       <section id="when-to-hire" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Timing</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Timing</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">When Should You Hire a Fractional CTO?</h2>
           </div>
 
@@ -406,7 +406,7 @@ export default function FractionalCTOPage() {
       <section id="cost" className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-8 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Pricing</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Pricing</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">How Much Does a Fractional CTO Cost?</h2>
             <p className="text-gray-600 mt-4">Compare fractional vs full-time CTO costs</p>
           </div>
@@ -454,7 +454,7 @@ export default function FractionalCTOPage() {
       <section id="benefits" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Benefits</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Benefits</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Why Hire a Fractional CTO?</h2>
           </div>
 
@@ -516,7 +516,7 @@ export default function FractionalCTOPage() {
       <section id="comparison" className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Comparison</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Comparison</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional vs Interim vs Full-Time CTO</h2>
             <p className="text-gray-600 mt-4">Choose the right model for your needs</p>
           </div>
@@ -526,19 +526,19 @@ export default function FractionalCTOPage() {
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             <Link href="/fractional-cto-vs-full-time-cto" className="p-6 bg-white hover:bg-gray-100 hover:text-gray-900 transition-all group border border-gray-200">
               <h3 className="text-lg font-bold mb-2">Fractional vs Full-Time</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Detailed comparison with decision framework</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Detailed comparison with decision framework</p>
               <div className="text-sm font-bold uppercase tracking-wider">Read Comparison →</div>
             </Link>
 
             <Link href="/interim-cto" className="p-6 bg-white hover:bg-gray-100 hover:text-gray-900 transition-all group border border-gray-200">
               <h3 className="text-lg font-bold mb-2">What is an Interim CTO?</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">When to use interim vs fractional</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">When to use interim vs fractional</p>
               <div className="text-sm font-bold uppercase tracking-wider">Learn More →</div>
             </Link>
 
             <Link href="/what-is-a-fractional-cto" className="p-6 bg-white hover:bg-gray-100 hover:text-gray-900 transition-all group border border-gray-200">
               <h3 className="text-lg font-bold mb-2">Complete Definition Guide</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Deep dive into what fractional CTOs do</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Deep dive into what fractional CTOs do</p>
               <div className="text-sm font-bold uppercase tracking-wider">Read Guide →</div>
             </Link>
           </div>
@@ -549,7 +549,7 @@ export default function FractionalCTOPage() {
       <section id="how-to-hire" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Hiring Process</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Hiring Process</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">How to Hire a Fractional CTO</h2>
           </div>
 
@@ -641,7 +641,7 @@ export default function FractionalCTOPage() {
       <section id="becoming" className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Career Path</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Career Path</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Becoming a Fractional CTO</h2>
           </div>
 
@@ -706,7 +706,7 @@ export default function FractionalCTOPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
           <FAQ items={FRACTIONAL_CTO_FAQS} title="" />
@@ -717,7 +717,7 @@ export default function FractionalCTOPage() {
       <section className="py-20 md:py-28 bg-gray-50 text-gray-900">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Explore Fractional CTO Options?</h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Whether you're looking to hire a fractional CTO or become one, we have resources to help you succeed.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

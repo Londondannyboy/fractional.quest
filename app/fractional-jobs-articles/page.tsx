@@ -105,8 +105,8 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
           <div className="relative z-10 w-full pb-16 md:pb-24">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
               <div className="max-w-2xl">
-                <div className="bg-black/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10">
-                  <Link href="/" className="inline-flex items-center text-white/70 hover:text-white mb-6 transition-colors text-sm tracking-wide">
+                <div className="bg-gray-50/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10">
+                  <Link href="/" className="inline-flex items-center text-white/70 hover:text-gray-900 mb-6 transition-colors text-sm tracking-wide">
                     <span className="mr-2">←</span> Back to Home
                   </Link>
 
@@ -114,7 +114,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                     {totalArticles}+ Expert Guides
                   </span>
 
-                  <h1 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+                  <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
                     Articles &<br />
                     <span className="text-white/90">Resources</span>
                   </h1>
@@ -144,19 +144,19 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
         </section>
 
         {/* Filters & Sort */}
-        <section className="py-8 bg-black border-b border-gray-200">
+        <section className="py-8 bg-gray-50 border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="flex flex-col md:flex-row gap-4 justify-between items-start md:items-center">
               {/* Sort */}
               <div className="flex items-center gap-3">
-                <span className="text-gray-400 text-sm font-medium">Sort by:</span>
+                <span className="text-gray-600 text-sm font-medium">Sort by:</span>
                 <div className="flex gap-2">
                   <Link
                     href={`/fractional-jobs-articles?sort=recent${category ? `&category=${category}` : ''}${type ? `&type=${type}` : ''}`}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       sort === 'recent' || !sort
                         ? 'bg-blue-600 text-white'
-                        : 'bg-gray-50 text-gray-300 hover:bg-gray-800 border border-gray-200'
+                        : 'bg-gray-50 text-gray-300 hover:bg-gray-100 border border-gray-200'
                     }`}
                   >
                     Most Recent
@@ -166,7 +166,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       sort === 'oldest'
                         ? 'bg-blue-600 text-white'
-                        : 'bg-gray-50 text-gray-300 hover:bg-gray-800 border border-gray-200'
+                        : 'bg-gray-50 text-gray-300 hover:bg-gray-100 border border-gray-200'
                     }`}
                   >
                     Oldest First
@@ -181,7 +181,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                     !category
                       ? 'bg-purple-600 text-white'
-                      : 'bg-gray-50 text-gray-300 hover:bg-gray-800 border border-gray-200'
+                      : 'bg-gray-50 text-gray-300 hover:bg-gray-100 border border-gray-200'
                   }`}
                 >
                   All
@@ -193,7 +193,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       category === cat
                         ? 'bg-purple-600 text-white'
-                        : 'bg-gray-50 text-gray-300 hover:bg-gray-800 border border-gray-200'
+                        : 'bg-gray-50 text-gray-300 hover:bg-gray-100 border border-gray-200'
                     }`}
                   >
                     {cat}
@@ -226,13 +226,13 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
         </section>
 
         {/* Articles Grid */}
-        <section id="articles" className="py-20 md:py-28 bg-black">
+        <section id="articles" className="py-20 md:py-28 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             {articles.length === 0 ? (
               <div className="text-center py-20">
                 <span className="text-6xl mb-6 block">📚</span>
-                <h2 className="text-2xl font-bold text-white mb-4">No articles found yet</h2>
-                <p className="text-gray-400 mb-8">We're working on creating expert guides for you.</p>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">No articles found yet</h2>
+                <p className="text-gray-600 mb-8">We're working on creating expert guides for you.</p>
                 <Link
                   href="/"
                   className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg bg-purple-700 text-white hover:bg-purple-800 transition-all"
@@ -263,7 +263,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                           <h2 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-3 line-clamp-2">
                             {article.title}
                           </h2>
-                          <p className="text-gray-400 text-sm line-clamp-3 flex-1">
+                          <p className="text-gray-600 text-sm line-clamp-3 flex-1">
                             {article.excerpt || article.meta_description}
                           </p>
                           <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-200">
@@ -293,7 +293,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                   <div className="flex justify-center items-center gap-2">
                     {page > 1 && (
                       <Link href={`/fractional-jobs-articles?page=${page - 1}`}>
-                        <button className="px-5 py-2.5 border border-gray-200 rounded-lg hover:bg-gray-800 text-sm font-medium text-gray-300">
+                        <button className="px-5 py-2.5 border border-gray-200 rounded-lg hover:bg-gray-100 text-sm font-medium text-gray-300">
                           ← Previous
                         </button>
                       </Link>
@@ -310,7 +310,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                               className={`w-10 h-10 rounded-lg text-sm font-medium ${
                                 pageNum === page
                                   ? 'bg-blue-600 text-white'
-                                  : 'border border-gray-200 hover:bg-gray-800 text-gray-300'
+                                  : 'border border-gray-200 hover:bg-gray-100 text-gray-300'
                               }`}
                             >
                               {pageNum}
@@ -322,7 +322,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
 
                     {page < totalPages && (
                       <Link href={`/fractional-jobs-articles?page=${page + 1}`}>
-                        <button className="px-5 py-2.5 border border-gray-200 rounded-lg hover:bg-gray-800 text-sm font-medium text-gray-300">
+                        <button className="px-5 py-2.5 border border-gray-200 rounded-lg hover:bg-gray-100 text-sm font-medium text-gray-300">
                           Next →
                         </button>
                       </Link>
@@ -335,11 +335,11 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
         </section>
 
         {/* Popular Topics */}
-        <section className="py-20 md:py-28 bg-black">
+        <section className="py-20 md:py-28 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="text-center mb-16">
               <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-500 mb-4 block">Topics</span>
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Popular Guide Topics</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Popular Guide Topics</h2>
               <p className="text-lg text-gray-400">Explore our most-read categories</p>
             </div>
 
@@ -359,7 +359,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
                     <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-2">
                       {topic.title}
                     </h3>
-                    <p className="text-gray-400 text-sm">{topic.desc}</p>
+                    <p className="text-gray-600 text-sm">{topic.desc}</p>
                   </article>
                 </Link>
               ))}
@@ -371,10 +371,10 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
         <section className="py-24 md:py-32 bg-gray-50">
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-500 mb-6 block">Stay Updated</span>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 leading-tight">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight">
               Get the latest guides<br />in your inbox
             </h2>
-            <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
               Join fractional executives who receive our weekly career insights and job alerts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -401,8 +401,8 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center px-6">
           <span className="text-6xl mb-6 block">😢</span>
-          <h1 className="text-2xl font-bold text-white mb-4">Unable to Load Articles</h1>
-          <p className="text-gray-400 mb-8">There was an error loading articles. Please try again later.</p>
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">Unable to Load Articles</h1>
+          <p className="text-gray-600 mb-8">There was an error loading articles. Please try again later.</p>
           <Link
             href="/"
             className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg bg-purple-700 text-white hover:bg-purple-800 transition-all"

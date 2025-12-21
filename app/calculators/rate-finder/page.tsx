@@ -103,7 +103,7 @@ export default function RateFinderCalculator() {
       <section className="bg-gradient-to-br from-amber-500 via-amber-600 to-orange-600 py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <span className="section-label text-amber-100 mb-4 block">For Executives</span>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Rate Finder Calculator
           </h1>
           <p className="text-xl text-amber-100 max-w-2xl mx-auto">

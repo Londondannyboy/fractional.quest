@@ -56,9 +56,9 @@ export default async function PartTimeHRPage() {
           <JobsGraph3D categoryFilter="HR" limit={30} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="max-w-4xl mx-auto px-6 relative z-10">
-          <div className="bg-black/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10">
-            <Link href="/fractional-hr" className="text-white/70 hover:text-white mb-6 inline-block text-sm">← Back to HR Hub</Link>
-            <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Part-Time HR Jobs UK</h1>
+          <div className="bg-gray-50/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10">
+            <Link href="/fractional-hr" className="text-white/70 hover:text-gray-900 mb-6 inline-block text-sm">← Back to HR Hub</Link>
+            <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">Part-Time HR Jobs UK</h1>
             <p className="text-xl text-white/80 mb-8">
               Flexible HR Director and CHRO roles for experienced people professionals. Work 1-3 days per week earning £700-£1,300 per day.
             </p>

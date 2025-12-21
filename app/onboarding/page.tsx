@@ -24,7 +24,7 @@ export default function OnboardingRouter() {
       <div className="max-w-5xl w-full">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Welcome to <span className="text-blue-400">Fractional Quest</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -57,17 +57,17 @@ export default function OnboardingRouter() {
                 <div className="text-6xl mb-6 animate-pulse">🎙️</div>
 
                 {/* Title */}
-                <h2 className="text-2xl font-bold text-white mb-4">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">
                   Voice Onboarding
                 </h2>
 
                 {/* Description */}
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-600 mb-6">
                   Have a natural conversation with Frac. Just talk about your experience and preferences—we'll handle the rest.
                 </p>
 
                 {/* Features */}
-                <ul className="text-left space-y-3 text-sm text-gray-400 mb-6">
+                <ul className="text-left space-y-3 text-sm text-gray-600 mb-6">
                   <li className="flex items-center gap-2">
                     <span className="text-green-400">✓</span>
                     Natural conversation (3-5 minutes)
@@ -112,17 +112,17 @@ export default function OnboardingRouter() {
                 <div className="text-6xl mb-6">📝</div>
 
                 {/* Title */}
-                <h2 className="text-2xl font-bold text-white mb-4">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">
                   Manual Form
                 </h2>
 
                 {/* Description */}
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-600 mb-6">
                   Prefer to fill out a form? No problem. Provide your details step-by-step at your own pace.
                 </p>
 
                 {/* Features */}
-                <ul className="text-left space-y-3 text-sm text-gray-400 mb-6">
+                <ul className="text-left space-y-3 text-sm text-gray-600 mb-6">
                   <li className="flex items-center gap-2">
                     <span className="text-blue-400">✓</span>
                     Traditional step-by-step form

@@ -134,7 +134,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       <div className="bg-gradient-to-br from-gray-900 via-slate-900 to-black py-16">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           {/* Breadcrumbs */}
-          <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">
+          <div className="flex items-center gap-2 text-sm text-gray-600 mb-6">
             <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
@@ -154,12 +154,12 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           )}
 
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {article.title}
           </h1>
 
           {/* Meta */}
-          <div className="flex items-center gap-4 text-gray-400 text-sm">
+          <div className="flex items-center gap-4 text-gray-600 text-sm">
             {formattedDate && <span>{formattedDate}</span>}
             {article.auto_generated && (
               <span className="inline-flex items-center gap-1">

@@ -102,7 +102,7 @@ export default function InterimComplianceOfficerPage() {
           <span className="inline-block bg-orange-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             Situation Guide
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
             Interim Compliance<br />
             <span className="text-orange-400">Officer UK</span>
           </h1>

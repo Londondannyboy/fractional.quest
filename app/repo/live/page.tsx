@@ -307,7 +307,7 @@ function LiveRepoInterface({ token, userId, userName }: LiveRepoInterfaceProps) 
   // ========================================================================
 
   return (
-    <div className="h-screen w-screen bg-black relative overflow-hidden">
+    <div className="h-screen w-screen bg-gray-50 relative overflow-hidden">
       {/* Full Screen Force Graph */}
       {userType && (
         <ClusteredForceGraph
@@ -374,7 +374,7 @@ function LiveRepoInterface({ token, userId, userName }: LiveRepoInterfaceProps) 
         </button>
 
         {/* User Type Toggle */}
-        <div className="flex gap-2 bg-black/40 backdrop-blur-lg rounded-lg p-1 border border-white/10">
+        <div className="flex gap-2 bg-gray-50/40 backdrop-blur-lg rounded-lg p-1 border border-white/10">
           <button
             onClick={() => setUserType('candidate')}
             className={`px-3 py-1.5 rounded text-xs font-semibold transition-all ${
@@ -410,7 +410,7 @@ function LiveRepoInterface({ token, userId, userName }: LiveRepoInterfaceProps) 
 
       {/* Transcript Log (for debugging) */}
       {process.env.NODE_ENV === 'development' && transcript.length > 0 && (
-        <div className="absolute bottom-4 left-4 max-w-md bg-black/90 rounded-lg p-4 border border-purple-500/30 max-h-48 overflow-y-auto">
+        <div className="absolute bottom-4 left-4 max-w-md bg-gray-50/90 rounded-lg p-4 border border-purple-500/30 max-h-48 overflow-y-auto">
           <div className="text-xs text-purple-300 font-semibold mb-2">Recent Transcripts:</div>
           <div className="space-y-1">
             {transcript.slice(-5).map((text, i) => (

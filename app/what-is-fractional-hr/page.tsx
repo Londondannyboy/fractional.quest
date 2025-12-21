@@ -77,7 +77,7 @@ export default function WhatIsFractionalHRPage() {
               <span className="inline-block bg-white text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Definition Guide
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
                 What is<br />
                 <span className="text-pink-400">Fractional HR?</span>
               </h1>
@@ -107,7 +107,7 @@ export default function WhatIsFractionalHRPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Quick Answer</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Quick Answer</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional HR Definition</h2>
           </div>
 
@@ -141,10 +141,10 @@ export default function WhatIsFractionalHRPage() {
             <p>A typical engagement looks like this:</p>
 
             <div className="bg-gray-50 text-gray-900 p-8 my-10">
-              <h4 className="text-xl font-bold text-white mb-4">Example: Fractional HR Director, 2 Days/Week</h4>
+              <h4 className="text-xl font-bold text-gray-900 mb-4">Example: Fractional HR Director, 2 Days/Week</h4>
               <div className="grid md:grid-cols-2 gap-6 text-gray-300">
                 <div>
-                  <p className="font-semibold text-white mb-2">What They Do:</p>
+                  <p className="font-semibold text-gray-900 mb-2">What They Do:</p>
                   <ul className="space-y-1 text-sm list-none pl-0">
                     <li>• Attend weekly leadership meetings</li>
                     <li>• Develop and implement HR strategy</li>
@@ -155,7 +155,7 @@ export default function WhatIsFractionalHRPage() {
                   </ul>
                 </div>
                 <div>
-                  <p className="font-semibold text-white mb-2">What They Don't Do:</p>
+                  <p className="font-semibold text-gray-900 mb-2">What They Don't Do:</p>
                   <ul className="space-y-1 text-sm list-none pl-0">
                     <li>• Day-to-day HR administration</li>
                     <li>• Payroll processing</li>
@@ -270,7 +270,7 @@ export default function WhatIsFractionalHRPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
           <FAQ items={WHAT_IS_HR_FAQS} title="" />
@@ -278,10 +278,10 @@ export default function WhatIsFractionalHRPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-black text-white">
+      <section className="py-20 md:py-28 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Explore Fractional HR?</h2>
-          <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Learn more about how fractional HR can work for your business, or browse available opportunities.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

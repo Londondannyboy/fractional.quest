@@ -77,7 +77,7 @@ export default async function PartTimeCmoJobsUkPage() {
               <span className="inline-block bg-amber-500 text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Marketing Leadership
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
                 Part-Time CMO<br />
                 <span className="text-amber-400">Jobs UK</span>
               </h1>
@@ -116,7 +116,7 @@ export default async function PartTimeCmoJobsUkPage() {
       <section className="py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-8 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Calculator</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
             <h2 className="text-2xl md:text-3xl font-black text-gray-900">How Much Can You Earn as a Part-Time CMO?</h2>
           </div>
           <RoleCalculator role="cmo" />
@@ -128,7 +128,7 @@ export default async function PartTimeCmoJobsUkPage() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Browse</span>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Browse</span>
               <h2 className="text-3xl md:text-4xl font-black text-gray-900">Part-Time CMO Jobs</h2>
             </div>
             <p className="text-gray-500">Pre-filtered to Marketing. Change filters to explore.</p>
@@ -144,7 +144,7 @@ export default async function PartTimeCmoJobsUkPage() {
         <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="mb-10 text-center">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Interactive Network</span>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Interactive Network</span>
               <h2 className="text-3xl md:text-4xl font-black text-white">CMO Jobs Knowledge Graph</h2>
               <p className="text-gray-400 mt-2">Explore CMO roles, skills, and companies in 3D</p>
             </div>
@@ -155,7 +155,7 @@ export default async function PartTimeCmoJobsUkPage() {
 
       {/* Companies Hiring */}
       {companies.length > 0 && (
-        <section className="py-16 bg-black text-white">
+        <section className="py-16 bg-gray-50 text-white">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-2 block">Who's Hiring</span>
@@ -174,7 +174,7 @@ export default async function PartTimeCmoJobsUkPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-16">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-4 block">The Guide</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-4 block">The Guide</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
               Everything You Need to Know About<br /><span className="text-amber-600">Part-Time CMO Jobs UK</span>
             </h2>
@@ -207,7 +207,7 @@ export default async function PartTimeCmoJobsUkPage() {
             </div>
 
             <div className="bg-gray-50 text-gray-900 p-6 rounded-lg my-8 not-prose">
-              <p className="text-gray-300 mb-3">Looking for fractional CMO positions instead?</p>
+              <p className="text-gray-600 mb-3">Looking for fractional CMO positions instead?</p>
               <Link href="/fractional-cmo-jobs-uk" className="inline-flex items-center text-amber-400 font-bold hover:text-amber-300">
                 View All Fractional CMO Jobs UK →
               </Link>
@@ -306,7 +306,7 @@ export default async function PartTimeCmoJobsUkPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Remote Work</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Remote Work</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Remote Part-Time CMO Jobs</h2>
           </div>
           <div className="prose prose-lg prose-gray max-w-none">
@@ -316,8 +316,8 @@ export default async function PartTimeCmoJobsUkPage() {
             <p>
               Currently, approximately <strong>{stats.remoteCount} of our {stats.total} marketing roles</strong> offer remote or hybrid working. Filter by "Remote" in our job board to see available remote part-time CMO opportunities.
             </p>
-            <div className="bg-black text-white p-6 rounded-lg my-8 not-prose">
-              <p className="text-gray-300 mb-3">Browse remote CMO positions:</p>
+            <div className="bg-gray-50 text-white p-6 rounded-lg my-8 not-prose">
+              <p className="text-gray-600 mb-3">Browse remote CMO positions:</p>
               <Link href="/remote" className="inline-flex items-center text-amber-400 font-bold hover:text-amber-300">
                 View Remote Jobs →
               </Link>
@@ -330,7 +330,7 @@ export default async function PartTimeCmoJobsUkPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">UK Tax</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">UK Tax</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">IR35: Inside vs Outside</h2>
             <p className="text-gray-600 mt-4">As a part-time CMO, your IR35 status significantly impacts your take-home pay</p>
           </div>
@@ -349,7 +349,7 @@ export default async function PartTimeCmoJobsUkPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Part-Time CMO Jobs UK FAQ</h2>
           </div>
           <FAQ items={CMO_FAQS} title="" />
@@ -357,11 +357,11 @@ export default async function PartTimeCmoJobsUkPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-black text-white">
+      <section className="py-20 md:py-28 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-4 block">Ready?</span>
           <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Find Your Next<br /><span className="text-amber-400">Part-Time CMO Role</span></h2>
-          <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">Create your profile and get matched with companies seeking part-time marketing leadership.</p>
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">Create your profile and get matched with companies seeking part-time marketing leadership.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/handler/sign-up" className="px-10 py-5 bg-amber-500 text-black font-bold uppercase tracking-wider hover:bg-amber-400 transition-colors">Create Profile</Link>
             <Link href="/fractional-cmo-salary" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Salary Guide</Link>

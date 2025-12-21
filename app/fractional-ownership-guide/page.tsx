@@ -525,10 +525,10 @@ export default function FractionalOwnershipGuidePage() {
       {/* CTA */}
       <section className="py-16 bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Interested in Fractional Work?
           </h2>
-          <p className="text-gray-300 mb-8">
+          <p className="text-gray-600 mb-8">
             Fractional executives earn £150-300k while working 2-3 days a week—giving you the
             flexibility and income to explore alternative investments like fractional ownership.
           </p>

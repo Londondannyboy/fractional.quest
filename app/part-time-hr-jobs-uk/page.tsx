@@ -51,14 +51,14 @@ export default async function PartTimeHRJobsUKPage() {
         </div>
         <div className="relative z-10 w-full py-16">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
-            <Link href="/part-time-hr" className="inline-flex items-center text-white/60 hover:text-white mb-6 transition-colors text-sm">
+            <Link href="/part-time-hr" className="inline-flex items-center text-white/60 hover:text-gray-900 mb-6 transition-colors text-sm">
               <span className="mr-2">←</span> Back to Part-Time HR
             </Link>
             <div className="max-w-4xl">
               <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Job Board
               </span>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
                 Part-Time<br />
                 <span className="text-pink-400">HR Jobs UK</span>
               </h1>
@@ -89,7 +89,7 @@ export default async function PartTimeHRJobsUKPage() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Browse</span>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Browse</span>
               <h2 className="text-3xl md:text-4xl font-black text-gray-900">Part-Time HR Opportunities</h2>
             </div>
             <p className="text-gray-500">Pre-filtered to HR roles. Adjust filters as needed.</p>
@@ -105,7 +105,7 @@ export default async function PartTimeHRJobsUKPage() {
         <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="mb-10 text-center">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Interactive Network</span>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Interactive Network</span>
               <h2 className="text-3xl md:text-4xl font-black text-white">HR Jobs Knowledge Graph</h2>
               <p className="text-gray-400 mt-2">Explore roles, skills, and companies in 3D</p>
             </div>
@@ -147,7 +147,7 @@ export default async function PartTimeHRJobsUKPage() {
       <section className="py-16 bg-gray-50 text-gray-900">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Part-Time HR Career?</h2>
-          <p className="text-gray-300 mb-8">Create your profile and get matched with companies seeking flexible HR leadership.</p>
+          <p className="text-gray-600 mb-8">Create your profile and get matched with companies seeking flexible HR leadership.</p>
           <div className="flex justify-center gap-4 flex-wrap">
             <Link href="/handler/sign-up" className="px-8 py-4 bg-pink-500 text-white font-semibold hover:bg-pink-400 transition-colors">
               Create Profile

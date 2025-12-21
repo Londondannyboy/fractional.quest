@@ -77,7 +77,7 @@ export default async function CambridgePage() {
           <JobsGraph3D locationFilter="cambridge" limit={30} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <Link href="/" className="inline-flex items-center text-cyan-200 hover:text-white mb-6 transition-colors">
+          <Link href="/" className="inline-flex items-center text-cyan-200 hover:text-gray-900 mb-6 transition-colors">
             ← Back to Home
           </Link>
           <div className="inline-block mb-6">
@@ -85,7 +85,7 @@ export default async function CambridgePage() {
               {stats.totalCambridge}+ Jobs in Cambridge
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
             Fractional Jobs Cambridge
           </h1>
           <p className="max-w-2xl text-xl text-cyan-100 mb-10 leading-relaxed">
@@ -225,7 +225,7 @@ export default async function CambridgePage() {
       <section className="py-20 md:py-28 bg-cyan-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Cambridge Success Stories</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Cambridge Success Stories</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -338,7 +338,7 @@ export default async function CambridgePage() {
       {/* Final CTA */}
       <section className="py-20 md:py-28 bg-gradient-to-br from-cyan-900 via-cyan-800 to-cyan-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Ready to Work in Cambridge?
           </h2>
           <p className="text-xl text-cyan-100 mb-10">

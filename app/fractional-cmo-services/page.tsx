@@ -40,7 +40,7 @@ export default function FractionalCMOServicesPage() {
               <span className="inline-block bg-amber-500 text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Marketing Leadership
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
                 Fractional CMO<br />
                 <span className="text-amber-400">Services UK</span>
               </h1>
@@ -79,7 +79,7 @@ export default function FractionalCMOServicesPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Overview</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Overview</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">What is a Fractional CMO?</h2>
           </div>
           <div className="prose prose-lg prose-gray max-w-none">
@@ -109,7 +109,7 @@ export default function FractionalCMOServicesPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Responsibilities</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Responsibilities</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">What Does a Fractional CMO Do?</h2>
             <p className="text-xl text-gray-600 mt-4">Core responsibilities your fractional CMO will own</p>
           </div>
@@ -165,7 +165,7 @@ export default function FractionalCMOServicesPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Benefits</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Benefits</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Why Hire a Fractional CMO?</h2>
           </div>
           <div className="space-y-8">
@@ -220,7 +220,7 @@ export default function FractionalCMOServicesPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Timing</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Timing</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">When Should You Hire a Fractional CMO?</h2>
           </div>
           <div className="prose prose-lg prose-gray max-w-none mb-8">
@@ -275,7 +275,7 @@ export default function FractionalCMOServicesPage() {
       <section id="calculator" className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-8 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Calculator</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">How Much Does a Fractional CMO Cost?</h2>
             <p className="text-gray-600 mt-4">Compare the cost of fractional vs full-time CMO</p>
           </div>
@@ -299,7 +299,7 @@ export default function FractionalCMOServicesPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Comparison</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Comparison</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional vs Interim vs Full-Time CMO</h2>
             <p className="text-gray-600 mt-4">Choose the right model for your needs</p>
           </div>
@@ -311,7 +311,7 @@ export default function FractionalCMOServicesPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Process</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Process</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">How to Hire a Fractional CMO</h2>
             <p className="text-gray-600 mt-4">From first conversation to start date in as little as 2 weeks</p>
           </div>
@@ -333,7 +333,7 @@ export default function FractionalCMOServicesPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Industries</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Industries</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional CMOs by Industry</h2>
             <p className="text-gray-600 mt-4">Specialists with deep sector experience</p>
           </div>
@@ -359,7 +359,7 @@ export default function FractionalCMOServicesPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
           <FAQ items={CMO_SERVICE_FAQS} title="" />
@@ -367,13 +367,13 @@ export default function FractionalCMOServicesPage() {
       </section>
 
       {/* CTA */}
-      <section id="contact" className="py-20 md:py-28 bg-black text-white">
+      <section id="contact" className="py-20 md:py-28 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-4 block">Get Started</span>
           <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
             Ready to Hire a<br /><span className="text-amber-400">Fractional CMO?</span>
           </h2>
-          <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Tell us about your growth challenges and we'll match you with pre-vetted fractional CMOs who have solved them before. Start conversations within 48 hours.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">

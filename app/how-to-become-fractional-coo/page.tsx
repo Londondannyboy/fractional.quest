@@ -12,7 +12,7 @@ export default function HowToBecomeFractionalCOOPage() {
     <div className="min-h-screen bg-white">
       <section className="bg-gray-50 text-gray-900 py-20">
         <div className="max-w-4xl mx-auto px-4">
-          <Link href="/fractional-coo" className="text-gray-400 hover:text-white mb-6 inline-block">← Back to COO Hub</Link>
+          <Link href="/fractional-coo" className="text-gray-400 hover:text-gray-900 mb-6 inline-block">← Back to COO Hub</Link>
           <h1 className="text-5xl font-black mb-6">How to Become a Fractional COO</h1>
           <p className="text-xl text-gray-300">
             Complete guide to transitioning from full-time operations leadership to successful fractional COO practice.
@@ -199,7 +199,7 @@ export default function HowToBecomeFractionalCOOPage() {
             <Link href="/fractional-coo-jobs-uk" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 inline-block transition-colors">
               Browse Fractional COO Jobs →
             </Link>
-            <Link href="/fractional-coo-salary" className="bg-gray-50 hover:bg-gray-800 text-white font-bold py-4 px-8 inline-block transition-colors">
+            <Link href="/fractional-coo-salary" className="bg-gray-50 hover:bg-gray-100 text-white font-bold py-4 px-8 inline-block transition-colors">
               See Salary Data →
             </Link>
           </div>

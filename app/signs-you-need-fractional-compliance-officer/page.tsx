@@ -175,7 +175,7 @@ export default function SignsYouNeedFractionalComplianceOfficerPage() {
           <span className="inline-block bg-rose-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             Buyer Guide
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
             5 Signs You Need a<br />
             <span className="text-rose-400">Fractional Compliance Officer</span>
           </h1>

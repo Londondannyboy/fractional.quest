@@ -305,9 +305,9 @@ export default function HowItWorksPage() {
                 MOST COMMON
               </div>
               <h3 className="text-lg font-bold mb-2">Experienced</h3>
-              <p className="text-sm text-gray-400 mb-4">15-20 years experience</p>
+              <p className="text-sm text-gray-600 mb-4">15-20 years experience</p>
               <div className="text-4xl font-bold mb-2">£1,000-1,200</div>
-              <div className="text-gray-400 mb-6">per day</div>
+              <div className="text-gray-600 mb-6">per day</div>
               <div className="text-sm text-gray-400">
                 2 days/week = £8-10k/month
               </div>
@@ -391,10 +391,10 @@ export default function HowItWorksPage() {
       {/* CTA */}
       <section className="py-16 md:py-24 bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-editorial text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="font-editorial text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Ready to Find Your Fractional Executive?
           </h2>
-          <p className="text-xl text-gray-300 mb-10">
+          <p className="text-xl text-gray-600 mb-10">
             Book a discovery call and we'll help you find the perfect match for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

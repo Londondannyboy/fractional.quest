@@ -130,7 +130,7 @@ export default async function LiverpoolPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <Link href="/" className="inline-flex items-center text-red-200 hover:text-white mb-6 transition-colors">
+          <Link href="/" className="inline-flex items-center text-red-200 hover:text-gray-900 mb-6 transition-colors">
             ← Back to Home
           </Link>
           <div className="inline-block mb-6">
@@ -138,7 +138,7 @@ export default async function LiverpoolPage() {
               {stats.totalLiverpool}+ Jobs in Liverpool
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
             Fractional Jobs Liverpool
           </h1>
           <p className="max-w-2xl text-xl text-red-100 mb-10 leading-relaxed">
@@ -372,7 +372,7 @@ export default async function LiverpoolPage() {
       <section className="py-20 md:py-28 bg-red-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Liverpool Success Stories</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Liverpool Success Stories</h2>
             <p className="text-xl text-red-200">Real fractional professionals thriving in Liverpool</p>
           </div>
 
@@ -520,7 +520,7 @@ export default async function LiverpoolPage() {
       {/* Final CTA */}
       <section className="py-20 md:py-28 bg-gradient-to-br from-red-900 via-red-800 to-red-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Ready to Work in Liverpool?
           </h2>
           <p className="text-xl text-red-100 mb-10">

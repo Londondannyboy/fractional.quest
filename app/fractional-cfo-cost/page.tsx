@@ -97,7 +97,7 @@ export default function FractionalCFOCostPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Quick Answer</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Quick Answer</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">How Much Does a Fractional CFO Cost?</h2>
           </div>
 
@@ -112,7 +112,7 @@ export default function FractionalCFOCostPage() {
 
             <div className="grid md:grid-cols-3 gap-6 my-10 not-prose">
               <div className="bg-white p-6 border-2 border-gray-200">
-                <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">1 Day/Week</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">1 Day/Week</div>
                 <div className="text-4xl font-black text-gray-900 mb-2">£3,150-£6,000</div>
                 <div className="text-sm text-gray-600 mb-4">per month (4-5 days)</div>
                 <ul className="space-y-2 text-sm text-gray-700">
@@ -124,9 +124,9 @@ export default function FractionalCFOCostPage() {
               </div>
 
               <div className="bg-gray-50 text-gray-900 p-6 border-2 border-gray-900">
-                <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">2 Days/Week</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">2 Days/Week</div>
                 <div className="text-4xl font-black mb-2">£6,300-£12,000</div>
-                <div className="text-sm text-gray-300 mb-4">per month (8-10 days)</div>
+                <div className="text-sm text-gray-600 mb-4">per month (8-10 days)</div>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li>• Full CFO leadership</li>
                   <li>• Team management</li>
@@ -136,7 +136,7 @@ export default function FractionalCFOCostPage() {
               </div>
 
               <div className="bg-white p-6 border-2 border-gray-200">
-                <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">3 Days/Week</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">3 Days/Week</div>
                 <div className="text-4xl font-black text-gray-900 mb-2">£9,450-£18,000</div>
                 <div className="text-sm text-gray-600 mb-4">per month (12-15 days)</div>
                 <ul className="space-y-2 text-sm text-gray-700">
@@ -155,7 +155,7 @@ export default function FractionalCFOCostPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Detailed Breakdown</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Detailed Breakdown</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional CFO vs Full-Time CFO: True Cost Comparison</h2>
           </div>
 
@@ -267,7 +267,7 @@ export default function FractionalCFOCostPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">By Experience Level</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">By Experience Level</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional CFO Cost by Seniority</h2>
           </div>
 
@@ -329,7 +329,7 @@ export default function FractionalCFOCostPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Hidden Benefits</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Hidden Benefits</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Hidden Cost Savings with Fractional CFOs</h2>
           </div>
 
@@ -405,7 +405,7 @@ export default function FractionalCFOCostPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Interactive Tool</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Interactive Tool</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Calculate Your Fractional CFO Costs</h2>
           </div>
           <RoleCalculator role="CFO" />
@@ -416,7 +416,7 @@ export default function FractionalCFOCostPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">ROI</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">ROI</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Is the Cost Worth It? ROI Examples</h2>
           </div>
 
@@ -426,7 +426,7 @@ export default function FractionalCFOCostPage() {
             </p>
 
             <div className="bg-gray-50 text-gray-900 p-8 mb-10">
-              <h3 className="text-2xl font-bold text-white mb-6">ROI Scenario 1: Fundraising</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">ROI Scenario 1: Fundraising</h3>
               <div className="space-y-4 text-gray-300">
                 <p><strong className="text-white">Cost:</strong> £40,000 (6-month engagement, 2 days/week)</p>
                 <p><strong className="text-white">Value Delivered:</strong> Built investor model, managed due diligence, supported Series A pitch</p>
@@ -462,7 +462,7 @@ export default function FractionalCFOCostPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
           <FAQ items={COST_FAQS} title="" />
@@ -473,7 +473,7 @@ export default function FractionalCFOCostPage() {
       <section className="py-20 md:py-28 bg-gray-50 text-gray-900">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Hire a Fractional CFO?</h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Find experienced fractional CFOs at £3k-£10k/month. Save 45-70% vs full-time while getting senior expertise.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

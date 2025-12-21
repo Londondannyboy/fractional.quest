@@ -47,7 +47,7 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
                   Launching January 2025
                 </span>
 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[0.95] tracking-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
                   Fractional Recruitment Agency
                   <span className="block text-amber-400"> - Done Differently</span>
                 </h1>
@@ -177,7 +177,7 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Our Approach</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Our Approach</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">
               How Our Fractional Recruitment Agency Works
             </h2>
@@ -194,7 +194,7 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
               { step: '4', title: 'Engage', description: 'Agree terms with your chosen executive. Pay our fee only on success.' }
             ].map((item, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-black text-amber-400 rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4">
+                <div className="w-16 h-16 bg-gray-50 text-amber-400 rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4">
                   {item.step}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
@@ -209,7 +209,7 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Pricing</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Pricing</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
               Fractional Recruitment Agency Fees
             </h2>
@@ -222,7 +222,7 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
               <div className="text-lg font-bold text-gray-900 mb-2">Director Roles</div>
               <div className="text-sm text-gray-600">Finance Director, HR Director, Marketing Director</div>
             </div>
-            <div className="bg-black rounded-xl p-8 text-center text-white transform md:scale-105">
+            <div className="bg-gray-50 rounded-xl p-8 text-center text-white transform md:scale-105">
               <div className="text-4xl font-black text-amber-400 mb-2">12.5%</div>
               <div className="text-lg font-bold mb-2">C-Suite Roles</div>
               <div className="text-sm text-gray-400">CFO, CTO, CMO, COO</div>
@@ -260,7 +260,7 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">The Value</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">The Value</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">
               Why Use a Fractional Recruitment Agency?
             </h2>
@@ -290,7 +290,7 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
         <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="text-center mb-12">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Market Landscape</span>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Market Landscape</span>
               <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
                 Other Fractional Recruiters UK
               </h2>
@@ -313,7 +313,7 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-amber-400 mb-4 block">The Changing Economy</span>
-            <h2 className="text-4xl font-black text-white mb-6 leading-tight">
+            <h2 className="text-4xl font-black text-gray-900 mb-6 leading-tight">
               The Rise of Fractional Work<br />
               <span className="text-amber-400">Is Reshaping UK Business</span>
             </h2>
@@ -324,11 +324,11 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
               The UK economy is undergoing a fundamental shift in how businesses access senior leadership. According to the <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline">Office for National Statistics (ONS)</a>, self-employment and flexible working arrangements have grown significantly over the past decade, with senior professionals increasingly choosing portfolio careers over traditional employment.
             </p>
 
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-600 mb-6">
               The <a href="https://www.gov.uk/government/organisations/department-for-business-and-trade" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline">Department for Business and Trade</a> has recognised this shift, with government policy increasingly supporting flexible working models. Data from the <a href="https://www.gov.uk/government/statistics/business-population-estimates-2023" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline">Business Population Estimates</a> shows the UK has over 5.5 million private sector businesses, the majority of which are SMEs that could benefit from fractional executive expertise but cannot afford full-time C-suite salaries.
             </p>
 
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-600 mb-6">
               Research from the <a href="https://www.cipd.org/uk/topics/flexible-hybrid-working/" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline">Chartered Institute of Personnel and Development (CIPD)</a> confirms that flexible working arrangements, including fractional executive roles, improve both employee satisfaction and business outcomes. Meanwhile, the <a href="https://www.cbi.org.uk/" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline">Confederation of British Industry (CBI)</a> advocates for greater workplace flexibility as essential for UK competitiveness.
             </p>
 
@@ -343,7 +343,7 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-16">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-4 block">The Guide</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-4 block">The Guide</span>
             <h2 className="text-4xl font-black text-gray-900 mb-6 leading-tight">
               What Makes the Best<br />
               <span className="text-amber-600">Fractional Recruitment Agency</span>
@@ -419,7 +419,7 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">
               Fractional Recruitment Agency FAQ
             </h2>
@@ -443,7 +443,7 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-black text-white">
+      <section className="py-20 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <span className="inline-block bg-amber-500/20 text-amber-300 px-4 py-2 rounded-full border border-amber-500/30 mb-6">
             <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse inline-block mr-2" />
@@ -453,7 +453,7 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
             Join Us As<br />
             <span className="text-amber-400">We Launch</span>
           </h2>
-          <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             We're building a better fractional recruitment agency. Register your interest and be first to know when we launch.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">

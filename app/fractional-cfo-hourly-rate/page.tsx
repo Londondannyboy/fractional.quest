@@ -97,7 +97,7 @@ export default function FractionalCFOHourlyRatePage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Quick Answer</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Quick Answer</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional CFO Hourly Rate: 2025 Benchmarks</h2>
           </div>
 
@@ -112,7 +112,7 @@ export default function FractionalCFOHourlyRatePage() {
 
             <div className="grid md:grid-cols-3 gap-6 my-10 not-prose">
               <div className="bg-white p-6 border-2 border-gray-200">
-                <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">Junior CFO</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">Junior CFO</div>
                 <div className="text-4xl font-black text-gray-900 mb-2">£150-£250</div>
                 <div className="text-sm text-gray-600 mb-4">per hour</div>
                 <ul className="space-y-2 text-sm text-gray-700">
@@ -124,9 +124,9 @@ export default function FractionalCFOHourlyRatePage() {
               </div>
 
               <div className="bg-gray-50 text-gray-900 p-6 border-2 border-gray-900">
-                <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">Mid-Level CFO</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">Mid-Level CFO</div>
                 <div className="text-4xl font-black mb-2">£250-£400</div>
-                <div className="text-sm text-gray-300 mb-4">per hour</div>
+                <div className="text-sm text-gray-600 mb-4">per hour</div>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li>• 12-18 years experience</li>
                   <li>• Prior CFO role</li>
@@ -136,7 +136,7 @@ export default function FractionalCFOHourlyRatePage() {
               </div>
 
               <div className="bg-white p-6 border-2 border-gray-200">
-                <div className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-2">Senior CFO</div>
+                <div className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">Senior CFO</div>
                 <div className="text-4xl font-black text-gray-900 mb-2">£350-£500</div>
                 <div className="text-sm text-gray-600 mb-4">per hour</div>
                 <ul className="space-y-2 text-sm text-gray-700">
@@ -168,7 +168,7 @@ export default function FractionalCFOHourlyRatePage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Geographic Variance</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Geographic Variance</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Hourly Rate by UK Location</h2>
           </div>
 
@@ -236,7 +236,7 @@ export default function FractionalCFOHourlyRatePage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Industry Premiums</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Industry Premiums</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Hourly Rate by Industry Specialization</h2>
           </div>
 
@@ -303,7 +303,7 @@ export default function FractionalCFOHourlyRatePage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Project Complexity</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Project Complexity</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Hourly Rate by Project Type</h2>
           </div>
 
@@ -375,7 +375,7 @@ export default function FractionalCFOHourlyRatePage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Rate Drivers</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Rate Drivers</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">What Affects Fractional CFO Hourly Rates?</h2>
           </div>
 
@@ -449,7 +449,7 @@ export default function FractionalCFOHourlyRatePage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Interactive Tool</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Interactive Tool</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Calculate Your Fractional CFO Costs</h2>
           </div>
           <RoleCalculator role="CFO" />
@@ -460,7 +460,7 @@ export default function FractionalCFOHourlyRatePage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Pricing Models</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Pricing Models</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Hourly vs Day Rate vs Monthly Retainer</h2>
           </div>
 
@@ -470,11 +470,11 @@ export default function FractionalCFOHourlyRatePage() {
             </p>
 
             <div className="bg-gray-50 text-gray-900 p-8 mb-10">
-              <h3 className="text-2xl font-bold text-white mb-6">Example: Senior CFO, 2 Days/Week, 3 Months</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Example: Senior CFO, 2 Days/Week, 3 Months</h3>
 
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-3">Option 1: Hourly Rate (£300/hour)</h4>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Option 1: Hourly Rate (£300/hour)</h4>
                   <div className="space-y-1 text-gray-300 text-sm">
                     <p>• 16 hours/day × 2 days = 16 hours/week</p>
                     <p>• 16 hours × £300 = £4,800/week</p>
@@ -492,7 +492,7 @@ export default function FractionalCFOHourlyRatePage() {
                 </div>
 
                 <div className="border-t border-gray-700 pt-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Option 3: Monthly Retainer (£9,000/month)</h4>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Option 3: Monthly Retainer (£9,000/month)</h4>
                   <div className="space-y-1 text-gray-300 text-sm">
                     <p>• £9,000 × 3 months = <strong className="text-white text-xl">£27,000 total</strong></p>
                     <p className="text-blue-400 font-bold">Saves £30,600 vs hourly (53% cheaper)</p>
@@ -551,7 +551,7 @@ export default function FractionalCFOHourlyRatePage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
           <FAQ items={HOURLY_RATE_FAQS} title="" />
@@ -562,26 +562,26 @@ export default function FractionalCFOHourlyRatePage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Related Guides</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Related Guides</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">More Fractional CFO Pricing Resources</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <Link href="/fractional-cfo-salary" className="bg-gray-50 p-8 hover:bg-gray-100 hover:text-gray-900 transition-all group">
               <h3 className="text-xl font-black mb-3">Day Rate & Salary Guide</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Complete day rate benchmarks by experience and location</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Complete day rate benchmarks by experience and location</p>
               <div className="text-sm font-bold uppercase tracking-wider">View Rates →</div>
             </Link>
 
             <Link href="/fractional-cfo-cost" className="bg-gray-50 p-8 hover:bg-gray-100 hover:text-gray-900 transition-all group">
               <h3 className="text-xl font-black mb-3">Fractional CFO Cost</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Employer perspective—total cost of hiring a fractional CFO</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Employer perspective—total cost of hiring a fractional CFO</p>
               <div className="text-sm font-bold uppercase tracking-wider">Calculate Cost →</div>
             </Link>
 
             <Link href="/fractional-cfo" className="bg-gray-50 p-8 hover:bg-gray-100 hover:text-gray-900 transition-all group">
               <h3 className="text-xl font-black mb-3">Complete CFO Guide</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-300 mb-4">Everything about fractional CFOs—from hiring to becoming one</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Everything about fractional CFOs—from hiring to becoming one</p>
               <div className="text-sm font-bold uppercase tracking-wider">Read Guide →</div>
             </Link>
           </div>
@@ -592,7 +592,7 @@ export default function FractionalCFOHourlyRatePage() {
       <section className="py-20 md:py-28 bg-gray-50 text-gray-900">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Hire or Become a Fractional CFO?</h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Explore opportunities or find the right fractional CFO for your business.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

@@ -55,7 +55,7 @@ export default function FractionalCTOSalaryPage() {
               <span className="inline-block bg-white text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Salary Guide 2025
               </span>
-              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
                 Fractional CTO<br />
                 <span className="text-blue-400">Salary UK</span>
               </h1>
@@ -70,7 +70,7 @@ export default function FractionalCTOSalaryPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Quick Answer</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Quick Answer</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional CTO Salary Overview</h2>
           </div>
 
@@ -306,7 +306,7 @@ export default function FractionalCTOSalaryPage() {
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">FAQ</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
           <FAQ items={SALARY_FAQS} title="" />
@@ -316,7 +316,7 @@ export default function FractionalCTOSalaryPage() {
       <section className="py-20 md:py-28 bg-gray-50 text-gray-900">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Explore Fractional CTO Opportunities</h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Whether you're looking to hire or become a fractional CTO, we have the resources you need.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">

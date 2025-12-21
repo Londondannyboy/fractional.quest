@@ -572,7 +572,7 @@ function VoiceInterface({ token, profile, userId, previousContext, isLoggedIn }:
 
       {/* Debug info */}
       {isConnected && (
-        <div className="text-xs text-gray-400 mb-4 font-mono">
+        <div className="text-xs text-gray-600 mb-4 font-mono">
           Status: {status.value} | Playing: {isPlaying ? 'YES' : 'NO'} | Messages: {messages.length} | WS: {readyState}
         </div>
       )}
@@ -852,7 +852,7 @@ function VoiceInterface({ token, profile, userId, previousContext, isLoggedIn }:
 
       {/* Confirmation Modal - Hume Tools (Human-in-the-loop) */}
       {confirmation && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+        <div className="fixed inset-0 bg-gray-50/50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl animate-scale-in">
             <div className="flex items-start gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
@@ -924,7 +924,7 @@ function VoiceInterface({ token, profile, userId, previousContext, isLoggedIn }:
 
       {/* Debug Panel */}
       {debugMode && (
-        <div className="fixed bottom-0 left-0 right-0 bg-black/95 text-white p-4 max-h-64 overflow-y-auto z-40 font-mono text-xs">
+        <div className="fixed bottom-0 left-0 right-0 bg-gray-50/95 text-white p-4 max-h-64 overflow-y-auto z-40 font-mono text-xs">
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-4">
               <h3 className="font-bold text-sm">🐛 DEBUG MODE</h3>
@@ -980,7 +980,7 @@ function VoiceInterface({ token, profile, userId, previousContext, isLoggedIn }:
       {!debugMode && (
         <button
           onClick={() => setDebugMode(true)}
-          className="fixed bottom-4 left-4 px-3 py-2 bg-black/80 text-white rounded-lg text-xs font-mono hover:bg-black z-40"
+          className="fixed bottom-4 left-4 px-3 py-2 bg-gray-50/80 text-white rounded-lg text-xs font-mono hover:bg-gray-50 z-40"
         >
           🐛 Show Debug
         </button>
@@ -1047,7 +1047,7 @@ export default function VoicePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <div className="bg-black border-b border-gray-200">
+      <div className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div>

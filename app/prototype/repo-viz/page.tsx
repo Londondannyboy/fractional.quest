@@ -65,7 +65,7 @@ export default function RepoVizPrototype() {
     <div className="min-h-screen bg-white p-8">
       {/* Header */}
       <div className="mb-6">
-        <h1 className="text-3xl font-bold text-white mb-2">
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">
           Graph Visualization Comparison
         </h1>
         <p className="text-purple-300">
@@ -90,7 +90,7 @@ export default function RepoVizPrototype() {
       <div className="grid grid-cols-1 gap-8">
         {/* 1. Custom SVG (Basic) */}
         <div className="bg-purple-900/20 rounded-2xl p-6 border border-purple-500/30">
-          <h2 className="text-xl font-bold text-white mb-4">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">
             1. Custom SVG (Current)
           </h2>
           <p className="text-purple-300 text-sm mb-4">
@@ -107,13 +107,13 @@ export default function RepoVizPrototype() {
 
         {/* 2. React Force Graph 2D */}
         <div className="bg-purple-900/20 rounded-2xl p-6 border border-purple-500/30">
-          <h2 className="text-xl font-bold text-white mb-4">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">
             2. React Force Graph 2D ⭐
           </h2>
           <p className="text-purple-300 text-sm mb-4">
             ⚡ Winner! Techy, draggable, interactive
           </p>
-          <div className="bg-black rounded-xl overflow-hidden" style={{ height: 500 }}>
+          <div className="bg-gray-50 rounded-xl overflow-hidden" style={{ height: 500 }}>
             <ForceGraph2D
               graphData={{
                 nodes: graphData.nodes.map(n => ({ ...n, name: n.label })),
@@ -135,13 +135,13 @@ export default function RepoVizPrototype() {
 
         {/* 2.5 React Force Graph 3D */}
         <div className="bg-indigo-900/20 rounded-2xl p-6 border border-indigo-500/30">
-          <h2 className="text-xl font-bold text-white mb-4">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">
             2.5 React Force Graph 3D 🚀
           </h2>
           <p className="text-indigo-300 text-sm mb-4">
             🌌 Full 3D - orbit controls, immersive!
           </p>
-          <div className="bg-black rounded-xl overflow-hidden" style={{ height: 500 }}>
+          <div className="bg-gray-50 rounded-xl overflow-hidden" style={{ height: 500 }}>
             <ForceGraph3D
               graphData={{
                 nodes: graphData.nodes.map(n => ({ ...n, name: n.label })),
@@ -161,13 +161,13 @@ export default function RepoVizPrototype() {
 
         {/* 3. Vis Network */}
         <div className="bg-purple-900/20 rounded-2xl p-6 border border-purple-500/30">
-          <h2 className="text-xl font-bold text-white mb-4">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">
             3. Vis.js Network
           </h2>
           <p className="text-purple-300 text-sm mb-4">
             🚀 Professional grade - used in many projects
           </p>
-          <div className="bg-black rounded-xl overflow-hidden">
+          <div className="bg-gray-50 rounded-xl overflow-hidden">
             <VisNetwork
               data={graphData}
               height={500}

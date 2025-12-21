@@ -23,7 +23,7 @@ export default function FractionalConsultingPage() {
             <Link href="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm"><span className="mr-2">←</span> Back to Home</Link>
             <div className="max-w-4xl">
               <span className="inline-block bg-indigo-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">Consulting Services</span>
-              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9]">Fractional<br /><span className="text-indigo-400">Consulting</span></h1>
+              <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9]">Fractional<br /><span className="text-indigo-400">Consulting</span></h1>
               <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">Access expert consultants on a fractional basis. Get strategic advice and hands-on support from experienced professionals without the cost of traditional consulting.</p>
               <Link href="#contact" className="px-8 py-4 bg-indigo-500 text-white font-bold uppercase tracking-wider hover:bg-indigo-400 transition-colors inline-block">Find Consultants</Link>
             </div>
@@ -84,10 +84,10 @@ export default function FractionalConsultingPage() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 bg-black text-white">
+      <section id="contact" className="py-20 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-black mb-6">Find Fractional Consultants</h2>
-          <p className="text-xl text-gray-400 mb-10">Tell us what expertise you need and we'll match you with experienced fractional consultants.</p>
+          <p className="text-xl text-gray-600 mb-10">Tell us what expertise you need and we'll match you with experienced fractional consultants.</p>
           <Link href="/handler/sign-up" className="px-10 py-5 bg-indigo-500 text-white font-bold uppercase tracking-wider hover:bg-indigo-400 transition-colors inline-block">Get Started</Link>
         </div>
       </section>
