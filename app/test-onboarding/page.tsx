@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function TestOnboardingPage() {
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center px-6">
+    <div className="min-h-screen bg-white flex items-center justify-center px-6">
       <div className="max-w-2xl w-full text-center">
         <h1 className="text-4xl font-bold text-white mb-8">Test Onboarding Flow</h1>
         <p className="text-gray-400 mb-12">

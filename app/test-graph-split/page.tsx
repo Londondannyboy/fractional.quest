@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function TestGraphSplitPage() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <div className="bg-gray-50 border-b border-gray-200 p-4">
         <h1 className="text-white text-xl font-bold">Split Screen Graph Test</h1>

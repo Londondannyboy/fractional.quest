@@ -141,7 +141,7 @@ export default function SingleGraphClustered() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-white">
       {/* Header */}
       <div className="p-6 border-b border-purple-500/30">
         <h1 className="text-4xl font-bold mb-2">

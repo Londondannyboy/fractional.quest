@@ -158,7 +158,7 @@ export default function RootLayout({
             <Suspense fallback={<div className="h-16 bg-black border-b border-gray-900" />}>
               <Navigation />
             </Suspense>
-            <main className="min-h-screen bg-black">
+            <main className="min-h-screen bg-white">
               {children}
             </main>
             <Footer />

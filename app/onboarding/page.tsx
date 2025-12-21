@@ -10,7 +10,7 @@ export default function OnboardingRouter() {
 
   if (!user) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-black">
+      <div className="flex items-center justify-center min-h-screen bg-white">
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-blue-500/30 border-t-blue-500 rounded-full animate-spin mx-auto mb-4" />
           <p className="text-white/60">Loading...</p>
@@ -20,7 +20,7 @@ export default function OnboardingRouter() {
   }
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center px-6">
+    <div className="min-h-screen bg-white flex items-center justify-center px-6">
       <div className="max-w-5xl w-full">
         {/* Header */}
         <div className="text-center mb-12">

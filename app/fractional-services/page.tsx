@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function FractionalServicesPage() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-white">
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <JobsGraph3D limit={30} height="100%" isHero={true} showOverlay={true} />

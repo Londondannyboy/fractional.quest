@@ -27,7 +27,7 @@ export default function MinimalTestPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center p-8">
+    <div className="min-h-screen bg-white flex items-center justify-center p-8">
       <div className="text-white p-8 bg-purple-900/20 rounded-lg border border-purple-500/30 max-w-2xl">
         <h1 className="text-2xl font-bold mb-4">Minimal Test Page</h1>
 

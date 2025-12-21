@@ -1045,7 +1045,7 @@ export default function VoicePage() {
   }, [user?.id])
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <div className="bg-black border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-6">

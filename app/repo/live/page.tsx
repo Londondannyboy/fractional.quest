@@ -33,7 +33,7 @@ export default function LiveRepoBuilder() {
 
   if (!accessToken) {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
+      <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-purple-300 animate-pulse">Loading voice interface...</div>
       </div>
     )

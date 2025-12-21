@@ -344,7 +344,7 @@ function VoiceInterface({ token, userId, userName }: VoiceInterfaceProps) {
 
   if (isComplete) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white px-6">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-white text-white px-6">
         <div className="text-center max-w-md">
           <div className="text-6xl mb-6">✨</div>
           <h2 className="text-3xl font-bold mb-4">Onboarding Complete!</h2>
@@ -358,7 +358,7 @@ function VoiceInterface({ token, userId, userName }: VoiceInterfaceProps) {
   }
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen bg-black text-white">
+    <div className="flex flex-col lg:flex-row min-h-screen bg-white text-white">
       {/* Left side - Voice Interface */}
       <div className="lg:w-1/2 p-6 lg:p-12 flex flex-col">
         <Link
@@ -530,7 +530,7 @@ export default function VoiceOnboardingPage() {
 
   if (!user || !token) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-black">
+      <div className="flex items-center justify-center min-h-screen bg-white">
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-blue-500/30 border-t-blue-500 rounded-full animate-spin mx-auto mb-4" />
           <p className="text-white/60">Loading...</p>

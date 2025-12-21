@@ -6,7 +6,7 @@ export default function LiveTestPage() {
   const user = useUser({ or: 'redirect' })
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center">
+    <div className="min-h-screen bg-white flex items-center justify-center">
       <div className="text-white p-8 bg-purple-900/20 rounded-lg border border-purple-500/30">
         <h1 className="text-2xl font-bold mb-4">Live Test Page</h1>
         <div className="space-y-2">

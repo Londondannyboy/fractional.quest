@@ -94,7 +94,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
     const totalPages = Math.ceil(totalArticles / limit)
 
     return (
-      <div className="min-h-screen bg-black">
+      <div className="min-h-screen bg-white">
         {/* Hero Section with 3D Knowledge Graph Background */}
         <section className="relative min-h-[60vh] flex items-end overflow-hidden">
           <div className="absolute inset-0">
@@ -398,7 +398,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
   } catch (error) {
     console.error('Error fetching articles:', error)
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
+      <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center px-6">
           <span className="text-6xl mb-6 block">😢</span>
           <h1 className="text-2xl font-bold text-white mb-4">Unable to Load Articles</h1>

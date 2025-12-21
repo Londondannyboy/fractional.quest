@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function TestGraphPipPage() {
   return (
-    <div className="min-h-screen bg-black relative">
+    <div className="min-h-screen bg-white relative">
       {/* Header */}
       <div className="absolute top-0 left-0 right-0 bg-gradient-to-b from-black via-black/80 to-transparent z-20 p-6">
         <h1 className="text-white text-2xl font-bold">Graph in Graph Test</h1>

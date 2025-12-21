@@ -607,7 +607,7 @@ export default function ImmersiveRepoPage() {
   if (!user) return null
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-white">
       {error ? (
         <div className="h-screen flex items-center justify-center">
           <div className="text-center">
