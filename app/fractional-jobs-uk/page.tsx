@@ -287,47 +287,72 @@ export default async function FractionalJobsUKPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostingsSchema) }}
       />
 
-      {/* Hero Section with Subtle Mux Video Background */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-950 to-black">
-        {/* Mux Video Background - Desktop Only */}
-        <div className="absolute inset-0 hidden lg:block">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="none"
-            className="w-full h-full object-cover opacity-30"
-            aria-label="Background video showing fractional executives at work"
-          >
-            <source src="https://stream.mux.com/qIS6PGKxIZyzjrDBzxQuqPRBOhHofDnXq1chdsqAY9Y.m3u8" type="application/x-mpegURL" />
-            <track kind="captions" label="English captions" srcLang="en" />
-          </video>
+      {/* Hero Section with Aspirational Image */}
+      <section className="relative min-h-[50vh] flex items-center overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1920&q=80')`,
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
         </div>
 
-        {/* Dark overlay for readability - Desktop Only */}
-        <div className="absolute inset-0 bg-gray-50/60 hidden lg:block" />
-
         {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block bg-blue-600/20 backdrop-blur text-blue-300 px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-widest mb-6">
-            UK's Fractional Executive Platform
-          </span>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="max-w-2xl">
+            <span className="inline-block bg-amber-500/90 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+              {stats.totalUK}+ Live Roles
+            </span>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Fractional Jobs UK
-          </h1>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Fractional Jobs UK
+            </h1>
 
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            {stats.totalUK}+ fractional CFO, CTO, CMO roles • £700-£1,500 day rates
-          </p>
+            <p className="text-xl text-white/80 mb-8 max-w-xl">
+              CFO, CTO, CMO & executive roles with £700-£1,500 day rates. Work 2-3 days a week, live anywhere.
+            </p>
 
-          <Link
-            href="#jobs"
-            className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg bg-blue-600 text-gray-900 hover:bg-blue-700 transition-all duration-200 shadow-lg"
-          >
-            Browse Jobs ↓
-          </Link>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="#jobs"
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg bg-white text-gray-900 hover:bg-gray-100 transition-all duration-200"
+              >
+                Browse Jobs ↓
+              </Link>
+              <Link
+                href="/profile/edit"
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg bg-white/10 backdrop-blur text-white border border-white/20 hover:bg-white/20 transition-all duration-200"
+              >
+                Create Profile
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Bar */}
+      <section className="bg-gray-900 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-8 text-center text-sm">
+            <div>
+              <span className="font-bold text-white">{stats.totalUK}+</span>
+              <span className="text-gray-400 ml-1">Live Jobs</span>
+            </div>
+            <div>
+              <span className="font-bold text-white">£700-1,500</span>
+              <span className="text-gray-400 ml-1">Day Rates</span>
+            </div>
+            <div>
+              <span className="font-bold text-white">2-3 Days</span>
+              <span className="text-gray-400 ml-1">Per Week</span>
+            </div>
+            <div>
+              <span className="font-bold text-white">Remote</span>
+              <span className="text-gray-400 ml-1">Options</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -409,49 +434,42 @@ export default async function FractionalJobsUKPage() {
                 })}
               </div>
 
-              {/* Right Sidebar */}
+              {/* Right Sidebar - Simplified */}
               <div className="lg:col-span-1 space-y-6">
-                <RecommendedArticles limit={5} title="Recommended Reading" />
-
-                {/* Quick Links */}
-                <div className="bg-white rounded-xl border border-gray-200 p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">Quick Links</h3>
-                  <ul className="space-y-3">
-                    <li>
-                      <Link href="/fractional-cfo-jobs-uk" className="text-sm text-gray-600 hover:text-blue-400 transition-colors">
-                        Fractional CFO Jobs UK →
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/fractional-cto-jobs-uk" className="text-sm text-gray-600 hover:text-blue-400 transition-colors">
-                        Fractional CTO Jobs UK →
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/fractional-cmo-jobs-uk" className="text-sm text-gray-600 hover:text-blue-400 transition-colors">
-                        Fractional CMO Jobs UK →
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/how-to-become-a-fractional-executive" className="text-sm text-gray-600 hover:text-blue-400 transition-colors">
-                        How to Go Fractional →
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-
-                {/* CTA */}
-                <div className="bg-gradient-to-br from-blue-900 to-blue-950 rounded-xl border border-blue-800 p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Join Our Network</h3>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Create your profile and get matched with fractional opportunities.
+                {/* CTA Card */}
+                <div className="bg-gray-900 rounded-xl p-6 text-center">
+                  <h3 className="text-lg font-bold text-white mb-2">Join the Platform</h3>
+                  <p className="text-sm text-gray-300 mb-4">
+                    Create your profile and get discovered by companies.
                   </p>
                   <Link
                     href="/profile/edit"
-                    className="block w-full text-center px-4 py-2 bg-white text-gray-900 font-medium rounded-lg hover:bg-gray-100 transition-colors"
+                    className="block w-full text-center px-4 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
                   >
                     Create Profile
                   </Link>
+                </div>
+
+                {/* Browse by Role */}
+                <div className="bg-white rounded-xl border border-gray-200 p-6">
+                  <h3 className="text-lg font-bold text-gray-900 mb-4">Browse by Role</h3>
+                  <div className="space-y-2">
+                    {[
+                      { label: 'Fractional CFO', href: '/fractional-cfo-jobs-uk' },
+                      { label: 'Fractional CTO', href: '/fractional-cto-jobs-uk' },
+                      { label: 'Fractional CMO', href: '/fractional-cmo-jobs-uk' },
+                      { label: 'Fractional COO', href: '/fractional-coo-jobs-uk' },
+                    ].map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="flex items-center justify-between p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors text-sm"
+                      >
+                        <span className="font-medium text-gray-900">{link.label}</span>
+                        <span className="text-gray-400">→</span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

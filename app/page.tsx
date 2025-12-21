@@ -135,7 +135,7 @@ export default async function Home() {
                 </Link>
               </div>
 
-              {/* Mini testimonial */}
+              {/* Social proof */}
               <div className="mt-12 flex items-center gap-4">
                 <div className="flex -space-x-3">
                   <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="" className="w-10 h-10 rounded-full border-2 border-white" />
@@ -143,22 +143,22 @@ export default async function Home() {
                   <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&h=100&fit=crop" alt="" className="w-10 h-10 rounded-full border-2 border-white" />
                   <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop" alt="" className="w-10 h-10 rounded-full border-2 border-white" />
                 </div>
-                <p className="text-white/70 text-sm">Join 500+ fractional executives in the UK</p>
+                <p className="text-white/70 text-sm">Join fractional leaders across the UK</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Trusted By Section */}
+      {/* Role Types Section */}
       <section className="py-8 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm text-gray-500 mb-6 uppercase tracking-wider font-medium">
-            Trusted by executives from leading companies
+            Fractional roles for every function
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-60 grayscale">
-            {['Stripe', 'Monzo', 'Revolut', 'Wise', 'GoCardless', 'Checkout.com'].map((company) => (
-              <span key={company} className="text-xl font-bold text-gray-400">{company}</span>
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+            {['CFO', 'CTO', 'CMO', 'COO', 'CPO', 'CHRO', 'CRO'].map((role) => (
+              <span key={role} className="text-lg font-bold text-gray-700">Fractional {role}</span>
             ))}
           </div>
         </div>
@@ -224,47 +224,44 @@ export default async function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-2 block">
-              Meet Our Executives
+              Executive Roles
             </span>
             <h2 className="font-editorial text-4xl font-bold text-gray-900 mb-4">
-              Fractional Leaders Across Every Function
+              Fractional Leaders for Every Function
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              From CFOs to CTOs, our community includes experienced executives ready to make an impact
+              Senior executives working part-time across finance, technology, marketing, and operations
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: 'Sarah Mitchell', role: 'Fractional CFO', company: 'Ex-Stripe, Monzo', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop', color: 'amber' },
-              { name: 'James Chen', role: 'Fractional CTO', company: 'Ex-Google, Deliveroo', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop', color: 'blue' },
-              { name: 'Emma Williams', role: 'Fractional CMO', company: 'Ex-Meta, Wise', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop', color: 'teal' },
-              { name: 'Marcus Thompson', role: 'Fractional COO', company: 'Ex-McKinsey, Revolut', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop', color: 'purple' },
+              { role: 'Fractional CFO', tagline: 'Financial Strategy & Fundraising', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop', link: '/fractional-cfo-services' },
+              { role: 'Fractional CTO', tagline: 'Technical Leadership & Architecture', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop', link: '/fractional-cto-services' },
+              { role: 'Fractional CMO', tagline: 'Marketing Strategy & Growth', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop', link: '/fractional-cmo-services' },
+              { role: 'Fractional COO', tagline: 'Operations & Scaling', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop', link: '/fractional-coo-services' },
             ].map((exec, i) => (
-              <div key={i} className="group text-center">
+              <Link key={i} href={exec.link} className="group text-center block">
                 <div className="relative mb-4 overflow-hidden rounded-2xl aspect-square">
                   <img
                     src={exec.image}
-                    alt={exec.name}
+                    alt={exec.role}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <span className={`inline-block bg-${exec.color}-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-2`}>
-                      {exec.role}
-                    </span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-left">
+                    <h3 className="font-bold text-white text-lg mb-1">{exec.role}</h3>
+                    <p className="text-white/80 text-sm">{exec.tagline}</p>
                   </div>
                 </div>
-                <h3 className="font-bold text-gray-900 text-lg">{exec.name}</h3>
-                <p className="text-gray-500 text-sm">{exec.company}</p>
-              </div>
+              </Link>
             ))}
           </div>
           <div className="mt-10 text-center">
             <Link
-              href="/people"
+              href="/fractional-services"
               className="inline-flex items-center px-6 py-3 border-2 border-gray-900 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white transition-colors"
             >
-              View All Executives
+              View All Services
               <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

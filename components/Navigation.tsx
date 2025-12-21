@@ -42,9 +42,14 @@ export function Navigation() {
             <div className="w-10 h-10 bg-gradient-to-br from-gray-800 to-black rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
               <span className="text-white font-black text-xl">F</span>
             </div>
-            <div className="hidden sm:block">
-              <span className="font-bold text-gray-900 text-lg">Fractional</span>
-              <span className="text-gray-600 font-bold text-lg">.Quest</span>
+            <div className="hidden sm:flex items-center gap-2">
+              <div>
+                <span className="font-bold text-gray-900 text-lg">Fractional</span>
+                <span className="text-gray-600 font-bold text-lg">.Quest</span>
+              </div>
+              <span className="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">
+                Beta
+              </span>
             </div>
           </Link>
 
