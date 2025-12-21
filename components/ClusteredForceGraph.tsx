@@ -362,7 +362,7 @@ function convertZepToGraphData(
   // Convert ZEP nodes to graph nodes
   const nodes: GraphNode[] = zepData.nodes.map(zepNode => {
     const cluster = detectCluster(zepNode, userType)
-    const clusterConfig = clusters[cluster as keyof typeof clusters]
+    const clusterConfig = (clusters as Record<string, { color: string }>)[cluster]
 
     return {
       id: zepNode.id,
