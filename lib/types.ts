@@ -88,3 +88,99 @@ export interface PaginationParams {
   offset: number
   total: number
 }
+
+// ============================================
+// Destination Types (Aspirational Features)
+// ============================================
+
+export interface Destination {
+  id: number
+  name: string
+  country: string
+  slug: string
+  tagline: string
+  description?: string
+  best_months: number[]
+  avg_temp_jan?: number
+  avg_temp_jul?: number
+  timezone: string
+  utc_offset_hours: number
+  uk_overlap_hours: number
+  cost_of_living: 'low' | 'medium' | 'high'
+  monthly_cost_estimate?: number
+  avg_internet_speed_mbps?: number
+  coworking_spaces_count?: number
+  nomad_score?: number
+  image_url?: string
+  is_active: boolean
+}
+
+export interface JobDestinationSuggestion {
+  id: number
+  job_id: string
+  destination_id: number
+  destination?: Destination
+  suggestion_type: 'remote_escape' | 'weekend_getaway' | 'timezone_match'
+  match_score: number
+  ai_reasoning?: string
+  season_context?: string
+  generated_at: Date
+}
+
+// ============================================
+// Featured Executive Types
+// ============================================
+
+export interface FeaturedExecutive {
+  id: number
+  name: string
+  slug: string
+  headline?: string
+  role_category?: string
+
+  // Lifestyle story
+  based_in?: string
+  lifestyle_summary?: string
+  why_fractional?: string
+  typical_week?: string
+
+  // Professional
+  specialisms?: string[]
+  industries?: string[]
+  notable_clients?: string[]
+  years_experience?: number
+
+  // Media
+  photo_url?: string
+  lifestyle_photos?: string[]
+  video_url?: string
+
+  // Links
+  linkedin_url?: string
+
+  // Status
+  status: 'draft' | 'published' | 'featured'
+  featured_order?: number
+  published_at?: Date
+
+  created_at: Date
+  updated_at: Date
+}
+
+// ============================================
+// Aspirational Message Types
+// ============================================
+
+export type AspirationalSuggestionType = 'remote_escape' | 'weekend_getaway' | 'timezone_match' | 'flexibility'
+
+export interface AspirationalMessageData {
+  headline: string
+  subtext?: string
+  type: AspirationalSuggestionType
+  icon: 'globe' | 'sun' | 'calendar' | 'coffee' | 'plane'
+  destination?: {
+    name: string
+    country: string
+    tagline: string
+  }
+}
