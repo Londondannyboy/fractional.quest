@@ -150,7 +150,7 @@ export default function MultiGraphCandidate() {
   }
 
   return (
-    <div className="min-h-screen bg-white text-white">
+    <div className="min-h-screen bg-white text-gray-900">
       {/* Header */}
       <div className="p-6 border-b border-purple-500/30">
         <h1 className="text-4xl font-bold mb-2">

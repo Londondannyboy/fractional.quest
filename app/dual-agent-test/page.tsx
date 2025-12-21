@@ -17,7 +17,7 @@ export default function DualAgentTest() {
   }
 
   return (
-    <div className="min-h-screen bg-white text-white flex flex-col">
+    <div className="min-h-screen bg-white text-gray-900 flex flex-col">
       {/* Header */}
       <div className="p-6 border-b border-gray-200">
         <Link href="/" className="text-blue-400 hover:text-blue-300 text-sm">
