@@ -1,0 +1,2196 @@
+{
+  "timestamp": "2025-12-21T23:00:26.680Z",
+  "summary": {
+    "totalLinks": 1679,
+    "internalLinks": 1679,
+    "externalLinks": 0,
+    "brokenLinks": 0,
+    "redirectIssues": 0,
+    "paywallLinks": 0,
+    "thinContentLinks": 0,
+    "orphanedPages": 48,
+    "deadEndPages": 0
+  },
+  "brokenLinks": [],
+  "redirectIssues": [],
+  "paywallLinks": [],
+  "thinContentLinks": [],
+  "orphanedPages": [
+    "/[slug]",
+    "/calculators/company-savings",
+    "/calculators/portfolio-builder",
+    "/chat",
+    "/company/[domain]",
+    "/destinations/[slug]",
+    "/dual-agent-test",
+    "/frac",
+    "/fractional-coo-for-startups",
+    "/fractional-coo-hourly-rate",
+    "/fractional-coo-meaning",
+    "/fractional-coo-vs-full-time",
+    "/fractional-job/[slug]",
+    "/fractional-jobs-articles/[slug]",
+    "/fractional-jobs-belfast",
+    "/fractional-jobs-ecommerce",
+    "/fractional-jobs-healthcare",
+    "/fractional-jobs-liverpool",
+    "/fractional-jobs-newcastle",
+    "/fractional-jobs-professional-services",
+    "/handler/[...stack]",
+    "/how-to-become-fractional-coo",
+    "/job/[slug]",
+    "/jobs",
+    "/onboarding",
+    "/onboarding/repo",
+    "/onboarding-demo",
+    "/people/[slug]",
+    "/privacy",
+    "/prototype/client-dashboard",
+    "/prototype/force-graphs",
+    "/prototype/mega-viz",
+    "/prototype/multi-graph-candidate",
+    "/prototype/multi-graph-client",
+    "/prototype/repo-viz",
+    "/prototype/single-graph-clustered",
+    "/prototype/single-graph-organic",
+    "/repo/live",
+    "/repo/live-test",
+    "/repo/minimal-test",
+    "/terms",
+    "/test-graph-pip",
+    "/test-graph-split",
+    "/test-hume",
+    "/test-onboarding",
+    "/visualizations",
+    "/voice",
+    "/voice-clean"
+  ],
+  "deadEndPages": [],
+  "allResults": [
+    {
+      "url": "https://fractional.quest/fractional-jobs-articles",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-articles",
+      "contentLength": 13443,
+      "responseTime": 280
+    },
+    {
+      "url": "https://fractional.quest/fractional-jobs-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-uk",
+      "contentLength": 17089,
+      "responseTime": 56
+    },
+    {
+      "url": "https://fractional.quest/about",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/about",
+      "contentLength": 12040,
+      "responseTime": 50
+    },
+    {
+      "url": "https://fractional.quest/people",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/people",
+      "contentLength": 11937,
+      "responseTime": 51
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-services",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-services",
+      "contentLength": 15942,
+      "responseTime": 52
+    },
+    {
+      "url": "https://fractional.quest/calculators",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/calculators",
+      "contentLength": 11710,
+      "responseTime": 19
+    },
+    {
+      "url": "https://fractional.quest/cfo-community-reddit",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/cfo-community-reddit",
+      "contentLength": 11677,
+      "responseTime": 14
+    },
+    {
+      "url": "https://fractional.quest",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest",
+      "contentLength": 12172,
+      "responseTime": 20
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo",
+      "contentLength": 17333,
+      "responseTime": 31
+    },
+    {
+      "url": "https://fractional.quest/handler/sign-in",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/handler/sign-in",
+      "contentLength": 10512,
+      "responseTime": 344
+    },
+    {
+      "url": "https://fractional.quest/fractionaljobsuk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractionaljobsuk",
+      "contentLength": 10410,
+      "responseTime": 14
+    },
+    {
+      "url": "https://fractional.quest/compliance-officer-salary-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/compliance-officer-salary-uk",
+      "contentLength": 14802,
+      "responseTime": 59
+    },
+    {
+      "url": "https://fractional.quest/outsourced-compliance-officer-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/outsourced-compliance-officer-uk",
+      "contentLength": 17779,
+      "responseTime": 21
+    },
+    {
+      "url": "https://fractional.quest/fractional-mlro-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-mlro-uk",
+      "contentLength": 14508,
+      "responseTime": 28
+    },
+    {
+      "url": "https://fractional.quest/part-time-compliance-jobs-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/part-time-compliance-jobs-uk",
+      "contentLength": 15676,
+      "responseTime": 19
+    },
+    {
+      "url": "https://fractional.quest/fractional-cco",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cco",
+      "contentLength": 15447,
+      "responseTime": 21
+    },
+    {
+      "url": "https://fractional.quest/how-to-become-fractional-compliance-officer",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/how-to-become-fractional-compliance-officer",
+      "contentLength": 14238,
+      "responseTime": 24
+    },
+    {
+      "url": "https://fractional.quest/contact/candidates",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/contact/candidates",
+      "contentLength": 10801,
+      "responseTime": 25
+    },
+    {
+      "url": "https://fractional.quest/contact/companies",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/contact/companies",
+      "contentLength": 10822,
+      "responseTime": 15
+    },
+    {
+      "url": "https://fractional.quest/contract-cfo-jobs",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/contract-cfo-jobs",
+      "contentLength": 14745,
+      "responseTime": 22
+    },
+    {
+      "url": "https://fractional.quest/logo.png",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/logo.png",
+      "contentLength": 10414,
+      "responseTime": 213
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-jobs-remote",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-jobs-remote",
+      "contentLength": 15886,
+      "responseTime": 17
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-vs-full-time",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-vs-full-time",
+      "contentLength": 15051,
+      "responseTime": 23
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-hourly-rate",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-hourly-rate",
+      "contentLength": 14632,
+      "responseTime": 29
+    },
+    {
+      "url": "https://fractional.quest/fractional-controller-jobs",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-controller-jobs",
+      "contentLength": 11506,
+      "responseTime": 20
+    },
+    {
+      "url": "https://fractional.quest/cybersecurity-consultants",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/cybersecurity-consultants",
+      "contentLength": 11193,
+      "responseTime": 15
+    },
+    {
+      "url": "https://fractional.quest/fractional-ciso-services",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-ciso-services",
+      "contentLength": 14495,
+      "responseTime": 88
+    },
+    {
+      "url": "https://fractional.quest/handler/sign-up",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/handler/sign-up",
+      "contentLength": 10512,
+      "responseTime": 184
+    },
+    {
+      "url": "https://fractional.quest/fractional-security",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-security",
+      "contentLength": 11546,
+      "responseTime": 18
+    },
+    {
+      "url": "https://fractional.quest/destinations",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/destinations",
+      "contentLength": 12763,
+      "responseTime": 16
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-jobs-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-jobs-uk",
+      "contentLength": 17925,
+      "responseTime": 22
+    },
+    {
+      "url": "https://fractional.quest/fractional-cto-jobs-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cto-jobs-uk",
+      "contentLength": 16403,
+      "responseTime": 23
+    },
+    {
+      "url": "https://fractional.quest/fractional-cmo-jobs-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cmo-jobs-uk",
+      "contentLength": 16752,
+      "responseTime": 24
+    },
+    {
+      "url": "https://fractional.quest/fractional-coo-jobs-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-coo-jobs-uk",
+      "contentLength": 12959,
+      "responseTime": 26
+    },
+    {
+      "url": "https://fractional.quest/fractional-chro-jobs-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-chro-jobs-uk",
+      "contentLength": 14301,
+      "responseTime": 20
+    },
+    {
+      "url": "https://fractional.quest/finance-consultants",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/finance-consultants",
+      "contentLength": 11199,
+      "responseTime": 14
+    },
+    {
+      "url": "https://fractional.quest/fractional-finance",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-finance",
+      "contentLength": 11558,
+      "responseTime": 26
+    },
+    {
+      "url": "https://fractional.quest/fractional-agency",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-agency",
+      "contentLength": 11232,
+      "responseTime": 40
+    },
+    {
+      "url": "https://fractional.quest/fractional-compliance-fintech",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-compliance-fintech",
+      "contentLength": 13900,
+      "responseTime": 42
+    },
+    {
+      "url": "https://fractional.quest/outsourced-compliance-cost",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/outsourced-compliance-cost",
+      "contentLength": 13464,
+      "responseTime": 19
+    },
+    {
+      "url": "https://fractional.quest/fractional-cdo-services",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cdo-services",
+      "contentLength": 14018,
+      "responseTime": 14
+    },
+    {
+      "url": "https://fractional.quest/fractional-cdo-jobs-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cdo-jobs-uk",
+      "contentLength": 10414,
+      "responseTime": 194
+    },
+    {
+      "url": "https://fractional.quest/fractional-cto-services",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cto-services",
+      "contentLength": 15510,
+      "responseTime": 32
+    },
+    {
+      "url": "https://fractional.quest/fractional-cio-services",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cio-services",
+      "contentLength": 13981,
+      "responseTime": 37
+    },
+    {
+      "url": "https://fractional.quest/what-is-fractional-cfo",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/what-is-fractional-cfo",
+      "contentLength": 15787,
+      "responseTime": 18
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-salary",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-salary",
+      "contentLength": 12329,
+      "responseTime": 25
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-cost",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-cost",
+      "contentLength": 14130,
+      "responseTime": 28
+    },
+    {
+      "url": "https://fractional.quest/how-to-become-fractional-cfo",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/how-to-become-fractional-cfo",
+      "contentLength": 15411,
+      "responseTime": 27
+    },
+    {
+      "url": "https://fractional.quest/part-time-cfo-jobs-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/part-time-cfo-jobs-uk",
+      "contentLength": 14681,
+      "responseTime": 25
+    },
+    {
+      "url": "https://fractional.quest/interim-cfo",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/interim-cfo",
+      "contentLength": 11612,
+      "responseTime": 29
+    },
+    {
+      "url": "https://fractional.quest/2025-fractional-cfo-salary-report",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/2025-fractional-cfo-salary-report",
+      "contentLength": 10414,
+      "responseTime": 213
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-training",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-training",
+      "contentLength": 15682,
+      "responseTime": 21
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-community",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-community",
+      "contentLength": 10414,
+      "responseTime": 223
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-companies",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-companies",
+      "contentLength": 15096,
+      "responseTime": 19
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-for-startups",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-for-startups",
+      "contentLength": 15216,
+      "responseTime": 20
+    },
+    {
+      "url": "https://fractional.quest/part-time-cfo",
+      "status": "ok",
+      "issues": [
+        "Redirects to: https://fractional.quest/part-time-cfo-jobs-uk"
+      ],
+      "redirectCount": 1,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/part-time-cfo-jobs-uk",
+      "contentLength": 14681,
+      "responseTime": 26
+    },
+    {
+      "url": "https://fractional.quest/remote",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/remote",
+      "contentLength": 10410,
+      "responseTime": 20
+    },
+    {
+      "url": "https://fractional.quest/uk-fractional-jobs-uk-london-fractional-jobs-london",
+      "status": "ok",
+      "issues": [
+        "Redirects to: https://fractional.quest/fractional-jobs-uk"
+      ],
+      "redirectCount": 1,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-uk",
+      "contentLength": 17089,
+      "responseTime": 75
+    },
+    {
+      "url": "https://fractional.quest/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter",
+      "contentLength": 16371,
+      "responseTime": 24
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-near-me",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-near-me",
+      "contentLength": 14126,
+      "responseTime": 18
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-jobs-uk?location=London",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-jobs-uk?location=London",
+      "contentLength": 17925,
+      "responseTime": 31
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-jobs-uk?location=Manchester",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-jobs-uk?location=Manchester",
+      "contentLength": 17925,
+      "responseTime": 29
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-jobs-uk?location=Birmingham",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-jobs-uk?location=Birmingham",
+      "contentLength": 17925,
+      "responseTime": 25
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-jobs-uk?location=Leeds",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-jobs-uk?location=Leeds",
+      "contentLength": 17925,
+      "responseTime": 24
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-jobs-uk?location=Edinburgh",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-jobs-uk?location=Edinburgh",
+      "contentLength": 17925,
+      "responseTime": 26
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-jobs-uk?location=Bristol",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-jobs-uk?location=Bristol",
+      "contentLength": 17925,
+      "responseTime": 22
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-jobs-uk?location=Cambridge",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-jobs-uk?location=Cambridge",
+      "contentLength": 17925,
+      "responseTime": 23
+    },
+    {
+      "url": "https://fractional.quest/fractional-jobs?role=CFO",
+      "status": "ok",
+      "issues": [
+        "Redirects to: https://fractional.quest/fractional-jobs-uk?role=CFO"
+      ],
+      "redirectCount": 1,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-uk?role=CFO",
+      "contentLength": 17089,
+      "responseTime": 33
+    },
+    {
+      "url": "https://fractional.quest/fractional-cfo-salary-report-2025",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cfo-salary-report-2025",
+      "contentLength": 11532,
+      "responseTime": 18
+    },
+    {
+      "url": "https://fractional.quest/state-fractional-cfo-market-2025",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/state-fractional-cfo-market-2025",
+      "contentLength": 11854,
+      "responseTime": 17
+    },
+    {
+      "url": "https://fractional.quest/fractional-cmo-salary",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cmo-salary",
+      "contentLength": 12043,
+      "responseTime": 15
+    },
+    {
+      "url": "https://fractional.quest/fractional-jobs-london",
+      "status": "ok",
+      "issues": [
+        "Redirects to: https://fractional.quest/fractional-jobs-uk"
+      ],
+      "redirectCount": 1,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-uk",
+      "contentLength": 17089,
+      "responseTime": 34
+    },
+    {
+      "url": "https://fractional.quest/outsourced-cfo-services",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/outsourced-cfo-services",
+      "contentLength": 12387,
+      "responseTime": 65
+    },
+    {
+      "url": "https://fractional.quest/virtual-cfo-services",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/virtual-cfo-services",
+      "contentLength": 12325,
+      "responseTime": 16
+    },
+    {
+      "url": "https://fractional.quest/fractional-cmo-services",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cmo-services",
+      "contentLength": 15587,
+      "responseTime": 18
+    },
+    {
+      "url": "https://fractional.quest/fractional-coo-services",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-coo-services",
+      "contentLength": 14674,
+      "responseTime": 18
+    },
+    {
+      "url": "https://fractional.quest/fractional-chro",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-chro",
+      "contentLength": 13588,
+      "responseTime": 19
+    },
+    {
+      "url": "https://fractional.quest/fractional-hr",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-hr",
+      "contentLength": 18124,
+      "responseTime": 30
+    },
+    {
+      "url": "https://fractional.quest/fractional-chro-services",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-chro-services",
+      "contentLength": 14659,
+      "responseTime": 20
+    },
+    {
+      "url": "https://fractional.quest/fractional-hr-jobs-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-hr-jobs-uk",
+      "contentLength": 15932,
+      "responseTime": 22
+    },
+    {
+      "url": "https://fractional.quest/fractional-hr-director",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-hr-director",
+      "contentLength": 14599,
+      "responseTime": 19
+    },
+    {
+      "url": "https://fractional.quest/fractional-hr-salary",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-hr-salary",
+      "contentLength": 12409,
+      "responseTime": 23
+    },
+    {
+      "url": "https://fractional.quest/interim-chro",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/interim-chro",
+      "contentLength": 11351,
+      "responseTime": 20
+    },
+    {
+      "url": "https://fractional.quest/fractional-hr-services",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-hr-services",
+      "contentLength": 12561,
+      "responseTime": 22
+    },
+    {
+      "url": "https://fractional.quest/fractional-hr-director-jobs",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-hr-director-jobs",
+      "contentLength": 11679,
+      "responseTime": 17
+    },
+    {
+      "url": "https://fractional.quest/fractional-cpo-services",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cpo-services",
+      "contentLength": 14789,
+      "responseTime": 17
+    },
+    {
+      "url": "https://fractional.quest/fractional-cio-jobs-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cio-jobs-uk",
+      "contentLength": 10414,
+      "responseTime": 420
+    },
+    {
+      "url": "https://fractional.quest/fractional-ciso",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-ciso",
+      "contentLength": 17061,
+      "responseTime": 19
+    },
+    {
+      "url": "https://fractional.quest/what-is-fractional-ciso",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/what-is-fractional-ciso",
+      "contentLength": 16622,
+      "responseTime": 304
+    },
+    {
+      "url": "https://fractional.quest/vciso-vs-ciso-comparison",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/vciso-vs-ciso-comparison",
+      "contentLength": 14494,
+      "responseTime": 261
+    },
+    {
+      "url": "https://fractional.quest/fractional-ciso-pricing-cost-guide",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-ciso-pricing-cost-guide",
+      "contentLength": 15560,
+      "responseTime": 453
+    },
+    {
+      "url": "https://fractional.quest/how-to-become-fractional-ciso",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/how-to-become-fractional-ciso",
+      "contentLength": 15401,
+      "responseTime": 266
+    },
+    {
+      "url": "https://fractional.quest/fractional-ciso-jobs",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-ciso-jobs",
+      "contentLength": 14165,
+      "responseTime": 275
+    },
+    {
+      "url": "https://fractional.quest/what-is-ciso-chief-information-security-officer",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/what-is-ciso-chief-information-security-officer",
+      "contentLength": 14373,
+      "responseTime": 271
+    },
+    {
+      "url": "https://fractional.quest/fractional-ciso-services-offerings",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-ciso-services-offerings",
+      "contentLength": 14223,
+      "responseTime": 1374
+    },
+    {
+      "url": "https://fractional.quest/ciso-advisory-services",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/ciso-advisory-services",
+      "contentLength": 13665,
+      "responseTime": 294
+    },
+    {
+      "url": "https://fractional.quest/interim-ciso",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/interim-ciso",
+      "contentLength": 11450,
+      "responseTime": 325
+    },
+    {
+      "url": "https://fractional.quest/fractional-cto",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cto",
+      "contentLength": 17846,
+      "responseTime": 375
+    },
+    {
+      "url": "https://fractional.quest/fractional-ciso-jobs-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-ciso-jobs-uk",
+      "contentLength": 10414,
+      "responseTime": 198
+    },
+    {
+      "url": "https://fractional.quest/fractional-cmo",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cmo",
+      "contentLength": 18095,
+      "responseTime": 287
+    },
+    {
+      "url": "https://fractional.quest/hire-fractional-cmo",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/hire-fractional-cmo",
+      "contentLength": 16178,
+      "responseTime": 362
+    },
+    {
+      "url": "https://fractional.quest/what-is-a-fractional-cmo",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/what-is-a-fractional-cmo",
+      "contentLength": 11379,
+      "responseTime": 264
+    },
+    {
+      "url": "https://fractional.quest/fractional-cmo-cost",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cmo-cost",
+      "contentLength": 14752,
+      "responseTime": 290
+    },
+    {
+      "url": "https://fractional.quest/part-time-cmo-jobs-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/part-time-cmo-jobs-uk",
+      "contentLength": 15129,
+      "responseTime": 612
+    },
+    {
+      "url": "https://fractional.quest/fractional-cmo-for-startups",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cmo-for-startups",
+      "contentLength": 15341,
+      "responseTime": 562
+    },
+    {
+      "url": "https://fractional.quest/how-to-become-a-fractional-cmo",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/how-to-become-a-fractional-cmo",
+      "contentLength": 15495,
+      "responseTime": 361
+    },
+    {
+      "url": "https://fractional.quest/fractional-cmo-meaning",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cmo-meaning",
+      "contentLength": 13419,
+      "responseTime": 307
+    },
+    {
+      "url": "https://fractional.quest/fractional-cmo-vs-marketing-agency",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cmo-vs-marketing-agency",
+      "contentLength": 14253,
+      "responseTime": 382
+    },
+    {
+      "url": "https://fractional.quest/what-does-a-fractional-cmo-do",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/what-does-a-fractional-cmo-do",
+      "contentLength": 15344,
+      "responseTime": 361
+    },
+    {
+      "url": "https://fractional.quest/fractional-consulting",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-consulting",
+      "contentLength": 11236,
+      "responseTime": 292
+    },
+    {
+      "url": "https://fractional.quest/fractional-coo",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-coo",
+      "contentLength": 15591,
+      "responseTime": 412
+    },
+    {
+      "url": "https://fractional.quest/fractional-coo-cost",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-coo-cost",
+      "contentLength": 12627,
+      "responseTime": 331
+    },
+    {
+      "url": "https://fractional.quest/fractional-jobs-startups",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-startups",
+      "contentLength": 15602,
+      "responseTime": 354
+    },
+    {
+      "url": "https://fractional.quest/fractional-coo-salary",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-coo-salary",
+      "contentLength": 11621,
+      "responseTime": 321
+    },
+    {
+      "url": "https://fractional.quest/fractional-cpo-jobs-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cpo-jobs-uk",
+      "contentLength": 10414,
+      "responseTime": 200
+    },
+    {
+      "url": "https://fractional.quest/fractional-cro-services",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cro-services",
+      "contentLength": 14339,
+      "responseTime": 316
+    },
+    {
+      "url": "https://fractional.quest/fractional-cro-jobs-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cro-jobs-uk",
+      "contentLength": 10414,
+      "responseTime": 203
+    },
+    {
+      "url": "https://fractional.quest/what-is-a-fractional-cto",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/what-is-a-fractional-cto",
+      "contentLength": 16485,
+      "responseTime": 466
+    },
+    {
+      "url": "https://fractional.quest/fractional-cto-for-startups",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cto-for-startups",
+      "contentLength": 13345,
+      "responseTime": 294
+    },
+    {
+      "url": "https://fractional.quest/fractional-cto-cost",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cto-cost",
+      "contentLength": 12564,
+      "responseTime": 545
+    },
+    {
+      "url": "https://fractional.quest/fractional-cto-hourly-rate",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cto-hourly-rate",
+      "contentLength": 13152,
+      "responseTime": 342
+    },
+    {
+      "url": "https://fractional.quest/fractional-cto-salary",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cto-salary",
+      "contentLength": 13309,
+      "responseTime": 316
+    },
+    {
+      "url": "https://fractional.quest/fractional-cto-vs-full-time-cto",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cto-vs-full-time-cto",
+      "contentLength": 13600,
+      "responseTime": 306
+    },
+    {
+      "url": "https://fractional.quest/interim-cto",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/interim-cto",
+      "contentLength": 11571,
+      "responseTime": 291
+    },
+    {
+      "url": "https://fractional.quest/how-to-become-a-fractional-cto",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/how-to-become-a-fractional-cto",
+      "contentLength": 13354,
+      "responseTime": 339
+    },
+    {
+      "url": "https://fractional.quest/fractional-jobs-tech",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-tech",
+      "contentLength": 15824,
+      "responseTime": 319
+    },
+    {
+      "url": "https://fractional.quest/fractional-cto-meaning",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-cto-meaning",
+      "contentLength": 13503,
+      "responseTime": 417
+    },
+    {
+      "url": "https://fractional.quest/fractional-data",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-data",
+      "contentLength": 11562,
+      "responseTime": 319
+    },
+    {
+      "url": "https://fractional.quest/fractional-finance-agency",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-finance-agency",
+      "contentLength": 11198,
+      "responseTime": 304
+    },
+    {
+      "url": "https://fractional.quest/fractional-hr-consultant",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-hr-consultant",
+      "contentLength": 13126,
+      "responseTime": 362
+    },
+    {
+      "url": "https://fractional.quest/fractional-hr-cost",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-hr-cost",
+      "contentLength": 13545,
+      "responseTime": 286
+    },
+    {
+      "url": "https://fractional.quest/fractional-hr-for-startups",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-hr-for-startups",
+      "contentLength": 14086,
+      "responseTime": 296
+    },
+    {
+      "url": "https://fractional.quest/what-is-fractional-hr",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/what-is-fractional-hr",
+      "contentLength": 13394,
+      "responseTime": 344
+    },
+    {
+      "url": "https://fractional.quest/fractional-hr-vs-full-time",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-hr-vs-full-time",
+      "contentLength": 11964,
+      "responseTime": 290
+    },
+    {
+      "url": "https://fractional.quest/fractional-hr-roles",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-hr-roles",
+      "contentLength": 12111,
+      "responseTime": 306
+    },
+    {
+      "url": "https://fractional.quest/part-time-hr",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/part-time-hr",
+      "contentLength": 11594,
+      "responseTime": 276
+    },
+    {
+      "url": "https://fractional.quest/interim-hr-director",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/interim-hr-director",
+      "contentLength": 12395,
+      "responseTime": 426
+    },
+    {
+      "url": "https://fractional.quest/fractional-hr-hourly-rate",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-hr-hourly-rate",
+      "contentLength": 11733,
+      "responseTime": 297
+    },
+    {
+      "url": "https://fractional.quest/fractional-hr-jobs-remote",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-hr-jobs-remote",
+      "contentLength": 11500,
+      "responseTime": 351
+    },
+    {
+      "url": "https://fractional.quest/part-time-hr-jobs-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/part-time-hr-jobs-uk",
+      "contentLength": 11367,
+      "responseTime": 352
+    },
+    {
+      "url": "https://fractional.quest/destinations/lisbon",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/destinations/lisbon",
+      "contentLength": 10408,
+      "responseTime": 644
+    },
+    {
+      "url": "https://fractional.quest/destinations/barcelona",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/destinations/barcelona",
+      "contentLength": 10408,
+      "responseTime": 641
+    },
+    {
+      "url": "https://fractional.quest/destinations/bali",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/destinations/bali",
+      "contentLength": 10408,
+      "responseTime": 485
+    },
+    {
+      "url": "https://fractional.quest/destinations/dubai",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/destinations/dubai",
+      "contentLength": 10408,
+      "responseTime": 729
+    },
+    {
+      "url": "https://fractional.quest/logo.svg",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/logo.svg",
+      "responseTime": 126
+    },
+    {
+      "url": "https://fractional.quest/cfo",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/cfo",
+      "contentLength": 10410,
+      "responseTime": 282
+    },
+    {
+      "url": "https://fractional.quest/cto",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/cto",
+      "contentLength": 10410,
+      "responseTime": 309
+    },
+    {
+      "url": "https://fractional.quest/cmo",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/cmo",
+      "contentLength": 10410,
+      "responseTime": 333
+    },
+    {
+      "url": "https://fractional.quest/fractional-jobs-edinburgh",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-edinburgh",
+      "contentLength": 11168,
+      "responseTime": 278
+    },
+    {
+      "url": "https://fractional.quest/fractional-jobs-glasgow",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-glasgow",
+      "contentLength": 10414,
+      "responseTime": 225
+    },
+    {
+      "url": "https://fractional.quest/guide",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/guide",
+      "contentLength": 10410,
+      "responseTime": 295
+    },
+    {
+      "url": "https://fractional.quest/fractional-executive-salary-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-executive-salary-uk",
+      "contentLength": 11300,
+      "responseTime": 274
+    },
+    {
+      "url": "https://fractional.quest/fractional-jobs-birmingham",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-birmingham",
+      "contentLength": 12324,
+      "responseTime": 418
+    },
+    {
+      "url": "https://fractional.quest/fractional-jobs-manchester",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-manchester",
+      "contentLength": 12295,
+      "responseTime": 360
+    },
+    {
+      "url": "https://fractional.quest/fractional-jobs-leeds",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-leeds",
+      "contentLength": 12262,
+      "responseTime": 362
+    },
+    {
+      "url": "https://fractional.quest/how-to-become-a-fractional-executive",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/how-to-become-a-fractional-executive",
+      "contentLength": 11358,
+      "responseTime": 348
+    },
+    {
+      "url": "https://fractional.quest/fractional-jobs-oxford",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-oxford",
+      "contentLength": 12205,
+      "responseTime": 281
+    },
+    {
+      "url": "https://fractional.quest/coo",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/coo",
+      "contentLength": 10410,
+      "responseTime": 299
+    },
+    {
+      "url": "https://fractional.quest/hr",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/hr",
+      "contentLength": 10410,
+      "responseTime": 293
+    },
+    {
+      "url": "https://fractional.quest/articles",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/articles",
+      "contentLength": 10410,
+      "responseTime": 248
+    },
+    {
+      "url": "https://fractional.quest/fractional-jobs-cambridge",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-cambridge",
+      "contentLength": 12670,
+      "responseTime": 342
+    },
+    {
+      "url": "https://fractional.quest/fractional-jobs-bristol",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-bristol",
+      "contentLength": 10414,
+      "responseTime": 186
+    },
+    {
+      "url": "https://fractional.quest/fractional-jobs-finance",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-finance",
+      "contentLength": 13610,
+      "responseTime": 314
+    },
+    {
+      "url": "https://fractional.quest/fractional-jobs-saas",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-saas",
+      "contentLength": 14988,
+      "responseTime": 297
+    },
+    {
+      "url": "https://fractional.quest/fractional-jobs?location=London",
+      "status": "ok",
+      "issues": [
+        "Redirects to: https://fractional.quest/fractional-jobs-uk?location=London"
+      ],
+      "redirectCount": 1,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-uk?location=London",
+      "contentLength": 17089,
+      "responseTime": 49
+    },
+    {
+      "url": "https://fractional.quest/fractional-marketing",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-marketing",
+      "contentLength": 11578,
+      "responseTime": 313
+    },
+    {
+      "url": "https://fractional.quest/fractional-marketing-agency",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-marketing-agency",
+      "contentLength": 11286,
+      "responseTime": 312
+    },
+    {
+      "url": "https://fractional.quest/fractional-operations",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-operations",
+      "contentLength": 11532,
+      "responseTime": 347
+    },
+    {
+      "url": "https://fractional.quest/fractional-ownership-for-executives",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-ownership-for-executives",
+      "contentLength": 12657,
+      "responseTime": 328
+    },
+    {
+      "url": "https://fractional.quest/fractional-ownership-guide",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-ownership-guide",
+      "contentLength": 13908,
+      "responseTime": 423
+    },
+    {
+      "url": "https://fractional.quest/fractional-property-ownership-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-property-ownership-uk",
+      "contentLength": 12447,
+      "responseTime": 324
+    },
+    {
+      "url": "https://fractional.quest/fractional-vs-timeshare",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-vs-timeshare",
+      "contentLength": 12617,
+      "responseTime": 358
+    },
+    {
+      "url": "https://fractional.quest/fractional-product",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-product",
+      "contentLength": 11542,
+      "responseTime": 363
+    },
+    {
+      "url": "https://fractional.quest/fractional-project-manager",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-project-manager",
+      "contentLength": 14032,
+      "responseTime": 328
+    },
+    {
+      "url": "https://fractional.quest/part-time-project-manager-jobs-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/part-time-project-manager-jobs-uk",
+      "contentLength": 15929,
+      "responseTime": 290
+    },
+    {
+      "url": "https://fractional.quest/what-is-fractional-project-manager",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/what-is-fractional-project-manager",
+      "contentLength": 14429,
+      "responseTime": 451
+    },
+    {
+      "url": "https://fractional.quest/interim-vs-fractional-project-manager",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/interim-vs-fractional-project-manager",
+      "contentLength": 14329,
+      "responseTime": 256
+    },
+    {
+      "url": "https://fractional.quest/fractional-project-manager-salary-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-project-manager-salary-uk",
+      "contentLength": 11381,
+      "responseTime": 363
+    },
+    {
+      "url": "https://fractional.quest/how-to-become-fractional-project-manager",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/how-to-become-fractional-project-manager",
+      "contentLength": 11243,
+      "responseTime": 363
+    },
+    {
+      "url": "https://fractional.quest/fractional-project-manager-jobs-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-project-manager-jobs-uk",
+      "contentLength": 17009,
+      "responseTime": 272
+    },
+    {
+      "url": "https://fractional.quest/fractional-project-manager-responsibilities",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-project-manager-responsibilities",
+      "contentLength": 17657,
+      "responseTime": 271
+    },
+    {
+      "url": "https://fractional.quest/fractional-project-manager-certification-uk",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-project-manager-certification-uk",
+      "contentLength": 17039,
+      "responseTime": 281
+    },
+    {
+      "url": "https://fractional.quest/fractional-revenue",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-revenue",
+      "contentLength": 11554,
+      "responseTime": 341
+    },
+    {
+      "url": "https://fractional.quest/fractional-services",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-services",
+      "contentLength": 12650,
+      "responseTime": 303
+    },
+    {
+      "url": "https://fractional.quest/fractional-technology",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-technology",
+      "contentLength": 11538,
+      "responseTime": 334
+    },
+    {
+      "url": "https://fractional.quest/how-it-works",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/how-it-works",
+      "contentLength": 12832,
+      "responseTime": 339
+    },
+    {
+      "url": "https://fractional.quest/interim-ceo",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/interim-ceo",
+      "contentLength": 11356,
+      "responseTime": 324
+    },
+    {
+      "url": "https://fractional.quest/interim-coo",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/interim-coo",
+      "contentLength": 11324,
+      "responseTime": 330
+    },
+    {
+      "url": "https://fractional.quest/interim-cmo",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/interim-cmo",
+      "contentLength": 11547,
+      "responseTime": 279
+    },
+    {
+      "url": "https://fractional.quest/interim-cio",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/interim-cio",
+      "contentLength": 11312,
+      "responseTime": 336
+    },
+    {
+      "url": "https://fractional.quest/interim-compliance-officer",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/interim-compliance-officer",
+      "contentLength": 13169,
+      "responseTime": 598
+    },
+    {
+      "url": "https://fractional.quest/interim-cpo",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/interim-cpo",
+      "contentLength": 11361,
+      "responseTime": 325
+    },
+    {
+      "url": "https://fractional.quest/interim-cro",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/interim-cro",
+      "contentLength": 11359,
+      "responseTime": 309
+    },
+    {
+      "url": "https://fractional.quest/#organization",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/#organization",
+      "contentLength": 12172,
+      "responseTime": 16
+    },
+    {
+      "url": "https://fractional.quest/contact",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/contact",
+      "contentLength": 10779,
+      "responseTime": 291
+    },
+    {
+      "url": "https://fractional.quest/marketing-consultants",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/marketing-consultants",
+      "contentLength": 11197,
+      "responseTime": 276
+    },
+    {
+      "url": "https://fractional.quest/repo",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/repo",
+      "contentLength": 10411,
+      "responseTime": 312
+    },
+    {
+      "url": "https://fractional.quest/onboarding/voice",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/onboarding/voice",
+      "contentLength": 10411,
+      "responseTime": 281
+    },
+    {
+      "url": "https://fractional.quest/onboarding/manual",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/onboarding/manual",
+      "contentLength": 10409,
+      "responseTime": 340
+    },
+    {
+      "url": "https://fractional.quest/operations-consultants",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/operations-consultants",
+      "contentLength": 11181,
+      "responseTime": 330
+    },
+    {
+      "url": "https://fractional.quest/calculators/rate-finder",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/calculators/rate-finder",
+      "contentLength": 11100,
+      "responseTime": 291
+    },
+    {
+      "url": "https://fractional.quest/profile/edit",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/profile/edit",
+      "contentLength": 10409,
+      "responseTime": 303
+    },
+    {
+      "url": "https://fractional.quest/what-is-fractional-work",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/what-is-fractional-work",
+      "contentLength": 11340,
+      "responseTime": 282
+    },
+    {
+      "url": "https://fractional.quest/part-time-cmo",
+      "status": "ok",
+      "issues": [
+        "Redirects to: https://fractional.quest/part-time-cmo-jobs-uk"
+      ],
+      "redirectCount": 1,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/part-time-cmo-jobs-uk",
+      "contentLength": 15129,
+      "responseTime": 47
+    },
+    {
+      "url": "https://fractional.quest/fractional-jobs?role=CMO",
+      "status": "ok",
+      "issues": [
+        "Redirects to: https://fractional.quest/fractional-jobs-uk?role=CMO"
+      ],
+      "redirectCount": 1,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-uk?role=CMO",
+      "contentLength": 17089,
+      "responseTime": 29
+    },
+    {
+      "url": "https://fractional.quest/fractional-jobs",
+      "status": "ok",
+      "issues": [
+        "Redirects to: https://fractional.quest/fractional-jobs-uk"
+      ],
+      "redirectCount": 1,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/fractional-jobs-uk",
+      "contentLength": 17089,
+      "responseTime": 31
+    },
+    {
+      "url": "https://fractional.quest/profile",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/profile",
+      "contentLength": 10409,
+      "responseTime": 325
+    },
+    {
+      "url": "https://fractional.quest/dashboard",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/dashboard",
+      "contentLength": 10415,
+      "responseTime": 305
+    },
+    {
+      "url": "https://fractional.quest/signs-you-need-fractional-compliance-officer",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/signs-you-need-fractional-compliance-officer",
+      "contentLength": 12660,
+      "responseTime": 299
+    },
+    {
+      "url": "https://fractional.quest/technology-consultants",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/technology-consultants",
+      "contentLength": 11203,
+      "responseTime": 290
+    },
+    {
+      "url": "https://fractional.quest/hire-fractional-cfo",
+      "status": "ok",
+      "issues": [],
+      "redirectCount": 0,
+      "httpStatus": 200,
+      "finalUrl": "https://fractional.quest/hire-fractional-cfo",
+      "contentLength": 10414,
+      "responseTime": 282
+    }
+  ]
+}

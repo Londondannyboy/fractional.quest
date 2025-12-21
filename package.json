@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "validate-links": "npx tsx scripts/validate-links.ts",
+    "validate-links:internal": "npx tsx scripts/validate-links.ts --internal-only",
+    "validate-links:external": "npx tsx scripts/validate-links.ts --external-only",
+    "validate-links:full": "npx tsx scripts/validate-links.ts --verbose"
   },
   "browserslist": [
     "Chrome >= 90",
