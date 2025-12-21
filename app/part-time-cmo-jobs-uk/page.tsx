@@ -103,8 +103,8 @@ export default async function PartTimeCmoJobsUkPage() {
                 <Link href="#jobs" className="px-8 py-4 bg-amber-500 text-black font-bold uppercase tracking-wider hover:bg-amber-400 transition-colors">
                   Browse Jobs Now
                 </Link>
-                <Link href="/fractional-cmo-salary" className="px-8 py-4 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">
-                  Salary Guide
+                <Link href="/fractional-cmo-jobs-uk" className="px-8 py-4 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">
+                  Fractional CMO Jobs UK
                 </Link>
               </div>
             </div>
@@ -206,9 +206,16 @@ export default async function PartTimeCmoJobsUkPage() {
               <p className="text-xl font-semibold text-gray-900 mb-0">"Part-time CMO jobs deliver the same strategic marketing expertise as full-time roles at a fraction of the cost—typically £1,500-£4,500/week vs £10,000+ monthly for full-time."</p>
             </div>
 
+            <div className="bg-gray-900 text-white p-6 rounded-lg my-8 not-prose">
+              <p className="text-gray-300 mb-3">Looking for fractional CMO positions instead?</p>
+              <Link href="/fractional-cmo-jobs-uk" className="inline-flex items-center text-amber-400 font-bold hover:text-amber-300">
+                View All Fractional CMO Jobs UK →
+              </Link>
+            </div>
+
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Part-Time CMO vs Full-Time CMO</h3>
             <p>
-              The key difference lies in engagement structure. A full-time CMO works exclusively for one company, earning £120,000-£200,000 annually. A <strong>part-time Chief Marketing Officer</strong> works with 2-4 clients simultaneously, charging day rates of £700-£1,400.
+              The key difference lies in engagement structure. A full-time CMO works exclusively for one company, earning £120,000-£200,000 annually. A <strong>part-time Chief Marketing Officer</strong> works with 2-4 clients simultaneously, charging day rates of £700-£1,400. Many professionals search for both <Link href="/fractional-cmo-jobs-uk" className="text-amber-600 hover:text-amber-700 underline">fractional CMO jobs</Link> and part-time roles interchangeably.
             </p>
             <div className="grid md:grid-cols-2 gap-6 not-prose my-8">
               <div className="bg-gray-50 p-6 border border-gray-200">
@@ -368,11 +375,12 @@ export default async function PartTimeCmoJobsUkPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related</span>
             <div className="flex flex-wrap gap-4">
-              <Link href="/uk-fractional-jobs-uk-london-fractional-jobs-london" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Fractional Jobs London</Link>
-              <Link href="/fractional-cmo-jobs-uk" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Fractional CMO Jobs</Link>
+              <Link href="/fractional-cmo-jobs-uk" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Fractional Jobs CMO</Link>
+              <Link href="/uk-fractional-jobs-uk-london-fractional-jobs-london" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Fractional CMO Jobs London</Link>
               <Link href="/fractional-cmo-salary" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">CMO Salary Guide</Link>
+              <Link href="/fractional-cmo-cost" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Fractional CMO Cost</Link>
               <Link href="/part-time-cfo-jobs-uk" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Part-Time CFO Jobs</Link>
-              <Link href="/fractional-cto-jobs-uk" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">CTO Jobs UK</Link>
+              <Link href="/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Best Fractional Recruitment Agency</Link>
             </div>
           </div>
         </div>

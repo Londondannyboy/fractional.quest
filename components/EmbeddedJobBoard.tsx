@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
-import { JobCard } from './JobCard'
+import { JobCard } from './job-card'
 
 interface Job {
   id: string
@@ -16,6 +16,7 @@ interface Job {
   role_category?: string
   skills_required?: string[]
   posted_date?: string
+  hours_per_week?: string
 }
 
 interface FilterOption {
@@ -294,18 +295,21 @@ export function EmbeddedJobBoard({
                   : undefined
 
                 return (
-                  <Link key={job.id} href={`/fractional-job/${job.slug}`}>
-                    <JobCard
-                      title={job.title}
-                      company={job.company_name}
-                      location={job.location || 'Location TBD'}
-                      isRemote={job.is_remote || job.workplace_type === 'Remote'}
-                      compensation={job.compensation}
-                      roleCategory={job.role_category}
-                      skills={job.skills_required || []}
-                      postedDaysAgo={postedDaysAgo}
-                    />
-                  </Link>
+                  <JobCard
+                    key={job.id}
+                    jobId={job.id}
+                    slug={job.slug}
+                    title={job.title}
+                    company={job.company_name}
+                    location={job.location || 'Location TBD'}
+                    isRemote={job.is_remote || job.workplace_type === 'Remote'}
+                    workplaceType={job.workplace_type}
+                    compensation={job.compensation}
+                    roleCategory={job.role_category}
+                    skills={job.skills_required || []}
+                    postedDaysAgo={postedDaysAgo}
+                    hoursPerWeek={job.hours_per_week}
+                  />
                 )
               })}
             </div>

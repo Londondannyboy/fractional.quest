@@ -332,11 +332,13 @@ export default function FractionalCISOServicesPage() {
       <section className="py-12 bg-white border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related Services</span>
+            <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related</span>
             <div className="flex flex-wrap gap-4">
+              <Link href="/fractional-ciso-jobs" className="text-gray-600 hover:text-red-600 font-medium transition-colors">Fractional CISO Jobs</Link>
+              <Link href="/fractional-ciso" className="text-gray-600 hover:text-red-600 font-medium transition-colors">CISO Guide</Link>
+              <Link href="/interim-ciso" className="text-gray-600 hover:text-red-600 font-medium transition-colors">Interim CISO</Link>
               <Link href="/fractional-cto-services" className="text-gray-600 hover:text-red-600 font-medium transition-colors">Fractional CTO</Link>
-              <Link href="/fractional-cio-services" className="text-gray-600 hover:text-red-600 font-medium transition-colors">Fractional CIO</Link>
-              <Link href="/fractional-cdo-services" className="text-gray-600 hover:text-red-600 font-medium transition-colors">Fractional CDO</Link>
+              <Link href="/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter" className="text-gray-600 hover:text-red-600 font-medium transition-colors">Fractional Recruiters</Link>
             </div>
           </div>
         </div>

@@ -551,6 +551,9 @@ export default function HireFractionalCMOPage() {
               <Link href="/fractional-cmo-salary" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
                 CMO Salary Data
               </Link>
+              <Link href="/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+                Fractional Recruitment Agency
+              </Link>
             </div>
           </div>
         </div>

@@ -19,9 +19,10 @@ export function Navigation() {
   }, [])
 
   const navLinks = [
-    { href: '/frac', label: 'Meet Frac' },
+    { href: '/fractional-jobs', label: 'Jobs' },
+    { href: '/destinations', label: 'Destinations' },
+    { href: '/people', label: 'People' },
     { href: '/fractional-services', label: 'Services' },
-    { href: '/fractional-jobs', label: 'Fractional Jobs' },
     { href: '/fractional-jobs-articles', label: 'Resources' }
   ]
 

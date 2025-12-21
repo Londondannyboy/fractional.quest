@@ -8,12 +8,16 @@ interface FAQItem {
 }
 
 interface FAQProps {
-  items: FAQItem[]
+  items?: FAQItem[]
+  faqs?: FAQItem[]  // Alias for backwards compatibility
   title?: string
   className?: string
 }
 
-export function FAQ({ items, title = 'Frequently Asked Questions', className = '' }: FAQProps) {
+export function FAQ({ items, faqs, title = 'Frequently Asked Questions', className = '' }: FAQProps) {
+  // Support both 'items' and 'faqs' prop names
+  const faqItems = items || faqs || []
+
   const [openIndex, setOpenIndex] = useState<number | null>(0) // First item open by default
 
   const toggleItem = (index: number) => {
@@ -24,7 +28,7 @@ export function FAQ({ items, title = 'Frequently Asked Questions', className = '
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: items.map((item) => ({
+    mainEntity: faqItems.map((item) => ({
       '@type': 'Question',
       name: item.question,
       acceptedAnswer: {
@@ -47,7 +51,7 @@ export function FAQ({ items, title = 'Frequently Asked Questions', className = '
       )}
 
       <div className="space-y-4">
-        {items.map((item, index) => (
+        {faqItems.map((item, index) => (
           <div
             key={index}
             className="border border-gray-200 rounded-xl overflow-hidden bg-white"

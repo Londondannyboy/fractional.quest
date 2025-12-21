@@ -283,11 +283,11 @@ export default function FractionalCMOMeaningPage() {
             Now that you understand what fractional CMO means, explore our complete guide or browse live fractional CMO jobs.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/fractional-cmo" className="px-10 py-5 bg-white text-amber-600 font-bold uppercase tracking-wider hover:bg-amber-50 transition-colors">
-              Complete Fractional CMO Guide
+            <Link href="/fractional-cmo-jobs-uk" className="px-10 py-5 bg-white text-amber-600 font-bold uppercase tracking-wider hover:bg-amber-50 transition-colors">
+              Fractional CMO Jobs UK
             </Link>
-            <Link href="/fractional-cmo-jobs-uk" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-amber-600 transition-colors">
-              Browse CMO Jobs
+            <Link href="/fractional-cmo" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-amber-600 transition-colors">
+              Complete CMO Guide
             </Link>
           </div>
         </div>
@@ -299,20 +299,20 @@ export default function FractionalCMOMeaningPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related Articles</span>
             <div className="flex flex-wrap gap-4">
+              <Link href="/fractional-cmo-jobs-uk" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">
+                Fractional Jobs CMO UK
+              </Link>
+              <Link href="/part-time-cmo-jobs-uk" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">
+                Part-Time CMO Jobs UK
+              </Link>
               <Link href="/fractional-cmo" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">
                 What is a Fractional CMO?
               </Link>
               <Link href="/fractional-cmo-cost" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">
                 Fractional CMO Cost
               </Link>
-              <Link href="/fractional-cmo-services" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">
-                CMO Services
-              </Link>
               <Link href="/fractional-cmo-salary" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">
                 CMO Salary Guide
-              </Link>
-              <Link href="/what-is-a-fractional-cmo" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">
-                Fractional CMO Explained
               </Link>
             </div>
           </div>

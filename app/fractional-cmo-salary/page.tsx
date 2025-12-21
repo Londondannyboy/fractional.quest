@@ -210,11 +210,11 @@ export default function FractionalCmoSalaryPage() {
           <h2 className="text-3xl font-bold mb-4">Ready to Explore Fractional CMO Opportunities?</h2>
           <p className="text-purple-100 mb-8">Browse live CMO roles or create your profile to get matched with companies.</p>
           <div className="flex justify-center gap-4">
-            <Link href="/fractional-jobs?role=CMO" className="px-8 py-4 bg-white text-purple-900 rounded-lg font-semibold hover:bg-purple-50">
-              Browse CMO Jobs
+            <Link href="/fractional-cmo-jobs-uk" className="px-8 py-4 bg-white text-purple-900 rounded-lg font-semibold hover:bg-purple-50">
+              Fractional CMO Jobs UK
             </Link>
-            <Link href="/part-time-cmo" className="px-8 py-4 border-2 border-white rounded-lg font-semibold hover:bg-white/10">
-              Part-Time CMO Guide
+            <Link href="/part-time-cmo-jobs-uk" className="px-8 py-4 border-2 border-white rounded-lg font-semibold hover:bg-white/10">
+              Part-Time CMO Jobs UK
             </Link>
           </div>
         </div>
@@ -223,11 +223,13 @@ export default function FractionalCmoSalaryPage() {
       {/* Internal Links */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Related Salary Guides</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Related CMO Resources</h2>
           <div className="flex flex-wrap gap-4">
+            <Link href="/fractional-cmo-jobs-uk" className="px-4 py-2 bg-white rounded-lg border hover:border-purple-300">Fractional Jobs CMO UK →</Link>
+            <Link href="/part-time-cmo-jobs-uk" className="px-4 py-2 bg-white rounded-lg border hover:border-purple-300">Part-Time CMO Jobs →</Link>
             <Link href="/fractional-cfo-salary" className="px-4 py-2 bg-white rounded-lg border hover:border-blue-700">Fractional CFO Salary →</Link>
-            <Link href="/fractional-jobs-london" className="px-4 py-2 bg-white rounded-lg border hover:border-purple-300">London CMO Jobs →</Link>
-            <Link href="/part-time-cmo" className="px-4 py-2 bg-white rounded-lg border hover:border-purple-300">Part-Time CMO Guide →</Link>
+            <Link href="/fractional-cmo-cost" className="px-4 py-2 bg-white rounded-lg border hover:border-purple-300">Fractional CMO Cost →</Link>
+            <Link href="/how-to-become-a-fractional-cmo" className="px-4 py-2 bg-white rounded-lg border hover:border-purple-300">Become a Fractional CMO →</Link>
           </div>
         </div>
       </section>

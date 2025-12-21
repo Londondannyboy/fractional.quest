@@ -17,6 +17,26 @@ interface SavePreferenceRequest {
   raw_text?: string
 }
 
+// Normalization rules
+const ALLOWED_ROLES = ['CEO', 'CFO', 'CTO', 'CMO', 'COO', 'CPO', 'VP', 'Director', 'Manager', 'Lead']
+
+function normalizeValue(type: string, value: string): string {
+  // Normalize roles to uppercase
+  if (type === 'role') {
+    return value.toUpperCase()
+  }
+
+  // Normalize locations to title case
+  if (type === 'location') {
+    return value.split(' ').map(word =>
+      word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+    ).join(' ')
+  }
+
+  // Return as-is for other types
+  return value
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body: SavePreferenceRequest = await request.json()
@@ -28,60 +48,33 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // First get the internal user ID from neon_auth_id
-    const userResult = await sql`
-      SELECT id FROM users WHERE neon_auth_id = ${body.user_id} LIMIT 1
-    `
-
-    if (userResult.length === 0) {
-      return NextResponse.json(
-        { error: 'User not found' },
-        { status: 404 }
-      )
-    }
-
-    const internalUserId = userResult[0].id
-
-    // Save each value to the user_repo_preferences table
-    // Create table if it doesn't exist
-    await sql`
-      CREATE TABLE IF NOT EXISTS user_repo_preferences (
-        id SERIAL PRIMARY KEY,
-        user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-        preference_type VARCHAR(50) NOT NULL,
-        preference_value TEXT NOT NULL,
-        validated BOOLEAN DEFAULT false,
-        confidence VARCHAR(20) DEFAULT 'extracted',
-        raw_text TEXT,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        UNIQUE(user_id, preference_type, preference_value)
-      )
-    `
-
     // Insert or update each preference value
     const results = []
     for (const value of body.values) {
       try {
+        // Normalize the value
+        const normalizedValue = normalizeValue(body.preference_type, value)
+
         const result = await sql`
           INSERT INTO user_repo_preferences (user_id, preference_type, preference_value, validated, raw_text)
-          VALUES (${internalUserId}, ${body.preference_type}, ${value}, ${body.validated}, ${body.raw_text || null})
-          ON CONFLICT (user_id, preference_type, preference_value)
+          VALUES (${body.user_id}, ${body.preference_type}, ${normalizedValue}, ${body.validated}, ${body.raw_text || null})
+          ON CONFLICT (user_id, preference_type, LOWER(preference_value))
           DO UPDATE SET
             validated = GREATEST(user_repo_preferences.validated, EXCLUDED.validated),
-            raw_text = COALESCE(EXCLUDED.raw_text, user_repo_preferences.raw_text),
-            created_at = CURRENT_TIMESTAMP
+            raw_text = COALESCE(EXCLUDED.raw_text, user_repo_preferences.raw_text)
           RETURNING id, preference_type, preference_value, validated
         `
         results.push(result[0])
+        console.log('[SavePreference] Saved:', normalizedValue)
       } catch (e) {
         console.error('[SavePreference] Error saving value:', value, e)
       }
     }
 
-    console.log('[SavePreference] Saved:', {
+    console.log('[SavePreference] Total saved:', {
       user_id: body.user_id,
       type: body.preference_type,
-      values: body.values,
+      count: results.length,
       validated: body.validated
     })
 
@@ -111,22 +104,11 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    // Get internal user ID
-    const userResult = await sql`
-      SELECT id FROM users WHERE neon_auth_id = ${userId} LIMIT 1
-    `
-
-    if (userResult.length === 0) {
-      return NextResponse.json({ preferences: [] })
-    }
-
-    const internalUserId = userResult[0].id
-
     // Get all preferences grouped by type
     const preferences = await sql`
       SELECT preference_type, preference_value, validated, created_at
       FROM user_repo_preferences
-      WHERE user_id = ${internalUserId}
+      WHERE user_id = ${userId}
       ORDER BY preference_type, created_at DESC
     `
 

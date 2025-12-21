@@ -531,6 +531,15 @@ export default async function Home() {
               <span className="text-sm text-gray-400">Operations Leadership</span>
             </Link>
           </div>
+          <div className="mt-8 text-center">
+            <p className="text-gray-400 mb-4">Looking for fractional executive jobs?</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/fractional-cfo-jobs-uk" className="text-blue-400 hover:text-blue-300 transition-colors font-medium">CFO Jobs UK</Link>
+              <Link href="/fractional-cmo-jobs-uk" className="text-blue-400 hover:text-blue-300 transition-colors font-medium">CMO Jobs UK</Link>
+              <Link href="/fractional-cto-jobs-uk" className="text-blue-400 hover:text-blue-300 transition-colors font-medium">CTO Jobs UK</Link>
+              <Link href="/fractional-coo-jobs-uk" className="text-blue-400 hover:text-blue-300 transition-colors font-medium">COO Jobs UK</Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -881,6 +890,8 @@ export default async function Home() {
                 <li><Link href="/fractional-cmo-services" className="hover:text-black transition-colors">Fractional CMO Services</Link></li>
                 <li><Link href="/fractional-cto-services" className="hover:text-black transition-colors">Fractional CTO Services</Link></li>
                 <li><Link href="/fractional-coo-services" className="hover:text-black transition-colors">Fractional COO Services</Link></li>
+                <li><Link href="/fractional-ciso" className="hover:text-black transition-colors">Fractional CISO Services</Link></li>
+                <li><Link href="/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter" className="hover:text-black transition-colors font-medium">Fractional Recruitment Agency</Link></li>
               </ul>
             </div>
 
@@ -892,7 +903,8 @@ export default async function Home() {
                 <li><Link href="/fractional-cmo-jobs-uk" className="hover:text-black transition-colors">Fractional CMO Jobs UK</Link></li>
                 <li><Link href="/fractional-cto-jobs-uk" className="hover:text-black transition-colors">Fractional CTO Jobs UK</Link></li>
                 <li><Link href="/fractional-coo-jobs-uk" className="hover:text-black transition-colors">Fractional COO Jobs UK</Link></li>
-                <li><Link href="/fractional-project-manager" className="hover:text-black transition-colors">Fractional Project Manager UK</Link></li>
+                <li><Link href="/fractional-ciso-jobs" className="hover:text-black transition-colors">Fractional CISO Jobs</Link></li>
+                <li><Link href="/fractional-project-manager-jobs-uk" className="hover:text-black transition-colors">Fractional PM Jobs UK</Link></li>
               </ul>
             </div>
 
@@ -912,8 +924,11 @@ export default async function Home() {
             <div>
               <h3 className="font-bold text-gray-900 mb-4">Guides & Resources</h3>
               <ul className="space-y-2 text-gray-600">
-                <li><Link href="/fractional-cfo-salary" className="hover:text-black transition-colors">CFO Salary Guide</Link></li>
-                <li><Link href="/fractional-cmo-salary" className="hover:text-black transition-colors">CMO Salary Guide</Link></li>
+                <li><Link href="/fractional-cfo" className="hover:text-black transition-colors">Fractional CFO Complete Guide</Link></li>
+                <li><Link href="/fractional-cmo" className="hover:text-black transition-colors">Fractional CMO Complete Guide</Link></li>
+                <li><Link href="/fractional-cto" className="hover:text-black transition-colors">Fractional CTO Complete Guide</Link></li>
+                <li><Link href="/fractional-ciso" className="hover:text-black transition-colors">Fractional CISO Complete Guide</Link></li>
+                <li><Link href="/fractional-project-manager" className="hover:text-black transition-colors">Fractional PM Complete Guide</Link></li>
                 <li><Link href="/what-is-fractional-work" className="hover:text-black transition-colors">What is Fractional Work?</Link></li>
                 <li><Link href="/fractional-jobs-articles" className="hover:text-black transition-colors">All Career Guides</Link></li>
               </ul>

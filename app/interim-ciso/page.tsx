@@ -80,6 +80,22 @@ export default function InterimCISOPage() {
           </div>
         </div>
       </section>
+
+      {/* Related Links */}
+      <section className="py-12 bg-white border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related</span>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/fractional-ciso-jobs" className="text-gray-600 hover:text-red-600 font-medium transition-colors">CISO Jobs UK</Link>
+              <Link href="/fractional-ciso" className="text-gray-600 hover:text-red-600 font-medium transition-colors">Fractional CISO Guide</Link>
+              <Link href="/fractional-ciso-services" className="text-gray-600 hover:text-red-600 font-medium transition-colors">CISO Services</Link>
+              <Link href="/interim-cto" className="text-gray-600 hover:text-red-600 font-medium transition-colors">Interim CTO</Link>
+              <Link href="/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter" className="text-gray-600 hover:text-red-600 font-medium transition-colors">Fractional Recruiters</Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

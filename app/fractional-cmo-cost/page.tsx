@@ -504,10 +504,10 @@ export default function FractionalCMOCostPage() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/fractional-cmo-jobs-uk" className="px-10 py-5 bg-white text-blue-600 font-bold uppercase tracking-wider hover:bg-blue-950/20 transition-colors">
-              Browse CMO Jobs
+              Fractional CMO Jobs UK
             </Link>
-            <Link href="/handler/sign-up" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-blue-600 transition-colors">
-              Post a CMO Role
+            <Link href="/part-time-cmo-jobs-uk" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-blue-600 transition-colors">
+              Part-Time CMO Jobs
             </Link>
           </div>
         </div>
@@ -519,20 +519,20 @@ export default function FractionalCMOCostPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related Resources</span>
             <div className="flex flex-wrap gap-4">
+              <Link href="/fractional-cmo-jobs-uk" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+                Fractional Jobs CMO
+              </Link>
+              <Link href="/part-time-cmo-jobs-uk" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+                Part-Time CMO Jobs UK
+              </Link>
               <Link href="/fractional-cmo" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
                 Fractional CMO Guide
               </Link>
               <Link href="/fractional-cmo-salary" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
                 CMO Salary Data
               </Link>
-              <Link href="/fractional-cmo-services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-                CMO Services
-              </Link>
               <Link href="/hire-fractional-cmo" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
                 How to Hire
-              </Link>
-              <Link href="/fractional-cmo-meaning" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-                What is a Fractional CMO?
               </Link>
             </div>
           </div>

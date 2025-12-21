@@ -23,6 +23,17 @@
   --accent-light: #3b82f6;
   --accent-dark: #1d4ed8;
 
+  /* Lifestyle Accents - Aspirational messaging */
+  --lifestyle-teal: #0d9488;
+  --lifestyle-teal-light: #14b8a6;
+  --lifestyle-teal-bg: #f0fdfa;
+  --lifestyle-amber: #d97706;
+  --lifestyle-amber-light: #f59e0b;
+  --lifestyle-amber-bg: #fffbeb;
+  --lifestyle-emerald: #059669;
+  --lifestyle-emerald-light: #10b981;
+  --lifestyle-emerald-bg: #ecfdf5;
+
   /* Text hierarchy */
   --text-primary: #111827;
   --text-secondary: #374151;
