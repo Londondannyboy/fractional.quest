@@ -26,6 +26,16 @@ interface JobCardProps {
   onClick?: () => void
   // Optional: override the auto-generated message
   aspirationalMessage?: AspirationalMessageData | null
+  // Additional props for compatibility
+  companyDomain?: string
+  description?: string
+  jobSource?: string
+  isSyndicated?: boolean
+  postedDate?: Date
+  estimatedDayRate?: { min: number; max: number }
+  companyType?: 'direct' | 'recruiter' | 'job_board'
+  appealSummary?: string
+  keyDeliverables?: string[]
 }
 
 export function JobCard({
@@ -46,6 +56,16 @@ export function JobCard({
   className = '',
   onClick,
   aspirationalMessage: customMessage,
+  // Additional props for compatibility (may not all be used yet)
+  companyDomain,
+  description,
+  jobSource,
+  isSyndicated,
+  postedDate,
+  estimatedDayRate,
+  companyType,
+  appealSummary,
+  keyDeliverables,
 }: JobCardProps) {
   const user = useUser()
   const [isSaved, setIsSaved] = useState(false)
