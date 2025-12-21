@@ -12,7 +12,7 @@
  */
 
 import { addToUserGraph, ensureZepUser, type GraphNode, type GraphEdge } from '@/lib/zep-client'
-import { sql } from '@neondatabase/serverless'
+import { createDbQuery } from '@/lib/db'
 
 // ============================================================================
 // TYPES
