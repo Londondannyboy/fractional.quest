@@ -131,7 +131,7 @@ const ForceGraph3DRepo = forwardRef<any, Props>(({ data }, ref) => {
     if (!graphRef.current || !data?.nodes || !isInitialized) return
 
     try {
-      const userNode = data.nodes.find(n => n.type === 'user')
+      const userNode = data.nodes.find(n => n.type === 'user') as any
       if (!userNode) return
 
       // Force user node to center
