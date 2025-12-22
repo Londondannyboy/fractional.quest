@@ -2,6 +2,8 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { RoleNews } from '@/components/RoleNews'
+import { RoleHubHeader } from '@/components/RoleHubHeader'
 
 export const revalidate = 3600
 
@@ -62,65 +64,16 @@ export default function FractionalCFOGuidePage() {
   return (
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      {/* Hero Section with Unsplash Background */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1920&q=80"
-            alt="Professional business background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/85 to-blue-950/90"></div>
-        </div>
-        <div className="relative z-10 w-full py-20">
-          <div className="max-w-6xl mx-auto px-6 lg:px-8">
-            <Link href="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm tracking-wide">
-              <span className="mr-2">←</span> Back to Home
-            </Link>
-            <div className="max-w-4xl">
-              <span className="inline-block bg-white text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-                Complete Guide 2025
-              </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
-                Fractional CFO:<br />
-                <span className="text-white/80">Everything You Need to Know</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mb-8">
-                The definitive guide to <strong className="text-white">Fractional CFOs</strong>. Whether you're looking to hire, become, or understand what a fractional CFO does—this guide covers it all.
-              </p>
-              <div className="flex flex-wrap gap-8 mb-10">
-                <div>
-                  <div className="text-4xl md:text-5xl font-black text-white">12,100</div>
-                  <div className="text-white/60 text-sm uppercase tracking-wider">Monthly Searches</div>
-                </div>
-                <div>
-                  <div className="text-4xl md:text-5xl font-black text-white">£700-£1.5k</div>
-                  <div className="text-white/60 text-sm uppercase tracking-wider">Day Rate</div>
-                </div>
-                <div>
-                  <div className="text-4xl md:text-5xl font-black text-white">60%</div>
-                  <div className="text-white/60 text-sm uppercase tracking-wider">Cost Savings</div>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-4">
-                <Link href="#what-is" className="px-8 py-4 bg-white text-black font-bold uppercase tracking-wider hover:bg-gray-100 transition-colors">
-                  What is a Fractional CFO?
-                </Link>
-                <Link href="#calculator" className="px-8 py-4 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">
-                  Calculate Earnings
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
+      {/* Role Hub Header */}
+      <RoleHubHeader role="cfo" />
 
       {/* Table of Contents */}
       <section className="py-16 bg-gray-50 border-y border-gray-200">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-8">In This Guide</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link href="#what-is" className="p-6 bg-white hover:bg-gray-100 hover:text-gray-900 transition-all group">
+            <Link href="#guide" className="p-6 bg-white hover:bg-gray-100 hover:text-gray-900 transition-all group">
               <div className="text-5xl font-black text-gray-200 group-hover:text-gray-700 mb-2">01</div>
               <h3 className="text-lg font-bold mb-2">What is a Fractional CFO?</h3>
               <p className="text-sm text-gray-600 group-hover:text-gray-300">Definition, responsibilities, and when to hire</p>
@@ -154,8 +107,13 @@ export default function FractionalCFOGuidePage() {
         </div>
       </section>
 
+      {/* Latest News Section */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <RoleNews category="Finance" title="Latest CFO News & Insights" limit={3} />
+      </div>
+
       {/* Section 1: What is a Fractional CFO */}
-      <section id="what-is" className="py-20 md:py-28 bg-white">
+      <section id="guide" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Section 01</span>

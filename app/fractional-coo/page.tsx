@@ -2,6 +2,8 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { FAQ } from '@/components/FAQ'
+import { RoleHubHeader } from '@/components/RoleHubHeader'
+import { RoleNews } from '@/components/RoleNews'
 
 export const revalidate = 3600
 
@@ -71,53 +73,16 @@ export default function FractionalCOOPage() {
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1920&q=80"
-            alt="Professional operations background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-900/90 via-orange-800/85 to-orange-950/90"></div>
-        </div>
-        <div className="relative z-10 w-full py-20">
-          <div className="max-w-6xl mx-auto px-6 lg:px-8">
-            <Link href="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm tracking-wide">
-              <span className="mr-2">←</span> Back to Home
-            </Link>
-            <div className="max-w-4xl">
-              <span className="inline-block bg-white text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-                1,600 searches/month • Growing +23% YoY
-              </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
-                What is a<br />
-                <span className="text-white/80">Fractional COO?</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mb-8">
-                Part-time operational leadership that scales your business without full-time executive cost
-              </p>
-              <div className="flex flex-wrap gap-8 mb-10">
-                <div>
-                  <div className="text-4xl md:text-5xl font-black text-white">$5k-15k/mo</div>
-                  <div className="text-white/60 text-sm uppercase tracking-wider">Monthly Cost</div>
-                </div>
-                <div>
-                  <div className="text-4xl md:text-5xl font-black text-white">60-75%</div>
-                  <div className="text-white/60 text-sm uppercase tracking-wider">Cost Savings</div>
-                </div>
-                <div>
-                  <div className="text-4xl md:text-5xl font-black text-white">1-3 days</div>
-                  <div className="text-white/60 text-sm uppercase tracking-wider">Per Week</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Role Hub Header */}
+      <RoleHubHeader role="coo" />
+
+      {/* Latest News Section */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <RoleNews category="Operations" title="Latest COO News & Insights" limit={3} />
+      </div>
 
       {/* Definition */}
-      <section className="py-20 md:py-28 bg-white">
+      <section id="guide" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Quick Answer</span>

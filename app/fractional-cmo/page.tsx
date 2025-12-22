@@ -4,6 +4,8 @@ import { FAQ, CMO_FAQS } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
 import { HireProcessStepper } from '@/components/HireProcessStepper'
 import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
+import { RoleHubHeader } from '@/components/RoleHubHeader'
+import { RoleNews } from '@/components/RoleNews'
 
 export const revalidate = 3600
 
@@ -25,65 +27,14 @@ export const metadata: Metadata = {
 export default function FractionalCMOPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section with Unsplash Background */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=1920&q=80"
-            alt="Professional marketing background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-amber-900/90 via-amber-800/85 to-amber-950/90"></div>
-        </div>
-        <div className="relative z-10 w-full py-24">
-          <div className="max-w-6xl mx-auto px-6 lg:px-8">
-            <Link href="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm tracking-wide">
-              <span className="mr-2">←</span> Back to Home
-            </Link>
-            <div className="max-w-4xl">
-              <span className="inline-block bg-amber-500 text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-                Ultimate Guide
-              </span>
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-[0.9] tracking-tight">
-                Fractional<br />
-                <span className="text-amber-400">CMO</span>
-              </h1>
-              <p className="text-2xl md:text-3xl text-white/90 leading-relaxed max-w-3xl mb-10 font-light">
-                The complete guide to hiring (or becoming) a <strong className="text-white font-semibold">Fractional Chief Marketing Officer</strong>.
-                Part-time marketing leadership that drives growth without full-time cost.
-              </p>
-              <div className="flex flex-wrap gap-10 mb-12">
-                <div>
-                  <div className="text-5xl md:text-6xl font-black text-amber-400">£700-1.4k</div>
-                  <div className="text-white/70 text-sm uppercase tracking-wider mt-1">Day Rate Range</div>
-                </div>
-                <div>
-                  <div className="text-5xl md:text-6xl font-black text-white">40-60%</div>
-                  <div className="text-white/70 text-sm uppercase tracking-wider mt-1">Cost Savings</div>
-                </div>
-                <div>
-                  <div className="text-5xl md:text-6xl font-black text-white">100+</div>
-                  <div className="text-white/70 text-sm uppercase tracking-wider mt-1">Live Jobs</div>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-4">
-                <Link href="#jobs" className="px-10 py-5 bg-amber-500 text-black font-bold uppercase tracking-wider hover:bg-amber-400 transition-colors text-lg">
-                  Browse CMO Jobs
-                </Link>
-                <Link href="#cost-calculator" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors text-lg">
-                  Calculate Cost Savings
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Role Hub Header */}
+      <RoleHubHeader role="cmo" />
 
       {/* Quick Navigation */}
       <section className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 py-6">
           <nav className="flex flex-wrap gap-6 text-sm">
-            <a href="#what-is" className="text-gray-400 hover:text-amber-400 transition-colors">What is a Fractional CMO?</a>
+            <a href="#guide" className="text-gray-400 hover:text-amber-400 transition-colors">What is a Fractional CMO?</a>
             <a href="#when-to-hire" className="text-gray-400 hover:text-amber-400 transition-colors">When to Hire</a>
             <a href="#what-they-do" className="text-gray-400 hover:text-amber-400 transition-colors">What They Do</a>
             <a href="#cost-calculator" className="text-gray-400 hover:text-amber-400 transition-colors">Cost & Pricing</a>
@@ -95,8 +46,13 @@ export default function FractionalCMOPage() {
         </div>
       </section>
 
+      {/* Latest News Section */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <RoleNews category="Marketing" title="Latest CMO News & Insights" limit={3} />
+      </div>
+
       {/* What is a Fractional CMO */}
-      <section id="what-is" className="py-24 md:py-32 bg-white">
+      <section id="guide" className="py-24 md:py-32 bg-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Definition</span>

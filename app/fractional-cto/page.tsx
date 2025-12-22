@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
 import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
+import { RoleHubHeader } from '@/components/RoleHubHeader'
+import { RoleNews } from '@/components/RoleNews'
 
 export const revalidate = 3600
 
@@ -77,63 +79,15 @@ export default function FractionalCTOPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      {/* Hero Section with Unsplash Background */}
-      <section className="relative min-h-[75vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=80"
-            alt="Professional technology background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 via-purple-800/85 to-purple-950/90"></div>
-        </div>
-        <div className="relative z-10 w-full py-20">
-          <div className="max-w-6xl mx-auto px-6 lg:px-8">
-            <div className="max-w-4xl">
-              <span className="inline-block bg-blue-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-                Complete CTO Hub
-              </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
-                Fractional CTO<br />
-                <span className="text-blue-400">Complete Guide</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mb-8">
-                Everything you need to know about hiring or becoming a <strong className="text-white">Fractional CTO</strong>.
-                The UK's most comprehensive resource on part-time technical leadership.
-              </p>
-              <div className="flex flex-wrap gap-8 mb-10">
-                <div>
-                  <div className="text-4xl md:text-5xl font-black text-blue-400">1,600</div>
-                  <div className="text-white/60 text-sm uppercase tracking-wider">Monthly Searches</div>
-                </div>
-                <div>
-                  <div className="text-4xl md:text-5xl font-black text-white">55%</div>
-                  <div className="text-white/60 text-sm uppercase tracking-wider">Cost Savings</div>
-                </div>
-                <div>
-                  <div className="text-4xl md:text-5xl font-black text-white">15+ Yrs</div>
-                  <div className="text-white/60 text-sm uppercase tracking-wider">Experience</div>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-4">
-                <Link href="/fractional-cto-services" className="px-8 py-4 bg-blue-500 text-white font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">
-                  Hire a Fractional CTO
-                </Link>
-                <Link href="/fractional-cto-jobs-uk" className="px-8 py-4 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">
-                  Find CTO Jobs
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Role Hub Header */}
+      <RoleHubHeader role="cto" />
 
       {/* Table of Contents */}
       <section className="py-12 bg-gray-50 border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-lg font-bold text-gray-900 mb-4">In This Guide:</h2>
           <div className="grid md:grid-cols-2 gap-3 text-sm">
-            <Link href="#definition" className="text-blue-600 hover:text-blue-700 hover:underline">→ What is a Fractional CTO?</Link>
+            <Link href="#guide" className="text-blue-600 hover:text-blue-700 hover:underline">→ What is a Fractional CTO?</Link>
             <Link href="#when-to-hire" className="text-blue-600 hover:text-blue-700 hover:underline">→ When to Hire</Link>
             <Link href="#responsibilities" className="text-blue-600 hover:text-blue-700 hover:underline">→ Key Responsibilities</Link>
             <Link href="#cost" className="text-blue-600 hover:text-blue-700 hover:underline">→ Cost & Pricing</Link>
@@ -145,8 +99,13 @@ export default function FractionalCTOPage() {
         </div>
       </section>
 
+      {/* Latest News Section */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <RoleNews category="Engineering" title="Latest CTO News & Insights" limit={3} />
+      </div>
+
       {/* Quick Answer Definition */}
-      <section id="definition" className="py-20 md:py-28 bg-white">
+      <section id="guide" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Definition</span>

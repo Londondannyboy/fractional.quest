@@ -171,8 +171,7 @@ export default async function FractionalCpoJobsUkPage() {
              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
             <h2 className="text-2xl md:text-3xl font-black text-gray-900">Earnings Calculator</h2>
           </div>
-          <RoleCalculator role="cmo" /> 
-          {/* Note: reusing CMO calculator as a proxy for now if CPO not available, or could map if RoleCalculator supports 'product' */}
+          <RoleCalculator role="cpo" /> 
         </div>
       </section>
 
