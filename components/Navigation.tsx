@@ -15,6 +15,7 @@ export function Navigation() {
       setScrolled(window.scrollY > 10)
     }
     window.addEventListener('scroll', handleScroll)
+    handleScroll() // Set initial state
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -32,23 +33,32 @@ export function Navigation() {
     return pathname.startsWith(href)
   }
 
+  // Base classes
+  const navBaseClasses = "sticky top-0 z-50 transition-all duration-300"
+  const navScrolledClasses = "bg-white/90 backdrop-blur-md shadow-md"
+  const navUnscrolledClasses = "bg-transparent"
+
+  const linkBaseClasses = "nav-link"
+  const linkScrolledClasses = "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+  const linkUnscrolledClasses = "text-white hover:bg-white/10"
+  const linkActiveScrolledClasses = "text-gray-900 bg-gray-200"
+  const linkActiveUnscrolledClasses = "text-white bg-white/10"
+
   return (
-    <nav className={`nav-sticky transition-all duration-300 ${
-      scrolled ? 'shadow-md' : 'shadow-sm'
-    }`}>
+    <nav className={`${navBaseClasses} ${scrolled ? navScrolledClasses : navUnscrolledClasses}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-gray-800 to-black rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+            <div className={`w-10 h-10 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow ${scrolled ? 'bg-gradient-to-br from-gray-800 to-black' : 'bg-white/20'}`}>
               <span className="text-white font-black text-xl">F</span>
             </div>
             <div className="hidden sm:flex items-center gap-2">
               <div>
-                <span className="font-bold text-gray-900 text-lg">Fractional</span>
-                <span className="text-gray-600 font-bold text-lg">.Quest</span>
+                <span className={`font-bold text-lg transition-colors ${scrolled ? 'text-gray-900' : 'text-white'}`}>Fractional</span>
+                <span className={`font-bold text-lg transition-colors ${scrolled ? 'text-gray-600' : 'text-gray-300'}`}>.Quest</span>
               </div>
-              <span className="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">
+              <span className={`text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wide transition-colors ${scrolled ? 'bg-amber-100 text-amber-700' : 'bg-white/20 text-white'}`}>
                 Beta
               </span>
             </div>
@@ -60,7 +70,7 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`nav-link ${isActive(link.href) ? 'active' : ''}`}
+                className={`${linkBaseClasses} ${scrolled ? linkScrolledClasses : linkUnscrolledClasses} ${isActive(link.href) ? (scrolled ? linkActiveScrolledClasses : linkActiveUnscrolledClasses) : ''}`}
               >
                 {link.label}
               </Link>
@@ -74,17 +84,17 @@ export function Navigation() {
               href="/fractional-jobs-uk"
               className={`md:hidden px-3 py-2 rounded-lg font-semibold text-sm transition-colors ${
                 isActive('/fractional-jobs')
-                  ? 'bg-gray-200 text-gray-900'
-                  : 'text-gray-700 hover:bg-gray-100'
+                  ? (scrolled ? 'bg-gray-200 text-gray-900' : 'bg-white/20 text-white')
+                  : (scrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10')
               }`}
             >
               Jobs
             </Link>
 
-            <AuthButtons />
+            <AuthButtons scrolled={scrolled} />
             <Link
               href="/handler/sign-up"
-              className="hidden sm:inline-flex btn-gradient text-sm px-4 py-2"
+              className={`hidden sm:inline-flex btn-gradient text-sm px-4 py-2 ${scrolled ? '' : 'bg-white !text-gray-900 hover:bg-gray-200'}`}
             >
               Join Beta
             </Link>
@@ -92,7 +102,7 @@ export function Navigation() {
             {/* Mobile menu button */}
             <button
               type="button"
-              className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100"
+              className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? 'text-gray-600 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -111,7 +121,7 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-100">
+          <div className={`md:hidden py-4 border-t ${scrolled ? 'border-gray-100' : 'border-white/20'}`}>
             <div className="flex flex-col space-y-1">
               {navLinks.map((link) => (
                 <Link
@@ -120,8 +130,8 @@ export function Navigation() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`px-4 py-3 rounded-lg font-medium transition-colors ${
                     isActive(link.href)
-                      ? 'bg-gray-100 text-gray-900'
-                      : 'text-gray-600 hover:bg-gray-50'
+                      ? (scrolled ? 'bg-gray-100 text-gray-900' : 'bg-white/10 text-white')
+                      : (scrolled ? 'text-gray-600 hover:bg-gray-50' : 'text-white hover:bg-white/10')
                   }`}
                 >
                   {link.label}
@@ -130,7 +140,7 @@ export function Navigation() {
               <Link
                 href="/handler/sign-up"
                 onClick={() => setMobileMenuOpen(false)}
-                className="mx-4 mt-4 btn-gradient text-center"
+                className={`mx-4 mt-4 text-center ${scrolled ? 'btn-gradient' : 'bg-white text-gray-900 py-3 rounded-lg font-semibold'}`}
               >
                 Join Beta
               </Link>
