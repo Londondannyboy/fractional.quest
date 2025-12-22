@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { notFound } from 'next/navigation'
 import { Badge } from '@/components/Badge'
+import { Suspense } from 'react'
+import { RecommendedArticlesLight } from '@/components/RecommendedArticles'
 
 // Revalidate every 4 hours for articles
 export const revalidate = 14400
@@ -24,7 +26,9 @@ async function getArticle(slug: string) {
         hero_asset_url,
         hero_asset_alt,
         published_at,
-        word_count
+        word_count,
+        category,
+        article_type
       FROM articles
       WHERE slug = ${slug}
         AND status = 'published'
@@ -36,6 +40,43 @@ async function getArticle(slug: string) {
     console.error('Error fetching article:', error)
     return null
   }
+}
+
+// Get related articles from same category
+async function getRelatedArticles(category: string | null, currentSlug: string, limit: number = 5) {
+  if (!category) return []
+  try {
+    const sql = createDbQuery()
+    const articles = await sql`
+      SELECT id, slug, title, excerpt, category, published_at, hero_asset_url
+      FROM articles
+      WHERE app = 'fractional'
+        AND status = 'published'
+        AND category = ${category}
+        AND slug != ${currentSlug}
+      ORDER BY published_at DESC
+      LIMIT ${limit}
+    `
+    return articles
+  } catch (error) {
+    console.error('Error fetching related articles:', error)
+    return []
+  }
+}
+
+// Get hub link for a category
+function getCategoryHub(category: string | null): { label: string; href: string } | null {
+  const hubs: Record<string, { label: string; href: string }> = {
+    Finance: { label: 'Finance Hub', href: '/fractional-cfo-jobs-uk' },
+    Marketing: { label: 'Marketing Hub', href: '/fractional-cmo-jobs-uk' },
+    Engineering: { label: 'Technology Hub', href: '/fractional-cto-jobs-uk' },
+    Operations: { label: 'Operations Hub', href: '/fractional-coo-jobs-uk' },
+    HR: { label: 'HR Hub', href: '/fractional-hr' },
+    'Project Management': { label: 'Project Management Hub', href: '/fractional-project-manager' },
+    Compliance: { label: 'Compliance Hub', href: '/fractional-compliance-fintech' },
+    Security: { label: 'Security Hub', href: '/fractional-ciso-jobs-uk' },
+  }
+  return category ? hubs[category] || null : null
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -59,6 +100,10 @@ export default async function ArticleDetailPage({ params }: PageProps) {
   if (!article) {
     notFound()
   }
+
+  // Fetch related articles from the same category
+  const relatedArticles = await getRelatedArticles(article.category, slug, 5)
+  const categoryHub = getCategoryHub(article.category)
 
   const readingTime = article.word_count ? Math.ceil(article.word_count / 200) : null
   const formattedDate = article.published_at
@@ -150,28 +195,140 @@ export default async function ArticleDetailPage({ params }: PageProps) {
         </div>
       )}
 
-      {/* Article Content */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        {/* Article Body with Enhanced Styling */}
-        <div
-          className="article-content bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12"
-          dangerouslySetInnerHTML={{ __html: article.content }}
-        />
+      {/* Article Content with Sidebar */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        <div className="flex flex-col lg:flex-row gap-10">
+          {/* Main Content */}
+          <div className="flex-1 max-w-4xl">
+            {/* Article Body with Enhanced Styling */}
+            <div
+              className="article-content bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12"
+              dangerouslySetInnerHTML={{ __html: article.content }}
+            />
 
-        {/* CTA Section */}
-        <div className="mt-12 bg-gradient-to-r from-purple-600 to-purple-700 rounded-2xl p-8 md:p-10 text-white">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div>
-              <h3 className="text-2xl font-bold mb-2">Ready to find fractional talent?</h3>
-              <p className="text-purple-100">Browse our curated list of fractional executive opportunities.</p>
+            {/* CTA Section */}
+            <div className="mt-12 bg-gradient-to-r from-purple-600 to-purple-700 rounded-2xl p-8 md:p-10 text-white">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div>
+                  <h3 className="text-2xl font-bold mb-2">Ready to find fractional talent?</h3>
+                  <p className="text-purple-100">Browse our curated list of fractional executive opportunities.</p>
+                </div>
+                <Link href="/fractional-jobs-uk">
+                  <button className="px-8 py-4 bg-white text-purple-700 rounded-xl font-bold hover:bg-purple-50 transition-colors whitespace-nowrap shadow-lg">
+                    Browse Jobs →
+                  </button>
+                </Link>
+              </div>
             </div>
-            <Link href="/fractional-jobs-uk">
-              <button className="px-8 py-4 bg-white text-purple-700 rounded-xl font-bold hover:bg-purple-50 transition-colors whitespace-nowrap shadow-lg">
-                Browse Jobs →
-              </button>
-            </Link>
           </div>
+
+          {/* Sidebar */}
+          <aside className="lg:w-80 flex-shrink-0">
+            <div className="sticky top-24 space-y-6">
+              {/* Category Hub Link */}
+              {categoryHub && (
+                <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl border border-purple-100 p-6">
+                  <span className="text-xs font-bold uppercase tracking-wider text-purple-600 mb-2 block">Content Hub</span>
+                  <Link href={categoryHub.href} className="group">
+                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-purple-600 transition-colors mb-2">
+                      {categoryHub.label}
+                    </h3>
+                    <p className="text-sm text-gray-600 mb-3">
+                      Explore all {article.category} guides and resources
+                    </p>
+                    <span className="inline-flex items-center text-purple-600 font-semibold text-sm">
+                      Visit Hub <span className="ml-1 group-hover:ml-2 transition-all">→</span>
+                    </span>
+                  </Link>
+                </div>
+              )}
+
+              {/* Related Articles in Cluster */}
+              {relatedArticles.length > 0 && (
+                <div className="bg-white rounded-xl border border-gray-200 p-6">
+                  <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-purple-500 rounded-full"></span>
+                    More in {article.category}
+                  </h3>
+                  <ul className="space-y-4">
+                    {relatedArticles.map((related: any) => (
+                      <li key={related.id}>
+                        <Link href={`/${related.slug}`} className="group block">
+                          <h4 className="text-sm font-medium text-gray-700 group-hover:text-purple-600 transition-colors line-clamp-2">
+                            {related.title}
+                          </h4>
+                          {related.published_at && (
+                            <span className="text-xs text-gray-400 mt-1 block">
+                              {new Date(related.published_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })}
+                            </span>
+                          )}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  {categoryHub && (
+                    <Link
+                      href={categoryHub.href}
+                      className="block mt-4 pt-4 border-t border-gray-100 text-sm font-medium text-purple-600 hover:text-purple-700 transition-colors"
+                    >
+                      View all {article.category} articles →
+                    </Link>
+                  )}
+                </div>
+              )}
+
+              {/* Quick Links */}
+              <div className="bg-gray-50 rounded-xl border border-gray-200 p-6">
+                <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider mb-4">Quick Links</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><Link href="/fractional-jobs-uk" className="text-gray-600 hover:text-purple-600 transition-colors">Browse All Jobs</Link></li>
+                  <li><Link href="/fractional-jobs-articles" className="text-gray-600 hover:text-purple-600 transition-colors">All Articles</Link></li>
+                  <li><Link href="/fractional-executive-salary-uk" className="text-gray-600 hover:text-purple-600 transition-colors">Salary Guide</Link></li>
+                  <li><Link href="/handler/sign-up" className="text-gray-600 hover:text-purple-600 transition-colors">Create Profile</Link></li>
+                </ul>
+              </div>
+            </div>
+          </aside>
         </div>
+
+        {/* You May Also Like Section */}
+        {relatedArticles.length > 0 && (
+          <section className="mt-16 pt-12 border-t border-gray-200">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8">You May Also Like</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {relatedArticles.slice(0, 3).map((related: any) => (
+                <Link key={related.id} href={`/${related.slug}`} className="group">
+                  <article className="bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-purple-400 hover:shadow-lg transition-all h-full flex flex-col">
+                    {related.hero_asset_url ? (
+                      <div className="aspect-[16/9] overflow-hidden bg-gray-100">
+                        <img
+                          src={related.hero_asset_url}
+                          alt={related.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                    ) : (
+                      <div className="aspect-[16/9] bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center">
+                        <span className="text-4xl">📚</span>
+                      </div>
+                    )}
+                    <div className="p-5 flex-1 flex flex-col">
+                      {related.category && (
+                        <span className="text-xs font-bold uppercase tracking-wider text-purple-600 mb-2">{related.category}</span>
+                      )}
+                      <h3 className="text-lg font-bold text-gray-900 group-hover:text-purple-600 transition-colors line-clamp-2 mb-2">
+                        {related.title}
+                      </h3>
+                      {related.excerpt && (
+                        <p className="text-gray-600 text-sm line-clamp-2 flex-1">{related.excerpt}</p>
+                      )}
+                    </div>
+                  </article>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Back Link */}
         <div className="mt-12 pt-8 border-t border-gray-200 flex justify-between items-center">
