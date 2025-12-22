@@ -40,9 +40,9 @@ export function Navigation() {
 
   const linkBaseClasses = "nav-link"
   const linkScrolledClasses = "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-  const linkUnscrolledClasses = "text-white hover:bg-white/10"
+  const linkUnscrolledClasses = "!text-white hover:bg-white/10"
   const linkActiveScrolledClasses = "text-gray-900 bg-gray-200"
-  const linkActiveUnscrolledClasses = "text-white bg-white/10"
+  const linkActiveUnscrolledClasses = "!text-white bg-white/10"
 
   return (
     <nav className={`${navBaseClasses} ${scrolled ? navScrolledClasses : navUnscrolledClasses}`}>
@@ -55,10 +55,10 @@ export function Navigation() {
             </div>
             <div className="hidden sm:flex items-center gap-2">
               <div>
-                <span className={`font-bold text-lg transition-colors ${scrolled ? 'text-gray-900' : 'text-white'}`}>Fractional</span>
-                <span className={`font-bold text-lg transition-colors ${scrolled ? 'text-gray-600' : 'text-gray-300'}`}>.Quest</span>
+                <span className={`font-bold text-lg transition-colors ${scrolled ? 'text-gray-900' : '!text-white'}`}>Fractional</span>
+                <span className={`font-bold text-lg transition-colors ${scrolled ? 'text-gray-600' : '!text-gray-300'}`}>.Quest</span>
               </div>
-              <span className={`text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wide transition-colors ${scrolled ? 'bg-amber-100 text-amber-700' : 'bg-white/20 text-white'}`}>
+              <span className={`text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wide transition-colors ${scrolled ? 'bg-amber-100 text-amber-700' : 'bg-white/20 !text-white'}`}>
                 Beta
               </span>
             </div>
@@ -84,8 +84,8 @@ export function Navigation() {
               href="/fractional-jobs-uk"
               className={`md:hidden px-3 py-2 rounded-lg font-semibold text-sm transition-colors ${
                 isActive('/fractional-jobs')
-                  ? (scrolled ? 'bg-gray-200 text-gray-900' : 'bg-white/20 text-white')
-                  : (scrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10')
+                  ? (scrolled ? 'bg-gray-200 text-gray-900' : 'bg-white/20 !text-white')
+                  : (scrolled ? 'text-gray-700 hover:bg-gray-100' : '!text-white hover:bg-white/10')
               }`}
             >
               Jobs
@@ -102,7 +102,7 @@ export function Navigation() {
             {/* Mobile menu button */}
             <button
               type="button"
-              className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? 'text-gray-600 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
+              className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? 'text-gray-600 hover:bg-gray-100' : '!text-white hover:bg-white/10'}`}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -130,8 +130,8 @@ export function Navigation() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`px-4 py-3 rounded-lg font-medium transition-colors ${
                     isActive(link.href)
-                      ? (scrolled ? 'bg-gray-100 text-gray-900' : 'bg-white/10 text-white')
-                      : (scrolled ? 'text-gray-600 hover:bg-gray-50' : 'text-white hover:bg-white/10')
+                      ? (scrolled ? 'bg-gray-100 text-gray-900' : 'bg-white/10 !text-white')
+                      : (scrolled ? 'text-gray-600 hover:bg-gray-50' : '!text-white hover:bg-white/10')
                   }`}
                 >
                   {link.label}
@@ -140,7 +140,7 @@ export function Navigation() {
               <Link
                 href="/handler/sign-up"
                 onClick={() => setMobileMenuOpen(false)}
-                className={`mx-4 mt-4 text-center ${scrolled ? 'btn-gradient' : 'bg-white text-gray-900 py-3 rounded-lg font-semibold'}`}
+                className={`mx-4 mt-4 text-center ${scrolled ? 'btn-gradient' : 'bg-white !text-gray-900 py-3 rounded-lg font-semibold'}`}
               >
                 Join Beta
               </Link>

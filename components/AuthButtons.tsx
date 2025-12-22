@@ -16,7 +16,7 @@ export function AuthButtons({ scrolled }: { scrolled: boolean }) {
       <Button
         variant="ghost"
         size="sm"
-        className={!scrolled ? 'text-white hover:bg-white/20' : ''}
+        className={!scrolled ? '!text-white hover:bg-white/20' : ''}
       >
         Sign In
       </Button>
