@@ -1,15 +1,17 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { AuthButtons } from './AuthButtons'
 
 export function Navigation() {
-  const scrolled = true
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
 
+  // Always use the "light" theme for consistency
+  const navBaseClasses = "sticky top-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-gray-100"
+  
   const navLinks = [
     { href: '/fractional-jobs-uk', label: 'Jobs' },
     { href: '/destinations', label: 'Destinations' },
@@ -24,44 +26,34 @@ export function Navigation() {
     return pathname.startsWith(href)
   }
 
-  // Base classes
-  const navBaseClasses = "sticky top-0 z-50 transition-all duration-300"
-  const navScrolledClasses = "bg-white/90 backdrop-blur-md shadow-md"
-  const navUnscrolledClasses = "bg-transparent"
-
-  const linkBaseClasses = "nav-link"
-  const linkScrolledClasses = "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-  const linkUnscrolledClasses = "!text-white hover:bg-white/10"
-  const linkActiveScrolledClasses = "text-gray-900 bg-gray-200"
-  const linkActiveUnscrolledClasses = "!text-white bg-white/10"
-
   return (
-    <nav className={`${navBaseClasses} ${scrolled ? navScrolledClasses : navUnscrolledClasses}`}>
+    <nav className={navBaseClasses}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow ${scrolled ? 'bg-gradient-to-br from-gray-800 to-black' : 'bg-white/20'}`}>
-              <span className="text-white font-black text-xl">F</span>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-gray-900 shadow-sm group-hover:bg-black transition-colors">
+              <span className="text-white font-serif font-bold text-xl">F</span>
             </div>
             <div className="hidden sm:flex items-center gap-2">
-              <div>
-                <span className={`font-bold text-lg transition-colors ${scrolled ? 'text-gray-900' : '!text-white'}`}>Fractional</span>
-                <span className={`font-bold text-lg transition-colors ${scrolled ? 'text-gray-600' : '!text-gray-300'}`}>.Quest</span>
-              </div>
-              <span className={`text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wide transition-colors ${scrolled ? 'bg-amber-100 text-amber-700' : 'bg-white/20 !text-white'}`}>
+              <span className="font-serif font-bold text-xl text-gray-900">Fractional Quest</span>
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide bg-blue-50 text-blue-700">
                 Beta
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`${linkBaseClasses} ${scrolled ? linkScrolledClasses : linkUnscrolledClasses} ${isActive(link.href) ? (scrolled ? linkActiveScrolledClasses : linkActiveUnscrolledClasses) : ''}`}
+                className={`text-sm font-medium transition-colors ${
+                  isActive(link.href)
+                    ? 'text-gray-900 font-semibold'
+                    : 'text-gray-500 hover:text-gray-900'
+                }`}
               >
                 {link.label}
               </Link>
@@ -69,23 +61,20 @@ export function Navigation() {
           </div>
 
           {/* Right side */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            {/* Jobs link - always visible, prominent on mobile */}
+          <div className="flex items-center gap-3">
+            {/* Jobs link - visible on mobile */}
             <Link
               href="/fractional-jobs-uk"
-              className={`md:hidden px-3 py-2 rounded-lg font-semibold text-sm transition-colors ${
-                isActive('/fractional-jobs')
-                  ? (scrolled ? 'bg-gray-200 text-gray-900' : 'bg-white/20 !text-white')
-                  : (scrolled ? 'text-gray-700 hover:bg-gray-100' : '!text-white hover:bg-white/10')
-              }`}
+              className="md:hidden text-sm font-semibold text-gray-900"
             >
               Jobs
             </Link>
 
-            <AuthButtons scrolled={scrolled} />
+            <AuthButtons scrolled={true} />
+            
             <Link
               href="/handler/sign-up"
-              className={`hidden sm:inline-flex btn-gradient text-sm px-4 py-2 ${scrolled ? '' : 'bg-white !text-gray-900 hover:bg-gray-200'}`}
+              className="hidden sm:inline-flex items-center justify-center px-5 py-2 text-sm font-medium text-white transition-all bg-gray-900 rounded-lg hover:bg-black hover:shadow-md"
             >
               Join Beta
             </Link>
@@ -93,7 +82,7 @@ export function Navigation() {
             {/* Mobile menu button */}
             <button
               type="button"
-              className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? 'text-gray-600 hover:bg-gray-100' : '!text-white hover:bg-white/10'}`}
+              className="md:hidden p-2 -mr-2 text-gray-600 hover:text-gray-900"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -112,29 +101,31 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className={`md:hidden py-4 border-t ${scrolled ? 'border-gray-100' : 'border-white/20'}`}>
-            <div className="flex flex-col space-y-1">
+          <div className="md:hidden py-4 border-t border-gray-100 bg-white absolute left-0 right-0 shadow-lg px-4">
+            <div className="flex flex-col space-y-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`px-4 py-3 rounded-lg font-medium transition-colors ${
+                  className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
                     isActive(link.href)
-                      ? (scrolled ? 'bg-gray-100 text-gray-900' : 'bg-white/10 !text-white')
-                      : (scrolled ? 'text-gray-600 hover:bg-gray-50' : '!text-white hover:bg-white/10')
+                      ? 'bg-gray-50 text-gray-900'
+                      : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                   }`}
                 >
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/handler/sign-up"
-                onClick={() => setMobileMenuOpen(false)}
-                className={`mx-4 mt-4 text-center ${scrolled ? 'btn-gradient' : 'bg-white !text-gray-900 py-3 rounded-lg font-semibold'}`}
-              >
-                Join Beta
-              </Link>
+              <div className="pt-4 mt-4 border-t border-gray-100">
+                <Link
+                  href="/handler/sign-up"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block w-full text-center px-4 py-3 bg-gray-900 text-white font-semibold rounded-lg"
+                >
+                  Join Beta
+                </Link>
+              </div>
             </div>
           </div>
         )}

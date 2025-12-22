@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
 import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
+import { StrategicComparisonInfographic, ComparisonData } from '@/components/infographics/StrategicComparisonInfographic'
 
 export const revalidate = 3600
 
@@ -39,6 +40,26 @@ const COMPARISON_FAQS = [
   },
 ]
 
+const ctoComparisonData: ComparisonData = {
+  role: 'CTO',
+  fullTime: {
+    baseSalary: 210000,
+    bonusesBenefits: 60000,
+    recruitmentTraining: 45000,
+    hiddenCosts: 0,
+    total: 315000,
+  },
+  fractional: {
+    fee: 120000,
+    total: 120000,
+    daysPerWeek: 2,
+  },
+  strengths: {
+    fractional: 'Ideal for scaling engineering teams from 5-20 people, addressing technical debt, and providing Series A investor credibility.',
+    fullTime: 'Required for 25+ engineers and complex AI/DeepTech daily oversight where technology is the core competitive advantage.',
+  }
+}
+
 export default function FractionalVsFullTimeCTOPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -54,6 +75,8 @@ export default function FractionalVsFullTimeCTOPage() {
             </h1>
             <p className="text-xl text-gray-600">Complete comparison to help you choose the right model for your company</p>
           </div>
+
+          <StrategicComparisonInfographic data={ctoComparisonData} />
 
           <div className="bg-blue-50 border-l-4 border-blue-600 p-8 mb-12">
             <p className="text-xl text-gray-900 leading-relaxed mb-0">

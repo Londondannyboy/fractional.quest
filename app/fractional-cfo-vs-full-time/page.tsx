@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
-import { CfoComparisonInfographic } from '@/components/infographics/CfoComparisonInfographic'
+import { StrategicComparisonInfographic, ComparisonData } from '@/components/infographics/StrategicComparisonInfographic'
 
 export const metadata: Metadata = {
   title: 'Fractional CFO vs Full-Time CFO: Complete Comparison Guide 2025',
@@ -18,6 +18,26 @@ export const metadata: Metadata = {
 }
 
 export const revalidate = 3600
+
+const cfoComparisonData: ComparisonData = {
+  role: 'CFO',
+  fullTime: {
+    baseSalary: 180000,
+    bonusesBenefits: 61840,
+    recruitmentTraining: 41000,
+    hiddenCosts: 20000,
+    total: 302840,
+  },
+  fractional: {
+    fee: 115200,
+    total: 115200,
+    daysPerWeek: 2,
+  },
+  strengths: {
+    fractional: 'Superior for fundraising rounds, system implementations, and high-growth stages where speed and cost-efficiency are paramount.',
+    fullTime: 'Essential for large-scale operations, IPO readiness, and companies requiring daily C-suite presence and long-term cultural leadership.',
+  }
+}
 
 export default function FractionalVsFullTimeCFOPage() {
   const faqItems = [
@@ -151,7 +171,7 @@ export default function FractionalVsFullTimeCFOPage() {
             </div>
           </div>
 
-          <CfoComparisonInfographic />
+          <StrategicComparisonInfographic data={cfoComparisonData} />
 
           {/* Cost Comparison */}
           <section className="prose prose-slate mb-12 max-w-none">

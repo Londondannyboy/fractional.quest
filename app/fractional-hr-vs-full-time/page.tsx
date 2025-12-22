@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { StrategicComparisonInfographic, ComparisonData } from '@/components/infographics/StrategicComparisonInfographic'
 
 export const revalidate = 3600
 
@@ -17,6 +18,26 @@ export const metadata: Metadata = {
     images: ['/images/fractional-hr-vs-full-time.jpg'],
     url: 'https://fractional.quest/fractional-hr-vs-full-time',
   },
+}
+
+const hrComparisonData: ComparisonData = {
+  role: 'HR',
+  fullTime: {
+    baseSalary: 125000,
+    bonusesBenefits: 23500,
+    recruitmentTraining: 15400,
+    hiddenCosts: 0,
+    total: 163900,
+  },
+  fractional: {
+    fee: 104000,
+    total: 104000,
+    daysPerWeek: 2,
+  },
+  strengths: {
+    fractional: 'Ideal for Series A-B startups (20-150 employees) needing strategic HR infrastructure, culture building, and organizational design.',
+    fullTime: 'Necessary for larger organizations (150+ employees) requiring daily presence for employee relations and deep cultural embedding.',
+  }
 }
 
 export default function FractionalHRVsFullTimePage() {
@@ -50,6 +71,8 @@ export default function FractionalHRVsFullTimePage() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-black text-gray-900 mb-8">Quick Comparison</h2>
+
+          <StrategicComparisonInfographic data={hrComparisonData} />
 
           <div className="overflow-x-auto mb-12">
             <table className="w-full border-collapse text-sm">

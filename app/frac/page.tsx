@@ -999,9 +999,21 @@ export default function VoicePage() {
   // Fetch token
   useEffect(() => {
     fetch('/api/hume-token')
-      .then(r => r.json())
-      .then(d => d.accessToken ? setToken(d.accessToken) : setError('No token'))
-      .catch(e => setError(e.message))
+      .then(async r => {
+        const data = await r.json()
+        if (!r.ok) {
+          throw new Error(data.error || data.details || 'Failed to fetch token')
+        }
+        if (data.accessToken) {
+          setToken(data.accessToken)
+        } else {
+          throw new Error('No access token returned')
+        }
+      })
+      .catch(e => {
+        console.error('Token fetch error:', e)
+        setError(e.message)
+      })
   }, [])
 
   // Fetch profile if logged in

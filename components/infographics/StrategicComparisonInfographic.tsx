@@ -2,10 +2,47 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Check, X, DollarSign, Clock, Zap, Users, Briefcase } from 'lucide-react'
+import { Check, X, DollarSign, Zap } from 'lucide-react'
 
-export function CfoComparisonInfographic() {
+export interface ComparisonData {
+  role: string
+  labels?: {
+    fullTime: string
+    fractional: string
+  }
+  fullTime: {
+    baseSalary: number
+    bonusesBenefits: number
+    recruitmentTraining: number
+    hiddenCosts: number
+    total: number
+  }
+  fractional: {
+    fee: number
+    total: number
+    daysPerWeek: number
+  }
+  stats?: {
+    label: string
+    full: number
+    frac: number
+  }[]
+  strengths: {
+    fractional: string
+    fullTime: string
+  }
+}
+
+interface Props {
+  data: ComparisonData
+}
+
+export function StrategicComparisonInfographic({ data }: Props) {
   const [activeTab, setActiveTab] = useState<'cost' | 'value'>('cost')
+  const labels = data.labels || {
+    fullTime: `Full-Time ${data.role}`,
+    fractional: `Fractional ${data.role}`
+  }
 
   return (
     <div className="my-12 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-900/5">
@@ -39,9 +76,9 @@ export function CfoComparisonInfographic() {
       <div className="min-h-[500px] p-6 sm:p-8">
         <AnimatePresence mode="wait">
           {activeTab === 'cost' ? (
-            <CostView key="cost" />
+            <CostView key="cost" data={data} labels={labels} />
           ) : (
-            <ValueView key="value" />
+            <ValueView key="value" data={data} labels={labels} />
           )}
         </AnimatePresence>
       </div>
@@ -49,24 +86,15 @@ export function CfoComparisonInfographic() {
   )
 }
 
-function CostView() {
-  // Data for the chart
-  const fullTimeCost = 302840
-  const fractionalCost = 115200
-  const savings = fullTimeCost - fractionalCost
+function CostView({ data, labels }: { data: ComparisonData; labels: { fullTime: string; fractional: string } }) {
+  const { fullTime, fractional, role } = data
+  const savings = fullTime.total - fractional.total
 
   const fullTimeBreakdown = [
-    { label: 'Base Salary', value: 180000, color: 'bg-slate-400' },
-    { label: 'Bonuses & Benefits', value: 61840, color: 'bg-slate-300' }, // Bonus + Benefits + NI + Pension
-    { label: 'Recruitment & Training', value: 41000, color: 'bg-slate-200' }, // Recruitment + Training
-    { label: 'Hidden Costs', value: 20000, color: 'bg-slate-100' }, // Overhead
-  ]
-
-  const fractionalBreakdown = [
-    { label: 'Annual Retainer', value: 115200, color: 'bg-blue-600' },
-    { label: 'Recruitment', value: 0, color: 'bg-blue-400' },
-    { label: 'Benefits', value: 0, color: 'bg-blue-300' },
-    { label: 'Overhead', value: 0, color: 'bg-blue-200' },
+    { label: 'Base Salary / Fee', value: fullTime.baseSalary, color: 'bg-slate-400' },
+    { label: 'Bonuses & Benefits', value: fullTime.bonusesBenefits, color: 'bg-slate-300' },
+    { label: 'Recruitment & Training', value: fullTime.recruitmentTraining, color: 'bg-slate-200' },
+    { label: 'Hidden Costs', value: fullTime.hiddenCosts, color: 'bg-slate-100' },
   ]
 
   return (
@@ -81,23 +109,22 @@ function CostView() {
         <div>
           <h3 className="text-xl font-bold text-slate-900">Annual Investment Required</h3>
           <p className="mt-2 text-slate-600">
-            Comparing the total cost of ownership for a typical Series A/B company (£1M-£10M revenue).
+            Comparing total cost of ownership for {labels.fractional} vs {labels.fullTime}.
           </p>
         </div>
 
         <div className="space-y-4">
-          {/* Full Time Bar Group */}
           <div>
             <div className="mb-2 flex justify-between text-sm font-medium text-slate-900">
-              <span>Full-Time CFO</span>
-              <span>£{(fullTimeCost / 1000).toFixed(0)}k</span>
+              <span>{labels.fullTime}</span>
+              <span>£{(fullTime.total / 1000).toFixed(0)}k</span>
             </div>
             <div className="flex h-12 w-full overflow-hidden rounded-lg bg-slate-50 ring-1 ring-slate-900/5">
               {fullTimeBreakdown.map((item, i) => (
                 <motion.div
                   key={item.label}
                   initial={{ width: 0 }}
-                  animate={{ width: `${(item.value / fullTimeCost) * 100}%` }}
+                  animate={{ width: `${(item.value / fullTime.total) * 100}%` }}
                   transition={{ duration: 1, delay: i * 0.1 }}
                   className={`${item.color} relative group`}
                 >
@@ -106,36 +133,31 @@ function CostView() {
               ))}
             </div>
             <div className="mt-2 flex flex-wrap gap-3 text-xs text-slate-500">
-              <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-slate-400"></span>Salary</span>
+              <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-slate-400"></span>Base</span>
               <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-slate-300"></span>Benefits</span>
-              <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-slate-200"></span>Recruitment</span>
+              <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-slate-200"></span>Recruit</span>
             </div>
           </div>
 
-          {/* Fractional Bar Group */}
           <div>
             <div className="mb-2 flex justify-between text-sm font-medium text-slate-900">
-              <span>Fractional CFO (2 days/wk)</span>
-              <span className="text-blue-600">£{(fractionalCost / 1000).toFixed(0)}k</span>
+              <span>{labels.fractional} ({fractional.daysPerWeek} days/wk)</span>
+              <span className="text-blue-600">£{(fractional.total / 1000).toFixed(0)}k</span>
             </div>
             <div className="relative flex h-12 w-full overflow-hidden rounded-lg bg-slate-50 ring-1 ring-slate-900/5">
-              {/* Spacer to align scale roughly if max width is fullTimeCost */}
               <div className="absolute inset-0 flex">
-                 {fractionalBreakdown.map((item, i) => (
                   <motion.div
-                    key={item.label}
                     initial={{ width: 0 }}
-                    animate={{ width: `${(item.value / fullTimeCost) * 100}%` }} // Scale relative to full time
-                    transition={{ duration: 1, delay: 0.5 + i * 0.1 }}
-                    className={`${item.color} relative group`}
+                    animate={{ width: `${(fractional.total / fullTime.total) * 100}%` }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                    className="bg-blue-600 relative group"
                   >
                      <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/5" />
                   </motion.div>
-                ))}
               </div>
             </div>
              <div className="mt-2 flex flex-wrap gap-3 text-xs text-slate-500">
-              <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-blue-600"></span>Fee</span>
+              <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-blue-600"></span>Annual Fee</span>
             </div>
           </div>
         </div>
@@ -143,7 +165,7 @@ function CostView() {
         <div className="rounded-xl bg-blue-50 p-4 ring-1 ring-blue-100">
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white shadow-sm">
-              <DollarSign className="h-5 w-5" />
+              <span className="text-lg font-bold">£</span>
             </div>
             <div>
               <div className="text-sm font-medium text-blue-900">Annual Savings</div>
@@ -154,27 +176,27 @@ function CostView() {
       </div>
 
       <div className="flex-1 rounded-xl bg-slate-50 p-6 ring-1 ring-slate-900/5">
-         <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-500">Where the money goes</h4>
+         <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-500">The Efficiency Gap</h4>
          <ul className="space-y-4">
             <li className="flex items-start gap-3">
                 <X className="mt-0.5 h-5 w-5 flex-shrink-0 text-slate-400" />
                 <div>
-                    <strong className="text-slate-900">Recruitment Fees:</strong>
-                    <p className="text-sm text-slate-600">Full-time often costs 20-30% of base salary in agency fees (£30k+). Fractional fees are £0.</p>
+                    <strong className="text-slate-900">Cost Overheads:</strong>
+                    <p className="text-sm text-slate-600">Full-time employment or broad agency retainers often carry significant overheads that don't directly drive strategy.</p>
                 </div>
             </li>
             <li className="flex items-start gap-3">
                 <X className="mt-0.5 h-5 w-5 flex-shrink-0 text-slate-400" />
                 <div>
-                    <strong className="text-slate-900">Benefits & Equity:</strong>
-                    <p className="text-sm text-slate-600">Pension, NI, healthcare, and equity grants add ~35% to base salary. Fractional covers their own.</p>
+                    <strong className="text-slate-900">Execution vs Strategy:</strong>
+                    <p className="text-sm text-slate-600">Without internal strategic leadership, tactical execution often suffers from misalignment and wasted spend.</p>
                 </div>
             </li>
             <li className="flex items-start gap-3">
                 <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-600" />
                 <div>
-                    <strong className="text-slate-900">Results Oriented:</strong>
-                    <p className="text-sm text-slate-600">With Fractional, you pay strictly for output and expertise, not "seat time" or watercooler chat.</p>
+                    <strong className="text-slate-900">Value Focused:</strong>
+                    <p className="text-sm text-slate-600">Fractional leadership ensures every penny of your execution budget is aligned with high-level business goals.</p>
                 </div>
             </li>
          </ul>
@@ -183,9 +205,8 @@ function CostView() {
   )
 }
 
-function ValueView() {
-  // Radar chart data points (0-100 scale)
-  const stats = [
+function ValueView({ data, labels }: { data: ComparisonData; labels: { fullTime: string; fractional: string } }) {
+  const defaultStats = [
     { label: 'Cost Efficiency', full: 40, frac: 95 },
     { label: 'Hiring Speed', full: 20, frac: 90 },
     { label: 'Specialized Skills', full: 60, frac: 90 },
@@ -193,6 +214,8 @@ function ValueView() {
     { label: 'Cultural Integration', full: 95, frac: 50 },
     { label: 'Flexibility', full: 30, frac: 95 },
   ]
+
+  const stats = data.stats || defaultStats
 
   return (
     <motion.div
@@ -203,14 +226,14 @@ function ValueView() {
       className="flex flex-col gap-8 md:flex-row"
     >
         <div className="flex items-center justify-center flex-1">
-             <RadarChart stats={stats} />
+             <RadarChart stats={stats} labels={labels} />
         </div>
 
         <div className="flex-1 space-y-6">
             <div>
                 <h3 className="text-xl font-bold text-slate-900">Strategic Trade-offs</h3>
                 <p className="mt-2 text-slate-600">
-                    While Full-Time offers presence, Fractional offers agility and efficiency.
+                    Comparing deployment models across key operational dimensions.
                 </p>
             </div>
 
@@ -218,19 +241,15 @@ function ValueView() {
                 <div className="flex items-start gap-3 rounded-lg border border-blue-100 bg-blue-50 p-3">
                     <div className="mt-1 h-2 w-2 rounded-full bg-blue-600 shadow-sm" />
                     <div>
-                        <strong className="text-blue-900">Fractional Strength: Agility</strong>
-                        <p className="text-sm text-slate-600">
-                            Superior for speed, cost, and flexibility. Ideal for specific projects (fundraising) or stages (growth).
-                        </p>
+                        <strong className="text-blue-900">{labels.fractional} Advantage</strong>
+                        <p className="text-sm text-slate-600">{data.strengths.fractional}</p>
                     </div>
                 </div>
                  <div className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-3">
                     <div className="mt-1 h-2 w-2 rounded-full bg-slate-400 shadow-sm" />
                     <div>
-                        <strong className="text-slate-900">Full-Time Strength: Presence</strong>
-                        <p className="text-sm text-slate-600">
-                            Unmatched for daily operational management, team building, and deep cultural integration.
-                        </p>
+                        <strong className="text-slate-900">{labels.fullTime} Advantage</strong>
+                        <p className="text-sm text-slate-600">{data.strengths.fullTime}</p>
                     </div>
                 </div>
             </div>
@@ -238,13 +257,13 @@ function ValueView() {
             <div className="grid grid-cols-2 gap-4">
                 <div className="rounded-lg bg-white p-3 shadow-sm ring-1 ring-slate-900/5">
                     <div className="mb-1 text-xs font-semibold uppercase text-slate-400">Best For</div>
-                    <div className="font-medium text-slate-900">Growth & Scale-up</div>
-                    <div className="text-sm text-blue-600">Fractional CFO</div>
+                    <div className="font-medium text-slate-900 text-sm">Growth & Agility</div>
+                    <div className="text-sm text-blue-600 font-bold">{labels.fractional}</div>
                 </div>
                  <div className="rounded-lg bg-white p-3 shadow-sm ring-1 ring-slate-900/5">
                     <div className="mb-1 text-xs font-semibold uppercase text-slate-400">Best For</div>
-                    <div className="font-medium text-slate-900">IPO & Corporate</div>
-                    <div className="text-sm text-slate-500">Full-Time CFO</div>
+                    <div className="font-medium text-slate-900 text-sm">Stability & Scale</div>
+                    <div className="text-sm text-slate-500 font-bold">{labels.fullTime}</div>
                 </div>
             </div>
         </div>
@@ -252,13 +271,13 @@ function ValueView() {
   )
 }
 
-function RadarChart({ stats }: { stats: { label: string; full: number; frac: number }[] }) {
-    const radius = 120
+function RadarChart({ stats, labels }: { stats: { label: string; full: number; frac: number }[]; labels: { fullTime: string; fractional: string } }) {
+    const radius = 100
     const center = 150
     const angleStep = (Math.PI * 2) / stats.length
 
     const getPoint = (value: number, index: number) => {
-        const angle = index * angleStep - Math.PI / 2 // Start at top
+        const angle = index * angleStep - Math.PI / 2
         const r = (value / 100) * radius
         const x = center + r * Math.cos(angle)
         const y = center + r * Math.sin(angle)
@@ -272,7 +291,6 @@ function RadarChart({ stats }: { stats: { label: string; full: number; frac: num
     return (
         <div className="relative h-[300px] w-[300px]">
             <svg width="300" height="300" className="overflow-visible">
-                {/* Background Grid */}
                 {[0.25, 0.5, 0.75, 1].map((scale) => (
                     <circle
                         key={scale}
@@ -285,26 +303,21 @@ function RadarChart({ stats }: { stats: { label: string; full: number; frac: num
                     />
                 ))}
 
-                {/* Axes */}
                 {axes.map((point, i) => {
                      const [x, y] = point.split(',').map(Number)
                      return (
                          <g key={i}>
                              <line x1={center} y1={center} x2={x} y2={y} stroke="#cbd5e1" strokeWidth="1" />
-                             {/* Label */}
                              <foreignObject
-                                x={x < center ? x - 80 : x}
-                                y={y < center ? y - 20 : y}
+                                x={x < center ? x - 75 : x - 5}
+                                y={y < center ? y - 25 : y + 5}
                                 width="80"
                                 height="40"
                                 className="overflow-visible"
                              >
-                                <div className={`text-[10px] font-medium text-slate-500 ${
-                                    x < center ? 'text-right pr-2' :
-                                    x > center ? 'text-left pl-2' : 'text-center'
-                                } ${
-                                    y < center ? 'pb-1' :
-                                    y > center ? 'pt-1' : ''
+                                <div className={`text-[9px] font-bold text-slate-500 leading-tight ${
+                                    x < center ? 'text-right' :
+                                    Math.abs(x - center) < 5 ? 'text-center' : 'text-left'
                                 }`}>
                                     {stats[i].label}
                                 </div>
@@ -313,40 +326,33 @@ function RadarChart({ stats }: { stats: { label: string; full: number; frac: num
                      )
                 })}
 
-                {/* Full Time Shape */}
                 <motion.polygon
                     initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 0.6, scale: 1 }}
-                    transition={{ duration: 0.5 }}
+                    animate={{ opacity: 0.4, scale: 1 }}
                     points={fullPoints}
                     fill="#94a3b8"
                     stroke="#475569"
                     strokeWidth="2"
-                    className="opacity-50"
                 />
 
-                {/* Fractional Shape */}
                 <motion.polygon
                     initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 0.6, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
+                    animate={{ opacity: 0.5, scale: 1 }}
                     points={fracPoints}
                     fill="#3b82f6"
                     stroke="#2563eb"
                     strokeWidth="2"
-                    className="opacity-50"
                 />
             </svg>
 
-            {/* Legend placed absolutely to avoid SVG clipping issues if not handled */}
-            <div className="absolute -bottom-8 left-0 right-0 flex justify-center gap-4 text-xs font-medium">
+            <div className="absolute -bottom-4 left-0 right-0 flex justify-center gap-4 text-[10px] font-bold uppercase tracking-wider">
                  <div className="flex items-center gap-1.5">
                     <div className="h-2 w-2 rounded-full bg-slate-400" />
-                    <span className="text-slate-600">Full-Time</span>
+                    <span className="text-slate-500">{labels.fullTime}</span>
                  </div>
                  <div className="flex items-center gap-1.5">
                     <div className="h-2 w-2 rounded-full bg-blue-500" />
-                    <span className="text-blue-700">Fractional</span>
+                    <span className="text-blue-600">{labels.fractional}</span>
                  </div>
             </div>
         </div>

@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
+import { StrategicComparisonInfographic, ComparisonData } from '@/components/infographics/StrategicComparisonInfographic'
 
 export const revalidate = 3600
 
@@ -45,6 +46,38 @@ const faqItems = [
   },
 ]
 
+const cmoComparisonData: ComparisonData = {
+  role: 'CMO',
+  labels: {
+    fullTime: 'Marketing Agency',
+    fractional: 'Fractional CMO'
+  },
+  fullTime: {
+    baseSalary: 120000,
+    bonusesBenefits: 0,
+    recruitmentTraining: 0,
+    hiddenCosts: 0,
+    total: 120000,
+  },
+  fractional: {
+    fee: 104000,
+    total: 104000,
+    daysPerWeek: 2,
+  },
+  stats: [
+    { label: 'Strategic Leadership', full: 30, frac: 95 },
+    { label: 'Execution Power', full: 95, frac: 60 },
+    { label: 'Cost Efficiency', full: 50, frac: 90 },
+    { label: 'Internal Integration', full: 20, frac: 95 },
+    { label: 'Specialized Skills', full: 95, frac: 70 },
+    { label: 'Scalability', full: 95, frac: 70 },
+  ],
+  strengths: {
+    fractional: 'Embedded leadership that owns strategy, builds internal teams, and drives business-wide growth objectives beyond campaign metrics.',
+    fullTime: 'Turnkey resources and specialized channel expertise (SEO, Ads, Content) with proven execution playbooks and high scalability.',
+  }
+}
+
 export default function FractionalCMOvsAgencyPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -86,7 +119,8 @@ export default function FractionalCMOvsAgencyPage() {
       {/* Quick Answer */}
       <section className="py-16 bg-teal-50 border-b-4 border-teal-500">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="bg-white p-10 rounded-lg shadow-sm border-2 border-teal-200">
+          <StrategicComparisonInfographic data={cmoComparisonData} />
+          <div className="bg-white p-10 rounded-lg shadow-sm border-2 border-teal-200 mt-12">
             <div className="text-sm font-bold uppercase tracking-wider text-teal-600 mb-4">TL;DR</div>
             <h2 className="text-3xl font-black text-gray-900 mb-6">The Core Difference</h2>
             <div className="grid md:grid-cols-2 gap-8">

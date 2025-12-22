@@ -1,10 +1,31 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { StrategicComparisonInfographic, ComparisonData } from '@/components/infographics/StrategicComparisonInfographic'
 
 export const metadata: Metadata = {
   title: 'Fractional COO vs Full-Time COO | Complete Comparison 2025',
   description: 'Fractional COO vs Full-Time: Compare cost ($120k vs $280k+), commitment (2 days/week vs 5), start time (2 weeks vs 4 months). Which is right for you?',
   keywords: 'fractional coo vs full time coo, fractional vs full time, part time coo vs full time, should i hire fractional',
+}
+
+const cooComparisonData: ComparisonData = {
+  role: 'COO',
+  fullTime: {
+    baseSalary: 220000,
+    bonusesBenefits: 55000,
+    recruitmentTraining: 45000,
+    hiddenCosts: 10000,
+    total: 330000,
+  },
+  fractional: {
+    fee: 120000,
+    total: 120000,
+    daysPerWeek: 2,
+  },
+  strengths: {
+    fractional: 'Perfect for revenue stages of £2M-£20M where you need high-level operational strategy and process scaling without full-time overhead.',
+    fullTime: 'Essential for £30M+ revenue companies with complex multi-site logistics requiring daily operational oversight and deep team integration.',
+  }
 }
 
 export default function FractionalVsFullTimeCOOPage() {
@@ -23,6 +44,8 @@ export default function FractionalVsFullTimeCOOPage() {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-black mb-8">Head-to-Head Comparison</h2>
+
+          <StrategicComparisonInfographic data={cooComparisonData} />
 
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
