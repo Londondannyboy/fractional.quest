@@ -8,40 +8,40 @@ import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Compliance Services UK | Hire a Part-Time Compliance Officer',
-  description: 'Hire a Fractional Compliance Officer for your business. Expert regulatory guidance for FCA, GDPR, and ISO standards. Risk management at a flexible cost.',
-  keywords: 'fractional compliance officer, fractional compliance manager, hire fractional compliance, part time compliance officer, regulatory compliance services',
+  title: 'Fractional Legal Services UK | Hire a Part-Time General Counsel',
+  description: 'Hire a Fractional General Counsel or Legal Counsel. Expert commercial legal support for contracts, IP, and employment. In-house legal quality at a fraction of the cost.',
+  keywords: 'fractional general counsel, fractional legal counsel, hire fractional lawyer, part time general counsel, fractional head of legal, legal services for startups',
   alternates: {
-    canonical: 'https://fractional.quest/fractional-compliance-services',
+    canonical: 'https://fractional.quest/fractional-legal-services',
   },
   openGraph: {
-    title: 'Fractional Compliance Services UK | Hire a Part-Time Compliance Officer',
-    description: 'Hire a Fractional Compliance Officer. Expert regulatory guidance and risk management.',
-    images: ['/images/fractional-compliance-services.jpg'],
-    url: 'https://fractional.quest/fractional-compliance-services',
+    title: 'Fractional Legal Services UK | Hire a Part-Time General Counsel',
+    description: 'Hire a Fractional General Counsel. Strategic legal support for growing businesses.',
+    images: ['/images/fractional-legal-services.jpg'],
+    url: 'https://fractional.quest/fractional-legal-services',
   },
 }
 
-const COMPLIANCE_FAQS = [
+const LEGAL_FAQS = [
   {
-    question: 'What is a Fractional Compliance Officer?',
-    answer: 'A Fractional Compliance Officer is a regulatory expert who manages your company\'s compliance obligations on a part-time basis. They ensure you adhere to laws and standards like FCA rules, GDPR, and ISO 27001.',
+    question: 'What is Fractional Legal Counsel?',
+    answer: 'Fractional Legal Counsel is a qualified lawyer who acts as your in-house legal team part-time. They handle day-to-day legal matters like contracts, IP, and employment queries for a fixed fee or day rate.',
   },
   {
-    question: 'Why outsource compliance?',
-    answer: 'Compliance is critical but often doesn\'t require a full-time role in smaller companies. Outsourcing to a fractional expert gives you access to senior knowledge without the cost of a full-time salary, ensuring you stay legal and avoid fines.',
+    question: 'Why not use a law firm?',
+    answer: 'Law firms are expensive and reactive. A fractional lawyer is embedded in your team, understands your business context, and proactively manages risk. They are faster and more commercially minded.',
   },
   {
     question: 'How much does it cost?',
-    answer: 'Rates vary by sector complexity. For financial services, expect £700-£1,000 per day. For general corporate compliance, £500-£800 per day is common.',
+    answer: 'Typically £800-£1,500 per day. Compared to law firm partner rates (£500+ per hour), this offers exceptional value for senior legal expertise.',
   },
   {
-    question: 'What sectors do they cover?',
-    answer: 'We have specialists across Financial Services (FCA), Healthcare (CQC), Data Privacy (GDPR), and General Corporate Compliance.',
+    question: 'What areas do they cover?',
+    answer: 'Most are generalists who cover Commercial Contracts, Corporate/Governance, Employment, and basic IP/Data Protection. For specialist litigation or M&A, they manage external firms for you.',
   },
 ]
 
-export default function FractionalComplianceServicesPage() {
+export default function FractionalLegalServicesPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
@@ -49,10 +49,10 @@ export default function FractionalComplianceServicesPage() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=1920&q=80')`,
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-800/90 via-slate-700/80 to-gray-800/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-800/80 to-slate-800/60" />
         </div>
         <div className="relative z-10 w-full py-20">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -61,33 +61,33 @@ export default function FractionalComplianceServicesPage() {
             </Link>
             <div className="max-w-4xl">
               <span className="inline-block bg-white text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-                Compliance Services
+                Legal Services
               </span>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
-                Fractional Compliance<br />
+                Fractional Legal<br />
                 <span className="text-white/70">Services UK</span>
               </h1>
               <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mb-8">
-                Hire a <strong className="text-white">Fractional Compliance Officer</strong> to manage risk.
-                Regulatory expertise, policy management, and peace of mind—at a flexible cost.
+                Hire a <strong className="text-white">Fractional General Counsel</strong> to protect your business.
+                Strategic legal advice, contract management, and risk mitigation—at a flexible cost.
               </p>
               <div className="flex flex-wrap gap-8 mb-10">
                 <div>
                   <div className="text-4xl md:text-5xl font-black text-white">Risk</div>
-                  <div className="text-white/60 text-sm uppercase tracking-wider">Zero</div>
+                  <div className="text-white/60 text-sm uppercase tracking-wider">Mitigated</div>
                 </div>
                 <div>
                   <div className="text-4xl md:text-5xl font-black text-white">1-2</div>
                   <div className="text-white/60 text-sm uppercase tracking-wider">Days/Week</div>
                 </div>
                 <div>
-                  <div className="text-4xl md:text-5xl font-black text-white">Audit</div>
-                  <div className="text-white/60 text-sm uppercase tracking-wider">Ready</div>
+                  <div className="text-4xl md:text-5xl font-black text-white">In-House</div>
+                  <div className="text-white/60 text-sm uppercase tracking-wider">Quality</div>
                 </div>
               </div>
               <div className="flex flex-wrap gap-4">
                 <Link href="#contact" className="px-8 py-4 bg-white text-black font-bold uppercase tracking-wider hover:bg-gray-100 transition-colors">
-                  Hire a Fractional Officer
+                  Hire a Fractional Lawyer
                 </Link>
                 <Link href="#calculator" className="px-8 py-4 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">
                   Calculate Costs
@@ -98,19 +98,19 @@ export default function FractionalComplianceServicesPage() {
         </div>
       </section>
 
-      {/* What is a Fractional Compliance Officer */}
+      {/* What is Fractional Legal Counsel */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Overview</span>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900">What is a Fractional Compliance Officer?</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">What is a Fractional General Counsel?</h2>
           </div>
           <div className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              A <strong className="font-semibold text-gray-900">Fractional Compliance Officer</strong> is a specialist who takes ownership of your company's regulatory health. They identify risks, write policies, train staff, and ensure you are ready for any external audit.
+              A <strong className="font-semibold text-gray-900">Fractional General Counsel</strong> serves as your company's primary lawyer on a retainer basis. They attend management meetings, understand your commercial goals, and provide the legal infrastructure to support them.
             </p>
             <p>
-              Unlike a consultant who writes a report and leaves, a fractional officer stays with you to implement the changes and maintain standards over time.
+              Instead of paying external firms by the hour to "review this contract," you have a dedicated senior lawyer who knows your risk appetite and can negotiate deals quickly to get them over the line.
             </p>
           </div>
         </div>
@@ -121,43 +121,43 @@ export default function FractionalComplianceServicesPage() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Coverage</span>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Regulatory Peace of Mind</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Legal Support Areas</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[ 
+            {[
               {
-                title: 'Policy Management',
-                description: 'Creating and maintaining the employee handbook and compliance manuals.',
-                icon: 'Docs',
+                title: 'Commercial Contracts',
+                description: 'Drafting, reviewing, and negotiating customer MSAs, supplier agreements, and partnerships.',
+                icon: '📝',
               },
               {
-                title: 'Risk Assessment',
-                description: 'Conducting regular audits to identify and mitigate operational and legal risks.',
-                icon: '🔍',
+                title: 'Corporate Governance',
+                description: 'Managing board minutes, shareholder resolutions, and Companies House compliance.',
+                icon: '🏛️',
               },
               {
-                title: 'Training',
-                description: 'Delivering mandatory training (e.g., Anti-Bribery, GDPR, Health & Safety) to staff.',
-                icon: '🎓',
+                title: 'Employment Law',
+                description: 'Advising on hiring, firing, settlement agreements, and HR policies.',
+                icon: '👥',
               },
               {
-                title: 'Reporting',
-                description: 'Preparing compliance reports for the board and external regulators.',
-                icon: '📊',
+                title: 'Intellectual Property',
+                description: 'Protecting your brand through trademark management and IP assignment clauses.',
+                icon: '💡',
               },
               {
-                title: 'Incident Response',
-                description: 'Managing the response to breaches, complaints, or regulatory inquiries.',
-                icon: '🚨',
+                title: 'Data Protection',
+                description: 'Ensuring GDPR compliance, managing data breaches, and reviewing data processing agreements.',
+                icon: '🔒',
               },
               {
-                title: 'Culture',
-                description: 'Embedding a culture of ethics and integrity throughout the organisation.',
-                icon: '🤝',
+                title: 'Fundraising Support',
+                description: 'Managing the legal due diligence process and documentation for investment rounds.',
+                icon: '💰',
               },
             ].map((item, index) => (
               <div key={index} className="bg-white p-6 border border-gray-200 hover:border-gray-400 transition-colors">
-                <div className="text-3xl mb-4 text-slate-700">{item.icon}</div>
+                <div className="text-3xl mb-4">{item.icon}</div>
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.description}</p>
               </div>
@@ -171,7 +171,7 @@ export default function FractionalComplianceServicesPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-8 text-center">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Estimated Compliance Costs</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Estimated Legal Costs</h2>
           </div>
           <RoleCalculator role="cfo" />
         </div>
@@ -184,23 +184,23 @@ export default function FractionalComplianceServicesPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
-          <FAQ items={COMPLIANCE_FAQS} title="" />
+          <FAQ items={LEGAL_FAQS} title="" />
         </div>
       </section>
 
       {/* CTA */}
-      <section id="contact" className="py-20 md:py-28 bg-slate-800 text-white">
+      <section id="contact" className="py-20 md:py-28 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-300 mb-4 block">Get Started</span>
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-300 mb-4 block">Get Started</span>
           <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
-            Protect Your<br /><span className="text-slate-400">Business</span>
+            Secure Your<br /><span className="text-gray-400">Legal Foundation</span>
           </h2>
-          <p className="text-xl text-slate-100 mb-10 max-w-2xl mx-auto">
-            Find the right fractional compliance expert to manage your regulatory risk.
+          <p className="text-xl text-gray-100 mb-10 max-w-2xl mx-auto">
+            Connect with experienced fractional General Counsels to protect your growth.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/handler/sign-up" className="px-10 py-5 bg-white text-black font-bold uppercase tracking-wider hover:bg-gray-100 transition-colors">
-              Find a Compliance Officer
+              Find a Fractional GC
             </Link>
           </div>
         </div>

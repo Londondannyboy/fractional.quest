@@ -8,40 +8,40 @@ import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Compliance Services UK | Hire a Part-Time Compliance Officer',
-  description: 'Hire a Fractional Compliance Officer for your business. Expert regulatory guidance for FCA, GDPR, and ISO standards. Risk management at a flexible cost.',
-  keywords: 'fractional compliance officer, fractional compliance manager, hire fractional compliance, part time compliance officer, regulatory compliance services',
+  title: 'Fractional CCO Services UK | Hire a Part-Time Chief Compliance Officer',
+  description: 'Hire a Fractional Chief Compliance Officer (CCO) for your business. Access senior regulatory leadership for FCA, GDPR, and ISO compliance. Expert guidance at a fraction of full-time cost.',
+  keywords: 'fractional cco, fractional compliance officer, hire fractional cco, part time cco, fractional chief compliance officer, fractional compliance services',
   alternates: {
-    canonical: 'https://fractional.quest/fractional-compliance-services',
+    canonical: 'https://fractional.quest/fractional-cco-services',
   },
   openGraph: {
-    title: 'Fractional Compliance Services UK | Hire a Part-Time Compliance Officer',
-    description: 'Hire a Fractional Compliance Officer. Expert regulatory guidance and risk management.',
-    images: ['/images/fractional-compliance-services.jpg'],
-    url: 'https://fractional.quest/fractional-compliance-services',
+    title: 'Fractional CCO Services UK | Hire a Part-Time CCO',
+    description: 'Hire a Fractional CCO for your business. Expert compliance leadership without the full-time cost.',
+    images: ['/images/fractional-cco-services.jpg'],
+    url: 'https://fractional.quest/fractional-cco-services',
   },
 }
 
-const COMPLIANCE_FAQS = [
+const CCO_FAQS = [
   {
-    question: 'What is a Fractional Compliance Officer?',
-    answer: 'A Fractional Compliance Officer is a regulatory expert who manages your company\'s compliance obligations on a part-time basis. They ensure you adhere to laws and standards like FCA rules, GDPR, and ISO 27001.',
+    question: 'What is a Fractional CCO?',
+    answer: 'A Fractional CCO is an experienced Chief Compliance Officer who manages an organisation\'s compliance function part-time. They ensure the business meets its regulatory obligations (FCA, GDPR, etc.) efficiently.',
   },
   {
-    question: 'Why outsource compliance?',
-    answer: 'Compliance is critical but often doesn\'t require a full-time role in smaller companies. Outsourcing to a fractional expert gives you access to senior knowledge without the cost of a full-time salary, ensuring you stay legal and avoid fines.',
+    question: 'Who needs a Fractional CCO?',
+    answer: 'Regulated businesses (FinTech, Insurance, Healthcare) often need a CCO to obtain or maintain licences. Startups and scale-ups use fractional CCOs to build their compliance frameworks before they can afford a full-time hire.',
   },
   {
-    question: 'How much does it cost?',
-    answer: 'Rates vary by sector complexity. For financial services, expect £700-£1,000 per day. For general corporate compliance, £500-£800 per day is common.',
+    question: 'How much does a Fractional CCO cost?',
+    answer: 'Fractional CCOs typically charge £800-£1,300 per day. This provides senior \"Approved Person\" capability for a fraction of the £150k+ salary of a full-time equivalent.',
   },
   {
-    question: 'What sectors do they cover?',
-    answer: 'We have specialists across Financial Services (FCA), Healthcare (CQC), Data Privacy (GDPR), and General Corporate Compliance.',
+    question: 'Can they hold the SMF16/17 function?',
+    answer: 'Yes, in many cases, a fractional CCO can hold Senior Management Functions (SMF) for FCA-regulated firms, provided they can demonstrate sufficient oversight and time commitment.',
   },
 ]
 
-export default function FractionalComplianceServicesPage() {
+export default function FractionalCCOServicesPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
@@ -49,10 +49,10 @@ export default function FractionalComplianceServicesPage() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=80')`,
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-800/90 via-slate-700/80 to-gray-800/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-800/80 to-gray-900/60" />
         </div>
         <div className="relative z-10 w-full py-20">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -64,30 +64,30 @@ export default function FractionalComplianceServicesPage() {
                 Compliance Services
               </span>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
-                Fractional Compliance<br />
+                Fractional CCO<br />
                 <span className="text-white/70">Services UK</span>
               </h1>
               <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mb-8">
-                Hire a <strong className="text-white">Fractional Compliance Officer</strong> to manage risk.
-                Regulatory expertise, policy management, and peace of mind—at a flexible cost.
+                Hire a <strong className="text-white">Fractional CCO</strong> to secure your licence to operate.
+                Expert regulatory leadership and risk management—at a flexible cost.
               </p>
               <div className="flex flex-wrap gap-8 mb-10">
                 <div>
                   <div className="text-4xl md:text-5xl font-black text-white">Risk</div>
-                  <div className="text-white/60 text-sm uppercase tracking-wider">Zero</div>
+                  <div className="text-white/60 text-sm uppercase tracking-wider">Managed</div>
                 </div>
                 <div>
-                  <div className="text-4xl md:text-5xl font-black text-white">1-2</div>
+                  <div className="text-4xl md:text-5xl font-black text-white">1-3</div>
                   <div className="text-white/60 text-sm uppercase tracking-wider">Days/Week</div>
                 </div>
                 <div>
-                  <div className="text-4xl md:text-5xl font-black text-white">Audit</div>
+                  <div className="text-4xl md:text-5xl font-black text-white">FCA</div>
                   <div className="text-white/60 text-sm uppercase tracking-wider">Ready</div>
                 </div>
               </div>
               <div className="flex flex-wrap gap-4">
                 <Link href="#contact" className="px-8 py-4 bg-white text-black font-bold uppercase tracking-wider hover:bg-gray-100 transition-colors">
-                  Hire a Fractional Officer
+                  Hire a Fractional CCO
                 </Link>
                 <Link href="#calculator" className="px-8 py-4 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">
                   Calculate Costs
@@ -98,19 +98,19 @@ export default function FractionalComplianceServicesPage() {
         </div>
       </section>
 
-      {/* What is a Fractional Compliance Officer */}
+      {/* What is a Fractional CCO */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Overview</span>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900">What is a Fractional Compliance Officer?</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">What is a Fractional CCO?</h2>
           </div>
           <div className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              A <strong className="font-semibold text-gray-900">Fractional Compliance Officer</strong> is a specialist who takes ownership of your company's regulatory health. They identify risks, write policies, train staff, and ensure you are ready for any external audit.
+              A <strong className="font-semibold text-gray-900">Fractional CCO</strong> is a senior compliance professional who leads your risk and regulatory function part-time. They bring the expertise needed to navigate complex regulations like FCA, GDPR, and AML, ensuring your business is compliant by design.
             </p>
             <p>
-              Unlike a consultant who writes a report and leaves, a fractional officer stays with you to implement the changes and maintain standards over time.
+              For FinTechs and regulated entities, compliance is not optional—it's a survival requirement. A fractional CCO provides the necessary oversight and "approved person" status without the overhead of a full-time executive.
             </p>
           </div>
         </div>
@@ -121,43 +121,43 @@ export default function FractionalComplianceServicesPage() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Coverage</span>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Regulatory Peace of Mind</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Compliance & Risk Coverage</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[ 
+            {[
               {
-                title: 'Policy Management',
-                description: 'Creating and maintaining the employee handbook and compliance manuals.',
-                icon: 'Docs',
+                title: 'FCA Authorisation',
+                description: 'Leading the application process for FCA or PRA authorisation. Preparing the Regulatory Business Plan and policies.',
+                icon: '⚖️',
               },
               {
-                title: 'Risk Assessment',
-                description: 'Conducting regular audits to identify and mitigate operational and legal risks.',
+                title: 'Framework Design',
+                description: 'Building the Compliance Monitoring Programme (CMP) and risk frameworks tailored to your business model.',
+                icon: '🏗️',
+              },
+              {
+                title: 'AML & KYC',
+                description: 'Implementing robust Anti-Money Laundering and Know Your Customer processes to prevent financial crime.',
                 icon: '🔍',
               },
               {
-                title: 'Training',
-                description: 'Delivering mandatory training (e.g., Anti-Bribery, GDPR, Health & Safety) to staff.',
+                title: 'Regulatory Liaison',
+                description: 'Acting as the primary point of contact for regulators. Handling inquiries, audits, and reporting requirements.',
+                icon: '📞',
+              },
+              {
+                title: 'Training & Culture',
+                description: 'Embedding a culture of compliance. Training staff on their obligations and the importance of good conduct.',
                 icon: '🎓',
               },
               {
-                title: 'Reporting',
-                description: 'Preparing compliance reports for the board and external regulators.',
-                icon: '📊',
-              },
-              {
-                title: 'Incident Response',
-                description: 'Managing the response to breaches, complaints, or regulatory inquiries.',
-                icon: '🚨',
-              },
-              {
-                title: 'Culture',
-                description: 'Embedding a culture of ethics and integrity throughout the organisation.',
-                icon: '🤝',
+                title: 'Horizon Scanning',
+                description: 'Monitoring upcoming regulatory changes (e.g., Consumer Duty) and preparing the business to adapt.',
+                icon: '🔭',
               },
             ].map((item, index) => (
               <div key={index} className="bg-white p-6 border border-gray-200 hover:border-gray-400 transition-colors">
-                <div className="text-3xl mb-4 text-slate-700">{item.icon}</div>
+                <div className="text-3xl mb-4">{item.icon}</div>
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.description}</p>
               </div>
@@ -171,7 +171,7 @@ export default function FractionalComplianceServicesPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-8 text-center">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Estimated Compliance Costs</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Estimated CCO Costs</h2>
           </div>
           <RoleCalculator role="cfo" />
         </div>
@@ -184,23 +184,23 @@ export default function FractionalComplianceServicesPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
-          <FAQ items={COMPLIANCE_FAQS} title="" />
+          <FAQ items={CCO_FAQS} title="" />
         </div>
       </section>
 
       {/* CTA */}
-      <section id="contact" className="py-20 md:py-28 bg-slate-800 text-white">
+      <section id="contact" className="py-20 md:py-28 bg-slate-900 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-300 mb-4 block">Get Started</span>
           <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
-            Protect Your<br /><span className="text-slate-400">Business</span>
+            Secure Your<br /><span className="text-gray-400">Compliance Leadership</span>
           </h2>
           <p className="text-xl text-slate-100 mb-10 max-w-2xl mx-auto">
-            Find the right fractional compliance expert to manage your regulatory risk.
+            Connect with experienced fractional CCOs who can safeguard your business and enable growth.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/handler/sign-up" className="px-10 py-5 bg-white text-black font-bold uppercase tracking-wider hover:bg-gray-100 transition-colors">
-              Find a Compliance Officer
+              Find a Fractional CCO
             </Link>
           </div>
         </div>

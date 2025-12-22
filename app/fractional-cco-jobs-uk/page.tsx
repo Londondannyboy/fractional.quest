@@ -9,21 +9,21 @@ import { RoleContentHub } from '@/components/RoleContentHub'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Compliance Jobs UK | Part-Time Compliance Roles',
-  description: 'Fractional Compliance jobs UK - Find part-time Compliance Officer positions paying £500-£900/day. Browse live compliance roles for experienced professionals. Remote & hybrid available.',
-  keywords: 'fractional compliance jobs, fractional compliance officer jobs uk, part time compliance officer, fractional compliance roles, part time compliance jobs, compliance consultant jobs',
+  title: 'Fractional CCO Jobs UK | Part-Time Chief Compliance Officer Roles',
+  description: 'Fractional CCO jobs UK - Find part-time Chief Compliance Officer positions paying £800-£1,300/day. Browse live CCO roles for experienced risk & compliance leaders. Remote & hybrid available.',
+  keywords: 'fractional cco jobs, fractional cco jobs uk, part time cco, part-time chief compliance officer, cco part time, fractional compliance opportunities, fractional risk jobs',
   alternates: {
-    canonical: 'https://fractional.quest/fractional-compliance-jobs-uk',
+    canonical: 'https://fractional.quest/fractional-cco-jobs-uk',
   },
   openGraph: {
-    title: 'Fractional Compliance Jobs UK | Part-Time Compliance Roles',
-    description: 'Fractional Compliance jobs UK - Find part-time Compliance Officer positions paying £500-£900/day. Remote & hybrid available.',
-    images: ['/images/fractional-compliance-jobs-uk.jpg'],
-    url: 'https://fractional.quest/fractional-compliance-jobs-uk',
+    title: 'Fractional CCO Jobs UK | Part-Time Chief Compliance Officer Roles',
+    description: 'Fractional CCO jobs UK - Find part-time CCO positions paying £800-£1,300/day. Remote & hybrid available.',
+    images: ['/images/fractional-cco-jobs-uk.jpg'],
+    url: 'https://fractional.quest/fractional-cco-jobs-uk',
   },
 }
 
-async function getComplianceStats() {
+async function getCCOStats() {
   try {
     const sql = createDbQuery()
     const [totalResult, remoteResult] = await Promise.all([
@@ -35,7 +35,7 @@ async function getComplianceStats() {
       remoteCount: parseInt((remoteResult[0] as any)?.count || '0')
     }
   } catch {
-    return { total: 20, remoteCount: 8 }
+    return { total: 15, remoteCount: 6 }
   }
 }
 
@@ -56,7 +56,7 @@ async function getFeaturedCompanies() {
 }
 
 // Server-side job fetch for SEO
-async function getComplianceJobs() {
+async function getCCOJobs() {
   try {
     const sql = createDbQuery()
     const jobs = await sql`
@@ -83,30 +83,30 @@ function getDaysAgo(postedDate: string | null): number | undefined {
   return Math.floor(diffTime / (1000 * 60 * 60 * 24))
 }
 
-const COMPLIANCE_FAQS = [
+const CCO_FAQS = [
   {
-    question: 'What is a Fractional Compliance Officer?',
-    answer: 'A Fractional Compliance Officer is an experienced professional who manages a company\'s regulatory obligations on a part-time basis. They ensure the business adheres to laws and regulations (like FCA rules or GDPR) without the cost of a full-time hire.',
+    question: 'What is a Fractional CCO?',
+    answer: 'A Fractional CCO (Chief Compliance Officer) is an experienced risk and compliance executive who helps organisations navigate regulatory requirements on a part-time basis. They build compliance frameworks, manage risk, and deal with regulators like the FCA or ICO.',
   },
   {
-    question: 'How much do Fractional Compliance jobs pay?',
-    answer: 'Day rates for Fractional Compliance Officers in the UK typically range from £500 to £900. Senior roles (Head of Compliance) or those in complex sectors like FinTech can command higher rates.',
+    question: 'How much do Fractional CCO jobs pay in the UK?',
+    answer: 'Fractional CCO day rates in the UK typically range from £800 to £1,300 per day. Rates are particularly high in the FinTech and HealthTech sectors due to the complexity and severity of regulatory penalties.',
   },
   {
-    question: 'Which industries hire Fractional Compliance Officers?',
-    answer: 'Financial Services (FinTech, Wealth Management), Healthcare, Insurance, and Legal sectors are the biggest employers. Any regulated industry needs compliance oversight, making fractional roles common.',
+    question: 'Why do companies hire Fractional CCOs?',
+    answer: 'Early-stage FinTechs and regulated businesses need senior compliance oversight to obtain licences (like FCA authorisation) but often cannot afford a full-time CCO. A fractional CCO provides the necessary "approved person" status and strategic oversight.',
   },
   {
-    question: 'Is this role suitable for remote work?',
-    answer: 'Yes, much compliance work involves policy writing, monitoring, and reporting, which can be done remotely. However, site visits or audits may require some travel.',
+    question: 'What sectors are most active for Fractional CCOs?',
+    answer: 'Financial Services (FinTech, WealthTech, Crypto) is the dominant sector. However, Healthcare (CQC compliance) and Data-heavy industries (GDPR) also frequently hire fractional compliance leadership.',
   },
 ]
 
-export default async function FractionalComplianceJobsUkPage() {
+export default async function FractionalCcoJobsUkPage() {
   const [stats, companies, jobs] = await Promise.all([
-    getComplianceStats(),
+    getCCOStats(),
     getFeaturedCompanies(),
-    getComplianceJobs()
+    getCCOJobs()
   ])
 
   return (
@@ -116,10 +116,10 @@ export default async function FractionalComplianceJobsUkPage() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=80')`,
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-800/90 via-slate-700/80 to-gray-800/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-800/80 to-gray-900/70" />
         </div>
         <div className="relative z-10 w-full py-16">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -128,14 +128,14 @@ export default async function FractionalComplianceJobsUkPage() {
             </Link>
             <div className="max-w-4xl">
               <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-                Regulatory Compliance
+                Risk & Compliance
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Fractional Compliance Jobs UK
+                Fractional CCO Jobs UK
               </h1>
               <p className="text-xl text-white/90 leading-relaxed max-w-2xl mb-8">
-                Part-time Compliance Officer roles for experienced professionals.
-                Manage risk and regulation for 1-3 days a week.
+                Part-time Chief Compliance Officer roles for experienced risk leaders.
+                Manage regulatory strategy and governance for 1-3 days a week.
               </p>
               <div className="flex flex-wrap gap-4 mb-10">
                 <div className="bg-white/10 backdrop-blur rounded-xl px-6 py-4">
@@ -143,7 +143,7 @@ export default async function FractionalComplianceJobsUkPage() {
                   <div className="text-white/80 text-sm">Live Roles</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-xl px-6 py-4">
-                  <div className="text-3xl font-bold text-white">£750</div>
+                  <div className="text-3xl font-bold text-white">£1,100</div>
                   <div className="text-white/80 text-sm">Avg Day Rate</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-xl px-6 py-4">
@@ -152,11 +152,11 @@ export default async function FractionalComplianceJobsUkPage() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-4">
-                <Link href="#jobs" className="px-8 py-4 bg-white text-slate-800 font-bold rounded-lg hover:bg-gray-100 transition-colors">
+                <Link href="#jobs" className="px-8 py-4 bg-white text-slate-900 font-bold rounded-lg hover:bg-gray-100 transition-colors">
                   Browse Jobs
                 </Link>
-                <Link href="/fractional-cco-jobs-uk" className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
-                  CCO Jobs
+                <Link href="/fractional-compliance-jobs-uk" className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+                  Compliance Roles
                 </Link>
               </div>
             </div>
@@ -181,9 +181,9 @@ export default async function FractionalComplianceJobsUkPage() {
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Browse</span>
-              <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional Compliance Jobs UK Listings</h2>
+              <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional CCO Jobs UK Listings</h2>
             </div>
-            <p className="text-gray-500">{jobs.length}+ live fractional compliance jobs in the UK</p>
+            <p className="text-gray-500">{jobs.length}+ live fractional CCO jobs in the UK</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
@@ -193,8 +193,8 @@ export default async function FractionalComplianceJobsUkPage() {
                 className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow"
               >
                 <Link href={`/fractional-job/${job.slug}`} className="block">
-                  <div className="relative h-40 bg-gradient-to-br from-slate-500 to-gray-600">
-                    <div className="absolute inset-0 flex items-center justify-center text-white/10 text-6xl font-black">COMP</div>
+                  <div className="relative h-40 bg-gradient-to-br from-slate-600 to-gray-700">
+                    <div className="absolute inset-0 flex items-center justify-center text-white/10 text-6xl font-black">CCO</div>
                     <div className="absolute bottom-3 left-3 right-3">
                       <h3 className="text-white font-bold text-lg line-clamp-2" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
                         {job.title}
@@ -222,7 +222,7 @@ export default async function FractionalComplianceJobsUkPage() {
                       <p className="text-sm text-gray-600 line-clamp-2 mb-3">{job.description_snippet}</p>
                     )}
                     <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-600 hover:text-slate-700">
-                      View fractional compliance job →
+                      View fractional CCO job →
                     </span>
                   </div>
                 </Link>
@@ -233,9 +233,9 @@ export default async function FractionalComplianceJobsUkPage() {
           <div className="text-center">
             <Link
               href="/fractional-jobs-uk?department=Compliance"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-slate-600 text-white font-bold rounded-lg hover:bg-slate-700 transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-slate-700 text-white font-bold rounded-lg hover:bg-slate-800 transition-colors"
             >
-              View All {stats.total}+ Fractional Compliance Jobs UK
+              View All {stats.total}+ Fractional CCO Jobs UK
             </Link>
           </div>
         </div>
@@ -247,36 +247,36 @@ export default async function FractionalComplianceJobsUkPage() {
           <div className="mb-16">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-4 block">The Guide</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
-              A Guide to <span className="text-slate-600">Fractional Compliance Jobs UK</span>
+              A Guide to <span className="text-slate-600">Fractional CCO Jobs UK</span>
             </h2>
-            <div className="w-24 h-1 bg-slate-600"></div>
+            <div className="w-24 h-1 bg-slate-900"></div>
           </div>
           
           <article className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              <strong className="font-semibold text-gray-900">Fractional Compliance Officer jobs</strong> are essential for keeping UK businesses on the right side of the law. Whether it's AML checks in FinTech or CQC standards in Healthcare, these part-time roles provide the oversight needed for safe, legal growth.
+              <strong className="font-semibold text-gray-900">Fractional CCO jobs</strong> are critical for businesses operating in regulated environments. A part-time Chief Compliance Officer ensures that growth doesn't come at the expense of legal and regulatory obligations, providing expert oversight on frameworks like GDPR, FCA, and ISO.
             </p>
             
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Why the Need?</h3>
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Navigating Regulatory Complexity</h3>
             <p>
-              Regulation is becoming more complex, not less. But for many SMEs, a full-time compliance team is overkill. A <strong className="font-semibold">Fractional Compliance Officer</strong> offers a "Goldilocks" solution: the right amount of expertise for the right amount of time. They set up the frameworks, train the staff, and conduct the audits that keep the regulators happy.
+              For FinTechs, HealthTechs, and InsurTechs, compliance is existential. However, a full-time CCO with 15+ years of experience commands a significant salary. A <strong className="font-semibold">Fractional CCO</strong> offers a strategic solution: high-level guidance on licence applications, risk assessments, and policy frameworks for a few days a month.
             </p>
 
-             <div className="bg-gray-50 p-8 my-10 border-l-4 border-slate-600">
-              <p className="text-xl font-semibold text-gray-900 mb-0">"Compliance isn\'t just a cost centre; it\'s a licence to operate. Fractional experts secure that licence efficiently."</p>
+             <div className="bg-gray-50 p-8 my-10 border-l-4 border-slate-900">
+              <p className="text-xl font-semibold text-gray-900 mb-0">"Fractional CCOs allow startups to build 'compliance by design' from day one, avoiding costly remediation later."</p>
             </div>
 
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Key Tasks</h3>
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">What the Role Involves</h3>
             <ul className="space-y-3">
-              <li><strong>Policy Development:</strong> Writing and updating the employee handbooks and compliance manuals.</li>
-              <li><strong>Monitoring & Testing:</strong> Checking that the rules are actually being followed (e.g., call monitoring, file reviews).</li>
-              <li><strong>Training:</strong> Educating staff on their responsibilities (e.g., anti-bribery, data protection).</li>
-              <li><strong>Regulatory Reporting:</strong> Submitting required returns to bodies like the FCA.</li>
+              <li><strong>Regulatory Liaison:</strong> Acting as the point of contact for bodies like the FCA, PRA, or ICO.</li>
+              <li><strong>Framework Design:</strong> Building the policies and procedures (AML, KYC, Data Protection) that form the company's compliance backbone.</li>
+              <li><strong>Risk Management:</strong> Identifying and mitigating operational and regulatory risks.</li>
+              <li><strong>Culture & Training:</strong> Embedding a culture of compliance across the organisation through training and leadership.</li>
             </ul>
 
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Career Path</h3>
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Market Demand</h3>
             <p>
-              For compliance professionals, <Link href="/fractional-compliance-jobs-uk" className="text-slate-600 hover:text-slate-800 underline">fractional work</Link> offers variety and high day rates. It's a way to escape the grind of a single large institution and make a tangible impact across multiple growing businesses.
+              The UK's status as a global FinTech hub drives strong demand for <Link href="/fractional-cco-jobs-uk" className="text-slate-600 hover:text-slate-800 underline">fractional compliance officers</Link>. As regulations around AI and crypto evolve, the need for specialised, flexible compliance talent is set to grow even further.
             </p>
           </article>
         </div>
@@ -284,7 +284,7 @@ export default async function FractionalComplianceJobsUkPage() {
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <RoleNews category="Compliance" title="Latest Compliance News" limit={3} />
+          <RoleNews category="Compliance" title="Latest Regulatory News" limit={3} />
         </div>
       </section>
 
@@ -293,20 +293,20 @@ export default async function FractionalComplianceJobsUkPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Common Questions About Fractional Compliance Jobs</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Common Questions About Fractional CCO Jobs</h2>
           </div>
-          <FAQ items={COMPLIANCE_FAQS} title="" />
+          <FAQ items={CCO_FAQS} title="" />
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-slate-800 text-white">
+      <section className="py-20 md:py-28 bg-slate-900 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-300 mb-4 block">Ready?</span>
-          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Find Your Next<br /><span className="text-slate-400">Fractional Compliance Role</span></h2>
-          <p className="text-xl text-slate-100 mb-10 max-w-2xl mx-auto">Create your profile and get matched with companies seeking compliance experts.</p>
+          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Find Your Next<br /><span className="text-slate-400">Fractional CCO Role</span></h2>
+          <p className="text-xl text-slate-100 mb-10 max-w-2xl mx-auto">Create your profile and get matched with companies seeking compliance leadership.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/handler/sign-up" className="px-10 py-5 bg-white text-slate-800 font-bold uppercase tracking-wider hover:bg-slate-50 transition-colors">Create Profile</Link>
+            <Link href="/handler/sign-up" className="px-10 py-5 bg-white text-slate-900 font-bold uppercase tracking-wider hover:bg-slate-50 transition-colors">Create Profile</Link>
           </div>
         </div>
       </section>

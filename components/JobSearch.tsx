@@ -29,6 +29,16 @@ const ROLES = [
   { value: 'HR', label: 'HR / CHRO' },
   { value: 'CPO', label: 'CPO / Product' },
   { value: 'CISO', label: 'CISO / Security' },
+  { value: 'CIO', label: 'CIO / IT' },
+  { value: 'CDO', label: 'CDO / Data' },
+  { value: 'CRO', label: 'CRO / Revenue' },
+  { value: 'CCO', label: 'CCO / Compliance' },
+  { value: 'Legal', label: 'Legal / GC' },
+  { value: 'Sales', label: 'Sales Director' },
+  { value: 'AI', label: 'Head of AI' },
+  { value: 'Growth', label: 'Head of Growth' },
+  { value: 'Product', label: 'Product Manager' },
+  { value: 'Project', label: 'Project Manager' },
 ]
 
 const WORK_TYPE = [

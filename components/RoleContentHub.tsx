@@ -20,9 +20,35 @@ export function RoleContentHub({ currentRole }: RoleContentHubProps) {
     { role: 'ceo', path: '/fractional-ceo-jobs-uk', label: 'CEO Jobs' },
     { role: 'chro', path: '/fractional-chro-jobs-uk', label: 'CHRO Jobs' },
     { role: 'ciso', path: '/fractional-ciso-jobs-uk', label: 'CISO Jobs' },
-    { role: 'compliance', path: '/fractional-compliance-jobs-uk', label: 'Compliance Jobs' },
-    { role: 'product', path: '/fractional-product-jobs-uk', label: 'Product Jobs' },
-    { role: 'pm', path: '/fractional-project-manager-jobs-uk', label: 'PM Jobs' },
+    { role: 'cio', path: '/fractional-cio-jobs-uk', label: 'CIO Jobs' },
+    { role: 'cpo', path: '/fractional-cpo-jobs-uk', label: 'CPO Jobs' },
+    { role: 'cdo', path: '/fractional-cdo-jobs-uk', label: 'CDO Jobs' },
+    { role: 'cro', path: '/fractional-cro-jobs-uk', label: 'CRO Jobs' },
+    { role: 'cco', path: '/fractional-cco-jobs-uk', label: 'CCO Jobs' },
+    { role: 'cao', path: '/fractional-cao-jobs-uk', label: 'CAO Jobs' },
+    { role: 'cgo', path: '/fractional-cgo-jobs-uk', label: 'CGO Jobs' },
+    { role: 'cso', path: '/fractional-cso-jobs-uk', label: 'CSO Jobs' },
+  ];
+
+  const leadershipRoles: RoleLink[] = [
+    { role: 'md', path: '/fractional-managing-director-jobs-uk', label: 'Managing Director' },
+    { role: 'ai', path: '/fractional-head-of-ai-jobs-uk', label: 'Head of AI' },
+    { role: 'growth', path: '/fractional-head-of-growth-jobs-uk', label: 'Head of Growth' },
+    { role: 'fd', path: '/fractional-finance-director-jobs-uk', label: 'Finance Director' },
+    { role: 'gc', path: '/fractional-general-counsel-jobs-uk', label: 'General Counsel' },
+    { role: 'sales', path: '/fractional-sales-director-jobs-uk', label: 'Sales Director' },
+    { role: 'csd', path: '/fractional-client-services-director-jobs-uk', label: 'Client Services Dir' },
+  ];
+
+  const specialistRoles: RoleLink[] = [
+    { role: 'fc', path: '/fractional-financial-controller-jobs-uk', label: 'Financial Controller' },
+    { role: 'compliance', path: '/fractional-compliance-jobs-uk', label: 'Compliance Officer' },
+    { role: 'legal', path: '/fractional-legal-jobs-uk', label: 'Legal Counsel' },
+    { role: 'dpo', path: '/fractional-dpo-jobs-uk', label: 'DPO' },
+    { role: 'product', path: '/fractional-product-manager-jobs-uk', label: 'Product Manager' },
+    { role: 'project', path: '/fractional-project-manager-jobs-uk', label: 'Project Manager' },
+    { role: 'bd', path: '/fractional-business-development-jobs-uk', label: 'Business Dev' },
+    { role: 'recruiter', path: '/fractional-recruiter-jobs-uk', label: 'Internal Recruiter' },
   ];
 
   const roleGuides: RoleLink[] = [
@@ -49,8 +75,22 @@ export function RoleContentHub({ currentRole }: RoleContentHubProps) {
     { role: 'chro', path: '/fractional-chro-services', label: 'CHRO Services' },
     { role: 'ciso', path: '/fractional-ciso-services', label: 'CISO Services' },
     { role: 'ceo', path: '/fractional-ceo-services', label: 'CEO Services' },
+    { role: 'cco', path: '/fractional-cco-services', label: 'CCO Services' },
+    { role: 'cao', path: '/fractional-cao-services', label: 'CAO Services' },
+    { role: 'cgo', path: '/fractional-cgo-services', label: 'CGO Services' },
+    { role: 'cso', path: '/fractional-cso-services', label: 'CSO Services' },
+    { role: 'md', path: '/fractional-managing-director-services', label: 'MD Services' },
+    { role: 'ai', path: '/fractional-ai-services', label: 'AI Services' },
+    { role: 'growth', path: '/fractional-growth-services', label: 'Growth Services' },
+    { role: 'fd', path: '/fractional-finance-director-services', label: 'FD Services' },
+    { role: 'fc', path: '/fractional-financial-controller-services', label: 'FC Services' },
     { role: 'compliance', path: '/fractional-compliance-services', label: 'Compliance Services' },
-    { role: 'product', path: '/fractional-cpo-services', label: 'Product Services' },
+    { role: 'legal', path: '/fractional-legal-services', label: 'Legal Services' },
+    { role: 'dpo', path: '/fractional-dpo-services', label: 'DPO Services' },
+    { role: 'product', path: '/fractional-product-manager-services', label: 'Product Services' },
+    { role: 'project', path: '/fractional-project-manager-services', label: 'Project Services' },
+    { role: 'cs', path: '/fractional-client-services-services', label: 'Client Services' },
+    { role: 'talent', path: '/fractional-recruitment-services', label: 'Talent Services' },
   ];
 
   const interimRoles: RoleLink[] = [
@@ -103,6 +143,26 @@ export function RoleContentHub({ currentRole }: RoleContentHubProps) {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
               {executiveRoles.map(renderRoleLink)}
+            </div>
+          </div>
+
+          {/* Leadership Roles */}
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">
+              Leadership Roles
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+              {leadershipRoles.map(renderRoleLink)}
+            </div>
+          </div>
+
+          {/* Specialist Roles */}
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">
+              Specialist Roles
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+              {specialistRoles.map(renderRoleLink)}
             </div>
           </div>
 

@@ -8,40 +8,40 @@ import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Compliance Services UK | Hire a Part-Time Compliance Officer',
-  description: 'Hire a Fractional Compliance Officer for your business. Expert regulatory guidance for FCA, GDPR, and ISO standards. Risk management at a flexible cost.',
-  keywords: 'fractional compliance officer, fractional compliance manager, hire fractional compliance, part time compliance officer, regulatory compliance services',
+  title: 'Fractional DPO Services UK | Hire a Part-Time Data Protection Officer',
+  description: 'Hire a Fractional Data Protection Officer (DPO). Ensure GDPR compliance and data privacy with expert guidance. Flexible, cost-effective DPO services.',
+  keywords: 'fractional dpo, fractional data protection officer, hire fractional dpo, part time dpo, gdpr compliance services, data privacy officer',
   alternates: {
-    canonical: 'https://fractional.quest/fractional-compliance-services',
+    canonical: 'https://fractional.quest/fractional-dpo-services',
   },
   openGraph: {
-    title: 'Fractional Compliance Services UK | Hire a Part-Time Compliance Officer',
-    description: 'Hire a Fractional Compliance Officer. Expert regulatory guidance and risk management.',
-    images: ['/images/fractional-compliance-services.jpg'],
-    url: 'https://fractional.quest/fractional-compliance-services',
+    title: 'Fractional DPO Services UK | Hire a Part-Time Data Protection Officer',
+    description: 'Hire a Fractional DPO. Ensure GDPR compliance with expert data privacy leadership.',
+    images: ['/images/fractional-dpo-services.jpg'],
+    url: 'https://fractional.quest/fractional-dpo-services',
   },
 }
 
-const COMPLIANCE_FAQS = [
+const DPO_FAQS = [
   {
-    question: 'What is a Fractional Compliance Officer?',
-    answer: 'A Fractional Compliance Officer is a regulatory expert who manages your company\'s compliance obligations on a part-time basis. They ensure you adhere to laws and standards like FCA rules, GDPR, and ISO 27001.',
+    question: 'What is a Fractional DPO?',
+    answer: 'A Fractional DPO is an outsourced Data Protection Officer who fulfils your statutory GDPR obligations on a part-time basis. They are the independent expert who monitors your compliance and acts as the contact point for the ICO.',
   },
   {
-    question: 'Why outsource compliance?',
-    answer: 'Compliance is critical but often doesn\'t require a full-time role in smaller companies. Outsourcing to a fractional expert gives you access to senior knowledge without the cost of a full-time salary, ensuring you stay legal and avoid fines.',
+    question: 'Why outsource the DPO role?',
+    answer: 'The DPO must be independent and expert in data law. For many companies, it is hard to find an internal employee with this skillset who doesn\'t have a conflict of interest (e.g., Head of IT or Marketing cannot be DPO). Outsourcing solves this.',
   },
   {
     question: 'How much does it cost?',
-    answer: 'Rates vary by sector complexity. For financial services, expect £700-£1,000 per day. For general corporate compliance, £500-£800 per day is common.',
+    answer: 'Fractional DPO services typically cost between £500 and £900 per day, often delivered as a monthly retainer (e.g., 2-4 days per month).',
   },
   {
-    question: 'What sectors do they cover?',
-    answer: 'We have specialists across Financial Services (FCA), Healthcare (CQC), Data Privacy (GDPR), and General Corporate Compliance.',
+    question: 'Is it mandatory?',
+    answer: 'For public authorities and companies processing large scale sensitive data, yes. For others, it is best practice to demonstrate accountability.',
   },
 ]
 
-export default function FractionalComplianceServicesPage() {
+export default function FractionalDPOServicesPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
@@ -49,10 +49,10 @@ export default function FractionalComplianceServicesPage() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&q=80')`,
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-800/90 via-slate-700/80 to-gray-800/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-950/90 via-cyan-900/80 to-blue-950/60" />
         </div>
         <div className="relative z-10 w-full py-20">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -61,33 +61,33 @@ export default function FractionalComplianceServicesPage() {
             </Link>
             <div className="max-w-4xl">
               <span className="inline-block bg-white text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-                Compliance Services
+                Privacy Services
               </span>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
-                Fractional Compliance<br />
+                Fractional DPO<br />
                 <span className="text-white/70">Services UK</span>
               </h1>
               <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mb-8">
-                Hire a <strong className="text-white">Fractional Compliance Officer</strong> to manage risk.
-                Regulatory expertise, policy management, and peace of mind—at a flexible cost.
+                Hire a <strong className="text-white">Fractional DPO</strong> to safeguard your data.
+                GDPR compliance, privacy impact assessments, and ICO liaison—at a flexible cost.
               </p>
               <div className="flex flex-wrap gap-8 mb-10">
                 <div>
-                  <div className="text-4xl md:text-5xl font-black text-white">Risk</div>
-                  <div className="text-white/60 text-sm uppercase tracking-wider">Zero</div>
+                  <div className="text-4xl md:text-5xl font-black text-white">GDPR</div>
+                  <div className="text-white/60 text-sm uppercase tracking-wider">Compliant</div>
                 </div>
                 <div>
                   <div className="text-4xl md:text-5xl font-black text-white">1-2</div>
-                  <div className="text-white/60 text-sm uppercase tracking-wider">Days/Week</div>
+                  <div className="text-white/60 text-sm uppercase tracking-wider">Days/Month</div>
                 </div>
                 <div>
-                  <div className="text-4xl md:text-5xl font-black text-white">Audit</div>
-                  <div className="text-white/60 text-sm uppercase tracking-wider">Ready</div>
+                  <div className="text-4xl md:text-5xl font-black text-white">Expert</div>
+                  <div className="text-white/60 text-sm uppercase tracking-wider">Guidance</div>
                 </div>
               </div>
               <div className="flex flex-wrap gap-4">
                 <Link href="#contact" className="px-8 py-4 bg-white text-black font-bold uppercase tracking-wider hover:bg-gray-100 transition-colors">
-                  Hire a Fractional Officer
+                  Hire a Fractional DPO
                 </Link>
                 <Link href="#calculator" className="px-8 py-4 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">
                   Calculate Costs
@@ -98,19 +98,19 @@ export default function FractionalComplianceServicesPage() {
         </div>
       </section>
 
-      {/* What is a Fractional Compliance Officer */}
+      {/* What is a Fractional DPO */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Overview</span>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900">What is a Fractional Compliance Officer?</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">What is a Fractional DPO?</h2>
           </div>
           <div className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              A <strong className="font-semibold text-gray-900">Fractional Compliance Officer</strong> is a specialist who takes ownership of your company's regulatory health. They identify risks, write policies, train staff, and ensure you are ready for any external audit.
+              A <strong className="font-semibold text-gray-900">Fractional Data Protection Officer</strong> provides the mandatory independent oversight required by GDPR. They act as your internal privacy watchdog, advising on data strategy, monitoring compliance, and training staff.
             </p>
             <p>
-              Unlike a consultant who writes a report and leaves, a fractional officer stays with you to implement the changes and maintain standards over time.
+              This role is crucial for building trust with customers. In an era of data breaches, having a qualified DPO demonstrates that you take data privacy seriously.
             </p>
           </div>
         </div>
@@ -121,43 +121,43 @@ export default function FractionalComplianceServicesPage() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Coverage</span>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Regulatory Peace of Mind</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Data Privacy Management</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[ 
+            {[
               {
-                title: 'Policy Management',
-                description: 'Creating and maintaining the employee handbook and compliance manuals.',
-                icon: 'Docs',
+                title: 'Compliance Monitoring',
+                description: 'Auditing data processing activities to ensuring they align with GDPR and the Data Protection Act 2018.',
+                icon: '👁️',
               },
               {
-                title: 'Risk Assessment',
-                description: 'Conducting regular audits to identify and mitigate operational and legal risks.',
-                icon: '🔍',
+                title: 'DPIAs',
+                description: 'Conducting Data Protection Impact Assessments for new projects or high-risk processing.',
+                icon: '📋',
               },
               {
-                title: 'Training',
-                description: 'Delivering mandatory training (e.g., Anti-Bribery, GDPR, Health & Safety) to staff.',
+                title: 'Staff Training',
+                description: 'Educating employees on data privacy, security hygiene, and how to spot a breach.',
                 icon: '🎓',
               },
               {
-                title: 'Reporting',
-                description: 'Preparing compliance reports for the board and external regulators.',
-                icon: '📊',
-              },
-              {
-                title: 'Incident Response',
-                description: 'Managing the response to breaches, complaints, or regulatory inquiries.',
+                title: 'Breach Management',
+                description: 'Leading the response to data breaches, including assessing severity and notifying the ICO within 72 hours.',
                 icon: '🚨',
               },
               {
-                title: 'Culture',
-                description: 'Embedding a culture of ethics and integrity throughout the organisation.',
-                icon: '🤝',
+                title: 'DSARs',
+                description: 'Handling Data Subject Access Requests and other rights requests from individuals.',
+                icon: '📩',
+              },
+              {
+                title: 'Regulator Liaison',
+                description: 'Acting as the primary contact point for the Information Commissioner\'s Office (ICO).',
+                icon: '🏛️',
               },
             ].map((item, index) => (
               <div key={index} className="bg-white p-6 border border-gray-200 hover:border-gray-400 transition-colors">
-                <div className="text-3xl mb-4 text-slate-700">{item.icon}</div>
+                <div className="text-3xl mb-4 text-cyan-800">{item.icon}</div>
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.description}</p>
               </div>
@@ -171,7 +171,7 @@ export default function FractionalComplianceServicesPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-8 text-center">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Estimated Compliance Costs</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Estimated DPO Costs</h2>
           </div>
           <RoleCalculator role="cfo" />
         </div>
@@ -184,23 +184,23 @@ export default function FractionalComplianceServicesPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
-          <FAQ items={COMPLIANCE_FAQS} title="" />
+          <FAQ items={DPO_FAQS} title="" />
         </div>
       </section>
 
       {/* CTA */}
-      <section id="contact" className="py-20 md:py-28 bg-slate-800 text-white">
+      <section id="contact" className="py-20 md:py-28 bg-cyan-950 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-300 mb-4 block">Get Started</span>
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-300 mb-4 block">Get Started</span>
           <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
-            Protect Your<br /><span className="text-slate-400">Business</span>
+            Protect Your<br /><span className="text-cyan-400">Data</span>
           </h2>
-          <p className="text-xl text-slate-100 mb-10 max-w-2xl mx-auto">
-            Find the right fractional compliance expert to manage your regulatory risk.
+          <p className="text-xl text-cyan-100 mb-10 max-w-2xl mx-auto">
+            Find the right fractional DPO to ensure your compliance.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/handler/sign-up" className="px-10 py-5 bg-white text-black font-bold uppercase tracking-wider hover:bg-gray-100 transition-colors">
-              Find a Compliance Officer
+              Find a Fractional DPO
             </Link>
           </div>
         </div>

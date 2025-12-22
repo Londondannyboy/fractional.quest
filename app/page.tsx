@@ -437,73 +437,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Fractional Ownership Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-amber-50 to-orange-50 border-b border-amber-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="text-sm font-semibold text-amber-600 uppercase tracking-wider mb-2 block">
-                Beyond Work
-              </span>
-              <h2 className="font-editorial text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Fractional Ownership
-              </h2>
-              <p className="text-xl text-gray-600 mb-6">
-                Earning £150-300k as a fractional executive opens doors. Why buy one home when you could own a share of properties across the globe?
-              </p>
-              <p className="text-gray-600 mb-8">
-                Fractional ownership lets you invest in luxury properties, holiday homes, and prime real estate for a fraction of the cost. Perfect for executives who want flexibility in their lifestyle investments too.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  href="/fractional-ownership-guide"
-                  className="inline-flex items-center px-6 py-3 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition-colors"
-                >
-                  Learn About Fractional Ownership
-                  <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-                <Link
-                  href="/fractional-ownership-for-executives"
-                  className="inline-flex items-center px-6 py-3 border-2 border-amber-600 text-amber-700 font-semibold rounded-lg hover:bg-amber-50 transition-colors"
-                >
-                  For Executives
-                </Link>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="aspect-[3/4] rounded-2xl overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80"
-                    alt="Luxury villa"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="aspect-[3/4] rounded-2xl overflow-hidden mt-8">
-                  <img
-                    src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&q=80"
-                    alt="Modern property"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-xl p-4 shadow-lg">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🏠</span>
-                  </div>
-                  <div>
-                    <div className="text-sm font-bold text-gray-900">Own a Share</div>
-                    <div className="text-xs text-gray-500">From 1/8th to 1/4</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Destinations Section */}
       {featuredDestinations.length > 0 && (
@@ -703,7 +637,7 @@ export default async function Home() {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li><Link href="/what-is-fractional-work" className="hover:text-gray-900">What is Fractional Work?</Link></li>
                 <li><Link href="/how-it-works" className="hover:text-gray-900">How It Works</Link></li>
-                <li><Link href="/fractional-ownership-guide" className="hover:text-gray-900">Fractional Ownership</Link></li>
+
                 <li><Link href="/fractional-jobs-articles" className="hover:text-gray-900">All Guides</Link></li>
               </ul>
             </div>

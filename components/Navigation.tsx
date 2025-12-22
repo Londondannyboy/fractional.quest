@@ -24,7 +24,7 @@ export function Navigation() {
     { href: '/destinations', label: 'Destinations' },
     { href: '/people', label: 'People' },
     { href: '/fractional-services', label: 'Services' },
-    { href: '/fractional-ownership-guide', label: 'Property' },
+
     { href: '/fractional-jobs-articles', label: 'Resources' }
   ]
 

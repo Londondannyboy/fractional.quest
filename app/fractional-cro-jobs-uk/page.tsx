@@ -9,33 +9,33 @@ import { RoleContentHub } from '@/components/RoleContentHub'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Compliance Jobs UK | Part-Time Compliance Roles',
-  description: 'Fractional Compliance jobs UK - Find part-time Compliance Officer positions paying £500-£900/day. Browse live compliance roles for experienced professionals. Remote & hybrid available.',
-  keywords: 'fractional compliance jobs, fractional compliance officer jobs uk, part time compliance officer, fractional compliance roles, part time compliance jobs, compliance consultant jobs',
+  title: 'Fractional CRO Jobs UK | Part-Time Chief Revenue Officer Roles',
+  description: 'Fractional CRO jobs UK - Find part-time Chief Revenue Officer positions paying £1,000-£1,800/day. Browse live CRO roles for experienced sales & growth leaders. Remote & hybrid available.',
+  keywords: 'fractional cro jobs, fractional cro jobs uk, part time cro, part-time chief revenue officer, cro part time, fractional cro opportunities, fractional sales jobs, head of sales part time',
   alternates: {
-    canonical: 'https://fractional.quest/fractional-compliance-jobs-uk',
+    canonical: 'https://fractional.quest/fractional-cro-jobs-uk',
   },
   openGraph: {
-    title: 'Fractional Compliance Jobs UK | Part-Time Compliance Roles',
-    description: 'Fractional Compliance jobs UK - Find part-time Compliance Officer positions paying £500-£900/day. Remote & hybrid available.',
-    images: ['/images/fractional-compliance-jobs-uk.jpg'],
-    url: 'https://fractional.quest/fractional-compliance-jobs-uk',
+    title: 'Fractional CRO Jobs UK | Part-Time Chief Revenue Officer Roles',
+    description: 'Fractional CRO jobs UK - Find part-time CRO positions paying £1,000-£1,800/day. Remote & hybrid available.',
+    images: ['/images/fractional-cro-jobs-uk.jpg'],
+    url: 'https://fractional.quest/fractional-cro-jobs-uk',
   },
 }
 
-async function getComplianceStats() {
+async function getCROStats() {
   try {
     const sql = createDbQuery()
     const [totalResult, remoteResult] = await Promise.all([
-      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category = 'Compliance' OR title ILIKE '%Compliance%')`,
-      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category = 'Compliance' OR title ILIKE '%Compliance%') AND (is_remote = true OR workplace_type = 'Remote')`
+      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category = 'Sales' OR title ILIKE '%CRO%' OR title ILIKE '%Chief Revenue%')`,
+      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category = 'Sales' OR title ILIKE '%CRO%' OR title ILIKE '%Chief Revenue%') AND (is_remote = true OR workplace_type = 'Remote')`
     ])
     return {
       total: parseInt((totalResult[0] as any)?.count || '0'),
       remoteCount: parseInt((remoteResult[0] as any)?.count || '0')
     }
   } catch {
-    return { total: 20, remoteCount: 8 }
+    return { total: 28, remoteCount: 10 }
   }
 }
 
@@ -45,7 +45,7 @@ async function getFeaturedCompanies() {
     const companies = await sql`
       SELECT DISTINCT company_name
       FROM jobs
-      WHERE is_active = true AND role_category = 'Compliance' AND company_name IS NOT NULL
+      WHERE is_active = true AND role_category = 'Sales' AND company_name IS NOT NULL
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 8
     `
@@ -56,7 +56,7 @@ async function getFeaturedCompanies() {
 }
 
 // Server-side job fetch for SEO
-async function getComplianceJobs() {
+async function getCROJobs() {
   try {
     const sql = createDbQuery()
     const jobs = await sql`
@@ -65,7 +65,7 @@ async function getComplianceJobs() {
         compensation, role_category, skills_required, posted_date, hours_per_week,
         description_snippet
       FROM jobs
-      WHERE is_active = true AND role_category = 'Compliance'
+      WHERE is_active = true AND role_category = 'Sales'
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 12
     `
@@ -83,30 +83,30 @@ function getDaysAgo(postedDate: string | null): number | undefined {
   return Math.floor(diffTime / (1000 * 60 * 60 * 24))
 }
 
-const COMPLIANCE_FAQS = [
+const CRO_FAQS = [
   {
-    question: 'What is a Fractional Compliance Officer?',
-    answer: 'A Fractional Compliance Officer is an experienced professional who manages a company\'s regulatory obligations on a part-time basis. They ensure the business adheres to laws and regulations (like FCA rules or GDPR) without the cost of a full-time hire.',
+    question: 'What is a Fractional CRO?',
+    answer: 'A Fractional CRO (Chief Revenue Officer) is an experienced sales and growth executive who works with companies on a part-time basis. They align sales, marketing, and customer success teams to drive revenue growth, without the cost of a full-time hire.',
   },
   {
-    question: 'How much do Fractional Compliance jobs pay?',
-    answer: 'Day rates for Fractional Compliance Officers in the UK typically range from £500 to £900. Senior roles (Head of Compliance) or those in complex sectors like FinTech can command higher rates.',
+    question: 'How much do Fractional CRO jobs pay in the UK?',
+    answer: 'Fractional CRO day rates in the UK are among the highest for fractional roles, ranging from £1,000 to £1,800 per day. This reflects the direct impact they have on the company\'s bottom line and growth trajectory.',
   },
   {
-    question: 'Which industries hire Fractional Compliance Officers?',
-    answer: 'Financial Services (FinTech, Wealth Management), Healthcare, Insurance, and Legal sectors are the biggest employers. Any regulated industry needs compliance oversight, making fractional roles common.',
+    question: 'What does a Fractional CRO do?',
+    answer: 'They oversee the entire revenue engine. This includes setting sales strategy, optimising pricing, managing the sales team, aligning marketing with sales, implementing RevOps systems, and reducing churn through customer success initiatives.',
   },
   {
-    question: 'Is this role suitable for remote work?',
-    answer: 'Yes, much compliance work involves policy writing, monitoring, and reporting, which can be done remotely. However, site visits or audits may require some travel.',
+    question: 'When should a company hire a Fractional CRO?',
+    answer: 'Companies often hire a Fractional CRO when they have hit a revenue plateau, are preparing for a major funding round and need to show predictable growth, or when the founder can no longer manage sales alongside other duties.',
   },
 ]
 
-export default async function FractionalComplianceJobsUkPage() {
+export default async function FractionalCroJobsUkPage() {
   const [stats, companies, jobs] = await Promise.all([
-    getComplianceStats(),
+    getCROStats(),
     getFeaturedCompanies(),
-    getComplianceJobs()
+    getCROJobs()
   ])
 
   return (
@@ -116,10 +116,10 @@ export default async function FractionalComplianceJobsUkPage() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1920&q=80')`,
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-800/90 via-slate-700/80 to-gray-800/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-green-900/90 via-green-800/80 to-teal-900/70" />
         </div>
         <div className="relative z-10 w-full py-16">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -128,14 +128,14 @@ export default async function FractionalComplianceJobsUkPage() {
             </Link>
             <div className="max-w-4xl">
               <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-                Regulatory Compliance
+                Revenue Leadership
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Fractional Compliance Jobs UK
+                Fractional CRO Jobs UK
               </h1>
               <p className="text-xl text-white/90 leading-relaxed max-w-2xl mb-8">
-                Part-time Compliance Officer roles for experienced professionals.
-                Manage risk and regulation for 1-3 days a week.
+                Part-time Chief Revenue Officer roles for experienced growth leaders.
+                Drive sales strategy and revenue alignment for 1-3 days a week.
               </p>
               <div className="flex flex-wrap gap-4 mb-10">
                 <div className="bg-white/10 backdrop-blur rounded-xl px-6 py-4">
@@ -143,7 +143,7 @@ export default async function FractionalComplianceJobsUkPage() {
                   <div className="text-white/80 text-sm">Live Roles</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-xl px-6 py-4">
-                  <div className="text-3xl font-bold text-white">£750</div>
+                  <div className="text-3xl font-bold text-white">£1,400</div>
                   <div className="text-white/80 text-sm">Avg Day Rate</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-xl px-6 py-4">
@@ -152,11 +152,11 @@ export default async function FractionalComplianceJobsUkPage() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-4">
-                <Link href="#jobs" className="px-8 py-4 bg-white text-slate-800 font-bold rounded-lg hover:bg-gray-100 transition-colors">
+                <Link href="#jobs" className="px-8 py-4 bg-white text-green-900 font-bold rounded-lg hover:bg-gray-100 transition-colors">
                   Browse Jobs
                 </Link>
-                <Link href="/fractional-cco-jobs-uk" className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
-                  CCO Jobs
+                <Link href="/fractional-sales-director-jobs-uk" className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+                  Sales Director Jobs
                 </Link>
               </div>
             </div>
@@ -171,7 +171,7 @@ export default async function FractionalComplianceJobsUkPage() {
              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
             <h2 className="text-2xl md:text-3xl font-black text-gray-900">Earnings Calculator</h2>
           </div>
-          <RoleCalculator role="cfo" /> 
+          <RoleCalculator role="cmo" /> 
         </div>
       </section>
 
@@ -181,9 +181,9 @@ export default async function FractionalComplianceJobsUkPage() {
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Browse</span>
-              <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional Compliance Jobs UK Listings</h2>
+              <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional CRO Jobs UK Listings</h2>
             </div>
-            <p className="text-gray-500">{jobs.length}+ live fractional compliance jobs in the UK</p>
+            <p className="text-gray-500">{jobs.length}+ live fractional CRO jobs in the UK</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
@@ -193,8 +193,8 @@ export default async function FractionalComplianceJobsUkPage() {
                 className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow"
               >
                 <Link href={`/fractional-job/${job.slug}`} className="block">
-                  <div className="relative h-40 bg-gradient-to-br from-slate-500 to-gray-600">
-                    <div className="absolute inset-0 flex items-center justify-center text-white/10 text-6xl font-black">COMP</div>
+                  <div className="relative h-40 bg-gradient-to-br from-green-600 to-emerald-700">
+                    <div className="absolute inset-0 flex items-center justify-center text-white/10 text-6xl font-black">CRO</div>
                     <div className="absolute bottom-3 left-3 right-3">
                       <h3 className="text-white font-bold text-lg line-clamp-2" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
                         {job.title}
@@ -202,7 +202,7 @@ export default async function FractionalComplianceJobsUkPage() {
                     </div>
                      <div className="absolute top-3 left-3 flex gap-2">
                       {getDaysAgo(job.posted_date) !== undefined && getDaysAgo(job.posted_date)! <= 3 && (
-                        <span className="bg-slate-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        <span className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                           New
                         </span>
                       )}
@@ -221,8 +221,8 @@ export default async function FractionalComplianceJobsUkPage() {
                      {job.description_snippet && (
                       <p className="text-sm text-gray-600 line-clamp-2 mb-3">{job.description_snippet}</p>
                     )}
-                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-600 hover:text-slate-700">
-                      View fractional compliance job →
+                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-green-600 hover:text-green-700">
+                      View fractional CRO job →
                     </span>
                   </div>
                 </Link>
@@ -232,10 +232,10 @@ export default async function FractionalComplianceJobsUkPage() {
 
           <div className="text-center">
             <Link
-              href="/fractional-jobs-uk?department=Compliance"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-slate-600 text-white font-bold rounded-lg hover:bg-slate-700 transition-colors"
+              href="/fractional-jobs-uk?department=Sales"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-green-700 text-white font-bold rounded-lg hover:bg-green-800 transition-colors"
             >
-              View All {stats.total}+ Fractional Compliance Jobs UK
+              View All {stats.total}+ Fractional CRO Jobs UK
             </Link>
           </div>
         </div>
@@ -247,36 +247,36 @@ export default async function FractionalComplianceJobsUkPage() {
           <div className="mb-16">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-4 block">The Guide</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
-              A Guide to <span className="text-slate-600">Fractional Compliance Jobs UK</span>
+              A Guide to <span className="text-green-600">Fractional CRO Jobs UK</span>
             </h2>
-            <div className="w-24 h-1 bg-slate-600"></div>
+            <div className="w-24 h-1 bg-green-900"></div>
           </div>
           
           <article className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              <strong className="font-semibold text-gray-900">Fractional Compliance Officer jobs</strong> are essential for keeping UK businesses on the right side of the law. Whether it's AML checks in FinTech or CQC standards in Healthcare, these part-time roles provide the oversight needed for safe, legal growth.
+              <strong className="font-semibold text-gray-900">Fractional CRO jobs</strong> are for the architects of growth. A part-time Chief Revenue Officer unifies sales, marketing, and customer success under one strategic vision, driving predictable revenue generation for high-growth companies.
             </p>
             
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Why the Need?</h3>
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">The Revenue Engine Architect</h3>
             <p>
-              Regulation is becoming more complex, not less. But for many SMEs, a full-time compliance team is overkill. A <strong className="font-semibold">Fractional Compliance Officer</strong> offers a "Goldilocks" solution: the right amount of expertise for the right amount of time. They set up the frameworks, train the staff, and conduct the audits that keep the regulators happy.
+              In many UK startups and scale-ups, sales and marketing operate in silos. A <strong className="font-semibold">Fractional CRO</strong> bridges this divide. Unlike a Sales Director who focuses on closing deals, a CRO focuses on the entire customer lifecycle—from acquisition to retention. Hiring a fractional CRO allows smaller companies to access this high-level strategic alignment without the £200k+ cost of a full-time executive.
             </p>
 
-             <div className="bg-gray-50 p-8 my-10 border-l-4 border-slate-600">
-              <p className="text-xl font-semibold text-gray-900 mb-0">"Compliance isn\'t just a cost centre; it\'s a licence to operate. Fractional experts secure that licence efficiently."</p>
+             <div className="bg-gray-50 p-8 my-10 border-l-4 border-green-900">
+              <p className="text-xl font-semibold text-gray-900 mb-0">"A Fractional CRO doesn't just manage sales; they build the machine that makes revenue predictable and scalable."</p>
             </div>
 
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Key Tasks</h3>
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">What Sets CROs Apart?</h3>
             <ul className="space-y-3">
-              <li><strong>Policy Development:</strong> Writing and updating the employee handbooks and compliance manuals.</li>
-              <li><strong>Monitoring & Testing:</strong> Checking that the rules are actually being followed (e.g., call monitoring, file reviews).</li>
-              <li><strong>Training:</strong> Educating staff on their responsibilities (e.g., anti-bribery, data protection).</li>
-              <li><strong>Regulatory Reporting:</strong> Submitting required returns to bodies like the FCA.</li>
+              <li><strong>Full Funnel Accountability:</strong> Owning the journey from lead generation (Marketing) to close (Sales) and renewal (CS).</li>
+              <li><strong>RevOps Focus:</strong> Implementing the data, systems, and tools (Salesforce, HubSpot) that provide visibility into the pipeline.</li>
+              <li><strong>Pricing Strategy:</strong> Optimising pricing models and packaging to maximise Average Revenue Per User (ARPU).</li>
+              <li><strong>Go-to-Market Strategy:</strong> defining the target market and the most effective channels to reach them.</li>
             </ul>
 
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Career Path</h3>
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Market Outlook</h3>
             <p>
-              For compliance professionals, <Link href="/fractional-compliance-jobs-uk" className="text-slate-600 hover:text-slate-800 underline">fractional work</Link> offers variety and high day rates. It's a way to escape the grind of a single large institution and make a tangible impact across multiple growing businesses.
+              Demand for <Link href="/fractional-cro-jobs-uk" className="text-green-600 hover:text-green-800 underline">fractional revenue leaders</Link> is surging in the UK's B2B SaaS sector, where the "growth at all costs" mindset has shifted to "efficient growth." Investors now demand clear unit economics and retention metrics—the exact expertise a Fractional CRO provides.
             </p>
           </article>
         </div>
@@ -284,7 +284,7 @@ export default async function FractionalComplianceJobsUkPage() {
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <RoleNews category="Compliance" title="Latest Compliance News" limit={3} />
+          <RoleNews category="Sales" title="Latest Sales & Revenue News" limit={3} />
         </div>
       </section>
 
@@ -293,25 +293,26 @@ export default async function FractionalComplianceJobsUkPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Common Questions About Fractional Compliance Jobs</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Common Questions About Fractional CRO Jobs</h2>
           </div>
-          <FAQ items={COMPLIANCE_FAQS} title="" />
+          <FAQ items={CRO_FAQS} title="" />
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-slate-800 text-white">
+      <section className="py-20 md:py-28 bg-green-900 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-300 mb-4 block">Ready?</span>
-          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Find Your Next<br /><span className="text-slate-400">Fractional Compliance Role</span></h2>
-          <p className="text-xl text-slate-100 mb-10 max-w-2xl mx-auto">Create your profile and get matched with companies seeking compliance experts.</p>
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-green-300 mb-4 block">Ready?</span>
+          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Find Your Next<br /><span className="text-green-400">Fractional CRO Role</span></h2>
+          <p className="text-xl text-green-100 mb-10 max-w-2xl mx-auto">Create your profile and get matched with companies seeking revenue leadership.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/handler/sign-up" className="px-10 py-5 bg-white text-slate-800 font-bold uppercase tracking-wider hover:bg-slate-50 transition-colors">Create Profile</Link>
+            <Link href="/handler/sign-up" className="px-10 py-5 bg-white text-green-900 font-bold uppercase tracking-wider hover:bg-green-50 transition-colors">Create Profile</Link>
           </div>
         </div>
       </section>
 
-      <RoleContentHub currentRole="compliance" /> 
+      <RoleContentHub currentRole="cmo" /> 
+      {/* Mapped to CMO for now as CRO isn't in role hub specifically, or I can add it later */}
     </div>
   )
 }

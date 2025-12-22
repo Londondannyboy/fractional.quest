@@ -9,33 +9,33 @@ import { RoleContentHub } from '@/components/RoleContentHub'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Compliance Jobs UK | Part-Time Compliance Roles',
-  description: 'Fractional Compliance jobs UK - Find part-time Compliance Officer positions paying £500-£900/day. Browse live compliance roles for experienced professionals. Remote & hybrid available.',
-  keywords: 'fractional compliance jobs, fractional compliance officer jobs uk, part time compliance officer, fractional compliance roles, part time compliance jobs, compliance consultant jobs',
+  title: 'Fractional Finance Director Jobs UK | Part-Time FD Roles',
+  description: 'Fractional Finance Director jobs UK - Find part-time FD positions paying £600-£1,000/day. Browse live Finance Director roles for experienced finance leaders. Remote & hybrid available.',
+  keywords: 'fractional finance director jobs, fractional fd jobs uk, part time finance director, fractional fd roles, part time fd jobs, finance director part time',
   alternates: {
-    canonical: 'https://fractional.quest/fractional-compliance-jobs-uk',
+    canonical: 'https://fractional.quest/fractional-finance-director-jobs-uk',
   },
   openGraph: {
-    title: 'Fractional Compliance Jobs UK | Part-Time Compliance Roles',
-    description: 'Fractional Compliance jobs UK - Find part-time Compliance Officer positions paying £500-£900/day. Remote & hybrid available.',
-    images: ['/images/fractional-compliance-jobs-uk.jpg'],
-    url: 'https://fractional.quest/fractional-compliance-jobs-uk',
+    title: 'Fractional Finance Director Jobs UK | Part-Time FD Roles',
+    description: 'Fractional Finance Director jobs UK - Find part-time FD positions paying £600-£1,000/day. Remote & hybrid available.',
+    images: ['/images/fractional-finance-director-jobs-uk.jpg'],
+    url: 'https://fractional.quest/fractional-finance-director-jobs-uk',
   },
 }
 
-async function getComplianceStats() {
+async function getFDStats() {
   try {
     const sql = createDbQuery()
     const [totalResult, remoteResult] = await Promise.all([
-      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category = 'Compliance' OR title ILIKE '%Compliance%')`,
-      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category = 'Compliance' OR title ILIKE '%Compliance%') AND (is_remote = true OR workplace_type = 'Remote')`
+      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category = 'Finance' OR title ILIKE '%Finance Director%' OR title ILIKE '%FD%')`,
+      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category = 'Finance' OR title ILIKE '%Finance Director%' OR title ILIKE '%FD%') AND (is_remote = true OR workplace_type = 'Remote')`
     ])
     return {
       total: parseInt((totalResult[0] as any)?.count || '0'),
       remoteCount: parseInt((remoteResult[0] as any)?.count || '0')
     }
   } catch {
-    return { total: 20, remoteCount: 8 }
+    return { total: 35, remoteCount: 15 }
   }
 }
 
@@ -45,7 +45,7 @@ async function getFeaturedCompanies() {
     const companies = await sql`
       SELECT DISTINCT company_name
       FROM jobs
-      WHERE is_active = true AND role_category = 'Compliance' AND company_name IS NOT NULL
+      WHERE is_active = true AND (role_category = 'Finance' OR title ILIKE '%Finance Director%') AND company_name IS NOT NULL
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 8
     `
@@ -56,7 +56,7 @@ async function getFeaturedCompanies() {
 }
 
 // Server-side job fetch for SEO
-async function getComplianceJobs() {
+async function getFDJobs() {
   try {
     const sql = createDbQuery()
     const jobs = await sql`
@@ -65,7 +65,7 @@ async function getComplianceJobs() {
         compensation, role_category, skills_required, posted_date, hours_per_week,
         description_snippet
       FROM jobs
-      WHERE is_active = true AND role_category = 'Compliance'
+      WHERE is_active = true AND (role_category = 'Finance' OR title ILIKE '%Finance Director%' OR title ILIKE '%FD%')
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 12
     `
@@ -83,30 +83,30 @@ function getDaysAgo(postedDate: string | null): number | undefined {
   return Math.floor(diffTime / (1000 * 60 * 60 * 24))
 }
 
-const COMPLIANCE_FAQS = [
+const FD_FAQS = [
   {
-    question: 'What is a Fractional Compliance Officer?',
-    answer: 'A Fractional Compliance Officer is an experienced professional who manages a company\'s regulatory obligations on a part-time basis. They ensure the business adheres to laws and regulations (like FCA rules or GDPR) without the cost of a full-time hire.',
+    question: 'What is a Fractional Finance Director?',
+    answer: 'A Fractional Finance Director (FD) is an experienced finance leader who manages the financial operations of a company part-time. They oversee reporting, cash flow, compliance, and the finance team, providing steady leadership without the cost of a full-time hire.',
   },
   {
-    question: 'How much do Fractional Compliance jobs pay?',
-    answer: 'Day rates for Fractional Compliance Officers in the UK typically range from £500 to £900. Senior roles (Head of Compliance) or those in complex sectors like FinTech can command higher rates.',
+    question: 'How much do Fractional FD jobs pay in the UK?',
+    answer: 'Fractional FD day rates in the UK generally range from £600 to £1,000 per day. This is often slightly lower than a Fractional CFO rate, reflecting the more operational nature of the role.',
   },
   {
-    question: 'Which industries hire Fractional Compliance Officers?',
-    answer: 'Financial Services (FinTech, Wealth Management), Healthcare, Insurance, and Legal sectors are the biggest employers. Any regulated industry needs compliance oversight, making fractional roles common.',
+    question: 'What is the difference between a Fractional FD and a Fractional CFO?',
+    answer: 'In the UK, an FD is typically more internally focused on operations, controls, and reporting. A CFO is more strategic, focused on fundraising, M&A, and investor relations. Many SMEs hire a Fractional FD first, then upgrade to a CFO as they prepare for major growth or investment.',
   },
   {
-    question: 'Is this role suitable for remote work?',
-    answer: 'Yes, much compliance work involves policy writing, monitoring, and reporting, which can be done remotely. However, site visits or audits may require some travel.',
+    question: 'What qualifications are required?',
+    answer: 'Almost all Fractional FD roles require a recognised accountancy qualification (ACA, ACCA, CIMA) and significant post-qualification experience, often including prior FD roles in relevant industries.',
   },
 ]
 
-export default async function FractionalComplianceJobsUkPage() {
+export default async function FractionalFinanceDirectorJobsUkPage() {
   const [stats, companies, jobs] = await Promise.all([
-    getComplianceStats(),
+    getFDStats(),
     getFeaturedCompanies(),
-    getComplianceJobs()
+    getFDJobs()
   ])
 
   return (
@@ -116,10 +116,10 @@ export default async function FractionalComplianceJobsUkPage() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1920&q=80')`,
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-800/90 via-slate-700/80 to-gray-800/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-800/90 via-blue-700/80 to-sky-900/70" />
         </div>
         <div className="relative z-10 w-full py-16">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -128,14 +128,14 @@ export default async function FractionalComplianceJobsUkPage() {
             </Link>
             <div className="max-w-4xl">
               <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-                Regulatory Compliance
+                Operational Finance
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Fractional Compliance Jobs UK
+                Fractional Finance Director Jobs UK
               </h1>
               <p className="text-xl text-white/90 leading-relaxed max-w-2xl mb-8">
-                Part-time Compliance Officer roles for experienced professionals.
-                Manage risk and regulation for 1-3 days a week.
+                Part-time Finance Director roles for experienced finance leaders.
+                Manage financial operations and reporting for 2-3 days a week.
               </p>
               <div className="flex flex-wrap gap-4 mb-10">
                 <div className="bg-white/10 backdrop-blur rounded-xl px-6 py-4">
@@ -143,7 +143,7 @@ export default async function FractionalComplianceJobsUkPage() {
                   <div className="text-white/80 text-sm">Live Roles</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-xl px-6 py-4">
-                  <div className="text-3xl font-bold text-white">£750</div>
+                  <div className="text-3xl font-bold text-white">£800</div>
                   <div className="text-white/80 text-sm">Avg Day Rate</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-xl px-6 py-4">
@@ -152,11 +152,11 @@ export default async function FractionalComplianceJobsUkPage() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-4">
-                <Link href="#jobs" className="px-8 py-4 bg-white text-slate-800 font-bold rounded-lg hover:bg-gray-100 transition-colors">
+                <Link href="#jobs" className="px-8 py-4 bg-white text-blue-900 font-bold rounded-lg hover:bg-gray-100 transition-colors">
                   Browse Jobs
                 </Link>
-                <Link href="/fractional-cco-jobs-uk" className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
-                  CCO Jobs
+                <Link href="/fractional-cfo-jobs-uk" className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+                  CFO Jobs
                 </Link>
               </div>
             </div>
@@ -181,9 +181,9 @@ export default async function FractionalComplianceJobsUkPage() {
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Browse</span>
-              <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional Compliance Jobs UK Listings</h2>
+              <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional FD Jobs UK Listings</h2>
             </div>
-            <p className="text-gray-500">{jobs.length}+ live fractional compliance jobs in the UK</p>
+            <p className="text-gray-500">{jobs.length}+ live fractional FD jobs in the UK</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
@@ -193,8 +193,8 @@ export default async function FractionalComplianceJobsUkPage() {
                 className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow"
               >
                 <Link href={`/fractional-job/${job.slug}`} className="block">
-                  <div className="relative h-40 bg-gradient-to-br from-slate-500 to-gray-600">
-                    <div className="absolute inset-0 flex items-center justify-center text-white/10 text-6xl font-black">COMP</div>
+                  <div className="relative h-40 bg-gradient-to-br from-blue-700 to-sky-800">
+                    <div className="absolute inset-0 flex items-center justify-center text-white/10 text-6xl font-black">FD</div>
                     <div className="absolute bottom-3 left-3 right-3">
                       <h3 className="text-white font-bold text-lg line-clamp-2" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
                         {job.title}
@@ -202,7 +202,7 @@ export default async function FractionalComplianceJobsUkPage() {
                     </div>
                      <div className="absolute top-3 left-3 flex gap-2">
                       {getDaysAgo(job.posted_date) !== undefined && getDaysAgo(job.posted_date)! <= 3 && (
-                        <span className="bg-slate-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        <span className="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full">
                           New
                         </span>
                       )}
@@ -221,8 +221,8 @@ export default async function FractionalComplianceJobsUkPage() {
                      {job.description_snippet && (
                       <p className="text-sm text-gray-600 line-clamp-2 mb-3">{job.description_snippet}</p>
                     )}
-                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-600 hover:text-slate-700">
-                      View fractional compliance job →
+                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-800 hover:text-blue-900">
+                      View fractional FD job →
                     </span>
                   </div>
                 </Link>
@@ -232,10 +232,10 @@ export default async function FractionalComplianceJobsUkPage() {
 
           <div className="text-center">
             <Link
-              href="/fractional-jobs-uk?department=Compliance"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-slate-600 text-white font-bold rounded-lg hover:bg-slate-700 transition-colors"
+              href="/fractional-jobs-uk?department=Finance"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-blue-800 text-white font-bold rounded-lg hover:bg-blue-900 transition-colors"
             >
-              View All {stats.total}+ Fractional Compliance Jobs UK
+              View All {stats.total}+ Fractional FD Jobs UK
             </Link>
           </div>
         </div>
@@ -247,36 +247,36 @@ export default async function FractionalComplianceJobsUkPage() {
           <div className="mb-16">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-4 block">The Guide</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
-              A Guide to <span className="text-slate-600">Fractional Compliance Jobs UK</span>
+              A Guide to <span className="text-blue-800">Fractional FD Jobs UK</span>
             </h2>
-            <div className="w-24 h-1 bg-slate-600"></div>
+            <div className="w-24 h-1 bg-blue-900"></div>
           </div>
           
           <article className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              <strong className="font-semibold text-gray-900">Fractional Compliance Officer jobs</strong> are essential for keeping UK businesses on the right side of the law. Whether it's AML checks in FinTech or CQC standards in Healthcare, these part-time roles provide the oversight needed for safe, legal growth.
+              <strong className="font-semibold text-gray-900">Fractional Finance Director jobs</strong> are a staple of the UK SME market. While startups often chase the title of "CFO," many established businesses need the operational rigour, control, and reporting focus of a classic Finance Director—delivered on a flexible, part-time basis.
             </p>
             
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Why the Need?</h3>
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Operational Finance Leadership</h3>
             <p>
-              Regulation is becoming more complex, not less. But for many SMEs, a full-time compliance team is overkill. A <strong className="font-semibold">Fractional Compliance Officer</strong> offers a "Goldilocks" solution: the right amount of expertise for the right amount of time. They set up the frameworks, train the staff, and conduct the audits that keep the regulators happy.
+              A <strong className="font-semibold">Fractional FD</strong> is the safe pair of hands every growing business needs. They professionalise the finance function, ensuring that management accounts are accurate, cash flow is forecasted, and the business is compliant with HMRC. Unlike a CFO who might spend time pitching to investors, an FD spends time ensuring the business engine is running smoothly.
             </p>
 
-             <div className="bg-gray-50 p-8 my-10 border-l-4 border-slate-600">
-              <p className="text-xl font-semibold text-gray-900 mb-0">"Compliance isn\'t just a cost centre; it\'s a licence to operate. Fractional experts secure that licence efficiently."</p>
+             <div className="bg-gray-50 p-8 my-10 border-l-4 border-blue-800">
+              <p className="text-xl font-semibold text-gray-900 mb-0">"Fractional FDs bring Big 4 discipline to SMEs, implementing the controls and reporting that allow owners to sleep at night."</p>
             </div>
 
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Key Tasks</h3>
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Key Responsibilities</h3>
             <ul className="space-y-3">
-              <li><strong>Policy Development:</strong> Writing and updating the employee handbooks and compliance manuals.</li>
-              <li><strong>Monitoring & Testing:</strong> Checking that the rules are actually being followed (e.g., call monitoring, file reviews).</li>
-              <li><strong>Training:</strong> Educating staff on their responsibilities (e.g., anti-bribery, data protection).</li>
-              <li><strong>Regulatory Reporting:</strong> Submitting required returns to bodies like the FCA.</li>
+              <li><strong>Financial Reporting:</strong> Producing timely, accurate monthly management packs for the board.</li>
+              <li><strong>Cash Management:</strong> detailed 13-week cash flow forecasting and working capital optimisation.</li>
+              <li><strong>Compliance:</strong> Overseeing VAT, payroll, annual accounts, and audit relationships.</li>
+              <li><strong>Team Management:</strong> Mentoring bookkeepers and finance assistants.</li>
             </ul>
 
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Career Path</h3>
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Who Hires Fractional FDs?</h3>
             <p>
-              For compliance professionals, <Link href="/fractional-compliance-jobs-uk" className="text-slate-600 hover:text-slate-800 underline">fractional work</Link> offers variety and high day rates. It's a way to escape the grind of a single large institution and make a tangible impact across multiple growing businesses.
+              This is perhaps the broadest market. Manufacturing, Logistics, Construction, and Professional Services firms all heavily rely on <Link href="/fractional-finance-director-jobs-uk" className="text-blue-800 hover:text-blue-900 underline">fractional finance directors</Link>. Any business with £2m-£20m turnover that is too complex for a bookkeeper but too small for a full-time FD is a potential client.
             </p>
           </article>
         </div>
@@ -284,7 +284,7 @@ export default async function FractionalComplianceJobsUkPage() {
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <RoleNews category="Compliance" title="Latest Compliance News" limit={3} />
+          <RoleNews category="Finance" title="Latest Finance News" limit={3} />
         </div>
       </section>
 
@@ -293,25 +293,26 @@ export default async function FractionalComplianceJobsUkPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Common Questions About Fractional Compliance Jobs</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Common Questions About Fractional FD Jobs</h2>
           </div>
-          <FAQ items={COMPLIANCE_FAQS} title="" />
+          <FAQ items={FD_FAQS} title="" />
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-slate-800 text-white">
+      <section className="py-20 md:py-28 bg-blue-800 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-300 mb-4 block">Ready?</span>
-          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Find Your Next<br /><span className="text-slate-400">Fractional Compliance Role</span></h2>
-          <p className="text-xl text-slate-100 mb-10 max-w-2xl mx-auto">Create your profile and get matched with companies seeking compliance experts.</p>
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-blue-300 mb-4 block">Ready?</span>
+          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Find Your Next<br /><span className="text-blue-400">Fractional FD Role</span></h2>
+          <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">Create your profile and get matched with companies seeking finance leadership.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/handler/sign-up" className="px-10 py-5 bg-white text-slate-800 font-bold uppercase tracking-wider hover:bg-slate-50 transition-colors">Create Profile</Link>
+            <Link href="/handler/sign-up" className="px-10 py-5 bg-white text-blue-800 font-bold uppercase tracking-wider hover:bg-blue-700 transition-colors">Create Profile</Link>
           </div>
         </div>
       </section>
 
-      <RoleContentHub currentRole="compliance" /> 
+      <RoleContentHub currentRole="cfo" /> 
+      {/* Mapped to CFO */}
     </div>
   )
 }

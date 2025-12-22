@@ -21,9 +21,9 @@ const INTERNAL_LINKS: Record<ArticleCategory, { services: string; jobs: string; 
   Marketing: { services: '/fractional-cmo-services', jobs: '/fractional-cmo-jobs-uk', salary: '/fractional-cmo-salary' },
   Engineering: { services: '/fractional-cto-services', jobs: '/fractional-cto-jobs-uk' },
   Operations: { services: '/fractional-coo-services', jobs: '/fractional-coo-jobs-uk' },
-  HR: { services: '/fractional-chro-services', jobs: '/fractional-jobs?role=HR' },
-  Sales: { services: '/fractional-sales-director-services', jobs: '/fractional-jobs?role=Sales' },
-  General: { services: '/fractional-executive-services', jobs: '/fractional-jobs' }
+  HR: { services: '/fractional-chro-services', jobs: '/fractional-chro-jobs-uk' },
+  Sales: { services: '/fractional-cso-services', jobs: '/fractional-cso-jobs-uk' },
+  General: { services: '/fractional-ceo-services', jobs: '/fractional-ceo-jobs-uk' }
 }
 
 // Zod schema for generated article validation
