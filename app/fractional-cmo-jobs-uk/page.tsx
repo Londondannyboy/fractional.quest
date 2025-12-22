@@ -5,8 +5,9 @@ import { FAQ, CMO_FAQS } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
 import { DesktopOnly } from '@/components/DesktopOnly'
 import { IR35Calculator } from '@/components/IR35Calculator'
-import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
+import { FracSection } from '@/components/FracSection'
+import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
 
 export const revalidate = 3600
 
@@ -98,7 +99,7 @@ export default async function FractionalCmoJobsUkPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero with Aspirational Image */}
-      <section className="relative min-h-[55vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         {/* Background Image - Marketing professional */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -109,151 +110,97 @@ export default async function FractionalCmoJobsUkPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-amber-600/85 via-orange-500/70 to-pink-500/50" />
         </div>
         <div className="relative z-10 w-full py-16">
-          <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <Link href="/" className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors text-sm tracking-wide">
               <span className="mr-2">←</span> Back to Home
             </Link>
-            <div className="max-w-4xl">
-              <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-                Marketing Leadership
-              </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Fractional CMO Jobs UK
-              </h1>
-              <p className="text-xl text-white/90 leading-relaxed max-w-2xl mb-8">
-                Part-time Chief Marketing Officer roles for experienced marketing leaders.
-                Work 2-3 days a week at £700-£1,400/day.
-              </p>
-              <div className="flex flex-wrap gap-4 mb-10">
-                <div className="bg-white/10 backdrop-blur rounded-xl px-6 py-4">
-                  <div className="text-3xl font-bold text-white">{stats.total}+</div>
-                  <div className="text-white/80 text-sm">Live Roles</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur rounded-xl px-6 py-4">
-                  <div className="text-3xl font-bold text-white">£{stats.avgRate}</div>
-                  <div className="text-white/80 text-sm">Avg Day Rate</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur rounded-xl px-6 py-4">
-                  <div className="text-3xl font-bold text-white">{stats.remoteCount}</div>
-                  <div className="text-white/80 text-sm">Remote</div>
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
+              <div className="max-w-3xl">
+                <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+                  Marketing Leadership
+                </span>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                  Fractional CMO Jobs UK
+                </h1>
+                <p className="text-xl text-white/90 leading-relaxed max-w-2xl mb-8">
+                  Part-time Chief Marketing Officer roles for experienced marketing leaders.
+                  Work 2-3 days a week at £700-£1,400/day.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Link href="#jobs" className="px-8 py-4 bg-white text-amber-700 font-bold rounded-lg hover:bg-gray-100 transition-colors">
+                    Browse Jobs
+                  </Link>
+                  <Link href="/fractional-cmo-salary" className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
+                    Salary Guide
+                  </Link>
                 </div>
               </div>
-              <div className="flex flex-wrap gap-4">
-                <Link href="#jobs" className="px-8 py-4 bg-white text-amber-700 font-bold rounded-lg hover:bg-gray-100 transition-colors">
-                  Browse Jobs
-                </Link>
-                <Link href="/fractional-cmo-salary" className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
-                  Salary Guide
-                </Link>
+
+              {/* Frac Section Integration */}
+              <div className="hidden lg:block lg:w-80">
+                <FracSection title="Talk with Frac about CMO roles" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Calculator Section - Impressive Feature Right After Hero */}
-      <section className="py-12 bg-gray-50">
+      {/* Stats Bar */}
+      <section className="bg-gray-900 py-6 border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-3xl font-bold text-white">{stats.total}+</div>
+              <div className="text-sm text-gray-400">Live Roles</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-white">£{stats.avgRate}</div>
+              <div className="text-sm text-gray-400">Avg Day Rate</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-white">{stats.remoteCount}</div>
+              <div className="text-sm text-gray-400">Remote Roles</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-white">2-3 days</div>
+              <div className="text-sm text-gray-400">Avg Engagement</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* JOBS BOARD - Prominent at the top */}
+      <section id="jobs" className="py-12 md:py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <EmbeddedJobBoard 
+            defaultDepartment="Marketing" 
+            title="Latest Fractional CMO Jobs" 
+            pageSlug="fractional-cmo-jobs-uk"
+          />
+        </div>
+      </section>
+
+      {/* Server-rendered Jobs for SEO - sr-only */}
+      <section className="sr-only">
+        {jobs.map(job => (
+          <div key={job.id}>
+            <h3>{job.title} at {job.company_name}</h3>
+            <p>{job.description_snippet}</p>
+            <a href={`/fractional-job/${job.slug}`}>View Job</a>
+          </div>
+        ))}
+      </section>
+
+      {/* Calculator Section */}
+      <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-8 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Earnings</span>
             <h2 className="text-2xl md:text-3xl font-black text-gray-900">
               Fractional CMO Jobs UK Earnings Calculator
             </h2>
-            <p className="text-gray-600 mt-2">Calculate your potential earnings from fractional CMO jobs in the UK market</p>
           </div>
           <RoleCalculator role="cmo" />
-        </div>
-      </section>
-
-      {/* JOBS SECTION - Server-rendered for SEO */}
-      <section id="jobs" className="py-16 md:py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
-            <div>
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Browse</span>
-              <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional CMO Jobs UK Listings</h2>
-            </div>
-            <p className="text-gray-500">{jobs.length}+ live fractional CMO jobs in the UK</p>
-          </div>
-
-          {/* Server-rendered job grid - visible to search engines */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {jobs.slice(0, 9).map((job) => (
-              <article
-                key={job.id}
-                className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow"
-              >
-                <Link href={`/fractional-job/${job.slug}`} className="block">
-                  {/* Job image header */}
-                  <div className="relative h-40 bg-gradient-to-br from-amber-500 to-orange-600">
-                    <img
-                      src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=200&fit=crop"
-                      alt={`${job.title} - Fractional CMO job UK at ${job.company_name}`}
-                      className="w-full h-full object-cover opacity-60"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
-                    <div className="absolute bottom-3 left-3 right-3">
-                      <h3 className="text-white font-bold text-lg line-clamp-2" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
-                        {job.title}
-                      </h3>
-                    </div>
-                    {/* Badges */}
-                    <div className="absolute top-3 left-3 flex gap-2">
-                      {job.role_category && (
-                        <span className="bg-white/90 text-gray-900 text-xs font-bold px-2 py-1 rounded-full">
-                          {job.role_category}
-                        </span>
-                      )}
-                      {getDaysAgo(job.posted_date) !== undefined && getDaysAgo(job.posted_date)! <= 3 && (
-                        <span className="bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                          New
-                        </span>
-                      )}
-                    </div>
-                    {job.is_remote && (
-                      <span className="absolute top-3 right-3 bg-teal-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                        Remote
-                      </span>
-                    )}
-                  </div>
-                  {/* Job content */}
-                  <div className="p-4">
-                    <p className="text-gray-700 font-medium mb-2">{job.company_name}</p>
-                    <div className="flex items-center gap-3 text-sm text-gray-500 mb-3">
-                      <span className="flex items-center gap-1">
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        </svg>
-                        {job.location || 'UK'}
-                      </span>
-                      {job.compensation && (
-                        <span className="font-semibold text-gray-900">{job.compensation}</span>
-                      )}
-                    </div>
-                    {job.description_snippet && (
-                      <p className="text-sm text-gray-600 line-clamp-2 mb-3">{job.description_snippet}</p>
-                    )}
-                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-600 hover:text-amber-700">
-                      View fractional CMO job →
-                    </span>
-                  </div>
-                </Link>
-              </article>
-            ))}
-          </div>
-
-          {/* CTA to view all */}
-          <div className="text-center">
-            <Link
-              href="/fractional-jobs-uk?department=Marketing"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-amber-500 text-white font-bold rounded-lg hover:bg-amber-600 transition-colors"
-            >
-              View All {stats.total}+ Fractional CMO Jobs UK
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
         </div>
       </section>
 

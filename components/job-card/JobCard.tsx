@@ -367,6 +367,7 @@ export function JobCard({
         <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-gray-900 via-gray-900/90 to-transparent">
           <h3
             className="font-bold text-white text-lg leading-tight line-clamp-2 drop-shadow-lg"
+            style={{ color: '#ffffff', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}
           >
             {title}
           </h3>

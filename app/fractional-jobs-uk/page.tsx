@@ -5,7 +5,7 @@ import { createDbQuery } from '@/lib/db'
 import { JobCard } from '@/components/JobCard'
 import { FAQ } from '@/components/FAQ'
 import { RecommendedArticles } from '@/components/RecommendedArticles'
-import { PropertyOverlay } from '@/components/PropertyOverlay'
+import { FracSection } from '@/components/FracSection'
 import { JobSearch } from '@/components/JobSearch'
 
 import { CalculatorSkeleton } from '@/components/ui/Skeleton'
@@ -375,9 +375,9 @@ export default async function FractionalJobsUKPage() {
               </div>
             </div>
 
-            {/* Property Overlay */}
-            <div className="hidden lg:block lg:w-72">
-              <PropertyOverlay variant="dark" />
+            {/* Frac Section */}
+            <div className="hidden lg:block lg:w-80">
+              <FracSection title="Talk with Frac" />
             </div>
           </div>
         </div>
@@ -822,68 +822,7 @@ export default async function FractionalJobsUKPage() {
         </div>
       </section>
 
-      {/* Fractional News Section */}
-      <section className="py-16 md:py-20 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-xs font-medium uppercase tracking-wider text-gray-500 mb-4 block">Latest News</span>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Fractional Jobs News</h2>
-            <p className="text-gray-600 text-base max-w-2xl mx-auto">
-              Stay updated with the latest fractional jobs news and industry trends from across the UK
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link
-              href="/fractional-news-flexibility-ownership"
-              className="bg-white rounded-xl p-6 border border-gray-200 hover:border-blue-600 transition-colors group"
-            >
-              <span className="text-xs text-blue-600 font-medium uppercase tracking-wider">Market Trends</span>
-              <h3 className="text-lg font-bold text-gray-900 mt-2 mb-3 group-hover:text-blue-600 transition-colors">
-                How Flexibility Is Reshaping the Future of Fractional Ownership
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                From executive leadership to luxury assets, the fractional model is revolutionising how businesses access premium resources.
-              </p>
-            </Link>
-
-            <Link
-              href="/fractional-news-hr-leadership-benefits"
-              className="bg-white rounded-xl p-6 border border-gray-200 hover:border-blue-600 transition-colors group"
-            >
-              <span className="text-xs text-blue-600 font-medium uppercase tracking-wider">HR Leadership</span>
-              <h3 className="text-lg font-bold text-gray-900 mt-2 mb-3 group-hover:text-blue-600 transition-colors">
-                How Fractional HR Leadership Benefits Your Organisation
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Understanding the growing demand for fractional HR executives and interim support in modern businesses.
-              </p>
-            </Link>
-
-            <Link
-              href="/fractional-news-millennials-trends"
-              className="bg-white rounded-xl p-6 border border-gray-200 hover:border-blue-600 transition-colors group"
-            >
-              <span className="text-xs text-blue-600 font-medium uppercase tracking-wider">Industry Trends</span>
-              <h3 className="text-lg font-bold text-gray-900 mt-2 mb-3 group-hover:text-blue-600 transition-colors">
-                Millennials Driving Fractional Investment Trends
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                How younger professionals are embracing fractional models for careers and investments.
-              </p>
-            </Link>
-          </div>
-
-          <div className="text-center mt-8">
-            <Link
-              href="/fractional-jobs-articles"
-              className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
-            >
-              View All Articles →
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Internal Links - Subtle footer */}
       <section className="py-12 md:py-16 bg-white border-t border-gray-200">

@@ -20,9 +20,8 @@ export function Navigation() {
   }, [])
 
   const navLinks = [
-    { href: '/fractional-jobs', label: 'Jobs' },
-    { href: '/destinations', label: 'Destinations' },
-    { href: '/people', label: 'People' },
+    { href: '/fractional-jobs-uk', label: 'Jobs' },
+    { href: '/frac', label: 'Talk to Frac' },
     { href: '/fractional-services', label: 'Services' },
 
     { href: '/fractional-jobs-articles', label: 'Resources' }

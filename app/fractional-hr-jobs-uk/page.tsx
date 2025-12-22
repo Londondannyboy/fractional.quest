@@ -9,6 +9,7 @@ import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { DesktopOnly } from '@/components/DesktopOnly'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
+import { FracSection } from '@/components/FracSection'
 
 export const revalidate = 3600
 
@@ -91,49 +92,56 @@ export default async function FractionalHrJobsUkPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Editorial Hero with 3D Knowledge Graph */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
+      {/* Editorial Hero with 3D Knowledge Graph & Frac */}
+      <section className="relative min-h-[75vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <JobsGraph3D categoryFilter="HR" limit={25} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="relative z-10 w-full py-20">
-          <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <Link href="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm tracking-wide">
               <span className="mr-2">←</span> Back to Home
             </Link>
-            <div className="max-w-4xl">
-              <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-                People Leadership
-              </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
-                Fractional HR<br />
-                <span className="text-pink-400">Jobs UK</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mb-8">
-                <strong className="text-white">Fractional HR jobs UK</strong> for experienced people leaders.
-                Part-time CHRO & HR Director roles paying £700-£1,300/day.
-              </p>
-              <div className="flex flex-wrap gap-8 mb-10">
-                <div>
-                  <div className="text-4xl md:text-5xl font-black text-pink-400">{stats.total}+</div>
-                  <div className="text-white/60 text-sm uppercase tracking-wider">Live Roles</div>
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
+              <div className="max-w-4xl">
+                <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
+                  People Leadership
+                </span>
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
+                  Fractional HR<br />
+                  <span className="text-pink-400">Jobs UK</span>
+                </h1>
+                <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mb-8">
+                  <strong className="text-white">Fractional HR jobs UK</strong> for experienced people leaders.
+                  Part-time CHRO & HR Director roles paying £700-£1,300/day.
+                </p>
+                <div className="flex flex-wrap gap-8 mb-10">
+                  <div>
+                    <div className="text-4xl md:text-5xl font-black text-pink-400">{stats.total}+</div>
+                    <div className="text-white/60 text-sm uppercase tracking-wider">Live Roles</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl md:text-5xl font-black text-white">£950</div>
+                    <div className="text-white/60 text-sm uppercase tracking-wider">Avg Day Rate</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl md:text-5xl font-black text-white">{stats.remoteCount}</div>
+                    <div className="text-white/60 text-sm uppercase tracking-wider">Remote</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-4xl md:text-5xl font-black text-white">£950</div>
-                  <div className="text-white/60 text-sm uppercase tracking-wider">Avg Day Rate</div>
-                </div>
-                <div>
-                  <div className="text-4xl md:text-5xl font-black text-white">{stats.remoteCount}</div>
-                  <div className="text-white/60 text-sm uppercase tracking-wider">Remote</div>
+                <div className="flex flex-wrap gap-4">
+                  <Link href="#jobs" className="px-8 py-4 bg-pink-500 text-white font-bold uppercase tracking-wider hover:bg-pink-400 transition-colors">
+                    Browse Jobs Now
+                  </Link>
+                  <Link href="/fractional-hr-salary" className="px-8 py-4 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">
+                    Salary Guide
+                  </Link>
                 </div>
               </div>
-              <div className="flex flex-wrap gap-4">
-                <Link href="#jobs" className="px-8 py-4 bg-pink-500 text-white font-bold uppercase tracking-wider hover:bg-pink-400 transition-colors">
-                  Browse Jobs Now
-                </Link>
-                <Link href="/fractional-hr-salary" className="px-8 py-4 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">
-                  Salary Guide
-                </Link>
+
+              {/* Frac Section Integration */}
+              <div className="hidden lg:block lg:w-80">
+                <FracSection title="Talk with Frac about HR roles" />
               </div>
             </div>
           </div>
