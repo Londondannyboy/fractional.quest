@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
+import { RoleCalculator } from '@/components/RoleCalculator'
 import { HireProcessStepper } from '@/components/HireProcessStepper'
 import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
 
@@ -293,8 +294,28 @@ export default function FractionalCROServicesPage() {
         </div>
       </section>
 
+      {/* Cost Calculator */}
+      <section id="calculator" className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-8 text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">How Much Does a Fractional CRO Cost?</h2>
+            <p className="text-gray-600 mt-4">Compare the cost of fractional vs full-time CRO</p>
+          </div>
+          <RoleCalculator role="cro" />
+          <div className="mt-8 prose prose-gray max-w-none">
+            <h3 className="text-xl font-bold text-gray-900">Typical Fractional CRO Pricing</h3>
+            <ul className="text-gray-600">
+              <li><strong>Day Rate:</strong> £900-£1,500 per day (depending on experience and specialisation)</li>
+              <li><strong>Monthly Retainer:</strong> £4,000-£6,500 for 1-2 days per week</li>
+              <li><strong>Annual Cost:</strong> £90,000-£150,000 (vs £250,000+ for full-time)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Comparison Table */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="mb-12 text-center">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Comparison</span>

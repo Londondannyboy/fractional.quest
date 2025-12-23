@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
+import { RoleCalculator } from '@/components/RoleCalculator'
 import { HireProcessStepper } from '@/components/HireProcessStepper'
 import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
 
@@ -191,8 +192,63 @@ export default function FractionalCDOServicesPage() {
         </div>
       </section>
 
-      {/* When to Hire */}
+      {/* Benefits */}
       <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-12">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Benefits</span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Why Hire a Fractional CDO?</h2>
+          </div>
+          <div className="space-y-8">
+            {[
+              {
+                title: 'Strategic Data Leadership',
+                description: 'Get 15+ years of data experience applied to your challenges. A fractional CDO brings proven approaches to building data-driven organisations.',
+                stat: '15+',
+                statLabel: 'Years Experience',
+              },
+              {
+                title: 'Cost Efficiency',
+                description: 'Access CDO-level expertise at 40-60% less than a full-time hire. Pay only for the time you need—typically £90,000-£150,000 per year versus £220,000+ for full-time.',
+                stat: '50%',
+                statLabel: 'Cost Savings',
+              },
+              {
+                title: 'AI Readiness',
+                description: 'Prepare your organisation for AI. Fractional CDOs build the data foundations, infrastructure, and governance that AI initiatives require.',
+                stat: '6mo',
+                statLabel: 'AI Ready',
+              },
+              {
+                title: 'Data-Driven Culture',
+                description: 'Transform decision-making across the organisation. Build the tools, training, and processes that make data accessible to everyone.',
+                stat: '100%',
+                statLabel: 'Data Access',
+              },
+              {
+                title: 'Cross-Industry Insights',
+                description: 'Fractional CDOs work across multiple companies. They bring patterns, benchmarks, and fresh perspectives on data challenges.',
+                stat: '5+',
+                statLabel: 'Companies Seen',
+              },
+            ].map((benefit, index) => (
+              <div key={index} className="flex gap-6 p-6 bg-gray-50 border-l-4 border-cyan-500">
+                <div className="flex-shrink-0 text-center">
+                  <div className="text-3xl font-black text-cyan-600">{benefit.stat}</div>
+                  <div className="text-xs text-gray-500 uppercase tracking-wider">{benefit.statLabel}</div>
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900 mb-1">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* When to Hire */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Timing</span>
@@ -241,6 +297,26 @@ export default function FractionalCDOServicesPage() {
         </div>
       </section>
 
+      {/* Cost Calculator */}
+      <section id="calculator" className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-8 text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">How Much Does a Fractional CDO Cost?</h2>
+            <p className="text-gray-600 mt-4">Compare the cost of fractional vs full-time CDO</p>
+          </div>
+          <RoleCalculator role="cdo" />
+          <div className="mt-8 prose prose-gray max-w-none">
+            <h3 className="text-xl font-bold text-gray-900">Typical Fractional CDO Pricing</h3>
+            <ul className="text-gray-600">
+              <li><strong>Day Rate:</strong> £900-£1,500 per day (depending on experience and specialisation)</li>
+              <li><strong>Monthly Retainer:</strong> £4,000-£6,500 for 1-2 days per week</li>
+              <li><strong>Annual Cost:</strong> £90,000-£150,000 (vs £220,000+ for full-time)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Comparison Table */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -248,7 +324,7 @@ export default function FractionalCDOServicesPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Comparison</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional vs Interim vs Full-Time CDO</h2>
           </div>
-          <ServiceComparisonTable role="CDO" accentColor="blue" />
+          <ServiceComparisonTable role="CDO" accentColor="cyan" />
         </div>
       </section>
 

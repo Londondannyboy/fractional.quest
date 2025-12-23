@@ -9,13 +9,13 @@ import { RoleCalculator } from '@/components/RoleCalculator'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'The Complete Guide to Fractional HR in the UK | 2025',
-  description: 'Everything you need to know about Fractional HR in the UK. Definition, costs (£700-£1,300/day), types of roles, when to hire, UK employment law, and how to find fractional HR professionals.',
-  keywords: 'fractional hr, what is fractional hr, fractional hr services, fractional hr meaning, fractional hr uk, fractional hr director, fractional chro, part time hr',
+  title: 'Fractional HR UK | Fractional HR Director & CHRO Services 2025',
+  description: 'Fractional HR services UK - Hire a fractional HR director, fractional CHRO, or fractional HR manager. Part-time HR leadership from £700-£1,300/day. Interim HR director & outsourced HR solutions for UK businesses.',
+  keywords: 'fractional hr, fractional hr director, fractional chro, fractional hr services, fractional hr uk, fractional hr manager, part time hr, interim hr director, fractional hr consultant, outsourced hr, fractional hr cost, fractional hr salary, fractional hr for startups, what is fractional hr, fractional people director, hr director jobs, fractional chief people officer',
   alternates: { canonical: 'https://fractional.quest/fractional-hr' },
   openGraph: {
-    title: 'The Complete Guide to Fractional HR in the UK | 2025',
-    description: 'Everything UK businesses need to know about fractional HR - definition, costs, types of roles, and how to hire.',
+    title: 'Fractional HR UK | Hire a Fractional HR Director or CHRO',
+    description: 'Fractional HR services UK. Hire a fractional HR director, fractional CHRO, or part-time HR manager. £700-£1,300/day.',
     images: ['/images/fractional-hr-guide.jpg'],
     url: 'https://fractional.quest/fractional-hr',
   },
@@ -70,12 +70,12 @@ export default async function FractionalHRGuidePage() {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'The Complete Guide to Fractional HR in the UK',
-    description: 'Everything UK businesses need to know about fractional HR - definition, costs, types of roles, UK employment law, and how to hire.',
+    headline: 'Fractional HR UK: Complete Guide to Fractional HR Director & CHRO Services',
+    description: 'Fractional HR services UK - hire a fractional HR director, fractional CHRO, or fractional HR manager. Part-time HR leadership from £700-£1,300/day.',
     author: { '@type': 'Organization', name: 'Fractional Quest', url: 'https://fractional.quest' },
     publisher: { '@type': 'Organization', name: 'Fractional Quest', url: 'https://fractional.quest' },
     datePublished: '2025-01-16',
-    dateModified: '2025-01-16',
+    dateModified: '2025-12-23',
   }
 
   return (

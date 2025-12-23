@@ -3,10 +3,11 @@ import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
 
 export const metadata: Metadata = {
-  title: 'Virtual CFO Services UK: Remote CFO Solutions 2025',
-  description: 'Virtual CFO services explained. How remote CFO support works, benefits, technology requirements, and comparison with traditional fractional CFO arrangements.',
+  title: 'Virtual CFO Services UK | Remote CFO Solutions 2025',
+  description: 'Virtual CFO services explained. How remote CFO support works, benefits, technology requirements, and comparison with traditional fractional CFO arrangements. Hire a virtual chief financial officer.',
+  keywords: 'virtual cfo, virtual cfo services, remote cfo, hire virtual cfo, virtual chief financial officer, virtual cfo uk, remote cfo services, online cfo, digital cfo',
   openGraph: {
-    title: 'Virtual CFO Services UK: Remote CFO Solutions 2025',
+    title: 'Virtual CFO Services UK | Remote CFO Solutions 2025',
     description: 'Complete guide to virtual CFO services. Remote financial leadership without geographic constraints.',
     url: 'https://fractional.quest/virtual-cfo-services',
   },
