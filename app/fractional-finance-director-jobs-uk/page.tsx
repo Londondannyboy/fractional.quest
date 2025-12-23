@@ -9,15 +9,15 @@ import { RoleContentHub } from '@/components/RoleContentHub'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Finance Director Jobs UK | Part-Time FD Roles',
-  description: 'Fractional Finance Director jobs UK - Find part-time FD positions paying £600-£1,000/day. Browse live Finance Director roles for experienced finance leaders. Remote & hybrid available.',
-  keywords: 'fractional finance director jobs, fractional fd jobs uk, part time finance director, fractional fd roles, part time fd jobs, finance director part time',
+  title: 'Fractional Finance Director Jobs | Fractional FD Jobs UK 2025',
+  description: 'Fractional finance director jobs UK - Find fractional FD jobs paying £600-£1,000/day. Part-time Finance Director roles for experienced finance leaders. Fractional FD roles, remote & hybrid available.',
+  keywords: 'fractional finance director jobs, fractional fd jobs, fractional fd jobs uk, part time finance director, fractional fd roles, part time fd jobs, finance director part time, fractional fd, fd jobs uk',
   alternates: {
     canonical: 'https://fractional.quest/fractional-finance-director-jobs-uk',
   },
   openGraph: {
-    title: 'Fractional Finance Director Jobs UK | Part-Time FD Roles',
-    description: 'Fractional Finance Director jobs UK - Find part-time FD positions paying £600-£1,000/day. Remote & hybrid available.',
+    title: 'Fractional Finance Director Jobs | Fractional FD Jobs UK',
+    description: 'Fractional finance director jobs - Find fractional FD jobs paying £600-£1,000/day. Remote & hybrid available.',
     images: ['/images/fractional-finance-director-jobs-uk.jpg'],
     url: 'https://fractional.quest/fractional-finance-director-jobs-uk',
   },
