@@ -103,10 +103,10 @@ export default async function FractionalHRGuidePage() {
               </span>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Fractional<br />
-                <span className="text-purple-200">HR</span>
+                <span className="text-purple-200">HR UK</span>
               </h1>
               <p className="text-xl md:text-2xl text-white leading-relaxed max-w-2xl mb-8">
-                The definitive UK guide to <strong className="text-white">fractional HR</strong>. What it means, what it costs, and how to access senior people leadership without full-time commitment.
+                The definitive UK guide to <strong className="text-white">fractional HR</strong>. Hire a <strong className="text-white">fractional HR director</strong>, <strong className="text-white">fractional CHRO</strong>, or <strong className="text-white">fractional HR manager</strong>. Part-time HR, interim HR director, and outsourced HR solutions.
               </p>
               <div className="flex flex-wrap gap-8 mb-10">
                 <div>
@@ -688,28 +688,64 @@ export default async function FractionalHRGuidePage() {
               <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">Browse Jobs →</div>
             </Link>
 
-            <Link href="/fractional-hr-cost" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
-              <h3 className="text-lg font-bold mb-2">Fractional HR Cost Guide</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Detailed pricing breakdown and ROI analysis</p>
-              <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">View Costs →</div>
-            </Link>
-
-            <Link href="/fractional-hr-for-startups" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
-              <h3 className="text-lg font-bold mb-2">Fractional HR for Startups</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Startup-specific guidance and pricing</p>
-              <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">Learn More →</div>
-            </Link>
-
             <Link href="/fractional-hr-director" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
               <h3 className="text-lg font-bold mb-2">Fractional HR Director</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">What they do and when to hire one</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">What a fractional HR director does and when to hire one</p>
               <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">Read Guide →</div>
             </Link>
 
             <Link href="/fractional-chro-services" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
               <h3 className="text-lg font-bold mb-2">Fractional CHRO Services</h3>
-              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Executive-level HR leadership</p>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Executive-level fractional Chief Human Resources Officer</p>
               <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">Explore →</div>
+            </Link>
+
+            <Link href="/fractional-hr-services" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
+              <h3 className="text-lg font-bold mb-2">Fractional HR Services</h3>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Outsourced HR services and solutions</p>
+              <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">Learn More →</div>
+            </Link>
+
+            <Link href="/fractional-hr-cost" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
+              <h3 className="text-lg font-bold mb-2">Fractional HR Cost</h3>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Detailed pricing breakdown and ROI analysis</p>
+              <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">View Costs →</div>
+            </Link>
+
+            <Link href="/fractional-hr-salary" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
+              <h3 className="text-lg font-bold mb-2">Fractional HR Salary</h3>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">UK salary and day rate benchmarks</p>
+              <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">View Rates →</div>
+            </Link>
+
+            <Link href="/fractional-hr-for-startups" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
+              <h3 className="text-lg font-bold mb-2">Fractional HR for Startups</h3>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Startup-specific fractional HR guidance</p>
+              <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">Learn More →</div>
+            </Link>
+
+            <Link href="/interim-hr-director" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
+              <h3 className="text-lg font-bold mb-2">Interim HR Director</h3>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Short-term interim HR director placements</p>
+              <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">Explore →</div>
+            </Link>
+
+            <Link href="/part-time-hr" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
+              <h3 className="text-lg font-bold mb-2">Part-Time HR</h3>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Part-time HR roles and flexible HR support</p>
+              <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">Read More →</div>
+            </Link>
+
+            <Link href="/fractional-hr-consultant" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
+              <h3 className="text-lg font-bold mb-2">Fractional HR Consultant</h3>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">HR consultants vs fractional HR directors</p>
+              <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">Compare →</div>
+            </Link>
+
+            <Link href="/fractional-hr-jobs-remote" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
+              <h3 className="text-lg font-bold mb-2">Remote HR Jobs</h3>
+              <p className="text-sm text-gray-600 group-hover:text-gray-600 mb-4">Remote fractional HR opportunities</p>
+              <div className="text-sm font-bold uppercase tracking-wider text-pink-600 group-hover:text-pink-400">Browse Remote →</div>
             </Link>
 
             <Link href="/what-is-fractional-hr" className="p-6 bg-gray-50 hover:bg-gray-100 hover:text-gray-900 transition-all group">
@@ -746,16 +782,20 @@ export default async function FractionalHRGuidePage() {
       <section className="py-12 bg-white border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <span className="text-sm font-bold uppercase tracking-wider text-gray-400">HR Cluster</span>
+            <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Fractional HR Cluster</span>
             <div className="flex flex-wrap gap-4">
-              <Link href="/fractional-hr-jobs-uk" className="text-gray-600 hover:text-pink-600 font-medium transition-colors">HR Jobs UK</Link>
-              <Link href="/fractional-hr-salary" className="text-gray-600 hover:text-pink-600 font-medium transition-colors">Salary Guide</Link>
-              <Link href="/fractional-hr-vs-full-time" className="text-gray-600 hover:text-pink-600 font-medium transition-colors">Fractional vs Full-Time</Link>
-              <Link href="/fractional-hr-roles" className="text-gray-600 hover:text-pink-600 font-medium transition-colors">HR Roles</Link>
+              <Link href="/fractional-hr-jobs-uk" className="text-gray-600 hover:text-pink-600 font-medium transition-colors">Fractional HR Jobs UK</Link>
+              <Link href="/fractional-hr-director" className="text-gray-600 hover:text-pink-600 font-medium transition-colors">Fractional HR Director</Link>
               <Link href="/fractional-chro" className="text-gray-600 hover:text-pink-600 font-medium transition-colors">Fractional CHRO</Link>
+              <Link href="/fractional-hr-services" className="text-gray-600 hover:text-pink-600 font-medium transition-colors">Fractional HR Services</Link>
+              <Link href="/fractional-hr-salary" className="text-gray-600 hover:text-pink-600 font-medium transition-colors">Fractional HR Salary</Link>
+              <Link href="/fractional-hr-cost" className="text-gray-600 hover:text-pink-600 font-medium transition-colors">Fractional HR Cost</Link>
+              <Link href="/fractional-hr-for-startups" className="text-gray-600 hover:text-pink-600 font-medium transition-colors">HR for Startups</Link>
+              <Link href="/fractional-hr-consultant" className="text-gray-600 hover:text-pink-600 font-medium transition-colors">Fractional HR Consultant</Link>
               <Link href="/part-time-hr" className="text-gray-600 hover:text-pink-600 font-medium transition-colors">Part-Time HR</Link>
-              <Link href="/interim-hr-director" className="text-gray-600 hover:text-pink-600 font-medium transition-colors">Interim HR</Link>
-              <Link href="/fractional-hr-services" className="text-gray-600 hover:text-pink-600 font-medium transition-colors">HR Services</Link>
+              <Link href="/interim-hr-director" className="text-gray-600 hover:text-pink-600 font-medium transition-colors">Interim HR Director</Link>
+              <Link href="/fractional-hr-vs-full-time" className="text-gray-600 hover:text-pink-600 font-medium transition-colors">Fractional vs Full-Time HR</Link>
+              <Link href="/what-is-fractional-hr" className="text-gray-600 hover:text-pink-600 font-medium transition-colors">What is Fractional HR</Link>
             </div>
           </div>
         </div>

@@ -1,7 +1,9 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { Suspense } from 'react'
 import { SavingsCalculator } from '@/components/SavingsCalculator'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
+import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
 import { getAgencies, Agency } from '@/lib/agencies'
 
 export const metadata: Metadata = {
@@ -173,6 +175,25 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
         </div>
       </section>
 
+      {/* Jobs Section - Top Priority */}
+      <section id="jobs" className="py-16 md:py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Browse Live Roles</span>
+              <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional Executive Jobs</h2>
+              <p className="text-gray-700 mt-2">Current opportunities from our network</p>
+            </div>
+            <Link href="/fractional-jobs" className="text-amber-600 font-bold hover:text-amber-700">
+              View All Jobs →
+            </Link>
+          </div>
+          <Suspense fallback={<div className="bg-white rounded-2xl border border-gray-200 p-8"><div className="animate-pulse space-y-4"><div className="h-10 bg-gray-200 rounded w-1/3"></div><div className="grid grid-cols-2 gap-4"><div className="h-48 bg-gray-200 rounded"></div><div className="h-48 bg-gray-200 rounded"></div></div></div></div>}>
+            <EmbeddedJobBoard pageSlug="fractional-recruitment-agencies" jobsPerPage={6} title="" allJobsLinkText="View All Fractional Jobs" />
+          </Suspense>
+        </div>
+      </section>
+
       {/* What We're Building */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -222,10 +243,10 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
               <div className="text-lg font-bold text-gray-900 mb-2">Director Roles</div>
               <div className="text-sm text-gray-600">Finance Director, HR Director, Marketing Director</div>
             </div>
-            <div className="bg-gray-50 rounded-xl p-8 text-center text-white transform md:scale-105">
+            <div className="bg-gray-900 rounded-xl p-8 text-center text-white transform md:scale-105">
               <div className="text-4xl font-black text-amber-400 mb-2">12.5%</div>
               <div className="text-lg font-bold mb-2">C-Suite Roles</div>
-              <div className="text-sm text-gray-400">CFO, CTO, CMO, COO</div>
+              <div className="text-sm text-gray-300">CFO, CTO, CMO, COO</div>
             </div>
             <div className="bg-gray-50 rounded-xl p-8 text-center border-2 border-transparent hover:border-amber-400 transition-colors">
               <div className="text-4xl font-black text-gray-900 mb-2">15%</div>
@@ -320,19 +341,19 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
           </div>
 
           <div className="prose prose-lg prose-invert max-w-none">
-            <p className="text-xl text-gray-300 leading-relaxed mb-6">
-              The UK economy is undergoing a fundamental shift in how businesses access senior leadership. According to the <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline">Office for National Statistics (ONS)</a>, self-employment and flexible working arrangements have grown significantly over the past decade, with senior professionals increasingly choosing portfolio careers over traditional employment.
+            <p className="text-xl text-gray-700 leading-relaxed mb-6">
+              The UK economy is undergoing a fundamental shift in how businesses access senior leadership. According to the <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">Office for National Statistics (ONS)</a>, self-employment and flexible working arrangements have grown significantly over the past decade, with senior professionals increasingly choosing portfolio careers over traditional employment.
             </p>
 
-            <p className="text-gray-600 mb-6">
-              The <a href="https://www.gov.uk/government/organisations/department-for-business-and-trade" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline">Department for Business and Trade</a> has recognised this shift, with government policy increasingly supporting flexible working models. Data from the <a href="https://www.gov.uk/government/statistics/business-population-estimates-2023" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline">Business Population Estimates</a> shows the UK has over 5.5 million private sector businesses, the majority of which are SMEs that could benefit from fractional executive expertise but cannot afford full-time C-suite salaries.
+            <p className="text-gray-700 mb-6">
+              The <a href="https://www.gov.uk/government/organisations/department-for-business-and-trade" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">Department for Business and Trade</a> has recognised this shift, with government policy increasingly supporting flexible working models. Data from the <a href="https://www.gov.uk/government/statistics/business-population-estimates-2023" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">Business Population Estimates</a> shows the UK has over 5.5 million private sector businesses, the majority of which are SMEs that could benefit from fractional executive expertise but cannot afford full-time C-suite salaries.
             </p>
 
-            <p className="text-gray-600 mb-6">
-              Research from the <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline">Chartered Institute of Personnel and Development (CIPD)</a> confirms that flexible working arrangements, including fractional executive roles, improve both employee satisfaction and business outcomes. Meanwhile, the <a href="https://www.cbi.org.uk/" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline">Confederation of British Industry (CBI)</a> advocates for greater workplace flexibility as essential for UK competitiveness.
+            <p className="text-gray-700 mb-6">
+              Research from the <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">Chartered Institute of Personnel and Development (CIPD)</a> confirms that flexible working arrangements, including fractional executive roles, improve both employee satisfaction and business outcomes. Meanwhile, the <a href="https://www.cbi.org.uk/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">Confederation of British Industry (CBI)</a> advocates for greater workplace flexibility as essential for UK competitiveness.
             </p>
 
-            <p className="text-gray-300">
+            <p className="text-gray-700">
               This economic transformation has created a thriving market for specialist fractional recruitment agencies—firms that understand the unique dynamics of placing part-time executives with businesses seeking strategic leadership without full-time commitment.
             </p>
           </div>
@@ -443,17 +464,17 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gray-50 text-white">
+      <section className="py-20 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <span className="inline-block bg-amber-500/20 text-amber-300 px-4 py-2 rounded-full border border-amber-500/30 mb-6">
             <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse inline-block mr-2" />
             Launching January 2025
           </span>
-          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight text-white">
             Join Us As<br />
             <span className="text-amber-400">We Launch</span>
           </h2>
-          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
             We're building a better fractional recruitment agency. Register your interest and be first to know when we launch.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
