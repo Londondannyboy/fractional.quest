@@ -141,6 +141,11 @@ export async function POST(request: NextRequest) {
           result = await completeOnboardingTool(params.user_id)
           break
 
+        // ========== Real-Time Graph Extraction ==========
+        case 'extract_and_update_graph':
+          result = await extractAndUpdateGraph(params)
+          break
+
         default:
           result = `Unknown tool: ${toolName}`
       }
@@ -753,6 +758,65 @@ async function completeOnboardingTool(userId: string): Promise<string> {
   }
 }
 
+// ============ Real-Time Graph Extraction ============
+
+/**
+ * Extract career entities from transcript and update knowledge graph in real-time.
+ * Called by Hume when user mentions skills, companies, roles, locations, or preferences.
+ *
+ * Returns dual-format response:
+ * - text: What Frac should say
+ * - data: { type: 'graph_update', nodes: [...], confirmations: [...] }
+ */
+async function extractAndUpdateGraph(params: {
+  transcript_chunk: string
+  user_id: string
+  user_type?: string
+  entity_hints?: string[]
+}): Promise<string> {
+  try {
+    // Call our dedicated real-time extraction endpoint
+    const baseUrl = process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
+
+    const response = await fetch(`${baseUrl}/api/realtime-extract`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        transcript_chunk: params.transcript_chunk,
+        user_id: params.user_id,
+        user_type: params.user_type || 'candidate',
+        entity_hints: params.entity_hints || []
+      })
+    })
+
+    if (!response.ok) {
+      console.error('[extractAndUpdateGraph] API error:', response.status)
+      return JSON.stringify({
+        text: "I'll keep that in mind. Continue.",
+        data: { type: 'graph_update', nodes: [], confirmations: [] }
+      })
+    }
+
+    const result = await response.json()
+
+    // The /api/realtime-extract endpoint returns { content: JSON.stringify({ text, data }) }
+    // We just pass through the content
+    return result.content || JSON.stringify({
+      text: "Got it.",
+      data: { type: 'graph_update', nodes: [], confirmations: [] }
+    })
+
+  } catch (error) {
+    console.error('[extractAndUpdateGraph] Error:', error)
+    return JSON.stringify({
+      text: "I heard you. Keep going.",
+      data: { type: 'graph_update', nodes: [], confirmations: [], error: String(error) }
+    })
+  }
+}
+
 // Also support GET for testing
 export async function GET() {
   return NextResponse.json({
@@ -773,7 +837,9 @@ export async function GET() {
       'set_company_info',
       'add_role_needed',
       'add_requirement',
-      'complete_onboarding'
+      'complete_onboarding',
+      '--- REAL-TIME GRAPH ---',
+      'extract_and_update_graph'
     ],
     usage: 'POST tool calls from Hume EVI'
   })

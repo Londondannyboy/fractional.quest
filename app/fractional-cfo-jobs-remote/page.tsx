@@ -544,6 +544,10 @@ export default function RemoteFractionalCFOJobsPage() {
           <section className="mt-12 rounded-xl bg-slate-50 p-8">
             <h2 className="mb-6 text-2xl font-bold text-slate-900">Related Resources</h2>
             <div className="grid gap-4 sm:grid-cols-2">
+              <Link href="/fractional-cfo-jobs-uk" className="group rounded-lg bg-blue-50 p-4 shadow-sm ring-1 ring-blue-200 transition-all hover:shadow-md">
+                <h3 className="font-bold text-blue-900 group-hover:text-blue-600">Fractional CFO Jobs UK</h3>
+                <p className="mt-1 text-sm text-blue-700">Browse all CFO opportunities</p>
+              </Link>
               <Link href="/fractional-cfo-hourly-rate" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
                 <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Fractional CFO Rates 2025</h3>
                 <p className="mt-1 text-sm text-slate-600">Comprehensive rate benchmarks for pricing</p>
@@ -551,10 +555,6 @@ export default function RemoteFractionalCFOJobsPage() {
               <Link href="/contract-cfo-jobs" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
                 <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Contract CFO Jobs</h3>
                 <p className="mt-1 text-sm text-slate-600">Fixed-term CFO contract opportunities</p>
-              </Link>
-              <Link href="/fractional-controller-jobs" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
-                <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">Fractional Controller Jobs</h3>
-                <p className="mt-1 text-sm text-slate-600">Entry route to fractional finance work</p>
               </Link>
               <Link href="/how-to-become-fractional-cfo" className="group rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-900/5 transition-all hover:shadow-md">
                 <h3 className="font-semibold text-slate-900 group-hover:text-blue-600">How to Become a Fractional CFO</h3>

@@ -6,12 +6,16 @@ import { JobsGraph3D } from '@/components/JobsGraph3D'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Part-Time CFO Jobs UK 2025 - Flexible Chief Financial Officer Roles',
-  description: 'Find part-time CFO jobs in the UK. Flexible Chief Financial Officer positions paying £800-£1,500/day. Work 1-3 days per week with growing companies.',
-  keywords: 'part time cfo, part-time cfo, part time chief financial officer, part time cfo jobs, flexible cfo roles',
+  title: 'Part-Time CFO | UK Part Time CFO Services & Jobs 2025',
+  description: 'Part-time CFO services UK - Hire a part time CFO or find CFO part time jobs paying £800-£1,500/day. Remote CFO jobs available. Part time CFO wanted? We connect companies with experienced CFOs.',
+  keywords: 'part time cfo, part-time cfo, part time cfo services, cfo part time, part time cfo jobs, remote cfo jobs, part time cfo wanted, part time cfo needed, part time cfos, flexible cfo roles',
+  alternates: {
+    canonical: 'https://fractional.quest/part-time-cfo',
+  },
   openGraph: {
-    title: 'Part-Time CFO Jobs UK - Flexible Chief Financial Officer Roles',
-    description: 'Find part-time CFO jobs in the UK. Flexible CFO positions paying £800-£1,500/day.',
+    title: 'Part-Time CFO Services & Jobs UK | Hire a CFO Part Time',
+    description: 'Part-time CFO services UK. Find part time CFO jobs or hire a CFO part time. Remote options available. £800-£1,500/day.',
+    url: 'https://fractional.quest/part-time-cfo',
   },
 }
 
@@ -53,9 +57,9 @@ export default async function PartTimeCfoPage() {
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <div className="bg-gray-50/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10">
             <Link href="/" className="text-white/70 hover:text-gray-900 mb-6 inline-block">← Back to Home</Link>
-            <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">Part-Time CFO Jobs UK</h1>
+            <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">Part-Time CFO Services & Jobs UK</h1>
             <p className="text-xl text-white/80 mb-8">
-              Flexible Chief Financial Officer roles for experienced finance professionals. Work 1-3 days per week earning £800-£1,500 per day.
+              <strong>Part time CFO</strong> services for growing UK businesses. Whether you need a <strong>CFO part time</strong> or you're seeking <strong>part time CFO jobs</strong>, we connect experienced finance leaders with companies. Remote CFO jobs available.
             </p>
             <div className="flex gap-4">
               <Link href="/fractional-jobs?role=CFO" className="px-8 py-4 bg-white text-blue-900 rounded-lg font-semibold hover:bg-blue-950/20">
@@ -71,10 +75,10 @@ export default async function PartTimeCfoPage() {
         <div className="max-w-4xl mx-auto px-4 prose prose-lg prose-emerald">
           <h2>What is a Part-Time CFO?</h2>
           <p>
-            A <strong>part-time CFO</strong> (also known as a fractional CFO or outsourced CFO) is an experienced Chief Financial Officer who provides strategic financial leadership to companies on a flexible, part-time basis. Rather than committing to a single full-time role, part-time CFOs typically work with multiple clients, dedicating 1-3 days per week to each engagement.
+            A <strong>part-time CFO</strong> (also known as a fractional CFO or outsourced CFO) is an experienced Chief Financial Officer who provides strategic financial leadership to companies on a flexible, part-time basis. <strong>Part time CFO services</strong> allow businesses to access senior finance expertise without the cost of a full-time hire. Rather than committing to a single full-time role, <strong>part time CFOs</strong> typically work with multiple clients, dedicating 1-3 days per week to each engagement.
           </p>
           <p>
-            The demand for <strong>part-time CFO jobs</strong> in the UK has grown significantly over the past five years, driven by the rise of startups, scale-ups, and SMEs that need senior financial expertise but cannot justify or afford a full-time hire. Companies typically engage a part-time CFO when they reach Series A funding, need to prepare financial models for investors, or require board-level financial reporting.
+            The demand for <strong>part time CFO jobs</strong> in the UK has grown significantly. Whether you're a business with a <strong>part time CFO wanted</strong> requirement, or a finance professional seeking <strong>CFO part time</strong> opportunities, the market is thriving. Startups, scale-ups, and SMEs increasingly need senior financial expertise but cannot justify a full-time hire. Companies typically engage a part-time CFO when they reach Series A funding, need to prepare financial models for investors, or require board-level financial reporting.
           </p>
 
           <h2>Part-Time CFO vs Full-Time CFO</h2>
@@ -87,7 +91,7 @@ export default async function PartTimeCfoPage() {
 
           <h2>Who Hires Part-Time CFOs?</h2>
           <p>
-            <strong>Part-time CFO jobs</strong> are most common in the following company types:
+            Which companies have <strong>part time CFO wanted</strong> or <strong>part time CFO needed</strong> requirements? <strong>Part-time CFO jobs</strong> are most common in the following company types:
           </p>
           <ul>
             <li><strong>Venture-backed startups</strong> - Companies at Series A or B stage that need fundraising support, financial modelling, and investor relations expertise</li>
@@ -126,12 +130,35 @@ export default async function PartTimeCfoPage() {
             Building a portfolio of clients takes time. Many part-time CFOs start by taking on one or two fractional engagements alongside consulting work, gradually building their client base through referrals and networking. Platforms like <Link href="/fractional-jobs-uk">Fractional Quest</Link> can help connect experienced CFOs with companies seeking part-time finance leadership.
           </p>
 
+          <h2>Part-Time CFO Services</h2>
+          <p>
+            <strong>Part time CFO services</strong> encompass a wide range of financial leadership offerings tailored to your business needs. Whether you have a <strong>part time CFO needed</strong> for a specific project or require ongoing strategic support, services typically include:
+          </p>
+          <ul>
+            <li><strong>Financial strategy and planning</strong> - Developing growth roadmaps and financial forecasts</li>
+            <li><strong>Fundraising support</strong> - Preparing for Series A, B, or debt financing rounds</li>
+            <li><strong>Board reporting</strong> - Monthly management accounts and investor updates</li>
+            <li><strong>Cash flow management</strong> - Ensuring runway visibility and working capital optimisation</li>
+            <li><strong>Finance team development</strong> - Building and mentoring your internal finance function</li>
+          </ul>
+          <p>
+            Companies searching for <strong>part time CFO wanted</strong> typically find that <strong>CFO part time</strong> arrangements deliver 80% of the value at 30% of the cost of a full-time hire.
+          </p>
+
+          <h2>Remote CFO Jobs</h2>
+          <p>
+            <strong>Remote CFO jobs</strong> have become increasingly common since 2020. Many <strong>part time CFOs</strong> now work entirely remotely or in hybrid arrangements, using modern finance software and video conferencing to deliver their services. This has opened up the market significantly—a company in Manchester can now engage a London-based <strong>part-time CFO</strong> without the need for regular in-person meetings.
+          </p>
+          <p>
+            For CFOs seeking <strong>remote CFO jobs</strong>, the flexibility is a major attraction. You can work with clients across the UK (and internationally) from your home office, making <strong>CFO part time</strong> work even more appealing.
+          </p>
+
           <h2>Part-Time CFO Jobs in London</h2>
           <p>
             London remains the UK's largest market for <strong>part-time CFO jobs</strong>, accounting for approximately 60% of all fractional finance roles. The City, Shoreditch, and Canary Wharf are particularly active markets, with strong demand from fintech, SaaS, and PE-backed companies.
           </p>
           <p>
-            Outside London, Manchester, Birmingham, Edinburgh, and Bristol all have growing fractional CFO markets, though day rates are typically 15-25% lower than London equivalents.
+            Outside London, Manchester, Birmingham, Edinburgh, and Bristol all have growing fractional CFO markets, though day rates are typically 15-25% lower than London equivalents. Many of these roles are available as <strong>remote CFO jobs</strong>, giving you flexibility regardless of location.
           </p>
         </div>
       </article>
@@ -140,7 +167,8 @@ export default async function PartTimeCfoPage() {
       {jobs.length > 0 && (
         <section className="py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Latest Part-Time CFO Jobs</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Part-Time CFO Jobs</h2>
+            <p className="text-gray-600 mb-8">Browse the latest <strong>part time CFO jobs</strong> and <strong>remote CFO jobs</strong> in the UK. New <strong>CFO part time</strong> opportunities added daily.</p>
             <div className="grid md:grid-cols-2 gap-6">
               {jobs.map((job: any) => (
                 <Link
@@ -168,15 +196,19 @@ export default async function PartTimeCfoPage() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Pages</h2>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link href="/fractional-cfo-jobs-uk" className="p-4 bg-blue-50 rounded-lg hover:bg-blue-100 border border-blue-200">
+              <span className="font-bold text-blue-900">Fractional CFO Jobs UK →</span>
+              <p className="text-sm text-blue-700 mt-1">Browse all CFO opportunities</p>
+            </Link>
             <Link href="/fractional-cfo-salary" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
-              <span className="font-semibold text-gray-900">Fractional CFO Salary Guide →</span>
+              <span className="font-semibold text-gray-900">CFO Salary Guide →</span>
             </Link>
-            <Link href="/fractional-jobs-london" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
-              <span className="font-semibold text-gray-900">CFO Jobs London →</span>
+            <Link href="/fractional-cfo-services" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+              <span className="font-semibold text-gray-900">Hire a CFO →</span>
             </Link>
-            <Link href="/part-time-cmo" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
-              <span className="font-semibold text-gray-900">Part-Time CMO Jobs →</span>
+            <Link href="/fractional-cfo-jobs-remote" className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+              <span className="font-semibold text-gray-900">Remote CFO Jobs →</span>
             </Link>
           </div>
         </div>

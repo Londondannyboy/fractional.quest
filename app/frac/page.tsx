@@ -362,6 +362,57 @@ function VoiceInterface({ token, profile, userId, previousContext, isLoggedIn, o
             addDebugLog(`✋ Confirmation requested`, 'success')
             setConfirmation(parsed.data)
           }
+
+          // Check if it's a real-time graph update
+          if (parsed.data?.type === 'graph_update') {
+            const { nodes, confirmations, stats } = parsed.data
+            addDebugLog(`📊 Graph update: ${nodes?.length || 0} nodes, ${confirmations?.length || 0} confirmations`, 'success')
+
+            // Add nodes to graph using the optimistic update function
+            if (addNodeToGraph && nodes && nodes.length > 0) {
+              const clusterColors: Record<string, string> = {
+                skills: '#3B82F6',
+                experience: '#10B981',
+                career_interests: '#EC4899',
+                preferences: '#F97316'
+              }
+
+              nodes.forEach((node: any) => {
+                addNodeToGraph({
+                  id: node.id || `node-${Date.now()}-${Math.random().toString(36).substr(2, 6)}`,
+                  name: node.label,
+                  val: 20,
+                  color: clusterColors[node.cluster] || '#F97316',
+                  type: node.type || 'preference',
+                  cluster: node.cluster,
+                  pending: true,
+                  validated: false
+                })
+              })
+              addDebugLog(`✨ Added ${nodes.length} nodes to graph in real-time!`, 'success')
+            }
+
+            // Handle confirmations from graph extraction
+            if (confirmations && confirmations.length > 0) {
+              const firstConf = confirmations[0]
+              setPydanticConfirmation({
+                type: 'confirmation_required',
+                action: 'update_preference',
+                message: firstConf.reasoning,
+                data: {
+                  preference_type: firstConf.cluster,
+                  values: [firstConf.value]
+                },
+                user_id: userId,
+                confidence: firstConf.confidence
+              })
+              addDebugLog(`✋ Graph extraction needs confirmation: ${firstConf.value}`, 'tool')
+            }
+
+            if (stats) {
+              addDebugLog(`📈 Extraction stats: ${stats.extracted} extracted, ${stats.autoAdded} auto-added, ${stats.processingTimeMs}ms`, 'info')
+            }
+          }
         } catch (e) {
           // Not JSON, just text
           const content = (latestMessage as any).content

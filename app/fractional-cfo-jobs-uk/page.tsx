@@ -13,15 +13,15 @@ import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CFO Jobs UK | Part-Time CFO Roles 2025',
-  description: 'Fractional CFO jobs UK - Find part-time Chief Financial Officer positions paying £800-£1,500/day. Browse live CFO roles for experienced finance leaders. Remote & hybrid available.',
-  keywords: 'fractional cfo jobs, fractional cfo jobs uk, part time cfo, part-time cfo, cfo part time, fractional cfo opportunities, fractional cfo uk, part time chief financial officer, fractional cfo remote',
+  title: 'Fractional CFO Jobs UK | Part-Time Chief Financial Officer Roles 2025',
+  description: 'Fractional CFO jobs UK - Find part-time Chief Financial Officer positions paying £800-£1,500/day. Browse fractional CFO job descriptions, requirements & live CFO roles. Remote & hybrid fractional finance manager opportunities available.',
+  keywords: 'fractional cfo jobs, fractional cfo jobs uk, part time cfo, part-time cfo, cfo part time, fractional cfo opportunities, fractional cfo uk, part time chief financial officer, fractional cfo remote, fractional chief financial officer, fractional cfo job description, fractional finance manager',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cfo-jobs-uk',
   },
   openGraph: {
-    title: 'Fractional CFO Jobs UK | Part-Time CFO Roles 2025',
-    description: 'Fractional CFO jobs UK - Find part-time CFO positions paying £800-£1,500/day. Remote & hybrid available.',
+    title: 'Fractional CFO Jobs UK | Part-Time Chief Financial Officer Roles 2025',
+    description: 'Fractional CFO jobs - Find part-time CFO positions paying £800-£1,500/day. Remote & hybrid available.',
     images: ['/images/fractional-cfo-jobs-uk.jpg'],
     url: 'https://fractional.quest/fractional-cfo-jobs-uk',
   },
@@ -112,8 +112,8 @@ export default async function FractionalCfoJobsUkPage() {
                   Fractional CFO Jobs UK
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mb-8">
-                  Part-time Chief Financial Officer roles for experienced finance leaders.
-                  Work 2-3 days a week at £800-£1,500/day.
+                  Fractional Chief Financial Officer opportunities for experienced finance leaders.
+                  Part-time CFO roles paying £800-£1,500/day. Work 2-3 days a week as a fractional finance manager.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link href="#jobs" className="px-8 py-4 bg-gray-900 text-white font-bold rounded-lg hover:bg-black transition-colors shadow-lg">
@@ -223,7 +223,7 @@ export default async function FractionalCfoJobsUkPage() {
           </figure>
           <article className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              <strong className="font-semibold text-gray-900">Fractional CFO jobs</strong> represent the new frontier of finance leadership. Part-time Chief Financial Officer positions where experienced leaders provide strategic financial guidance to multiple companies simultaneously—delivering world-class expertise at a fraction of the cost.
+              <strong className="font-semibold text-gray-900">Fractional CFO jobs</strong> represent the new frontier of finance leadership. <strong>Part time CFO</strong> and <strong>fractional chief financial officer</strong> positions where experienced leaders provide strategic financial guidance to multiple companies simultaneously—delivering world-class expertise at a fraction of the cost.
             </p>
             {/* Rest of the content preserved but styled consistently */}
              <h3 className="font-editorial text-2xl font-bold text-gray-900 mt-12 mb-4">The Rise of Fractional CFO Jobs UK</h3>
@@ -257,9 +257,17 @@ export default async function FractionalCfoJobsUkPage() {
               ))}
             </div>
 
+            <h3 className="font-editorial text-2xl font-bold text-gray-900 mt-12 mb-4">Fractional CFO Job Description</h3>
+            <p>
+              A typical <strong>fractional CFO job description</strong> includes strategic financial leadership on a part-time basis. The <strong>fractional chief financial officer</strong> role encompasses financial strategy, cash flow management, fundraising support, investor relations, and board-level reporting. Unlike a <strong>fractional finance manager</strong> who handles day-to-day operations, a fractional CFO focuses on strategic financial direction and high-level decision making.
+            </p>
+            <p>
+              Key responsibilities in a <strong>fractional CFO job description</strong> typically include: developing financial models and forecasts, managing relationships with investors and lenders, overseeing financial reporting and compliance, building and mentoring finance teams, and providing strategic guidance to the CEO and board. Most <strong>fractional CFO opportunities</strong> require 2-3 days per week commitment.
+            </p>
+
             <h3 className="font-editorial text-2xl font-bold text-gray-900 mt-12 mb-4">Requirements</h3>
             <p>
-              Most fractional CFO opportunities require extensive qualifications and experience. Professional bodies like <a href="https://www.icaew.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICAEW</a>, <a href="https://www.accaglobal.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACCA</a>, and <a href="https://www.cimaglobal.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIMA</a> provide the professional credibility essential.
+              Most <strong>fractional CFO jobs</strong> and <strong>part time CFO</strong> opportunities require extensive qualifications and experience. Professional bodies like <a href="https://www.icaew.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICAEW</a>, <a href="https://www.accaglobal.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACCA</a>, and <a href="https://www.cimaglobal.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIMA</a> provide the professional credibility essential for <strong>fractional chief financial officer</strong> roles.
             </p>
           </article>
         </div>
