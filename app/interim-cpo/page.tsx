@@ -70,13 +70,29 @@ export default function InterimCPOPage() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 bg-gray-50 text-white">
+      <section id="contact" className="py-20 bg-purple-900 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-black mb-6">Need an Interim CPO?</h2>
-          <p className="text-xl text-gray-600 mb-10">Tell us about your product challenges and we'll help you find the right interim or fractional CPO.</p>
+          <h2 className="text-4xl font-black mb-6 text-white">Need an Interim CPO?</h2>
+          <p className="text-xl text-purple-100 mb-10">Tell us about your product challenges and we'll help you find the right interim or fractional CPO.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/contact/companies" className="px-10 py-5 bg-purple-500 text-white font-bold uppercase tracking-wider hover:bg-purple-400 transition-colors">Find an Interim CPO</Link>
-            <Link href="/fractional-cpo-services" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Explore Fractional CPO</Link>
+            <Link href="/contact/companies" className="px-10 py-5 bg-white text-purple-900 font-bold uppercase tracking-wider hover:bg-purple-50 transition-colors rounded-lg">Find an Interim CPO</Link>
+            <Link href="/fractional-cpo-services" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white/10 transition-colors rounded-lg">Explore Fractional CPO</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Links */}
+      <section className="py-12 bg-white border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related</span>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/fractional-cpo-jobs-uk" className="text-gray-700 hover:text-purple-600 font-medium transition-colors">Fractional CPO Jobs UK</Link>
+              <Link href="/cpo" className="text-gray-700 hover:text-purple-600 font-medium transition-colors">CPO Hub</Link>
+              <Link href="/fractional-cpo-services" className="text-gray-700 hover:text-purple-600 font-medium transition-colors">Fractional CPO Services</Link>
+              <Link href="/fractional-product-manager-jobs-uk" className="text-gray-700 hover:text-purple-600 font-medium transition-colors">PM Jobs</Link>
+              <Link href="/interim-cto" className="text-gray-700 hover:text-purple-600 font-medium transition-colors">Interim CTO</Link>
+            </div>
           </div>
         </div>
       </section>

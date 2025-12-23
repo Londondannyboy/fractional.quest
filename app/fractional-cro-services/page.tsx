@@ -368,15 +368,40 @@ export default function FractionalCROServicesPage() {
         </div>
       </section>
 
-      {/* Related Links */}
-      <section className="py-12 bg-white border-t border-gray-200">
+      {/* Related CRO Resources */}
+      <section className="py-16 bg-gray-50 border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related Services</span>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/fractional-cmo-services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Fractional CMO</Link>
-              <Link href="/fractional-coo-services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Fractional COO</Link>
-              <Link href="/fractional-cfo-services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Fractional CFO</Link>
+          <div className="mb-8">
+            <h2 className="text-2xl font-black text-gray-900 mb-2">Complete Revenue Leadership Hub</h2>
+            <p className="text-gray-600">Explore our comprehensive guides for businesses and revenue professionals</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-3">For Businesses</h3>
+              <div className="space-y-2">
+                <Link href="/fractional-cro-cost" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">CRO Cost Guide</Link>
+                <Link href="/fractional-cro-for-startups" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">CRO for Startups</Link>
+                <Link href="/fractional-cso-services" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">Chief Sales Officer Services</Link>
+                <Link href="/fractional-cmo-services" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">Fractional CMO Services</Link>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-3">For Revenue Professionals</h3>
+              <div className="space-y-2">
+                <Link href="/fractional-cro-jobs-uk" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">CRO Jobs UK</Link>
+                <Link href="/fractional-cro-salary" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">CRO Salary Guide</Link>
+                <Link href="/how-to-become-fractional-cro" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">Become a Fractional CRO</Link>
+                <Link href="/fractional-cmo-jobs-uk" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">CMO Jobs UK</Link>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-3">Other Fractional Roles</h3>
+              <div className="space-y-2">
+                <Link href="/fractional-cfo-services" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">Fractional CFO</Link>
+                <Link href="/fractional-coo-services" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">Fractional COO</Link>
+                <Link href="/fractional-cto-services" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">Fractional CTO</Link>
+                <Link href="/fractional-chro-services" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">Fractional CHRO</Link>
+              </div>
             </div>
           </div>
         </div>

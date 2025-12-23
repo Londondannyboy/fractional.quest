@@ -363,15 +363,40 @@ export default function FractionalCPOServicesPage() {
         </div>
       </section>
 
-      {/* Related Links */}
-      <section className="py-12 bg-white border-t border-gray-200">
+      {/* Related CPO Resources */}
+      <section className="py-16 bg-gray-50 border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related Services</span>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/fractional-cto-services" className="text-gray-600 hover:text-purple-600 font-medium transition-colors">Fractional CTO</Link>
-              <Link href="/fractional-cmo-services" className="text-gray-600 hover:text-purple-600 font-medium transition-colors">Fractional CMO</Link>
-              <Link href="/fractional-coo-services" className="text-gray-600 hover:text-purple-600 font-medium transition-colors">Fractional COO</Link>
+          <div className="mb-8">
+            <h2 className="text-2xl font-black text-gray-900 mb-2">Complete Product Leadership Hub</h2>
+            <p className="text-gray-600">Explore our comprehensive guides for businesses and product professionals</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-3">For Businesses</h3>
+              <div className="space-y-2">
+                <Link href="/fractional-cpo-cost" className="block text-gray-700 hover:text-purple-600 font-medium transition-colors">CPO Cost Guide</Link>
+                <Link href="/fractional-cpo-for-startups" className="block text-gray-700 hover:text-purple-600 font-medium transition-colors">CPO for Startups</Link>
+                <Link href="/fractional-product-manager-services" className="block text-gray-700 hover:text-purple-600 font-medium transition-colors">Fractional Product Manager</Link>
+                <Link href="/cpo" className="block text-gray-700 hover:text-purple-600 font-medium transition-colors">CPO Hub</Link>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-3">For Product Professionals</h3>
+              <div className="space-y-2">
+                <Link href="/fractional-cpo-jobs-uk" className="block text-gray-700 hover:text-purple-600 font-medium transition-colors">CPO Jobs UK</Link>
+                <Link href="/fractional-cpo-salary" className="block text-gray-700 hover:text-purple-600 font-medium transition-colors">CPO Salary Guide</Link>
+                <Link href="/how-to-become-fractional-cpo" className="block text-gray-700 hover:text-purple-600 font-medium transition-colors">Become a Fractional CPO</Link>
+                <Link href="/interim-cpo" className="block text-gray-700 hover:text-purple-600 font-medium transition-colors">Interim CPO</Link>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-3">Other Fractional Roles</h3>
+              <div className="space-y-2">
+                <Link href="/fractional-cto-services" className="block text-gray-700 hover:text-purple-600 font-medium transition-colors">Fractional CTO</Link>
+                <Link href="/fractional-cmo-services" className="block text-gray-700 hover:text-purple-600 font-medium transition-colors">Fractional CMO</Link>
+                <Link href="/fractional-coo-services" className="block text-gray-700 hover:text-purple-600 font-medium transition-colors">Fractional COO</Link>
+                <Link href="/fractional-cfo-services" className="block text-gray-700 hover:text-purple-600 font-medium transition-colors">Fractional CFO</Link>
+              </div>
             </div>
           </div>
         </div>

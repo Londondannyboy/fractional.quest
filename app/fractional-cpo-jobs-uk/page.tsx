@@ -9,15 +9,15 @@ import { RoleContentHub } from '@/components/RoleContentHub'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CPO Jobs UK | Part-Time Chief Product Officer Roles',
-  description: 'Fractional CPO jobs UK - Find part-time Chief Product Officer positions paying £800-£1,300/day. Browse live CPO roles for experienced product leaders. Remote & hybrid available.',
-  keywords: 'fractional cpo jobs, fractional cpo jobs uk, part time cpo, part-time chief product officer, cpo part time, fractional cpo opportunities, fractional product jobs, head of product part time',
+  title: 'Fractional CPO Jobs UK | Part-Time Chief Product Officer Roles 2025',
+  description: 'Fractional CPO jobs UK - Find part-time Chief Product Officer positions paying £800-£1,300/day. Browse CPO jobs, interim CPO roles, and remote product leadership opportunities across London, Manchester & UK.',
+  keywords: 'fractional cpo jobs, fractional cpo jobs uk, part time cpo, part-time chief product officer, cpo part time, cpo jobs uk, cpo jobs, interim cpo, fractional cpo, chief product officer jobs, head of product part time, remote cpo jobs, cpo salary uk',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cpo-jobs-uk',
   },
   openGraph: {
     title: 'Fractional CPO Jobs UK | Part-Time Chief Product Officer Roles',
-    description: 'Fractional CPO jobs UK - Find part-time CPO positions paying £800-£1,300/day. Remote & hybrid available.',
+    description: 'Fractional CPO jobs UK - Find part-time CPO positions paying £800-£1,300/day. Browse CPO jobs now.',
     images: ['/images/fractional-cpo-jobs-uk.jpg'],
     url: 'https://fractional.quest/fractional-cpo-jobs-uk',
   },
@@ -307,6 +307,47 @@ export default async function FractionalCpoJobsUkPage() {
           <p className="text-xl text-purple-100 mb-10 max-w-2xl mx-auto">Create your profile and get matched with companies seeking product leadership.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/handler/sign-up" className="px-10 py-5 bg-white text-purple-900 font-bold uppercase tracking-wider hover:bg-purple-50 transition-colors">Create Profile</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CPO Cluster Links */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="mb-10">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Explore More</span>
+            <h2 className="text-3xl font-black text-gray-900">CPO Resources</h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link href="/cpo" className="group bg-white p-6 border border-gray-200 hover:border-purple-500 transition-colors rounded-xl">
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600">CPO Hub</h3>
+              <p className="text-gray-600 text-sm">Everything about Chief Product Officer roles, salary, and career paths.</p>
+            </Link>
+            <Link href="/fractional-cpo-services" className="group bg-white p-6 border border-gray-200 hover:border-purple-500 transition-colors rounded-xl">
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600">Hire a Fractional CPO</h3>
+              <p className="text-gray-600 text-sm">Looking to hire? Find vetted fractional CPOs for your product team.</p>
+            </Link>
+            <Link href="/interim-cpo" className="group bg-white p-6 border border-gray-200 hover:border-purple-500 transition-colors rounded-xl">
+              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600">Interim CPO</h3>
+              <p className="text-gray-600 text-sm">Full-time temporary CPO for launches, pivots, and transformations.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Links */}
+      <section className="py-12 bg-white border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related</span>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/cpo" className="text-gray-700 hover:text-purple-600 font-medium transition-colors">CPO Hub</Link>
+              <Link href="/fractional-cpo-services" className="text-gray-700 hover:text-purple-600 font-medium transition-colors">CPO Services</Link>
+              <Link href="/interim-cpo" className="text-gray-700 hover:text-purple-600 font-medium transition-colors">Interim CPO</Link>
+              <Link href="/fractional-product-manager-jobs-uk" className="text-gray-700 hover:text-purple-600 font-medium transition-colors">PM Jobs</Link>
+              <Link href="/fractional-cto-jobs-uk" className="text-gray-700 hover:text-purple-600 font-medium transition-colors">CTO Jobs</Link>
+              <Link href="/fractional-cmo-jobs-uk" className="text-gray-700 hover:text-purple-600 font-medium transition-colors">CMO Jobs</Link>
+            </div>
           </div>
         </div>
       </section>
