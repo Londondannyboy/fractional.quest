@@ -141,12 +141,12 @@ export default async function PartTimeCfoJobsUkPage() {
 
       {/* CFO Jobs Knowledge Graph - Desktop Only */}
       <DesktopOnly>
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-gray-900">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="mb-10 text-center">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Interactive Network</span>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 block">Interactive Network</span>
               <h2 className="text-3xl md:text-4xl font-black text-white">CFO Jobs Knowledge Graph</h2>
-              <p className="text-gray-400 mt-2">Explore CFO roles, skills, and companies in 3D</p>
+              <p className="text-gray-300 mt-2">Explore CFO roles, skills, and companies in 3D</p>
             </div>
             <JobsGraph3D roleFilter="CFO" limit={25} height="500px" />
           </div>
@@ -155,15 +155,15 @@ export default async function PartTimeCfoJobsUkPage() {
 
       {/* Companies Hiring */}
       {companies.length > 0 && (
-        <section className="py-16 bg-gray-50 text-white">
+        <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="text-center mb-12">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-2 block">Who's Hiring</span>
-              <h2 className="text-3xl md:text-4xl font-black">Companies Seeking Part-Time CFOs</h2>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Who's Hiring</span>
+              <h2 className="text-3xl md:text-4xl font-black text-gray-900">Companies Seeking Part-Time CFOs</h2>
             </div>
             <div className="flex flex-wrap justify-center gap-x-12 gap-y-6">
               {companies.map((company: string, index: number) => (
-                <span key={index} className="text-xl md:text-2xl font-light text-gray-400 hover:text-blue-400 transition-colors cursor-default">{company}</span>
+                <span key={index} className="text-xl md:text-2xl font-light text-gray-700 hover:text-blue-600 transition-colors cursor-default">{company}</span>
               ))}
             </div>
           </div>
@@ -331,9 +331,9 @@ export default async function PartTimeCfoJobsUkPage() {
             <p>
               Currently, approximately <strong>{stats.remoteCount} of our {stats.total} finance roles</strong> offer remote or hybrid working. <strong>Remote CFO jobs</strong> typically pay the same day rates as on-site roles, making them an attractive option for experienced finance leaders.
             </p>
-            <div className="bg-gray-50 text-white p-6 rounded-lg my-8 not-prose">
-              <p className="text-gray-600 mb-3">Browse remote CFO positions:</p>
-              <Link href="/remote" className="inline-flex items-center text-blue-400 font-bold hover:text-blue-700">
+            <div className="bg-blue-50 p-6 rounded-lg my-8 not-prose border border-blue-200">
+              <p className="text-gray-700 mb-3">Browse remote CFO positions:</p>
+              <Link href="/remote" className="inline-flex items-center text-blue-600 font-bold hover:text-blue-800">
                 View All Remote CFO Jobs →
               </Link>
             </div>
@@ -373,14 +373,14 @@ export default async function PartTimeCfoJobsUkPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-gray-50 text-white">
+      <section className="py-20 md:py-28 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-4 block">Ready?</span>
-          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Find Your Next<br /><span className="text-blue-400">Part-Time CFO Role</span></h2>
-          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">Create your profile and get matched with companies seeking part-time finance leadership.</p>
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-4 block">Ready?</span>
+          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight text-white">Find Your Next<br /><span className="text-blue-400">Part-Time CFO Role</span></h2>
+          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">Create your profile and get matched with companies seeking part-time finance leadership.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/handler/sign-up" className="px-10 py-5 bg-blue-950/200 text-black font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">Create Profile</Link>
-            <Link href="/fractional-cfo-salary" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Salary Guide</Link>
+            <Link href="/handler/sign-up" className="px-10 py-5 bg-blue-500 text-white font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">Create Profile</Link>
+            <Link href="/fractional-cfo-salary" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-gray-900 transition-colors">Salary Guide</Link>
           </div>
         </div>
       </section>
