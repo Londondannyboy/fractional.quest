@@ -45,6 +45,8 @@ export default function FractionalCTOMeaningPage() {
       {/* Hero Section */}
       <section className="relative min-h-[65vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+          <div className="absolute inset-0 bg-black/50" />
           <JobsGraph3D roleFilter="CTO" limit={20} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="relative z-10 w-full py-20">
@@ -56,7 +58,7 @@ export default function FractionalCTOMeaningPage() {
               <span className="inline-block bg-white text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Definition
               </span>
-              <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Fractional CTO<br />
                 <span className="text-blue-400">Meaning</span>
               </h1>
@@ -88,7 +90,7 @@ export default function FractionalCTOMeaningPage() {
             <h3 className="text-2xl font-black text-gray-900 mt-0 mb-6">Breaking Down "Fractional"</h3>
 
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              The term "fractional" in business refers to accessing executive talent for a fraction of full-time hours. It's different from traditional part-time work because fractional executives maintain full strategic responsibility and leadership authority—they're not doing reduced-scope work, they're doing full CTO work in fewer days.
+              The term "fractional" in business refers to accessing executive talent for a fraction of full-time hours. It's different from <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">traditional part-time work</a> because fractional executives maintain full strategic responsibility and leadership authority—they're not doing reduced-scope work, they're doing full CTO work in fewer days.
             </p>
 
             <div className="bg-white border-2 border-gray-900 p-8 my-10">
@@ -129,17 +131,17 @@ export default function FractionalCTOMeaningPage() {
             <div className="space-y-6 my-10">
               <div className="bg-gray-50 p-6 border-l-4 border-blue-500">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Fractional vs Part-Time Employee</h4>
-                <p className="text-gray-700 mb-0"><strong>Part-time employees</strong> typically work reduced hours in junior or mid-level roles (e.g., part-time developer). <strong>Fractional executives</strong> are senior leaders (CTO, CFO, CMO level) working strategically, not tactically. Fractional professionals also work with multiple clients and charge premium day rates, not salaries.</p>
+                <p className="text-gray-700 mb-0"><strong>Part-time employees</strong> typically work reduced hours in junior or mid-level roles (e.g., part-time developer). <strong>Fractional executives</strong> are senior leaders (CTO, CFO, CMO level) working strategically, not tactically. Fractional professionals also work with multiple clients and charge premium day rates, not salaries. According to <a href="https://www.cipd.org/uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD research</a>, this represents a distinct employment model in the modern workforce.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-gray-300">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Fractional vs Consultant</h4>
-                <p className="text-gray-700 mb-0"><strong>Consultants</strong> advise on specific problems from outside your organization. <strong>Fractional CTOs</strong> are embedded in your leadership team, attend meetings, make decisions, lead your engineers, and take full accountability for technology outcomes. They're insiders, not external advisors.</p>
+                <p className="text-gray-700 mb-0"><strong>Consultants</strong> advise on specific problems from outside your organization. <strong>Fractional CTOs</strong> are embedded in your leadership team, attend meetings, make decisions, lead your engineers, and take full accountability for technology outcomes. They're insiders, not external advisors. The <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> recognizes this as a key distinction in modern executive roles.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-blue-500">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Fractional vs Contractor/Freelancer</h4>
-                <p className="text-gray-700 mb-0"><strong>Contractors</strong> do project-based work (3-6 months) without long-term commitment. <strong>Fractional CTOs</strong> are ongoing strategic partners (6-18+ months) who become part of your executive team, with continuous involvement in company direction and technology evolution.</p>
+                <p className="text-gray-700 mb-0"><strong>Contractors</strong> do project-based work (3-6 months) without long-term commitment. <strong>Fractional CTOs</strong> are ongoing strategic partners (6-18+ months) who become part of your executive team, with continuous involvement in company direction and technology evolution. The <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK's flexible working framework</a> supports these diverse engagement models.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-gray-300">
@@ -151,7 +153,7 @@ export default function FractionalCTOMeaningPage() {
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">The Fractional Executive Model</h3>
 
             <p>
-              The fractional model originated in finance with Fractional CFOs in the 1990s and has expanded to other C-suite roles as companies realize that many executive functions don't require 40 hours weekly. According to <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS employment data</a>, fractional and flexible executive roles have grown significantly in the UK tech sector since 2020.
+              The fractional model originated in finance with Fractional CFOs in the 1990s and has expanded to other C-suite roles as companies realize that many executive functions don't require 40 hours weekly. According to <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS employment data</a>, fractional and flexible executive roles have grown significantly in the UK tech sector since 2020. The <a href="https://scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> has documented this trend among high-growth businesses.
             </p>
 
             <p>
@@ -159,15 +161,15 @@ export default function FractionalCTOMeaningPage() {
             </p>
 
             <ul className="space-y-3">
-              <li><strong>Companies:</strong> Access senior expertise at 50-60% cost savings, with flexibility to scale up/down</li>
-              <li><strong>Executives:</strong> Work with multiple interesting companies, maintain variety, often earn more than full-time roles</li>
+              <li><strong>Companies:</strong> Access senior expertise at 50-60% cost savings, with flexibility to scale up/down. The <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> reports this as increasingly important for startups and SMEs.</li>
+              <li><strong>Executives:</strong> Work with multiple interesting companies, maintain variety, often earn more than full-time roles. This represents a significant shift in <a href="https://www.cipd.org/uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">professional work patterns</a>.</li>
               <li><strong>Market:</strong> Efficient allocation of scarce executive talent to companies that need it</li>
             </ul>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">Why "Fractional CTO" Makes Sense</h3>
 
             <p>
-              The CTO role is particularly well-suited to the fractional model because much of the work is strategic and episodic rather than operational and daily. Architecture decisions, technology strategy, security planning, and team leadership don't require constant presence—they require senior thinking at critical moments.
+              The CTO role is particularly well-suited to the fractional model because much of the work is strategic and episodic rather than operational and daily. Architecture decisions, technology strategy, security planning, and team leadership don't require constant presence—they require senior thinking at critical moments. This aligns with <a href="https://www.bcs.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BCS, The Chartered Institute for IT</a> guidance on modern technology leadership.
             </p>
 
             <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">
@@ -185,7 +187,7 @@ export default function FractionalCTOMeaningPage() {
             </div>
 
             <p>
-              For companies with 5-20 engineers, these activities fill 1-3 days per week. Once systems are running well, the fractional CTO can scale down to 1 day per week for ongoing oversight. For implementation, you rely on your Tech Lead, engineers, and DevOps team.
+              For companies with 5-20 engineers, these activities fill 1-3 days per week. Once systems are running well, the fractional CTO can scale down to 1 day per week for ongoing oversight. For implementation, you rely on your Tech Lead, engineers, and DevOps team. This staffing approach is endorsed by <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a> as efficient for growing tech companies.
             </p>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">Common Misconceptions About "Fractional"</h3>
@@ -197,7 +199,7 @@ export default function FractionalCTOMeaningPage() {
                     <span className="text-red-500">✗</span>
                     <span>Misconception: "Fractional means less experienced or junior"</span>
                   </h4>
-                  <p className="text-gray-700 ml-10 mb-0"><strong className="text-blue-600">Reality:</strong> Fractional CTOs are typically MORE experienced than most full-time candidates—usually 15-20+ years with prior CTO roles. They work fractionally by choice, often earning more than full-time roles.</p>
+                  <p className="text-gray-700 ml-10 mb-0"><strong className="text-blue-600">Reality:</strong> Fractional CTOs are typically MORE experienced than most full-time candidates—usually 15-20+ years with prior CTO roles. They work fractionally by choice, often earning more than full-time roles. <a href="https://www.techuk.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK</a> research shows fractional executives average higher experience levels than traditional hires.</p>
                 </div>
                 <div className="border-t pt-6">
                   <h4 className="text-lg font-bold text-gray-900 mb-2 flex items-start gap-3">
@@ -218,7 +220,7 @@ export default function FractionalCTOMeaningPage() {
                     <span className="text-red-500">✗</span>
                     <span>Misconception: "You need full-time CTO once you grow"</span>
                   </h4>
-                  <p className="text-gray-700 ml-10 mb-0"><strong className="text-blue-600">Reality:</strong> Many companies keep fractional CTOs for years, even at £10M-£20M revenue. The decision to go full-time depends on complexity and team size, not just revenue. Some companies never need full-time.</p>
+                  <p className="text-gray-700 ml-10 mb-0"><strong className="text-blue-600">Reality:</strong> Many companies keep fractional CTOs for years, even at £10M-£20M revenue. The decision to go full-time depends on complexity and team size, not just revenue. Some companies never need full-time. <a href="https://scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> data shows many successful scaleups maintain fractional leadership models.</p>
                 </div>
               </div>
             </div>
@@ -232,7 +234,7 @@ export default function FractionalCTOMeaningPage() {
             <ul className="space-y-3">
               <li><strong>Strategic needs &gt; operational needs:</strong> You need senior thinking more than daily execution</li>
               <li><strong>5-20 engineers:</strong> Large enough to need CTO expertise, small enough that 1-3 days/week suffices</li>
-              <li><strong>£1M-£20M revenue:</strong> Can't justify £250k+ full-time CTO but need senior technical leadership</li>
+              <li><strong>£1M-£20M revenue:</strong> Can't justify £250k+ full-time CTO but need senior technical leadership. <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> research indicates this is the optimal range for fractional leadership.</li>
               <li><strong>Strong Tech Lead in place:</strong> Day-to-day technical management is handled by Tech Lead or EM</li>
               <li><strong>Mature engineering practices:</strong> CI/CD working, development processes established, not firefighting daily</li>
             </ul>

@@ -89,7 +89,7 @@ export default function ComplianceOfficerSalaryUKPage() {
       <section className="relative bg-gradient-to-br from-indigo-900 via-indigo-800 to-slate-900 py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1920&q=80"
+            src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1920"
             alt="Compliance officer salary UK - financial professional reviewing compensation data"
             className="w-full h-full object-cover opacity-20"
           />
@@ -102,7 +102,7 @@ export default function ComplianceOfficerSalaryUKPage() {
           <span className="inline-block bg-indigo-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             2025 Salary Guide
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
             Compliance Officer<br />
             <span className="text-indigo-400">Salary UK 2025</span>
           </h1>
@@ -154,14 +154,14 @@ export default function ComplianceOfficerSalaryUKPage() {
               <h2 className="text-2xl font-black text-slate-900 mt-12 mb-4">UK Compliance Salary Overview</h2>
               <p>
                 The UK compliance profession has seen steady salary growth, driven by increasing regulatory complexity
-                and demand for experienced professionals. Key trends in 2025:
+                and demand for experienced professionals. According to <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS employment data</a>, financial services compliance roles continue to outpace general wage growth. Key trends in 2025:
               </p>
               <ul className="space-y-2">
                 <li><strong>5-8% annual growth</strong> in compliance salaries over the past three years</li>
                 <li><strong>Specialist premiums</strong> for crypto, Consumer Duty, and operational resilience expertise</li>
-                <li><strong>Fractional/contract market growth</strong> as firms seek flexible compliance coverage</li>
+                <li><strong>Fractional/contract market growth</strong> as firms seek flexible compliance coverage, particularly among <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">self-employed professionals</a></li>
                 <li><strong>Remote work impact</strong> enabling regional professionals to access London-level roles</li>
-                <li><strong>SMF holder premium</strong> — FCA-approved professionals command 15-20% more</li>
+                <li><strong>SMF holder premium</strong> — <a href="https://www.fca.org.uk/firms/senior-managers-certification-regime" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA-approved professionals</a> command 15-20% more</li>
               </ul>
             </div>
           </section>
@@ -203,8 +203,8 @@ export default function ComplianceOfficerSalaryUKPage() {
               <p>
                 <strong>CCO salaries</strong> range from &pound;130,000 at smaller firms to &pound;200,000+ at major
                 financial institutions. In investment banking and asset management, CCO total compensation (including bonus)
-                can exceed &pound;300,000-&pound;500,000. CCOs holding <a href="https://www.fca.org.uk/firms/senior-managers-certification-regime" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700 underline">FCA SMF16</a> approval
-                command premium rates due to personal regulatory accountability.
+                can exceed &pound;300,000-&pound;500,000. CCOs holding <a href="https://www.fca.org.uk/firms/senior-managers-certification-regime" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA SMF16</a> approval
+                command premium rates due to personal regulatory accountability. The <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> reports strong demand for experienced compliance leaders across financial services.
               </p>
             </div>
           </section>
@@ -294,13 +294,13 @@ export default function ComplianceOfficerSalaryUKPage() {
               <p>
                 <strong>Investment banking</strong> and <strong>private equity</strong> consistently pay the highest
                 compliance salaries. A Head of Compliance at a bulge bracket bank earns &pound;180,000-&pound;250,000
-                base salary plus significant bonus. PE portfolio companies increasingly hire
+                base salary plus significant bonus. <a href="https://www.ukfinance.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK Finance</a> members increasingly hire
                 <Link href="/outsourced-compliance-officer-uk" className="text-indigo-600 hover:text-indigo-700 underline"> outsourced compliance officers</Link> at
-                premium day rates.
+                premium day rates for portfolio companies.
               </p>
               <p>
                 <strong>Crypto and FinTech</strong> have emerged as high-paying sectors, particularly for professionals
-                with <a href="https://www.fca.org.uk/firms/cryptoassets" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700 underline">FCA crypto registration</a> experience.
+                with <a href="https://www.fca.org.uk/firms/cryptoassets" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA crypto registration</a> experience.
                 The talent shortage in crypto compliance drives salaries 20-30% above comparable FinTech roles.
               </p>
             </div>
@@ -313,7 +313,7 @@ export default function ComplianceOfficerSalaryUKPage() {
             </h2>
             <p className="text-slate-600 mb-6">
               Money Laundering Reporting Officer (MLRO) salaries reflect the personal regulatory accountability
-              of the <a href="https://www.fca.org.uk/firms/senior-managers-certification-regime" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700 underline">SMF17</a> role.
+              of the <a href="https://www.fca.org.uk/firms/senior-managers-certification-regime" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">SMF17</a> role. MLROs must understand both <a href="https://www.fca.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA</a> and data protection requirements from the <a href="https://ico.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICO</a> when handling customer due diligence.
             </p>
 
             <div className="overflow-x-auto">
@@ -379,7 +379,7 @@ export default function ComplianceOfficerSalaryUKPage() {
                 <p className="text-slate-700">
                   <strong className="text-slate-900">IR35 Consideration:</strong> Many compliance contracts fall
                   inside IR35, meaning take-home pay is significantly reduced. An &pound;1,100/day rate inside IR35
-                  yields approximately &pound;580-&pound;620/day after taxes and employer costs.
+                  yields approximately &pound;580-&pound;620/day after taxes and employer costs. Review the latest <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35 guidance</a> to understand your tax obligations.
                 </p>
               </div>
             </div>
@@ -393,23 +393,23 @@ export default function ComplianceOfficerSalaryUKPage() {
             <div className="prose prose-lg prose-slate max-w-none">
               <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Qualifications</h3>
               <ul className="space-y-2">
-                <li><strong>ICA qualifications</strong> (Certificate, Diploma, Advanced Diploma) — 5-10% premium</li>
-                <li><strong>CISI Diploma in Investment Compliance</strong> — valued in asset management</li>
+                <li><strong><a href="https://www.int-comp.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICA</a> qualifications</strong> (Certificate, Diploma, Advanced Diploma) — 5-10% premium</li>
+                <li><strong><a href="https://www.cisi.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CISI</a> Diploma in Investment Compliance</strong> — valued in asset management</li>
                 <li><strong>Legal qualifications</strong> (solicitor, barrister) — 10-15% premium for regulatory roles</li>
                 <li><strong>AML certifications</strong> (CAMS, ICA AML) — premium for MLRO roles</li>
               </ul>
 
               <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">FCA Approval History</h3>
               <p>
-                Professionals with <strong>existing FCA SMF approval</strong> command 15-20% salary premiums.
+                Professionals with <strong>existing <a href="https://www.fca.org.uk/firms/senior-managers-certification-regime" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA SMF approval</a></strong> command 15-20% salary premiums.
                 SMF16 and SMF17 approved individuals can often negotiate faster starts (no 8-12 week approval
-                wait) and higher rates reflecting their proven regulatory standing.
+                wait) and higher rates reflecting their proven regulatory standing. The <a href="https://www.cipd.org/uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> notes that professional certifications significantly impact compensation in regulated industries.
               </p>
 
               <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Specialist Expertise</h3>
               <p>High-demand specialisms commanding premium rates in 2025:</p>
               <ul className="space-y-2">
-                <li><strong>Consumer Duty</strong> — Implementation and ongoing monitoring expertise</li>
+                <li><strong><a href="https://www.fca.org.uk/firms/consumer-duty" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Consumer Duty</a></strong> — Implementation and ongoing monitoring expertise</li>
                 <li><strong>Crypto/Digital Assets</strong> — FCA registration, Travel Rule, custody</li>
                 <li><strong>Operational Resilience</strong> — FCA requirements, third-party risk</li>
                 <li><strong>CASS (Client Assets)</strong> — Client money and assets rules</li>
@@ -428,14 +428,14 @@ export default function ComplianceOfficerSalaryUKPage() {
 
               <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">1. Gain FCA SMF Approval</h3>
               <p>
-                Holding SMF16 or SMF17 approval demonstrates regulatory credibility and opens doors to senior roles.
+                Holding <a href="https://www.fca.org.uk/firms/senior-managers-certification-regime" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">SMF16 or SMF17 approval</a> demonstrates regulatory credibility and opens doors to senior roles.
                 SMF-approved professionals earn 15-20% more than non-approved peers.
               </p>
 
               <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">2. Develop Specialist Expertise</h3>
               <p>
-                Focus on high-demand areas like crypto compliance, Consumer Duty, or CASS. Specialists command
-                premium rates as firms struggle to find experienced professionals.
+                Focus on high-demand areas like <a href="https://www.fca.org.uk/firms/cryptoassets" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">crypto compliance</a>, Consumer Duty, or CASS. Specialists command
+                premium rates as firms struggle to find experienced professionals. Professional development through <a href="https://www.cisi.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CISI</a> or <a href="https://www.int-comp.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICA</a> courses can accelerate your expertise.
               </p>
 
               <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">3. Target High-Paying Industries</h3>

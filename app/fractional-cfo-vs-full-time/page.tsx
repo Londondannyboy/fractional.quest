@@ -188,11 +188,11 @@ export default function FractionalVsFullTimeCFOPage() {
                   <span className="font-semibold">£180,000</span>
                 </div>
                 <div className="flex justify-between border-b border-slate-100 pb-2">
-                  <span>Employer NI (13.8%)</span>
+                  <span><a href="https://www.gov.uk/browse/employing-people" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Employer NI</a> (13.8%)</span>
                   <span className="font-semibold">£24,840</span>
                 </div>
                 <div className="flex justify-between border-b border-slate-100 pb-2">
-                  <span>Pension (5% employer)</span>
+                  <span><a href="https://www.cipd.org/uk/knowledge/factsheets/pensions-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Pension</a> (5% employer)</span>
                   <span className="font-semibold">£9,000</span>
                 </div>
                 <div className="flex justify-between border-b border-slate-100 pb-2">
@@ -234,7 +234,7 @@ export default function FractionalVsFullTimeCFOPage() {
                   <span className="font-semibold">£0</span>
                 </div>
                 <div className="flex justify-between border-b border-slate-100 pb-2">
-                  <span>No NI, pension, or benefits</span>
+                  <span>No <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35</a> employment costs (NI, pension, benefits)</span>
                   <span className="font-semibold">£0</span>
                 </div>
                 <div className="flex justify-between border-b border-slate-100 pb-2">
@@ -339,19 +339,19 @@ export default function FractionalVsFullTimeCFOPage() {
 
             <h3 className="text-2xl font-bold text-blue-900">Fractional CFO Benefits</h3>
             <ul className="text-slate-700">
-              <li><strong>Cost efficiency:</strong> 60-80% lower cost than full-time for same expertise level</li>
+              <li><strong>Cost efficiency:</strong> 60-80% lower cost than full-time for same expertise level, as reported by <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IPSE</a></li>
               <li><strong>Diverse experience:</strong> Cross-industry insights from working with multiple clients</li>
               <li><strong>Fast deployment:</strong> Start within 2-4 weeks vs 3-6 months for full-time</li>
               <li><strong>Scalability:</strong> Easily adjust commitment level (1-4 days/week) as needs change</li>
               <li><strong>Lower risk:</strong> Shorter notice periods and trial capability before full commitment</li>
-              <li><strong>Proven track record:</strong> Most fractional CFOs have 15-25 years experience including prior full-time CFO roles</li>
+              <li><strong>Proven track record:</strong> Most fractional CFOs have 15-25 years experience including prior full-time CFO roles, often holding professional qualifications from <a href="https://www.icaew.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICAEW</a>, <a href="https://www.accaglobal.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACCA</a>, or <a href="https://www.cimaglobal.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIMA</a></li>
               <li><strong>Project expertise:</strong> Specialist knowledge for fundraising, M&A, systems implementation</li>
             </ul>
 
             <h3 className="text-2xl font-bold text-red-900">Fractional CFO Drawbacks</h3>
             <ul className="text-slate-700">
               <li><strong>Limited availability:</strong> Not on-site daily, may have other client commitments</li>
-              <li><strong>Cultural integration:</strong> Part-time presence can make team integration harder</li>
+              <li><strong>Cultural integration:</strong> Part-time presence can make team integration harder, requiring strong <a href="https://www.acas.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">employee relations</a> practices</li>
               <li><strong>Crisis response:</strong> May not be immediately available during unexpected emergencies</li>
               <li><strong>Knowledge continuity:</strong> Risk of gaps if engagement ends and transition isn't managed</li>
               <li><strong>Divided attention:</strong> Juggling multiple clients means not 100% focused on your business</li>
@@ -361,15 +361,15 @@ export default function FractionalVsFullTimeCFOPage() {
             <ul className="text-slate-700">
               <li><strong>Full availability:</strong> Always accessible for urgent matters and daily decisions</li>
               <li><strong>Deep company knowledge:</strong> Complete immersion in business operations and culture</li>
-              <li><strong>Team leadership:</strong> Direct management and development of finance team</li>
-              <li><strong>Stakeholder relationships:</strong> Dedicated time for investor, board, and bank relationships</li>
+              <li><strong>Team leadership:</strong> Direct management and development of finance team, following <a href="https://www.cipd.org/uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> best practices</li>
+              <li><strong>Stakeholder relationships:</strong> Dedicated time for investor, board, and bank relationships, particularly valuable for <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">board governance</a></li>
               <li><strong>Strategic continuity:</strong> Long-term strategic planning and execution capability</li>
               <li><strong>Cultural fit:</strong> Full integration into leadership team and company culture</li>
             </ul>
 
             <h3 className="text-2xl font-bold text-red-900">Full-Time CFO Drawbacks</h3>
             <ul className="text-slate-700">
-              <li><strong>High fixed cost:</strong> £150K-£300K+ annual commitment regardless of business performance</li>
+              <li><strong>High fixed cost:</strong> £150K-£300K+ annual commitment regardless of business performance, significantly higher than <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">median earnings</a></li>
               <li><strong>Limited perspective:</strong> Single-company focus may create blind spots vs external insight</li>
               <li><strong>Long hiring process:</strong> 3-6 months to recruit, potentially longer for right candidate</li>
               <li><strong>Exit complexity:</strong> 3-6 month notice periods, potential gardening leave, replacement challenges</li>
@@ -392,7 +392,7 @@ export default function FractionalVsFullTimeCFOPage() {
                   <h3 className="font-bold text-slate-900">Start Fractional (£1M-£10M revenue)</h3>
                 </div>
                 <p className="ml-11 text-slate-600">
-                  Begin with 1-2 days per week to establish financial processes, reporting, and strategic planning. This phase typically lasts 12-24 months.
+                  Begin with 1-2 days per week to establish financial processes, reporting, and strategic planning. This phase typically lasts 12-24 months, ideal for businesses supported by <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> funding.
                 </p>
               </div>
 
@@ -402,7 +402,7 @@ export default function FractionalVsFullTimeCFOPage() {
                   <h3 className="font-bold text-slate-900">Scale Fractional Time (£10M-£30M revenue)</h3>
                 </div>
                 <p className="ml-11 text-slate-600">
-                  Increase to 2-3 days per week as complexity grows. Fractional CFO helps recruit and build the finance team, prepares systems for scale.
+                  Increase to 2-3 days per week as complexity grows. Fractional CFO helps recruit and build the finance team, prepares systems for scale—a common pattern among <a href="https://scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp</a> businesses.
                 </p>
               </div>
 
@@ -428,7 +428,7 @@ export default function FractionalVsFullTimeCFOPage() {
             </div>
 
             <p className="text-slate-700">
-              This staged approach minimizes risk, allows you to validate CFO value before full commitment, and ensures smooth knowledge transfer when moving to full-time.
+              This staged approach minimizes risk, allows you to validate CFO value before full commitment, and ensures smooth knowledge transfer when moving to full-time. Understanding <a href="https://www.gov.uk/browse/employing-people" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">employment obligations</a> is crucial when making this transition.
             </p>
           </section>
 
@@ -452,7 +452,7 @@ export default function FractionalVsFullTimeCFOPage() {
                 <div className="rounded-lg bg-white p-4">
                   <div className="mb-2 font-bold text-blue-700">Full-Time Financial Controller - £80K/year</div>
                   <p className="text-sm text-slate-600">
-                    Day-to-day operations, team management, process execution, management reporting
+                    Day-to-day operations, team management, process execution, management reporting, ensuring compliance with <a href="https://www.acas.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">employment standards</a>
                   </p>
                 </div>
                 <div className="mt-4 rounded-lg bg-blue-950/20 p-4">

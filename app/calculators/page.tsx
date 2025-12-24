@@ -53,10 +53,10 @@ export default function CalculatorsHub() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 py-20 md:py-32">
+      <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 py-20 md:py-32" style={{ backgroundImage: 'url(https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1920)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay' }}>
         <div className="max-w-5xl mx-auto px-4 text-center">
           <span className="section-label text-purple-300 mb-4 block">Free Tools</span>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Fractional Executive Calculators
           </h1>
           <p className="text-xl text-purple-200 max-w-3xl mx-auto leading-relaxed">

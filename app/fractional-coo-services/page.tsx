@@ -121,22 +121,22 @@ export default function FractionalCOOServicesPage() {
             {[
               {
                 title: 'Operational Strategy',
-                description: 'Design and implement the operating model that supports your growth. Align operations with business strategy and ensure execution excellence.',
+                description: 'Design and implement the operating model that supports your growth. Align operations with business strategy and ensure execution excellence, following <a href="https://www.apm.org.uk" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">APM best practices</a>.',
                 icon: '🎯',
               },
               {
                 title: 'Process Optimisation',
-                description: 'Identify bottlenecks, streamline workflows, and implement efficient processes. Build the operational infrastructure that scales.',
+                description: 'Identify bottlenecks, streamline workflows, and implement efficient processes. Build the operational infrastructure that scales, aligned with <a href="https://www.makeuk.org" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">Make UK efficiency standards</a>.',
                 icon: '⚙️',
               },
               {
                 title: 'Team & Structure',
-                description: 'Design organisational structure, define roles, and build high-performing teams. Ensure the right people are in the right positions.',
+                description: 'Design organisational structure, define roles, and build high-performing teams. Ensure the right people are in the right positions, following <a href="https://www.cipd.org.uk" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">CIPD people management frameworks</a>.',
                 icon: '👥',
               },
               {
                 title: 'Project Management',
-                description: 'Lead critical initiatives and cross-functional projects. Ensure key programmes are delivered on time and on budget.',
+                description: 'Lead critical initiatives and cross-functional projects. Ensure key programmes are delivered on time and on budget, using <a href="https://www.apm.org.uk/resources" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">APM project delivery frameworks</a>.',
                 icon: '📋',
               },
               {
@@ -146,7 +146,7 @@ export default function FractionalCOOServicesPage() {
               },
               {
                 title: 'Metrics & KPIs',
-                description: 'Define operational KPIs, build dashboards, and create accountability frameworks. Make operations data-driven.',
+                description: 'Define operational KPIs, build dashboards, and create accountability frameworks. Make operations data-driven using <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">ONS employment benchmarks</a>.',
                 icon: '📊',
               },
               {
@@ -176,7 +176,7 @@ export default function FractionalCOOServicesPage() {
             {[
               {
                 title: 'Free Your CEO',
-                description: 'Let your CEO focus on strategy, fundraising, and growth instead of day-to-day operations. A fractional COO handles execution so leadership can lead.',
+                description: 'Let your CEO focus on strategy, fundraising, and growth instead of day-to-day operations. A fractional COO handles execution so leadership can lead, enabling <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a> that benefit the entire leadership team.',
                 stat: '50%',
                 statLabel: 'CEO Time Freed',
               },
@@ -188,7 +188,7 @@ export default function FractionalCOOServicesPage() {
               },
               {
                 title: 'Scale Faster',
-                description: 'Fractional COOs have scaled companies before. They know what operational infrastructure you need at each stage and can implement it quickly.',
+                description: 'Fractional COOs have scaled companies before. They know what operational infrastructure you need at each stage and can implement it quickly, supported by <a href="https://www.scaleupinstitute.org.uk" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute insights</a>.',
                 stat: '2x',
                 statLabel: 'Scaling Speed',
               },
@@ -200,7 +200,7 @@ export default function FractionalCOOServicesPage() {
               },
               {
                 title: 'Cross-Company Experience',
-                description: 'Fractional COOs work across multiple businesses. They bring best practices, benchmarks, and proven playbooks from diverse operational challenges.',
+                description: 'Fractional COOs work across multiple businesses. They bring best practices, benchmarks, and proven playbooks from diverse operational challenges, informed by <a href="https://www.managers.org.uk" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">CMI management research</a>.',
                 stat: '5+',
                 statLabel: 'Companies Seen',
               },
@@ -246,7 +246,7 @@ export default function FractionalCOOServicesPage() {
               },
               {
                 scenario: 'Post-Funding Scale',
-                description: 'You\'ve raised capital and need to scale quickly. Investors expect operational excellence and the ability to execute on growth plans.',
+                description: 'You\'ve raised capital and need to scale quickly. Investors expect operational excellence and the ability to execute on growth plans, as outlined by <a href="https://www.britishbusinessbank.co.uk" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> growth frameworks.',
                 timing: 'Immediately after close',
               },
               {
@@ -256,12 +256,12 @@ export default function FractionalCOOServicesPage() {
               },
               {
                 scenario: 'Preparing for Exit',
-                description: 'M&A buyers and IPO investors want to see operational maturity. A fractional COO can professionalise operations for due diligence.',
+                description: 'M&A buyers and IPO investors want to see operational maturity. A fractional COO can professionalise operations for due diligence, meeting <a href="https://www.bvca.co.uk" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">BVCA investment standards</a>.',
                 timing: '12-18 months before',
               },
               {
                 scenario: 'Building Infrastructure',
-                description: 'You need to implement systems, processes, and structures but lack the expertise. A fractional COO can build the foundation.',
+                description: 'You need to implement systems, processes, and structures but lack the expertise. A fractional COO can build the foundation, applying <a href="https://www.bethebusiness.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">Be the Business productivity frameworks</a>.',
                 timing: 'Before it becomes urgent',
               },
             ].map((item, index) => (
@@ -291,6 +291,9 @@ export default function FractionalCOOServicesPage() {
               <li><strong>Monthly Retainer:</strong> £3,000-£5,500 for 1-2 days per week</li>
               <li><strong>Annual Cost:</strong> £75,000-£140,000 (vs £180,000+ for full-time)</li>
             </ul>
+            <p className="text-sm text-gray-500 mt-4">
+              All arrangements comply with <a href="https://www.gov.uk/browse/business" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">UK business regulations</a> and <a href="https://www.gov.uk/browse/employing-people" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">employment frameworks</a>.
+            </p>
           </div>
         </div>
       </section>

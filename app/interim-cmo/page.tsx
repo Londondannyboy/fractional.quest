@@ -39,7 +39,7 @@ export default function InterimCMOPage() {
                 Interim CMO<br /><span className="text-amber-300">Services UK</span>
               </h1>
               <p className="text-xl text-white/90 leading-relaxed max-w-2xl mb-8">
-                Full-time temporary CMO leadership for transitions, rebrands, and marketing transformations. Expert marketing executives available to start immediately.
+                Full-time temporary CMO leadership for transitions, rebrands, and marketing transformations. Expert <a href="https://www.marketingweek.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-amber-200 underline">marketing executives</a> available to start immediately.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="#contact" className="px-8 py-4 bg-white text-amber-900 font-bold uppercase tracking-wider hover:bg-amber-50 transition-colors">Hire an Interim CMO</Link>
@@ -55,9 +55,9 @@ export default function InterimCMOPage() {
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">What is an Interim CMO?</h2>
           <div className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-6">
-              An <strong>Interim CMO</strong> is a temporary Chief Marketing Officer who works full-time for a defined period—typically 3-12 months. Unlike fractional CMOs who work part-time, interim CMOs focus exclusively on one organisation during their engagement.
+              An <strong>Interim CMO</strong> is a temporary Chief Marketing Officer who works full-time for a defined period—typically 3-12 months. Unlike fractional CMOs who work part-time, interim CMOs focus exclusively on one organisation during their engagement. This type of <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangement</a> provides businesses with senior marketing expertise without the commitment of a permanent hire.
             </p>
-            <p>Interim CMOs are typically hired to fill leadership gaps, lead rebrands, or drive marketing transformations during critical periods.</p>
+            <p>Interim CMOs are typically hired to fill leadership gaps, lead rebrands, or drive marketing transformations during critical periods. According to the <a href="https://www.cim.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Chartered Institute of Marketing</a>, interim marketing leadership has become increasingly common as businesses adapt to rapidly changing market conditions.</p>
           </div>
         </div>
       </section>
@@ -65,6 +65,9 @@ export default function InterimCMOPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-black text-gray-900 mb-8">When to Hire an Interim CMO</h2>
+          <p className="text-gray-600 mb-6">
+            <a href="https://www.scaleupinstitute.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp businesses</a> and established organisations often need interim marketing leadership during critical transitions. The <a href="https://www.dma.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Data & Marketing Association</a> reports growing demand for flexible C-suite marketing talent.
+          </p>
           <div className="grid md:grid-cols-2 gap-6">
             {[
               { scenario: 'CMO Departure', description: 'Your CMO has left and you need immediate leadership while recruiting a permanent replacement.' },
@@ -86,6 +89,9 @@ export default function InterimCMOPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-black text-gray-900 mb-8">Interim CMO vs Fractional CMO</h2>
+          <p className="text-gray-600 mb-6">
+            Both models offer <a href="https://www.cipd.org/uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible senior leadership</a> alternatives to permanent hires. The <a href="https://www.ipa.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Practitioners in Advertising</a> notes that businesses increasingly leverage interim and fractional executives for strategic marketing projects.
+          </p>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
@@ -105,7 +111,7 @@ export default function InterimCMOPage() {
           </div>
           <div className="mt-8 p-6 bg-amber-50 border border-amber-200 rounded-lg">
             <p className="text-amber-800 font-medium mb-2">Not sure which is right for you?</p>
-            <p className="text-amber-700 text-sm mb-4">If you need full-time focus for a specific project, choose interim. If you need ongoing marketing leadership at lower cost, choose fractional.</p>
+            <p className="text-amber-700 text-sm mb-4">If you need full-time focus for a specific project, choose interim. If you need ongoing marketing leadership at lower cost, choose fractional. The <a href="https://www.iod.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> provides guidance on selecting executive leadership models.</p>
             <Link href="/fractional-cmo-services" className="text-amber-700 font-bold hover:text-amber-900">Learn about Fractional CMO Services →</Link>
           </div>
         </div>
@@ -120,7 +126,7 @@ export default function InterimCMOPage() {
       <section id="contact" className="py-20 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-black mb-6">Need an Interim CMO?</h2>
-          <p className="text-xl text-gray-600 mb-10">Tell us about your situation and we'll help you find the right interim or fractional CMO.</p>
+          <p className="text-xl text-gray-600 mb-10">Tell us about your situation and we'll help you find the right interim or fractional CMO. Whether you're a <a href="https://www.gov.uk/business" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">growing business</a> or an established enterprise, we can match you with experienced marketing leadership.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact/companies" className="px-10 py-5 bg-amber-500 text-black font-bold uppercase tracking-wider hover:bg-amber-400 transition-colors">Find an Interim CMO</Link>
             <Link href="/fractional-cmo-services" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Explore Fractional CMO</Link>

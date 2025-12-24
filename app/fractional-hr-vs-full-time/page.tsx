@@ -44,15 +44,18 @@ export default function FractionalHRVsFullTimePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="bg-gray-50 py-20 relative">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="" className="w-full h-full object-cover opacity-40" />
+        </div>
+        <div className="max-w-4xl mx-auto px-6 relative z-10">
           <Link href="/fractional-hr" className="text-gray-400 hover:text-gray-900 mb-6 inline-block text-sm">← Back to HR Hub</Link>
           <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             Comparison Guide
           </span>
-          <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">Fractional HR vs<br />Full-Time HR</h1>
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Fractional HR vs<br />Full-Time HR</h1>
           <p className="text-xl text-gray-600 mb-8">
-            Should you hire fractional or full-time? A comprehensive comparison to help you make the right decision for your business.
+            Should you hire fractional or full-time? A comprehensive comparison to help you make the right decision for your <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">business</a>.
           </p>
           <div className="flex flex-wrap gap-8">
             <div>
@@ -96,7 +99,7 @@ export default function FractionalHRVsFullTimePage() {
                 </tr>
                 <tr className="border-b">
                   <td className="p-4 font-semibold">Experience Level</td>
-                  <td className="p-4 bg-pink-50">15-20+ years typical</td>
+                  <td className="p-4 bg-pink-50"><a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">15-20+ years typical</a></td>
                   <td className="p-4">10-15 years typical</td>
                 </tr>
                 <tr className="border-b">
@@ -107,7 +110,7 @@ export default function FractionalHRVsFullTimePage() {
                 <tr className="border-b">
                   <td className="p-4 font-semibold">Notice Period</td>
                   <td className="p-4 bg-pink-50">30-60 days</td>
-                  <td className="p-4">3-6 months</td>
+                  <td className="p-4"><a href="https://www.acas.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">3-6 months</a></td>
                 </tr>
                 <tr className="border-b">
                   <td className="p-4 font-semibold">Scalability</td>
@@ -117,11 +120,11 @@ export default function FractionalHRVsFullTimePage() {
                 <tr className="border-b">
                   <td className="p-4 font-semibold">Benefits/Equity</td>
                   <td className="p-4 bg-pink-50">Not included (contractor)</td>
-                  <td className="p-4">Required (pension, NI, etc.)</td>
+                  <td className="p-4">Required (<a href="https://www.gov.uk/browse/employing-people" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">pension, NI, etc.</a>)</td>
                 </tr>
                 <tr className="border-b">
                   <td className="p-4 font-semibold">Multi-Company Experience</td>
-                  <td className="p-4 bg-pink-50">Working with 2-4 clients</td>
+                  <td className="p-4 bg-pink-50">Working with <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">2-4 clients</a></td>
                   <td className="p-4">Single company focus</td>
                 </tr>
                 <tr>
@@ -149,7 +152,7 @@ export default function FractionalHRVsFullTimePage() {
                   <span className="font-bold">£104,000</span>
                 </div>
                 <div className="flex justify-between border-b pb-2">
-                  <span>Employer National Insurance</span>
+                  <span><a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Employer National Insurance</a></span>
                   <span className="font-bold">£0</span>
                 </div>
                 <div className="flex justify-between border-b pb-2">
@@ -161,7 +164,7 @@ export default function FractionalHRVsFullTimePage() {
                   <span className="font-bold">£0</span>
                 </div>
                 <div className="flex justify-between border-b pb-2">
-                  <span>Recruitment fees</span>
+                  <span><a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Recruitment fees</a></span>
                   <span className="font-bold">£0</span>
                 </div>
                 <div className="flex justify-between pt-4 bg-pink-50 px-4 py-3 -mx-4">
@@ -175,11 +178,11 @@ export default function FractionalHRVsFullTimePage() {
               <h3 className="text-xl font-black text-gray-900 mb-6">Full-Time HR Director</h3>
               <div className="space-y-3 text-gray-700">
                 <div className="flex justify-between border-b pb-2">
-                  <span>Base salary</span>
+                  <span><a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Base salary</a></span>
                   <span className="font-bold">£125,000</span>
                 </div>
                 <div className="flex justify-between border-b pb-2">
-                  <span>Employer NI (13.8%)</span>
+                  <span><a href="https://www.ons.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Employer NI</a> (13.8%)</span>
                   <span className="font-bold">£17,250</span>
                 </div>
                 <div className="flex justify-between border-b pb-2">
@@ -204,7 +207,7 @@ export default function FractionalHRVsFullTimePage() {
 
           <div className="bg-gray-50 text-gray-900 p-10 text-center">
             <div className="text-5xl font-black mb-4 text-pink-400">Save £59,900/year</div>
-            <div className="text-xl mb-2">That's 37% cost reduction with fractional HR</div>
+            <div className="text-xl mb-2">That's 37% <a href="https://www.ons.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">cost reduction</a> with fractional HR</div>
             <div className="text-gray-400">Plus more experienced talent and faster start</div>
           </div>
         </div>
@@ -224,7 +227,7 @@ export default function FractionalHRVsFullTimePage() {
               <ul className="space-y-4 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-pink-500 mr-2 font-bold">•</span>
-                  <span>You have <strong>20-150 employees</strong></span>
+                  <span>You have <strong><a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">20-150 employees</a></strong></span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-pink-500 mr-2 font-bold">•</span>
@@ -232,11 +235,11 @@ export default function FractionalHRVsFullTimePage() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-pink-500 mr-2 font-bold">•</span>
-                  <span>You need <strong>strategic expertise</strong>, not admin capacity</span>
+                  <span>You need <strong><a href="https://www.shrm.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">strategic expertise</a></strong>, not admin capacity</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-pink-500 mr-2 font-bold">•</span>
-                  <span>Budget is <strong>constrained</strong> but you need senior talent</span>
+                  <span>Budget is <strong><a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">constrained</a></strong> but you need senior talent</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-pink-500 mr-2 font-bold">•</span>
@@ -248,7 +251,7 @@ export default function FractionalHRVsFullTimePage() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-pink-500 mr-2 font-bold">•</span>
-                  <span>You're in a <strong>transformation phase</strong> (fundraising, M&A)</span>
+                  <span>You're in a <strong><a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">transformation phase</a></strong> (fundraising, M&A)</span>
                 </li>
               </ul>
             </div>
@@ -269,7 +272,7 @@ export default function FractionalHRVsFullTimePage() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-gray-400 mr-2 font-bold">•</span>
-                  <span>You need <strong>daily presence</strong> for ER, culture, team mgmt</span>
+                  <span>You need <strong>daily presence</strong> for <a href="https://www.acas.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ER</a>, culture, team mgmt</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-gray-400 mr-2 font-bold">•</span>
@@ -281,7 +284,7 @@ export default function FractionalHRVsFullTimePage() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-gray-400 mr-2 font-bold">•</span>
-                  <span>You can afford <strong>£150k+ total comp</strong></span>
+                  <span>You can afford <strong><a href="https://www.shrm.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">£150k+ total comp</a></strong></span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-gray-400 mr-2 font-bold">•</span>
@@ -294,7 +297,7 @@ export default function FractionalHRVsFullTimePage() {
           <div className="mt-12 bg-pink-50 p-8 border border-pink-200">
             <h3 className="text-xl font-black text-gray-900 mb-4">The Hybrid Approach</h3>
             <p className="text-gray-700 mb-0">
-              Many companies start with a <strong>fractional HR Director</strong> to build infrastructure, then transition to full-time as they grow. Some keep a fractional CHRO for strategic oversight while adding a full-time HR Manager for operations. The models aren't mutually exclusive—they can complement each other.
+              Many <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">companies</a> start with a <strong>fractional HR Director</strong> to build infrastructure, then transition to full-time as they grow. Some keep a fractional CHRO for strategic oversight while adding a full-time HR Manager for operations. The models aren't mutually exclusive—they can complement each other.
             </p>
           </div>
         </div>

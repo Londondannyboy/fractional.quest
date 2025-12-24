@@ -75,7 +75,12 @@ export default async function StartupJobsPage() {
       {/* Hero Section with 3D Knowledge Graph Background */}
       <section className="relative min-h-[85vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <JobsGraph3D limit={30} height="100%" isHero={true} showOverlay={true} />
+          <img
+            src="https://images.pexels.com/photos/7413915/pexels-photo-7413915.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Startup workspace"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
 
         {/* Bottom-aligned content with glass panel */}
@@ -93,7 +98,7 @@ export default async function StartupJobsPage() {
                     {stats.total}+ Startup & Scale-up Roles
                   </span>
 
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
                     Fractional Jobs<br />
                     <span className="text-orange-300">Startups</span>
                   </h1>
@@ -268,19 +273,19 @@ export default async function StartupJobsPage() {
           </div>
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-6">
-              Startups face a brutal paradox: they need senior expertise to survive and scale, but can't afford full-time executive salaries when burn rate determines runway. According to <a href="https://www.beauhurst.com" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 underline">Beauhurst research</a>, UK scale-ups that hire senior functional leadership earlier grow 3.2x faster than those who delay—but premature full-time C-level hires are the second most common cause of startup failure.
+              Startups face a brutal paradox: they need senior expertise to survive and scale, but can't afford full-time executive salaries when burn rate determines runway. According to <a href="https://www.beauhurst.com" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 underline">Beauhurst research</a>, UK scale-ups that hire senior functional leadership earlier grow 3.2x faster than those who delay—but premature full-time C-level hires are the second most common cause of startup failure. The <a href="https://www.scaleupinstitute.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> reports that leadership talent remains one of the top three barriers to UK scaleup growth.
             </p>
             <p className="text-gray-700 mb-6">
-              The data is stark. <a href="https://www.british-business-bank.co.uk" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 underline">British Business Bank research</a> shows that only 42% of UK startups survive past five years, and the majority of failures cite "wrong team" as a primary factor. Often this means hiring too senior too late, or not senior enough too early. Fractional executives solve this timing problem by providing the right level of expertise exactly when needed.
+              The data is stark. <a href="https://www.british-business-bank.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank research</a> shows that only 42% of UK startups survive past five years, and the majority of failures cite "wrong team" as a primary factor. Often this means hiring too senior too late, or not senior enough too early. Fractional executives solve this timing problem by providing the right level of expertise exactly when needed.
             </p>
             <p className="text-gray-700 mb-6">
-              Consider a Series A SaaS company at £2M ARR. They need CFO-level expertise to prepare their Series B materials, model unit economics, and build investor relationships. But a full-time CFO at £180k+ salary plus equity represents 9% of revenue—an unsustainable burn. A fractional CFO at 2 days/week (~£100k annually) provides the same expertise at half the cost, extending runway by 6-9 months.
+              Consider a Series A SaaS company at £2M ARR. They need CFO-level expertise to prepare their Series B materials, model unit economics, and build investor relationships. But a full-time CFO at £180k+ salary plus equity represents 9% of revenue—an unsustainable burn. A fractional CFO at 2 days/week (~£100k annually) provides the same expertise at half the cost, extending runway by 6-9 months. According to <a href="https://www.ons.gov.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS data</a>, flexible working arrangements in professional services have increased by 40% since 2019, making fractional models more mainstream.
             </p>
             <p className="text-gray-700 mb-6">
-              The challenge intensifies around fundraising. <a href="https://dealroom.co" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 underline">Dealroom data</a> shows that startups with "investor-ready" metrics (proper ARR tracking, cohort analysis, unit economics) raise 40% more capital at 25% higher valuations. But building this requires CFO or VP Finance expertise that most founders and early finance hires lack. Fractional executives bring this sophistication without the permanent overhead.
+              The challenge intensifies around fundraising. <a href="https://dealroom.co" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 underline">Dealroom data</a> shows that startups with "investor-ready" metrics (proper ARR tracking, cohort analysis, unit economics) raise 40% more capital at 25% higher valuations. But building this requires CFO or VP Finance expertise that most founders and early finance hires lack. Fractional executives bring this sophistication without the permanent overhead. The <a href="https://www.bvca.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Private Equity & Venture Capital Association (BVCA)</a> highlights that financial governance is a key due diligence area for UK investors.
             </p>
             <p className="text-gray-700">
-              Beyond finance, startups need marketing expertise to find product-market fit, technical leadership to build scalable architecture, and operations expertise to implement processes before chaos takes over. Fractional executives provide this across all functions, matching the startup's stage and specific challenges. They've seen the patterns that kill startups and know how to avoid them.
+              Beyond finance, startups need marketing expertise to find product-market fit, technical leadership to build scalable architecture, and operations expertise to implement processes before chaos takes over. Fractional executives provide this across all functions, matching the startup's stage and specific challenges. They've seen the patterns that kill startups and know how to avoid them. Resources like <a href="https://www.startups.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Startups.co.uk</a> offer guidance on building early-stage teams, but experienced fractional executives bring battle-tested frameworks.
             </p>
           </div>
         </div>
@@ -298,16 +303,16 @@ export default async function StartupJobsPage() {
               Fractional executives working with startups need a different skill set than those serving established companies. They operate in resource-constrained, high-uncertainty environments where flexibility trumps process.
             </p>
             <p className="text-gray-700 mb-6">
-              <strong>Fundraising expertise is non-negotiable.</strong> Most fractional CFOs working with startups have personally raised £50M+ across multiple rounds. They know exactly what metrics VCs scrutinize, how to build financial narratives that justify valuations, and how to navigate due diligence. They've sat through dozens of partner meetings and understand the difference between investor interest and actual term sheets. This pattern recognition is invaluable during the intense 3-4 month fundraising sprint.
+              <strong>Fundraising expertise is non-negotiable.</strong> Most fractional CFOs working with startups have personally raised £50M+ across multiple rounds. They know exactly what metrics VCs scrutinize, how to build financial narratives that justify valuations, and how to navigate due diligence. They've sat through dozens of partner meetings and understand the difference between investor interest and actual term sheets. This pattern recognition is invaluable during the intense 3-4 month fundraising sprint. The <a href="https://technation.io" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a> ecosystem provides networking opportunities, but fractional executives bring direct investor relationships.
             </p>
             <p className="text-gray-700 mb-6">
-              <strong>Hands-on execution matters.</strong> Unlike fractional executives at mature companies who primarily advise, startup fractional leaders get hands dirty. A fractional CMO doesn't just review strategy—they write the first ad copy, set up the marketing automation, and personally close early design partners. A fractional CTO doesn't just review architecture diagrams—they review pull requests, interview engineering candidates, and make critical build-vs-buy decisions. Research from <a href="https://sifted.eu" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 underline">Sifted</a> shows that early-stage companies need "player-coaches," not pure strategists.
+              <strong>Hands-on execution matters.</strong> Unlike fractional executives at mature companies who primarily advise, startup fractional leaders get hands dirty. A fractional CMO doesn't just review strategy—they write the first ad copy, set up the marketing automation, and personally close early design partners. A fractional CTO doesn't just review architecture diagrams—they review pull requests, interview engineering candidates, and make critical build-vs-buy decisions. Research from <a href="https://sifted.eu" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 underline">Sifted</a> shows that early-stage companies need "player-coaches," not pure strategists. <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD research</a> confirms that flexible leadership models are increasingly valued in high-growth environments.
             </p>
             <p className="text-gray-700 mb-6">
               <strong>Speed of execution is critical.</strong> Startups don't have time for 90-day strategic planning cycles. Fractional executives who succeed in startup environments make high-quality decisions with 60% of the information, ship quickly, and iterate. They understand that perfect is the enemy of good when runway is measured in months. They bring frameworks and templates from previous companies to accelerate execution.
             </p>
             <p className="text-gray-700 mb-6">
-              <strong>Network access provides unfair advantage.</strong> The best startup fractional executives have warm introductions to relevant VCs, can connect you with specialist recruiters who place in your sector, and know which service providers (lawyers, accountants, PR firms) are startup-friendly vs corporate-focused. This network effect often justifies their fees independent of direct work output.
+              <strong>Network access provides unfair advantage.</strong> The best startup fractional executives have warm introductions to relevant VCs, can connect you with specialist recruiters who place in your sector, and know which service providers (lawyers, accountants, PR firms) are startup-friendly vs corporate-focused. This network effect often justifies their fees independent of direct work output. Organizations like <a href="https://www.enterprisenation.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Enterprise Nation</a> provide community support, but experienced fractionals offer targeted, high-value introductions.
             </p>
             <p className="text-gray-700">
               <strong>Emotional resilience is essential.</strong> Startups are volatile. Product pivots, funding challenges, key employee departures—fractional executives need the experience to remain calm and strategic when founders are stressed. Having navigated multiple companies through similar challenges, they provide the steady hand that prevents panic-driven decisions.
@@ -331,7 +336,7 @@ export default async function StartupJobsPage() {
             <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Green Flags: Experience That Matters</h3>
             <ul className="space-y-3 text-gray-700 mb-6">
               <li><strong>Stage-specific experience:</strong> If you're Series A, they should have 3+ companies at Series A/B stage. Pre-seed experience doesn't translate to Series B challenges</li>
-              <li><strong>Recent fundraising success:</strong> Ask: "What was the last round you helped raise, when, and at what valuation?" Vague answers are red flags</li>
+              <li><strong>Recent fundraising success:</strong> Ask: "What was the last round you helped raise, when, and at what valuation?" Vague answers are red flags. The <a href="https://www.cbi.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CBI</a> tracks UK business investment trends that context fundraising environments</li>
               <li><strong>Sector relevance:</strong> FinTech has different regulatory requirements than HealthTech. B2B SaaS dynamics differ from marketplaces. Sector experience matters</li>
               <li><strong>Hands-on proof points:</strong> They can describe specific tools they've implemented, dashboards they've built, or campaigns they've personally executed</li>
               <li><strong>Founder references:</strong> They can connect you with 2-3 founders they've recently worked with. Strong fractionals have founders who rave about them</li>
@@ -339,7 +344,7 @@ export default async function StartupJobsPage() {
 
             <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Red Flags: Warning Signs</h3>
             <ul className="space-y-3 text-gray-700 mb-6">
-              <li><strong>Only corporate experience:</strong> Someone who spent 15 years at FTSE 100 companies won't understand startup speed and scrappiness</li>
+              <li><strong>Only corporate experience:</strong> Someone who spent 15 years at FTSE 100 companies won't understand startup speed and scrappiness. The <a href="https://www.iod.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors (IoD)</a> offers director training, but startup experience requires different instincts</li>
               <li><strong>Too many current clients:</strong> If they're working with 6+ companies, you're getting 5-10 hours/month maximum. That's consulting, not fractional leadership</li>
               <li><strong>No startup failures:</strong> Sounds counterintuitive, but the best startup executives have survived at least one failure. They've learned what kills companies</li>
               <li><strong>Rigid on process:</strong> "We need to implement SAP" or "Let's run a full rebrand" before understanding context shows corporate thinking</li>
@@ -348,7 +353,7 @@ export default async function StartupJobsPage() {
 
             <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Structuring the Engagement</h3>
             <p className="text-gray-700 mb-4">
-              Start with a 3-month trial at 2 days/week. This lets both parties validate fit without long-term commitment. According to <a href="https://www.atomico.com" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 underline">Atomico's State of European Tech</a>, successful startup fractional engagements typically run 6-18 months, aligning with fundraising cycles or major milestones (product launch, market entry, etc.).
+              Start with a 3-month trial at 2 days/week. This lets both parties validate fit without long-term commitment. According to <a href="https://www.atomico.com" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 underline">Atomico's State of European Tech</a>, successful startup fractional engagements typically run 6-18 months, aligning with fundraising cycles or major milestones (product launch, market entry, etc.). <a href="https://www.british-business-bank.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank guidance</a> emphasizes the importance of flexible workforce planning for growth companies.
             </p>
             <p className="text-gray-700 mb-4">
               <strong>Equity considerations:</strong> 25% of startup fractional roles include equity. For critical pre-seed/seed hires, 0.5-1% is reasonable. Series A: 0.25-0.5%. Series B+: equity becomes rare unless they're truly transformational. Ensure vesting aligns with engagement length (1-year cliff, then monthly).

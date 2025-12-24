@@ -53,12 +53,13 @@ export default async function PartTimeHRPage() {
       {/* Hero with 3D Background */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
-          <JobsGraph3D categoryFilter="HR" limit={30} height="100%" isHero={true} showOverlay={true} />
+          <img src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Part-Time HR" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <div className="bg-gray-50/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10">
             <Link href="/fractional-hr" className="text-white/70 hover:text-gray-900 mb-6 inline-block text-sm">← Back to HR Hub</Link>
-            <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">Part-Time HR Jobs UK</h1>
+            <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Part-Time HR Jobs UK</h1>
             <p className="text-xl text-white/80 mb-8">
               Flexible HR Director and CHRO roles for experienced people professionals. Work 1-3 days per week earning £700-£1,300 per day.
             </p>
@@ -79,10 +80,10 @@ export default async function PartTimeHRPage() {
         <div className="max-w-4xl mx-auto px-6 prose prose-lg prose-pink max-w-none">
           <h2>What is a Part-Time HR Role?</h2>
           <p>
-            A <strong>part-time HR</strong> role (also known as a fractional HR role) is a senior HR position where an experienced HR Director, CHRO, or People Partner provides strategic people leadership to companies on a flexible, part-time basis. Rather than committing to a single full-time role, part-time HR professionals typically work with multiple clients, dedicating 1-3 days per week to each engagement.
+            A <strong>part-time HR</strong> role (also known as a fractional HR role) is a senior HR position where an experienced HR Director, CHRO, or People Partner provides strategic people leadership to companies on a <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible, part-time basis</a>. Rather than committing to a single full-time role, part-time HR professionals typically work with multiple clients, dedicating 1-3 days per week to each engagement.
           </p>
           <p>
-            The demand for <strong>part-time HR jobs</strong> in the UK has grown significantly, driven by scale-ups, SMEs, and PE-backed companies that need senior HR expertise but cannot justify or afford a full-time hire. According to <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">CIPD research</a>, part-time senior roles have grown 43% since 2020.
+            The demand for <strong>part-time HR jobs</strong> in the UK has grown significantly, driven by <a href="https://www.scaleupinstitute.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scale-ups</a>, SMEs, and PE-backed companies that need senior HR expertise but cannot justify or afford a full-time hire. According to <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">CIPD research</a>, part-time senior roles have grown 43% since 2020.
           </p>
 
           <h2>Part-Time HR vs Full-Time HR</h2>
@@ -90,7 +91,7 @@ export default async function PartTimeHRPage() {
             The key difference between a part-time HR professional and a traditional full-time HR Director lies in the engagement model. A full-time HR Director works exclusively for one company, typically earning £120,000-£150,000 annually plus benefits. A <strong>part-time HR Director</strong>, by contrast, works with 2-4 clients simultaneously, charging day rates of £900-£1,100.
           </p>
           <p>
-            For many experienced HR leaders, the part-time model offers significant advantages: higher effective hourly earnings, greater variety in work, portfolio diversification, and improved work-life balance. For companies, hiring a part-time HR professional provides access to senior talent at a fraction of the cost of a full-time hire.
+            For many experienced HR leaders, the part-time model offers significant advantages: higher effective hourly earnings, greater variety in work, portfolio diversification, and improved <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">work-life balance</a>. For companies, hiring a part-time HR professional provides access to senior talent at a fraction of the cost of a full-time hire.
           </p>
 
           <h2>Who Hires Part-Time HR?</h2>
@@ -99,30 +100,30 @@ export default async function PartTimeHRPage() {
           </p>
           <ul>
             <li><strong>Scale-ups (30-150 employees)</strong> - Companies that have outgrown founder-led HR but aren't ready for a full-time CHRO</li>
-            <li><strong>VC/PE-backed companies</strong> - Portfolio companies that need professional HR leadership for growth</li>
-            <li><strong>SMEs building HR infrastructure</strong> - Businesses that need to establish proper contracts, policies, and processes</li>
-            <li><strong>Companies facing complex ER</strong> - Organisations dealing with tribunals, restructuring, or difficult situations</li>
+            <li><strong>VC/PE-backed companies</strong> - <a href="https://www.british-business-bank.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Portfolio companies</a> that need professional HR leadership for growth</li>
+            <li><strong>SMEs building HR infrastructure</strong> - Businesses that need to establish proper <a href="https://www.gov.uk/browse/employing-people" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">contracts, policies, and processes</a></li>
+            <li><strong>Companies facing complex ER</strong> - Organisations dealing with <a href="https://www.acas.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">tribunals, restructuring, or difficult situations</a></li>
             <li><strong>Startups preparing for fundraising</strong> - Companies needing professional HR for investor due diligence</li>
           </ul>
 
           <h2>Part-Time HR Salary and Day Rates</h2>
           <p>
-            <strong>Part-time HR</strong> compensation in the UK typically ranges from £700 to £1,300 per day, depending on seniority, specialisation, and location. London-based roles command premium rates, often paying £950-£1,300 per day for senior HR Directors.
+            <strong>Part-time HR</strong> compensation in the UK typically ranges from £700 to £1,300 per day, depending on seniority, specialisation, and location. According to <a href="https://www.ons.gov.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS data</a>, London-based roles command premium rates, often paying £950-£1,300 per day for senior HR Directors.
           </p>
           <p>
-            A part-time HR Director working 2-3 days per week across multiple clients can realistically earn £120,000-£180,000 annually. The most experienced fractional CHROs with strong networks can earn significantly more.
+            A part-time HR Director working 2-3 days per week across multiple clients can realistically earn £120,000-£180,000 annually. The most experienced fractional CHROs with strong networks and <a href="https://www.ipse.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">self-employed expertise</a> can earn significantly more.
           </p>
 
           <h2>Key Responsibilities</h2>
           <p>Part-time HR responsibilities typically include:</p>
           <ul>
             <li>People strategy development and execution</li>
-            <li>Complex employee relations management</li>
+            <li>Complex <a href="https://www.acas.org.uk/working-with-employees" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">employee relations</a> management</li>
             <li>HR infrastructure building (policies, contracts, HRIS)</li>
             <li>Talent acquisition strategy and senior hiring</li>
             <li>Performance management frameworks</li>
-            <li>Culture development and engagement</li>
-            <li>UK employment law compliance</li>
+            <li>Culture development and <a href="https://www.cipd.org/uk/knowledge/factsheets/employee-engagement-factsheet" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">engagement</a></li>
+            <li><a href="https://www.gov.uk/employment-law" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK employment law</a> compliance</li>
             <li>Board reporting and investor relations</li>
           </ul>
 
@@ -133,7 +134,7 @@ export default async function PartTimeHRPage() {
           <ul>
             <li><strong>Specialist platforms:</strong> <Link href="/fractional-hr-jobs-uk" className="text-pink-600 hover:text-pink-700">Fractional Quest</Link>, interim HR networks</li>
             <li><strong>VC/PE networks:</strong> Portfolio company HR referrals</li>
-            <li><strong>Professional networks:</strong> <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">CIPD</a>, HR Directors forums, LinkedIn</li>
+            <li><strong>Professional networks:</strong> <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">CIPD</a>, <a href="https://www.shrm.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">SHRM</a>, <a href="https://www.iod.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD</a>, HR Directors forums, LinkedIn</li>
             <li><strong>Referrals:</strong> Other founders, CEOs, and fractional executives</li>
           </ul>
         </div>

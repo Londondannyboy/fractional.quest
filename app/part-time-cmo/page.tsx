@@ -48,12 +48,13 @@ export default async function PartTimeCmoPage() {
       {/* Hero with 3D Knowledge Graph Background */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
-          <JobsGraph3D roleFilter="CMO" limit={30} height="100%" isHero={true} showOverlay={true} />
+          <img src="https://images.pexels.com/photos/7413891/pexels-photo-7413891.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <div className="bg-gray-50/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10">
             <Link href="/" className="text-white/70 hover:text-gray-900 mb-6 inline-block">← Back to Home</Link>
-            <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">Part-Time CMO Jobs UK</h1>
+            <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Part-Time CMO Jobs UK</h1>
             <p className="text-xl text-white/80 mb-8">
               Flexible Chief Marketing Officer roles for experienced marketing leaders. Work 1-3 days per week earning £700-£1,400 per day.
             </p>
@@ -71,10 +72,10 @@ export default async function PartTimeCmoPage() {
         <div className="max-w-4xl mx-auto px-4 prose prose-lg prose-purple">
           <h2>What is a Part-Time CMO?</h2>
           <p>
-            A <strong>part-time CMO</strong> (also known as a fractional CMO or outsourced CMO) is a senior marketing executive who provides strategic marketing leadership to companies on a flexible, part-time basis. Instead of working full-time for a single organisation, part-time CMOs typically engage with multiple clients, dedicating 1-3 days per week to each company.
+            A <strong>part-time CMO</strong> (also known as a fractional CMO or outsourced CMO) is a senior marketing executive who provides strategic marketing leadership to companies on a <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible, part-time basis</a>. Instead of working full-time for a single organisation, part-time CMOs typically engage with multiple clients, dedicating 1-3 days per week to each company.
           </p>
           <p>
-            The <strong>part-time CMO</strong> model has gained significant traction in the UK, particularly among startups, scale-ups, and SMEs that need experienced marketing leadership but cannot justify the £120,000-£200,000 annual cost of a full-time Chief Marketing Officer. A part-time CMO brings the same strategic expertise at a fraction of the cost.
+            The <strong>part-time CMO</strong> model has gained significant traction in the UK, particularly among <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">startups, scale-ups</a>, and <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">SMEs</a> that need experienced marketing leadership but cannot justify the £120,000-£200,000 annual cost of a full-time Chief Marketing Officer. A part-time CMO brings the same strategic expertise at a fraction of the cost.
           </p>
 
           <h2>Part-Time CMO vs Full-Time CMO</h2>
@@ -82,7 +83,7 @@ export default async function PartTimeCmoPage() {
             The fundamental difference between a <strong>part-time CMO</strong> and a traditional full-time CMO is the engagement structure. A full-time CMO commits exclusively to one company, earning a fixed salary plus benefits. A part-time Chief Marketing Officer works with multiple clients, charging day rates typically ranging from £700 to £1,400.
           </p>
           <p>
-            For senior marketing professionals, the part-time model offers compelling benefits: higher effective earnings, diverse challenges across multiple brands, the ability to choose clients and projects, and better work-life balance. Companies benefit from access to senior expertise without the overhead of a full-time executive hire.
+            For senior marketing professionals, the <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">part-time model</a> offers compelling benefits: higher effective earnings, diverse challenges across multiple brands, the ability to choose clients and projects, and better work-life balance. Companies benefit from access to senior expertise without the overhead of a full-time executive hire.
           </p>
 
           <h2>Part-Time CMO Services</h2>
@@ -90,11 +91,11 @@ export default async function PartTimeCmoPage() {
             <strong>Part-time CMO services</strong> typically encompass the full scope of strategic marketing leadership:
           </p>
           <ul>
-            <li><strong>Marketing strategy development</strong> - Creating comprehensive go-to-market plans, brand positioning, and growth strategies</li>
-            <li><strong>Team leadership</strong> - Managing and mentoring internal marketing teams and external agencies</li>
-            <li><strong>Brand development</strong> - Building and evolving brand identity, messaging, and market positioning</li>
+            <li><strong>Marketing strategy development</strong> - Creating comprehensive <a href="https://www.cim.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">go-to-market plans</a>, brand positioning, and growth strategies</li>
+            <li><strong>Team leadership</strong> - <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Managing</a> and mentoring internal marketing teams and external agencies</li>
+            <li><strong>Brand development</strong> - Building and evolving <a href="https://ipa.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">brand identity</a>, messaging, and market positioning</li>
             <li><strong>Digital marketing oversight</strong> - Guiding paid acquisition, SEO, content marketing, and social media strategies</li>
-            <li><strong>Demand generation</strong> - Building scalable lead generation systems and conversion funnels</li>
+            <li><strong>Demand generation</strong> - Building scalable <a href="https://dma.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">lead generation systems</a> and conversion funnels</li>
             <li><strong>Marketing technology</strong> - Selecting and implementing martech stacks and analytics</li>
             <li><strong>Board reporting</strong> - Providing marketing updates and ROI analysis to leadership</li>
           </ul>
@@ -105,7 +106,7 @@ export default async function PartTimeCmoPage() {
           </p>
           <ul>
             <li><strong>B2B SaaS companies</strong> - Fast-growing software businesses needing demand generation expertise and product marketing leadership</li>
-            <li><strong>Venture-backed startups</strong> - Companies at Seed to Series B stage that need marketing strategy but can't afford a full-time CMO</li>
+            <li><strong>Venture-backed startups</strong> - Companies at <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Seed to Series B stage</a> that need marketing strategy but can't afford a full-time CMO</li>
             <li><strong>E-commerce brands</strong> - DTC companies requiring customer acquisition and retention expertise</li>
             <li><strong>Professional services firms</strong> - Consultancies and agencies looking to build their own marketing function</li>
             <li><strong>Companies in transition</strong> - Businesses undergoing rebrand, market expansion, or preparing for exit</li>
@@ -116,12 +117,12 @@ export default async function PartTimeCmoPage() {
             <strong>Part-time CMO</strong> compensation in the UK typically ranges from £700 to £1,400 per day. London-based roles generally command higher rates, with Shoreditch tech startups and City financial services firms often paying £1,000-£1,400 daily.
           </p>
           <p>
-            A part-time CMO working with 2-3 clients at 2 days per week each can realistically earn £140,000-£200,000 annually. CMOs with strong B2B SaaS or DTC experience, particularly those with proven track records of scaling companies, can command premium rates.
+            A part-time CMO working with 2-3 clients at 2 days per week each can realistically earn £140,000-£200,000 annually. CMOs with strong B2B SaaS or DTC experience, particularly those with <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">proven track records of scaling companies</a>, can command premium rates.
           </p>
 
           <h2>How to Become a Part-Time CMO</h2>
           <p>
-            Transitioning to a <strong>part-time CMO career</strong> typically requires 12-15+ years of marketing experience, including significant time in senior leadership roles (VP Marketing, Marketing Director, or CMO). The most successful fractional CMOs have deep expertise in specific areas—such as B2B SaaS growth, brand building, or performance marketing—that make them highly valuable to target clients.
+            Transitioning to a <strong>part-time CMO career</strong> typically requires 12-15+ years of <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">marketing experience</a>, including significant time in senior leadership roles (VP Marketing, Marketing Director, or CMO). The most successful fractional CMOs have deep expertise in specific areas—such as B2B SaaS growth, brand building, or performance marketing—that make them highly valuable to target clients.
           </p>
           <p>
             Building a fractional practice takes time. Many part-time CMOs start with one or two engagements while consulting or between full-time roles, gradually building their client portfolio through referrals, networking, and platforms like <Link href="/fractional-jobs-uk">Fractional Quest</Link>.
@@ -132,7 +133,7 @@ export default async function PartTimeCmoPage() {
             London dominates the UK market for <strong>part-time CMO jobs</strong>, with approximately 55% of all fractional marketing leadership roles based in the capital. Shoreditch and the broader Tech City area are particularly active, given the concentration of startups and scale-ups requiring marketing leadership.
           </p>
           <p>
-            Manchester, Birmingham, and Bristol also have growing fractional CMO markets, particularly for companies in creative industries, e-commerce, and professional services. Remote and hybrid arrangements are increasingly common, expanding opportunities beyond traditional geographic boundaries.
+            Manchester, Birmingham, and Bristol also have growing fractional CMO markets, particularly for companies in creative industries, e-commerce, and professional services. <a href="https://www.ons.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Remote and hybrid arrangements</a> are increasingly common, expanding opportunities beyond traditional geographic boundaries.
           </p>
         </div>
       </article>

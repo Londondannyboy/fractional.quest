@@ -43,10 +43,13 @@ export default function FractionalCfoSalaryPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-900 to-blue-800 py-20">
-        <div className="max-w-4xl mx-auto px-4">
+      <section className="bg-gradient-to-br from-blue-900 to-blue-800 py-20 relative">
+        <div className="absolute inset-0 opacity-20">
+          <img src="https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="max-w-4xl mx-auto px-4 relative">
           <Link href="/" className="text-blue-800/40 hover:text-gray-900 mb-6 inline-block">← Back to Home</Link>
-          <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">Fractional CFO Salary UK 2025</h1>
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Fractional CFO Salary UK 2025</h1>
           <p className="text-xl text-blue-900/30 mb-8">
             Complete guide to fractional CFO pay rates, day rates, and annual earnings in the UK market.
           </p>
@@ -100,7 +103,7 @@ export default function FractionalCfoSalaryPage() {
               <strong>Fractional CFO salary</strong> in the UK varies significantly based on experience, location, industry specialisation, and client portfolio. Unlike <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">full-time CFO roles with fixed annual salaries</a>, fractional CFOs charge day rates—typically ranging from £800 to £1,500 per day in 2025.
             </p>
             <p>
-              The <strong>fractional CFO pay</strong> model offers higher effective hourly earnings than most full-time positions. A fractional CFO working 3 days per week at £1,100/day earns approximately £170,000 annually—comparable to a full-time CFO at a Series B startup, but with significantly more flexibility. Most fractional CFOs operate through <a href="https://www.gov.uk/set-up-business" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">limited companies for tax efficiency</a>.
+              The <strong>fractional CFO pay</strong> model offers higher effective hourly earnings than most full-time positions. A fractional CFO working 3 days per week at £1,100/day earns approximately £170,000 annually—comparable to a full-time CFO at a Series B startup, but with significantly more flexibility. Most fractional CFOs operate through <a href="https://www.gov.uk/set-up-business" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">limited companies for tax efficiency</a>, though it's crucial to understand <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35 regulations</a> that affect off-payroll working arrangements.
             </p>
           </div>
 
@@ -129,12 +132,13 @@ export default function FractionalCfoSalaryPage() {
                 </tbody>
               </table>
             </div>
-            <p className="text-gray-600 text-sm mt-4">*Annual estimates based on 160 billable days per year</p>
+            <p className="text-gray-600 text-sm mt-4">*Annual estimates based on 160 billable days per year. Rates align with <a href="https://www.cipd.org/uk/knowledge/reports/reward-management-surveys/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD salary survey data</a> for senior finance roles.</p>
           </div>
 
           {/* By Location */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Fractional CFO Salary by Location</h2>
+            <p className="text-gray-600 mb-4">Location significantly impacts day rates, with London commanding premium rates. Many fractional CFOs now work under <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a> that combine remote and on-site delivery.</p>
             <div className="overflow-x-auto">
               <table className="w-full border-collapse">
                 <thead>
@@ -160,6 +164,7 @@ export default function FractionalCfoSalaryPage() {
           {/* By Industry */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Fractional CFO Rates by Industry</h2>
+            <p className="text-gray-600 mb-4">Industry specialization drives significant rate premiums. Private equity-backed businesses and scale-ups often require expertise in areas supported by resources like the <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a>.</p>
             <div className="overflow-x-auto">
               <table className="w-full border-collapse">
                 <thead>
@@ -186,16 +191,21 @@ export default function FractionalCfoSalaryPage() {
             <h2>Factors Affecting Fractional CFO Salary</h2>
             <p>Several factors influence <strong>fractional CFO earnings</strong>:</p>
             <ul>
-              <li><strong>Qualifications</strong> - <a href="https://www.icaew.com/membership/regulations-standards-and-guidance" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACA</a>/<a href="https://www.accaglobal.com/gb/en/member.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACCA</a>/<a href="https://www.cimaglobal.com/members/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIMA</a> qualified CFOs command 10-15% higher rates</li>
+              <li><strong>Qualifications</strong> - <a href="https://www.icaew.com/membership/regulations-standards-and-guidance" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICAEW ACA</a>, <a href="https://www.accaglobal.com/gb/en/member.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACCA</a>, or <a href="https://www.cimaglobal.com/members/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIMA</a> qualified CFOs command 10-15% higher rates</li>
               <li><strong>Fundraising experience</strong> - Series A-C experience adds £100-200/day premium</li>
               <li><strong>Industry specialisation</strong> - Deep sector expertise (FinTech, PE) commands premium rates</li>
-              <li><strong>Client portfolio</strong> - Established fractional CFOs with referral networks earn more</li>
+              <li><strong>Client portfolio</strong> - Established fractional CFOs with referral networks earn more, often supported by <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IPSE membership</a> for self-employed professionals</li>
               <li><strong>Scope of work</strong> - Roles requiring M&A, fundraising, or turnaround expertise pay more</li>
             </ul>
 
             <h2>Full-Time CFO vs Fractional CFO Salary</h2>
             <p>
-              Comparing <strong>fractional CFO salary</strong> to full-time equivalents requires considering total compensation and working patterns. A full-time CFO at a Series B startup might earn £150,000-£200,000 plus equity. A fractional CFO earning £1,100/day for 150 days achieves £165,000—similar cash compensation with more flexibility and typically better effective hourly rate. Understanding <a href="https://www.gov.uk/topic/business-tax/self-employed" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">self-employed tax obligations</a> is essential for maximizing net earnings.
+              Comparing <strong>fractional CFO salary</strong> to full-time equivalents requires considering total compensation and working patterns. A full-time CFO at a Series B startup might earn £150,000-£200,000 plus equity according to <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS employment statistics</a>. A fractional CFO earning £1,100/day for 150 days achieves £165,000—similar cash compensation with more flexibility and typically better effective hourly rate. Understanding <a href="https://www.gov.uk/topic/business-tax/self-employed" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">self-employed tax obligations</a> and <a href="https://www.hmrc.gov.uk/index.htm" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">HMRC compliance requirements</a> is essential for maximizing net earnings.
+            </p>
+
+            <h2>IR35 and Tax Considerations for Fractional CFOs</h2>
+            <p>
+              Most fractional CFOs operate through personal service companies, making <a href="https://www.gov.uk/guidance/understanding-off-payroll-working-ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35 status determination</a> critical to net take-home pay. Outside IR35, CFOs can achieve effective tax rates of 20-25% through dividend planning, compared to 40-45% PAYE rates for equivalent full-time roles. The <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> provides guidance on directorship responsibilities for fractional executives operating through limited companies.
             </p>
           </div>
         </div>

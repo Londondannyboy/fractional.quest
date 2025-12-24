@@ -10,7 +10,7 @@ export const revalidate = 3600
 const CRO_SERVICE_FAQS = [
   {
     question: 'What is a Fractional CRO?',
-    answer: 'A Fractional CRO (Chief Revenue Officer) is an experienced revenue leader who works with your company part-time, typically 1-3 days per week. You get strategic revenue leadership across sales, marketing, and customer success without the cost of a full-time executive.',
+    answer: 'A Fractional CRO (Chief Revenue Officer) is an experienced revenue leader who works with your company part-time, typically 1-3 days per week. This <a href="https://www.cipd.org/uk/knowledge/factsheets/flexible-working-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working model</a> gives you strategic revenue leadership across sales, marketing, and customer success without the cost of a full-time executive.',
   },
   {
     question: 'When should my company hire a Fractional CRO?',
@@ -18,7 +18,7 @@ const CRO_SERVICE_FAQS = [
   },
   {
     question: 'How much does a Fractional CRO cost?',
-    answer: 'Fractional CROs typically charge £900-£1,500 per day in the UK. At 2 days per week, this translates to roughly £90,000-£150,000 annually—compared to £200,000-£300,000+ for a full-time CRO.',
+    answer: 'Fractional CROs typically charge £900-£1,500 per day in the UK. At 2 days per week, this translates to roughly £90,000-£150,000 annually—compared to £200,000-£300,000+ for a full-time CRO. This pricing structure offers significant <a href="https://www.cim.co.uk/membership/professional-marketing-standards/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">professional-level expertise</a> at a fraction of the cost.',
   },
   {
     question: 'What does a Fractional CRO do?',
@@ -30,7 +30,7 @@ const CRO_SERVICE_FAQS = [
   },
   {
     question: 'Can a Fractional CRO help with sales and marketing alignment?',
-    answer: 'Yes—alignment is one of the primary reasons to hire a fractional CRO. They create shared metrics, unified processes, and collaborative structures that ensure sales and marketing work together effectively to drive revenue.',
+    answer: 'Yes—alignment is one of the primary reasons to hire a fractional CRO. Following <a href="https://www.scaleupinstitute.org.uk/scaling-insights/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scaleup best practices</a>, they create shared metrics, unified processes, and collaborative structures that ensure sales and marketing work together effectively to drive revenue.',
   },
 ]
 
@@ -115,7 +115,7 @@ export default function FractionalCROServicesPage() {
           </div>
           <div className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              A <strong className="font-semibold text-gray-900">Fractional CRO</strong> (Chief Revenue Officer) is an experienced revenue executive who works with your company on a part-time basis—typically 1-3 days per week. You get strategic leadership across your entire revenue engine—sales, marketing, and customer success—without the commitment and cost of a full-time hire.
+              A <strong className="font-semibold text-gray-900">Fractional CRO</strong> (Chief Revenue Officer) is an experienced revenue executive who works with your company on a part-time basis—typically 1-3 days per week. This <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangement</a> gives you strategic leadership across your entire revenue engine—sales, marketing, and customer success—without the commitment and cost of a full-time hire.
             </p>
             <p>
               Unlike a VP of Sales who focuses only on selling, a fractional CRO takes a holistic view of revenue. They align all customer-facing functions, optimise the full buyer journey, and build the systems for predictable, scalable revenue growth. Applying insights from <a href="https://hbr.org/topic/subject/sales" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Harvard Business Review</a> research and <a href="https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">McKinsey growth insights</a>, they bring proven revenue methodologies to growing companies.
@@ -127,7 +127,7 @@ export default function FractionalCROServicesPage() {
             </div>
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Beyond Siloed Sales and Marketing</h3>
             <p>
-              In many companies, sales and marketing operate as separate functions with different goals and metrics. This creates friction, blame games, and leaked revenue. A fractional CRO breaks down these silos, creating unified revenue operations that drive predictable growth. Using <a href="https://www.forrester.com/bold" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Forrester research</a> and <a href="https://www.saastr.com/blog/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">SaaStr insights</a>, they implement the revenue operations that scale efficiently.
+              In many companies, sales and marketing operate as separate functions with different goals and metrics. This creates friction, blame games, and leaked revenue. A fractional CRO breaks down these silos, creating unified revenue operations that drive predictable growth. Drawing on <a href="https://www.cim.co.uk/content-hub/reports/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Chartered Institute of Marketing research</a> and best practices from the <a href="https://www.iod.com/news/business-strategy/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a>, they implement the revenue operations that scale efficiently.
             </p>
           </div>
         </div>
@@ -145,7 +145,7 @@ export default function FractionalCROServicesPage() {
             {[
               {
                 title: 'Revenue Strategy',
-                description: 'Develop comprehensive revenue strategy. Define go-to-market approach, pricing, packaging, and the path to revenue targets.',
+                description: 'Develop comprehensive revenue strategy aligned with UK business growth patterns. Define go-to-market approach, pricing, packaging, and the path to revenue targets.',
                 icon: '🎯',
               },
               {
@@ -170,7 +170,7 @@ export default function FractionalCROServicesPage() {
               },
               {
                 title: 'Team Leadership',
-                description: 'Lead and develop revenue teams across sales, marketing, and customer success. Hire key roles and build capability.',
+                description: 'Lead and develop revenue teams across sales, marketing, and customer success following <a href="https://www.cipd.org/uk/knowledge/guides/leadership-development/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD leadership best practices</a>. Hire key roles and build capability.',
                 icon: '👥',
               },
               {
@@ -206,13 +206,13 @@ export default function FractionalCROServicesPage() {
               },
               {
                 title: 'Cost Efficiency',
-                description: 'Access CRO-level expertise at 40-60% less than a full-time hire. Pay only for the time you need—typically £90,000-£150,000 per year versus £250,000+ for full-time.',
+                description: 'Access CRO-level expertise at 40-60% less than a full-time hire. This flexible approach aligns with <a href="https://www.gov.uk/business-support-helpline" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK business efficiency guidelines</a>. Pay only for the time you need—typically £90,000-£150,000 per year versus £250,000+ for full-time.',
                 stat: '50%',
                 statLabel: 'Cost Savings',
               },
               {
                 title: 'Faster Revenue Growth',
-                description: 'Fractional CROs have scaled revenue before. They know what works, can avoid common mistakes, and accelerate your path to targets.',
+                description: 'Fractional CROs have scaled revenue before, often working with <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK scaleup companies</a>. They know what works, can avoid common mistakes, and accelerate your path to targets.',
                 stat: '2x',
                 statLabel: 'Revenue Growth',
               },
@@ -265,12 +265,12 @@ export default function FractionalCROServicesPage() {
               },
               {
                 scenario: 'Scaling Go-to-Market',
-                description: 'You\'ve found PMF and need to scale revenue. Time to professionalise GTM with proven playbooks and processes.',
+                description: 'You\'ve found PMF and need to scale revenue, similar to successful <a href="https://www.british-business-bank.co.uk/case-studies/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank portfolio companies</a>. Time to professionalise GTM with proven playbooks and processes.',
                 timing: 'Post-PMF',
               },
               {
                 scenario: 'Preparing for Fundraising',
-                description: 'Investors want to see strong revenue leadership and predictable growth. A fractional CRO provides credibility and structure.',
+                description: 'Investors, including <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BVCA members</a>, want to see strong revenue leadership and predictable growth. A fractional CRO provides credibility and structure.',
                 timing: '3-6 months before raise',
               },
               {
@@ -308,7 +308,7 @@ export default function FractionalCROServicesPage() {
             <ul className="text-gray-600">
               <li><strong>Day Rate:</strong> £900-£1,500 per day (depending on experience and specialisation)</li>
               <li><strong>Monthly Retainer:</strong> £4,000-£6,500 for 1-2 days per week</li>
-              <li><strong>Annual Cost:</strong> £90,000-£150,000 (vs £250,000+ for full-time)</li>
+              <li><strong>Annual Cost:</strong> £90,000-£150,000 (vs £250,000+ for full-time, based on <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS earnings data</a>)</li>
             </ul>
           </div>
         </div>
@@ -355,7 +355,7 @@ export default function FractionalCROServicesPage() {
             Ready to Hire a<br /><span className="text-blue-400">Fractional CRO?</span>
           </h2>
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            Tell us about your revenue challenges and we'll match you with pre-vetted fractional CROs who have solved them before.
+            Tell us about your revenue challenges and we'll match you with pre-vetted fractional CROs who have solved them before. Our professionals bring experience from <a href="https://www.iod.com/membership/director-development/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">director-level positions</a> across multiple industries.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact/companies" className="px-10 py-5 bg-blue-500 text-black font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">

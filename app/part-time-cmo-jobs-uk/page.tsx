@@ -66,6 +66,12 @@ export default async function PartTimeCmoJobsUkPage() {
       {/* Editorial Hero with 3D Knowledge Graph */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
+          <img
+            src="https://images.pexels.com/photos/7413891/pexels-photo-7413891.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Hero background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
           <JobsGraph3D roleFilter="CMO" limit={25} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="relative z-10 w-full py-20">
@@ -77,7 +83,7 @@ export default async function PartTimeCmoJobsUkPage() {
               <span className="inline-block bg-amber-500 text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Marketing Leadership
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Part-Time CMO<br />
                 <span className="text-amber-400">Jobs UK</span>
               </h1>
@@ -196,10 +202,10 @@ export default async function PartTimeCmoJobsUkPage() {
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">What is a Part-Time CMO?</h3>
             <p>
-              A <strong>part-time CMO</strong> (also known as a fractional CMO) is a senior marketing executive who provides strategic marketing leadership to companies on a flexible basis. Rather than committing to a single full-time role, part-time CMOs typically work with multiple clients, dedicating 1-3 days per week to each engagement.
+              A <strong>part-time CMO</strong> (also known as a fractional CMO) is a senior marketing executive who provides strategic marketing leadership to companies on a flexible basis. Rather than committing to a single full-time role, part-time CMOs typically work with multiple clients, dedicating 1-3 days per week to each engagement. This aligns with the UK's <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working regulations</a> that have evolved to support modern work arrangements.
             </p>
             <p>
-              The demand for <strong>part-time CMO jobs UK</strong> has grown significantly, particularly among startups, scale-ups, and SMEs that need experienced marketing leadership but cannot justify a full-time CMO salary of £120,000-£200,000.
+              The demand for <strong>part-time CMO jobs UK</strong> has grown significantly, particularly among startups, <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scale-ups</a>, and SMEs that need experienced marketing leadership but cannot justify a full-time CMO salary of £120,000-£200,000.
             </p>
 
             <div className="bg-gray-50 p-8 my-10 border-l-4 border-amber-500">
@@ -215,7 +221,7 @@ export default async function PartTimeCmoJobsUkPage() {
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Part-Time CMO vs Full-Time CMO</h3>
             <p>
-              The key difference lies in engagement structure. A full-time CMO works exclusively for one company, earning £120,000-£200,000 annually. A <strong>part-time Chief Marketing Officer</strong> works with 2-4 clients simultaneously, charging day rates of £700-£1,400. Many professionals search for both <Link href="/fractional-cmo-jobs-uk" className="text-amber-600 hover:text-amber-700 underline">fractional CMO jobs</Link> and part-time roles interchangeably.
+              The key difference lies in engagement structure. A full-time CMO works exclusively for one company, earning £120,000-£200,000 annually. A <strong>part-time Chief Marketing Officer</strong> works with 2-4 clients simultaneously, charging day rates of £700-£1,400. Many professionals operate through <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">limited companies or as freelancers</a>, and search for both <Link href="/fractional-cmo-jobs-uk" className="text-amber-600 hover:text-amber-700 underline">fractional CMO jobs</Link> and part-time roles interchangeably.
             </p>
             <div className="grid md:grid-cols-2 gap-6 not-prose my-8">
               <div className="bg-gray-50 p-6 border border-gray-200">
@@ -243,7 +249,7 @@ export default async function PartTimeCmoJobsUkPage() {
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Who Hires Part-Time CMOs?</h3>
             <ul className="space-y-3">
               <li><strong>B2B SaaS companies:</strong> Fast-growing software businesses needing demand generation and product marketing</li>
-              <li><strong>Venture-backed startups:</strong> Seed to Series B companies requiring marketing strategy</li>
+              <li><strong>Venture-backed startups:</strong> Seed to Series B companies, often supported by the <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a>, requiring marketing strategy</li>
               <li><strong>E-commerce brands:</strong> DTC companies needing customer acquisition expertise</li>
               <li><strong>Professional services firms:</strong> Consultancies building their own marketing function</li>
               <li><strong>Companies in transition:</strong> Businesses undergoing rebrand or market expansion</li>
@@ -252,11 +258,11 @@ export default async function PartTimeCmoJobsUkPage() {
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Part-Time CMO Services</h3>
             <p>Typical <strong>part-time CMO</strong> responsibilities include:</p>
             <ul className="space-y-2">
-              <li><strong>Marketing Strategy:</strong> Go-to-market plans, brand positioning, growth strategies</li>
-              <li><strong>Team Leadership:</strong> Managing internal teams and external agencies</li>
+              <li><strong>Marketing Strategy:</strong> Go-to-market plans, brand positioning, growth strategies aligned with <a href="https://www.cim.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIM</a> best practices</li>
+              <li><strong>Team Leadership:</strong> Managing internal teams and external agencies, applying <a href="https://www.cipd.org/uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> leadership frameworks</li>
               <li><strong>Brand Development:</strong> Brand identity, messaging, market positioning</li>
-              <li><strong>Digital Marketing:</strong> Paid acquisition, SEO, content, social media</li>
-              <li><strong>Demand Generation:</strong> Lead generation systems and conversion funnels</li>
+              <li><strong>Digital Marketing:</strong> Paid acquisition, SEO, content, social media, often working with <a href="https://www.ipa.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IPA</a> member agencies</li>
+              <li><strong>Demand Generation:</strong> Lead generation systems and conversion funnels, utilizing <a href="https://dma.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">DMA</a> data-driven techniques</li>
               <li><strong>Marketing Technology:</strong> Martech stack selection and implementation</li>
             </ul>
 
@@ -278,7 +284,7 @@ export default async function PartTimeCmoJobsUkPage() {
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Part-Time CMO Salary UK</h3>
             <p>
-              <strong>Part-time CMO</strong> day rates in the UK typically range from £700 to £1,400 per day. London-based roles command premium rates, with Shoreditch tech startups and City financial services firms often paying £1,000-£1,400 daily.
+              <strong>Part-time CMO</strong> day rates in the UK typically range from £700 to £1,400 per day, according to market data from <a href="https://www.ons.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS</a> and industry surveys. London-based roles command premium rates, with Shoreditch tech startups and City financial services firms often paying £1,000-£1,400 daily.
             </p>
             <p>
               A part-time CMO working with 2-3 clients at 2 days per week each can realistically earn £140,000-£200,000 annually. CMOs with strong B2B SaaS or DTC experience can command premium rates.
@@ -286,7 +292,7 @@ export default async function PartTimeCmoJobsUkPage() {
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Part-Time CMO Jobs London</h3>
             <p>
-              London dominates the UK market for <strong>part-time CMO jobs</strong>, with approximately 55% of all flexible marketing leadership roles based in the capital. Shoreditch and the broader Tech City area are particularly active.
+              London dominates the UK market for <strong>part-time CMO jobs</strong>, with approximately 55% of all flexible marketing leadership roles based in the capital. Shoreditch and the broader Tech City area are particularly active, home to many <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD</a> member organizations.
             </p>
             <p>
               Manchester, Birmingham, and Bristol also have growing part-time CMO markets. Remote and hybrid arrangements are increasingly common, expanding opportunities beyond traditional geographic boundaries.
@@ -311,7 +317,7 @@ export default async function PartTimeCmoJobsUkPage() {
           </div>
           <div className="prose prose-lg prose-gray max-w-none">
             <p>
-              <strong>Remote part-time CMO</strong> roles have grown significantly since 2020. Many companies now offer fully remote or hybrid part-time CMO positions, allowing marketing leaders to work with businesses across the UK without geographical constraints.
+              <strong>Remote part-time CMO</strong> roles have grown significantly since 2020, supported by evolving <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working rights</a>. Many companies now offer fully remote or hybrid part-time CMO positions, allowing marketing leaders to work with businesses across the UK without geographical constraints.
             </p>
             <p>
               Currently, approximately <strong>{stats.remoteCount} of our {stats.total} marketing roles</strong> offer remote or hybrid working. Filter by "Remote" in our job board to see available remote part-time CMO opportunities.
@@ -332,7 +338,7 @@ export default async function PartTimeCmoJobsUkPage() {
           <div className="mb-12 text-center">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">UK Tax</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">IR35: Inside vs Outside</h2>
-            <p className="text-gray-600 mt-4">As a part-time CMO, your IR35 status significantly impacts your take-home pay</p>
+            <p className="text-gray-600 mt-4">As a part-time CMO, your IR35 status significantly impacts your take-home pay. <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IPSE</a> provides guidance for self-employed professionals navigating these regulations</p>
           </div>
           <IR35Calculator defaultDayRate={950} />
         </div>

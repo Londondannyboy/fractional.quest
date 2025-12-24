@@ -10,7 +10,7 @@ export const revalidate = 3600
 const CDO_SERVICE_FAQS = [
   {
     question: 'What is a Fractional CDO?',
-    answer: 'A Fractional CDO (Chief Data Officer) is an experienced data executive who works with your company part-time, typically 1-3 days per week. You get strategic data leadership, analytics expertise, and data governance without the cost of a full-time executive.',
+    answer: 'A Fractional CDO (Chief Data Officer) is an experienced data executive who works with your company part-time, typically 1-3 days per week. You get strategic data leadership, analytics expertise, and data governance without the cost of a full-time executive. This flexible arrangement aligns with <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK flexible working regulations</a>.',
   },
   {
     question: 'When should my company hire a Fractional CDO?',
@@ -30,7 +30,7 @@ const CDO_SERVICE_FAQS = [
   },
   {
     question: 'Can a Fractional CDO help prepare for AI initiatives?',
-    answer: 'Yes—AI readiness is a key CDO responsibility. A fractional CDO can assess your data maturity, build the data infrastructure needed for AI, establish data quality practices, and develop the governance frameworks that AI requires.',
+    answer: 'Yes—AI readiness is a key CDO responsibility. A fractional CDO can assess your data maturity, build the data infrastructure needed for AI, establish data quality practices, and develop the governance frameworks that AI requires. Professional development in this area is supported by <a href="https://www.bcs.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BCS certifications</a> in data and AI.',
   },
 ]
 
@@ -118,7 +118,7 @@ export default function FractionalCDOServicesPage() {
               A <strong className="font-semibold text-gray-900">Fractional CDO</strong> (Chief Data Officer) is an experienced data executive who works with your company on a part-time basis—typically 1-3 days per week. You get strategic data leadership, analytics expertise, and data governance without the commitment and cost of a full-time hire.
             </p>
             <p>
-              Unlike data analysts who answer specific questions, a fractional CDO builds the entire data function. They create data strategy, build infrastructure, establish governance, and transform the organisation into one that uses data to drive decisions. Following <a href="https://www.statisticsauthority.gov.uk/code-of-practice/" target="_blank" rel="noopener noreferrer" className="text-cyan-600 hover:text-cyan-700 underline">UK Statistics Authority standards</a> and insights from the <a href="https://www.turing.ac.uk" target="_blank" rel="noopener noreferrer" className="text-cyan-600 hover:text-cyan-700 underline">Alan Turing Institute</a>, they bring rigorous data science practices to business contexts.
+              Unlike data analysts who answer specific questions, a fractional CDO builds the entire data function. They create data strategy, build infrastructure, establish governance, and transform the organisation into one that uses data to drive decisions. Many follow <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a>, making them adaptable to your business needs.
             </p>
             <div className="bg-gray-50 p-8 my-10 border-l-4 border-cyan-500">
               <p className="text-xl font-semibold text-gray-900 mb-0">
@@ -127,10 +127,10 @@ export default function FractionalCDOServicesPage() {
             </div>
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">From Data Rich to Data Driven</h3>
             <p>
-              Many companies are data rich but insight poor. They collect vast amounts of data but cannot use it effectively. Decisions are still made on gut feel, reports take weeks, and data quality is questionable. The <a href="https://www.opendatainstitute.org" target="_blank" rel="noopener noreferrer" className="text-cyan-600 hover:text-cyan-700 underline">Open Data Institute</a> highlights how proper data infrastructure enables innovation.
+              Many companies are data rich but insight poor. They collect vast amounts of data but cannot use it effectively. Decisions are still made on gut feel, reports take weeks, and data quality is questionable. <a href="https://www.ons.gov.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">The Office for National Statistics</a> emphasises how quality data underpins strategic decision-making.
             </p>
             <p>
-              A fractional CDO bridges this gap. They build the systems, processes, and culture that turn data into competitive advantage—enabling faster decisions, better predictions, and AI-powered innovation. Drawing on <a href="https://rss.org.uk" target="_blank" rel="noopener noreferrer" className="text-cyan-600 hover:text-cyan-700 underline">Royal Statistical Society guidance</a>, they ensure data practices are both sophisticated and trustworthy.
+              A fractional CDO bridges this gap. They build the systems, processes, and culture that turn data into competitive advantage—enabling faster decisions, better predictions, and AI-powered innovation. According to <a href="https://www.bcs.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BCS, The Chartered Institute for IT</a>, effective data leadership is crucial for digital transformation.
             </p>
           </div>
         </div>
@@ -158,27 +158,27 @@ export default function FractionalCDOServicesPage() {
               },
               {
                 title: 'Data Infrastructure',
-                description: 'Design and implement data architecture—warehouses, lakes, pipelines, and platforms that scale.',
+                description: 'Design and implement data architecture—warehouses, lakes, pipelines, and platforms that scale. Following standards promoted by <a href="https://www.techuk.org/digital-infrastructure" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK digital infrastructure initiatives</a>.',
                 icon: '🏗️',
               },
               {
                 title: 'Data Governance',
-                description: 'Establish data governance frameworks—quality, security, privacy, and compliance. Ensure data is trustworthy and compliant.',
+                description: 'Establish data governance frameworks—quality, security, privacy, and compliance. Ensure data is trustworthy and meets requirements set by bodies like the <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Information Commissioner\'s Office</a>.',
                 icon: '🔒',
               },
               {
                 title: 'AI & ML Readiness',
-                description: 'Prepare the organisation for AI. Build the data foundations, infrastructure, and practices that AI requires.',
+                description: 'Prepare the organisation for AI. Build the data foundations, infrastructure, and practices that AI requires, following ethical frameworks promoted by <a href="https://www.bcs.org/policy-and-influence/uk-ai-strategy/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BCS AI policy guidance</a>.',
                 icon: '🤖',
               },
               {
                 title: 'Data Team',
-                description: 'Build and lead the data team—analysts, engineers, scientists. Define roles, hire key talent, and develop capabilities.',
+                description: 'Build and lead the data team—analysts, engineers, scientists. Define roles, hire key talent, and develop capabilities according to <a href="https://www.cipd.org/uk/knowledge/factsheets/hr-business-partnering-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD HR best practices</a>.',
                 icon: '👥',
               },
               {
                 title: 'Data Culture',
-                description: 'Drive data literacy and data-driven culture. Ensure decisions across the organisation are informed by data.',
+                description: 'Drive data literacy and data-driven culture. Ensure decisions across the organisation are informed by data, supporting initiatives championed by <a href="https://www.techuk.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK</a> for digital skills development.',
                 icon: '🧠',
               },
             ].map((item, index) => (
@@ -203,7 +203,7 @@ export default function FractionalCDOServicesPage() {
             {[
               {
                 title: 'Strategic Data Leadership',
-                description: 'Get 15+ years of data experience applied to your challenges. A fractional CDO brings proven approaches to building data-driven organisations.',
+                description: 'Get 15+ years of data experience applied to your challenges. A fractional CDO brings proven approaches to building data-driven organisations, with expertise recognised by professional bodies like the <a href="https://www.iod.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a>.',
                 stat: '15+',
                 statLabel: 'Years Experience',
               },
@@ -221,13 +221,13 @@ export default function FractionalCDOServicesPage() {
               },
               {
                 title: 'Data-Driven Culture',
-                description: 'Transform decision-making across the organisation. Build the tools, training, and processes that make data accessible to everyone.',
+                description: 'Transform decision-making across the organisation. Build the tools, training, and processes that make data accessible to everyone. <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> research shows data literacy drives organisational performance.',
                 stat: '100%',
                 statLabel: 'Data Access',
               },
               {
                 title: 'Cross-Industry Insights',
-                description: 'Fractional CDOs work across multiple companies. They bring patterns, benchmarks, and fresh perspectives on data challenges.',
+                description: 'Fractional CDOs work across multiple companies. They bring patterns, benchmarks, and fresh perspectives on data challenges, particularly valuable for <a href="https://www.scaleupinstitute.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scaling businesses</a>.',
                 stat: '5+',
                 statLabel: 'Companies Seen',
               },
@@ -258,7 +258,7 @@ export default function FractionalCDOServicesPage() {
             {[
               {
                 scenario: 'Data Not Delivering Value',
-                description: "You have lots of data but can't use it effectively. Reports are slow, insights are limited, and decisions are still based on gut feel.",
+                description: "You have lots of data but can't use it effectively. Reports are slow, insights are limited, and decisions are still based on gut feel. Many businesses struggle with this challenge as highlighted by <a href=\"https://www.dma.org.uk\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-blue-600 hover:text-blue-700 underline\">DMA UK</a> research.",
                 timing: 'Before competitors out-data you',
               },
               {
@@ -268,7 +268,7 @@ export default function FractionalCDOServicesPage() {
               },
               {
                 scenario: 'Scaling Data Function',
-                description: 'Growing from ad-hoc analysis to a proper data team. Need leadership to structure the function and hire right.',
+                description: 'Growing from ad-hoc analysis to a proper data team. Need leadership to structure the function and hire right, following best practices from organisations like <a href=\"https://technation.io\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-blue-600 hover:text-blue-700 underline\">Tech Nation</a>.',
                 timing: 'When team exceeds 3',
               },
               {
@@ -278,12 +278,12 @@ export default function FractionalCDOServicesPage() {
               },
               {
                 scenario: 'Regulatory Compliance',
-                description: 'Need to meet GDPR, data protection, or industry-specific data requirements. Need governance expertise.',
+                description: 'Need to meet GDPR, data protection, or industry-specific data requirements outlined by the <a href=\"https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-blue-600 hover:text-blue-700 underline\">ICO</a>. Need governance expertise.',
                 timing: 'Before audits',
               },
               {
                 scenario: 'Data Monetisation',
-                description: 'Want to create data products or monetise your data assets. Need strategic leadership to identify and execute opportunities.',
+                description: 'Want to create data products or monetise your data assets. Need strategic leadership to identify and execute opportunities, supported by resources from the <a href=\"https://www.british-business-bank.co.uk\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-blue-600 hover:text-blue-700 underline\">British Business Bank</a>.',
                 timing: 'At opportunity identification',
               },
             ].map((item, index) => (

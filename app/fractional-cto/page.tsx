@@ -125,7 +125,7 @@ export default function FractionalCTOPage() {
                 </p>
 
                 <p>
-                  The fractional model allows companies to access <strong>CTO-level expertise</strong> (typically 15-20+ years in senior technology roles) without the commitment and cost of a full-time executive hire. According to <a href="https://technation.io/insights/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation data</a>, UK tech companies increasingly use fractional executives to scale efficiently. The <a href="https://www.ukri.org/councils/innovate-uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK government's innovation support</a> has accelerated this trend, with fractional CTOs helping startups navigate R&D tax credits and technical compliance.
+                  The fractional model allows companies to access <strong>CTO-level expertise</strong> (typically 15-20+ years in senior technology roles) without the commitment and cost of a full-time executive hire. According to <a href="https://technation.io/insights/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation data</a>, UK tech companies increasingly use fractional executives to scale efficiently. The <a href="https://www.gov.uk/guidance/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK government's flexible working guidance</a> has accelerated this trend, with fractional CTOs helping startups navigate R&D tax credits and technical compliance.
                 </p>
 
                 <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">Core Characteristics</h3>
@@ -184,7 +184,7 @@ export default function FractionalCTOPage() {
 
               <div className="prose prose-lg max-w-none mb-10">
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  A fractional CTO handles <strong>strategic technical leadership</strong>—the high-value work that only a senior technology executive can do. According to the <a href="https://stackoverflow.com/dev-survey" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Stack Overflow Developer Survey</a>, technical leadership roles have evolved significantly, with CTOs increasingly focusing on architecture, team culture, and strategic alignment rather than hands-on coding.
+                  A fractional CTO handles <strong>strategic technical leadership</strong>—the high-value work that only a senior technology executive can do. According to <a href="https://www.bcs.org/membership/member-communities/cto-forums/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BCS CTO research</a>, technical leadership roles have evolved significantly, with CTOs increasingly focusing on architecture, team culture, and strategic alignment rather than hands-on coding.
                 </p>
               </div>
 
@@ -299,7 +299,7 @@ export default function FractionalCTOPage() {
                       <div className="text-3xl">💰</div>
                       <div>
                         <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">Preparing for Fundraising (Seed to Series B)</h3>
-                        <p className="text-gray-700 mb-3">Investors want to speak with your technical leader. A fractional CTO provides credibility, handles technical due diligence, and validates your technical approach.</p>
+                        <p className="text-gray-700 mb-3">Investors want to speak with your technical leader. A fractional CTO provides credibility, handles technical due diligence, and validates your technical approach. <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BVCA research</a> shows that strong technical leadership significantly improves fundraising success rates.</p>
                         <p className="text-sm text-gray-600 mb-0"><strong>Timing:</strong> 3-6 months before raise. <strong>Duration:</strong> Through fundraise + 6 months.</p>
                       </div>
                     </div>
@@ -310,7 +310,7 @@ export default function FractionalCTOPage() {
                       <div className="text-3xl">📈</div>
                       <div>
                         <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">Scaling Engineering Team (5 to 15+ Engineers)</h3>
-                        <p className="text-gray-700 mb-3">You're growing from 2-3 developers to 10-15+. You need senior leadership to structure teams, set processes, maintain quality, and establish engineering culture.</p>
+                        <p className="text-gray-700 mb-3">You're growing from 2-3 developers to 10-15+. You need senior leadership to structure teams, set processes, maintain quality, and establish engineering culture. The <a href="https://scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> identifies talent and leadership as critical growth constraints for UK tech companies.</p>
                         <p className="text-sm text-gray-600 mb-0"><strong>Timing:</strong> When team exceeds 5 engineers. <strong>Duration:</strong> Ongoing until team hits 25+.</p>
                       </div>
                     </div>
@@ -397,7 +397,7 @@ export default function FractionalCTOPage() {
                   <li><strong>Technology Stack:</strong> Modern stacks (React, Python, AWS) vs specialized (Blockchain, AI/ML, Security) command premiums</li>
                   <li><strong>Industry Experience:</strong> FinTech, HealthTech, and regulated industries typically pay 15-25% more</li>
                   <li><strong>Scope & Complexity:</strong> Managing 20+ engineers or multi-region infrastructure costs more</li>
-                  <li><strong>Location:</strong> London rates are 15-20% higher than regional UK (Manchester, Edinburgh, Bristol)</li>
+                  <li><strong>Location:</strong> London rates are 15-20% higher than regional UK (Manchester, Edinburgh, Bristol), according to <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS labour market data</a></li>
                 </ul>
 
                 <p className="text-gray-700 mt-6">
@@ -429,13 +429,13 @@ export default function FractionalCTOPage() {
                   },
                   {
                     title: 'Investor Credibility',
-                    description: 'Investors and acquirers want experienced technical leadership. A fractional CTO provides credibility and handles technical due diligence professionally.',
+                    description: 'Investors and acquirers want experienced technical leadership. A fractional CTO provides credibility and handles technical due diligence professionally. <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> research shows strong leadership is a key investment criterion.',
                     stat: '100%',
                     statLabel: 'DD Ready',
                   },
                   {
                     title: 'Flexibility & Scale',
-                    description: 'Scale from 1 to 3 days per week as needs change. 30-60 day notice periods. No long-term commitment or equity lock-in. Perfect for volatile growth.',
+                    description: 'Scale from 1 to 3 days per week as needs change. 30-60 day notice periods. No long-term commitment or equity lock-in. Perfect for volatile growth, aligning with <a href="https://www.cipd.org/uk/knowledge/reports/flexible-working/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">CIPD flexible working best practices</a>.',
                     stat: '1-3',
                     statLabel: 'Days/Week',
                   },
@@ -474,7 +474,7 @@ export default function FractionalCTOPage() {
               </div>
 
               <div className="mb-8">
-                <p className="text-gray-600">Choose the right model for your needs</p>
+                <p className="text-gray-600">Choose the right model for your needs. The <a href="https://www.bcs.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BCS (British Computer Society)</a> provides guidance on different CTO engagement models.</p>
               </div>
 
               <ServiceComparisonTable role="CTO" accentColor="blue" />
@@ -599,13 +599,13 @@ export default function FractionalCTOPage() {
 
               <div className="prose prose-lg max-w-none">
                 <p className="text-xl text-gray-600 leading-relaxed mb-10">
-                  The fractional CTO model offers experienced technology leaders flexibility, variety, and often higher earnings than full-time roles. Here's what you need to transition:
+                  The fractional CTO model offers experienced technology leaders flexibility, variety, and often higher earnings than full-time roles. The <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> reports growing demand for fractional executives across all sectors. Here's what you need to transition:
                 </p>
 
                 <div className="bg-white p-8 border-2 border-gray-900 mb-10">
                   <h3 className="text-xl font-black text-gray-900 mt-0 mb-4">Prerequisites</h3>
                   <ul className="space-y-3 text-gray-700 mb-0">
-                    <li><strong>15+ years in technology</strong> with at least 5 years in senior leadership (CTO, VP Engineering, Director)</li>
+                    <li><strong>15+ years in technology</strong> with at least 5 years in senior leadership (CTO, VP Engineering, Director), aligning with <a href="https://www.techuk.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK</a> leadership standards</li>
                     <li><strong>Track record of scaling:</strong> Grown engineering teams from 5 to 25+, scaled systems to significant load</li>
                     <li><strong>Multiple technology stacks:</strong> Breadth matters more than depth—you'll work across diverse environments</li>
                     <li><strong>Strong communication:</strong> Must explain technical concepts to non-technical stakeholders (board, investors)</li>
@@ -637,7 +637,7 @@ export default function FractionalCTOPage() {
 
                   <div className="bg-white p-6">
                     <h4 className="text-lg font-bold text-gray-900 mb-2">3. Build Your Brand</h4>
-                    <p className="text-gray-700 mb-0">LinkedIn is your primary channel. Share insights on technical leadership, architecture, and scaling teams. Write case studies (anonymized) of challenges you've solved. Engage with tech community.</p>
+                    <p className="text-gray-700 mb-0">LinkedIn is your primary channel. Share insights on technical leadership, architecture, and scaling teams. Write case studies (anonymized) of challenges you've solved. Engage with <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a> and other tech communities to build visibility.</p>
                   </div>
 
                   <div className="bg-white p-6">

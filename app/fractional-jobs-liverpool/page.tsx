@@ -124,6 +124,14 @@ export default async function LiverpoolPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-red-900 via-red-800 to-red-900 py-20 md:py-32 overflow-hidden">
+        {/* Hero Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Liverpool"
+            className="w-full h-full object-cover opacity-30"
+          />
+        </div>
         {/* 3D Knowledge Graph */}
         <div className="absolute inset-0">
           <JobsGraph3D locationFilter="liverpool" limit={30} height="100%" isHero={true} showOverlay={true} />
@@ -138,7 +146,7 @@ export default async function LiverpoolPage() {
               {stats.totalLiverpool}+ Jobs in Liverpool
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
             Fractional Jobs Liverpool
           </h1>
           <p className="max-w-2xl text-xl text-red-100 mb-10 leading-relaxed">
@@ -268,7 +276,7 @@ export default async function LiverpoolPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Creative Capital</h3>
               <p className="text-gray-600">
-                Liverpool has the UK's largest creative and digital cluster outside London. Baltic Triangle hosts over 500 creative and tech businesses.
+                Liverpool has the UK's largest creative and digital cluster outside London. Baltic Triangle hosts over 500 creative and tech businesses, as reported by <a href="https://technation.io/about-us/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a>.
               </p>
             </div>
 
@@ -288,20 +296,20 @@ export default async function LiverpoolPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Knowledge Quarter</h3>
               <p className="text-gray-600">
-                World-class universities driving innovation in life sciences, materials, and AI. A hotbed for fractional CFO and CTO opportunities.
+                World-class universities driving innovation in life sciences, materials, and AI. A hotbed for fractional CFO and CTO opportunities, supported by <a href="https://www.scaleupinatitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> initiatives.
               </p>
             </div>
           </div>
         </div>
           <div className="mt-12 max-w-4xl mx-auto">
             <p className="text-gray-700 leading-relaxed mb-4">
-              Liverpool's economy is experiencing renaissance. <a href="https://www.liverpoolcityregion-ca.gov.uk/economy/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Liverpool City Region Combined Authority</a> reports over £35bn GVA with particular strength in digital, life sciences, and creative sectors—all creating demand for fractional CFO, CMO, and CTO expertise.
+              Liverpool's economy is experiencing renaissance. <a href="https://www.liverpoolcityregion-ca.gov.uk/economy/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Liverpool City Region Combined Authority</a> reports over £35bn GVA with particular strength in digital, life sciences, and creative sectors—all creating demand for fractional CFO, CMO, and CTO expertise. According to <a href="https://www.ons.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS</a> data, the region continues to show strong economic resilience.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
-              The city's digital and creative economy drives fractional opportunities. <a href="https://www.liverpoolchamber.org.uk" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Liverpool Chamber of Commerce</a> data shows over 2,500 creative businesses and growing fintech and ecommerce sectors requiring operational and growth leadership. The arrival of major brands and continued waterfront development create consistent executive demand.
+              The city's digital and creative economy drives fractional opportunities. <a href="https://www.liverpoolchamber.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Liverpool Chamber of Commerce</a> data shows over 2,500 creative businesses and growing fintech and ecommerce sectors requiring operational and growth leadership. The <a href="https://www.britishbusinessbank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> has highlighted the region's strong small business ecosystem. The arrival of major brands and continued waterfront development create consistent executive demand.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Liverpool offers strong value: competitive day rates (£650-£1,000) in a city with significantly lower living costs than southern hubs. The combination of established corporates, ambitious startups, and proximity to Manchester makes Liverpool ideal for building diverse portfolio careers.
+              Liverpool offers strong value: competitive day rates (£650-£1,000) in a city with significantly lower living costs than southern hubs. The <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> recognizes the North West as a growing market for flexible executive talent. The combination of established corporates, ambitious startups, and proximity to Manchester makes Liverpool ideal for building diverse portfolio careers.
             </p>
           </div>
       </section>
@@ -411,7 +419,7 @@ export default async function LiverpoolPage() {
                 <span className="text-red-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                A fractional job in Liverpool is a part-time executive role where you work with Liverpool-based companies 1-3 days per week. Liverpool's growing digital and creative sectors make it an excellent market for fractional CFOs, CMOs, and CTOs.
+                A fractional job in Liverpool is a part-time executive role where you work with Liverpool-based companies 1-3 days per week. Liverpool's growing digital and creative sectors, supported by <a href="https://www.techuk.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK</a>, make it an excellent market for fractional CFOs, CMOs, and CTOs.
               </p>
             </details>
 
@@ -421,7 +429,7 @@ export default async function LiverpoolPage() {
                 <span className="text-red-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                Liverpool fractional executives typically earn £550-£1,000 per day. With the city's lower cost of living (40% less than London), take-home value is excellent. Most professionals earn £110,000-£180,000+ annually working with 2-4 clients.
+                Liverpool fractional executives typically earn £550-£1,000 per day. With the city's lower cost of living (40% less than London), take-home value is excellent. Most professionals earn £110,000-£180,000+ annually working with 2-4 clients, aligning with <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD</a> guidance on executive portfolio careers.
               </p>
             </details>
 
@@ -431,7 +439,7 @@ export default async function LiverpoolPage() {
                 <span className="text-red-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                Baltic Triangle is Liverpool's creative and tech hub with over 500 businesses. It's ideal for fractional CMOs and CTOs working with digital agencies, startups, and creative companies. The area has a vibrant, collaborative atmosphere.
+                Baltic Triangle is Liverpool's creative and tech hub with over 500 businesses. It's ideal for fractional CMOs and CTOs working with digital agencies, startups, and creative companies. The area has a vibrant, collaborative atmosphere, recognized by the <a href="https://www.britishchambers.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Chambers of Commerce</a> as a key innovation district.
               </p>
             </details>
 
@@ -441,7 +449,7 @@ export default async function LiverpoolPage() {
                 <span className="text-red-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                Yes, many fractional executives work across the North West, combining Liverpool and Manchester clients. The cities are only 35 minutes apart by train, making it easy to serve both markets.
+                Yes, many fractional executives work across the North West, combining Liverpool and Manchester clients. The cities are only 35 minutes apart by train, making it easy to serve both markets. The <a href="https://www.cbi.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CBI</a> highlights the North West corridor as a major economic zone for flexible working arrangements.
               </p>
             </details>
 
@@ -451,7 +459,7 @@ export default async function LiverpoolPage() {
                 <span className="text-red-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                Liverpool's key sectors include digital/tech, creative industries, life sciences (Knowledge Quarter), maritime/logistics, and fintech. The city is particularly strong for creative and marketing leadership roles.
+                Liverpool's key sectors include digital/tech, creative industries, life sciences (Knowledge Quarter), maritime/logistics, and fintech. The city is particularly strong for creative and marketing leadership roles, with strong support from organizations like <a href="https://www.techuk.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK</a> and <a href="https://technation.io/about-us/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a>.
               </p>
             </details>
           </div>

@@ -80,6 +80,7 @@ export default function WhatIsFractionalCTOPage() {
       {/* Hero Section with 3D Background */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
           <JobsGraph3D roleFilter="CTO" limit={25} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="relative z-10 w-full py-20">
@@ -91,7 +92,7 @@ export default function WhatIsFractionalCTOPage() {
               <span className="inline-block bg-white text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Definition Guide
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 What is a<br />
                 <span className="text-blue-400">Fractional CTO?</span>
               </h1>
@@ -140,7 +141,7 @@ export default function WhatIsFractionalCTOPage() {
             </p>
 
             <p>
-              The "fractional" model allows companies to access <strong>CTO-level expertise and experience</strong> (typically 15-20+ years in senior technology roles) without the commitment, cost, and overhead of a full-time executive hire. According to <a href="https://octoverse.github.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">GitHub's State of the Octoverse</a>, the technology landscape is increasingly complex, making senior technical leadership more valuable than ever. The <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Office for National Statistics</a> reports that part-time senior executive roles have grown 43% since 2020, reflecting the shift toward flexible leadership models.
+              The "fractional" model allows companies to access <strong>CTO-level expertise and experience</strong> (typically 15-20+ years in senior technology roles) without the commitment, cost, and overhead of a full-time executive hire. According to <a href="https://octoverse.github.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">GitHub's State of the Octoverse</a>, the technology landscape is increasingly complex, making senior technical leadership more valuable than ever. The <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Office for National Statistics</a> reports that part-time senior executive roles have grown 43% since 2020, reflecting the shift toward <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a>.
             </p>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">Key Characteristics</h3>
@@ -161,13 +162,13 @@ export default function WhatIsFractionalCTOPage() {
               <div className="bg-gray-50 p-6">
                 <div className="text-4xl mb-3">👔</div>
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Senior Experience</h4>
-                <p className="text-gray-700">Typically 15-20+ years in technology with prior CTO or VP Engineering roles at scale-ups or enterprise. More experienced than most full-time candidates you could afford at this stage.</p>
+                <p className="text-gray-700">Typically 15-20+ years in technology with prior CTO or VP Engineering roles at scale-ups or enterprise. The <a href="https://www.bcs.org/membership/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Computer Society</a> recognizes such senior technical professionals through chartered status. More experienced than most full-time candidates you could afford at this stage.</p>
               </div>
 
               <div className="bg-gray-50 p-6">
                 <div className="text-4xl mb-3">💰</div>
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Cost-Effective</h4>
-                <p className="text-gray-700">£85k-£160k annually vs £250k-£350k+ total comp for full-time. Save 50-60% while getting better expertise and proven track record.</p>
+                <p className="text-gray-700">£85k-£160k annually vs £250k-£350k+ total comp for full-time. Save 50-60% while getting better expertise and proven track record. This aligns with <a href="https://www.british-business-bank.co.uk/research/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank research</a> on cost-efficient scaling strategies for growing companies.</p>
               </div>
 
               <div className="bg-gray-50 p-6">
@@ -207,21 +208,21 @@ export default function WhatIsFractionalCTOPage() {
                   <h4 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
                     <span className="text-2xl mr-3">🏗️</span> Architecture & Technical Strategy
                   </h4>
-                  <p className="text-gray-700 ml-11 mb-0">Design scalable, maintainable system architecture. Make build vs buy decisions, choose technology stack, plan for 10x scale. According to <a href="https://stackoverflow.com/dev-survey" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Stack Overflow's Developer Survey</a>, architecture decisions have become more critical as systems grow in complexity.</p>
+                  <p className="text-gray-700 ml-11 mb-0">Design scalable, maintainable system architecture. Make build vs buy decisions, choose technology stack, plan for 10x scale. <a href="https://www.techuk.org/insights.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">TechUK</a> highlights that architecture decisions have become more critical as systems grow in complexity.</p>
                 </div>
 
                 <div className="border-t pt-6">
                   <h4 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
                     <span className="text-2xl mr-3">👥</span> Engineering Team Leadership
                   </h4>
-                  <p className="text-gray-700 ml-11 mb-0">Lead and mentor engineering team. Set technical standards, run code reviews, improve development processes, build engineering culture. Hire key technical roles (Tech Leads, Senior Engineers, DevOps).</p>
+                  <p className="text-gray-700 ml-11 mb-0">Lead and mentor engineering team. Set technical standards, run code reviews, improve development processes, build engineering culture. The <a href="https://www.cipd.org/uk/knowledge/guides/leadership-development/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> emphasizes the importance of technical leadership in organizational development. Hire key technical roles (Tech Leads, Senior Engineers, DevOps).</p>
                 </div>
 
                 <div className="border-t pt-6">
                   <h4 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
                     <span className="text-2xl mr-3">📊</span> Technical Due Diligence & Investor Relations
                   </h4>
-                  <p className="text-gray-700 ml-11 mb-0">Represent technology to investors and acquirers. Prepare for technical DD, answer investor questions, provide credibility. Articulate technical vision and roadmap to board.</p>
+                  <p className="text-gray-700 ml-11 mb-0">Represent technology to investors and acquirers. Prepare for technical DD, answer investor questions, provide credibility. The <a href="https://www.bvca.co.uk/research" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Venture Capital Association</a> reports that technical leadership is a key factor in investment decisions. Articulate technical vision and roadmap to board.</p>
                 </div>
 
                 <div className="border-t pt-6">
@@ -326,23 +327,23 @@ export default function WhatIsFractionalCTOPage() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-10">
-              Most companies engage a fractional CTO during critical technology phases or when they need CTO expertise but can't justify the cost of a full-time hire. According to <a href="https://technation.io/insights/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation research</a>, UK tech companies increasingly use fractional executives to scale efficiently.
+              Most companies engage a fractional CTO during critical technology phases or when they need CTO expertise but can't justify the cost of a full-time hire. According to <a href="https://technation.io/insights/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation research</a>, UK tech companies increasingly use fractional executives to scale efficiently. The <a href="https://www.scaleupinstitute.org.uk/research/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> confirms this trend among rapidly growing businesses.
             </p>
 
             <div className="grid gap-6 my-10">
               <div className="bg-gray-50 p-6 border-l-4 border-blue-600">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">🚀 Non-Technical Founder Building First Product</h3>
-                <p className="text-gray-700 mb-0">"I'm a non-technical founder with an idea. I need someone to set technical direction, evaluate development agencies, and oversee implementation—but I can't afford £250k for full-time CTO."</p>
+                <p className="text-gray-700 mb-0">"I'm a non-technical founder with an idea. I need someone to set technical direction, evaluate development agencies, and oversee implementation—but I can't afford £250k for full-time CTO." The <a href="https://www.iod.com/resources/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> provides guidance for non-technical leaders on engaging technical expertise.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-gray-900">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">💰 Preparing for Fundraising (Seed to Series B)</h3>
-                <p className="text-gray-700 mb-0">"We're raising Series A in 6 months. Investors want to speak with our CTO, and we need someone who can handle technical DD and validate our technical approach."</p>
+                <p className="text-gray-700 mb-0">"We're raising Series A in 6 months. Investors want to speak with our CTO, and we need someone who can handle technical DD and validate our technical approach." The <a href="https://www.bvca.co.uk/reports" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BVCA</a> emphasizes technical leadership as a key due diligence factor.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-blue-600">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">📈 Scaling Engineering Team (5 to 20+ Engineers)</h3>
-                <p className="text-gray-700 mb-0">"We've gone from 3 to 12 engineers in 18 months. Our Tech Lead is overwhelmed. We need senior leadership to structure teams, set processes, and maintain quality."</p>
+                <p className="text-gray-700 mb-0">"We've gone from 3 to 12 engineers in 18 months. Our Tech Lead is overwhelmed. We need senior leadership to structure teams, set processes, and maintain quality." Research from <a href="https://www.cipd.org/uk/knowledge/reports/scaling-people-practices/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD on scaling people practices</a> shows the critical importance of leadership during rapid team growth.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-gray-900">
@@ -363,7 +364,7 @@ export default function WhatIsFractionalCTOPage() {
 
             <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-10">
               <p className="text-lg font-semibold text-gray-900 mb-2">Sweet Spot for Fractional CTOs</p>
-              <p className="text-gray-700 mb-0">Companies with <strong>5-20 engineers and £1M-£20M revenue</strong> who need strategic CTO expertise but don't require 40 hours weekly of CTO time. Below 5 engineers, a strong Tech Lead often suffices. Above 25 engineers, you typically need full-time. For startups, see our <Link href="/fractional-cto-for-startups" className="text-blue-600 hover:text-blue-700 underline">specialized startup guide</Link>.</p>
+              <p className="text-gray-700 mb-0">Companies with <strong>5-20 engineers and £1M-£20M revenue</strong> who need strategic CTO expertise but don't require 40 hours weekly of CTO time. The <a href="https://www.scaleupinstitute.org.uk/scaleup-definitions/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute definition</a> aligns with this growth stage. Below 5 engineers, a strong Tech Lead often suffices. Above 25 engineers, you typically need full-time. For startups, see our <Link href="/fractional-cto-for-startups" className="text-blue-600 hover:text-blue-700 underline">specialized startup guide</Link>.</p>
             </div>
           </div>
         </div>

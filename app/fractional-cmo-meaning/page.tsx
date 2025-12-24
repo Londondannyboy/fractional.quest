@@ -29,7 +29,7 @@ const faqItems = [
   },
   {
     question: 'What does a fractional CMO do?',
-    answer: 'A fractional CMO provides the same strategic leadership as a full-time CMO: developing marketing strategy, building and leading teams, managing budgets, driving customer acquisition, and owning marketing results. They just do it 1-3 days per week instead of five.',
+    answer: 'A fractional CMO provides the same strategic leadership as a full-time CMO: developing <a href="https://www.cim.co.uk/professional-marketing-standards" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">marketing strategy</a>, building and leading teams, managing budgets, driving customer acquisition, and owning marketing results. They just do it 1-3 days per week instead of five.',
   },
   {
     question: 'How is fractional CMO different from a consultant?',
@@ -37,7 +37,7 @@ const faqItems = [
   },
   {
     question: 'Why do companies hire fractional CMOs instead of full-time?',
-    answer: 'Companies hire fractional CMOs to get senior marketing expertise without the £150k-£250k+ cost of a full-time executive. It\'s ideal for startups, scale-ups, or mid-sized companies that need strategic leadership but don\'t have budget or workload for a full-time CMO.',
+    answer: 'Companies hire fractional CMOs to get senior marketing expertise without the £150k-£250k+ cost of a full-time executive. It\'s ideal for <a href="https://www.bvca.co.uk" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">startups, scale-ups</a>, or mid-sized companies that need strategic leadership but don\'t have budget or workload for a full-time CMO.',
   },
 ]
 
@@ -96,7 +96,7 @@ export default function FractionalCMOMeaningPage() {
               <h3 className="text-2xl font-bold text-gray-900 mt-0 mb-4">Fractional</h3>
               <p className="mb-0 text-gray-700">
                 <strong>"Fractional"</strong> refers to working a <em>fraction</em> or <em>portion</em> of full-time hours.
-                A fractional executive works part-time—typically 20-60% of a normal full-time schedule (1-3 days per week).
+                A fractional executive works <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">part-time</a>—typically 20-60% of a normal full-time schedule (1-3 days per week).
                 The term emphasizes that you're getting a "slice" of a senior executive's time, not their full capacity.
               </p>
             </div>
@@ -104,22 +104,22 @@ export default function FractionalCMOMeaningPage() {
             <div className="bg-gray-50 p-8 rounded-lg my-8 border-l-4 border-amber-500">
               <h3 className="text-2xl font-bold text-gray-900 mt-0 mb-4">CMO (Chief Marketing Officer)</h3>
               <p className="mb-0 text-gray-700">
-                A <strong>CMO</strong> is the senior executive responsible for all marketing activities in a company.
-                They set marketing strategy, build and lead the marketing team, manage budgets, drive customer acquisition,
+                A <strong>CMO</strong> is the <a href="https://www.cim.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">senior executive</a> responsible for all marketing activities in a company.
+                They set <a href="https://www.ipa.co.uk/knowledge/effectiveness" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">marketing strategy</a>, build and lead the marketing team, manage budgets, drive customer acquisition,
                 and are accountable for marketing results and revenue growth.
               </p>
             </div>
 
             <p className="text-lg">
-              Put them together: A <strong>fractional CMO</strong> provides all the strategic leadership of a full-time CMO,
-              but works part-time—giving you senior marketing expertise without the £150,000-£250,000+ annual cost of a full-time executive.
+              Put them together: A <strong>fractional CMO</strong> provides all the <a href="https://www.cim.co.uk/qualifications" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">strategic leadership</a> of a full-time CMO,
+              but works part-time—giving you <a href="https://www.cim.co.uk/professional-marketing-standards/competency-framework" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">senior marketing expertise</a> without the £150,000-£250,000+ annual cost of a full-time executive.
             </p>
 
             <h2 className="text-3xl font-black text-gray-900 mt-16">Why the Word "Fractional"?</h2>
 
             <p className="text-lg">
-              The term "fractional" became popular in the executive world because it clearly communicates the model:
-              you're hiring a <em>fraction</em> of an executive's time, not the whole person.
+              The term "fractional" became popular in the <a href="https://www.iod.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">executive world</a> because it clearly communicates the model:
+              you're hiring a <em>fraction</em> of an executive's time, not the whole person. This <a href="https://www.cipd.org/uk/knowledge/guides/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangement</a> has become increasingly common across senior leadership roles.
             </p>
 
             <p className="text-lg">
@@ -134,7 +134,7 @@ export default function FractionalCMOMeaningPage() {
                 💡 Industry Note
               </p>
               <p className="text-gray-700 mb-0">
-                "Fractional" is the preferred term in professional services because it emphasizes the <strong>senior executive</strong> nature
+                "Fractional" is the preferred term in <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">professional services</a> because it emphasizes the <strong>senior executive</strong> nature
                 of the role. "Part-time CMO" means the same thing but can sometimes sound less strategic. In the UK, you'll
                 also hear "interim CMO" (temporary, full-time) or "portfolio CMO" (working with multiple companies).
               </p>
@@ -147,15 +147,15 @@ export default function FractionalCMOMeaningPage() {
             </p>
 
             <ul className="text-lg space-y-3">
-              <li><strong>1 day per week (20%):</strong> Light strategic oversight. Best for companies with a strong marketing team that just needs executive guidance.</li>
+              <li><strong>1 day per week (20%):</strong> Light strategic oversight. Best for companies with a strong <a href="https://www.dma.org.uk/article/building-a-marketing-team" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">marketing team</a> that just needs executive guidance.</li>
               <li><strong>2 days per week (40%):</strong> Most common model. Enough time for strategic leadership, team management, and driving key initiatives.</li>
               <li><strong>3 days per week (60%):</strong> Hands-on leadership. For companies that need active involvement in execution, hiring, and building the marketing function.</li>
             </ul>
 
             <p className="text-lg">
               They usually charge by day rate (£700-£1,400 per day in the UK) or monthly retainer (£3,000-£5,500 for 1-2 days per week).
-              Many fractional CMOs work with 2-4 companies simultaneously, allowing them to share best practices and fresh
-              perspectives across different businesses.
+              Many fractional CMOs work with 2-4 companies simultaneously, allowing them to share <a href="https://www.ipa.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">best practices</a> and fresh
+              perspectives across different businesses. This <a href="https://www.iod.com/news/news/articles/portfolio-careers-the-benefits-and-challenges" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">portfolio approach</a> benefits both the executive and their clients.
             </p>
 
             <h2 className="text-3xl font-black text-gray-900 mt-16">When Do Businesses Use Fractional CMOs?</h2>
@@ -168,23 +168,23 @@ export default function FractionalCMOMeaningPage() {
               <div className="bg-white border-2 border-gray-200 p-6 rounded-lg">
                 <h4 className="font-bold text-gray-900 mb-2">Startups & Scale-ups</h4>
                 <p className="text-gray-600 text-sm mb-0">
-                  Post-Series A/B companies that need marketing leadership to scale from £1M to £10M+ ARR
-                  but can't justify a £200k+ full-time CMO.
+                  Post-Series A/B companies that need <a href="https://www.scaleupinstitute.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">marketing leadership to scale</a> from £1M to £10M+ ARR
+                  but can't justify a £200k+ full-time CMO. These <a href="https://www.british-business-bank.co.uk/finance-hub/scale-up-financing/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">high-growth businesses</a> need expertise without overcommitting.
                 </p>
               </div>
 
               <div className="bg-white border-2 border-gray-200 p-6 rounded-lg">
                 <h4 className="font-bold text-gray-900 mb-2">SMEs with No Marketing Leader</h4>
                 <p className="text-gray-600 text-sm mb-0">
-                  £2M-£20M revenue companies with marketing teams but no senior leadership.
-                  The CEO has been playing CMO and needs to delegate.
+                  <a href="https://www.ons.gov.uk/businessindustryandtrade/business" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">£2M-£20M revenue companies</a> with marketing teams but no senior leadership.
+                  The CEO has been playing CMO and needs to <a href="https://www.cipd.org/uk/knowledge/factsheets/delegation-factsheet" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">delegate</a> this critical function.
                 </p>
               </div>
 
               <div className="bg-white border-2 border-gray-200 p-6 rounded-lg">
                 <h4 className="font-bold text-gray-900 mb-2">During Transitions</h4>
                 <p className="text-gray-600 text-sm mb-0">
-                  When a full-time CMO leaves and the company needs coverage during recruitment,
+                  When a full-time CMO leaves and the company needs coverage during <a href="https://www.cipd.org/uk/knowledge/guides/recruitment-resourcing" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">recruitment</a>,
                   or when launching new products/markets and need temporary expertise.
                 </p>
               </div>
@@ -192,7 +192,7 @@ export default function FractionalCMOMeaningPage() {
               <div className="bg-white border-2 border-gray-200 p-6 rounded-lg">
                 <h4 className="font-bold text-gray-900 mb-2">Marketing Not Working</h4>
                 <p className="text-gray-600 text-sm mb-0">
-                  Companies spending £10k-£50k/month on marketing with no clear ROI.
+                  Companies spending £10k-£50k/month on marketing with no clear <a href="https://www.dma.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ROI</a>.
                   They need senior oversight to diagnose problems and fix strategy.
                 </p>
               </div>
@@ -256,9 +256,9 @@ export default function FractionalCMOMeaningPage() {
             </div>
 
             <p className="text-lg">
-              The fractional model gives businesses access to experienced marketing leadership—typically 15-20 years
+              The fractional model gives businesses access to <a href="https://www.cim.co.uk/membership/chartered-marketer" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">experienced marketing leadership</a>—typically 15-20 years
               of experience scaling companies—without the £150k-£250k+ annual commitment of hiring full-time.
-              It's ideal for startups, scale-ups, and mid-market companies that need strategic expertise but
+              It's ideal for <a href="https://www.british-business-bank.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">startups, scale-ups</a>, and mid-market companies that need strategic expertise but
               don't have the budget or workload to justify a full-time executive.
             </p>
           </div>

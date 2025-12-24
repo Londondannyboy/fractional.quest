@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const MLRO_FAQS = [
   {
     question: 'What is a fractional MLRO?',
-    answer: 'A fractional MLRO (Money Laundering Reporting Officer) is an outsourced professional who fulfils the SMF17 role on a part-time basis—typically 1-2 days per week. They have FCA approval to act as your firm\'s nominated officer for suspicious activity reporting and oversee your AML/CTF framework. Fractional MLROs work across multiple regulated firms, bringing expertise from various sectors.'
+    answer: 'A fractional MLRO (Money Laundering Reporting Officer) is an outsourced professional who fulfils the <a href="https://www.fca.org.uk/firms/senior-managers-certification-regime/senior-management-functions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">SMF17</a> role on a part-time basis—typically 1-2 days per week. They have FCA approval to act as your firm\'s nominated officer for suspicious activity reporting and oversee your AML/CTF framework. Fractional MLROs work across multiple regulated firms, bringing expertise from various sectors.'
   },
   {
     question: 'Can you outsource the MLRO role?',
@@ -31,7 +31,7 @@ const MLRO_FAQS = [
   },
   {
     question: 'What does a fractional MLRO do?',
-    answer: 'A fractional MLRO manages your AML/CTF framework including: receiving and assessing internal suspicious activity reports, submitting SARs to the NCA, overseeing transaction monitoring, maintaining AML policies and procedures, providing annual MLRO reporting to the board, managing AML training, and liaising with regulators on AML matters.'
+    answer: 'A fractional MLRO manages your AML/CTF framework including: receiving and assessing internal suspicious activity reports, submitting SARs to the <a href="https://www.nationalcrimeagency.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">NCA</a>, overseeing transaction monitoring, maintaining AML policies and procedures, providing annual MLRO reporting to the board, managing AML training, and liaising with regulators on AML matters.'
   },
   {
     question: 'Who needs a fractional MLRO?',
@@ -39,7 +39,7 @@ const MLRO_FAQS = [
   },
   {
     question: 'Can the same person be CCO and MLRO?',
-    answer: 'Yes, one person can hold both SMF16 (Compliance Oversight) and SMF17 (MLRO) at the same firm. This is common at smaller firms. However, the FCA expects the individual to have sufficient time and expertise for both roles. For firms with significant AML complexity, separating the roles may be appropriate.'
+    answer: 'Yes, one person can hold both <a href="https://www.fca.org.uk/firms/senior-managers-certification-regime/senior-management-functions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">SMF16 (Compliance Oversight) and SMF17 (MLRO)</a> at the same firm. This is common at smaller firms. However, the FCA expects the individual to have sufficient time and expertise for both roles. For firms with significant AML complexity, separating the roles may be appropriate.'
   }
 ]
 
@@ -49,7 +49,7 @@ const mlroResponsibilities = [
     tasks: [
       'Receiving internal suspicious activity reports',
       'Assessing and investigating potential SARs',
-      'Submitting SARs to the National Crime Agency',
+      'Submitting SARs to the NCA',
       'Managing SAR triage and decision-making',
       'Maintaining SAR records and audit trail'
     ]
@@ -96,7 +96,7 @@ const mlroResponsibilities = [
   {
     area: 'Regulatory Compliance',
     tasks: [
-      'Monitoring regulatory change (JMLSG, FCA)',
+      'Monitoring regulatory change (JMLSG guidance, FCA policy)',
       'Travel Rule implementation',
       'Crypto-specific AML requirements',
       'FCA annual financial crime returns'
@@ -120,7 +120,7 @@ export default function FractionalMLROUKPage() {
       <section className="relative bg-gradient-to-br from-amber-900 via-amber-800 to-slate-900 py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1920&q=80"
+            src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1920"
             alt="Fractional MLRO - Money Laundering Reporting Officer reviewing AML compliance"
             className="w-full h-full object-cover opacity-20"
           />
@@ -133,13 +133,13 @@ export default function FractionalMLROUKPage() {
           <span className="inline-block bg-amber-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             AML Services
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
             Fractional MLRO<br />
             <span className="text-amber-400">Services UK</span>
           </h1>
           <p className="text-xl md:text-2xl text-amber-100/80 leading-relaxed max-w-3xl mb-8">
             <strong className="text-white">Outsourced Money Laundering Reporting Officer</strong> services for UK regulated firms.
-            SMF17-approved MLROs for FinTech, crypto, payments, and consumer credit.
+            <a href="https://www.fca.org.uk/firms/senior-managers-certification-regime/senior-management-functions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">SMF17-approved</a> MLROs for FinTech, crypto, payments, and consumer credit.
           </p>
           <div className="flex flex-wrap gap-8 mb-10">
             <div>
@@ -186,21 +186,20 @@ export default function FractionalMLROUKPage() {
               <a href="https://www.legislation.gov.uk/uksi/2017/692/contents" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline"> Money Laundering Regulations 2017</a> and,
               for FCA-authorised firms, requires <a href="https://www.fca.org.uk/firms/senior-managers-certification-regime" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">SMF17 approval</a>.
               The MLRO acts as the firm's nominated officer—the person responsible for receiving internal suspicious
-              activity reports and determining whether to submit SARs to the National Crime Agency.
+              activity reports and determining whether to submit SARs to the <a href="https://www.nationalcrimeagency.gov.uk/what-we-do/crime-threats/money-laundering-and-illicit-finance" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">National Crime Agency</a>.
             </p>
 
             <div className="bg-amber-50 border-l-4 border-amber-500 p-6 my-8 not-prose">
               <p className="text-lg font-semibold text-slate-900 mb-2">Personal Accountability</p>
               <p className="text-slate-700">
                 The MLRO has personal regulatory accountability for AML compliance. Unlike advisory roles, an MLRO
-                can face FCA enforcement action, fines, and prohibition for failures. This is why experienced MLROs
-                command premium rates—they accept significant personal regulatory risk.
+                can face FCA enforcement action, fines, and prohibition for failures. This is why experienced MLROs—many of whom hold professional qualifications from bodies like <a href="https://www.cisi.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CISI</a> or <a href="https://www.int-comp.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICA</a>—command premium rates as they accept significant personal regulatory risk.
               </p>
             </div>
 
             <h3 className="text-xl font-bold text-slate-900 mt-10 mb-4">Why Outsource the MLRO Function?</h3>
             <p>
-              Many regulated firms, particularly FinTech startups and smaller financial services companies, find that:
+              Many regulated firms, particularly FinTech startups and smaller financial services companies, find that <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a> like fractional MLRO services offer significant advantages:
             </p>
             <ul className="space-y-2">
               <li><strong>Full-time MLRO cost is prohibitive</strong> — &pound;80,000-&pound;150,000 annual salary plus benefits</li>
@@ -223,7 +222,7 @@ export default function FractionalMLROUKPage() {
           <div className="prose prose-lg prose-slate max-w-none">
             <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">SMF17: MLRO Function</h3>
             <p>
-              For FCA-authorised firms, the MLRO must hold <strong>SMF17 approval</strong> under the Senior Managers Regime.
+              For <a href="https://www.fca.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA</a>-authorised firms, the MLRO must hold <strong>SMF17 approval</strong> under the Senior Managers Regime.
               Key requirements include:
             </p>
             <ul className="space-y-2">
@@ -236,7 +235,7 @@ export default function FractionalMLROUKPage() {
 
             <h3 className="text-xl font-bold text-slate-900 mt-10 mb-4">Can the MLRO Be Outsourced?</h3>
             <p>
-              Yes, the FCA permits outsourcing of the MLRO function. However:
+              Yes, the <a href="https://www.fca.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA</a> permits outsourcing of the MLRO function. However:
             </p>
             <ul className="space-y-2">
               <li>The outsourced individual must meet the same FCA approval requirements</li>
@@ -247,7 +246,7 @@ export default function FractionalMLROUKPage() {
 
             <h3 className="text-xl font-bold text-slate-900 mt-10 mb-4">MLRO vs Deputy MLRO</h3>
             <p>
-              Firms must have arrangements for MLRO cover during absence. This can be addressed through:
+              Firms must have arrangements for MLRO cover during absence, a requirement emphasized by the <a href="https://www.bankofengland.co.uk/prudential-regulation" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Prudential Regulation Authority</a> for dual-regulated firms. This can be addressed through:
             </p>
             <ul className="space-y-2">
               <li><strong>Deputy MLRO</strong> — Formal appointment of a deputy (may need SMF17 approval depending on role)</li>
@@ -332,14 +331,14 @@ export default function FractionalMLROUKPage() {
             <p>
               The <a href="https://www.fca.org.uk/firms/cryptoassets" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">FCA crypto registration regime</a> has
               created significant demand for MLROs with crypto-specific AML expertise. Crypto firms face unique challenges
-              including Travel Rule implementation, on-chain monitoring, and rapidly evolving typologies.
+              including Travel Rule implementation, on-chain monitoring, and rapidly evolving typologies. Professional development through <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> training helps MLROs stay current with emerging risks in digital assets.
             </p>
 
             <h3 className="text-xl font-bold text-slate-900 mt-10 mb-4">FinTech and Payments</h3>
             <p>
               EMIs (Electronic Money Institutions) and Payment Institutions are high-volume, lower-value businesses
-              that require sophisticated transaction monitoring and customer due diligence. Fractional MLROs with
-              payments experience understand the balance between friction and financial crime risk.
+              that require sophisticated transaction monitoring and customer due diligence. <a href="https://www.ukfinance.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK Finance</a> members and payment firms increasingly rely on fractional MLROs with
+              payments experience who understand the balance between friction and financial crime risk.
             </p>
           </div>
         </div>
@@ -438,7 +437,7 @@ export default function FractionalMLROUKPage() {
           <div className="prose prose-lg prose-slate max-w-none">
             <p>
               Most FinTech and payment firms engage fractional MLROs for 1 day per week at a cost of &pound;3,500-&pound;5,000
-              per month. This provides sufficient time for SAR management, monitoring oversight, and governance reporting.
+              per month. This provides sufficient time for SAR management, monitoring oversight, and governance reporting. For growing businesses, the <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> research shows that flexible compliance solutions enable faster growth while maintaining regulatory standards.
             </p>
           </div>
         </div>
@@ -465,7 +464,7 @@ export default function FractionalMLROUKPage() {
             Need a Fractional<br /><span className="text-amber-400">MLRO?</span>
           </h2>
           <p className="text-xl text-amber-200/80 mb-10 max-w-2xl mx-auto">
-            Connect with experienced outsourced MLROs for your UK regulated business.
+            Connect with experienced outsourced MLROs for your UK regulated business. <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD</a> members and business leaders trust fractional compliance solutions for effective governance.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact/companies" className="px-10 py-5 bg-amber-500 text-white font-bold uppercase tracking-wider hover:bg-amber-400 transition-colors">

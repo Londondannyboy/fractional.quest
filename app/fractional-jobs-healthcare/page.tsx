@@ -76,7 +76,8 @@ export default async function HealthcarePage() {
       {/* Hero Section with 3D Knowledge Graph Background */}
       <section className="relative min-h-[85vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <JobsGraph3D categoryFilter="Healthcare" limit={30} height="100%" isHero={true} showOverlay={true} />
+          <img src="https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Healthcare background" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
         {/* Bottom-aligned content with glass panel */}
@@ -94,13 +95,13 @@ export default async function HealthcarePage() {
                     {stats.totalHealthcare}+ Healthcare Opportunities
                   </span>
 
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
                     Fractional Jobs<br />
                     <span className="text-teal-300">Healthcare</span>
                   </h1>
 
                   <p className="text-lg text-white/70 mb-8 leading-relaxed max-w-lg">
-                    CFO, CMO, CTO roles in HealthTech, MedTech, and Life Sciences. £700-£1,300 daily rates. The UK's fastest-growing sector.
+                    CFO, CMO, CTO roles in HealthTech, MedTech, and Life Sciences. £700-£1,300 daily rates. The <a href="https://www.gov.uk/government/publications/life-sciences-vision" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK's fastest-growing sector</a>.
                   </p>
 
                   <div className="flex flex-wrap gap-4">
@@ -154,7 +155,7 @@ export default async function HealthcarePage() {
           <div className="text-center mb-12">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">Opportunities</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Healthcare Fractional Jobs</h2>
-            <p className="text-xl text-gray-500">Browse {stats.totalHealthcare}+ opportunities in life sciences</p>
+            <p className="text-xl text-gray-500">Browse {stats.totalHealthcare}+ opportunities in life sciences. <a href="https://www.nhsemployers.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">NHS Employers</a> supports workforce innovation across the healthcare sector.</p>
           </div>
           <EmbeddedJobBoard />
         </div>
@@ -166,7 +167,7 @@ export default async function HealthcarePage() {
           <div className="text-center mb-16">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">By Sector</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Healthcare Subsectors</h2>
-            <p className="text-xl text-gray-500">High-growth areas hiring fractional executives</p>
+            <p className="text-xl text-gray-500">High-growth areas hiring fractional executives. The <a href="https://www.scaleupinstitute.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> identifies healthcare as a key sector for senior fractional talent.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {healthcareSubsectors.map((sector) => (
@@ -187,7 +188,7 @@ export default async function HealthcarePage() {
           <div className="text-center mb-16">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">By Role</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Top Healthcare Roles</h2>
-            <p className="text-xl text-gray-500">Most in-demand fractional positions</p>
+            <p className="text-xl text-gray-500">Most in-demand fractional positions. Healthcare employers are adapting to <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a> to attract senior talent.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {healthcareRoles.map((role) => (
@@ -208,7 +209,7 @@ export default async function HealthcarePage() {
           <div className="text-center mb-16">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">By Location</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">UK Healthcare Hubs</h2>
-            <p className="text-xl text-gray-500">Where the opportunities are</p>
+            <p className="text-xl text-gray-500">Where the opportunities are. <a href="https://www.ons.gov.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS data</a> shows regional concentration of life sciences companies in key innovation clusters.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {healthcareHubs.map((hub) => (
@@ -240,7 +241,7 @@ export default async function HealthcarePage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Massive Growth</h3>
               <p className="text-gray-600">
-                UK life sciences has seen record investment of £8bn+ annually. HealthTech alone has grown 35% YoY, creating exceptional demand for experienced leadership.
+                UK life sciences has seen record investment of £8bn+ annually according to the <a href="https://www.britishbusinessbank.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a>. HealthTech alone has grown 35% YoY, creating exceptional demand for experienced leadership.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8">
@@ -249,7 +250,7 @@ export default async function HealthcarePage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Premium Rates</h3>
               <p className="text-gray-600">
-                Healthcare fractional roles command premium rates of £700-£1,400/day due to specialist knowledge requirements in regulatory, clinical, and technical domains.
+                Healthcare fractional roles command premium rates of £700-£1,400/day due to specialist knowledge requirements in <a href="https://www.cqc.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">regulatory</a>, clinical, and technical domains.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8">
@@ -258,19 +259,19 @@ export default async function HealthcarePage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Perfect Fit</h3>
               <p className="text-gray-600">
-                Healthcare companies often need senior expertise for specific phases - fundraising, regulatory approval, commercial launch - making fractional arrangements ideal.
+                Healthcare companies often need senior expertise for specific phases - fundraising, <a href="https://www.gov.uk/guidance/medical-devices-conformity-assessment-and-the-ukca-mark" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">regulatory approval</a>, commercial launch - making fractional arrangements ideal.
               </p>
             </div>
           </div>
           <div className="mt-12 max-w-4xl mx-auto">
             <p className="text-gray-700 leading-relaxed mb-4">
-              Healthcare is experiencing transformational change. <a href="https://www.nuffieldtrust.org.uk/research" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline">Nuffield Trust research</a> highlights growing private healthcare markets, digital health adoption, and NHS transformation—all creating demand for fractional executives who understand healthcare operations, clinical governance, and regulatory compliance.
+              Healthcare is experiencing transformational change. The <a href="https://www.nhs.uk/nhs-services/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">NHS</a> is increasingly partnering with private providers, while digital health adoption accelerates across the sector. This creates demand for fractional executives who understand healthcare operations, <a href="https://www.cqc.org.uk/guidance-providers/regulations-enforcement" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">clinical governance</a>, and regulatory compliance.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Digital health particularly drives fractional opportunities. <a href="https://www.health.org.uk/publications" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline">The Health Foundation</a> tracks rapid growth in healthtech startups requiring fractional expertise in NHS commercialization, clinical validation, and MHRA/CE marking processes. Telehealth, remote monitoring, and AI diagnostics companies seek fractional CTOs and CMOs who bridge technical and clinical worlds.
+              Digital health particularly drives fractional opportunities. Rapid growth in healthtech startups creates demand for fractional expertise in <a href="https://www.england.nhs.uk/digitaltechnology/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">NHS commercialization</a>, clinical validation, and MHRA/CE marking processes. Telehealth, remote monitoring, and AI diagnostics companies seek fractional CTOs and CMOs who bridge technical and clinical worlds.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Healthcare fractional roles require specialized knowledge but offer strong rates (£800-£1,200) and meaningful impact. <a href="https://www.cqc.org.uk" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline">CQC regulatory frameworks</a> demand senior governance expertise—creating consistent demand for fractional COO and compliance leadership in care providers and healthtech companies.
+              Healthcare fractional roles require specialized knowledge but offer strong rates (£800-£1,200) and meaningful impact. <a href="https://www.cqc.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CQC regulatory frameworks</a> demand senior governance expertise—creating consistent demand for fractional COO and compliance leadership in care providers and healthtech companies. The <a href="https://www.cipd.org/uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> notes that healthcare organizations increasingly use fractional talent to access specialized skills without full-time commitments.
             </p>
           </div>
         </div>
@@ -282,7 +283,7 @@ export default async function HealthcarePage() {
           <div className="text-center mb-12">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">Tax Planning</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">IR35 Calculator</h2>
-            <p className="text-xl text-gray-500">Understand your take-home as a healthcare fractional executive</p>
+            <p className="text-xl text-gray-500">Understand your take-home as a healthcare fractional executive. Learn more about <a href="https://www.gov.uk/guidance/understanding-off-payroll-working-ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35 regulations</a> and how they affect your contracting status.</p>
           </div>
           <IR35Calculator defaultDayRate={1050} />
         </div>
@@ -294,7 +295,7 @@ export default async function HealthcarePage() {
           <div className="text-center mb-12">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">FAQ</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Healthcare Fractional FAQs</h2>
-            <p className="text-xl text-gray-500">Common questions about fractional work in healthcare</p>
+            <p className="text-xl text-gray-500">Common questions about fractional work in healthcare. For executive career guidance, visit the <a href="https://www.iod.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a>.</p>
           </div>
           <FAQ items={HEALTHCARE_FAQS} title="" />
         </div>

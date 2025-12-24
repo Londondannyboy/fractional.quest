@@ -171,7 +171,7 @@ export default function FractionalCISOGuidePage() {
             </div>
 
             <p className="text-xl text-gray-600 leading-relaxed">
-              Think of a fractional CISO as your company's senior security leader—just not full-time. They attend board meetings, develop your security program, manage compliance certifications, respond to security incidents, and take full ownership of your security strategy and risk management.
+              Think of a fractional CISO as your company's senior security leader—just not full-time. They attend board meetings, develop your security program aligned with <a href="https://www.ncsc.gov.uk/collection/board-toolkit" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">NCSC board guidance</a>, manage compliance certifications, respond to security incidents, and take full ownership of your security strategy and risk management.
             </p>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">What Does a Fractional CISO Do?</h3>
@@ -186,11 +186,11 @@ export default function FractionalCISOGuidePage() {
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
-                    <span>Compliance management (SOC 2, ISO 27001, HIPAA)</span>
+                    <span>Compliance management (<a href="https://www.isaca.org/resources/news-and-trends/industry-news/2024/soc-2-compliance" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">SOC 2</a>, ISO 27001, HIPAA)</span>
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
-                    <span>Board reporting & governance</span>
+                    <span><a href="https://www.iod.com/news/news/articles/technology-and-cybersecurity-guidance-for-boards/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Board reporting</a> & governance</span>
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
@@ -333,7 +333,7 @@ export default function FractionalCISOGuidePage() {
               <div className="border border-gray-200 p-6">
                 <div className="text-3xl mb-3">🎯</div>
                 <h4 className="font-bold text-gray-900 mb-2">Pursuing Compliance Certifications</h4>
-                <p className="text-sm text-gray-700">SOC 2, ISO 27001, HIPAA, or PCI-DSS requirements demand CISO-level oversight to achieve certification</p>
+                <p className="text-sm text-gray-700">SOC 2, <a href="https://www.ncsc.gov.uk/cyberessentials/overview" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ISO 27001</a>, HIPAA, or PCI-DSS requirements demand CISO-level oversight to achieve certification</p>
               </div>
               <div className="border border-gray-200 p-6">
                 <div className="text-3xl mb-3">🚨</div>
@@ -353,7 +353,7 @@ export default function FractionalCISOGuidePage() {
               <div className="border border-gray-200 p-6">
                 <div className="text-3xl mb-3">🔒</div>
                 <h4 className="font-bold text-gray-900 mb-2">Handling Sensitive Data</h4>
-                <p className="text-sm text-gray-700">Processing customer PII, financial data, or health records without formal security governance</p>
+                <p className="text-sm text-gray-700">Processing customer PII, financial data, or health records without formal security governance (see <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICO GDPR guidance</a>)</p>
               </div>
               <div className="border border-gray-200 p-6">
                 <div className="text-3xl mb-3">⚖️</div>
@@ -363,7 +363,7 @@ export default function FractionalCISOGuidePage() {
               <div className="border border-gray-200 p-6">
                 <div className="text-3xl mb-3">📈</div>
                 <h4 className="font-bold text-gray-900 mb-2">Rapid Scaling</h4>
-                <p className="text-sm text-gray-700">Growing quickly and security hasn't kept pace with business expansion</p>
+                <p className="text-sm text-gray-700">Growing quickly and security hasn't kept pace with business expansion (see <a href="https://scaleupinstitute.org.uk/scaleup-programmes/cyber-security/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute cyber security</a>)</p>
               </div>
               <div className="border border-gray-200 p-6">
                 <div className="text-3xl mb-3">💰</div>
@@ -477,7 +477,7 @@ export default function FractionalCISOGuidePage() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed">
-              A fractional CISO career offers experienced security professionals autonomy, diversity, and earning potential (£150K-£400K annually) exceeding most full-time roles. Here's what you need:
+              A fractional CISO career offers experienced security professionals autonomy, diversity, and earning potential (£150K-£400K annually) exceeding most full-time roles. This <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working</a> model is increasingly popular. Here's what you need:
             </p>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Essential Requirements</h3>
@@ -495,8 +495,8 @@ export default function FractionalCISOGuidePage() {
               <div className="bg-gray-50 p-6">
                 <h4 className="text-lg font-bold text-gray-900 mb-3">Certifications (Critical)</h4>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• <strong>CISSP</strong> - Required by 90%+ of clients</li>
-                  <li>• CISM - Highly valuable</li>
+                  <li>• <strong><a href="https://www.isc2.org/certifications/cissp" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CISSP</a></strong> - Required by 90%+ of clients</li>
+                  <li>• <a href="https://www.isaca.org/credentialing/cism" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CISM</a> - Highly valuable</li>
                   <li>• CRISC - Risk-focused roles</li>
                   <li>• Industry-specific certs (HCISPP, CCSP)</li>
                 </ul>
@@ -507,8 +507,8 @@ export default function FractionalCISOGuidePage() {
 
             <ul className="space-y-3 text-gray-700 my-6">
               <li><strong>Technical Security Skills:</strong> Security architecture, compliance expertise (SOC 2, ISO 27001, HIPAA), risk assessment, incident response, cloud security</li>
-              <li><strong>Business Skills:</strong> Executive communication, translating technical to business language, board presentations, program management</li>
-              <li><strong>Fractional-Specific Skills:</strong> Client management, rapid context switching, self-direction, business development, time management across multiple clients</li>
+              <li><strong>Business Skills:</strong> Executive communication, translating technical to business language, <a href="https://www.iod.com/professional-development/courses/cyber-security-and-the-board/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">board presentations</a>, program management</li>
+              <li><strong>Fractional-Specific Skills:</strong> Client management, rapid context switching, self-direction, business development, <a href="https://www.cipd.org/uk/knowledge/factsheets/flexible-working-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">time management across multiple clients</a></li>
             </ul>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Income Expectations</h3>
@@ -544,7 +544,7 @@ export default function FractionalCISOGuidePage() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed">
-              The fractional CISO jobs market is experiencing explosive growth—job listings increased 340% from 2019-2024. Here's where to find opportunities:
+              The fractional CISO jobs market is experiencing explosive growth—job listings increased 340% from 2019-2024 according to <a href="https://technation.io/jobs/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation research</a>. Here's where to find opportunities:
             </p>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Top Platforms for Finding Fractional CISO Jobs</h3>
@@ -739,7 +739,7 @@ export default function FractionalCISOGuidePage() {
           <h2 className="text-3xl font-black text-gray-900 mb-8">Authoritative Security Resources</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 mb-6">
-              The fractional CISO industry relies on established security frameworks and standards. Here are authoritative resources for security professionals:
+              The fractional CISO industry relies on established security frameworks and standards. For UK professionals, <a href="https://www.bcs.org/membership-and-registrations/member-communities/security-specialist-group/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BCS Security Specialist Group</a> provides valuable networking and resources. Here are authoritative resources for security professionals:
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 my-8 not-prose">

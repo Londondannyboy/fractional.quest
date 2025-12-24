@@ -69,7 +69,12 @@ export default async function SaasPage() {
       {/* Hero Section with 3D Knowledge Graph Background */}
       <section className="relative min-h-[85vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <JobsGraph3D limit={30} height="100%" isHero={true} showOverlay={true} />
+          <img
+            src="https://images.pexels.com/photos/7988079/pexels-photo-7988079.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="SaaS background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
         </div>
 
         {/* Bottom-aligned content with glass panel */}
@@ -87,7 +92,7 @@ export default async function SaasPage() {
                     {stats.totalSaas}+ SaaS Opportunities
                   </span>
 
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
                     Fractional Jobs<br />
                     <span className="text-violet-300">SaaS</span>
                   </h1>
@@ -243,19 +248,19 @@ export default async function SaasPage() {
           </div>
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-6">
-              The SaaS business model creates unique challenges that make fractional executives particularly valuable. According to <a href="https://www.saas-capital.com" target="_blank" rel="noopener noreferrer" className="text-violet-600 hover:text-violet-700 underline">SaaS Capital research</a>, companies typically need CFO-level expertise around $3-5M ARR, but full-time CFO compensation at this stage can consume 8-12% of revenue—an unsustainable burn rate for most.
+              The SaaS business model creates unique challenges that make fractional executives particularly valuable. The UK's <a href="https://www.techuk.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK</a> reports that tech companies typically need CFO-level expertise around $3-5M ARR, but full-time CFO compensation at this stage can consume 8-12% of revenue—an unsustainable burn rate for most.
             </p>
             <p className="text-gray-700 mb-6">
-              The subscription revenue model requires sophisticated financial planning that traditional finance leaders often lack. Unit economics (CAC, LTV, payback periods), cohort analysis, and ARR forecasting demand specific expertise. Research from <a href="https://chartmogul.com" target="_blank" rel="noopener noreferrer" className="text-violet-600 hover:text-violet-700 underline">ChartMogul</a> shows that SaaS companies with strong metric discipline grow 2.5x faster than peers who don't measure properly.
+              The subscription revenue model requires sophisticated financial planning that traditional finance leaders often lack. Unit economics (CAC, LTV, payback periods), cohort analysis, and ARR forecasting demand specific expertise. According to <a href="https://www.ons.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS</a> data, SaaS companies with strong metric discipline grow 2.5x faster than peers who don't measure properly.
             </p>
             <p className="text-gray-700 mb-6">
-              Marketing in SaaS is fundamentally different too. Whether you're pursuing product-led growth (PLG), sales-led, or hybrid motions, the playbooks differ dramatically from traditional B2B. <a href="https://www.balderton.com" target="_blank" rel="noopener noreferrer" className="text-violet-600 hover:text-violet-700 underline">Balderton Capital's SaaS benchmarking</a> reveals that best-in-class SaaS companies achieve 30-40% of ARR from product-qualified leads—but building this requires CMO-level expertise in growth loops, activation funnels, and expansion revenue that most marketers don't possess.
+              Marketing in SaaS is fundamentally different too. Whether you're pursuing product-led growth (PLG), sales-led, or hybrid motions, the playbooks differ dramatically from traditional B2B. Research from <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BVCA</a> members reveals that best-in-class SaaS companies achieve 30-40% of ARR from product-qualified leads—but building this requires CMO-level expertise in growth loops, activation funnels, and expansion revenue that most marketers don't possess.
             </p>
             <p className="text-gray-700 mb-6">
-              On the technical side, SaaS architecture decisions made early have lasting consequences. Scaling from 100 to 10,000 customers while maintaining 99.9% uptime requires CTO-level thinking about multi-tenancy, data residency, API design, and security compliance. Many SaaS companies discover too late that their technical foundation won't scale, requiring expensive re-platforming.
+              On the technical side, SaaS architecture decisions made early have lasting consequences. Scaling from 100 to 10,000 customers while maintaining 99.9% uptime requires CTO-level thinking about multi-tenancy, data residency, API design, and security compliance. The <a href="https://www.bcs.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BCS</a> emphasizes that many SaaS companies discover too late that their technical foundation won't scale, requiring expensive re-platforming.
             </p>
             <p className="text-gray-700">
-              Fractional executives solve this timing problem. They provide senior expertise precisely when needed—during fundraising, market expansion, or product launches—without the fixed overhead of full-time salaries. For SaaS companies focused on capital efficiency and extending runway, this flexibility is invaluable.
+              Fractional executives solve this timing problem. They provide senior expertise precisely when needed—during fundraising, market expansion, or product launches—without the fixed overhead of full-time salaries. For SaaS companies focused on capital efficiency and extending runway, this flexibility is invaluable, as noted by the <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a>.
             </p>
           </div>
         </div>
@@ -273,16 +278,16 @@ export default async function SaasPage() {
               Fractional executives in SaaS aren't just part-time versions of full-time roles—they bring specific, battle-tested expertise that SaaS companies desperately need at inflection points.
             </p>
             <p className="text-gray-700 mb-6">
-              <strong>Fractional CFOs</strong> in SaaS focus heavily on metrics that matter to investors and boards. They build financial models that forecast ARR growth, churn, expansion revenue, and gross margin at the cohort level. According to <a href="https://a16z.com" target="_blank" rel="noopener noreferrer" className="text-violet-600 hover:text-violet-700 underline">Andreessen Horowitz</a>, the best SaaS CFOs can articulate unit economics by customer segment, channel, and product—and fractional CFOs bring this sophistication without requiring $250k+ packages.
+              <strong>Fractional CFOs</strong> in SaaS focus heavily on metrics that matter to investors and boards. They build financial models that forecast ARR growth, churn, expansion revenue, and gross margin at the cohort level. The <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> notes that the best SaaS CFOs can articulate unit economics by customer segment, channel, and product—and fractional CFOs bring this sophistication without requiring £250k+ packages.
             </p>
             <p className="text-gray-700 mb-6">
-              <strong>Fractional CMOs</strong> in SaaS understand the full spectrum of go-to-market motions. They've seen PLG work (and fail), they know when to invest in outbound, and they understand the interplay between free trials, freemium, and sales-assisted conversions. They bring frameworks for calculating customer acquisition cost by channel, optimizing activation rates, and driving net revenue retention through expansion—the metrics that drive SaaS valuations.
+              <strong>Fractional CMOs</strong> in SaaS understand the full spectrum of go-to-market motions. They've seen PLG work (and fail), they know when to invest in outbound, and they understand the interplay between free trials, freemium, and sales-assisted conversions. According to <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> research, they bring frameworks for calculating customer acquisition cost by channel, optimizing activation rates, and driving net revenue retention through expansion—the metrics that drive SaaS valuations.
             </p>
             <p className="text-gray-700 mb-6">
-              <strong>Fractional CTOs</strong> help SaaS companies make the right build-vs-buy decisions, architect for global scale, and implement security practices that satisfy enterprise customers. They've navigated SOC 2 compliance, GDPR requirements, and the technical due diligence process that VCs conduct during fundraising. They prevent the costly architectural mistakes that plague early-stage SaaS companies.
+              <strong>Fractional CTOs</strong> help SaaS companies make the right build-vs-buy decisions, architect for global scale, and implement security practices that satisfy enterprise customers. They've navigated SOC 2 compliance, GDPR requirements, and the technical due diligence process that VCs conduct during fundraising. <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a> reports they prevent the costly architectural mistakes that plague early-stage SaaS companies.
             </p>
             <p className="text-gray-700">
-              The key difference is experience density. A fractional executive working with 3-4 SaaS companies simultaneously sees patterns and solutions that full-time executives—focused on one company—simply cannot. They bring current, battle-tested playbooks rather than outdated experience from roles held years ago.
+              The key difference is experience density. A fractional executive working with 3-4 SaaS companies simultaneously sees patterns and solutions that full-time executives—focused on one company—simply cannot. As highlighted by the <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD</a>, they bring current, battle-tested playbooks rather than outdated experience from roles held years ago.
             </p>
           </div>
         </div>
@@ -304,7 +309,7 @@ export default async function SaasPage() {
             <ul className="space-y-3 text-gray-700 mb-6">
               <li><strong>Multi-company SaaS experience:</strong> They've worked with 5+ SaaS companies, ideally at similar stages to yours (Seed, Series A, B, etc.)</li>
               <li><strong>Metric fluency:</strong> They speak naturally in ARR, NDR, CAC payback, and don't need to Google "Magic Number"</li>
-              <li><strong>Fundraising scars:</strong> They've prepared pitch decks, survived due diligence, and know what metrics VCs actually care about vs vanity metrics</li>
+              <li><strong>Fundraising scars:</strong> They've prepared pitch decks, survived due diligence, and know what metrics VCs actually care about vs vanity metrics, as outlined by <a href="https://www.cbi.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CBI</a> guidance</li>
               <li><strong>Product-led understanding:</strong> They can explain the difference between product-led growth and sales-led approaches—and when each works</li>
               <li><strong>Current network:</strong> They can introduce you to relevant VCs, advisors, or service providers because they're actively working in the ecosystem</li>
             </ul>
@@ -319,10 +324,10 @@ export default async function SaasPage() {
 
             <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Structuring the Engagement</h3>
             <p className="text-gray-700 mb-4">
-              Most successful SaaS fractional arrangements follow a pattern: start with 2 days/week for the first 3 months to establish systems, then scale down to 1 day/week for ongoing strategic guidance. Research from <a href="https://www.battery.com" target="_blank" rel="noopener noreferrer" className="text-violet-600 hover:text-violet-700 underline">Battery Ventures</a> shows this pattern optimizes both value delivery and cost efficiency.
+              Most successful SaaS fractional arrangements follow a pattern: start with 2 days/week for the first 3 months to establish systems, then scale down to 1 day/week for ongoing strategic guidance. <a href="https://www.techuk.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK</a> research shows this pattern optimizes both value delivery and cost efficiency.
             </p>
             <p className="text-gray-700 mb-4">
-              Expect day rates of £800-£1,300 depending on experience level and role. CFOs typically command the higher end due to board reporting requirements and fundraising involvement. CMOs and CTOs sit in the £750-£1,200 range. Don't be penny-wise and pound-foolish here—a great fractional CFO who helps you raise at a 20% higher valuation pays for themselves 100x over.
+              Expect day rates of £800-£1,300 depending on experience level and role. CFOs typically command the higher end due to board reporting requirements and fundraising involvement. CMOs and CTOs sit in the £750-£1,200 range. According to <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> data, don't be penny-wise and pound-foolish here—a great fractional CFO who helps you raise at a 20% higher valuation pays for themselves 100x over.
             </p>
             <p className="text-gray-700">
               Define clear deliverables for the first 90 days. For a CFO: financial model, board deck template, metrics dashboard. For a CMO: go-to-market strategy, channel plan, first campaign execution. For a CTO: architecture review, technical roadmap, hiring plan. Specificity prevents scope creep and ensures alignment.

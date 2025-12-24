@@ -11,9 +11,17 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-gray-100 to-gray-50 py-12 md:py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+      <section className="relative bg-gradient-to-r from-gray-100 to-gray-50 py-12 md:py-16">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Contact hero"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl md:text-5xl font-black text-white mb-4">
             Get in Touch
           </h1>
           <p className="text-xl text-gray-600 mb-8">

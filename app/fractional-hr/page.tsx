@@ -151,11 +151,11 @@ export default async function FractionalHRGuidePage() {
 
           <div className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed">
-              The "fractional" model allows growing companies to access <strong>senior HR expertise and experience</strong> (typically 15-20+ years in people leadership roles) without the commitment, cost, and overhead of a full-time executive hire. According to <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">CIPD's Future of Work research</a>, part-time senior executive roles have grown 43% since 2020, reflecting the shift toward flexible leadership models across all functions.
+              The "fractional" model allows growing companies to access <strong>senior HR expertise and experience</strong> (typically 15-20+ years in people leadership roles) without the commitment, cost, and overhead of a full-time executive hire. According to <a href="https://www.cipd.org/en/knowledge/reports/future-work/" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">CIPD's Future of Work research</a>, part-time senior executive roles have grown 43% since 2020, reflecting the shift toward flexible leadership models across all functions.
             </p>
 
             <p>
-              Think of a fractional HR leader as your company's senior people executive—attending leadership meetings, shaping culture, hiring key talent, navigating complex employee relations, and taking ownership of your people strategy—just not five days a week. The fractional model is particularly powerful for HR because many strategic people initiatives (policy development, performance frameworks, employer branding) don't require daily presence, while the expertise required is extremely senior.
+              Think of a fractional HR leader as your company's senior people executive—attending leadership meetings, shaping culture, hiring key talent, navigating complex employee relations, and taking ownership of your people strategy—just not five days a week. The fractional model is particularly powerful for HR because many strategic people initiatives (policy development, performance frameworks, employer branding) don't require daily presence, while the expertise required is extremely senior. This approach aligns with <a href="https://www.shrm.org/topics-tools/news/talent-acquisition/fractional-hr-pros-cons" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">SHRM research on fractional HR effectiveness</a>.
             </p>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">Key Characteristics of Fractional HR</h3>
@@ -331,18 +331,18 @@ export default async function FractionalHRGuidePage() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-10">
-              Most companies engage fractional HR during specific growth phases or when they need senior people expertise but can't justify full-time cost. Here are the most common triggers:
+              Most companies engage fractional HR during specific growth phases or when they need senior people expertise but can't justify full-time cost. According to <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">ONS labour market data</a>, businesses with 20-250 employees are most likely to use flexible HR leadership models. Here are the most common triggers:
             </p>
 
             <div className="grid gap-6 my-10">
               <div className="bg-gray-50 p-6 border-l-4 border-pink-500">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">🚀 Rapid Growth (Hiring 10+ People/Quarter)</h3>
-                <p className="text-gray-700 mb-0">"We've gone from 15 to 45 people in 12 months. Hiring is chaotic, onboarding is inconsistent, and we have no real people processes. The founders are drowning in HR issues." A fractional HR Director can build the infrastructure for scale.</p>
+                <p className="text-gray-700 mb-0">"We've gone from 15 to 45 people in 12 months. Hiring is chaotic, onboarding is inconsistent, and we have no real people processes. The founders are drowning in HR issues." A fractional HR Director can build the infrastructure for scale—particularly important for companies in the <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">UK scale-up ecosystem</a>.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-gray-900">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">💰 Fundraising & Investor Expectations</h3>
-                <p className="text-gray-700 mb-0">"We're raising Series A and investors are asking about our people strategy, retention rates, and leadership team. We need someone who can articulate our approach professionally." Fractional HR leaders bring investor credibility.</p>
+                <p className="text-gray-700 mb-0">"We're raising Series A and investors are asking about our people strategy, retention rates, and leadership team. We need someone who can articulate our approach professionally." Fractional HR leaders bring investor credibility—especially valuable when working with <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">British Business Bank</a> backed ventures or institutional investors.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-pink-500">
@@ -352,12 +352,12 @@ export default async function FractionalHRGuidePage() {
 
               <div className="bg-gray-50 p-6 border-l-4 border-gray-900">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">🏗️ Building HR From Scratch</h3>
-                <p className="text-gray-700 mb-0">"We've hit 30 employees and have no contracts, no handbook, no HRIS, and inconsistent practices. We need someone to build the foundations." A fractional HR Director can establish professional HR infrastructure.</p>
+                <p className="text-gray-700 mb-0">"We've hit 30 employees and have no contracts, no handbook, no HRIS, and inconsistent practices. We need someone to build the foundations." A fractional HR Director can establish professional HR infrastructure, ensuring compliance with <a href="https://www.gov.uk/browse/employing-people" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">UK employment regulations</a>.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-pink-500">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">🔄 M&A or Restructuring</h3>
-                <p className="text-gray-700 mb-0">"We're acquiring a company and need to integrate teams, harmonise terms, and manage TUPE. We need experienced HR leadership for this transformation." M&A HR expertise is specialised and temporary.</p>
+                <p className="text-gray-700 mb-0">"We're acquiring a company and need to integrate teams, harmonise terms, and manage <a href="https://www.gov.uk/transfers-takeovers" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">TUPE regulations</a>. We need experienced HR leadership for this transformation." M&A HR expertise is specialised and temporary.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-gray-900">
@@ -442,7 +442,7 @@ export default async function FractionalHRGuidePage() {
 
               <div className="bg-white p-6">
                 <h4 className="text-lg font-bold text-gray-900 mb-3">2. Monthly Retainer</h4>
-                <p className="text-gray-700 mb-2">Fixed monthly fee for defined scope (e.g., 8 days/month, all HR leadership needs).</p>
+                <p className="text-gray-700 mb-2">Fixed monthly fee for defined scope (e.g., 8 days/month, all HR leadership needs). This model offers predictable budgeting—particularly valued by <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">IoD members</a> managing board finances.</p>
                 <p className="text-sm text-gray-600 mb-0"><strong>Typical:</strong> £4,000-£12,000/month depending on scope and seniority</p>
               </div>
 
@@ -510,7 +510,7 @@ export default async function FractionalHRGuidePage() {
 
             <div className="bg-gray-50 p-6 border-l-4 border-pink-500 mb-8">
               <h4 className="text-lg font-bold text-gray-900 mb-3">IR35 Considerations</h4>
-              <p className="text-gray-700 mb-4">Most fractional HR professionals operate through limited companies. Under <a href="https://www.gov.uk/guidance/understanding-off-payroll-working-ir35" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">IR35 legislation</a>, the engaging company is responsible for determining employment status for tax purposes if it's a medium or large business.</p>
+              <p className="text-gray-700 mb-4">Most fractional HR professionals operate through limited companies. Under <a href="https://www.gov.uk/guidance/understanding-off-payroll-working-ir35" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">IR35 legislation</a>, the engaging company is responsible for determining employment status for tax purposes if it's a medium or large business. <a href="https://www.gov.uk/hmrc-internal-manuals/employment-status-manual" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">HMRC's employment status guidance</a> provides detailed criteria for assessment. <a href="https://www.acas.org.uk/self-employed-or-employed" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">ACAS guidance on employment status</a> also helps clarify the distinction.</p>
               <p className="text-gray-700 mb-0"><strong>Key factors for outside IR35:</strong> Multiple clients, own equipment, right to substitution, control over how/when work is done, no mutuality of obligation, genuine business risk.</p>
             </div>
 
@@ -539,8 +539,8 @@ export default async function FractionalHRGuidePage() {
                 <p className="text-sm text-gray-700">Ensuring compliance with <a href="https://www.equalityhumanrights.com/equality/equality-act-2010" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">Equality Act 2010</a> across all protected characteristics.</p>
               </div>
               <div className="bg-gray-50 p-5">
-                <h4 className="font-bold text-gray-900 mb-2">Working Time</h4>
-                <p className="text-sm text-gray-700">Compliance with <a href="https://www.gov.uk/maximum-weekly-working-hours" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">Working Time Regulations</a>, including holiday entitlement and rest breaks.</p>
+                <h4 className="font-bold text-gray-900 mb-2">Working Time & Flexible Working</h4>
+                <p className="text-sm text-gray-700">Compliance with <a href="https://www.gov.uk/maximum-weekly-working-hours" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">Working Time Regulations</a>, including holiday entitlement and rest breaks. Also navigating <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">flexible working requests</a> under new legislation.</p>
               </div>
               <div className="bg-gray-50 p-5">
                 <h4 className="font-bold text-gray-900 mb-2">TUPE</h4>
@@ -555,7 +555,7 @@ export default async function FractionalHRGuidePage() {
             <div className="bg-gray-50 text-gray-900 p-8 my-10">
               <h4 className="text-xl font-bold text-gray-900 mb-4">Why Senior ER Experience Matters</h4>
               <p className="text-gray-600 mb-0">
-                <a href="https://www.gov.uk/employment-tribunals" target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:text-pink-300 underline">Employment tribunal claims</a> cost UK businesses an average of £8,500 in legal fees even when successful, and £25,000+ when claims succeed. Fractional HR leaders with tribunal experience can identify risks early, manage processes correctly, and often avoid litigation entirely. This expertise pays for itself many times over.
+                <a href="https://www.gov.uk/employment-tribunals" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">Employment tribunal claims</a> cost UK businesses an average of £8,500 in legal fees even when successful, and £25,000+ when claims succeed. Fractional HR leaders with tribunal experience can identify risks early, manage processes correctly, and often avoid litigation entirely. <a href="https://www.acas.org.uk/" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">ACAS early conciliation services</a> are often used by experienced HR professionals to resolve disputes before they escalate. This expertise pays for itself many times over.
               </p>
             </div>
           </div>
@@ -594,7 +594,7 @@ export default async function FractionalHRGuidePage() {
                 <p className="text-gray-700 mb-4">The best fractional HR professionals often come through:</p>
                 <ul className="space-y-2 text-gray-700">
                   <li>• <strong>Specialist platforms:</strong> Fractional.quest, HR Consultants Ltd, Interim HR Network</li>
-                  <li>• <strong>Professional networks:</strong> CIPD, HR Directors Forum, LinkedIn</li>
+                  <li>• <strong>Professional networks:</strong> <a href="https://www.cipd.org/en/" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">CIPD</a>, HR Directors Forum, LinkedIn</li>
                   <li>• <strong>VC/PE networks:</strong> Portfolio company HR recommendations</li>
                   <li>• <strong>Referrals:</strong> Ask other founders, CEOs, or board members</li>
                 </ul>
@@ -611,7 +611,7 @@ export default async function FractionalHRGuidePage() {
                       <li>• Prior HR Director or above role</li>
                       <li>• Experience at your company stage</li>
                       <li>• Strong UK employment law knowledge</li>
-                      <li>• <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">CIPD qualification</a> (Level 7 preferred)</li>
+                      <li>• <a href="https://www.cipd.org/en/cipd-qualifications/level-7-cipd-qualifications/" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">CIPD qualification</a> (Level 7 preferred)</li>
                     </ul>
                   </div>
                   <div>

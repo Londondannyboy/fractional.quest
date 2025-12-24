@@ -70,7 +70,7 @@ export default async function ProfessionalServicesPage() {
       {/* Hero Section with 3D Knowledge Graph Background */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
-          <JobsGraph3D limit={30} height="100%" isHero={true} showOverlay={true} />
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="bg-gray-50/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10 max-w-3xl">
@@ -82,7 +82,7 @@ export default async function ProfessionalServicesPage() {
                 {stats.totalPS}+ Professional Services Jobs
               </span>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
               Fractional Jobs Professional Services
             </h1>
             <p className="max-w-2xl text-xl text-white/80 mb-10 leading-relaxed">
@@ -246,19 +246,19 @@ export default async function ProfessionalServicesPage() {
           </div>
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-6">
-              Professional services firms face a structural challenge: the traditional partnership model struggles to support specialist executive functions. According to <a href="https://www.lawsociety.org.uk" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-700 underline">Law Society research</a>, UK legal firms with dedicated COO or CFO leadership see 40% higher profitability and 60% better partner retention than peer firms relying solely on managing partners to handle operations.
+              Professional services firms face a structural challenge: the traditional partnership model struggles to support specialist executive functions. According to <a href="https://www.lawsociety.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Law Society research</a>, UK legal firms with dedicated COO or CFO leadership see 40% higher profitability and 60% better partner retention than peer firms relying solely on managing partners to handle operations.
             </p>
             <p className="text-gray-700 mb-6">
-              The partner promotion path creates experts in client service—lawyers, accountants, consultants who excel at billable work. But running a modern professional services firm requires expertise these traditional career paths don't develop: financial planning, marketing and business development, technology implementation, HR and talent development. Research from <a href="https://www.sra.org.uk/sra/research-publications/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-700 underline">the Solicitors Regulation Authority</a> shows that mismanagement of firm operations, not lack of legal expertise, is the primary cause of law firm failures.
+              The partner promotion path creates experts in client service—lawyers, accountants, consultants who excel at billable work. But running a modern professional services firm requires expertise these traditional career paths don't develop: financial planning, marketing and business development, technology implementation, HR and talent development. Research from <a href="https://www.sra.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">the Solicitors Regulation Authority</a> shows that mismanagement of firm operations, not lack of legal expertise, is the primary cause of law firm failures.
             </p>
             <p className="text-gray-700 mb-6">
-              Mid-market firms (£5m-£50m revenue) feel this pain acutely. They've grown beyond the stage where partners can manage operations alongside client work, but aren't yet large enough to justify £150k-£200k C-level salaries. A 30-partner law firm with £15m revenue and 12% margins generates £1.8m profit. Hiring a full-time COO at £160k represents 9% of profits—difficult to justify when it directly reduces partner distributions.
+              Mid-market firms (£5m-£50m revenue) feel this pain acutely. They've grown beyond the stage where partners can manage operations alongside client work, but aren't yet large enough to justify £150k-£200k C-level salaries. According to <a href="https://scaleupinstitute.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute research</a>, this challenge is particularly acute for scaling professional services businesses. A 30-partner law firm with £15m revenue and 12% margins generates £1.8m profit. Hiring a full-time COO at £160k represents 9% of profits—difficult to justify when it directly reduces partner distributions.
             </p>
             <p className="text-gray-700 mb-6">
-              Digital transformation amplifies this need. <a href="https://www.deloitte.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-700 underline">Deloitte research on legal services</a> shows that alternative business structures and legal tech adoption are forcing traditional firms to modernize or face obsolescence. But implementing practice management systems, document automation, client portals, and AI-powered research tools requires technical and change management expertise that most professional services leaders lack.
+              Digital transformation amplifies this need. Data from the <a href="https://www.ons.gov.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Office for National Statistics</a> shows technology adoption in professional services lagging other sectors, while alternative business structures and legal tech adoption are forcing traditional firms to modernize or face obsolescence. But implementing practice management systems, document automation, client portals, and AI-powered research tools requires technical and change management expertise that most professional services leaders lack.
             </p>
             <p className="text-gray-700">
-              Fractional executives solve this elegantly. A fractional COO working 2 days/week (£100-120k annually) provides the operational leadership, frees partners to focus on high-value client work, and typically pays for themselves through improved realization rates, better resource utilization, and reduced overhead inefficiency. They bring experience from multiple firms, knowing what works and what expensive mistakes to avoid.
+              Fractional executives solve this elegantly. A fractional COO working 2 days/week (£100-120k annually) provides the operational leadership, frees partners to focus on high-value client work, and typically pays for themselves through improved realization rates, better resource utilization, and reduced overhead inefficiency. This approach aligns with <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">government flexible working guidance</a> and represents an efficient use of specialist expertise. They bring experience from multiple firms, knowing what works and what expensive mistakes to avoid.
             </p>
           </div>
         </div>
@@ -279,7 +279,7 @@ export default async function ProfessionalServicesPage() {
               <strong>They understand billable hours and realization rates.</strong> Professional services firms live and die by utilization (target: 65-75% for senior staff), realization (actual revenue vs standard rates), and collection rates (cash collected vs invoiced). A fractional CFO doesn't just track revenue—they analyze realization by practice area, identify write-off patterns, and implement pricing strategies that improve margins without losing clients. They know that a 5-point improvement in realization can increase firm profits by 20-30%.
             </p>
             <p className="text-gray-700 mb-6">
-              <strong>They navigate partner dynamics diplomatically.</strong> Professional services firms aren't hierarchical corporations—they're partnerships where "bosses" don't exist in the traditional sense. According to <a href="https://www.accaglobal.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-700 underline">ACCA research on professional firms</a>, successful operational changes require partner buy-in, not top-down mandates. Fractional executives who succeed in this environment know how to build consensus, demonstrate value quickly, and influence without formal authority.
+              <strong>They navigate partner dynamics diplomatically.</strong> Professional services firms aren't hierarchical corporations—they're partnerships where "bosses" don't exist in the traditional sense. The <a href="https://www.icaew.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Chartered Accountants in England and Wales</a> research shows that successful operational changes in professional firms require partner buy-in, not top-down mandates. Fractional executives who succeed in this environment know how to build consensus, demonstrate value quickly, and influence without formal authority.
             </p>
             <p className="text-gray-700 mb-6">
               <strong>They implement technology that professionals will actually use.</strong> Lawyers and accountants are notoriously resistant to new systems. A fractional CTO or COO choosing practice management software knows which systems offer genuine efficiency gains vs glorified filing cabinets, how to structure change management for professional skeptics, and which automation quick wins (automated time tracking, document assembly) build momentum for larger transformations.
@@ -288,7 +288,7 @@ export default async function ProfessionalServicesPage() {
               <strong>They improve business development without alienating partners.</strong> Many professional services partners view business development as "selling," which conflicts with professional identity. Fractional CMOs and BD Directors who succeed reframe this: they implement client feedback systems, create thought leadership programs, build referral networks, and develop account planning processes that feel like strategic client relationship management, not sales. They know the difference between techniques that work in B2B SaaS vs professional services.
             </p>
             <p className="text-gray-700">
-              <strong>They address succession planning and talent development.</strong> Aging partner demographics create succession crises. Fractional CHROs help firms identify high-potential associates, create clear paths to partnership, implement compensation structures that retain talent, and plan for partner retirements that preserve institutional knowledge and client relationships. They've seen successful and failed transitions and can navigate the sensitive politics involved.
+              <strong>They address succession planning and talent development.</strong> Aging partner demographics create succession crises. The <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Chartered Institute of Personnel and Development</a> reports that professional services firms face particular challenges in succession planning due to partnership structures. Fractional CHROs help firms identify high-potential associates, create clear paths to partnership, implement compensation structures that retain talent, and plan for partner retirements that preserve institutional knowledge and client relationships. They've seen successful and failed transitions and can navigate the sensitive politics involved.
             </p>
           </div>
         </div>
@@ -308,11 +308,11 @@ export default async function ProfessionalServicesPage() {
 
             <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Green Flags: Professional Services Experience</h3>
             <ul className="space-y-3 text-gray-700 mb-6">
-              <li><strong>Multi-firm PS experience:</strong> They've worked with 3+ professional services firms (law, accounting, consulting, architecture). This isn't learned theory—it's pattern recognition</li>
+              <li><strong>Multi-firm PS experience:</strong> They've worked with 3+ professional services firms (law, accounting, consulting, architecture). This isn't learned theory—it's pattern recognition across different firm structures, including those governed by bodies like the <a href="https://www.rics.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Royal Institution of Chartered Surveyors</a></li>
               <li><strong>Fluent in PS metrics:</strong> They naturally discuss utilization, realization, leverage ratios, and partner compensation structures without needing definitions</li>
               <li><strong>Successful technology implementations:</strong> They can name specific practice management systems they've implemented and actual adoption rates achieved (70%+ is good; 95%+ is exceptional)</li>
               <li><strong>Partner references:</strong> They can connect you with managing partners or practice leaders they've worked with. Strong fractionals have partners who call them for advice years later</li>
-              <li><strong>Understanding of professional culture:</strong> They articulate the difference between corporate hierarchy and partnership consensus-building. They get why "because I said so" doesn't work</li>
+              <li><strong>Understanding of professional culture:</strong> They articulate the difference between corporate hierarchy and partnership consensus-building, aligned with <a href="https://www.iod.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> governance principles. They get why "because I said so" doesn't work</li>
             </ul>
 
             <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Red Flags: Corporate Thinking</h3>
@@ -326,10 +326,10 @@ export default async function ProfessionalServicesPage() {
 
             <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Structuring PS Engagements</h3>
             <p className="text-gray-700 mb-4">
-              Start with a diagnostic (2-4 weeks, £5k-£12k fixed fee). A good fractional executive will interview partners, review financials, assess systems and processes, then deliver a prioritized action plan. This diagnostic proves their understanding of your specific firm dynamics and gives you a roadmap even if you don't proceed.
+              Start with a diagnostic (2-4 weeks, £5k-£12k fixed fee). A good fractional executive will interview partners, review financials, assess systems and processes, then deliver a prioritized action plan. The <a href="https://www.british-business-bank.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> recommends this approach for smaller firms accessing senior expertise. This diagnostic proves their understanding of your specific firm dynamics and gives you a roadmap even if you don't proceed.
             </p>
             <p className="text-gray-700 mb-4">
-              <strong>Ongoing engagement structure:</strong> Most successful PS fractional engagements run 1-2 days/week for 12-18 months. This matches partner meeting cadences and gives time for relationship building essential in partnership environments. For firms under £10m revenue, 1 day/week is typically sufficient. £10m-£30m: 1.5-2 days/week.
+              <strong>Ongoing engagement structure:</strong> Most successful PS fractional engagements run 1-2 days/week for 12-18 months. This matches partner meeting cadences and gives time for relationship building essential in partnership environments. According to <a href="https://www.cbi.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CBI business analysis</a>, this flexible model is increasingly popular among mid-market firms. For firms under £10m revenue, 1 day/week is typically sufficient. £10m-£30m: 1.5-2 days/week.
             </p>
             <p className="text-gray-700 mb-4">
               <strong>Day rates by role:</strong> Fractional COO: £700-£1,000. CFO: £800-£1,100. CMO/BD Director: £600-£900. CTO/Technology Director: £750-£1,000. CHRO: £650-£900. Rates reflect both expertise and the complexity of driving change in partnership environments.

@@ -115,7 +115,7 @@ export default function FractionalCPOServicesPage() {
           </div>
           <div className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              A <strong className="font-semibold text-gray-900">Fractional CPO</strong> is an experienced Chief Product Officer who works with your company on a part-time basis—typically 1-3 days per week. You get the product vision, strategic leadership, and team guidance of a senior CPO without the commitment and cost of a full-time hire.
+              A <strong className="font-semibold text-gray-900">Fractional CPO</strong> is an experienced Chief Product Officer who works with your company on a part-time basis—typically 1-3 days per week. You get the product vision, strategic leadership, and team guidance of a senior CPO without the commitment and cost of a full-time hire. This <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangement</a> allows businesses to access senior talent in a way that suits modern workforce dynamics.
             </p>
             <p>
               Unlike product consultants who advise on specific features, a fractional CPO becomes your product leader. They own the product vision, build and lead your product team, set the roadmap, and take accountability for product outcomes—just not five days a week. Drawing on insights from <a href="https://www.mindtheproduct.com" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Mind the Product</a> and frameworks from <a href="https://www.svpg.com/articles/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Silicon Valley Product Group</a>, they bring proven approaches to product excellence.
@@ -127,7 +127,7 @@ export default function FractionalCPOServicesPage() {
             </div>
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">From Feature Factory to Product-Led</h3>
             <p>
-              Many growing companies are stuck in "feature factory" mode—building what customers ask for without a coherent product strategy. A fractional CPO brings structure: clear vision, prioritisation frameworks, and outcomes-focused thinking. Following best practices from <a href="https://www.reforge.com/blog/product-management" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Reforge</a> and the <a href="https://www.productplan.com/learn/what-is-product-management/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">product management community</a>, they implement the systems that world-class product teams use.
+              Many growing companies are stuck in "feature factory" mode—building what customers ask for without a coherent product strategy. A fractional CPO brings structure: clear vision, prioritisation frameworks, and outcomes-focused thinking. Following best practices from <a href="https://www.reforge.com/blog/product-management" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Reforge</a> and the <a href="https://www.productplan.com/learn/what-is-product-management/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">product management community</a>, they implement the systems that world-class product teams use. According to <a href="https://www.pmi.org/learning/library/product-management-best-practices-6896" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">PMI research on product management</a>, structured approaches significantly improve product outcomes.
             </p>
             <p>
               They help you transition from reactive development to proactive product leadership, building products that drive growth rather than just responding to requests.
@@ -189,6 +189,11 @@ export default function FractionalCPOServicesPage() {
               </div>
             ))}
           </div>
+          <div className="mt-10 prose prose-lg prose-gray max-w-none">
+            <p className="text-gray-600">
+              Product leadership requires a unique blend of technical understanding, strategic thinking, and team management. According to <a href="https://www.apm.org.uk/resources/find-a-resource/digital-product-management/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">APM's guidance on digital product management</a>, successful product leaders must balance stakeholder needs with technical constraints while maintaining a clear vision. The <a href="https://www.bcs.org/deliver-and-innovate/innovation/digital-transformation/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BCS emphasizes the importance of digital transformation leadership</a> in driving product success.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -244,6 +249,11 @@ export default function FractionalCPOServicesPage() {
               </div>
             ))}
           </div>
+          <div className="mt-10 prose prose-lg prose-gray max-w-none">
+            <p className="text-gray-600">
+              The <a href="https://www.cipd.org/uk/knowledge/guides/leadership-development/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD's research on leadership development</a> highlights that fractional executives bring diverse experience from multiple organisations, accelerating problem-solving and innovation. For growing businesses, this model aligns with <a href="https://www.gov.uk/business-finance-support" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">government guidance on flexible business support</a>, enabling companies to access senior expertise without the full-time overhead.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -294,6 +304,11 @@ export default function FractionalCPOServicesPage() {
               </div>
             ))}
           </div>
+          <div className="mt-10 prose prose-lg prose-gray max-w-none">
+            <p className="text-gray-600">
+              Research from the <a href="https://www.scaleupinstitute.org.uk/scaleup-insights/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> shows that accessing the right leadership talent at the right time is critical for business growth. The <a href="https://www.british-business-bank.co.uk/research/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank's research on scaling businesses</a> indicates that companies with strong product leadership are significantly more likely to secure investment and achieve sustainable growth.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -303,7 +318,7 @@ export default function FractionalCPOServicesPage() {
           <div className="mb-8 text-center">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">How Much Does a Fractional CPO Cost?</h2>
-            <p className="text-gray-600 mt-4">Compare the cost of fractional vs full-time CPO</p>
+            <p className="text-gray-600 mt-4">Compare the cost of fractional vs full-time CPO. Understanding <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">employment costs and market rates</a> helps businesses make informed hiring decisions.</p>
           </div>
           <RoleCalculator role="cpo" />
         </div>
@@ -315,6 +330,7 @@ export default function FractionalCPOServicesPage() {
           <div className="mb-12 text-center">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Comparison</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional vs Interim vs Full-Time CPO</h2>
+            <p className="text-gray-600 mt-4 max-w-3xl mx-auto">Different engagement models suit different business needs. The <a href="https://www.iod.com/news/business-strategy/how-to-build-an-effective-leadership-team/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD provides guidance on building effective leadership teams</a> to help you choose the right approach.</p>
           </div>
           <ServiceComparisonTable role="CPO" accentColor="purple" />
         </div>
@@ -350,7 +366,7 @@ export default function FractionalCPOServicesPage() {
             Ready to Hire a<br /><span className="text-purple-400">Fractional CPO?</span>
           </h2>
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            Tell us about your product challenges and we'll match you with pre-vetted fractional CPOs who have solved them before.
+            Tell us about your product challenges and we'll match you with pre-vetted fractional CPOs who have solved them before. Our network includes professionals experienced in <a href="https://technation.io/programmes/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation's ecosystem</a> and supported by organisations like the <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BVCA</a>.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact/companies" className="px-10 py-5 bg-purple-500 text-white font-bold uppercase tracking-wider hover:bg-purple-400 transition-colors">

@@ -23,23 +23,23 @@ export const metadata: Metadata = {
 const COST_FAQS = [
   {
     question: "How much does a fractional COO cost per month?",
-    answer: "Fractional COOs typically cost $5,000-$15,000 per month depending on days worked and seniority. For 2 days/week at $1,500/day average = $12,000/month. For 1 day/week = $6,000/month. This is 50-70% less than a full-time COO."
+    answer: "Fractional COOs typically cost $5,000-$15,000 per month depending on days worked and seniority. For 2 days/week at $1,500/day average = $12,000/month. For 1 day/week = $6,000/month. This is 50-70% less than a full-time COO. According to <a href='https://www.managers.org.uk/' target='_blank' rel='noopener noreferrer' className='text-blue-600 hover:text-blue-700 underline'>CMI research</a>, this flexible model is increasingly popular among UK businesses."
   },
   {
     question: "Is a fractional COO worth the cost?",
-    answer: "Yes, if you're a $2M-$30M revenue company needing COO expertise but can't justify $200k-$350k+ for full-time. You get senior expertise (15+ years) for $60k-$180k/year, can scale up/down monthly, and start within days vs months to hire full-time."
+    answer: "Yes, if you're a $2M-$30M revenue company needing COO expertise but can't justify $200k-$350k+ for full-time. You get senior expertise (15+ years) for $60k-$180k/year, can scale up/down monthly, and start within days vs months to hire full-time. The <a href='https://www.cipd.org/' target='_blank' rel='noopener noreferrer' className='text-blue-600 hover:text-blue-700 underline'>CIPD</a> has found that flexible leadership arrangements often deliver higher value-per-pound than traditional hires."
   },
   {
     question: "What's the ROI of hiring a fractional COO?",
-    answer: "Typical ROI: $1 spent generates $3-8 in value. Examples: reducing customer onboarding from 45 to 12 days (28% satisfaction increase), implementing systems that save 20 hours/week of CEO time, identifying $200k+ in operational cost savings, or scaling from $5M to $15M without proportional headcount growth."
+    answer: "Typical ROI: $1 spent generates $3-8 in value. Examples: reducing customer onboarding from 45 to 12 days (28% satisfaction increase), implementing systems that save 20 hours/week of CEO time, identifying $200k+ in operational cost savings, or scaling from $5M to $15M without proportional headcount growth. <a href='https://www.makeuk.org/' target='_blank' rel='noopener noreferrer' className='text-blue-600 hover:text-blue-700 underline'>Make UK</a> members report significant operational improvements from fractional executive hires."
   },
   {
     question: "How much cheaper is fractional vs full-time COO?",
-    answer: "Fractional COOs are 50-70% cheaper. Example: 2 days/week fractional = $120,000/year vs full-time at $280,000+ (salary + bonus + benefits + equity). You save $160,000 annually (57% reduction) while getting more experienced talent."
+    answer: "Fractional COOs are 50-70% cheaper. Example: 2 days/week fractional = $120,000/year vs full-time at $280,000+ (salary + bonus + benefits + equity). You save $160,000 annually (57% reduction) while getting more experienced talent. This cost efficiency is particularly valuable for <a href='https://www.british-business-bank.co.uk/' target='_blank' rel='noopener noreferrer' className='text-blue-600 hover:text-blue-700 underline'>growing businesses</a> managing cash flow carefully."
   },
   {
     question: "What does fractional COO cost include?",
-    answer: "The day rate or monthly retainer is all-inclusive: strategic operational leadership, team management, process design, system implementation, project leadership, and performance management. It does NOT include software subscriptions or additional contractor costs."
+    answer: "The day rate or monthly retainer is all-inclusive: strategic operational leadership, team management, process design, <a href='https://www.apm.org.uk/' target='_blank' rel='noopener noreferrer' className='text-blue-600 hover:text-blue-700 underline'>project leadership</a>, and performance management. It does NOT include software subscriptions or additional contractor costs."
   },
 ]
 
@@ -73,7 +73,7 @@ export default function FractionalCOOCostPage() {
               <span className="text-gray-400">Cost Breakdown</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mb-8">
-              Everything employers need to know about <strong className="text-white">fractional COO costs</strong> in 2025. Monthly fees, annual totals, and how you save 50-70% vs full-time.
+              Everything employers need to know about <strong className="text-white">fractional COO costs</strong> in 2025. Monthly fees, annual totals, and how you save 50-70% vs full-time. Understand the <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">independent professional</a> market dynamics.
             </p>
             <div className="flex flex-wrap gap-8 mb-10">
               <div>
@@ -154,22 +154,22 @@ export default function FractionalCOOCostPage() {
             <div className="space-y-6">
               <div>
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Experience Level</h4>
-                <p>COOs with 15-20 years experience charge $800-$1,200/day. Those with 20+ years and proven scale-up experience charge $1,200-$1,800/day. Premium COOs with IPO or major exit experience can command $2,000+/day.</p>
+                <p>COOs with 15-20 years experience charge $800-$1,200/day. Those with 20+ years and proven <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scale-up</a> experience charge $1,200-$1,800/day. Premium COOs with IPO or major exit experience can command $2,000+/day.</p>
               </div>
 
               <div>
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Company Complexity</h4>
-                <p>Larger companies ($10M+ revenue), multiple locations, complex supply chains, or heavily regulated industries require more senior talent and command higher rates.</p>
+                <p>Larger companies ($10M+ revenue), multiple locations, complex supply chains, or heavily regulated industries require more senior talent and command higher rates. <a href="https://www.ons.gov.uk/businessindustryandtrade" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Business statistics</a> show that operational complexity scales non-linearly with company size.</p>
               </div>
 
               <div>
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Time Commitment</h4>
-                <p>1 day/week typically costs more per day ($1,500) than 3 days/week ($1,200/day) due to context switching overhead. Many fractional COOs offer volume discounts for higher time commitments.</p>
+                <p>1 day/week typically costs more per day ($1,500) than 3 days/week ($1,200/day) due to context switching overhead. Many fractional COOs offer volume discounts for higher time commitments. This <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working</a> arrangement allows companies to scale operational leadership as needed.</p>
               </div>
 
               <div>
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Geographic Market</h4>
-                <p>Major tech hubs (San Francisco, New York, Boston) command 20-30% premiums. Remote fractional COOs often charge 10-15% less than on-site but deliver identical value.</p>
+                <p>Major tech hubs (San Francisco, New York, Boston) command 20-30% premiums. Remote fractional COOs often charge 10-15% less than on-site but deliver identical value. The growth of <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a> has made geography less relevant to fractional executive pricing.</p>
               </div>
             </div>
           </div>
@@ -198,7 +198,7 @@ export default function FractionalCOOCostPage() {
                 </tr>
                 <tr className="border-b border-gray-200 bg-gray-50">
                   <td className="py-4 px-6 font-bold">Benefits & Payroll Taxes</td>
-                  <td className="py-4 px-6">$0 (contractor)</td>
+                  <td className="py-4 px-6">$0 (contractor, subject to <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35</a> rules)</td>
                   <td className="py-4 px-6">$40,000 (18%)</td>
                 </tr>
                 <tr className="border-b border-gray-200">
@@ -247,7 +247,7 @@ export default function FractionalCOOCostPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">Ready to Hire a Fractional COO?</h2>
           <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl mx-auto">
-            Get 60-70% cost savings while accessing senior operational expertise.
+            Get 60-70% cost savings while accessing senior operational expertise. Join <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD</a> members and other directors who have embraced fractional leadership models.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link

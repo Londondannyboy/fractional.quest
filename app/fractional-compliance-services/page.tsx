@@ -25,19 +25,19 @@ export const metadata: Metadata = {
 const COMPLIANCE_FAQS = [
   {
     question: 'What is a Fractional Compliance Officer?',
-    answer: 'A Fractional Compliance Officer is a regulatory expert who manages your company\'s compliance obligations on a part-time basis. They ensure you adhere to laws and standards like FCA rules, GDPR, and ISO 27001.',
+    answer: 'A Fractional Compliance Officer is a regulatory expert who manages your company\'s compliance obligations on a part-time basis. They ensure you adhere to laws and standards like <a href="https://www.fca.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA rules</a>, <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">GDPR</a>, and ISO 27001.',
   },
   {
     question: 'Why outsource compliance?',
-    answer: 'Compliance is critical but often doesn\'t require a full-time role in smaller companies. Outsourcing to a fractional expert gives you access to senior knowledge without the cost of a full-time salary, ensuring you stay legal and avoid fines.',
+    answer: 'Compliance is critical but often doesn\'t require a full-time role in smaller companies. Outsourcing to a fractional expert gives you access to senior knowledge without the cost of a full-time salary, ensuring you stay legal and avoid fines. This model is particularly effective for firms navigating <a href="https://www.fca.org.uk/firms/authorisation" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA authorisation</a> processes.',
   },
   {
     question: 'How much does it cost?',
-    answer: 'Rates vary by sector complexity. For financial services, expect £700-£1,000 per day. For general corporate compliance, £500-£800 per day is common.',
+    answer: 'Rates vary by sector complexity. For financial services, expect £700-£1,000 per day. For general corporate compliance, £500-£800 per day is common. These rates reflect the seniority of professionals often holding qualifications from bodies like <a href="https://www.cisi.org/cisiweb2/cisi-website" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CISI</a> or <a href="https://www.int-comp.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICA (International Compliance Association)</a>.',
   },
   {
     question: 'What sectors do they cover?',
-    answer: 'We have specialists across Financial Services (FCA), Healthcare (CQC), Data Privacy (GDPR), and General Corporate Compliance.',
+    answer: 'We have specialists across <a href="https://www.fca.org.uk/firms" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Financial Services (FCA)</a>, Healthcare (CQC), <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Data Privacy (ICO)</a>, and General Corporate Compliance.',
   },
 ]
 
@@ -69,7 +69,7 @@ export default function FractionalComplianceServicesPage() {
               </h1>
               <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mb-8">
                 Hire a <strong className="text-white">Fractional Compliance Officer</strong> to manage risk.
-                Regulatory expertise, policy management, and peace of mind—at a flexible cost.
+                Regulatory expertise for <a href="https://www.fca.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA</a>, <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">GDPR</a>, and policy management—at a flexible cost.
               </p>
               <div className="flex flex-wrap gap-8 mb-10">
                 <div>
@@ -107,10 +107,13 @@ export default function FractionalComplianceServicesPage() {
           </div>
           <div className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              A <strong className="font-semibold text-gray-900">Fractional Compliance Officer</strong> is a specialist who takes ownership of your company's regulatory health. They identify risks, write policies, train staff, and ensure you are ready for any external audit.
+              A <strong className="font-semibold text-gray-900">Fractional Compliance Officer</strong> is a specialist who takes ownership of your company's regulatory health. They identify risks, write policies, train staff, and ensure you are ready for any external audit from bodies like the <a href="https://www.bankofengland.co.uk/prudential-regulation" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Prudential Regulation Authority (PRA)</a> or sector-specific regulators.
             </p>
             <p>
-              Unlike a consultant who writes a report and leaves, a fractional officer stays with you to implement the changes and maintain standards over time.
+              Unlike a consultant who writes a report and leaves, a fractional officer stays with you to implement the changes and maintain standards over time. This approach aligns with <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a> that enable businesses to access senior expertise without full-time commitments, a model increasingly adopted by <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK scaleups</a> seeking flexible leadership solutions.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Whether you're preparing for <a href="https://www.fca.org.uk/firms/financial-crime" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">financial crime compliance</a>, implementing <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">GDPR requirements</a>, or building governance frameworks aligned with <a href="https://www.iod.com/membership/member-benefits/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors (IoD)</a> best practices, a fractional compliance officer provides the strategic oversight you need without the overhead of a permanent hire.
             </p>
           </div>
         </div>
@@ -127,32 +130,32 @@ export default function FractionalComplianceServicesPage() {
             {[ 
               {
                 title: 'Policy Management',
-                description: 'Creating and maintaining the employee handbook and compliance manuals.',
+                description: 'Creating and maintaining the employee handbook and compliance manuals, aligned with <a href="https://www.cipd.org/uk/knowledge/guides/hr-policies/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD best practices</a>.',
                 icon: 'Docs',
               },
               {
                 title: 'Risk Assessment',
-                description: 'Conducting regular audits to identify and mitigate operational and legal risks.',
+                description: 'Conducting regular audits to identify and mitigate operational and legal risks, following <a href="https://www.fca.org.uk/firms/risk-management" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA risk management guidance</a>.',
                 icon: '🔍',
               },
               {
                 title: 'Training',
-                description: 'Delivering mandatory training (e.g., Anti-Bribery, GDPR, Health & Safety) to staff.',
+                description: 'Delivering mandatory training (e.g., Anti-Bribery, <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/training/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">GDPR from ICO</a>, Health & Safety) to staff.',
                 icon: '🎓',
               },
               {
                 title: 'Reporting',
-                description: 'Preparing compliance reports for the board and external regulators.',
+                description: 'Preparing compliance reports for the board and external regulators including the <a href="https://www.fca.org.uk/firms/reporting" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA</a> and <a href="https://ico.org.uk/for-organisations/report-a-breach/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICO</a>.',
                 icon: '📊',
               },
               {
                 title: 'Incident Response',
-                description: 'Managing the response to breaches, complaints, or regulatory inquiries.',
+                description: 'Managing the response to breaches, complaints, or regulatory inquiries in line with <a href="https://www.ukfinance.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK Finance</a> standards and regulatory requirements.',
                 icon: '🚨',
               },
               {
                 title: 'Culture',
-                description: 'Embedding a culture of ethics and integrity throughout the organisation.',
+                description: 'Embedding a culture of ethics and integrity throughout the organisation, supported by <a href="https://www.iod.com/news/governance/compliance-and-ethics-building-a-culture-of-integrity/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD governance principles</a>.',
                 icon: '🤝',
               },
             ].map((item, index) => (
@@ -196,7 +199,7 @@ export default function FractionalComplianceServicesPage() {
             Protect Your<br /><span className="text-slate-400">Business</span>
           </h2>
           <p className="text-xl text-slate-100 mb-10 max-w-2xl mx-auto">
-            Find the right fractional compliance expert to manage your regulatory risk.
+            Find the right fractional compliance expert to manage your regulatory risk, whether you need expertise in <a href="https://www.cisi.org/cisiweb2/cisi-website/study-with-us/professional-refresher" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">financial services compliance (CISI)</a>, <a href="https://ico.org.uk/for-organisations/accountability-framework/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">data protection accountability</a>, or general corporate governance informed by <a href="https://www.cipd.org/uk/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">CIPD</a> standards.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact/companies" className="px-10 py-5 bg-white text-black font-bold uppercase tracking-wider hover:bg-gray-100 transition-colors">

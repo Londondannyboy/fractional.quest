@@ -72,7 +72,8 @@ export default async function FinanceJobsPage() {
       {/* Hero Section with 3D Knowledge Graph Background */}
       <section className="relative min-h-[85vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <JobsGraph3D categoryFilter="Finance" limit={30} height="100%" isHero={true} showOverlay={true} />
+          <img src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/30" />
         </div>
 
         {/* Bottom-aligned content with glass panel */}
@@ -90,7 +91,7 @@ export default async function FinanceJobsPage() {
                     {stats.total}+ Finance Leadership Roles
                   </span>
 
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
                     Fractional<br />
                     <span className="text-blue-700">Finance</span> Jobs UK
                   </h1>

@@ -199,6 +199,9 @@ export default async function FractionalProjectManagerPage() {
 
       {/* Hero with 3D Knowledge Graph */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1920)' }}>
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
         <div className="absolute inset-0">
           <JobsGraph3D roleFilter="Project" limit={25} height="100%" isHero={true} showOverlay={true} />
         </div>
@@ -211,7 +214,7 @@ export default async function FractionalProjectManagerPage() {
               <span className="inline-block bg-green-500/20 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Project Management
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Fractional Project<br />
                 <span className="text-green-400">Manager UK</span>
               </h1>

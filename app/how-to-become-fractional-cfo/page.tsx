@@ -26,7 +26,7 @@ const BECOME_CFO_FAQS = [
   },
   {
     question: "Do you need to be a qualified accountant to become a fractional CFO?",
-    answer: "Not strictly required, but helpful. Many fractional CFOs are ACA, ACCA, CIMA, or CPA qualified, but it's not mandatory. Experience, track record, and results matter more than qualifications. However, qualifications help with credibility, especially early in your fractional career."
+    answer: "Not strictly required, but helpful. Many fractional CFOs hold qualifications from bodies like ICAEW (icaew.com), ACCA (accaglobal.com), or CIMA (cimaglobal.com), but it's not mandatory. Experience, track record, and results matter more than qualifications. However, professional qualifications help with credibility, especially early in your fractional career."
   },
   {
     question: "How do fractional CFOs find their first client?",
@@ -152,11 +152,11 @@ export default function HowToBecomeFractionalCFOPage() {
                 <div>
                   <p className="font-semibold text-gray-900 mb-3">Professional Qualifications:</p>
                   <ul className="space-y-2 text-sm list-none pl-0">
-                    <li>• ACA, ACCA, CIMA (UK)</li>
+                    <li>• <a href="https://www.icaew.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACA (ICAEW)</a>, <a href="https://www.accaglobal.com/gb/en.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACCA</a>, <a href="https://www.cimaglobal.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIMA</a> (UK)</li>
                     <li>• CPA, CMA (International)</li>
                     <li>• MBA from top school</li>
                   </ul>
-                  <p className="text-sm mt-3 mb-0">Adds credibility, especially early in fractional career, but experience &gt; qualifications. Professional bodies like <a href="https://www.icaew.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICAEW</a> and <a href="https://www.accaglobal.com/gb/en.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACCA</a> provide ongoing CPD.</p>
+                  <p className="text-sm mt-3 mb-0">Adds credibility, especially early in fractional career, but experience &gt; qualifications. Professional bodies provide ongoing CPD and networking opportunities.</p>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-900 mb-3">Specialized Experience:</p>
@@ -258,7 +258,7 @@ export default function HowToBecomeFractionalCFOPage() {
                 <div className="flex-1">
                   <h3 className="text-2xl font-black text-gray-900 mb-3">Develop Specialized Expertise (Years 18-20)</h3>
                   <div className="bg-white p-6">
-                    <p className="text-gray-700 mb-4"><strong>Differentiate yourself.</strong> Fractional CFO market is competitive—you need a niche.</p>
+                    <p className="text-gray-700 mb-4"><strong>Differentiate yourself.</strong> Fractional CFO market is competitive—you need a niche. Consider CPD opportunities from <a href="https://www.cipd.org/uk/knowledge/guides/career-development" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> to enhance leadership skills.</p>
                     <div className="grid md:grid-cols-2 gap-4 mt-4">
                       <div>
                         <p className="font-semibold text-gray-900 mb-2">Industry Specialization:</p>
@@ -295,13 +295,13 @@ export default function HowToBecomeFractionalCFOPage() {
                     <p className="font-semibold text-gray-900 mb-3">Key Relationships to Cultivate:</p>
                     <ul className="space-y-2 text-gray-700 text-sm">
                       <li>• <strong>VCs & Angels:</strong> They refer portfolio companies needing fractional CFOs</li>
-                      <li>• <strong>Startup Founders:</strong> Former colleagues who'll hire you or refer others</li>
+                      <li>• <strong>Startup Founders:</strong> Former colleagues who'll hire you or refer others (the <a href="https://scaleupinstitute.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> has useful resources)</li>
                       <li>• <strong>Executive Recruiters:</strong> Fractional-focused recruiters place interim/fractional roles</li>
                       <li>• <strong>Other Fractional Executives:</strong> Fractional CEOs, CMOs, CTOs who can refer overflow work</li>
                       <li>• <strong>Accountants & Lawyers:</strong> They see clients who need fractional CFO support</li>
                       <li>• <strong>PE Firms:</strong> Portfolio companies often need fractional CFO during integration</li>
                     </ul>
-                    <p className="text-gray-700 mt-4 mb-0"><strong>Action:</strong> Attend startup events, join fractional executive groups, stay active on LinkedIn, maintain relationships religiously.</p>
+                    <p className="text-gray-700 mt-4 mb-0"><strong>Action:</strong> Attend startup events, join professional networks like the <a href="https://www.iod.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a>, stay active on LinkedIn, maintain relationships religiously.</p>
                   </div>
                 </div>
               </div>
@@ -311,7 +311,7 @@ export default function HowToBecomeFractionalCFOPage() {
                 <div className="flex-1">
                   <h3 className="text-2xl font-black text-gray-900 mb-3">Land Your First Fractional Client (Year 20+)</h3>
                   <div className="bg-blue-950/20 p-6 border-l-4 border-blue-600">
-                    <p className="text-gray-700 mb-4"><strong>The Transition Moment.</strong> Two approaches:</p>
+                    <p className="text-gray-700 mb-4"><strong>The Transition Moment.</strong> You'll need to set up your business structure—check <a href="https://www.gov.uk/set-up-business" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">gov.uk for guidance on setting up as a sole trader or limited company</a>. Two approaches:</p>
                     <div className="space-y-4">
                       <div>
                         <p className="font-semibold text-gray-900 mb-2">Option A: Start Part-Time (Lower Risk) ✓</p>
@@ -343,7 +343,7 @@ export default function HowToBecomeFractionalCFOPage() {
                 <div className="flex-1">
                   <h3 className="text-2xl font-black text-gray-900 mb-3">Build Portfolio (2-4 Clients)</h3>
                   <div className="bg-white p-6">
-                    <p className="text-gray-700 mb-4"><strong>Steady State:</strong> Most fractional CFOs stabilize at 2-4 simultaneous clients.</p>
+                    <p className="text-gray-700 mb-4"><strong>Steady State:</strong> Most fractional CFOs stabilize at 2-4 simultaneous clients. Important: understand <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35 rules</a> for working with multiple clients—<a href="https://www.ipse.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IPSE</a> provides excellent guidance.</p>
                     <ul className="space-y-2 text-gray-700 text-sm">
                       <li>• <strong>2 clients:</strong> £100k-£150k/year, working 2-3 days/week total (great work-life balance)</li>
                       <li>• <strong>3 clients:</strong> £150k-£225k/year, working 3-4 days/week (optimal for most)</li>
@@ -411,7 +411,7 @@ export default function HowToBecomeFractionalCFOPage() {
                 <h4 className="text-xl font-bold text-gray-900 mb-3">Step 1: Make "The List" (Week 1)</h4>
                 <p className="text-gray-700 mb-4">Create a spreadsheet of everyone who might hire you or refer you:</p>
                 <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Former colleagues now at other companies</li>
+                  <li>• Former colleagues now at other companies (especially those at growth-stage firms supported by the <a href="https://www.british-business-bank.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a>)</li>
                   <li>• Startup founders you've worked with</li>
                   <li>• VCs/angels you've pitched to or worked with</li>
                   <li>• Executive recruiters you've used</li>
@@ -423,7 +423,7 @@ export default function HowToBecomeFractionalCFOPage() {
 
               <div className="bg-white p-8 border-l-4 border-blue-600">
                 <h4 className="text-xl font-bold text-gray-900 mb-3">Step 2: Announce Your Transition (Week 2)</h4>
-                <p className="text-gray-700 mb-4">Post on LinkedIn (and email "The List"):</p>
+                <p className="text-gray-700 mb-4">Register your limited company via <a href="https://www.gov.uk/government/organisations/companies-house" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Companies House</a>, then post on LinkedIn (and email "The List"):</p>
                 <div className="bg-gray-50 p-6 text-sm text-gray-700 italic">
                   "After 18 years in finance, including CFO roles at [Company A] and [Company B] where I [achievement 1] and [achievement 2], I'm transitioning to fractional CFO work.
                   <br/><br/>
@@ -436,7 +436,7 @@ export default function HowToBecomeFractionalCFOPage() {
 
               <div className="bg-white p-8 border-l-4 border-gray-900">
                 <h4 className="text-xl font-bold text-gray-900 mb-3">Step 3: Coffee Chats (Weeks 3-8)</h4>
-                <p className="text-gray-700 mb-4">Schedule 20+ coffee chats with people from "The List":</p>
+                <p className="text-gray-700 mb-4">Schedule 20+ coffee chats with people from "The List". Consider attending <a href="https://scaleupinstitute.org.uk/events" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute events</a> to meet growth-stage founders:</p>
                 <ul className="space-y-2 text-gray-700 text-sm">
                   <li>• NOT sales meetings—relationship building</li>
                   <li>• Ask: "Who do you know that might need fractional CFO help?"</li>
@@ -542,7 +542,7 @@ export default function HowToBecomeFractionalCFOPage() {
                 </div>
               </div>
               <p className="text-gray-700 mt-6 mb-0">
-                Working 4.5 days/week across 3 clients. More than most full-time CFOs earn (£150k-£200k) with better flexibility.
+                Working 4.5 days/week across 3 clients. More than most full-time CFOs earn (£150k-£200k) with better flexibility. Remember to factor in IR35 compliance—see <a href="https://www.gov.uk/guidance/understanding-off-payroll-working-ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">HMRC guidance</a> for tax planning.
               </p>
             </div>
           </div>

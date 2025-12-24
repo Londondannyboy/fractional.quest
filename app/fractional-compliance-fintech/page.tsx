@@ -116,7 +116,7 @@ export default function FractionalComplianceFintechPage() {
       <section className="relative bg-gradient-to-br from-cyan-900 via-cyan-800 to-slate-900 py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1920&q=80"
+            src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1920"
             alt="Fractional compliance for FinTech - FCA regulatory compliance in financial technology"
             className="w-full h-full object-cover opacity-20"
           />
@@ -129,7 +129,7 @@ export default function FractionalComplianceFintechPage() {
           <span className="inline-block bg-cyan-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             Industry Guide
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
             Fractional Compliance<br />
             <span className="text-cyan-400">for FinTech</span>
           </h1>

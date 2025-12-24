@@ -25,19 +25,19 @@ export const metadata: Metadata = {
 const MD_FAQS = [
   {
     question: 'What is a Fractional MD?',
-    answer: 'A Fractional Managing Director is an experienced business leader who takes operational control of a company or division part-time. They manage the P&L, lead the team, and execute strategy.',
+    answer: 'A Fractional Managing Director is an experienced business leader who takes operational control of a company or division part-time. They manage the P&L, lead the team, and execute strategy. This flexible leadership model is increasingly popular among UK businesses, as outlined by the <a href="https://www.gov.uk/browse/business" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK government business guidance</a>.',
   },
   {
     question: 'How is this different from a Consultant?',
-    answer: 'A consultant advises; an MD decides and executes. A Fractional MD has the authority to hire, fire, sign contracts, and make operational decisions. They are accountable for the results.',
+    answer: 'A consultant advises; an MD decides and executes. A Fractional MD has the authority to hire, fire, sign contracts, and make operational decisions. They are accountable for the results. The <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> recognizes this hands-on leadership approach as essential for growing businesses.',
   },
   {
     question: 'What are the typical use cases?',
-    answer: 'Common scenarios include: covering a long-term absence; leading a turnaround; managing a specific subsidiary or division; or providing leadership while a permanent MD is recruited.',
+    answer: 'Common scenarios include: covering a long-term absence; leading a turnaround supported by organizations like the <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a>; managing a specific subsidiary or division; or providing leadership while a permanent MD is recruited. Private equity and venture capital firms, including <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BVCA members</a>, frequently use fractional executives.',
   },
   {
     question: 'How much does a Fractional MD cost?',
-    answer: 'Rates typically range from £800 to £1,500 per day. This offers a high-calibre leader for a flexible period without the commitment of a permanent contract.',
+    answer: 'Rates typically range from £800 to £1,500 per day. This offers a high-calibre leader for a flexible period without the commitment of a permanent contract. According to <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS employment data</a>, this represents significant value compared to full-time executive compensation.',
   },
 ]
 
@@ -107,10 +107,10 @@ export default function FractionalManagingDirectorServicesPage() {
           </div>
           <div className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              A <strong className="font-semibold text-gray-900">Fractional Managing Director</strong> provides experienced general management to businesses that need leadership but perhaps not a full-time CEO. Often used by owners who want to step back, or international companies establishing a UK presence, a Fractional MD takes operational responsibility for the business.
+              A <strong className="font-semibold text-gray-900">Fractional Managing Director</strong> provides experienced general management to businesses that need leadership but perhaps not a full-time CEO. Often used by owners who want to step back through <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a>, or international companies establishing a UK presence, a Fractional MD takes operational responsibility for the business.
             </p>
             <p>
-              They focus on execution—turning the board's strategy into reality, managing the senior team, and ensuring the business hits its financial targets.
+              They focus on execution—turning the board's strategy into reality, managing the senior team, and ensuring the business hits its financial targets. According to the <a href="https://www.iod.com/about-us/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a>, effective operational leadership is critical for sustainable business growth.
             </p>
           </div>
         </div>
@@ -127,7 +127,7 @@ export default function FractionalManagingDirectorServicesPage() {
             {[
               {
                 title: 'P&L Ownership',
-                description: 'Taking full responsibility for the profit and loss account. Managing budgets, costs, and revenue targets.',
+                description: 'Taking full responsibility for the profit and loss account. Managing budgets, costs, and revenue targets, aligned with best practices from the Chartered Management Institute.',
                 icon: '📊',
               },
               {
@@ -159,7 +159,15 @@ export default function FractionalManagingDirectorServicesPage() {
               <div key={index} className="bg-white p-6 border border-gray-200 hover:border-gray-400 transition-colors">
                 <div className="text-3xl mb-4">{item.icon}</div>
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.description}</p>
+                <p className="text-gray-600 text-sm">
+                  {item.description}
+                  {item.title === 'P&L Ownership' && (
+                    <> Learn more from <a href="https://www.managers.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CMI</a>.</>
+                  )}
+                  {item.title === 'Team Management' && (
+                    <> <a href="https://www.cipd.org/uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD guidance</a> available.</>
+                  )}
+                </p>
               </div>
             ))}
           </div>
@@ -196,7 +204,7 @@ export default function FractionalManagingDirectorServicesPage() {
             Lead Your Business<br /><span className="text-blue-400">Forward</span>
           </h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Find the right fractional Managing Director to take the helm.
+            Find the right fractional Managing Director to take the helm. Join businesses across the UK, as reported by the <a href="https://www.cbi.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CBI</a>, who are leveraging flexible executive talent.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/handler/sign-up" className="px-10 py-5 bg-white text-black font-bold uppercase tracking-wider hover:bg-gray-100 transition-colors">

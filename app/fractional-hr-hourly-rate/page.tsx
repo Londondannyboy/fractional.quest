@@ -30,13 +30,13 @@ export default function FractionalHRHourlyRatePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-gray-50 py-20 bg-cover bg-center" style={{backgroundImage: 'url(https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=1920)'}}>
         <div className="max-w-4xl mx-auto px-6">
           <Link href="/fractional-hr" className="text-gray-400 hover:text-gray-900 mb-6 inline-block text-sm">← Back to HR Hub</Link>
           <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             Pricing Guide 2025
           </span>
-          <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">Fractional HR<br />Hourly Rate</h1>
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Fractional HR<br />Hourly Rate</h1>
           <p className="text-xl text-gray-600 mb-8">
             UK fractional HR hourly rates from <strong className="text-white">£75-£163 per hour</strong> depending on seniority and specialisation.
           </p>

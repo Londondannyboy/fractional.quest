@@ -23,19 +23,19 @@ export const metadata: Metadata = {
 const CONSULTANT_FAQS = [
   {
     question: 'What does a Fractional HR Consultant do?',
-    answer: 'Fractional HR Consultants provide specialist expertise on specific HR projects or problems—HRIS implementation, compensation benchmarking, policy development, DE&I strategy, or tribunal preparation. They advise and implement but typically don\'t take ongoing leadership responsibility for your HR function.'
+    answer: 'Fractional HR Consultants provide specialist expertise on specific HR projects or problems—HRIS implementation, compensation benchmarking, <a href="https://www.cipd.org/uk/knowledge/factsheets/hr-policies-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">policy development</a>, DE&I strategy, or tribunal preparation. They advise and implement but typically don\'t take ongoing leadership responsibility for your HR function.'
   },
   {
     question: 'How much does a Fractional HR Consultant cost?',
-    answer: 'Fractional HR Consultants in the UK typically charge £700-£950 per day, or offer project-based pricing (e.g., £5,000-£15,000 for handbook development, £10,000-£25,000 for HRIS implementation). This is lower than HR Directors (£900-£1,100/day) because they focus on specific deliverables rather than ongoing leadership.'
+    answer: 'Fractional HR Consultants in the UK typically charge £700-£950 per day, or offer project-based pricing (e.g., £5,000-£15,000 for handbook development, £10,000-£25,000 for HRIS implementation). This is lower than HR Directors (£900-£1,100/day) because they focus on specific deliverables rather than ongoing leadership. Rates align with <a href="https://www.shrm.org/topics-tools/tools/hr-answers/what-is-hr-consultant" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">SHRM guidance</a> on HR consulting.'
   },
   {
     question: 'When should I hire an HR Consultant vs HR Director?',
-    answer: 'Hire an HR Consultant for: specific projects with clear scope, specialist expertise you lack internally, one-off initiatives. Hire an HR Director for: ongoing strategic leadership, building your HR function, complex ER requiring continuous involvement, being embedded in leadership team.'
+    answer: 'Hire an HR Consultant for: specific projects with clear scope, specialist expertise you lack internally, one-off initiatives. Hire an HR Director for: ongoing strategic leadership, building your HR function, complex ER requiring continuous involvement, being embedded in leadership team. Consider <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a> for either role.'
   },
   {
     question: 'Can an HR Consultant become an HR Director?',
-    answer: 'Yes, some engagements start as consulting (specific project) and evolve into ongoing fractional HR Director roles once value is proven. However, many HR Consultants prefer project-based work and may not want ongoing leadership responsibility.'
+    answer: 'Yes, some engagements start as consulting (specific project) and evolve into ongoing fractional HR Director roles once value is proven. However, many HR Consultants prefer <a href="https://www.ipse.co.uk/resources/research-and-reports.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">project-based work</a> and may not want ongoing leadership responsibility.'
   },
   {
     question: 'Do I need both an HR Consultant and HR Director?',
@@ -62,7 +62,8 @@ export default function FractionalHRConsultantPage() {
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <JobsGraph3D categoryFilter="HR" limit={25} height="100%" isHero={true} showOverlay={true} />
+          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="relative z-10 w-full py-20">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -73,7 +74,7 @@ export default function FractionalHRConsultantPage() {
               <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Comparison Guide
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 HR Consultant vs<br />
                 <span className="text-pink-400">HR Director</span>
               </h1>
@@ -109,7 +110,7 @@ export default function FractionalHRConsultantPage() {
 
           <div className="bg-pink-50 border-l-4 border-pink-500 p-8 mb-12">
             <p className="text-2xl md:text-3xl font-light text-gray-900 leading-relaxed mb-0">
-              <strong className="font-bold">Fractional HR Consultants</strong> deliver specific projects and expertise. <strong className="font-bold">Fractional HR Directors</strong> take ownership of your HR function. Consultants are <strong>"do this for me"</strong>—Directors are <strong>"be my HR leader."</strong>
+              <strong className="font-bold">Fractional HR Consultants</strong> deliver specific projects and expertise. <strong className="font-bold">Fractional HR Directors</strong> take ownership of your HR function. Consultants are <strong>"do this for me"</strong>—Directors are <strong>"be my HR leader."</strong> Both roles can help businesses navigate <a href="https://www.gov.uk/browse/employing-people" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK employment regulations</a> effectively.
             </p>
           </div>
 
@@ -192,7 +193,7 @@ export default function FractionalHRConsultantPage() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-pink-500 mr-2">✓</span>
-                    <span>You need specialist expertise you don't have (e.g., compensation, DE&I)</span>
+                    <span>You need specialist expertise you don't have (e.g., <a href="https://www.cipd.org/uk/knowledge/factsheets/pay-reward-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">compensation</a>, DE&I)</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-pink-500 mr-2">✓</span>
@@ -211,7 +212,7 @@ export default function FractionalHRConsultantPage() {
                   <p className="text-sm text-gray-600 mb-2"><strong>Example projects:</strong></p>
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>• HRIS implementation (£10k-£25k)</li>
-                    <li>• Employee handbook (£5k-£10k)</li>
+                    <li>• <a href="https://www.acas.org.uk/writing-employee-handbook" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Employee handbook</a> (£5k-£10k)</li>
                     <li>• Compensation benchmarking (£8k-£15k)</li>
                     <li>• DE&I strategy (£10k-£20k)</li>
                     <li>• Performance framework (£8k-£15k)</li>
@@ -228,7 +229,7 @@ export default function FractionalHRConsultantPage() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-pink-500 mr-2">✓</span>
-                    <span>You want an embedded member of leadership team</span>
+                    <span>You want an embedded member of <a href="https://www.iod.com/professional-development/articles/how-to-succeed-as-a-first-time-director/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">leadership team</a></span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-pink-500 mr-2">✓</span>
@@ -236,7 +237,7 @@ export default function FractionalHRConsultantPage() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-pink-500 mr-2">✓</span>
-                    <span>You have ongoing complex ER issues</span>
+                    <span>You have ongoing complex <a href="https://www.acas.org.uk/employment-relations" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ER issues</a></span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-pink-500 mr-2">✓</span>
@@ -246,7 +247,7 @@ export default function FractionalHRConsultantPage() {
                 <div className="mt-6 pt-6 border-t">
                   <p className="text-sm text-gray-600 mb-2"><strong>Typical scope:</strong></p>
                   <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Own people strategy</li>
+                    <li>• Own <a href="https://www.cipd.org/uk/knowledge/guides/hr-strategy/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">people strategy</a></li>
                     <li>• Attend leadership meetings</li>
                     <li>• Manage complex ER</li>
                     <li>• Lead senior hiring</li>
@@ -262,25 +263,25 @@ export default function FractionalHRConsultantPage() {
             <div className="space-y-6">
               <div className="bg-white p-6 border-l-4 border-pink-500">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Consultant Example: HRIS Implementation</h4>
-                <p className="text-gray-700 mb-0">"We're 60 employees using spreadsheets for HR. We need someone to select and implement an HRIS (HiBob, Personio, etc.), migrate our data, and train the team. 3-month project."</p>
+                <p className="text-gray-700 mb-0">"We're 60 employees using spreadsheets for HR. We need someone to select and implement an HRIS (HiBob, Personio, etc.), migrate our data, and train the team. 3-month project." Understanding your <a href="https://scaleupinstitute.org.uk/scaleup-insights/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scaleup requirements</a> is crucial at this stage.</p>
                 <p className="text-pink-600 font-semibold mt-2">→ Hire HR Consultant. Clear project, specialist skill, defined end.</p>
               </div>
 
               <div className="bg-white p-6 border-l-4 border-gray-900">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Director Example: Building HR Function</h4>
-                <p className="text-gray-700 mb-0">"We're 45 employees with no HR. Founders are drowning in people issues. We need someone to build everything—contracts, policies, processes—and be our ongoing HR leader."</p>
+                <p className="text-gray-700 mb-0">"We're 45 employees with no HR. Founders are drowning in people issues. We need someone to build everything—<a href="https://www.gov.uk/employment-contracts-and-conditions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">contracts</a>, policies, processes—and be our ongoing HR leader."</p>
                 <p className="text-pink-600 font-semibold mt-2">→ Hire HR Director. Need ownership, ongoing leadership, embedded partner.</p>
               </div>
 
               <div className="bg-white p-6 border-l-4 border-pink-500">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Consultant Example: Compensation Review</h4>
-                <p className="text-gray-700 mb-0">"We have an HR team but need specialist help to benchmark our salaries against market, redesign our bands, and create a new compensation philosophy."</p>
+                <p className="text-gray-700 mb-0">"We have an HR team but need specialist help to benchmark our salaries against market using <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS earnings data</a>, redesign our bands, and create a new compensation philosophy."</p>
                 <p className="text-pink-600 font-semibold mt-2">→ Hire HR Consultant. Specialist expertise, defined deliverable, internal HR continues.</p>
               </div>
 
               <div className="bg-white p-6 border-l-4 border-gray-900">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Director Example: Complex ER & Restructure</h4>
-                <p className="text-gray-700 mb-0">"We're facing potential tribunal claims, need to restructure the team, and have ongoing performance issues. We need experienced leadership to navigate this over the next 12 months."</p>
+                <p className="text-gray-700 mb-0">"We're facing potential <a href="https://www.acas.org.uk/employment-tribunals" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">tribunal claims</a>, need to restructure the team, and have ongoing performance issues. We need experienced leadership to navigate this over the next 12 months."</p>
                 <p className="text-pink-600 font-semibold mt-2">→ Hire HR Director. Complex ongoing issues, need accountability, leadership presence.</p>
               </div>
             </div>
@@ -321,7 +322,7 @@ export default function FractionalHRConsultantPage() {
             <div className="bg-gray-50 text-gray-900 p-8 my-10">
               <h4 className="text-xl font-bold text-gray-900 mb-4">When to Use Both</h4>
               <p className="text-gray-600 mb-0">
-                Companies with 100+ employees often have a Fractional HR Director for ongoing leadership while bringing in HR Consultants for specialist projects. For example: HR Director handles day-to-day leadership while a Compensation Consultant runs a salary benchmarking project, or an HRIS Consultant implements new HR technology.
+                Companies with 100+ employees often have a Fractional HR Director for ongoing leadership while bringing in HR Consultants for specialist projects. For example: HR Director handles day-to-day leadership while a Compensation Consultant runs a salary benchmarking project, or an HRIS Consultant implements new HR technology. This hybrid approach is increasingly common in <a href="https://www.british-business-bank.co.uk/research/small-business-insights/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">growing UK businesses</a>.
               </p>
             </div>
           </div>

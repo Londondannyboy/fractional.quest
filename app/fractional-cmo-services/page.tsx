@@ -88,7 +88,7 @@ export default function FractionalCMOServicesPage() {
           </div>
           <div className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              A <strong className="font-semibold text-gray-900">Fractional CMO</strong> is an experienced Chief Marketing Officer who works with your company on a part-time basis—typically 1-3 days per week. You get the strategic marketing leadership, growth expertise, and team guidance of a senior CMO without the commitment and cost of a full-time hire.
+              A <strong className="font-semibold text-gray-900">Fractional CMO</strong> is an experienced Chief Marketing Officer who works with your company on a part-time basis—typically 1-3 days per week. This <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangement</a> allows you to access strategic marketing leadership, growth expertise, and team guidance of a senior CMO without the commitment and cost of a full-time hire.
             </p>
             <p>
               Unlike marketing agencies who execute campaigns, a fractional CMO becomes your marketing leader. They set strategy, manage your team, choose the right channels, and take ownership of marketing results—they just don't do it five days a week.
@@ -100,10 +100,10 @@ export default function FractionalCMOServicesPage() {
             </div>
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Fractional CMO vs Marketing Agency</h3>
             <p>
-              A marketing agency executes tactics—they run ads, create content, manage social media. But they don't set your overall strategy, hire your team, or sit in your leadership meetings. They're vendors, not leaders. Understanding this distinction is crucial for UK businesses, as the <a href="https://www.instituteofentrepreneurship.co.uk" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">Institute of Entrepreneurship</a> reports that strategic marketing leadership drives significantly better growth outcomes than tactical execution alone.
+              A marketing agency executes tactics—they run ads, create content, manage social media. But they don't set your overall strategy, hire your team, or sit in your leadership meetings. They're vendors, not leaders. According to the <a href="https://www.cim.co.uk/professional-marketing-standards/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Chartered Institute of Marketing</a>, strategic marketing leadership drives significantly better growth outcomes than tactical execution alone.
             </p>
             <p>
-              A fractional CMO is an embedded executive. They own your marketing strategy, build and lead your team, manage agency relationships, and are accountable for growth. Working within UK <a href="https://www.asa.org.uk/codes-and-rulings.html" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">advertising regulations</a> and <a href="https://www.gov.uk/marketing-advertising-law" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">marketing law</a>, they ensure compliance while driving growth. Many companies use both: a fractional CMO to lead, with agencies handling execution.
+              A fractional CMO is an embedded executive. They own your marketing strategy, build and lead your team, manage agency relationships, and are accountable for growth. Working within UK <a href="https://www.ipa.co.uk/knowledge/code-of-conduct/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">advertising standards</a>, they ensure compliance while driving growth. Many companies use both: a fractional CMO to lead, with agencies handling execution.
             </p>
           </div>
         </div>
@@ -126,7 +126,7 @@ export default function FractionalCMOServicesPage() {
               },
               {
                 title: 'Team Leadership',
-                description: 'Lead and develop your marketing team. Hire key roles, set structure, create processes, and mentor team members.',
+                description: 'Lead and develop your marketing team. Hire key roles, set structure, create processes, and mentor team members according to professional development best practices.',
                 icon: '👥',
               },
               {
@@ -176,7 +176,7 @@ export default function FractionalCMOServicesPage() {
             {[
               {
                 title: 'Cost Efficiency',
-                description: 'Access CMO-level expertise at 40-60% less than a full-time hire. Pay only for the time you need—typically £70,000-£140,000 per year versus £180,000+ for full-time.',
+                description: 'Access CMO-level expertise at 40-60% less than a full-time hire. Pay only for the time you need—typically £70,000-£140,000 per year versus £180,000+ for full-time, aligning with current UK employment cost trends.',
                 stat: '50%',
                 statLabel: 'Cost Savings',
               },
@@ -188,13 +188,13 @@ export default function FractionalCMOServicesPage() {
               },
               {
                 title: 'Growth Expertise',
-                description: 'Get a CMO with 15+ years of experience who has scaled companies like yours. They know what works and what doesn\'t—no learning on your dime.',
+                description: 'Get a CMO with 15+ years of experience who has scaled companies like yours. They know what works and what doesn\'t—no learning on your dime. This expertise is particularly valuable for businesses seeking growth capital, as highlighted by <a href="https://www.british-business-bank.co.uk/finance-hub/business-guidance/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank research</a>.',
                 stat: '15+',
                 statLabel: 'Years Experience',
               },
               {
                 title: 'Flexibility',
-                description: 'Increase time for product launches or campaigns, reduce during steady periods. Engagements flex with your needs without long-term commitments.',
+                description: 'Increase time for product launches or campaigns, reduce during steady periods. This flexible working model allows engagements to flex with your needs without long-term commitments.',
                 stat: '1-5',
                 statLabel: 'Days/Week Flex',
               },
@@ -229,7 +229,7 @@ export default function FractionalCMOServicesPage() {
           </div>
           <div className="prose prose-lg prose-gray max-w-none mb-8">
             <p>
-              The right time to hire a fractional CMO depends on your marketing challenges. Here are the most common scenarios:
+              The right time to hire a fractional CMO depends on your marketing challenges and business stage. As highlighted by the <a href="https://www.scaleupinstitute.org.uk/insights/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a>, growing companies often need strategic marketing leadership before they can justify a full-time CMO. Here are the most common scenarios:
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -241,17 +241,17 @@ export default function FractionalCMOServicesPage() {
               },
               {
                 scenario: 'Scaling After Product-Market Fit',
-                description: 'You\'ve found PMF and need to pour fuel on the fire. Time to build a real marketing function with experienced leadership.',
+                description: 'You\'ve found PMF and need to pour fuel on the fire. Time to build a real marketing function with experienced leadership, particularly crucial for venture-backed growth.',
                 timing: 'Post-Series A/B',
               },
               {
                 scenario: 'Team Needs Leadership',
-                description: 'You have marketing staff but no senior leader. They need strategic direction, mentorship, and someone to make the big calls.',
+                description: 'You have marketing staff but no senior leader. They need strategic direction, mentorship, and someone to make the big calls while developing their professional capabilities.',
                 timing: 'When team exceeds 2-3',
               },
               {
                 scenario: 'CEO Stuck in Marketing',
-                description: 'If the CEO is writing copy, managing ads, and handling brand decisions, it\'s time to delegate to a marketing professional.',
+                description: 'If the CEO is writing copy, managing ads, and handling brand decisions, it\'s time to delegate to a marketing professional. The <a href="https://www.gov.uk/business-support-helpline" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">government\'s business support resources</a> highlight the importance of strategic delegation for growth.',
                 timing: 'Before burnout',
               },
               {
@@ -289,7 +289,7 @@ export default function FractionalCMOServicesPage() {
             <ul className="text-gray-600">
               <li><strong>Day Rate:</strong> £700-£1,400 per day (depending on experience and specialisation)</li>
               <li><strong>Monthly Retainer:</strong> £3,000-£5,500 for 1-2 days per week</li>
-              <li><strong>Annual Cost:</strong> £70,000-£140,000 (vs £180,000+ for full-time)</li>
+              <li><strong>Annual Cost:</strong> £70,000-£140,000 (vs £180,000+ for full-time, based on <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS employment data</a>)</li>
             </ul>
             <p className="text-sm text-gray-500">
               Pricing varies based on the CMO's experience, your industry, and role complexity.
@@ -324,8 +324,8 @@ export default function FractionalCMOServicesPage() {
             <h3 className="text-xl font-bold text-gray-900">What to Look For</h3>
             <ul className="text-gray-600">
               <li><strong>Relevant Experience:</strong> Have they driven growth at companies like yours (stage, model, audience)?</li>
-              <li><strong>Channel Expertise:</strong> Do they know the channels that matter for you (PLG, demand gen, brand, ABM)?</li>
-              <li><strong>Leadership Skills:</strong> Can they build and lead teams, not just execute tactics?</li>
+              <li><strong>Channel Expertise:</strong> Do they know the channels that matter for you (PLG, demand gen, brand, ABM)? Look for <a href="https://www.dma.org.uk/training-and-qualifications" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">professional marketing qualifications</a> and proven expertise.</li>
+              <li><strong>Leadership Skills:</strong> Can they build and lead teams, not just execute tactics? Strong candidates demonstrate <a href="https://www.cipd.org/uk/knowledge/factsheets/leadership-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">effective leadership capabilities</a>.</li>
               <li><strong>Results Track Record:</strong> Can they demonstrate measurable impact from previous roles?</li>
               <li><strong>Cultural Fit:</strong> Will they integrate with your team and work style?</li>
             </ul>
@@ -339,16 +339,16 @@ export default function FractionalCMOServicesPage() {
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Industries</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional CMOs by Industry</h2>
-            <p className="text-gray-600 mt-4">Specialists with deep sector experience</p>
+            <p className="text-gray-600 mt-4">Specialists with deep sector experience. According to <a href="https://www.marketingweek.com/marketing-leadership-trends/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Marketing Week</a>, industry-specific marketing expertise is increasingly valued by growing businesses.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { name: 'B2B SaaS', description: 'Product-led growth, demand generation, content marketing, ABM', link: '/fractional-jobs-saas' },
               { name: 'E-commerce & DTC', description: 'Performance marketing, lifecycle, retention, marketplace strategy', link: '/fractional-jobs-ecommerce' },
-              { name: 'FinTech', description: 'Trust building, compliance marketing, B2B and B2C strategies', link: '/fractional-jobs-finance' },
+              { name: 'FinTech', description: 'Trust building, compliance marketing, B2B and B2C strategies for regulated environments', link: '/fractional-jobs-finance' },
               { name: 'HealthTech', description: 'Healthcare marketing, HCP engagement, regulatory considerations', link: '/fractional-jobs-healthcare' },
               { name: 'Professional Services', description: 'Thought leadership, BD marketing, partner marketing', link: '/fractional-jobs-professional-services' },
-              { name: 'Startups & Scale-ups', description: 'Zero-to-one marketing, GTM strategy, brand building', link: '/fractional-jobs-startups' },
+              { name: 'Startups & Scale-ups', description: 'Zero-to-one marketing, GTM strategy, brand building for high-growth ventures', link: '/fractional-jobs-startups' },
             ].map((industry, index) => (
               <Link key={index} href={industry.link} className="block bg-white p-6 border border-gray-200 hover:border-amber-300 hover:shadow-lg transition-all">
                 <h3 className="font-bold text-gray-900 mb-2">{industry.name}</h3>
@@ -378,7 +378,7 @@ export default function FractionalCMOServicesPage() {
             Ready to Hire a<br /><span className="text-amber-400">Fractional CMO?</span>
           </h2>
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            Tell us about your growth challenges and we'll match you with pre-vetted fractional CMOs who have solved them before. Start conversations within 48 hours.
+            Tell us about your growth challenges and we'll match you with pre-vetted fractional CMOs who have solved them before. Working with <a href="https://www.iod.com/services/resources/business-growth/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> best practices, we'll connect you with the right leadership. Start conversations within 48 hours.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact/companies" className="px-10 py-5 bg-amber-500 text-black font-bold uppercase tracking-wider hover:bg-amber-400 transition-colors">

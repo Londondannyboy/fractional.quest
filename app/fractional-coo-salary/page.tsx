@@ -43,12 +43,14 @@ export default function FractionalCooSalaryPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-900 to-blue-800 py-20">
-        <div className="max-w-4xl mx-auto px-4">
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-800 py-20">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 to-blue-800/90" />
+        <div className="max-w-4xl mx-auto px-4 relative z-10">
           <Link href="/" className="text-blue-200 hover:text-gray-900 mb-6 inline-block">← Back to Home</Link>
-          <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">Fractional COO Salary 2025</h1>
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Fractional COO Salary 2025</h1>
           <p className="text-xl text-blue-100 mb-8">
-            Complete guide to fractional COO pay rates, day rates, and annual earnings in the US market.
+            Complete guide to fractional COO pay rates, day rates, and annual earnings in the US market. Understanding <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-blue-100 underline">IR35 regulations</a> is essential for fractional executives operating through limited companies.
           </p>
         </div>
       </section>
@@ -91,6 +93,9 @@ export default function FractionalCooSalaryPage() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-black mb-8">Fractional COO Day Rates by Experience</h2>
+          <p className="text-gray-600 mb-6">
+            These rates reflect the growing demand for <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a> among senior executives. According to <a href="https://www.cipd.org.uk/knowledge/fundamentals/pay-reward/salary-surveys/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD salary surveys</a>, operational leadership roles command premium rates in the current market.
+          </p>
 
           <div className="space-y-4">
             {salaryData.dayRates.map((tier) => (
@@ -98,7 +103,7 @@ export default function FractionalCooSalaryPage() {
                 <div className="flex justify-between items-start mb-2">
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">{tier.level}</h3>
-                    <p className="text-sm text-gray-600">{tier.experience} experience</p>
+                    <p className="text-sm text-gray-600">{tier.experience} experience in operations management</p>
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-black text-blue-700">{tier.range}</div>
@@ -108,6 +113,9 @@ export default function FractionalCooSalaryPage() {
               </div>
             ))}
           </div>
+          <p className="text-gray-600 mt-6">
+            Many fractional COOs are members of professional bodies like the <a href="https://www.managers.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Chartered Management Institute (CMI)</a> or the <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors (IoD)</a>, which provide professional development and networking opportunities.
+          </p>
         </div>
       </section>
 
@@ -115,6 +123,9 @@ export default function FractionalCooSalaryPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-black mb-8">Fractional COO Rates by Location</h2>
+          <p className="text-gray-600 mb-6">
+            Geographic salary variations are tracked by the <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS employment and labour market data</a>. Remote work has enabled fractional executives to serve clients nationwide while maintaining competitive rates.
+          </p>
 
           <div className="space-y-3">
             {salaryData.byLocation.map((loc) => (
@@ -134,6 +145,9 @@ export default function FractionalCooSalaryPage() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-black mb-8">Fractional COO Rates by Industry</h2>
+          <p className="text-gray-600 mb-6">
+            Industry-specific rates vary significantly. The <a href="https://www.makeuk.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Make UK manufacturing association</a> provides insights into operational leadership needs in manufacturing, while <a href="https://scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> research shows particularly high demand for fractional COOs in high-growth technology companies.
+          </p>
 
           <div className="space-y-3">
             {salaryData.byIndustry.map((ind) => (
@@ -146,6 +160,9 @@ export default function FractionalCooSalaryPage() {
               </div>
             ))}
           </div>
+          <p className="text-gray-600 mt-6">
+            Self-employed fractional executives should consult <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IPSE (Association of Independent Professionals and the Self-Employed)</a> for guidance on rates, contracts, and best practices in the UK market.
+          </p>
         </div>
       </section>
 
@@ -156,6 +173,9 @@ export default function FractionalCooSalaryPage() {
           <p className="text-xl text-blue-100 mb-8">
             2-3 clients × 2 days/week × $1,300/day = $156k-$234k annually<br />
             4 clients × 2 days/week = $312k/year
+          </p>
+          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+            Growing businesses backed by the <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-blue-100 underline">British Business Bank</a> and venture capital firms increasingly seek fractional COOs to scale operations efficiently without the commitment of a full-time executive hire.
           </p>
           <Link
             href="/fractional-coo-jobs-uk"
@@ -171,7 +191,7 @@ export default function FractionalCooSalaryPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-black mb-6">Ready to Become a Fractional COO?</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Learn how to transition from full-time to fractional operations leadership.
+            Learn how to transition from full-time to fractional operations leadership. Professional bodies like <a href="https://www.apm.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">APM (Association for Project Management)</a> offer valuable certifications that can enhance your credibility as a fractional executive.
           </p>
           <Link
             href="/how-to-become-fractional-coo"

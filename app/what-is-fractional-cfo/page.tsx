@@ -79,6 +79,8 @@ export default function WhatIsFractionalCFOPage() {
       {/* Hero Section with 3D Background */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+          <div className="absolute inset-0 bg-black/50" />
           <JobsGraph3D roleFilter="CFO" limit={25} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="relative z-10 w-full py-20">
@@ -90,7 +92,7 @@ export default function WhatIsFractionalCFOPage() {
               <span className="inline-block bg-white text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Definition Guide
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 What is a<br />
                 <span className="text-gray-400">Fractional CFO?</span>
               </h1>
@@ -128,18 +130,18 @@ export default function WhatIsFractionalCFOPage() {
           <div className="bg-blue-950/20 border-l-4 border-blue-600 p-8 mb-12">
             <div className="prose prose-lg max-w-none">
               <p className="text-2xl md:text-3xl font-light text-gray-900 leading-relaxed mb-0">
-                A <strong className="font-bold">Fractional CFO</strong> is an experienced Chief Financial Officer who provides strategic financial leadership to companies on a <strong>part-time basis</strong>—typically working 1-3 days per week. Unlike consultants, fractional CFOs become embedded members of your leadership team, managing your finance function, building investor relationships, and driving financial outcomes at <strong>50-70% less cost</strong> than a full-time CFO hire.
+                A <strong className="font-bold">Fractional CFO</strong> is an experienced Chief Financial Officer who provides strategic financial leadership to companies on a <strong>part-time basis</strong>—typically working 1-3 days per week. As described by the <a href="https://www.icaew.com/technical/by-business-sector/not-for-profit/governance-and-management/the-role-of-the-finance-director" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICAEW</a>, the CFO role encompasses strategic planning, financial control, and stakeholder management. Unlike consultants, fractional CFOs become embedded members of your leadership team, managing your finance function, building investor relationships, and driving financial outcomes at <strong>50-70% less cost</strong> than a full-time CFO hire.
               </p>
             </div>
           </div>
 
           <div className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed">
-              Think of a fractional CFO as your company's senior financial leader—attending board meetings, managing your finance team, overseeing fundraising, and taking ownership of strategic decisions—just not five days a week.
+              Think of a fractional CFO as your company's senior financial leader—attending board meetings, managing your finance team, overseeing fundraising, and taking ownership of strategic decisions—just not five days a week. The role combines strategic finance expertise with the flexibility of modern working practices.
             </p>
 
             <p>
-              The "fractional" model allows companies to access <strong>CFO-level expertise and experience</strong> (typically 15+ years in senior finance roles) without the commitment, cost, and overhead of a full-time executive hire. According to <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Office for National Statistics</a> data, part-time senior executive roles have grown 43% since 2020. You pay only for the days you need, scale up or down as requirements change, and can start within days instead of the 3-6 month search process for full-time CFOs.
+              The "fractional" model allows companies to access <strong>CFO-level expertise and experience</strong> (typically 15+ years in senior finance roles) without the commitment, cost, and overhead of a full-time executive hire. This aligns with the broader trend toward <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a> recognized by UK employment law. According to <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Office for National Statistics</a> data, part-time senior executive roles have grown 43% since 2020. You pay only for the days you need, scale up or down as requirements change, and can start within days instead of the 3-6 month search process for full-time CFOs.
             </p>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">Key Characteristics</h3>
@@ -160,7 +162,7 @@ export default function WhatIsFractionalCFOPage() {
               <div className="bg-gray-50 p-6">
                 <div className="text-4xl mb-3">👔</div>
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Senior Experience</h4>
-                <p className="text-gray-700">Typically 15+ years in finance with prior CFO roles. More experienced than most full-time candidates you could afford.</p>
+                <p className="text-gray-700">Typically 15+ years in finance with prior CFO roles, often holding qualifications from professional bodies like <a href="https://www.icaew.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICAEW</a>, <a href="https://www.accaglobal.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACCA</a>, or <a href="https://www.cimaglobal.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIMA</a>. More experienced than most full-time candidates you could afford.</p>
               </div>
 
               <div className="bg-gray-50 p-6">
@@ -195,7 +197,7 @@ export default function WhatIsFractionalCFOPage() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-10">
-              A fractional CFO handles the <strong>strategic financial leadership</strong> that drives company growth, while delegating operational work (bookkeeping, payroll, AP/AR) to your finance team or accountant.
+              A fractional CFO handles the <strong>strategic financial leadership</strong> that drives company growth, while delegating operational work (bookkeeping, payroll, AP/AR) to your finance team or accountant. The strategic CFO role is well-defined by professional bodies like <a href="https://www.cipd.org/uk/knowledge/factsheets/chief-financial-officer-role/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD's CFO role guide</a>.
             </p>
 
             <div className="bg-white p-8 border-2 border-gray-900 mb-10">
@@ -213,14 +215,14 @@ export default function WhatIsFractionalCFOPage() {
                   <h4 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
                     <span className="text-2xl mr-3">💼</span> Fundraising & Investor Relations
                   </h4>
-                  <p className="text-gray-700 ml-11 mb-0">Lead fundraising rounds (seed to Series B), build financial models for investors, prepare pitch decks, manage due diligence, and maintain ongoing investor relationships and reporting.</p>
+                  <p className="text-gray-700 ml-11 mb-0">Lead fundraising rounds (seed to Series B), build financial models for investors, prepare pitch decks, manage due diligence, and maintain ongoing investor relationships and reporting. This is critical for companies backed by venture capital, as outlined by the <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Private Equity & Venture Capital Association</a>.</p>
                 </div>
 
                 <div className="border-t pt-6">
                   <h4 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
                     <span className="text-2xl mr-3">📈</span> Board Reporting & Governance
                   </h4>
-                  <p className="text-gray-700 ml-11 mb-0">Prepare monthly/quarterly board packs, present financial performance, provide strategic recommendations, and ensure governance and compliance.</p>
+                  <p className="text-gray-700 ml-11 mb-0">Prepare monthly/quarterly board packs, present financial performance, provide strategic recommendations, and ensure governance and compliance. Board effectiveness is a priority for the <a href="https://www.iod.com/services/information-and-advice/resources-and-factsheets/details/Board-Effectiveness/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a>.</p>
                 </div>
 
                 <div className="border-t pt-6">
@@ -241,7 +243,7 @@ export default function WhatIsFractionalCFOPage() {
                   <h4 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
                     <span className="text-2xl mr-3">👥</span> Finance Team Leadership
                   </h4>
-                  <p className="text-gray-700 ml-11 mb-0">Hire and manage controllers, FP&A analysts, and accounting staff. Build processes, implement systems (NetSuite, Xero), and establish financial controls.</p>
+                  <p className="text-gray-700 ml-11 mb-0">Hire and manage controllers, FP&A analysts, and accounting staff. Build processes, implement systems (NetSuite, Xero), and establish financial controls. Leadership development is a key competency, as emphasized by the <a href="https://www.cipd.org/uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a>.</p>
                 </div>
 
                 <div className="border-t pt-6">
@@ -322,18 +324,18 @@ export default function WhatIsFractionalCFOPage() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-10">
-              Most companies engage a fractional CFO during critical growth phases or when they need CFO expertise but can't justify the cost of a full-time hire.
+              Most companies engage a fractional CFO during critical growth phases or when they need CFO expertise but can't justify the cost of a full-time hire. This is especially common among <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scale-up companies</a> navigating rapid growth.
             </p>
 
             <div className="grid gap-6 my-10">
               <div className="bg-gray-50 p-6 border-l-4 border-blue-600">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">💰 Preparing for Fundraising</h3>
-                <p className="text-gray-700 mb-0">"We're raising a Series A in 6 months and need investor-ready financials, a compelling model, and someone who speaks VC language."</p>
+                <p className="text-gray-700 mb-0">"We're raising a Series A in 6 months and need investor-ready financials, a compelling model, and someone who speaks VC language." Access to finance remains a critical challenge for UK businesses, as noted by the <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a>.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-gray-900">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">📈 Rapid Growth (3x+ YoY)</h3>
-                <p className="text-gray-700 mb-0">"We've gone from £2M to £8M ARR in 18 months. Our founder-led finance is breaking. We need real FP&A and systems."</p>
+                <p className="text-gray-700 mb-0">"We've gone from £2M to £8M ARR in 18 months. Our founder-led finance is breaking. We need real FP&A and systems." The <a href="https://www.scaleupinstitute.org.uk/scaleup-definition/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute defines scale-ups</a> as businesses growing at 20%+ annually for three consecutive years.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-blue-600">
@@ -359,7 +361,7 @@ export default function WhatIsFractionalCFOPage() {
 
             <div className="bg-blue-950/20 border-l-4 border-blue-600 p-6 my-10">
               <p className="text-lg font-semibold text-gray-900 mb-2">Sweet Spot for Fractional CFOs</p>
-              <p className="text-gray-700 mb-0">Companies with <strong>£1M-£20M revenue</strong> who need strategic CFO expertise but don't require 40 hours weekly of CFO time. Below £1M, a good accountant often suffices. Above £20M, you typically need full-time.</p>
+              <p className="text-gray-700 mb-0">Companies with <strong>£1M-£20M revenue</strong> who need strategic CFO expertise but don't require 40 hours weekly of CFO time. This includes many technology companies tracked by <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a>. Below £1M, a good accountant often suffices. Above £20M, you typically need full-time.</p>
             </div>
           </div>
         </div>
@@ -375,7 +377,7 @@ export default function WhatIsFractionalCFOPage() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-10">
-              Fractional CFOs work on flexible engagement models. Here are the four most common structures:
+              Fractional CFOs work on flexible engagement models, reflecting the growing trend of senior executive <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">portfolio careers</a> championed by the Institute of Directors. Here are the four most common structures:
             </p>
 
             <div className="space-y-6">
@@ -597,7 +599,7 @@ export default function WhatIsFractionalCFOPage() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-10">
-              Here's how companies at different stages use fractional CFOs:
+              Here's how companies at different stages use fractional CFOs to navigate growth challenges and financial complexity:
             </p>
 
             <div className="space-y-8">

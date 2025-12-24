@@ -69,7 +69,12 @@ export default async function EcommercePage() {
       {/* Hero Section with 3D Knowledge Graph Background */}
       <section className="relative min-h-[85vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <JobsGraph3D limit={30} height="100%" isHero={true} showOverlay={true} />
+          <img
+            src="https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="E-commerce background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
         {/* Bottom-aligned content with glass panel */}
@@ -87,13 +92,13 @@ export default async function EcommercePage() {
                     {stats.totalEcommerce}+ E-commerce Opportunities
                   </span>
 
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
                     Fractional Jobs<br />
                     <span className="text-pink-300">E-commerce</span>
                   </h1>
 
                   <p className="text-lg text-white/70 mb-8 leading-relaxed max-w-lg">
-                    CFO, CMO, CTO roles in online retail, DTC brands, and marketplaces. £600-£1,100 daily rates. Help brands scale to £50m+ revenue.
+                    CFO, CMO, CTO roles in online retail, DTC brands, and marketplaces. £600-£1,100 daily rates. Help brands scale to £50m+ revenue with insights from <a href="https://technation.io" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a>.
                   </p>
 
                   <div className="flex flex-wrap gap-4">
@@ -118,7 +123,7 @@ export default async function EcommercePage() {
                 <div className="bg-gray-50/40 backdrop-blur-md rounded-2xl p-6 border border-white/10">
                   <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                     <div className="text-center">
-                      <div className="text-3xl md:text-4xl font-bold text-white font-mono">£150bn</div>
+                      <div className="text-3xl md:text-4xl font-bold text-white font-mono"><a href="https://www.ons.gov.uk/businessindustryandtrade/retailindustry" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-200 underline">£150bn</a></div>
                       <div className="text-xs text-white/50 uppercase tracking-wider mt-1">UK E-commerce</div>
                     </div>
                     <div className="text-center">
@@ -159,7 +164,7 @@ export default async function EcommercePage() {
           <div className="text-center mb-16">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">By Sector</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">E-commerce Subsectors</h2>
-            <p className="text-xl text-gray-500">High-growth areas hiring fractional executives</p>
+            <p className="text-xl text-gray-500">High-growth areas hiring fractional executives across <a href="https://www.british-business-bank.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK digital commerce</a></p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {ecommerceSubsectors.map((sector) => (
@@ -180,7 +185,7 @@ export default async function EcommercePage() {
           <div className="text-center mb-16">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">By Role</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Top E-commerce Roles</h2>
-            <p className="text-xl text-gray-500">Most in-demand fractional positions</p>
+            <p className="text-xl text-gray-500">Most in-demand fractional positions, with leadership skills outlined by <a href="https://www.iod.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD</a></p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {ecommerceRoles.map((role) => (
@@ -209,7 +214,7 @@ export default async function EcommercePage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Massive Market</h3>
               <p className="text-gray-600">
-                UK e-commerce is a £150bn market representing 30% of retail. Thousands of DTC brands and marketplaces need experienced leadership to scale.
+                UK e-commerce is a <a href="https://www.imrg.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">£150bn market</a> representing 30% of retail. Thousands of DTC brands and marketplaces need experienced leadership to scale.
               </p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8">
@@ -218,7 +223,7 @@ export default async function EcommercePage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Clear Impact</h3>
               <p className="text-gray-600">
-                E-commerce metrics are transparent. CMOs can show CAC/LTV improvements. CFOs can demonstrate cash flow optimization. Impact is immediate and measurable.
+                E-commerce metrics are transparent. CMOs can show CAC/LTV improvements using <a href="https://www.dma.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">DMA best practices</a>. CFOs can demonstrate cash flow optimization. Impact is immediate and measurable.
               </p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8">
@@ -227,19 +232,19 @@ export default async function EcommercePage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Remote-First</h3>
               <p className="text-gray-600">
-                E-commerce companies are digital-native and remote-friendly. Most fractional roles offer flexible working arrangements with minimal travel requirements.
+                E-commerce companies are digital-native and remote-friendly. Most fractional roles offer <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a> with minimal travel requirements.
               </p>
             </div>
           </div>
           <div className="mt-12 max-w-4xl mx-auto">
             <p className="text-gray-700 leading-relaxed mb-4">
-              The UK ecommerce sector continues explosive growth. <a href="https://www.internetretailing.net" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">Internet Retailing</a> reports UK online sales exceeded £120bn in 2023, creating unprecedented demand for fractional executives who understand omnichannel strategy, marketplace optimization, and D2C scaling.
+              The UK ecommerce sector continues explosive growth. <a href="https://www.imrg.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IMRG</a> reports UK online sales exceeded £120bn in 2023, creating unprecedented demand for fractional executives who understand omnichannel strategy, marketplace optimization, and D2C scaling. <a href="https://www.techuk.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">TechUK</a> highlights the critical role of digital technology in driving this transformation.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Rapid sector evolution drives fractional leadership needs. <a href="https://www.imrg.org" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">IMRG (Interactive Media in Retail Group)</a> tracking shows ecommerce companies face challenges in customer acquisition costs, logistics optimization, and marketplace competition—requiring fractional CMO and COO expertise. The shift to mobile-first and social commerce adds demand for growth and product leadership.
+              Rapid sector evolution drives fractional leadership needs. E-commerce companies face challenges in customer acquisition costs, logistics optimization, and marketplace competition—requiring fractional CMO and COO expertise. The shift to mobile-first and social commerce adds demand for growth and product leadership, with <a href="https://www.cim.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIM</a> research showing digital marketing capabilities as essential for scaling DTC brands.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              For fractional executives, ecommerce offers dynamic opportunities: fast-moving companies with clear metrics (conversion rates, CAC, LTV) where impact is immediately measurable. <a href="https://www.retaileconomics.co.uk/" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">Retail Economics</a> reports continued investment in ecommerce infrastructure and technology, sustaining demand for technical and operational expertise.
+              For fractional executives, ecommerce offers dynamic opportunities: fast-moving companies with clear metrics (conversion rates, CAC, LTV) where impact is immediately measurable. The <a href="https://www.scaleupinstitute.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> reports continued investment in ecommerce infrastructure and technology, sustaining demand for technical and operational expertise.
             </p>
           </div>
         </div>
@@ -251,7 +256,7 @@ export default async function EcommercePage() {
           <div className="text-center mb-12">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">Tax Planning</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">IR35 Calculator</h2>
-            <p className="text-xl text-gray-500">Understand your take-home as an e-commerce fractional executive</p>
+            <p className="text-xl text-gray-500">Understand your take-home as an e-commerce fractional executive. See <a href="https://www.gov.uk/guidance/understanding-off-payroll-working-ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">official IR35 guidance</a> for more details</p>
           </div>
           <IR35Calculator defaultDayRate={850} />
         </div>
@@ -263,7 +268,7 @@ export default async function EcommercePage() {
           <div className="text-center mb-12">
             <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-600 mb-4 block">FAQ</span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">E-commerce Fractional FAQs</h2>
-            <p className="text-xl text-gray-500">Common questions about fractional work in e-commerce</p>
+            <p className="text-xl text-gray-500">Common questions about fractional work in e-commerce. For HR best practices, see <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD resources</a></p>
           </div>
           <FAQ items={ECOMMERCE_FAQS} title="" />
         </div>
@@ -295,7 +300,7 @@ export default async function EcommercePage() {
             Ready for E-commerce Leadership?
           </h2>
           <p className="text-xl text-gray-600 mb-10">
-            {stats.totalEcommerce}+ fractional opportunities in online retail and DTC brands
+            {stats.totalEcommerce}+ fractional opportunities in online retail and DTC brands. Join the <a href="https://www.british-business-bank.co.uk/small-business-scaleup-resources/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK's scaling ecosystem</a>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

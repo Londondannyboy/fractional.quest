@@ -34,7 +34,7 @@ async function getHRStats() {
 const INTERIM_FAQS = [
   {
     question: 'What is an Interim HR Director?',
-    answer: 'An Interim HR Director is an experienced HR leader who takes on a full-time temporary role (typically 3-12 months) to cover gaps, lead transformation, or bridge to a permanent hire. Unlike fractional HR (part-time ongoing), interim is full-time for a defined period.'
+    answer: 'An Interim HR Director is an experienced HR leader who takes on a full-time temporary role (typically 3-12 months) to cover gaps, lead transformation, or bridge to a permanent hire. Unlike fractional HR (part-time ongoing), interim is full-time for a defined period. These professionals typically have <a href="https://www.cipd.org/uk/knowledge/factsheets/hr-profession-map-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">senior CIPD qualifications</a> and extensive strategic experience.'
   },
   {
     question: 'How much does an Interim HR Director cost?',
@@ -42,7 +42,7 @@ const INTERIM_FAQS = [
   },
   {
     question: 'When should I hire Interim vs Fractional HR?',
-    answer: 'Hire Interim for: gap-fill (CHRO left suddenly), crisis management, full-time project (restructure, M&A integration), or bridge to permanent hire. Hire Fractional for: ongoing strategic support, building HR function, when you don\'t need 5 days/week.'
+    answer: 'Hire Interim for: gap-fill (CHRO left suddenly), crisis management, full-time project (restructure, M&A integration), or bridge to permanent hire. Hire Fractional for: ongoing strategic support, building HR function, when you don\'t need 5 days/week. Consider current <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">employment market conditions</a> when making this decision.'
   },
   {
     question: 'How long do Interim HR Director engagements last?',
@@ -50,7 +50,7 @@ const INTERIM_FAQS = [
   },
   {
     question: 'What is the difference between Interim and Permanent HR Director?',
-    answer: 'Interim HR Directors work full-time temporarily as contractors (outside IR35 usually), with defined end dates. Permanent HR Directors are employees with ongoing contracts, benefits, equity, and employment rights. Interims cost more daily but less overall for short-term needs.'
+    answer: 'Interim HR Directors work full-time temporarily as contractors (outside IR35 usually), with defined end dates. Permanent HR Directors are <a href="https://www.gov.uk/employment-contracts-and-conditions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">employees</a> with ongoing contracts, benefits, equity, and employment rights. Interims cost more daily but less overall for short-term needs, offering <a href="https://www.cbi.org.uk/articles/how-to-build-a-flexible-workforce/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">workforce flexibility</a> for businesses.'
   },
 ]
 
@@ -62,7 +62,12 @@ export default async function InterimHRDirectorPage() {
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <JobsGraph3D categoryFilter="HR" limit={25} height="100%" isHero={true} showOverlay={true} />
+          <img
+            src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="HR Director"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 w-full py-16">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -73,7 +78,7 @@ export default async function InterimHRDirectorPage() {
               <span className="inline-block bg-gray-700 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Interim Guide
               </span>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Interim<br />
                 <span className="text-pink-400">HR Director</span>
               </h1>
@@ -105,7 +110,7 @@ export default async function InterimHRDirectorPage() {
           <div className="bg-gray-50 border-l-4 border-gray-900 p-8 mb-12">
             <h2 className="text-2xl font-black text-gray-900 mb-4">What is an Interim HR Director?</h2>
             <p className="text-xl text-gray-700 mb-0">
-              An <strong>Interim HR Director</strong> is a senior HR professional who takes on a <strong>full-time temporary role</strong> for a defined period—typically 3-12 months. Unlike fractional HR (part-time, ongoing), interim HR provides 5-day-per-week presence for specific situations: gap-fill when a CHRO departs, leading major transformation, or bridging to a permanent hire.
+              An <strong>Interim HR Director</strong> is a senior HR professional who takes on a <strong>full-time temporary role</strong> for a defined period—typically 3-12 months. Unlike fractional HR (part-time, ongoing), interim HR provides 5-day-per-week presence for specific situations: gap-fill when a CHRO departs, leading <a href="https://www.cipd.org/uk/knowledge/guides/organisational-development/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">major transformation</a>, or bridging to a permanent hire. These roles often involve navigating complex <a href="https://www.gov.uk/browse/employing-people" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">employment law requirements</a> while driving strategic HR initiatives.
             </p>
           </div>
         </div>
@@ -129,7 +134,7 @@ export default async function InterimHRDirectorPage() {
                 <tr className="border-b">
                   <td className="p-4 font-semibold">Time Commitment</td>
                   <td className="p-4">5 days/week (full-time)</td>
-                  <td className="p-4 bg-pink-50">1-3 days/week (part-time)</td>
+                  <td className="p-4 bg-pink-50">1-3 days/week (<a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working</a>)</td>
                 </tr>
                 <tr className="border-b">
                   <td className="p-4 font-semibold">Duration</td>
@@ -180,17 +185,17 @@ export default async function InterimHRDirectorPage() {
           <div className="grid gap-6">
             <div className="bg-gray-50 p-6 border-l-4 border-gray-900">
               <h3 className="text-xl font-black text-gray-900 mb-3">Gap-Fill / Sudden Departure</h3>
-              <p className="text-gray-700 mb-0">"Our CHRO just resigned with 4 weeks notice. We need someone to step in immediately and maintain momentum while we recruit a permanent replacement." Typical duration: 4-8 months.</p>
+              <p className="text-gray-700 mb-0">"Our CHRO just resigned with 4 weeks notice. We need someone to step in immediately and maintain momentum while we recruit a permanent replacement." This ensures continuity in critical HR functions including <a href="https://www.acas.org.uk/checking-an-employees-right-to-work" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">right to work compliance</a> and employee relations. Typical duration: 4-8 months.</p>
             </div>
 
             <div className="bg-gray-50 p-6 border-l-4 border-pink-500">
               <h3 className="text-xl font-black text-gray-900 mb-3">Major Transformation</h3>
-              <p className="text-gray-700 mb-0">"We're undertaking a significant restructure, cultural change programme, or M&A integration that requires full-time senior HR leadership." Typical duration: 6-12 months.</p>
+              <p className="text-gray-700 mb-0">"We're undertaking a significant <a href="https://www.shrm.org/topics-tools/tools/toolkits/managing-organizational-change" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">restructure</a>, cultural change programme, or M&A integration that requires full-time senior HR leadership." These initiatives often involve <a href="https://www.scaleupinstitute.org.uk/scaleup-programmes/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scaling organizational capabilities</a> to support rapid growth. Typical duration: 6-12 months.</p>
             </div>
 
             <div className="bg-gray-50 p-6 border-l-4 border-gray-900">
               <h3 className="text-xl font-black text-gray-900 mb-3">Crisis Management</h3>
-              <p className="text-gray-700 mb-0">"We're facing serious ER issues, multiple tribunals, or a culture crisis that needs immediate full-time attention to resolve." Typical duration: 3-6 months.</p>
+              <p className="text-gray-700 mb-0">"We're facing serious ER issues, multiple <a href="https://www.acas.org.uk/employment-tribunals" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">tribunals</a>, or a culture crisis that needs immediate full-time attention to resolve." Senior HR directors navigate these challenges while ensuring <a href="https://www.iod.com/news/news/articles/employment-law-what-directors-need-to-know/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">director compliance with employment law</a>. Typical duration: 3-6 months.</p>
             </div>
 
             <div className="bg-gray-50 p-6 border-l-4 border-pink-500">
@@ -202,7 +207,7 @@ export default async function InterimHRDirectorPage() {
           <div className="mt-12 bg-pink-50 p-8 border border-pink-200">
             <h3 className="text-xl font-black text-gray-900 mb-4">Don't Need Full-Time?</h3>
             <p className="text-gray-700 mb-4">
-              If you don't need 5-days-per-week presence, a <strong>fractional HR Director</strong> is likely more cost-effective. At £94k-£114k/year vs £220k-£312k for interim, you save significantly while still getting senior expertise.
+              If you don't need 5-days-per-week presence, a <strong>fractional HR Director</strong> is likely more cost-effective. At £94k-£114k/year vs £220k-£312k for interim, you save significantly while still getting senior expertise. Many <a href="https://www.british-business-bank.co.uk/finance-hub/business-guidance/growing-your-business/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">growing businesses</a> find this model provides the strategic oversight they need without full-time overhead.
             </p>
             <Link href="/fractional-hr-director" className="text-pink-600 hover:text-pink-700 font-semibold">
               Learn about Fractional HR Directors →

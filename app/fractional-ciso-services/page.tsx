@@ -118,7 +118,7 @@ export default function FractionalCISOServicesPage() {
               A <strong className="font-semibold text-gray-900">Fractional CISO</strong> (Chief Information Security Officer) is an experienced security executive who works with your company on a part-time basis—typically 1-3 days per week. You get strategic security leadership, compliance expertise, and risk management without the commitment and cost of a full-time hire.
             </p>
             <p>
-              Unlike security consultants who perform one-off assessments, a fractional CISO becomes your security leader. They build and own your security programme, manage risks, drive compliance, and ensure security enables your business rather than blocking it. Following <a href="https://www.isc2.org/Certifications" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:text-red-700 underline">(ISC)² professional standards</a> and <a href="https://www.isaca.org/credentialing" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:text-red-700 underline">ISACA governance frameworks</a>, they bring enterprise-grade security practices to growing companies.
+              Unlike security consultants who perform one-off assessments, a fractional CISO becomes your security leader. They build and own your security programme, manage risks, drive compliance, and ensure security enables your business rather than blocking it. Following <a href="https://www.isc2.org/Certifications" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">(ISC)² professional standards</a> and <a href="https://www.isaca.org/credentialing" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ISACA governance frameworks</a>, they bring enterprise-grade security practices to growing companies.
             </p>
             <div className="bg-gray-50 p-8 my-10 border-l-4 border-red-500">
               <p className="text-xl font-semibold text-gray-900 mb-0">
@@ -127,7 +127,7 @@ export default function FractionalCISOServicesPage() {
             </div>
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Security as a Business Enabler</h3>
             <p>
-              Many companies see security as a blocker—something that slows things down and adds cost. A good fractional CISO turns this around. They implement security that enables the business: winning enterprise deals, building customer trust, and protecting against real risks without unnecessary bureaucracy. Leveraging <a href="https://www.ncsc.gov.uk" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:text-red-700 underline">NCSC guidance</a> and <a href="https://www.crest-approved.org/" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:text-red-700 underline">CREST-accredited practices</a>, they build security programmes that scale with growth.
+              Many companies see security as a blocker—something that slows things down and adds cost. A good fractional CISO turns this around. They implement security that enables the business: winning enterprise deals, building customer trust, and protecting against real risks without unnecessary bureaucracy. Leveraging <a href="https://www.ncsc.gov.uk/collection/10-steps" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">NCSC guidance</a> and <a href="https://www.crest-approved.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CREST-accredited practices</a>, they build security programmes that scale with growth. This flexible approach aligns with <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">modern flexible working arrangements</a> that benefit both businesses and professionals.
             </p>
           </div>
         </div>
@@ -145,44 +145,44 @@ export default function FractionalCISOServicesPage() {
             {[
               {
                 title: 'Security Strategy',
-                description: 'Develop security strategy aligned with business objectives. Create roadmaps that balance risk, cost, and business agility.',
+                description: <>Develop security strategy aligned with business objectives. Create roadmaps that balance risk, cost, and business agility following <a href="https://www.iod.com/services/information-and-advice/resources-and-factsheets/details/Corporate-Governance/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD governance principles</a>.</>,
                 icon: '🎯',
               },
               {
                 title: 'Compliance & Certifications',
-                description: 'Lead compliance programmes—SOC 2, ISO 27001, GDPR, PCI-DSS. Manage audits and ensure certifications are achieved and maintained.',
+                description: <>Lead compliance programmes—SOC 2, ISO 27001, GDPR, PCI-DSS. Manage audits and ensure certifications are achieved and maintained following <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICO data protection requirements</a>.</>,
                 icon: '✅',
               },
               {
                 title: 'Risk Management',
-                description: 'Identify, assess, and manage security risks. Build risk frameworks and ensure the business makes informed risk decisions.',
+                description: <>Identify, assess, and manage security risks. Build risk frameworks aligned with <a href="https://www.isaca.org/resources/isaca-journal/issues/2019/volume-1/the-risk-it-framework" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ISACA Risk IT</a> and ensure the business makes informed risk decisions.</>,
                 icon: '⚠️',
               },
               {
                 title: 'Security Operations',
-                description: 'Oversee security operations—monitoring, detection, and response. Ensure threats are identified and addressed quickly.',
+                description: <>Oversee security operations—monitoring, detection, and response using <a href="https://www.ncsc.gov.uk/collection/building-a-security-operations-centre" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">NCSC SOC guidance</a>. Ensure threats are identified and addressed quickly.</>,
                 icon: '🔍',
               },
               {
                 title: 'Incident Response',
-                description: 'Build and test incident response capabilities. Lead response when incidents occur and ensure lessons are learned.',
+                description: <>Build and test incident response capabilities based on <a href="https://www.ncsc.gov.uk/collection/incident-management" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">NCSC incident management guidance</a>. Lead response when incidents occur and ensure lessons are learned.</>,
                 icon: '🚨',
               },
               {
                 title: 'Vendor Security',
-                description: 'Assess and manage third-party security risks. Ensure vendors meet security requirements and don\'t introduce risk.',
+                description: <>Assess and manage third-party security risks following <a href="https://www.ncsc.gov.uk/collection/supply-chain-security" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">NCSC supply chain security</a> best practices. Ensure vendors meet security requirements and don't introduce risk.</>,
                 icon: '🤝',
               },
               {
                 title: 'Security Awareness',
-                description: 'Build security culture. Develop training programmes that make every employee part of the security team.',
+                description: <>Build security culture through comprehensive training programmes aligned with <a href="https://www.cipd.org/uk/knowledge/factsheets/learning-development-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD people development</a> best practices. Make every employee part of the security team.</>,
                 icon: '👥',
               },
             ].map((item, index) => (
               <div key={index} className="bg-white p-6 border border-gray-200 hover:border-red-300 transition-colors">
                 <div className="text-3xl mb-4">{item.icon}</div>
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.description}</p>
+                <div className="text-gray-600 text-sm">{item.description}</div>
               </div>
             ))}
           </div>
@@ -195,6 +195,9 @@ export default function FractionalCISOServicesPage() {
           <div className="mb-12 text-center">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Compliance</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Compliance Frameworks We Support</h2>
+            <p className="text-gray-600 mt-4">
+              Meeting regulatory requirements and achieving certifications recognised by <a href="https://www.bcs.org/membership-and-registrations/get-registered/professional-registration-for-it-technicians-rittech/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BCS professional standards</a>
+            </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
@@ -232,7 +235,7 @@ export default function FractionalCISOServicesPage() {
               },
               {
                 scenario: 'Compliance Requirements',
-                description: 'Need SOC 2, ISO 27001, or other certifications. Need leadership to scope, plan, and execute the certification project.',
+                description: <>Need SOC 2, ISO 27001, or other certifications aligned with <a href="https://www.ncsc.gov.uk/cyberessentials/overview" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Cyber Essentials</a>. Need leadership to scope, plan, and execute the certification project.</>,
                 timing: '6-9 months before audit',
               },
               {
@@ -242,23 +245,23 @@ export default function FractionalCISOServicesPage() {
               },
               {
                 scenario: 'Preparing for Fundraising',
-                description: 'Investors ask about security. Need to demonstrate mature security practices and have credible leadership.',
+                description: <>Investors ask about security. Need to demonstrate mature security practices and have credible leadership recognised by <a href="https://scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> standards.</>,
                 timing: '3-6 months before raise',
               },
               {
                 scenario: 'Scaling Rapidly',
-                description: 'Growing fast and security is being left behind. Need to build security that scales with the business.',
+                description: <>Growing fast and security is being left behind. <a href="https://technation.io/programmes/scaling/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation scaleups</a> need to build security that scales with the business.</>,
                 timing: 'Before it becomes a crisis',
               },
               {
                 scenario: 'Board Pressure',
-                description: 'Board wants oversight of security risks. Need executive-level reporting and governance.',
+                description: <>Board wants oversight of security risks following <a href="https://www.iod.com/services/information-and-advice/resources-and-factsheets/details/Cyber-Risk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD cyber risk governance</a>. Need executive-level reporting and governance.</>,
                 timing: 'At board request',
               },
             ].map((item, index) => (
               <div key={index} className="bg-white p-6 border border-gray-200">
                 <h3 className="font-bold text-gray-900 mb-2">{item.scenario}</h3>
-                <p className="text-gray-600 text-sm mb-3">{item.description}</p>
+                <div className="text-gray-600 text-sm mb-3">{item.description}</div>
                 <span className="inline-block text-xs font-bold text-red-600 uppercase tracking-wider">{item.timing}</span>
               </div>
             ))}

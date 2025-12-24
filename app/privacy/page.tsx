@@ -6,8 +6,8 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="text-4xl font-black text-gray-900 mb-8">Privacy Policy</h1>
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12" style={{ backgroundImage: 'url(https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1920)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <h1 className="text-4xl font-black text-white mb-8">Privacy Policy</h1>
 
       <div className="prose prose-lg max-w-none space-y-6 text-gray-600">
         <section>

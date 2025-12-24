@@ -96,7 +96,7 @@ export default function FractionalCMOCostPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Cost Calculator</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Calculate Your Savings</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Compare the cost of hiring a fractional CMO vs full-time. See potential savings in real-time.
+              Compare the cost of hiring a fractional CMO vs full-time. See potential savings in real-time. Understanding <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35 tax implications</a> is crucial when engaging fractional executives.
             </p>
           </div>
           <RoleCalculator role="cmo" />
@@ -201,7 +201,7 @@ export default function FractionalCMOCostPage() {
                 <p className="text-lg font-semibold text-gray-900 mb-2">Pro Tip: Start with a 3-Month Trial</p>
                 <p className="text-gray-700">
                   Most companies begin with a 3-month monthly retainer to assess fit. This gives the CMO time to audit, strategize,
-                  and deliver early wins. If it works, extend to 12 months. If not, part ways cleanly with 30 days notice.
+                  and deliver early wins. If it works, extend to 12 months. If not, part ways cleanly with 30 days notice. Consider <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a> to maximize value.
                 </p>
               </div>
             </div>
@@ -216,7 +216,7 @@ export default function FractionalCMOCostPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Rate Breakdown</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Fractional CMO Day Rates by Experience</h2>
             <p className="text-xl text-gray-600 max-w-3xl">
-              Pricing varies significantly based on years of experience, track record, and specialization.
+              Pricing varies significantly based on years of experience, track record, and specialization. The <a href="https://www.cim.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Chartered Institute of Marketing (CIM)</a> provides professional development standards for marketing leaders.
             </p>
           </div>
 
@@ -271,12 +271,12 @@ export default function FractionalCMOCostPage() {
             {[
               {
                 factor: 'Industry Expertise',
-                description: 'CMOs with deep vertical experience command premiums. B2B SaaS, FinTech, and HealthTech specialists earn 15-25% more than generalists due to high demand and specialized knowledge.',
+                description: 'CMOs with deep vertical experience command premiums. B2B SaaS, FinTech, and HealthTech specialists earn 15-25% more than generalists due to high demand and specialized knowledge. The <a href="https://ipa.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Practitioners in Advertising (IPA)</a> sets standards for marketing best practices.',
                 premium: '+15-25%',
               },
               {
                 factor: 'Channel Specialization',
-                description: 'Specialists in high-value channels (PLG, performance marketing, brand building, ABM) charge more. Cross-channel generalists who can orchestrate the full funnel are most valuable.',
+                description: 'Specialists in high-value channels (PLG, performance marketing, brand building, ABM) charge more. Cross-channel generalists who can orchestrate the full funnel are most valuable. The <a href="https://dma.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Data & Marketing Association (DMA)</a> offers insights into digital marketing trends.',
                 premium: '+10-20%',
               },
               {
@@ -296,7 +296,7 @@ export default function FractionalCMOCostPage() {
               },
               {
                 factor: 'Company Stage & Complexity',
-                description: 'Early-stage startups may negotiate lower rates in exchange for advisory equity. Complex enterprises with multiple products, markets, or regulatory requirements pay more.',
+                description: 'Early-stage startups may negotiate lower rates in exchange for advisory equity. Complex enterprises with multiple products, markets, or regulatory requirements pay more. The <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> supports high-growth companies navigating expansion.',
                 premium: '+10-15%',
               },
             ].map((item, index) => (
@@ -321,7 +321,7 @@ export default function FractionalCMOCostPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Regional Pricing</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">UK Regional Rate Variations</h2>
             <p className="text-xl text-gray-600 max-w-3xl">
-              Location impacts pricing, though remote work has reduced regional differences significantly.
+              Location impacts pricing, though remote work has reduced regional differences significantly. <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS employment data</a> shows regional variations in professional service rates across the UK.
             </p>
           </div>
 
@@ -351,7 +351,7 @@ export default function FractionalCMOCostPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">ROI Analysis</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Fractional vs Full-Time CMO Cost</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The true cost of a full-time CMO goes far beyond salary. Here's the full breakdown.
+              The true cost of a full-time CMO goes far beyond salary. Here's the full breakdown. The <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> provides guidance on employment costs and compensation benchmarking.
             </p>
           </div>
 
@@ -398,7 +398,7 @@ export default function FractionalCMOCostPage() {
                   <span className="font-bold text-gray-900">£180,000</span>
                 </div>
                 <div className="flex justify-between items-center pb-3 border-b">
-                  <span className="text-gray-700">Benefits & pension (15%)</span>
+                  <span className="text-gray-700">Benefits & pension (15%) - see <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD benchmarks</a></span>
                   <span className="font-bold text-gray-900">£27,000</span>
                 </div>
                 <div className="flex justify-between items-center pb-3 border-b">
@@ -458,7 +458,7 @@ export default function FractionalCMOCostPage() {
                   <li>• No recruitment fees</li>
                   <li>• No severance or notice pay</li>
                   <li>• No training or onboarding costs</li>
-                  <li>• No employment taxes beyond contractor rate</li>
+                  <li>• No employment taxes beyond contractor rate - see <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IPSE guidance</a></li>
                 </ul>
               </div>
 
@@ -479,7 +479,7 @@ export default function FractionalCMOCostPage() {
             <p className="text-gray-700">
               The key difference: With fractional CMOs, these "additional" costs are <strong>marketing investments</strong> you'd
               make anyway, not employment overhead. You're not paying for health insurance, office space, or severance—just strategic
-              expertise and the marketing programs they run.
+              expertise and the marketing programs they run. The <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> offers resources on funding growth initiatives including marketing investments.
             </p>
           </div>
         </div>
@@ -500,7 +500,7 @@ export default function FractionalCMOCostPage() {
             Ready to Hire a Fractional CMO?
           </h2>
           <p className="text-xl text-blue-900/30 mb-10 max-w-2xl mx-auto">
-            Browse 100+ live fractional CMO opportunities or post your role to find pre-vetted marketing leaders.
+            Browse 100+ live fractional CMO opportunities or post your role to find pre-vetted marketing leaders. The <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors (IoD)</a> provides resources on hiring senior executives.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/fractional-cmo-jobs-uk" className="px-10 py-5 bg-white text-blue-600 font-bold uppercase tracking-wider hover:bg-blue-950/20 transition-colors">

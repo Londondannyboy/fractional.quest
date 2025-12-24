@@ -38,7 +38,7 @@ async function getHRStats() {
 const HR_DIRECTOR_FAQS = [
   {
     question: 'What does a Fractional HR Director do?',
-    answer: 'A Fractional HR Director handles strategic people leadership: developing HR strategy, building HR infrastructure, managing complex employee relations, leading talent acquisition, implementing performance management, ensuring compliance, and mentoring any junior HR team. They typically work 1-3 days per week and take full ownership of HR outcomes.'
+    answer: 'A Fractional HR Director handles strategic people leadership: developing HR strategy aligned with <a href="https://www.cipd.org/uk/knowledge/factsheets/hr-strategy-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD best practices</a>, building HR infrastructure, managing complex employee relations in accordance with <a href="https://www.gov.uk/browse/employing-people" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK employment law</a>, leading talent acquisition, implementing performance management, ensuring compliance, and mentoring any junior HR team. They typically work 1-3 days per week and take full ownership of HR outcomes.'
   },
   {
     question: 'How much does a Fractional HR Director cost?',
@@ -54,7 +54,7 @@ const HR_DIRECTOR_FAQS = [
   },
   {
     question: 'What qualifications do Fractional HR Directors have?',
-    answer: 'Most Fractional HR Directors have 12-18 years HR experience with 5+ years in senior HR roles. CIPD Level 7 qualification is common. They typically have experience building HR functions from scratch, managing complex employee relations, and supporting companies through scale-up phases. Strong UK employment law knowledge is essential.'
+    answer: 'Most Fractional HR Directors have 12-18 years HR experience with 5+ years in senior HR roles. <a href="https://www.cipd.org/uk/learn/qualifications/level-7-advanced-diploma/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD Level 7</a> qualification is common. They typically have experience building HR functions from scratch, managing complex employee relations according to <a href="https://www.acas.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACAS</a> best practices, and supporting companies through scale-up phases. Strong UK employment law knowledge is essential.'
   },
   {
     question: 'How many days per week do I need a Fractional HR Director?',
@@ -83,6 +83,7 @@ export default async function FractionalHRDirectorPage() {
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
           <JobsGraph3D categoryFilter="HR" limit={25} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="relative z-10 w-full py-20">
@@ -94,7 +95,7 @@ export default async function FractionalHRDirectorPage() {
               <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Role Guide
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Fractional<br />
                 <span className="text-pink-400">HR Director</span>
               </h1>
@@ -148,7 +149,7 @@ export default async function FractionalHRDirectorPage() {
             </p>
 
             <p>
-              According to <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">CIPD research</a>, the demand for flexible senior HR leadership has grown significantly as UK businesses seek expertise without full-time overhead. Fractional HR Directors fill this gap for companies with 30-150 employees.
+              According to <a href="https://www.cipd.org/uk/knowledge/reports/professionalising-hr/" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">CIPD research</a>, the demand for flexible senior HR leadership has grown significantly as UK businesses seek expertise without full-time overhead. Fractional HR Directors fill this gap for companies with 30-150 employees, particularly in the <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">scale-up sector</a> where agility is critical.
             </p>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">Key Characteristics</h3>
@@ -156,7 +157,7 @@ export default async function FractionalHRDirectorPage() {
             <div className="grid md:grid-cols-2 gap-6 my-10 not-prose">
               <div className="bg-gray-50 p-6">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Seniority Level</h4>
-                <p className="text-gray-700">12-18 years HR experience with 5+ years in senior HR roles. Typically CIPD Level 7 qualified. Has built and led HR functions at scale-up or mid-market companies.</p>
+                <p className="text-gray-700">12-18 years HR experience with 5+ years in senior HR roles. Typically <a href="https://www.cipd.org/uk/learn/qualifications/level-7-advanced-diploma/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD Level 7</a> qualified. Has built and led HR functions at scale-up or mid-market companies.</p>
               </div>
               <div className="bg-gray-50 p-6">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Day Rate</h4>
@@ -199,8 +200,8 @@ export default async function FractionalHRDirectorPage() {
               <div className="bg-white p-8 border-l-4 border-gray-300">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-4">2. Employee Relations & Compliance</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Manage complex ER cases (disciplinaries, grievances, capability)</li>
-                  <li>• Lead restructuring and redundancy processes</li>
+                  <li>• Manage complex ER cases following <a href="https://www.acas.org.uk/disciplinary-and-grievance-procedures" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACAS guidelines</a> (disciplinaries, grievances, capability)</li>
+                  <li>• Lead restructuring and <a href="https://www.gov.uk/staff-redundant" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">redundancy processes</a></li>
                   <li>• Handle <a href="https://www.gov.uk/employment-tribunal-decisions" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">tribunal preparation</a> and settlement negotiations</li>
                   <li>• Ensure <a href="https://www.gov.uk/browse/employing-people" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">UK employment law</a> compliance</li>
                   <li>• Review and update employment contracts and policies</li>
@@ -234,7 +235,7 @@ export default async function FractionalHRDirectorPage() {
                 <ul className="space-y-2 text-gray-700">
                   <li>• Shape and reinforce company culture and values</li>
                   <li>• Run engagement surveys and action planning</li>
-                  <li>• Design recognition and rewards programmes</li>
+                  <li>• Design recognition and rewards programmes aligned with <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working</a> policies</li>
                   <li>• Support managers with team issues</li>
                   <li>• Champion diversity, equity, and inclusion initiatives</li>
                 </ul>
@@ -269,7 +270,7 @@ export default async function FractionalHRDirectorPage() {
             <div className="grid gap-6 my-10">
               <div className="bg-gray-50 p-6 border-l-4 border-pink-500">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">You Have 30-150 Employees</h3>
-                <p className="text-gray-700 mb-0">This is the sweet spot for Fractional HR Directors. Below 30, a People Partner often suffices. Above 150, you may need full-time or a CHRO. Within this range, you need senior expertise but not 5 days a week.</p>
+                <p className="text-gray-700 mb-0">This is the sweet spot for Fractional HR Directors. According to <a href="https://www.ons.gov.uk/businessindustryandtrade/business/activitysizeandlocation" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS data</a>, businesses in this size range represent a significant portion of UK employment. Below 30, a People Partner often suffices. Above 150, you may need full-time or a CHRO. Within this range, you need senior expertise but not 5 days a week.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-gray-900">
@@ -289,12 +290,12 @@ export default async function FractionalHRDirectorPage() {
 
               <div className="bg-gray-50 p-6 border-l-4 border-pink-500">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">Scaling Rapidly</h3>
-                <p className="text-gray-700 mb-0">"We're hiring 5-10 people per month. Onboarding is inconsistent, managers are overwhelmed, and we're losing people because of poor processes."</p>
+                <p className="text-gray-700 mb-0">"We're hiring 5-10 people per month. Onboarding is inconsistent, managers are overwhelmed, and we're losing people because of poor processes." Many <a href="https://www.british-business-bank.co.uk/finance-hub/scaleup-support/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scale-up businesses</a> face this challenge as they grow.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-gray-900">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">Investor Expectations</h3>
-                <p className="text-gray-700 mb-0">"We've raised funding and the board expects professional HR. We need to show proper people metrics, retention data, and have someone credible at leadership meetings."</p>
+                <p className="text-gray-700 mb-0">"We've raised funding and the board expects professional HR. We need to show proper people metrics, retention data, and have someone credible at leadership meetings." Professional governance is increasingly important for <a href="https://www.iod.com/news/good-governance/corporate-governance-code/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">growing businesses</a>.</p>
               </div>
             </div>
 
@@ -342,7 +343,7 @@ export default async function FractionalHRDirectorPage() {
             <div className="bg-pink-50 p-6 border border-pink-200 rounded-lg my-10">
               <h4 className="text-lg font-bold text-gray-900 mb-2">Quick Decision Guide</h4>
               <p className="text-gray-700 mb-0">
-                <strong>Choose HR Director if:</strong> You need someone to build and run HR operations, manage day-to-day people leadership, and professionalise your function. Most scale-ups need this.<br /><br />
+                <strong>Choose HR Director if:</strong> You need someone to build and run HR operations, manage day-to-day people leadership, and professionalise your function. Most <a href="https://www.scaleupinstitute.org.uk/scaleup-report/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scale-ups</a> need this.<br /><br />
                 <strong>Choose CHRO if:</strong> You need board-level strategy, culture transformation, executive team coaching, or are preparing for major events (IPO, sale, significant restructure).
               </p>
             </div>
@@ -366,7 +367,7 @@ export default async function FractionalHRDirectorPage() {
                   <h4 className="font-bold text-gray-900 mb-2">Fractional HR Director (2 days/week)</h4>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>• Day rate £1,000 × 2 days × 52 weeks: <strong>£104,000</strong></li>
-                    <li>• No employer NI: £0</li>
+                    <li>• No <a href="https://www.gov.uk/national-insurance-rates-letters" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">employer NI</a>: £0</li>
                     <li>• No pension contribution: £0</li>
                     <li>• No benefits: £0</li>
                     <li className="font-bold">Total: £104,000/year</li>
@@ -376,7 +377,7 @@ export default async function FractionalHRDirectorPage() {
                   <h4 className="font-bold text-gray-900 mb-2">Full-Time HR Director</h4>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>• Salary: £110,000-£140,000</li>
-                    <li>• Employer NI (13.8%): £15,180-£19,320</li>
+                    <li>• <a href="https://www.gov.uk/national-insurance-rates-letters" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Employer NI</a> (13.8%): £15,180-£19,320</li>
                     <li>• Pension (5%): £5,500-£7,000</li>
                     <li>• Benefits: £3,000-£5,000</li>
                     <li className="font-bold">Total: £133,680-£171,320/year</li>

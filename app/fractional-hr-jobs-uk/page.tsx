@@ -95,7 +95,8 @@ export default async function FractionalHrJobsUkPage() {
       {/* Editorial Hero with 3D Knowledge Graph & Frac */}
       <section className="relative min-h-[75vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <JobsGraph3D categoryFilter="HR" limit={25} height="100%" isHero={true} showOverlay={true} />
+          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="HR Jobs UK" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="relative z-10 w-full py-20">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -107,7 +108,7 @@ export default async function FractionalHrJobsUkPage() {
                 <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                   People Leadership
                 </span>
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                   Fractional HR<br />
                   <span className="text-pink-400">Jobs UK</span>
                 </h1>

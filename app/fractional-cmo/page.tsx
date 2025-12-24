@@ -63,11 +63,11 @@ export default function FractionalCMOPage() {
 
               <div className="prose prose-lg prose-gray max-w-none">
                 <p className="text-xl text-gray-700 leading-relaxed mb-8">
-                  A <strong className="font-semibold text-gray-900">Fractional CMO</strong> (Chief Marketing Officer) is a seasoned marketing executive who works with your company on a part-time or project basis—typically 1-3 days per week. You get senior-level marketing leadership, strategic expertise, and proven execution frameworks without the £150,000-£250,000 annual commitment of a full-time CMO.
+                  A <strong className="font-semibold text-gray-900">Fractional CMO</strong> (Chief Marketing Officer) is a seasoned marketing executive who works with your company on a part-time or project basis—typically 1-3 days per week. You get senior-level marketing leadership, strategic expertise, and proven execution frameworks without the £150,000-£250,000 annual commitment of a full-time CMO. This <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working model</a> has become increasingly popular across the UK.
                 </p>
 
                 <p className="leading-relaxed">
-                  Think of it as "marketing leadership as a service." Fractional CMOs bring 15+ years of experience scaling companies like yours. They've built marketing engines, hired teams, launched products, and driven millions in revenue. Now they work with 2-4 companies simultaneously, sharing that expertise at a fraction of the cost.
+                  Think of it as "marketing leadership as a service." Fractional CMOs bring 15+ years of experience scaling companies like yours. They've built marketing engines, hired teams, launched products, and driven millions in revenue. According to the <a href="https://www.cim.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Chartered Institute of Marketing</a>, senior marketing leadership is critical for sustainable growth. Now they work with 2-4 companies simultaneously, sharing that expertise at a fraction of the cost.
                 </p>
 
                 <div className="bg-amber-50 border-l-4 border-amber-500 p-8 my-8 not-prose rounded-r-lg">
@@ -140,43 +140,43 @@ export default function FractionalCMOPage() {
                   {
                     number: '1',
                     title: 'Marketing Spend with No Clear ROI',
-                    description: 'You\'re spending £10k-£50k/month on marketing—ads, agencies, tools—but can\'t articulate what\'s working or tie it to revenue. You need strategic oversight to optimize spend and prove ROI.',
+                    description: 'You\'re spending £10k-£50k/month on marketing—ads, agencies, tools—but can\'t articulate what\'s working or tie it to revenue. The <a href="https://www.ipa.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IPA</a> emphasizes the importance of marketing effectiveness and accountability. You need strategic oversight to optimize spend and prove ROI.',
                     icon: '💸',
                   },
                   {
                     number: '2',
                     title: 'Founder-Led Marketing Has Hit a Wall',
-                    description: 'The CEO or founder has been "doing marketing" between product and fundraising calls. It worked for early traction, but now growth has plateaued and the founder needs to focus on their actual job.',
+                    description: 'The CEO or founder has been "doing marketing" between product and fundraising calls. It worked for early traction, but now growth has plateaued and the founder needs to focus on their actual job. The <a href="https://www.scaleupinstitute.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> reports that this is a common challenge for growing businesses.',
                     icon: '🚧',
                   },
                   {
                     number: '3',
                     title: 'You Have a Marketing Team But No Strategy',
-                    description: 'You\'ve hired 2-4 marketers—maybe a content person, performance marketer, designer—but they lack direction. They\'re executing tactics without a cohesive strategy or someone making the hard prioritization calls.',
+                    description: 'You\'ve hired 2-4 marketers—maybe a content person, performance marketer, designer—but they lack direction. They\'re executing tactics without a cohesive strategy or someone making the hard prioritization calls. According to <a href="https://www.cipd.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a>, effective team leadership is essential for performance.',
                     icon: '🎯',
                   },
                   {
                     number: '4',
                     title: 'Post-Product-Market Fit Growth',
-                    description: 'You\'ve validated PMF and raised Series A or B. Now you need to scale customer acquisition systematically. This is the classic fractional CMO moment: build the marketing engine that takes you from £1M to £10M ARR.',
+                    description: 'You\'ve validated PMF and raised Series A or B. Now you need to scale customer acquisition systematically. The <a href="https://www.british-business-bank.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> highlights that strategic marketing is crucial at this growth stage. This is the classic fractional CMO moment: build the marketing engine that takes you from £1M to £10M ARR.',
                     icon: '📈',
                   },
                   {
                     number: '5',
                     title: 'Launching in a New Market or Vertical',
-                    description: 'Expanding to a new geography (e.g., UK to US), audience segment, or product line. You need someone who\'s done it before to lead GTM strategy, positioning, and messaging.',
+                    description: 'Expanding to a new geography (e.g., UK to US), audience segment, or product line. <a href="https://technation.io" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a> research shows that international expansion requires experienced marketing leadership. You need someone who\'s done it before to lead GTM strategy, positioning, and messaging.',
                     icon: '🌍',
                   },
                   {
                     number: '6',
                     title: 'Marketing Agencies Aren\'t Delivering',
-                    description: 'You\'ve hired agencies for SEO, paid ads, PR—but they operate in silos without strategic alignment. A fractional CMO acts as the "client-side quarterback" to coordinate agency work and drive accountability.',
+                    description: 'You\'ve hired agencies for SEO, paid ads, PR—but they operate in silos without strategic alignment. The <a href="https://www.dma.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">DMA</a> recommends strong client-side leadership for agency relationships. A fractional CMO acts as the "client-side quarterback" to coordinate agency work and drive accountability.',
                     icon: '🤝',
                   },
                   {
                     number: '7',
                     title: 'You Can\'t Justify a £200k+ Full-Time CMO',
-                    description: 'You need senior marketing leadership but don\'t have the budget, headcount, or workload to justify a full-time executive hire. Fractional gives you 80% of the value at 40% of the cost.',
+                    description: 'You need senior marketing leadership but don\'t have the budget, headcount, or workload to justify a full-time executive hire. <a href="https://www.ons.gov.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS data</a> shows executive salaries continue to rise, making fractional alternatives increasingly attractive. Fractional gives you 80% of the value at 40% of the cost.',
                     icon: '💰',
                   },
                 ].map((sign, index) => (
@@ -207,6 +207,7 @@ export default function FractionalCMOPage() {
               {/* First 90 Days */}
               <div className="mb-12">
                 <h3 className="text-xl font-bold text-gray-900 mb-6">The First 90 Days: Building the Foundation</h3>
+                <p className="text-gray-600 mb-6">A structured onboarding process is essential. The <a href="https://www.iod.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> recommends clear milestones for executive appointments to ensure rapid value creation.</p>
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
                     <div className="text-amber-600 font-bold text-xs mb-3 uppercase tracking-wide">Days 1-30: Audit & Strategy</div>
@@ -246,6 +247,7 @@ export default function FractionalCMOPage() {
               {/* Ongoing Responsibilities */}
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-6">Ongoing Responsibilities</h3>
+                <p className="text-gray-600 mb-6">Marketing leadership encompasses strategic and operational duties. The <a href="https://www.cim.co.uk/professional-marketing-standards" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIM Professional Marketing Standards</a> outline key competencies for senior marketers.</p>
                 <div className="grid md:grid-cols-2 gap-4">
                   {[
                     { title: 'Marketing Strategy & Planning', icon: '🎯' },
@@ -338,6 +340,7 @@ export default function FractionalCMOPage() {
                 <h2 className="text-3xl md:text-4xl font-black text-gray-900">The Business Case</h2>
               </div>
 
+              <p className="text-gray-600 mb-8">Research from the <a href="https://www.bvca.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Private Equity & Venture Capital Association</a> shows that portfolio companies increasingly leverage fractional executives to drive growth while managing costs.</p>
               <div className="grid md:grid-cols-2 gap-6">
                 {[
                   { title: 'Cost Efficiency', desc: 'Save 40-60% vs full-time executive costs.', stat: '50% Savings' },

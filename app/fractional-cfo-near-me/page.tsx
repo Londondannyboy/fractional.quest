@@ -57,6 +57,8 @@ export default function FractionalCFONearMePage() {
       {/* Hero Section with Globe */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gray-50">
         <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+          <div className="absolute inset-0 bg-black/50" />
           <JobsGlobe />
         </div>
         <div className="relative z-10 w-full py-20">
@@ -68,7 +70,7 @@ export default function FractionalCFONearMePage() {
               <span className="inline-block bg-white text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Local Services
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Fractional CFO<br />
                 <span className="text-gray-400">Services Near You</span>
               </h1>

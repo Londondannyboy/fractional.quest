@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     question: 'What\'s the main difference between a fractional CMO and marketing agency?',
-    answer: 'A fractional CMO is a strategic leader who owns your entire marketing function—setting strategy, building teams, managing budgets, and driving results. A marketing agency is a vendor that executes specific tactics (ads, content, SEO) based on your direction. CMOs lead, agencies execute.',
+    answer: 'A fractional CMO is a strategic leader who owns your entire marketing function—setting strategy, building teams, managing budgets, and driving results. A marketing agency is a vendor that executes specific tactics (ads, content, SEO) based on your direction. As the <a href="https://www.cim.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Chartered Institute of Marketing</a> emphasizes, CMOs lead, agencies execute.',
   },
   {
     question: 'Is a fractional CMO more expensive than a marketing agency?',
@@ -30,7 +30,7 @@ const faqItems = [
   },
   {
     question: 'Can I use a fractional CMO and marketing agency together?',
-    answer: 'Yes, and this is actually the ideal setup for many companies. The fractional CMO sets strategy, manages the agency, ensures work aligns with goals, and owns results. The agency executes tactics at scale. This combines strategic leadership with specialized execution.',
+    answer: 'Yes, and this is actually the ideal setup for many companies. The fractional CMO sets strategy, manages the agency, ensures work aligns with goals, and owns results. The agency executes tactics at scale. This combines strategic leadership with specialized execution, a model supported by <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> research on flexible leadership.',
   },
   {
     question: 'When should I hire a fractional CMO instead of an agency?',
@@ -258,13 +258,13 @@ export default function FractionalCMOvsAgencyPage() {
                 <li className="flex items-start gap-3">
                   <span className="text-teal-600 font-bold text-xl mt-1">✓</span>
                   <div>
-                    <strong className="text-gray-900">You need strategic direction.</strong> You're spending on marketing but lack a cohesive strategy or clear positioning.
+                    <strong className="text-gray-900">You need strategic direction.</strong> You're spending on marketing but lack a cohesive <a href="https://www.cim.co.uk/content-hub/resources/marketing-strategy/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">strategy</a> or clear positioning.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-teal-600 font-bold text-xl mt-1">✓</span>
                   <div>
-                    <strong className="text-gray-900">Founder-led marketing has hit a wall.</strong> CEO is overwhelmed and needs to delegate marketing leadership.
+                    <strong className="text-gray-900">Founder-led marketing has hit a wall.</strong> CEO is overwhelmed and needs to delegate <a href="https://www.iod.com/resources/management/leadership/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">marketing leadership</a>.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
@@ -282,7 +282,7 @@ export default function FractionalCMOvsAgencyPage() {
                 <li className="flex items-start gap-3">
                   <span className="text-teal-600 font-bold text-xl mt-1">✓</span>
                   <div>
-                    <strong className="text-gray-900">Preparing for growth or fundraising.</strong> Need professional marketing function to scale or impress investors.
+                    <strong className="text-gray-900">Preparing for growth or fundraising.</strong> Need professional marketing function to <a href="https://www.scaleupinstitute.org.uk/scaleup-essentials/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scale</a> or impress investors.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
@@ -307,7 +307,7 @@ export default function FractionalCMOvsAgencyPage() {
                 <li className="flex items-start gap-3">
                   <span className="text-gray-600 font-bold text-xl mt-1">✓</span>
                   <div>
-                    <strong className="text-gray-900">Need specialized skills.</strong> Require expertise you don't have in-house (e.g., advanced SEO, paid ads, video production).
+                    <strong className="text-gray-900">Need specialized skills.</strong> Require expertise you don't have in-house (e.g., advanced <a href="https://www.ipa.co.uk/knowledge/ipa-effectiveness-awards" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">SEO, paid ads</a>, video production).
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
@@ -353,7 +353,7 @@ export default function FractionalCMOvsAgencyPage() {
             <h3 className="text-2xl font-bold text-gray-900 mb-6">The Fractional CMO + Agency Model</h3>
             <p className="text-lg text-gray-700 mb-6">
               Many successful companies use a <strong>fractional CMO for strategy and leadership</strong> plus
-              <strong> specialized agencies for execution</strong>. This combines the best of both worlds.
+              <strong> specialized agencies for execution</strong>. This combines the best of both worlds and aligns with <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working</a> best practices.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -361,7 +361,7 @@ export default function FractionalCMOvsAgencyPage() {
                 <h4 className="font-bold text-gray-900 mb-3">Fractional CMO Handles:</h4>
                 <ul className="space-y-2 text-gray-700 text-sm">
                   <li>• Overall marketing strategy & positioning</li>
-                  <li>• Channel prioritization & budget allocation</li>
+                  <li>• Channel prioritization & <a href="https://www.cipd.org.uk/knowledge/fundamentals/people/performance/factsheets" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">budget allocation</a></li>
                   <li>• Agency selection, briefs, and management</li>
                   <li>• Team hiring and leadership</li>
                   <li>• Performance tracking & optimization</li>
@@ -373,7 +373,7 @@ export default function FractionalCMOvsAgencyPage() {
                 <ul className="space-y-2 text-gray-700 text-sm">
                   <li>• Paid advertising (Google, Meta, LinkedIn)</li>
                   <li>• SEO implementation & link building</li>
-                  <li>• Content creation at scale (blog, video, social)</li>
+                  <li>• <a href="https://www.cim.co.uk/qualifications/content-marketing/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Content creation</a> at scale (blog, video, social)</li>
                   <li>• Creative design (ads, landing pages, emails)</li>
                   <li>• Technical implementation (website, automation)</li>
                   <li>• Specialized tactics (PR, influencer, partnerships)</li>
@@ -417,7 +417,7 @@ export default function FractionalCMOvsAgencyPage() {
               <div className="text-lg font-bold">Total Marketing Investment: £164k/year</div>
               <p className="text-gray-300 mt-2">
                 vs £200k-£300k for full-time CMO + in-house team to achieve same output.
-                Saved £50k-£140k while getting strategic leadership + specialized execution.
+                Saved £50k-£140k while getting strategic leadership + specialized execution, a model increasingly popular with <a href="https://www.british-business-bank.co.uk/research/small-business-report/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">growing UK businesses</a>.
               </p>
             </div>
           </div>
@@ -436,7 +436,7 @@ export default function FractionalCMOvsAgencyPage() {
             {[
               {
                 mistake: 'Hiring an agency when you need strategic leadership',
-                why: 'Agencies execute tactics, not strategy. If you don\'t know what to do, they can\'t help—they need your direction. Hiring an SEO agency won\'t solve "we don\'t have a positioning strategy."',
+                why: 'Agencies execute tactics, not strategy. If you don\'t know what to do, they can\'t help—they need your direction. Hiring an SEO agency won\'t solve "we don\'t have a positioning strategy." As the <a href="https://www.ipa.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IPA</a> notes, strategy must precede execution.',
                 fix: 'Get strategic clarity first (fractional CMO or consultant), then hire agencies to execute that strategy.',
               },
               {
@@ -451,12 +451,12 @@ export default function FractionalCMOvsAgencyPage() {
               },
               {
                 mistake: 'Hiring multiple agencies with no one coordinating',
-                why: 'SEO agency, paid agency, and content agency working in silos = wasted budget, conflicting messages, no synergy.',
+                why: 'SEO agency, paid agency, and content agency working in silos = wasted budget, conflicting messages, no synergy. Research from <a href="https://www.ons.gov.uk/businessindustryandtrade/business/businessservices" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS</a> shows coordinated marketing drives better ROI.',
                 fix: 'Fractional CMO acts as "client-side quarterback" to coordinate agencies and ensure strategic alignment.',
               },
               {
                 mistake: 'Choosing based on cost alone',
-                why: 'Cheap agency = junior talent, cookie-cutter approach. Cheap fractional CMO = lacks experience to drive results. You get what you pay for.',
+                why: 'Cheap agency = junior talent, cookie-cutter approach. Cheap fractional CMO = lacks experience to drive results. You get what you pay for. <a href="https://www.cipd.org.uk/knowledge/strategy/organisational-development/factsheet" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Quality talent</a> drives better outcomes.',
                 fix: 'Optimize for value, not cost. £10k/month for great agency or £1,200/day CMO pays back 10x with results.',
               },
             ].map((item, index) => (

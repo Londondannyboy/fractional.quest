@@ -39,7 +39,7 @@ export default function InterimCTOPage() {
                 Interim CTO<br /><span className="text-purple-300">Services UK</span>
               </h1>
               <p className="text-xl text-white/90 leading-relaxed max-w-2xl mb-8">
-                Full-time temporary CTO leadership for technical transformations, platform migrations, and critical periods. Expert technology executives available to start immediately.
+                Full-time temporary CTO leadership for technical transformations, platform migrations, and critical periods. Expert technology executives available to start immediately, supporting UK businesses through <a href="https://www.gov.uk/business-finance-support" target="_blank" rel="noopener noreferrer" className="text-white hover:text-purple-200 underline">business growth challenges</a>.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="#contact" className="px-8 py-4 bg-white text-purple-900 font-bold uppercase tracking-wider hover:bg-purple-50 transition-colors">Hire an Interim CTO</Link>
@@ -55,9 +55,9 @@ export default function InterimCTOPage() {
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">What is an Interim CTO?</h2>
           <div className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-6">
-              An <strong>Interim CTO</strong> is a temporary Chief Technology Officer who works full-time for a defined period—typically 3-12 months. Unlike fractional CTOs who work part-time, interim CTOs focus exclusively on one organisation during their engagement.
+              An <strong>Interim CTO</strong> is a temporary Chief Technology Officer who works full-time for a defined period—typically 3-12 months. Unlike fractional CTOs who work part-time, interim CTOs focus exclusively on one organisation during their engagement. This type of <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangement</a> has become increasingly common in the UK technology sector.
             </p>
-            <p>Interim CTOs are typically hired to lead technical transformations, manage critical migrations, or fill leadership gaps during CTO transitions.</p>
+            <p>Interim CTOs are typically hired to lead technical transformations, manage critical migrations, or fill leadership gaps during CTO transitions. According to <a href="https://technation.io/jobs/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a>, the demand for experienced technology leaders continues to grow as companies navigate digital transformation challenges.</p>
           </div>
         </div>
       </section>
@@ -65,6 +65,9 @@ export default function InterimCTOPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-black text-gray-900 mb-8">When to Hire an Interim CTO</h2>
+          <p className="text-gray-600 mb-8">
+            Understanding when to bring in interim leadership is crucial for business continuity. The <a href="https://www.bcs.org/articles-opinion-and-research/the-evolving-role-of-the-cto/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BCS (Chartered Institute for IT)</a> highlights the critical importance of maintaining strong technical leadership during periods of change and transformation.
+          </p>
           <div className="grid md:grid-cols-2 gap-6">
             {[
               { scenario: 'CTO Departure', description: 'Your CTO has left and you need immediate technical leadership while recruiting a permanent replacement.' },
@@ -80,12 +83,20 @@ export default function InterimCTOPage() {
               </div>
             ))}
           </div>
+          <div className="mt-8 p-6 bg-white border border-gray-200 rounded-lg">
+            <p className="text-gray-700 text-sm">
+              For growing technology companies, the <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> emphasises the importance of securing experienced leadership during critical growth phases. Many scale-ups also benefit from understanding <a href="https://www.british-business-bank.co.uk/finance-hub/business-guidance/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">business finance options</a> when planning for major technical investments.
+            </p>
+          </div>
         </div>
       </section>
 
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-black text-gray-900 mb-8">Interim CTO vs Fractional CTO</h2>
+          <p className="text-gray-600 mb-8">
+            Both interim and fractional CTOs offer flexible executive solutions, but serve different business needs. Research from <a href="https://www.techuk.org/insights/reports/item/23542-techuk-leadership-digital-skills-and-talent" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK</a> shows that companies are increasingly adopting flexible leadership models to address the <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">evolving employment landscape</a> in the technology sector.
+          </p>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
@@ -105,7 +116,7 @@ export default function InterimCTOPage() {
           </div>
           <div className="mt-8 p-6 bg-blue-50 border border-blue-200 rounded-lg">
             <p className="text-blue-800 font-medium mb-2">Not sure which is right for you?</p>
-            <p className="text-blue-700 text-sm mb-4">If you need full-time focus for a specific technical project, choose interim. If you need ongoing technical leadership at lower cost, choose fractional.</p>
+            <p className="text-blue-700 text-sm mb-4">If you need full-time focus for a specific technical project, choose interim. If you need ongoing technical leadership at lower cost, choose fractional. The <a href="https://www.cipd.org/uk/knowledge/factsheets/flexible-working-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> provides guidance on evaluating different flexible working arrangements for senior roles.</p>
             <Link href="/fractional-cto-services" className="text-blue-700 font-bold hover:text-blue-900">Learn about Fractional CTO Services →</Link>
           </div>
         </div>
@@ -120,7 +131,10 @@ export default function InterimCTOPage() {
       <section id="contact" className="py-20 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-black mb-6">Need an Interim CTO?</h2>
-          <p className="text-xl text-gray-600 mb-10">Tell us about your situation and we'll help you find the right interim or fractional CTO.</p>
+          <p className="text-xl text-gray-600 mb-4">Tell us about your situation and we'll help you find the right interim or fractional CTO.</p>
+          <p className="text-base text-gray-600 mb-10">
+            Whether you're navigating a <a href="https://www.iod.com/insights/business-strategy/leadership-succession-planning/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">leadership transition</a> or planning a major technical initiative, the right CTO engagement model can make all the difference to your business outcomes.
+          </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact/companies" className="px-10 py-5 bg-blue-500 text-white font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">Find an Interim CTO</Link>
             <Link href="/fractional-cto-services" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Explore Fractional CTO</Link>

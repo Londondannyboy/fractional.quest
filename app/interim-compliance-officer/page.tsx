@@ -89,7 +89,7 @@ export default function InterimComplianceOfficerPage() {
       <section className="relative bg-gradient-to-br from-orange-900 via-orange-800 to-slate-900 py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1920&q=80"
+            src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1920"
             alt="Interim compliance officer UK - temporary CCO and MLRO cover for regulated firms"
             className="w-full h-full object-cover opacity-20"
           />
@@ -102,7 +102,7 @@ export default function InterimComplianceOfficerPage() {
           <span className="inline-block bg-orange-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             Situation Guide
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
             Interim Compliance<br />
             <span className="text-orange-400">Officer UK</span>
           </h1>
@@ -146,7 +146,7 @@ export default function InterimComplianceOfficerPage() {
           <div className="prose prose-lg prose-slate max-w-none">
             <p className="text-xl md:text-2xl text-slate-600 leading-relaxed mb-8">
               An <strong className="text-slate-900">interim compliance officer</strong> is a temporary, typically
-              full-time compliance professional engaged to fill a specific gap—such as covering a departure,
+              full-time <a href="https://www.int-comp.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">compliance professional</a> engaged to fill a specific gap—such as covering a departure,
               managing a crisis, or bridging while you recruit a permanent hire.
             </p>
 
@@ -155,7 +155,7 @@ export default function InterimComplianceOfficerPage() {
               part-time), interim is characterised by:
             </p>
             <ul className="space-y-2">
-              <li><strong>Full-time or near-full-time commitment</strong> (3-5 days per week)</li>
+              <li><strong>Full-time or near-full-time commitment</strong> (3-5 days per week, supporting <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working</a> arrangements)</li>
               <li><strong>Defined duration</strong> (typically 3-12 months)</li>
               <li><strong>Specific objective</strong> (cover departure, complete project, manage crisis)</li>
               <li><strong>Exit strategy</strong> (transition to permanent hire or fractional arrangement)</li>
@@ -166,6 +166,9 @@ export default function InterimComplianceOfficerPage() {
               <p className="text-slate-700">
                 <strong>Interim</strong> = temporary full-time (gap-filling, time-limited)<br />
                 <strong>Fractional</strong> = permanent part-time (ongoing operating model)
+              </p>
+              <p className="text-slate-600 mt-3 text-sm">
+                Both models are increasingly common among UK <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scaleups</a> and growing financial services firms.
               </p>
             </div>
           </div>
@@ -179,6 +182,10 @@ export default function InterimComplianceOfficerPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-2 block">Situations</span>
             <h2 className="text-3xl md:text-4xl font-black text-slate-900">When to Hire an Interim Compliance Officer</h2>
           </div>
+
+          <p className="text-slate-600 mb-8">
+            Interim compliance officers are often required to manage <a href="https://www.fca.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA</a> and <a href="https://www.bankofengland.co.uk/prudential-regulation" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">PRA</a> regulatory requirements across various scenarios:
+          </p>
 
           <div className="space-y-6">
             {interimScenarios.map((item, i) => (
@@ -256,6 +263,12 @@ export default function InterimComplianceOfficerPage() {
                   <td className="p-4 text-slate-700">Ongoing strategic oversight</td>
                   <td className="p-4 text-slate-700">Complex, high-volume compliance</td>
                 </tr>
+                <tr className="border-b border-slate-200">
+                  <td className="p-4 font-medium text-slate-900">Data Protection</td>
+                  <td className="p-4 text-slate-700" colSpan={3}>
+                    All models require <a href="https://ico.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICO</a> compliance for data handling
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -271,6 +284,10 @@ export default function InterimComplianceOfficerPage() {
           </div>
 
           <div className="prose prose-lg prose-slate max-w-none">
+            <p className="text-slate-600 mb-6">
+              Interim compliance professionals typically hold qualifications from bodies such as <a href="https://www.cisi.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CISI</a> and command the following day rates:
+            </p>
+
             <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Day Rates</h3>
             <ul className="space-y-2">
               <li><strong>Interim Compliance Officer:</strong> &pound;900-&pound;1,200/day</li>
@@ -289,7 +306,7 @@ export default function InterimComplianceOfficerPage() {
 
             <p>
               While this exceeds permanent employment cost, it reflects speed of deployment, flexibility,
-              no employment obligations, and no recruitment fees.
+              no employment obligations, and no recruitment fees. Many firms are increasingly adopting <a href="https://www.cipd.org/uk/knowledge/factsheets/flexible-working-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working models</a> to access specialized compliance expertise.
             </p>
           </div>
         </div>
@@ -303,6 +320,9 @@ export default function InterimComplianceOfficerPage() {
             <h2 className="text-3xl md:text-4xl font-black text-slate-900">
               Interim Compliance: Common Questions
             </h2>
+            <p className="text-slate-600 mt-4">
+              Professional bodies like the <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> provide guidance on effective governance structures for interim appointments.
+            </p>
           </div>
           <FAQ items={INTERIM_FAQS} title="" />
         </div>
@@ -316,7 +336,7 @@ export default function InterimComplianceOfficerPage() {
             Need Interim<br /><span className="text-orange-400">Compliance Cover?</span>
           </h2>
           <p className="text-xl text-orange-200/80 mb-10 max-w-2xl mx-auto">
-            Connect with experienced interim CCOs and MLROs for your temporary compliance needs.
+            Connect with experienced interim CCOs and MLROs who understand <a href="https://www.ukfinance.org.uk/" target="_blank" rel="noopener noreferrer" className="text-orange-300 hover:text-white underline">UK financial services</a> regulatory requirements for your temporary compliance needs.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact/companies" className="px-10 py-5 bg-orange-500 text-white font-bold uppercase tracking-wider hover:bg-orange-400 transition-colors">

@@ -220,7 +220,7 @@ export default function FractionalCFOCostPage() {
                   <span className="font-bold">£30,000/year</span>
                 </div>
                 <div className="flex justify-between items-center pb-3 border-b">
-                  <span>Employer National Insurance (13.8%)</span>
+                  <span>Employer National Insurance (13.8% per <a href="https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2024-to-2025" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">HMRC rates</a>)</span>
                   <span className="font-bold">£24,840/year</span>
                 </div>
                 <div className="flex justify-between items-center pb-3 border-b">
@@ -319,7 +319,7 @@ export default function FractionalCFOCostPage() {
 
           <div className="mt-8 bg-gray-50 p-6">
             <p className="text-gray-700 mb-0">
-              <strong>Most common:</strong> Mid-level CFO (12-18 years exp) at 2 days/week = £99k-£130k annually. This saves £77k-£134k vs full-time CFO (£207k-£264k total cost).
+              <strong>Most common:</strong> Mid-level CFO (12-18 years exp) at 2 days/week = £99k-£130k annually. This saves £77k-£134k vs full-time CFO (£207k-£264k total cost). Many hold <a href="https://www.accaglobal.com/gb/en.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACCA</a> or <a href="https://www.cimaglobal.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIMA</a> professional qualifications.
             </p>
           </div>
         </div>
@@ -335,7 +335,7 @@ export default function FractionalCFOCostPage() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-10">
-              Beyond direct salary savings, fractional CFOs provide cost advantages most companies overlook:
+              Beyond direct salary savings, fractional CFOs provide cost advantages most companies overlook. When evaluating <a href="https://www.gov.uk/business-finance-support" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">business finance support options</a>, these hidden benefits become crucial:
             </p>
 
             <div className="grid gap-6 my-10">
@@ -346,7 +346,7 @@ export default function FractionalCFOCostPage() {
                   <ul className="space-y-1 text-sm list-none pl-0">
                     <li>• Executive recruiter fee: £37,500 (25% of £150k salary)</li>
                     <li>• Hiring team time: 50+ hours of interviews × £200/hr = £10,000</li>
-                    <li>• Average time to hire: 4-6 months (opportunity cost)</li>
+                    <li>• Average time to hire: 4-6 months (opportunity cost per <a href="https://www.cipd.org/uk/knowledge/reports/resourcing-talent-planning-survey/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD data</a>)</li>
                     <li>• Bad hire cost if wrong fit: £150k+ wasted</li>
                   </ul>
                   <p className="mt-4 font-semibold text-blue-600">Fractional: £0 recruitment fees. Start within 1-2 weeks.</p>
@@ -362,7 +362,7 @@ export default function FractionalCFOCostPage() {
                     <li>• Can't scale down if business slows</li>
                     <li>• Redundancy risk if company downsizes</li>
                   </ul>
-                  <p className="mt-4 font-semibold text-blue-600">Fractional: 30-day notice. Scale from 1 to 3 days/week monthly. No redundancy liability.</p>
+                  <p className="mt-4 font-semibold text-blue-600">Fractional: 30-day notice. Scale from 1 to 3 days/week monthly. No redundancy liability. Understanding <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35 contractor status</a> helps ensure compliant engagements.</p>
                 </div>
               </div>
 
@@ -370,7 +370,7 @@ export default function FractionalCFOCostPage() {
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">3. More Experienced Talent</h3>
                 <div className="space-y-2 text-gray-700">
                   <p className="mb-2"><strong>Experience Paradox:</strong></p>
-                  <p className="text-sm">At £150k full-time salary, you get a CFO with 10-15 years experience. For £100k fractional (2 days/week), you get a CFO with 18+ years and multiple prior CFO roles. Better talent, lower cost.</p>
+                  <p className="text-sm">At £150k full-time salary, you get a CFO with 10-15 years experience. For £100k fractional (2 days/week), you get a CFO with 18+ years and multiple prior CFO roles, often with <a href="https://www.icaew.com/membership/regulations-standards-and-guidance" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICAEW qualifications</a>. Better talent, lower cost.</p>
                   <p className="mt-4 font-semibold text-blue-600">Fractional CFOs are typically more senior because they've "graduated" to fractional after successful full-time CFO careers.</p>
                 </div>
               </div>
@@ -392,7 +392,7 @@ export default function FractionalCFOCostPage() {
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">5. Faster Value Realization</h3>
                 <div className="space-y-2 text-gray-700">
                   <p className="mb-2"><strong>Full-Time CFO Ramp Time:</strong></p>
-                  <p className="text-sm">4-6 months to hire + 3-6 months to ramp = 7-12 months before delivering value. That's £87k-£150k in salary before they're fully productive.</p>
+                  <p className="text-sm">4-6 months to hire + 3-6 months to ramp = 7-12 months before delivering value. That's £87k-£150k in salary before they're fully productive. <a href="https://www.iod.com/news/director-salaries/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD research</a> confirms executive onboarding timelines.</p>
                   <p className="mt-4 font-semibold text-blue-600">Fractional: Productive from week 1. Hit the ground running with immediate impact.</p>
                 </div>
               </div>
@@ -422,14 +422,14 @@ export default function FractionalCFOCostPage() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-10">
-              Fractional CFOs typically deliver 3-10x ROI. Here are real examples:
+              Fractional CFOs typically deliver 3-10x ROI. According to <a href="https://scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> research, professional finance leadership is critical for growth companies. Here are real examples:
             </p>
 
             <div className="bg-gray-50 text-gray-900 p-8 mb-10">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">ROI Scenario 1: Fundraising</h3>
               <div className="space-y-4 text-gray-300">
                 <p><strong className="text-white">Cost:</strong> £40,000 (6-month engagement, 2 days/week)</p>
-                <p><strong className="text-white">Value Delivered:</strong> Built investor model, managed due diligence, supported Series A pitch</p>
+                <p><strong className="text-white">Value Delivered:</strong> Built investor model, managed due diligence, supported Series A pitch. Access to <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> programs enhanced funding strategy.</p>
                 <p><strong className="text-white">Outcome:</strong> Raised £5M Series A at £25M valuation (vs potential £3M at £18M without CFO)</p>
                 <p className="text-blue-400 font-bold text-xl">ROI: 125x (£2M additional capital raised + £7M valuation increase)</p>
               </div>
@@ -439,7 +439,7 @@ export default function FractionalCFOCostPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">ROI Scenario 2: Cash Management</h3>
               <div className="space-y-4 text-gray-700">
                 <p><strong>Cost:</strong> £54,600 (12-month engagement, 1 day/week)</p>
-                <p><strong>Value Delivered:</strong> Implemented 13-week cash forecasting, renegotiated payment terms, optimized inventory</p>
+                <p><strong>Value Delivered:</strong> Implemented 13-week cash forecasting, renegotiated payment terms, optimized inventory. Strategies aligned with <a href="https://www.ons.gov.uk/businessindustryandtrade" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS business trends</a>.</p>
                 <p><strong>Outcome:</strong> Extended runway from 8 to 18 months (avoided emergency fundraise at terrible terms), freed £200k working capital</p>
                 <p className="text-blue-600 font-bold text-xl">ROI: 5.7x (£200k cash freed + avoided £100k dilution from emergency round)</p>
               </div>
@@ -449,7 +449,7 @@ export default function FractionalCFOCostPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">ROI Scenario 3: M&A</h3>
               <div className="space-y-4 text-gray-700">
                 <p><strong>Cost:</strong> £30,000 (fixed fee, 3-month project)</p>
-                <p><strong>Value Delivered:</strong> Led buy-side due diligence on acquisition target</p>
+                <p><strong>Value Delivered:</strong> Led buy-side due diligence on acquisition target, particularly valuable for businesses working with <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">independent contractors</a></p>
                 <p><strong>Outcome:</strong> Identified £500k working capital hole and £300k revenue overstatement. Renegotiated price from £2M to £1.4M</p>
                 <p className="text-blue-600 font-bold text-xl">ROI: 28x (£600k purchase price reduction + avoided £500k surprise cash call)</p>
               </div>

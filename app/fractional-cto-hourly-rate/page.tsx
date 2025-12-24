@@ -44,6 +44,8 @@ export default function FractionalCTOHourlyRatePage() {
     <div className="min-h-screen bg-white">
       <section className="relative min-h-[65vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+          <div className="absolute inset-0 bg-black/50" />
           <JobsGraph3D roleFilter="CTO" limit={20} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="relative z-10 w-full py-20">
@@ -55,7 +57,7 @@ export default function FractionalCTOHourlyRatePage() {
               <span className="inline-block bg-white text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Hourly Rate Guide
               </span>
-              <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Fractional CTO<br />
                 <span className="text-blue-400">Hourly Rate</span>
               </h1>

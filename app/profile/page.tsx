@@ -102,7 +102,7 @@ export default function ProfilePage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200">
+      <header className="bg-white border-b border-gray-200 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=1920)' }}>
         <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/dashboard" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -110,7 +110,7 @@ export default function ProfilePage() {
             </svg>
             Back to Dashboard
           </Link>
-          <h1 className="text-xl font-bold text-gray-900">Your Profile</h1>
+          <h1 className="text-xl font-bold text-white">Your Profile</h1>
           <div className="w-24" />
         </div>
       </header>

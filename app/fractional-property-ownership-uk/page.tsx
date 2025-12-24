@@ -14,8 +14,9 @@ export default function FractionalPropertyUKPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-white border-b border-gray-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <section className="bg-white border-b border-gray-200 relative">
+        <div className="absolute inset-0 bg-cover bg-center opacity-40" style={{ backgroundImage: 'url(https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative z-10">
           <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
             <Link href="/" className="hover:text-gray-700">Home</Link>
             <span>/</span>
@@ -26,7 +27,7 @@ export default function FractionalPropertyUKPage() {
           <span className="inline-block text-sm font-semibold text-teal-600 uppercase tracking-wider mb-4">
             UK Guide
           </span>
-          <h1 className="font-editorial text-5xl md:text-6xl font-bold text-gray-900 leading-[1.1] mb-6">
+          <h1 className="font-editorial text-5xl md:text-6xl font-bold text-white leading-[1.1] mb-6">
             Fractional Property Ownership in the UK
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">

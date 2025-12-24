@@ -72,6 +72,7 @@ export default async function TechJobsPage() {
       {/* Hero Section with 3D Knowledge Graph Background */}
       <section className="relative min-h-[85vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
           <JobsGraph3D categoryFilter="Technology" limit={30} height="100%" isHero={true} showOverlay={true} />
         </div>
 
@@ -90,7 +91,7 @@ export default async function TechJobsPage() {
                     {stats.total}+ Tech Leadership Roles
                   </span>
 
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
                     Fractional<br />
                     <span className="text-blue-300">Tech</span> Jobs UK
                   </h1>
@@ -230,7 +231,7 @@ export default async function TechJobsPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Startup-Ready</h3>
               <p className="text-gray-600">
-                Startups and scale-ups can't always afford a £200k+ full-time CTO. Fractional tech leaders provide senior expertise at a fraction of the cost.
+                Startups and scale-ups can't always afford a £200k+ full-time CTO. The <a href="https://www.bvca.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Private Equity & Venture Capital Association</a> highlights how portfolio companies increasingly use fractional leadership to scale efficiently. Fractional tech leaders provide senior expertise at a fraction of the cost.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8">
@@ -248,7 +249,7 @@ export default async function TechJobsPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Remote-First</h3>
               <p className="text-gray-600">
-                65% of fractional tech roles are fully remote or hybrid. Work with clients across the UK and Europe from anywhere.
+                65% of fractional tech roles are fully remote or hybrid. The <a href="https://www.cbi.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CBI</a> reports that flexible working arrangements have become essential for attracting senior talent. Work with clients across the UK and Europe from anywhere.
               </p>
             </div>
           </div>
@@ -264,19 +265,19 @@ export default async function TechJobsPage() {
           </div>
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-6">
-              The technology sector faces a unique leadership challenge: technical complexity is accelerating faster than talent pipelines can produce experienced leaders. According to <a href="https://survey.stackoverflow.co/2023/#leadership-experience" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Stack Overflow's Developer Survey</a>, only 8% of developers have 20+ years of experience—the cohort from which technical executives are typically drawn. Yet technology decisions made today have 5-10 year consequences for scalability, security, and technical debt.
+              The technology sector faces a unique leadership challenge: technical complexity is accelerating faster than talent pipelines can produce experienced leaders. According to <a href="https://survey.stackoverflow.co/2023/#leadership-experience" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Stack Overflow's Developer Survey</a>, only 8% of developers have 20+ years of experience—the cohort from which technical executives are typically drawn. The UK's <a href="https://technation.io" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a> reports growing demand for senior technology leadership as the digital economy expands. Yet technology decisions made today have 5-10 year consequences for scalability, security, and technical debt.
             </p>
             <p className="text-gray-700 mb-6">
-              This scarcity drives compensation to unsustainable levels. A CTO with deep cloud architecture experience, AI/ML implementation history, and successful scaling credentials commands £180k-£300k in salary plus significant equity. For companies at £5-20M revenue, this represents 1-6% of revenue—often untenable when margins are thin and growth investment needs are high.
+              This scarcity drives compensation to unsustainable levels. A CTO with deep cloud architecture experience, AI/ML implementation history, and successful scaling credentials commands £180k-£300k in salary plus significant equity. According to <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> salary benchmarking data, technology leadership roles continue to command premium compensation. For companies at £5-20M revenue, this represents 1-6% of revenue—often untenable when margins are thin and growth investment needs are high.
             </p>
             <p className="text-gray-700 mb-6">
               The technical landscape compounds this challenge. <a href="https://octoverse.github.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">GitHub's Octoverse report</a> tracks the explosion of programming languages, frameworks, and architectural patterns. A CTO who built their expertise on monolithic PHP applications in 2010 may lack relevant experience for microservices, Kubernetes, serverless architectures, and edge computing that define modern systems. Companies need leaders with current, battle-tested knowledge.
             </p>
             <p className="text-gray-700 mb-6">
-              Security and compliance requirements have become executive-level concerns. GDPR, SOC 2, ISO 27001, PCI-DSS—these aren't checkbox exercises but fundamental architectural decisions. Research from the <a href="https://www.cncf.io/reports/cncf-annual-survey-2023/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Cloud Native Computing Foundation</a> shows that security and compliance drive 60% of cloud architecture decisions. Companies need fractional CISOs and CTOs who've actually implemented these frameworks at scale, not consultants who've read about them.
+              Security and compliance requirements have become executive-level concerns. GDPR, SOC 2, ISO 27001, PCI-DSS—these aren't checkbox exercises but fundamental architectural decisions. The <a href="https://www.bcs.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BCS (British Computer Society)</a> provides professional standards for IT security leadership. Research from the <a href="https://www.cncf.io/reports/cncf-annual-survey-2023/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Cloud Native Computing Foundation</a> shows that security and compliance drive 60% of cloud architecture decisions. Companies need fractional CISOs and CTOs who've actually implemented these frameworks at scale, not consultants who've read about them.
             </p>
             <p className="text-gray-700">
-              Fractional tech executives solve multiple problems simultaneously. They provide current expertise in rapidly evolving technologies, bring pattern recognition from multiple companies facing similar challenges, and cost 50-60% less than full-time equivalents. For tech companies navigating cloud migration, AI implementation, or scaling from 10 to 100 engineers, this expertise at the critical moment prevents catastrophically expensive mistakes.
+              Fractional tech executives solve multiple problems simultaneously. They provide current expertise in rapidly evolving technologies, bring pattern recognition from multiple companies facing similar challenges, and cost 50-60% less than full-time equivalents. <a href="https://www.scaleupdevelopmenteconomy.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">The ScaleUp Institute</a> highlights how access to senior expertise remains a critical challenge for high-growth companies. For tech companies navigating cloud migration, AI implementation, or scaling from 10 to 100 engineers, this expertise at the critical moment prevents catastrophically expensive mistakes.
             </p>
           </div>
         </div>
@@ -291,7 +292,7 @@ export default async function TechJobsPage() {
           </div>
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-6">
-              Fractional technology executives operate differently than permanent CTOs or consultants. They combine hands-on technical depth with strategic vision, bringing current expertise from multiple parallel implementations.
+              Fractional technology executives operate differently than permanent CTOs or consultants. They combine hands-on technical depth with strategic vision, bringing current expertise from multiple parallel implementations. <a href="https://technation.io/insights" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation insights</a> show how flexible leadership models are transforming the UK tech ecosystem.
             </p>
             <p className="text-gray-700 mb-6">
               <strong>They make build-vs-buy decisions based on current reality, not past experience.</strong> The technology landscape shifts monthly. A fractional CTO evaluating whether to build a recommendation engine in-house or use a managed service has likely evaluated the same decision for 2-3 other clients in the past quarter. They know which vendors over-promise, which open-source projects have active communities vs abandoned codebases, and what truly costs in production vs marketing claims. This current, comparative knowledge prevents expensive wrong turns.
@@ -303,7 +304,7 @@ export default async function TechJobsPage() {
               <strong>They can still code—and that matters.</strong> According to <a href="https://stackoverflow.com/dev-survey" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Stack Overflow data</a>, technology stacks are increasingly polyglot. The best fractional CTOs maintain hands-on coding skills, review architecture through pull requests, and can diagnose production issues by reading logs and metrics. They're not "retired" CTOs—they're actively practicing technologists who happen to work fractionally.
             </p>
             <p className="text-gray-700 mb-6">
-              <strong>They build teams, not just systems.</strong> Hiring technical talent is brutally competitive. Fractional CTOs leverage their networks to source hard-to-find specialists, know which technical interview questions actually predict performance, and understand compensation benchmarks across different company stages. They've built engineering teams 5-10 times and know the hiring mistakes that kill momentum.
+              <strong>They build teams, not just systems.</strong> Hiring technical talent is brutally competitive. Research from <a href="https://www.techuk.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK</a> shows the UK tech sector faces persistent skills shortages. Fractional CTOs leverage their networks to source hard-to-find specialists, know which technical interview questions actually predict performance, and understand compensation benchmarks across different company stages. They've built engineering teams 5-10 times and know the hiring mistakes that kill momentum.
             </p>
             <p className="text-gray-700">
               <strong>They navigate vendor relationships strategically.</strong> Cloud spend can spiral from £5k to £50k monthly without architectural discipline. Fractional CTOs negotiate enterprise agreements, implement FinOps practices to control costs, and know when to challenge vendor pricing vs when you're getting fair value. This cost management often pays their fees multiple times over.
@@ -330,7 +331,7 @@ export default async function TechJobsPage() {
               <li><strong>GitHub presence:</strong> Active contributions to open source or maintained personal projects show they're still coding, not just managing</li>
               <li><strong>Scale experience:</strong> Ask: "What's the largest system you've scaled, from what baseline to what peak?" Specific numbers matter</li>
               <li><strong>Disaster stories:</strong> Great CTOs have survived production outages, security incidents, and architectural mistakes. They learned from failures</li>
-              <li><strong>Hiring success:</strong> They can name 5+ exceptional engineers they've hired and what made each hire successful. Technical hiring is critical</li>
+              <li><strong>Hiring success:</strong> They can name 5+ exceptional engineers they've hired and what made each hire successful. The <a href="https://www.iod.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> emphasizes that leadership capability in building teams is critical</li>
             </ul>
 
             <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Red Flags: Warning Signs</h3>
@@ -344,13 +345,13 @@ export default async function TechJobsPage() {
 
             <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Structuring Technical Engagements</h3>
             <p className="text-gray-700 mb-4">
-              Start with a technical audit (1-2 weeks, fixed fee £3k-£8k). A good fractional CTO will review architecture, codebase, infrastructure, team structure, and technical debt—then provide a prioritized roadmap. This audit validates their expertise and gives you actionable insights even if you don't proceed with ongoing engagement.
+              Start with a technical audit (1-2 weeks, fixed fee £3k-£8k). A good fractional CTO will review architecture, codebase, infrastructure, team structure, and technical debt—then provide a prioritized roadmap. According to <a href="https://www.ons.gov.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS business data</a>, strategic planning and expert consultation are key drivers of productivity growth in the tech sector. This audit validates their expertise and gives you actionable insights even if you don't proceed with ongoing engagement.
             </p>
             <p className="text-gray-700 mb-4">
               <strong>Ongoing engagement:</strong> Most technical fractional relationships run 2 days/week for 6-12 months. One day for architecture/strategy work, one day embedded with the engineering team for reviews, hiring, and technical decisions. This balance provides strategic direction without disconnecting from implementation reality.
             </p>
             <p className="text-gray-700 mb-4">
-              <strong>Day rates by specialization:</strong> General CTO/VP Engineering: £900-£1,200. Cloud architecture specialists: £1,000-£1,350. Security (CISO): £1,100-£1,400. AI/ML specialists: £1,200-£1,500. Rates reflect scarcity of genuine expertise.
+              <strong>Day rates by specialization:</strong> General CTO/VP Engineering: £900-£1,200. Cloud architecture specialists: £1,000-£1,350. Security (CISO): £1,100-£1,400. AI/ML specialists: £1,200-£1,500. Rates reflect scarcity of genuine expertise. <a href="https://www.british-business-bank.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> research shows that access to senior expertise is a critical factor in scaling technology businesses.
             </p>
             <p className="text-gray-700">
               <strong>Define technical outcomes upfront.</strong> For cloud migration: "Migrate 80% of workloads to AWS with &lt;10% downtime, achieve £15k/month cost reduction." For scaling: "Support 10x traffic growth with &lt;200ms p95 latency." For security: "Achieve SOC 2 Type II certification within 8 months." Measurable outcomes prevent endless architectural philosophy debates.

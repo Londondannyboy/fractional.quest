@@ -93,7 +93,7 @@ export default async function BirminghamPage() {
             Fractional Jobs Birmingham
           </h1>
           <p className="max-w-2xl text-xl text-blue-100 mb-10 leading-relaxed">
-            {stats.totalBirmingham}+ fractional executive opportunities in the UK's second city. £650-£1,100 daily rates. Work with leading finance, manufacturing, and professional services firms.
+            {stats.totalBirmingham}+ fractional executive opportunities in the UK's second city. £650-£1,100 daily rates. Work with leading finance, manufacturing, and professional services firms supported by <a href="https://www.wmgrowth.com/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline">regional growth initiatives</a>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -174,30 +174,30 @@ export default async function BirminghamPage() {
               <span className="text-3xl mb-4 block">🚄</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">HS2 Transformation</h3>
               <p className="text-gray-600">
-                HS2 is reshaping Birmingham. With London just 45 minutes away, businesses are relocating here. Fractional executives can serve both cities efficiently.
+                HS2 is reshaping Birmingham. With London just 45 minutes away, businesses are relocating here. The <a href="https://www.wmca.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">West Midlands Combined Authority</a> is driving regional investment, creating opportunities for fractional executives to serve both cities efficiently.
               </p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8">
               <span className="text-3xl mb-4 block">🏭</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Manufacturing Heritage</h3>
               <p className="text-gray-600">
-                JLR, Rolls-Royce, and 6,000+ manufacturers. Birmingham's industrial base creates unique demand for fractional CFOs and COOs with operations expertise.
+                JLR, Rolls-Royce, and 6,000+ manufacturers. Birmingham's industrial base creates unique demand for fractional CFOs and COOs with operations expertise. <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> research shows the region's manufacturing scaleups are growing rapidly.
               </p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8">
               <span className="text-3xl mb-4 block">🏦</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Financial Services Hub</h3>
               <p className="text-gray-600">
-                HSBC's UK HQ and major banks on Colmore Row. Birmingham's financial sector rivals regional competitors, with strong demand for fractional finance leadership.
+                HSBC's UK HQ and major banks on Colmore Row. Birmingham's financial sector rivals regional competitors, with strong demand for fractional finance leadership across <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">professional services firms</a>.
               </p>
             </div>
           </div>
           <div className="mt-12 max-w-4xl mx-auto">
             <p className="text-gray-700 leading-relaxed mb-4">
-              Birmingham's economy is diversifying rapidly. <a href="https://www.greaterbirminghamchambers.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Greater Birmingham Chambers</a> data shows the region hosts over 42,000 businesses and contributes £106bn to UK GDP annually.
+              Birmingham's economy is diversifying rapidly. <a href="https://www.greaterbirminghamchambers.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Greater Birmingham Chambers</a> data shows the region hosts over 42,000 businesses and contributes £106bn to UK GDP annually. <a href="https://www.wmgrowth.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">West Midlands Growth Company</a> reports strong inward investment, particularly in tech and advanced manufacturing sectors.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              The Commonwealth Games legacy and HS2 investment continue driving growth. For fractional executives, Birmingham offers competitive rates with significantly lower living costs than London.
+              The Commonwealth Games legacy and HS2 investment continue driving growth. According to <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS regional employment data</a>, the West Midlands shows strong job market resilience. For fractional executives, Birmingham offers competitive rates with significantly lower living costs than London.
             </p>
           </div>
         </div>
@@ -218,6 +218,11 @@ export default async function BirminghamPage() {
                 <p className="text-blue-700 text-sm font-semibold">{industry.growth}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-12 max-w-4xl mx-auto text-center">
+            <p className="text-gray-700 leading-relaxed">
+              The region's tech sector is particularly dynamic. <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a> ranks Birmingham among the UK's fastest-growing tech clusters, while <a href="https://www.techuk.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK</a> highlights the city's strength in fintech and digital innovation. This creates exceptional demand for fractional CTOs and technology leaders.
+            </p>
           </div>
         </div>
       </section>
@@ -263,7 +268,7 @@ export default async function BirminghamPage() {
                 <span className="text-blue-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                A fractional job in Birmingham is a part-time executive role working 1-3 days per week. Birmingham's manufacturing and financial services sectors create strong demand for fractional CFOs and COOs with operational expertise.
+                A fractional job in Birmingham is a part-time executive role working 1-3 days per week. Birmingham's manufacturing and financial services sectors create strong demand for fractional CFOs and COOs with operational expertise. The <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> reports growing adoption of fractional leadership models among West Midlands businesses.
               </p>
             </details>
 
@@ -273,7 +278,7 @@ export default async function BirminghamPage() {
                 <span className="text-blue-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                Birmingham fractional executives earn £650-£1,100 per day. With 2-4 clients, annual earnings of £120,000-£200,000+ are achievable—competitive rates with lower living costs than London.
+                Birmingham fractional executives earn £650-£1,100 per day. With 2-4 clients, annual earnings of £120,000-£200,000+ are achievable—competitive rates with lower living costs than London. The <a href="https://www.cbi.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CBI</a> notes that Birmingham offers excellent value for senior talent compared to other major UK cities.
               </p>
             </details>
 
@@ -283,7 +288,7 @@ export default async function BirminghamPage() {
                 <span className="text-blue-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                HS2 will put Birmingham 45 minutes from London, making it practical to serve clients in both cities. This is already driving business relocations and creating exceptional fractional opportunities.
+                HS2 will put Birmingham 45 minutes from London, making it practical to serve clients in both cities. This is already driving business relocations and creating exceptional fractional opportunities. <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> research shows increased investment in West Midlands scaleups anticipating improved connectivity.
               </p>
             </details>
           </div>

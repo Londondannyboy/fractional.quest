@@ -93,6 +93,7 @@ export default async function NewcastlePage() {
       {/* Hero Section with 3D Knowledge Graph */}
       <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/1769408/pexels-photo-1769408.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
           <JobsGraph3D locationFilter="newcastle" limit={30} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -104,7 +105,7 @@ export default async function NewcastlePage() {
               {stats.totalNewcastle}+ Jobs in Newcastle
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
             Fractional Jobs Newcastle
           </h1>
           <p className="max-w-2xl text-xl text-slate-100 mb-10 leading-relaxed">
@@ -141,7 +142,7 @@ export default async function NewcastlePage() {
             </div>
             <div>
               <div className="text-4xl font-black text-slate-700">+22%</div>
-              <div className="text-gray-600 font-medium">tech sector growth</div>
+              <div className="text-gray-600 font-medium">tech sector growth (<a href="https://technation.io/report2023/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a>)</div>
             </div>
             <div>
               <div className="text-4xl font-black text-slate-700">50%</div>
@@ -189,14 +190,14 @@ export default async function NewcastlePage() {
               <span className="text-3xl mb-4 block">🎮</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Gaming Hub</h3>
               <p className="text-gray-600">
-                Newcastle is home to Ubisoft, Sumo Digital, and 50+ game studios. Fractional CTOs and CMOs are in high demand in this growing sector.
+                Newcastle is home to Ubisoft, Sumo Digital, and 50+ game studios. Fractional CTOs and CMOs are in high demand in this growing sector, which <a href="https://www.techuk.org/what-we-do/business-groups/digital-and-creative/gaming.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK</a> identifies as a key digital growth area.
               </p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8">
               <span className="text-3xl mb-4 block">🏗️</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Newcastle Helix</h3>
               <p className="text-gray-600">
-                £350m innovation district focused on urban science, data, and ageing. World-class research creating fractional leadership opportunities.
+                £350m <a href="https://newcastlehelix.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">innovation district</a> focused on urban science, data, and ageing. World-class research creating fractional leadership opportunities supported by the <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a>.
               </p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8">
@@ -210,13 +211,13 @@ export default async function NewcastlePage() {
         </div>
           <div className="mt-12 max-w-4xl mx-auto">
             <p className="text-gray-700 leading-relaxed mb-4">
-              Newcastle and the wider North East region offer unique opportunities. <a href="https://www.northeastengland.co.uk/insights/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Invest North East England</a> tracks growth in advanced manufacturing, digital, and energy sectors—areas requiring fractional leadership to scale operations and navigate complex technical challenges.
+              Newcastle and the wider North East region offer unique opportunities. <a href="https://www.northeastlep.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">North East LEP</a> tracks growth in advanced manufacturing, digital, and energy sectors—areas requiring fractional leadership to scale operations and navigate complex technical challenges. The <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> reports strong SME growth in the region, creating opportunities for fractional CFO expertise.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
-              The region's universities and research base drive innovation demand. <a href="https://www.neechamber.co.uk" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">North East England Chamber of Commerce</a> reports consistent business optimism, particularly in renewable energy and software development—sectors seeking fractional CTO and product expertise.
+              The region's universities and research base drive innovation demand. <a href="https://www.neechamber.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Newcastle Chamber</a> reports consistent business optimism, particularly in renewable energy and software development—sectors seeking fractional CTO and product expertise. The <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> notes increasing demand for flexible executive talent in the North East as businesses adapt to hybrid working models.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Newcastle offers excellent lifestyle with competitive rates (£600-£950). The combination of lower costs, strong quality of life, and access to both established corporates and innovative scale-ups creates attractive portfolio opportunities for experienced executives.
+              Newcastle offers excellent lifestyle with competitive rates (£600-£950). The combination of lower costs, strong quality of life, and access to both established corporates and innovative scale-ups creates attractive portfolio opportunities for experienced executives. According to the <a href="https://www.ons.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS</a>, the North East has seen consistent employment growth in professional services.
             </p>
           </div>
       </section>
@@ -283,7 +284,7 @@ export default async function NewcastlePage() {
                 <span className="text-slate-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                A fractional job in Newcastle is a part-time executive role working 1-3 days per week. Newcastle's growing tech and gaming sectors make it ideal for fractional CTOs and CMOs.
+                A fractional job in Newcastle is a part-time executive role working 1-3 days per week. Newcastle's growing tech and gaming sectors make it ideal for fractional CTOs and CMOs. The <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> reports increasing adoption of fractional leadership models across UK businesses.
               </p>
             </details>
 
@@ -293,7 +294,7 @@ export default async function NewcastlePage() {
                 <span className="text-slate-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                Newcastle fractional executives earn £500-£950 per day. With 50% lower cost of living than London, take-home value is excellent. Most earn £100,000-£160,000+ annually.
+                Newcastle fractional executives earn £500-£950 per day. With 50% lower cost of living than London, take-home value is excellent. Most earn £100,000-£160,000+ annually. The <a href="https://www.cbi.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CBI</a> notes that regional cities offer strong value propositions for both businesses and executives.
               </p>
             </details>
 
@@ -303,7 +304,7 @@ export default async function NewcastlePage() {
                 <span className="text-slate-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                Key industries include tech/digital, gaming, life sciences, energy, and fintech. The gaming sector (Ubisoft, Sumo Digital) is particularly strong for fractional leadership.
+                Key industries include tech/digital, gaming, life sciences, energy, and fintech. The gaming sector (Ubisoft, Sumo Digital) is particularly strong for fractional leadership. The <a href="https://www.britishchambers.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Chambers of Commerce</a> highlights the North East's diversifying economy as a driver for specialist executive talent.
               </p>
             </details>
           </div>

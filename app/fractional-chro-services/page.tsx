@@ -115,7 +115,7 @@ export default function FractionalCHROServicesPage() {
           </div>
           <div className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              A <strong className="font-semibold text-gray-900">Fractional CHRO</strong> (also called Fractional HR Director or Fractional People Director) is an experienced HR executive who works with your company on a part-time basis—typically 1-3 days per week. You get strategic people leadership, culture expertise, and HR strategy without the commitment and cost of a full-time hire.
+              A <strong className="font-semibold text-gray-900">Fractional CHRO</strong> (also called Fractional HR Director or Fractional People Director) is an experienced HR executive who works with your company on a part-time basis—typically 1-3 days per week. You get strategic people leadership, culture expertise, and HR strategy without the commitment and cost of a full-time hire. This flexible approach aligns with <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">modern flexible working practices</a> that benefit both employers and employees.
             </p>
             <p>
               Unlike HR consultants who advise on specific projects, a fractional CHRO becomes your people leader. They develop people strategy, shape culture, advise the CEO, and take ownership of the employee experience—just not five days a week.
@@ -145,7 +145,7 @@ export default function FractionalCHROServicesPage() {
             {[
               {
                 title: 'People Strategy',
-                description: 'Develop and implement people strategy aligned with business goals. Define how the organisation attracts, develops, and retains talent.',
+                description: 'Develop and implement people strategy aligned with business goals. Define how the organisation attracts, develops, and retains talent. Drawing on insights from organisations like the <a href="https://www.iod.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a>, CHROs ensure people strategy drives business performance.',
                 icon: '🎯',
               },
               {
@@ -165,7 +165,7 @@ export default function FractionalCHROServicesPage() {
               },
               {
                 title: 'Compensation & Benefits',
-                description: 'Design competitive compensation structures, benefits packages, and equity programmes that attract and retain talent.',
+                description: 'Design competitive compensation structures, benefits packages, and equity programmes that attract and retain talent. <a href="https://www.cipd.org/uk/knowledge/guides/reward-management" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD reward guidance</a> and market benchmarking inform competitive packages.',
                 icon: '💰',
               },
               {
@@ -175,7 +175,7 @@ export default function FractionalCHROServicesPage() {
               },
               {
                 title: 'HR Operations',
-                description: 'Build HR infrastructure—policies, systems, compliance, and processes that support a growing organisation.',
+                description: 'Build HR infrastructure—policies, systems, compliance, and processes that support a growing organisation. Ensuring adherence to <a href="https://www.gov.uk/browse/employing-people" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK employment law requirements</a> while building scalable systems.',
                 icon: '⚙️',
               },
             ].map((item, index) => (
@@ -200,7 +200,7 @@ export default function FractionalCHROServicesPage() {
             {[
               {
                 title: 'Strategic People Leadership',
-                description: 'Get 15+ years of HR experience applied to your challenges. A fractional CHRO brings proven approaches to building great organisations.',
+                description: 'Get 15+ years of HR experience applied to your challenges. A fractional CHRO brings proven approaches to building great organisations, leveraging best practices from <a href="https://www.shrm.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">global HR bodies like SHRM</a> and UK-specific expertise.',
                 stat: '15+',
                 statLabel: 'Years Experience',
               },
@@ -218,7 +218,7 @@ export default function FractionalCHROServicesPage() {
               },
               {
                 title: 'Avoid Costly Mistakes',
-                description: 'HR mistakes are expensive—bad hires, compliance issues, culture problems. A fractional CHRO helps you avoid the pitfalls.',
+                description: 'HR mistakes are expensive—bad hires, compliance issues, culture problems. A fractional CHRO helps you avoid the pitfalls. Understanding <a href="https://www.acas.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACAS guidance on employment disputes</a> prevents costly tribunals and settlements.',
                 stat: '£100k+',
                 statLabel: 'Mistakes Avoided',
               },
@@ -255,17 +255,17 @@ export default function FractionalCHROServicesPage() {
             {[
               {
                 scenario: 'Scaling Rapidly',
-                description: 'Growing from 20 to 100+ people. You need HR infrastructure, hiring processes, and leadership development to scale successfully.',
+                description: 'Growing from 20 to 100+ people. You need HR infrastructure, hiring processes, and leadership development to scale successfully. <a href="https://www.scaleupinstitute.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute research</a> shows people challenges are the biggest constraint for high-growth firms.',
                 timing: 'Before doubling headcount',
               },
               {
                 scenario: 'Culture Concerns',
-                description: 'Culture is slipping as you grow. Engagement is declining, values feel diluted, or there\'s a disconnect between teams.',
+                description: 'Culture is slipping as you grow. Engagement is declining, values feel diluted, or there\'s a disconnect between teams. <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS employment data</a> shows retention and productivity directly correlate with workplace culture.',
                 timing: 'At first warning signs',
               },
               {
                 scenario: 'Post-Funding Growth',
-                description: 'You\'ve raised capital and need to hire significantly. Time to professionalise HR and build the talent acquisition machine.',
+                description: 'You\'ve raised capital and need to hire significantly. Time to professionalise HR and build the talent acquisition machine. <a href="https://www.british-business-bank.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> research highlights talent infrastructure as critical post-investment.',
                 timing: 'Immediately after close',
               },
               {
@@ -280,7 +280,7 @@ export default function FractionalCHROServicesPage() {
               },
               {
                 scenario: 'Complex HR Situations',
-                description: 'Restructuring, M&A, international expansion, or other complex people situations that need senior expertise.',
+                description: 'Restructuring, M&A, international expansion, or other complex people situations that need senior expertise. Navigating <a href="https://www.acas.org.uk/redundancy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">redundancy and restructuring processes</a> requires careful compliance and communication.',
                 timing: 'At project inception',
               },
             ].map((item, index) => (
@@ -347,7 +347,7 @@ export default function FractionalCHROServicesPage() {
             Ready to Hire a<br /><span className="text-pink-400">Fractional CHRO?</span>
           </h2>
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            Tell us about your people challenges and we'll match you with pre-vetted fractional CHROs who have solved them before.
+            Tell us about your people challenges and we'll match you with pre-vetted fractional CHROs who have solved them before. Our executives stay current with <a href="https://www.cipd.org/uk/knowledge" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">evolving HR best practices</a> and bring practical, proven solutions.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact/companies" className="px-10 py-5 bg-pink-500 text-white font-bold uppercase tracking-wider hover:bg-pink-400 transition-colors">

@@ -41,19 +41,19 @@ const CHRO_FAQS = [
   },
   {
     question: 'How much does a Fractional CHRO cost?',
-    answer: 'Fractional CHROs in the UK typically charge £1,100-£1,300 per day. For 2 days/week, expect to pay £9,500-£11,300 monthly (£114,000-£135,000 annually). This is 40-50% less than a full-time CHRO at £200,000-£300,000+ total compensation.'
+    answer: 'Fractional CHROs in the UK typically charge £1,100-£1,300 per day. For 2 days/week, expect to pay £9,500-£11,300 monthly (£114,000-£135,000 annually). This is 40-50% less than a full-time CHRO at £200,000-£300,000+ total compensation, providing cost-effective access to executive talent as highlighted by <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> research on scaling businesses.'
   },
   {
     question: 'What is the difference between CHRO and HR Director?',
-    answer: 'CHROs focus on board-level strategy, executive team alignment, culture transformation, and organisational design. HR Directors focus on building and running HR operations. CHROs are typically 10-15% more expensive and suited to larger, more complex organisations (100+ employees).'
+    answer: 'CHROs focus on board-level strategy, executive team alignment, culture transformation, and organisational design in line with <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD governance standards</a>. HR Directors focus on building and running HR operations. CHROs are typically 10-15% more expensive and suited to larger, more complex organisations (100+ employees).'
   },
   {
     question: 'When should I hire a Fractional CHRO vs HR Director?',
-    answer: 'Hire a CHRO if: you have 100+ employees, need board-level strategic thinking, are going through major transformation (M&A, restructure, culture change), or preparing for exit. Hire an HR Director if: you have 30-100 employees and need hands-on HR leadership and infrastructure building.'
+    answer: 'Hire a CHRO if: you have 100+ employees, need board-level strategic thinking, are going through major transformation (M&A, restructure, culture change), or preparing for exit. Hire an HR Director if: you have 30-100 employees and need hands-on HR leadership and infrastructure building. Consider <a href="https://www.acas.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACAS resources</a> for understanding employment responsibilities at different scales.'
   },
   {
     question: 'What qualifications do Fractional CHROs have?',
-    answer: 'Fractional CHROs typically have 18-25+ years HR experience with 8+ years in CHRO, CPO, or Group HR Director roles. Most hold CIPD Level 7 and have led HR through significant growth, M&A, or transformation at companies with 200-1000+ employees.'
+    answer: 'Fractional CHROs typically have 18-25+ years HR experience with 8+ years in CHRO, CPO, or Group HR Director roles. Most hold <a href="https://www.cipd.org/uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD Level 7</a> and have led HR through significant growth, M&A, or transformation at companies with 200-1000+ employees.'
   },
 ]
 
@@ -138,17 +138,17 @@ export default async function FractionalCHROPage() {
 
           <div className="bg-pink-50 border-l-4 border-pink-500 p-8 mb-12">
             <p className="text-2xl md:text-3xl font-light text-gray-900 leading-relaxed mb-0">
-              A <strong className="font-bold">Fractional CHRO</strong> (Chief Human Resources Officer) is an experienced executive-level HR leader who provides <strong>strategic people leadership on a part-time basis</strong>—typically 2-3 days per week. They sit on your leadership team, own the entire people function, and drive culture and organisational transformation at <strong>40-50% less cost</strong> than a full-time CHRO.
+              A <strong className="font-bold">Fractional CHRO</strong> (Chief Human Resources Officer) is an experienced executive-level HR leader who provides <strong>strategic people leadership on a part-time basis</strong>—typically 2-3 days per week. They sit on your leadership team, own the entire people function, and drive culture and organisational transformation at <strong>40-50% less cost</strong> than a full-time CHRO. This model is particularly valuable for <a href="https://scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scaling businesses</a> that need executive expertise without full-time commitment.
             </p>
           </div>
 
           <div className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed">
-              The CHRO (also called Chief People Officer or CPO) is the most senior HR role in an organisation. They report directly to the CEO, sit on the executive team, and are responsible for all aspects of people strategy—culture, talent, organisational effectiveness, and HR operations.
+              The CHRO (also called Chief People Officer or CPO) is the most senior HR role in an organisation. They report directly to the CEO, sit on the executive team, and are responsible for all aspects of people strategy—culture, talent, organisational effectiveness, and HR operations. According to <a href="https://www.cipd.org/uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a>, strategic people leadership is increasingly critical for UK business success.
             </p>
 
             <p>
-              In the UK market, "CHRO" terminology is more common at larger organisations (200+ employees) and US-influenced companies. Many UK businesses use "HR Director" or "People Director" for similar roles. The key distinction is that CHROs focus on <strong>board-level strategic work</strong> rather than operational HR management.
+              In the UK market, "CHRO" terminology is more common at larger organisations (200+ employees) and US-influenced companies. Many UK businesses use "HR Director" or "People Director" for similar roles. The key distinction is that CHROs focus on <strong>board-level strategic work</strong> rather than operational HR management, particularly around <a href="https://www.gov.uk/browse/employing-people" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">employment regulations</a> and workforce planning.
             </p>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">CHRO vs HR Director</h3>
@@ -214,7 +214,7 @@ export default async function FractionalCHROPage() {
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-4">1. Strategic People Planning</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li>• Develop long-term people strategy aligned with business strategy</li>
-                  <li>• Create workforce planning and organisational design</li>
+                  <li>• Create workforce planning and organisational design in line with <a href="https://www.acas.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACAS guidance</a></li>
                   <li>• Design leadership team structure and succession planning</li>
                   <li>• Present people strategy to board and investors</li>
                 </ul>
@@ -225,7 +225,7 @@ export default async function FractionalCHROPage() {
                 <ul className="space-y-2 text-gray-700">
                   <li>• Lead culture transformation initiatives</li>
                   <li>• Shape and reinforce company values at scale</li>
-                  <li>• Drive diversity, equity, and inclusion strategy</li>
+                  <li>• Drive diversity, equity, and inclusion strategy guided by <a href="https://www.shrm.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">SHRM best practices</a></li>
                   <li>• Manage change during M&A, restructuring, or rapid growth</li>
                 </ul>
               </div>
@@ -243,7 +243,7 @@ export default async function FractionalCHROPage() {
               <div className="bg-white p-8 border-l-4 border-gray-300">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-4">4. Board & Investor Relations</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Present people metrics and strategy to board</li>
+                  <li>• Present people metrics and strategy to board aligned with <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD governance principles</a></li>
                   <li>• Support investor due diligence on people matters</li>
                   <li>• Advise on people implications of strategic decisions</li>
                   <li>• Manage board-level compensation decisions</li>
@@ -254,7 +254,7 @@ export default async function FractionalCHROPage() {
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-4">5. Organisational Effectiveness</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li>• Design organisational structure for scale</li>
-                  <li>• Lead major restructuring and change programmes</li>
+                  <li>• Lead major restructuring and change programmes while ensuring compliance with <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working regulations</a></li>
                   <li>• Implement talent management and succession frameworks</li>
                   <li>• Drive employee engagement at enterprise level</li>
                 </ul>
@@ -276,12 +276,12 @@ export default async function FractionalCHROPage() {
             <div className="grid gap-6 my-10">
               <div className="bg-gray-50 p-6 border-l-4 border-pink-500">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">100-500 Employees</h3>
-                <p className="text-gray-700 mb-0">You've grown beyond where an HR Director can handle strategic needs. You need board-level thinking on people matters, but can't justify £200k+ for full-time CHRO.</p>
+                <p className="text-gray-700 mb-0">You've grown beyond where an HR Director can handle strategic needs. According to <a href="https://scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> research, scaling companies need strategic people leadership. You need board-level thinking on people matters, but can't justify £200k+ for full-time CHRO.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-gray-900">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">PE-Backed Portfolio Company</h3>
-                <p className="text-gray-700 mb-0">Private equity investors often mandate senior HR leadership across portfolio companies. Fractional CHROs can work across multiple portfolio companies efficiently.</p>
+                <p className="text-gray-700 mb-0">Private equity investors, including those tracked by the <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BVCA</a>, often mandate senior HR leadership across portfolio companies. Fractional CHROs can work across multiple portfolio companies efficiently.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-pink-500">
@@ -291,7 +291,7 @@ export default async function FractionalCHROPage() {
 
               <div className="bg-gray-50 p-6 border-l-4 border-gray-900">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">Preparing for IPO or Sale</h3>
-                <p className="text-gray-700 mb-0">Exit preparation requires professional people infrastructure, governance, and documentation that meets institutional standards.</p>
+                <p className="text-gray-700 mb-0">Exit preparation requires professional people infrastructure, governance, and documentation that meets institutional standards. The <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD</a> emphasizes robust governance for successful exits.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-pink-500">
@@ -328,7 +328,7 @@ export default async function FractionalCHROPage() {
                   <h4 className="font-bold text-gray-900 mb-2">Full-Time CHRO</h4>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>• Salary + bonus: £180,000-£250,000</li>
-                    <li>• Employer NI + pension: £30,000-£40,000</li>
+                    <li>• Employer NI + pension: £30,000-£40,000 (see <a href="https://www.ons.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS data</a>)</li>
                     <li>• Benefits + equity: £20,000-£50,000</li>
                     <li className="font-bold">Total: £230,000-£340,000/year</li>
                   </ul>

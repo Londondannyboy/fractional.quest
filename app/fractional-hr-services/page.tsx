@@ -36,7 +36,7 @@ async function getHRStats() {
 const SERVICES_FAQS = [
   {
     question: 'What fractional HR services are available?',
-    answer: 'Fractional HR services include: strategic people planning, HR infrastructure building (contracts, policies, HRIS), complex employee relations, talent acquisition leadership, performance management, culture development, compliance and UK employment law, and board/investor reporting. Services can be ongoing or project-based.'
+    answer: 'Fractional HR services include: strategic people planning, HR infrastructure building (contracts, policies, HRIS), complex employee relations, talent acquisition leadership, performance management, culture development, compliance and <a href="https://www.gov.uk/browse/employing-people" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK employment law</a>, and board/investor reporting. Services can be ongoing or project-based.'
   },
   {
     question: 'How much do fractional HR services cost?',
@@ -44,7 +44,7 @@ const SERVICES_FAQS = [
   },
   {
     question: 'How quickly can fractional HR services start?',
-    answer: 'Fractional HR professionals can typically start within 1-2 weeks of initial contact. This is significantly faster than hiring full-time (3-6 months). For urgent matters (tribunal, crisis), same-week starts are sometimes possible.'
+    answer: 'Fractional HR professionals can typically start within 1-2 weeks of initial contact. This is significantly faster than hiring full-time (3-6 months). For urgent matters (<a href="https://www.acas.org.uk/employment-tribunals" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">tribunal</a>, crisis), same-week starts are sometimes possible.'
   },
   {
     question: 'What is the difference between fractional HR and HR outsourcing?',
@@ -55,25 +55,25 @@ const SERVICES_FAQS = [
 const services = [
   {
     title: 'Strategic HR Leadership',
-    description: 'Senior-level people strategy aligned with your business objectives. Board-level thinking and leadership team integration.',
+    description: 'Senior-level people strategy aligned with your business objectives. Board-level thinking and leadership team integration for <a href="https://www.scaleupdirectory.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scaling businesses</a>.',
     items: ['People strategy development', 'Organisational design', 'Leadership team advisory', 'Board & investor reporting'],
     price: 'From £4,000/month'
   },
   {
     title: 'HR Infrastructure Building',
-    description: 'Establish proper HR foundations—essential for scaling companies and investor readiness.',
-    items: ['Employment contracts', 'Employee handbook & policies', 'HRIS implementation', 'Onboarding processes'],
+    description: 'Establish proper HR foundations—essential for scaling companies and <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">investor readiness</a>.',
+    items: ['<a href="https://www.gov.uk/employment-contracts-and-conditions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Employment contracts</a>', 'Employee handbook & policies', 'HRIS implementation', 'Onboarding processes'],
     price: '£5,000-£25,000 project'
   },
   {
     title: 'Employee Relations',
-    description: 'Expert handling of complex people situations. Tribunal-experienced professionals.',
-    items: ['Complex ER case management', 'Restructuring & redundancy', 'Performance management', 'Grievance handling'],
+    description: 'Expert handling of complex people situations. <a href="https://www.acas.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tribunal-experienced</a> professionals.',
+    items: ['Complex ER case management', '<a href="https://www.gov.uk/staff-redundant" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Restructuring & redundancy</a>', 'Performance management', '<a href="https://www.acas.org.uk/grievance-procedure-step-by-step" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Grievance handling</a>'],
     price: 'From £3,000/month'
   },
   {
     title: 'Talent & Culture',
-    description: 'Build the people practices that attract and retain great talent.',
+    description: 'Build the people practices that attract and retain great talent. <a href="https://www.cipd.org/uk/knowledge/guides/talent-management/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Evidence-based approaches</a>.',
     items: ['Talent acquisition strategy', 'Employer branding', 'Culture development', 'Engagement & retention'],
     price: 'From £3,500/month'
   },
@@ -87,7 +87,8 @@ export default async function FractionalHRServicesPage() {
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <JobsGraph3D categoryFilter="HR" limit={25} height="100%" isHero={true} showOverlay={true} />
+          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="HR Services" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 w-full py-20">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -98,7 +99,7 @@ export default async function FractionalHRServicesPage() {
               <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Services
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Fractional HR<br />
                 <span className="text-pink-400">Services</span>
               </h1>
@@ -168,7 +169,7 @@ export default async function FractionalHRServicesPage() {
               <div className="w-12 h-12 bg-pink-500 text-white font-black text-xl flex items-center justify-center flex-shrink-0">1</div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Define Your Needs</h3>
-                <p className="text-gray-600">Tell us about your HR challenges, company stage, and what success looks like. We'll help scope the right level of support.</p>
+                <p className="text-gray-600">Tell us about your HR challenges, company stage, and what success looks like. Whether you need support with <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working policies</a> or strategic people planning, we'll help scope the right level of support.</p>
               </div>
             </div>
 
@@ -176,7 +177,7 @@ export default async function FractionalHRServicesPage() {
               <div className="w-12 h-12 bg-pink-500 text-white font-black text-xl flex items-center justify-center flex-shrink-0">2</div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Match With HR Leaders</h3>
-                <p className="text-gray-600">We connect you with experienced fractional HR professionals who match your industry, stage, and specific requirements.</p>
+                <p className="text-gray-600">We connect you with experienced fractional HR professionals, often <a href="https://www.cipd.org/uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD-qualified</a> and members of professional bodies like the <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a>, who match your industry, stage, and specific requirements.</p>
               </div>
             </div>
 
@@ -192,7 +193,7 @@ export default async function FractionalHRServicesPage() {
               <div className="w-12 h-12 bg-pink-500 text-white font-black text-xl flex items-center justify-center flex-shrink-0">4</div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Scale as Needed</h3>
-                <p className="text-gray-600">Increase or decrease days as your needs evolve. No long-term lock-in—typical notice periods are 30-60 days.</p>
+                <p className="text-gray-600">Increase or decrease days as your needs evolve—particularly important in the current <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK employment market</a>. No long-term lock-in—typical notice periods are 30-60 days.</p>
               </div>
             </div>
           </div>
@@ -226,7 +227,7 @@ export default async function FractionalHRServicesPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-black mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            Find the right fractional HR leader for your business or list your services.
+            Find the right fractional HR leader for your business or list your services. Get expert support with <a href="https://www.shrm.org/topics-tools/tools/toolkits" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">HR best practices</a> and strategic people leadership.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/fractional-hr-jobs-uk" className="px-8 py-4 bg-pink-500 text-white font-bold uppercase tracking-wider hover:bg-pink-400 transition-colors">

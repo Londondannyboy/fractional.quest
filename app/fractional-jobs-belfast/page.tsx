@@ -74,6 +74,8 @@ export default async function BelfastPage() {
       {/* Hero Section with 3D Knowledge Graph */}
       <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/80 to-blue-900/80" />
           <JobsGraph3D locationFilter="belfast" limit={30} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -85,7 +87,7 @@ export default async function BelfastPage() {
               {stats.totalBelfast}+ Jobs in Belfast
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
             Fractional Jobs Belfast
           </h1>
           <p className="max-w-2xl text-xl text-blue-900/30 mb-10 leading-relaxed">
@@ -129,6 +131,11 @@ export default async function BelfastPage() {
               <div className="text-gray-600 font-medium">lower cost vs London</div>
             </div>
           </div>
+          <div className="mt-6 text-center">
+            <p className="text-sm text-gray-600">
+              Data sourced from <a href="https://www.investni.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Invest NI</a> and industry reports
+            </p>
+          </div>
         </div>
       </section>
 
@@ -170,34 +177,34 @@ export default async function BelfastPage() {
               <span className="text-3xl mb-4 block">🔐</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Cyber Security Hub</h3>
               <p className="text-gray-600">
-                Belfast has Europe's largest cyber security cluster with 100+ companies. Global leaders like Proofpoint, Rapid7, and BlackBerry have major operations here.
+                Belfast has Europe's largest cyber security cluster with 100+ companies. Global leaders like Proofpoint, Rapid7, and BlackBerry have major operations here. <a href="https://technation.io/cyber/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a> recognizes Belfast as a key UK cyber hub.
               </p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8">
               <span className="text-3xl mb-4 block">🎓</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Talent Pipeline</h3>
               <p className="text-gray-600">
-                Queen's University and Ulster University produce world-class graduates. Belfast's talent pool rivals Dublin at a fraction of the cost.
+                Queen's University and Ulster University produce world-class graduates. Belfast's talent pool rivals Dublin at a fraction of the cost. <a href="https://www.cipd.org/uk/knowledge/reports/talent-management/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD research</a> highlights Northern Ireland's strong professional talent base.
               </p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8">
               <span className="text-3xl mb-4 block">💷</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Exceptional Value</h3>
               <p className="text-gray-600">
-                55% lower cost of living than London and 40% lower than Dublin. Work with global companies while enjoying outstanding quality of life.
+                55% lower cost of living than London and 40% lower than Dublin. Work with global companies while enjoying outstanding quality of life. <a href="https://www.ons.gov.uk/economy/inflationandpriceindices" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS data</a> confirms Belfast offers exceptional value.
               </p>
             </div>
           </div>
         </div>
           <div className="mt-12 max-w-4xl mx-auto">
             <p className="text-gray-700 leading-relaxed mb-4">
-              Belfast's economy has transformed into a thriving tech and professional services hub. <a href="https://www.belfastchamber.com" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Belfast Chamber of Trade and Commerce</a> reports significant growth in cybersecurity, fintech, and software development—sectors requiring fractional CTO and product leadership.
+              Belfast's economy has transformed into a thriving tech and professional services hub. <a href="https://www.belfastchamber.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Belfast Chamber of Trade and Commerce</a> reports significant growth in cybersecurity, fintech, and software development—sectors requiring fractional CTO and product leadership. The <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> tracks Belfast's growing cohort of high-growth companies.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Northern Ireland's business environment offers unique advantages. <a href="https://www.investni.com/news" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Invest Northern Ireland</a> tracks inward investment and scale-up growth, with Belfast companies increasingly seeking fractional CFO expertise for expansion and fundraising.
+              Northern Ireland's business environment offers unique advantages. <a href="https://www.investni.com/news" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Invest Northern Ireland</a> tracks inward investment and scale-up growth, with Belfast companies increasingly seeking fractional CFO expertise for expansion and fundraising. <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> supports Northern Ireland SMEs through various funding programs.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Belfast offers excellent value: competitive rates (£600-£900) with the lowest living costs among major UK cities. The combination of R&D tax advantages, talented workforce, and growing startup ecosystem creates attractive opportunities for experienced fractional executives.
+              Belfast offers excellent value: competitive rates (£600-£900) with the lowest living costs among major UK cities. The combination of R&D tax advantages, talented workforce, and growing startup ecosystem creates attractive opportunities for experienced fractional executives. <a href="https://www.techuk.org/sectors/northern-ireland.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK</a> reports on Northern Ireland's thriving digital sector.
             </p>
           </div>
       </section>
@@ -245,6 +252,11 @@ export default async function BelfastPage() {
               </div>
             ))}
           </div>
+          <div className="mt-8 text-center">
+            <p className="text-blue-200 text-sm">
+              Belfast executives benefit from <a href="https://www.cipd.org/uk/knowledge/factsheets/flexible-working-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a> that enhance work-life balance while maintaining high earnings.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -262,7 +274,7 @@ export default async function BelfastPage() {
                 <span className="text-blue-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                A fractional job in Belfast is a part-time executive role working 1-3 days per week. Belfast's cyber security and fintech clusters make it ideal for fractional CTOs and CFOs.
+                A fractional job in Belfast is a part-time executive role working 1-3 days per week. Belfast's cyber security and fintech clusters make it ideal for fractional CTOs and CFOs. <a href="https://www.iod.com/news/news/articles/Fractional-executives-the-new-leadership-model/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> highlights the growing fractional executive trend.
               </p>
             </details>
 
@@ -272,7 +284,7 @@ export default async function BelfastPage() {
                 <span className="text-blue-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                Belfast fractional executives earn £500-£900 per day. With 55% lower cost of living than London, take-home value is exceptional. Most earn £90,000-£150,000+ annually.
+                Belfast fractional executives earn £500-£900 per day. With 55% lower cost of living than London, take-home value is exceptional. Most earn £90,000-£150,000+ annually. <a href="https://www.cipd.org/uk/knowledge/factsheets/pay-salary-structures-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD salary surveys</a> provide benchmarking data for executive roles.
               </p>
             </details>
 
@@ -282,22 +294,11 @@ export default async function BelfastPage() {
                 <span className="text-blue-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                Belfast has Europe's largest cyber security cluster with 100+ companies. Global tech firms like Proofpoint and Rapid7 have major operations here, creating excellent fractional CTO and CISO opportunities.
+                Belfast has Europe's largest cyber security cluster with 100+ companies. Global tech firms like Proofpoint and Rapid7 have major operations here, creating excellent fractional CTO and CISO opportunities. <a href="https://www.cbi.org.uk/about-the-cbi/in-the-regions/northern-ireland/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CBI Northern Ireland</a> represents the region's major employers and tracks sector trends.
               </p>
             </details>
           </div>
         </div>
-          <div className="mt-12 max-w-4xl mx-auto">
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Belfast's economy has transformed into a thriving tech and professional services hub. <a href="https://www.belfastchamber.com" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Belfast Chamber of Trade and Commerce</a> reports significant growth in cybersecurity, fintech, and software development—sectors requiring fractional CTO and product leadership.
-            </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Northern Ireland's business environment offers unique advantages. <a href="https://www.investni.com/news" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Invest Northern Ireland</a> tracks inward investment and scale-up growth, with Belfast companies increasingly seeking fractional CFO expertise for expansion and fundraising.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Belfast offers excellent value: competitive rates (£600-£900) with the lowest living costs among major UK cities. The combination of R&D tax advantages, talented workforce, and growing startup ecosystem creates attractive opportunities for experienced fractional executives.
-            </p>
-          </div>
       </section>
 
       {/* Internal Links */}

@@ -78,7 +78,7 @@ export default function OutsourcedComplianceCostPage() {
       <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-slate-900 py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1920&q=80"
+            src="https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=1920"
             alt="Outsourced compliance cost UK - pricing and budget planning for compliance services"
             className="w-full h-full object-cover opacity-20"
           />
@@ -91,7 +91,7 @@ export default function OutsourcedComplianceCostPage() {
           <span className="inline-block bg-green-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             Pricing Guide
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
             Outsourced Compliance<br />
             <span className="text-green-400">Cost UK</span>
           </h1>

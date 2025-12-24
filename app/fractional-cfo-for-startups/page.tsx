@@ -103,7 +103,7 @@ export default function FractionalCFOForStartupsPage() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-10">
-              Most startups face a dilemma: <strong>You need CFO-level financial expertise to raise capital and scale, but you can't afford or justify a £150k+ full-time CFO.</strong> Fractional CFOs solve this perfectly.
+              Most startups face a dilemma: <strong>You need CFO-level financial expertise to raise capital and scale, but you can't afford or justify a £150k+ full-time CFO.</strong> Fractional CFOs solve this perfectly. According to <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> research, access to financial expertise is one of the top barriers to startup growth in the UK.
             </p>
 
             <div className="bg-blue-950/20 border-l-4 border-blue-600 p-8 mb-10">
@@ -142,17 +142,17 @@ export default function FractionalCFOForStartupsPage() {
             <div className="grid gap-6 my-10">
               <div className="bg-white p-6 border-l-4 border-gray-900">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">6-12 Months Pre-Fundraise</h4>
-                <p className="text-gray-700 mb-0">You're planning a seed or Series A in the next year. You need to build credible financials NOW so investors take you seriously. Most successful raises start with 6+ months of financial preparation.</p>
+                <p className="text-gray-700 mb-0">You're planning a seed or Series A in the next year. You need to build credible financials NOW so investors take you seriously. Most successful raises start with 6+ months of financial preparation. The <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> reports that well-prepared financial documentation significantly increases funding success rates.</p>
               </div>
 
               <div className="bg-white p-6 border-l-4 border-blue-600">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Post-Seed, Pre-Series A</h4>
-                <p className="text-gray-700 mb-0">You've raised £500k-£2M seed. You're at £1-3M ARR. Investors want better reporting. You're hiring fast. Founder-led finance is breaking. This is the PERFECT time for fractional CFO.</p>
+                <p className="text-gray-700 mb-0">You've raised £500k-£2M seed. You're at £1-3M ARR. Investors want better reporting. You're hiring fast. Founder-led finance is breaking. This is the PERFECT time for fractional CFO. <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BVCA</a> data shows that venture-backed companies with strong financial governance achieve higher valuations.</p>
               </div>
 
               <div className="bg-white p-6 border-l-4 border-gray-900">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Rapid Growth Phase (3x+ YoY)</h4>
-                <p className="text-gray-700 mb-0">Revenue growing 3x+ year-over-year. You've gone from 5 to 30 people in 12 months. Cash burn is £100k+/month. You need financial controls, forecasting, and systems ASAP.</p>
+                <p className="text-gray-700 mb-0">Revenue growing 3x+ year-over-year. You've gone from 5 to 30 people in 12 months. Cash burn is £100k+/month. You need financial controls, forecasting, and systems ASAP. <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a> research highlights that rapid scaling requires robust financial infrastructure to sustain growth.</p>
               </div>
 
               <div className="bg-white p-6 border-l-4 border-blue-600">
@@ -188,7 +188,7 @@ export default function FractionalCFOForStartupsPage() {
                   <span className="text-4xl">💰</span>
                   <h3 className="text-2xl font-black text-gray-900 mb-0">1. Fundraising Leadership</h3>
                 </div>
-                <p className="text-gray-700 mb-4"><strong>Why This Matters:</strong> 80% of startup fractional CFO engagements involve fundraising support. This is where they deliver 10x+ ROI.</p>
+                <p className="text-gray-700 mb-4"><strong>Why This Matters:</strong> 80% of startup fractional CFO engagements involve fundraising support. This is where they deliver 10x+ ROI. Professional financial leadership is increasingly expected by investors, as noted by the <a href="https://www.icaew.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICAEW</a> in their guidance on startup governance.</p>
                 <div className="bg-gray-50 p-6">
                   <p className="font-semibold text-gray-900 mb-3">Typical Deliverables:</p>
                   <ul className="space-y-2 text-sm text-gray-700">
@@ -211,7 +211,7 @@ export default function FractionalCFOForStartupsPage() {
                 <div className="bg-gray-50 p-6">
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li>• Build rolling 12-month budget and 3-year strategic plan</li>
-                    <li>• Create 13-week cash flow forecasts (updated weekly)</li>
+                    <li>• Create 13-week cash flow forecasts (updated weekly), a best practice recommended by <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a></li>
                     <li>• Develop scenario planning ("base case, upside, downside")</li>
                     <li>• Implement monthly variance analysis (budget vs actual)</li>
                     <li>• Track KPIs and build executive dashboards</li>
@@ -245,7 +245,7 @@ export default function FractionalCFOForStartupsPage() {
                 <div className="bg-gray-50 p-6">
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li>• Implement accounting software (Xero, QuickBooks) and FP&A tools (Adaptive, Causal)</li>
-                    <li>• Establish financial controls and approval processes</li>
+                    <li>• Establish financial controls and approval processes aligned with <a href="https://www.accaglobal.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACCA</a> best practices</li>
                     <li>• Set up chart of accounts and GL structure</li>
                     <li>• Create expense policies and procurement processes</li>
                     <li>• Build revenue recognition framework (especially for SaaS)</li>
@@ -263,7 +263,7 @@ export default function FractionalCFOForStartupsPage() {
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li>• Hire first Financial Controller (when you reach £3-5M ARR)</li>
                     <li>• Hire FP&A Analyst (Series A+)</li>
-                    <li>• Build job descriptions and interview for finance hires</li>
+                    <li>• Build job descriptions and interview for finance hires, following <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> recruitment guidelines</li>
                     <li>• Manage and mentor junior finance team</li>
                     <li>• Decide when to transition to full-time CFO</li>
                   </ul>
@@ -339,7 +339,7 @@ export default function FractionalCFOForStartupsPage() {
             <div className="bg-gray-50 text-gray-900 p-8 my-10">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Sweet Spot: Seed to Series A</h3>
               <p className="text-gray-600 mb-4">
-                The PERFECT time for fractional CFO is <strong className="text-white">post-seed, pre-Series A</strong>. You have revenue (£500k-£3M ARR), you're preparing to raise Series A in 6-18 months, and you need institutional-quality finance but can't afford £150k+ full-time.
+                The PERFECT time for fractional CFO is <strong className="text-white">post-seed, pre-Series A</strong>. You have revenue (£500k-£3M ARR), you're preparing to raise Series A in 6-18 months, and you need institutional-quality finance but can't afford £150k+ full-time. <a href="https://startups.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Startups.co.uk</a> provides additional resources on navigating this critical growth phase.
               </p>
               <div className="bg-white/10 p-6">
                 <p className="text-white font-semibold mb-2">Typical Engagement:</p>
@@ -409,7 +409,7 @@ export default function FractionalCFOForStartupsPage() {
                 <div className="space-y-3 text-gray-700">
                   <p><strong>Challenge:</strong> Needed to raise £8M Series A but had weak financials. Board unhappy with founder-led reporting. No credible unit economics.</p>
                   <p><strong>Fractional CFO Engagement:</strong> £40,000 (9 months, 2 days/week pre-raise + 1 day/week post-close)</p>
-                  <p><strong>Deliverables:</strong> Built institutional-quality model, implemented FP&A, presented to 15 VCs, managed due diligence for 3 term sheets.</p>
+                  <p><strong>Deliverables:</strong> Built institutional-quality model, implemented FP&A, presented to 15 VCs, managed due diligence for 3 term sheets. This type of professional presentation is what investors expect, according to <a href="https://www.enterprisenation.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Enterprise Nation</a> guidance.</p>
                   <p><strong>Outcome:</strong> Raised £8M at £35M valuation (vs projected £6M at £25M without CFO). Additional £2M capital + £10M higher valuation.</p>
                   <p className="text-blue-600 font-bold text-lg">ROI: 300x (£12M additional value for £40k investment)</p>
                 </div>
@@ -485,7 +485,7 @@ export default function FractionalCFOForStartupsPage() {
                   <span className="text-2xl">1️⃣</span>
                   <div>
                     <p className="font-semibold text-gray-900 mb-1">Startup/Scale-up Background</p>
-                    <p className="text-sm mb-0">Must have worked at startups (not just corporates). Ask: "Tell me about the fastest-growing company you've worked at. What stage did you join, what stage did you leave?"</p>
+                    <p className="text-sm mb-0">Must have worked at startups (not just corporates). The <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> emphasizes the unique financial challenges of high-growth companies. Ask: "Tell me about the fastest-growing company you've worked at. What stage did you join, what stage did you leave?"</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -541,7 +541,7 @@ export default function FractionalCFOForStartupsPage() {
             <div className="bg-blue-950/20 border-l-4 border-blue-600 p-6">
               <p className="text-lg font-semibold text-gray-900 mb-2">Recommended Approach</p>
               <p className="text-gray-700 mb-0">
-                Interview 3-4 fractional CFO candidates. Ask each to review your financials (30-min free consultation) and propose what they'd do in first 90 days. Choose based on: (1) startup experience, (2) fundraising track record, (3) cultural fit, (4) clarity of proposed approach. Check references carefully.
+                Interview 3-4 fractional CFO candidates. Ask each to review your financials (30-min free consultation) and propose what they'd do in first 90 days. Choose based on: (1) startup experience, (2) fundraising track record, (3) cultural fit, (4) clarity of proposed approach. Check references carefully. For additional guidance on selecting financial advisors, consult the <a href="https://www.icaew.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICAEW</a> professional standards.
               </p>
             </div>
           </div>

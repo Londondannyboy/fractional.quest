@@ -86,7 +86,7 @@ export default function FractionalCTOServicesPage() {
           </div>
           <div className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              A <strong className="font-semibold text-gray-900">Fractional CTO</strong> is an experienced Chief Technology Officer who works with your company on a part-time basis—typically 1-3 days per week. You get the technical leadership, architecture expertise, and engineering strategy of a senior CTO without the commitment and cost of a full-time hire.
+              A <strong className="font-semibold text-gray-900">Fractional CTO</strong> is an experienced Chief Technology Officer who works with your company on a part-time basis—typically 1-3 days per week. You get the technical leadership, architecture expertise, and engineering strategy of a senior CTO without the commitment and cost of a full-time hire. This <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangement</a> benefits both businesses and professionals.
             </p>
             <p>
               Unlike technical consultants who advise on specific problems, a fractional CTO becomes your technology leader. They make architecture decisions, lead your engineering team, set technical strategy, and take ownership of your technology—just not five days a week.
@@ -116,49 +116,41 @@ export default function FractionalCTOServicesPage() {
             <p className="text-xl text-gray-600 mt-4">Core responsibilities your fractional CTO will own</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'Technical Strategy',
-                description: 'Define technical vision and roadmap aligned with business goals. Make build vs buy decisions, choose technology stack, and plan for scale.',
-                icon: '🎯',
-              },
-              {
-                title: 'Architecture & Design',
-                description: 'Design scalable, secure, maintainable architecture. Review technical decisions, address technical debt, and ensure systems can handle growth.',
-                icon: '🏗️',
-              },
-              {
-                title: 'Engineering Leadership',
-                description: 'Lead and mentor your engineering team. Set standards, improve processes, conduct code reviews, and build engineering culture.',
-                icon: '👥',
-              },
-              {
-                title: 'Technical Hiring',
-                description: 'Hire key engineering roles. Define job specs, conduct technical interviews, assess candidates, and build the team you need.',
-                icon: '🔍',
-              },
-              {
-                title: 'Security & Compliance',
-                description: 'Ensure systems are secure and compliant. Implement security best practices, manage risks, and prepare for audits.',
-                icon: '🔒',
-              },
-              {
-                title: 'Technical Due Diligence',
-                description: 'Represent technology to investors and acquirers. Prepare for technical DD, address concerns, and provide credibility.',
-                icon: '📋',
-              },
-              {
-                title: 'Vendor & Tools',
-                description: 'Select and manage technology vendors. Evaluate tools, negotiate contracts, and ensure you\'re getting value from tech spend.',
-                icon: '🛠️',
-              },
-            ].map((item, index) => (
-              <div key={index} className="bg-white p-6 border border-gray-200 hover:border-blue-300 transition-colors">
-                <div className="text-3xl mb-4">{item.icon}</div>
-                <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.description}</p>
-              </div>
-            ))}
+            <div className="bg-white p-6 border border-gray-200 hover:border-blue-300 transition-colors">
+              <div className="text-3xl mb-4">🎯</div>
+              <h3 className="font-bold text-gray-900 mb-2">Technical Strategy</h3>
+              <p className="text-gray-600 text-sm">Define technical vision and roadmap aligned with business goals. Make build vs buy decisions, choose technology stack, and plan for scale.</p>
+            </div>
+            <div className="bg-white p-6 border border-gray-200 hover:border-blue-300 transition-colors">
+              <div className="text-3xl mb-4">🏗️</div>
+              <h3 className="font-bold text-gray-900 mb-2">Architecture & Design</h3>
+              <p className="text-gray-600 text-sm">Design scalable, secure, maintainable architecture. Review technical decisions, address technical debt, and ensure systems can handle growth.</p>
+            </div>
+            <div className="bg-white p-6 border border-gray-200 hover:border-blue-300 transition-colors">
+              <div className="text-3xl mb-4">👥</div>
+              <h3 className="font-bold text-gray-900 mb-2">Engineering Leadership</h3>
+              <p className="text-gray-600 text-sm">Lead and mentor your engineering team. Set standards, improve processes, conduct code reviews, and build engineering culture. <a href="https://www.bcs.org/membership/chartered-it-professional-citp/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Professional development</a> is key.</p>
+            </div>
+            <div className="bg-white p-6 border border-gray-200 hover:border-blue-300 transition-colors">
+              <div className="text-3xl mb-4">🔍</div>
+              <h3 className="font-bold text-gray-900 mb-2">Technical Hiring</h3>
+              <p className="text-gray-600 text-sm">Hire key engineering roles. Define job specs, conduct technical interviews, assess candidates, and build the team you need.</p>
+            </div>
+            <div className="bg-white p-6 border border-gray-200 hover:border-blue-300 transition-colors">
+              <div className="text-3xl mb-4">🔒</div>
+              <h3 className="font-bold text-gray-900 mb-2">Security & Compliance</h3>
+              <p className="text-gray-600 text-sm">Ensure systems are secure and compliant. Implement <a href="https://www.ncsc.gov.uk/collection/10-steps" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">security best practices</a>, manage risks, and prepare for audits.</p>
+            </div>
+            <div className="bg-white p-6 border border-gray-200 hover:border-blue-300 transition-colors">
+              <div className="text-3xl mb-4">📋</div>
+              <h3 className="font-bold text-gray-900 mb-2">Technical Due Diligence</h3>
+              <p className="text-gray-600 text-sm">Represent technology to investors and acquirers. Prepare for technical DD, address concerns, and provide credibility.</p>
+            </div>
+            <div className="bg-white p-6 border border-gray-200 hover:border-blue-300 transition-colors">
+              <div className="text-3xl mb-4">🛠️</div>
+              <h3 className="font-bold text-gray-900 mb-2">Vendor & Tools</h3>
+              <p className="text-gray-600 text-sm">Select and manage technology vendors. Evaluate tools, negotiate contracts, and ensure you're getting value from tech spend.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -171,49 +163,56 @@ export default function FractionalCTOServicesPage() {
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Why Hire a Fractional CTO?</h2>
           </div>
           <div className="space-y-8">
-            {[
-              {
-                title: 'Cost Efficiency',
-                description: 'Access CTO-level expertise at 40-60% less than a full-time hire. Pay only for the time you need—typically £85,000-£160,000 per year versus £250,000+ for full-time.',
-                stat: '55%',
-                statLabel: 'Cost Savings',
-              },
-              {
-                title: 'Experienced Leadership',
-                description: 'Get a CTO with 15-20+ years of experience who has built and scaled systems before. No learning on the job—they\'ve seen your challenges already.',
-                stat: '15+',
-                statLabel: 'Years Experience',
-              },
-              {
-                title: 'Investor Credibility',
-                description: 'Investors want to see experienced technical leadership. A fractional CTO provides the credibility and can handle technical due diligence.',
-                stat: '100%',
-                statLabel: 'DD Ready',
-              },
-              {
-                title: 'Flexibility',
-                description: 'Scale up for major releases or architecture work, scale down during steady periods. Engagements flex with your needs.',
-                stat: '1-5',
-                statLabel: 'Days/Week Flex',
-              },
-              {
-                title: 'Broad Expertise',
-                description: 'Fractional CTOs work across multiple companies and tech stacks. They bring diverse experience and modern best practices.',
-                stat: '5+',
-                statLabel: 'Companies Seen',
-              },
-            ].map((benefit, index) => (
-              <div key={index} className="flex gap-6 p-6 bg-gray-50 border-l-4 border-blue-500">
-                <div className="flex-shrink-0 text-center">
-                  <div className="text-3xl font-black text-blue-600">{benefit.stat}</div>
-                  <div className="text-xs text-gray-500 uppercase tracking-wider">{benefit.statLabel}</div>
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-1">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
-                </div>
+            <div className="flex gap-6 p-6 bg-gray-50 border-l-4 border-blue-500">
+              <div className="flex-shrink-0 text-center">
+                <div className="text-3xl font-black text-blue-600">55%</div>
+                <div className="text-xs text-gray-500 uppercase tracking-wider">Cost Savings</div>
               </div>
-            ))}
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Cost Efficiency</h3>
+                <p className="text-gray-600">Access CTO-level expertise at 40-60% less than a full-time hire. Pay only for the time you need—typically £85,000-£160,000 per year versus £250,000+ for full-time. This aligns with <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">modern employment trends</a>.</p>
+              </div>
+            </div>
+            <div className="flex gap-6 p-6 bg-gray-50 border-l-4 border-blue-500">
+              <div className="flex-shrink-0 text-center">
+                <div className="text-3xl font-black text-blue-600">15+</div>
+                <div className="text-xs text-gray-500 uppercase tracking-wider">Years Experience</div>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Experienced Leadership</h3>
+                <p className="text-gray-600">Get a CTO with 15-20+ years of experience who has built and scaled systems before. No learning on the job—they've seen your challenges already.</p>
+              </div>
+            </div>
+            <div className="flex gap-6 p-6 bg-gray-50 border-l-4 border-blue-500">
+              <div className="flex-shrink-0 text-center">
+                <div className="text-3xl font-black text-blue-600">100%</div>
+                <div className="text-xs text-gray-500 uppercase tracking-wider">DD Ready</div>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Investor Credibility</h3>
+                <p className="text-gray-600">Investors want to see experienced technical leadership. A fractional CTO provides the credibility and can handle technical due diligence. The <a href="https://www.bvca.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Venture Capital Association</a> emphasises the importance of strong leadership teams.</p>
+              </div>
+            </div>
+            <div className="flex gap-6 p-6 bg-gray-50 border-l-4 border-blue-500">
+              <div className="flex-shrink-0 text-center">
+                <div className="text-3xl font-black text-blue-600">1-5</div>
+                <div className="text-xs text-gray-500 uppercase tracking-wider">Days/Week Flex</div>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Flexibility</h3>
+                <p className="text-gray-600">Scale up for major releases or architecture work, scale down during steady periods. Engagements flex with your needs.</p>
+              </div>
+            </div>
+            <div className="flex gap-6 p-6 bg-gray-50 border-l-4 border-blue-500">
+              <div className="flex-shrink-0 text-center">
+                <div className="text-3xl font-black text-blue-600">5+</div>
+                <div className="text-xs text-gray-500 uppercase tracking-wider">Companies Seen</div>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Broad Expertise</h3>
+                <p className="text-gray-600">Fractional CTOs work across multiple companies and tech stacks. They bring diverse experience and modern best practices, crucial for <a href="https://scaleupinstitute.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scaling UK businesses</a>.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -231,44 +230,36 @@ export default function FractionalCTOServicesPage() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                scenario: 'Building First Product',
-                description: 'You\'re a non-technical founder building your first product. You need someone to set the technical direction and oversee development.',
-                timing: 'Before development starts',
-              },
-              {
-                scenario: 'Preparing for Fundraising',
-                description: 'Investors will want to talk to your technical leader. A fractional CTO provides credibility and handles technical due diligence.',
-                timing: '3-6 months before raise',
-              },
-              {
-                scenario: 'Scaling Engineering Team',
-                description: 'You\'re growing from 2-3 developers to 10+. You need senior leadership to structure the team, set processes, and maintain quality.',
-                timing: 'When team exceeds 5',
-              },
-              {
-                scenario: 'Technical Debt Crisis',
-                description: 'Your system is struggling under its own weight. You need experienced leadership to diagnose problems and plan the path forward.',
-                timing: 'Before it\'s too late',
-              },
-              {
-                scenario: 'Architecture Evolution',
-                description: 'You need to re-architect for scale, migrate to cloud, or modernise legacy systems. These decisions need senior technical leadership.',
-                timing: 'At project inception',
-              },
-              {
-                scenario: 'Security & Compliance',
-                description: 'You need to achieve SOC 2, ISO 27001, or other certifications. A fractional CTO can lead the security programme.',
-                timing: '6 months before audit',
-              },
-            ].map((item, index) => (
-              <div key={index} className="bg-white p-6 border border-gray-200">
-                <h3 className="font-bold text-gray-900 mb-2">{item.scenario}</h3>
-                <p className="text-gray-600 text-sm mb-3">{item.description}</p>
-                <span className="inline-block text-xs font-bold text-blue-600 uppercase tracking-wider">{item.timing}</span>
-              </div>
-            ))}
+            <div className="bg-white p-6 border border-gray-200">
+              <h3 className="font-bold text-gray-900 mb-2">Building First Product</h3>
+              <p className="text-gray-600 text-sm mb-3">You're a non-technical founder building your first product. You need someone to set the technical direction and oversee development.</p>
+              <span className="inline-block text-xs font-bold text-blue-600 uppercase tracking-wider">Before development starts</span>
+            </div>
+            <div className="bg-white p-6 border border-gray-200">
+              <h3 className="font-bold text-gray-900 mb-2">Preparing for Fundraising</h3>
+              <p className="text-gray-600 text-sm mb-3">Investors will want to talk to your technical leader. A fractional CTO provides credibility and handles technical due diligence. <a href="https://www.british-business-bank.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Access to finance</a> often requires strong governance.</p>
+              <span className="inline-block text-xs font-bold text-blue-600 uppercase tracking-wider">3-6 months before raise</span>
+            </div>
+            <div className="bg-white p-6 border border-gray-200">
+              <h3 className="font-bold text-gray-900 mb-2">Scaling Engineering Team</h3>
+              <p className="text-gray-600 text-sm mb-3">You're growing from 2-3 developers to 10+. You need senior leadership to structure the team, set processes, and maintain quality. <a href="https://www.cipd.org/uk/knowledge/guides/hr-practices-knowledge-economy/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">People management best practices</a> are essential.</p>
+              <span className="inline-block text-xs font-bold text-blue-600 uppercase tracking-wider">When team exceeds 5</span>
+            </div>
+            <div className="bg-white p-6 border border-gray-200">
+              <h3 className="font-bold text-gray-900 mb-2">Technical Debt Crisis</h3>
+              <p className="text-gray-600 text-sm mb-3">Your system is struggling under its own weight. You need experienced leadership to diagnose problems and plan the path forward.</p>
+              <span className="inline-block text-xs font-bold text-blue-600 uppercase tracking-wider">Before it's too late</span>
+            </div>
+            <div className="bg-white p-6 border border-gray-200">
+              <h3 className="font-bold text-gray-900 mb-2">Architecture Evolution</h3>
+              <p className="text-gray-600 text-sm mb-3">You need to re-architect for scale, migrate to cloud, or modernise legacy systems. These decisions need senior technical leadership.</p>
+              <span className="inline-block text-xs font-bold text-blue-600 uppercase tracking-wider">At project inception</span>
+            </div>
+            <div className="bg-white p-6 border border-gray-200">
+              <h3 className="font-bold text-gray-900 mb-2">Security & Compliance</h3>
+              <p className="text-gray-600 text-sm mb-3">You need to achieve SOC 2, ISO 27001, or other certifications. A fractional CTO can lead the security programme in line with <a href="https://www.techuk.org/what-we-deliver/networks/cyber-security.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK cyber security standards</a>.</p>
+              <span className="inline-block text-xs font-bold text-blue-600 uppercase tracking-wider">6 months before audit</span>
+            </div>
           </div>
         </div>
       </section>
@@ -323,7 +314,7 @@ export default function FractionalCTOServicesPage() {
             <ul className="text-gray-600">
               <li><strong>Relevant Stack:</strong> Have they built systems with your technology stack?</li>
               <li><strong>Scale Experience:</strong> Have they scaled systems and teams at companies like yours?</li>
-              <li><strong>Leadership Skills:</strong> Can they lead engineers, not just write code?</li>
+              <li><strong>Leadership Skills:</strong> Can they lead engineers, not just write code? <a href="https://www.iod.com/professional-development/leadership/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Leadership competencies</a> matter.</li>
               <li><strong>Communication:</strong> Can they translate technical concepts for non-technical stakeholders?</li>
               <li><strong>Strategic Thinking:</strong> Do they think about technology in terms of business outcomes?</li>
             </ul>
@@ -340,19 +331,30 @@ export default function FractionalCTOServicesPage() {
             <p className="text-gray-600 mt-4">Specialists with deep technical experience</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { name: 'AI & Machine Learning', description: 'MLOps, model deployment, AI product development, data infrastructure', link: '/fractional-jobs-tech' },
-              { name: 'Cloud & DevOps', description: 'AWS/GCP/Azure, infrastructure as code, CI/CD, platform engineering', link: '/fractional-jobs-tech' },
-              { name: 'Security & Compliance', description: 'SOC 2, ISO 27001, penetration testing, security architecture', link: '/fractional-jobs-tech' },
-              { name: 'FinTech', description: 'Payment systems, FCA compliance, financial APIs, security requirements', link: '/fractional-jobs-finance' },
-              { name: 'B2B SaaS', description: 'Multi-tenant architecture, API design, integration platforms, enterprise features', link: '/fractional-jobs-saas' },
-              { name: 'HealthTech', description: 'HIPAA compliance, NHS integration, clinical systems, health data', link: '/fractional-jobs-healthcare' },
-            ].map((specialisation, index) => (
-              <Link key={index} href={specialisation.link} className="block bg-white p-6 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all">
-                <h3 className="font-bold text-gray-900 mb-2">{specialisation.name}</h3>
-                <p className="text-gray-600 text-sm">{specialisation.description}</p>
-              </Link>
-            ))}
+            <Link href="/fractional-jobs-tech" className="block bg-white p-6 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all">
+              <h3 className="font-bold text-gray-900 mb-2">AI & Machine Learning</h3>
+              <p className="text-gray-600 text-sm">MLOps, model deployment, AI product development, data infrastructure</p>
+            </Link>
+            <Link href="/fractional-jobs-tech" className="block bg-white p-6 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all">
+              <h3 className="font-bold text-gray-900 mb-2">Cloud & DevOps</h3>
+              <p className="text-gray-600 text-sm">AWS/GCP/Azure, infrastructure as code, CI/CD, platform engineering</p>
+            </Link>
+            <Link href="/fractional-jobs-tech" className="block bg-white p-6 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all">
+              <h3 className="font-bold text-gray-900 mb-2">Security & Compliance</h3>
+              <p className="text-gray-600 text-sm">SOC 2, ISO 27001, penetration testing, security architecture</p>
+            </Link>
+            <Link href="/fractional-jobs-finance" className="block bg-white p-6 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all">
+              <h3 className="font-bold text-gray-900 mb-2">FinTech</h3>
+              <p className="text-gray-600 text-sm">Payment systems, FCA compliance, financial APIs, security requirements</p>
+            </Link>
+            <Link href="/fractional-jobs-saas" className="block bg-white p-6 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all">
+              <h3 className="font-bold text-gray-900 mb-2">B2B SaaS</h3>
+              <p className="text-gray-600 text-sm">Multi-tenant architecture, API design, integration platforms, enterprise features</p>
+            </Link>
+            <Link href="/fractional-jobs-healthcare" className="block bg-white p-6 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all">
+              <h3 className="font-bold text-gray-900 mb-2">HealthTech</h3>
+              <p className="text-gray-600 text-sm">HIPAA compliance, NHS integration, clinical systems, health data</p>
+            </Link>
           </div>
         </div>
       </section>
@@ -376,7 +378,7 @@ export default function FractionalCTOServicesPage() {
             Ready to Hire a<br /><span className="text-blue-400">Fractional CTO?</span>
           </h2>
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            Tell us about your technical challenges and we'll match you with pre-vetted fractional CTOs who have solved them before. Start conversations within 48 hours.
+            Tell us about your technical challenges and we'll match you with pre-vetted fractional CTOs who have solved them before. Start conversations within 48 hours. Join thousands of <a href="https://www.gov.uk/business-support-helpline" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK businesses accessing flexible expertise</a>.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact/companies" className="px-10 py-5 bg-blue-500 text-white font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">

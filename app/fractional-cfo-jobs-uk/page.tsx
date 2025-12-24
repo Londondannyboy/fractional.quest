@@ -99,8 +99,12 @@ export default async function FractionalCfoJobsUkPage() {
     <div className="min-h-screen bg-white">
       {/* Hero with Cleaner Look */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-white">
-        <div className="container-content">
-            <Link href="/" className="inline-flex items-center text-gray-500 hover:text-gray-900 mb-8 transition-colors text-sm font-medium">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="" className="w-full h-full object-cover opacity-50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/60"></div>
+        </div>
+        <div className="container-content relative z-10">
+            <Link href="/" className="inline-flex items-center text-white hover:text-gray-200 mb-8 transition-colors text-sm font-medium">
               <span className="mr-2">←</span> Back to Home
             </Link>
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
@@ -108,18 +112,18 @@ export default async function FractionalCfoJobsUkPage() {
                 <span className="inline-block bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
                   Finance Leadership
                 </span>
-                <h1 className="font-editorial text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                <h1 className="font-editorial text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                   Fractional CFO Jobs UK
                 </h1>
-                <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mb-8">
+                <p className="text-xl text-white leading-relaxed max-w-2xl mb-8">
                   Fractional Chief Financial Officer opportunities for experienced finance leaders.
                   Part-time CFO roles paying £800-£1,500/day. Work 2-3 days a week as a fractional finance manager.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Link href="#jobs" className="px-8 py-4 bg-gray-900 text-white font-bold rounded-lg hover:bg-black transition-colors shadow-lg">
+                  <Link href="#jobs" className="px-8 py-4 bg-white text-gray-900 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-lg">
                     Browse Jobs
                   </Link>
-                  <Link href="/fractional-cfo-salary" className="px-8 py-4 border border-gray-200 text-gray-900 font-bold rounded-lg hover:bg-gray-50 transition-colors">
+                  <Link href="/fractional-cfo-salary" className="px-8 py-4 border border-white text-white font-bold rounded-lg hover:bg-white hover:text-gray-900 transition-colors">
                     Salary Guide
                   </Link>
                 </div>

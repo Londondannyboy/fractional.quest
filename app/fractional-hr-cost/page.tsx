@@ -23,11 +23,11 @@ export const metadata: Metadata = {
 const COST_FAQS = [
   {
     question: 'How much does a fractional HR Director cost per month?',
-    answer: 'UK fractional HR Directors typically cost £3,900-£9,500 per month depending on days worked and seniority. For 2 days/week at £1,000/day average = £8,700/month. For 1 day/week = £4,300/month. This is 35-50% less than a full-time HR Director.'
+    answer: 'UK fractional HR Directors typically cost £3,900-£9,500 per month depending on days worked and seniority. For 2 days/week at £1,000/day average = £8,700/month. For 1 day/week = £4,300/month. This is 35-50% less than a full-time HR Director. Self-employed professionals often work through limited companies to ensure <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35 compliance</a>.'
   },
   {
     question: 'Is fractional HR worth the cost?',
-    answer: 'Yes, if you have 20-150 employees and need senior HR expertise but can\'t justify £150k+ for full-time. You get experienced leadership (15+ years) for £67k-£135k/year, can scale up/down monthly, and avoid tribunal costs (£8,500-£25,000+ average) through proper HR management.'
+    answer: 'Yes, if you have 20-150 employees and need senior HR expertise but can\'t justify £150k+ for full-time. You get experienced leadership (15+ years) for £67k-£135k/year, can scale up/down monthly, and avoid tribunal costs (£8,500-£25,000+ average) through proper HR management. Growing businesses particularly benefit, as highlighted by the <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a>.'
   },
   {
     question: 'What\'s the ROI of hiring fractional HR?',
@@ -39,7 +39,7 @@ const COST_FAQS = [
   },
   {
     question: 'What does fractional HR cost include?',
-    answer: 'The day rate or retainer is all-inclusive: strategic HR leadership, employee relations, policy development, compliance, talent strategy, and team leadership. It does NOT include: HRIS software subscriptions, external legal counsel, recruitment fees, or HR admin outsourcing.'
+    answer: 'The day rate or retainer is all-inclusive: strategic HR leadership, employee relations, policy development, compliance according to <a href="https://www.cipd.org/uk/knowledge/factsheets/employment-law-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK employment law</a>, talent strategy, and team leadership. It does NOT include: HRIS software subscriptions, external legal counsel, recruitment fees, or HR admin outsourcing.'
   },
 ]
 
@@ -111,6 +111,10 @@ export default function FractionalHRCostPage() {
           <div className="prose prose-lg max-w-none">
             <h3 className="text-2xl font-black text-gray-900 mb-6">Monthly Cost by Engagement Level</h3>
 
+            <p className="text-gray-600 mb-6">
+              Pricing varies based on engagement level and company size. For freelance workers and contractors, understanding <a href="https://www.ipse.co.uk/ipse-for-you/guides.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">self-employment regulations</a> is essential.
+            </p>
+
             <div className="grid md:grid-cols-3 gap-6 my-10 not-prose">
               <div className="bg-white p-6 border-2 border-gray-200">
                 <div className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">1 Day/Week</div>
@@ -162,7 +166,7 @@ export default function FractionalHRCostPage() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-10">
-              Let's compare the TRUE all-in cost of fractional vs full-time, including hidden expenses. According to <a href="https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2024-to-2025" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">HMRC guidance</a>, employer costs extend well beyond salary:
+              Let's compare the TRUE all-in cost of fractional vs full-time, including hidden expenses. According to <a href="https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2024-to-2025" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">HMRC guidance</a>, employer costs extend well beyond salary. Understanding your <a href="https://www.gov.uk/browse/employing-people" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">obligations as an employer</a> is crucial when evaluating hiring decisions:
             </p>
 
             <div className="bg-white p-8 border-2 border-gray-900 mb-10">
@@ -182,7 +186,7 @@ export default function FractionalHRCostPage() {
                   <span className="font-bold text-pink-600">£104,000/year</span>
                 </div>
                 <div className="flex justify-between items-center pb-3 border-b">
-                  <span>Employer National Insurance</span>
+                  <span>Employer National Insurance (<a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35 compliant</a>)</span>
                   <span className="font-bold">£0 (contractor)</span>
                 </div>
                 <div className="flex justify-between items-center pb-3 border-b">
@@ -217,11 +221,11 @@ export default function FractionalHRCostPage() {
                   <span className="font-bold">£18,000/year</span>
                 </div>
                 <div className="flex justify-between items-center pb-3 border-b">
-                  <span>Employer National Insurance (13.8%)</span>
+                  <span><a href="https://www.gov.uk/browse/employing-people/payroll" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Employer National Insurance</a> (13.8%)</span>
                   <span className="font-bold">£19,044/year</span>
                 </div>
                 <div className="flex justify-between items-center pb-3 border-b">
-                  <span>Pension contribution (5%)</span>
+                  <span><a href="https://www.gov.uk/workplace-pensions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Pension contribution</a> (5%)</span>
                   <span className="font-bold">£6,900/year</span>
                 </div>
                 <div className="flex justify-between items-center pb-3 border-b">
@@ -308,7 +312,7 @@ export default function FractionalHRCostPage() {
 
           <div className="mt-8 bg-gray-50 p-6">
             <p className="text-gray-700 mb-0">
-              <strong>Most common:</strong> HR Director (12-18 years exp) at 2 days/week = £94k-£114k annually. This saves £68k-£88k vs full-time HR Director (£162k-£202k total cost).
+              <strong>Most common:</strong> HR Director (12-18 years exp) at 2 days/week = £94k-£114k annually. This saves £68k-£88k vs full-time HR Director (£162k-£202k total cost). For salary benchmarking, the <a href="https://www.cipd.org/uk/knowledge/reports/reward-management-survey/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD Reward Management Survey</a> provides comprehensive market data.
             </p>
           </div>
         </div>
@@ -328,7 +332,7 @@ export default function FractionalHRCostPage() {
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-4">ROI Example 1: Tribunal Avoidance</h3>
                 <div className="space-y-3 text-gray-700">
                   <p><strong>Cost:</strong> £50,000 (12-month engagement, 1 day/week)</p>
-                  <p><strong>Situation:</strong> Company facing potential unfair dismissal claim. Fractional HR Director implemented proper performance management process, documented everything correctly, and managed exit professionally.</p>
+                  <p><strong>Situation:</strong> Company facing potential unfair dismissal claim. Fractional HR Director implemented proper <a href="https://www.acas.org.uk/dismissals" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">performance management process</a>, documented everything correctly, and managed exit professionally following <a href="https://www.acas.org.uk/acas-code-of-practice-on-disciplinary-and-grievance-procedures" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACAS guidance</a>.</p>
                   <p><strong>Outcome:</strong> Avoided tribunal claim that would have cost £25,000+ in legal fees plus potential £50,000+ award.</p>
                   <p className="text-pink-600 font-bold text-lg">ROI: 1.5-2x (£75,000+ saved for £50k investment)</p>
                 </div>
@@ -338,7 +342,7 @@ export default function FractionalHRCostPage() {
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-4">ROI Example 2: Reduced Turnover</h3>
                 <div className="space-y-3 text-gray-700">
                   <p><strong>Cost:</strong> £80,000 (12-month engagement, 2 days/week)</p>
-                  <p><strong>Actions:</strong> Implemented engagement surveys, created career frameworks, improved management practices, fixed compensation issues.</p>
+                  <p><strong>Actions:</strong> Implemented engagement surveys, created career frameworks, improved management practices, fixed compensation issues. According to <a href="https://www.shrm.org/topics-tools/tools/toolkits/managing-employee-retention" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">SHRM research</a>, systematic retention strategies significantly reduce turnover costs.</p>
                   <p><strong>Outcome:</strong> Reduced turnover from 25% to 15%. For 80 employees at £40k average salary, saving 8 departures × £30k replacement cost = £240,000.</p>
                   <p className="text-pink-600 font-bold text-lg">ROI: 3x (£240k saved for £80k investment)</p>
                 </div>
@@ -348,7 +352,7 @@ export default function FractionalHRCostPage() {
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-4">ROI Example 3: Fundraising Support</h3>
                 <div className="space-y-3 text-gray-700">
                   <p><strong>Cost:</strong> £35,000 (6-month engagement, 1.5 days/week)</p>
-                  <p><strong>Actions:</strong> Built HR infrastructure, created people metrics dashboard, developed retention strategy, professionalised HR for investor due diligence.</p>
+                  <p><strong>Actions:</strong> Built HR infrastructure, created people metrics dashboard, developed retention strategy, professionalised HR for investor due diligence. The <a href="https://www.british-business-bank.co.uk/finance-hub/scaling-a-business/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> emphasises strong people management as critical for scaling businesses.</p>
                   <p><strong>Outcome:</strong> Company successfully raised £5M Series A. Investors specifically cited professional HR function and retention metrics as factors in decision.</p>
                   <p className="text-pink-600 font-bold text-lg">ROI: Enabled funding round—invaluable</p>
                 </div>
@@ -385,7 +389,7 @@ export default function FractionalHRCostPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Hire Fractional HR?</h2>
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            Find experienced fractional HR professionals at £700-£1,300/day. Save 35-55% vs full-time while getting senior expertise.
+            Find experienced fractional HR professionals at £700-£1,300/day. Save 35-55% vs full-time while getting senior expertise. Business leaders at the <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> increasingly favour flexible talent models.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/fractional-hr-jobs-uk" className="px-8 py-4 bg-pink-500 text-white font-bold uppercase tracking-wider hover:bg-pink-400 transition-colors">

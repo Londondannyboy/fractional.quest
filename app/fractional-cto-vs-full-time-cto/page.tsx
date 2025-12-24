@@ -63,14 +63,15 @@ const ctoComparisonData: ComparisonData = {
 export default function FractionalVsFullTimeCTOPage() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+      <section className="py-20 md:py-28 bg-white relative bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1920)' }}>
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10">
           <Link href="/fractional-cto" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-8 transition-colors text-sm tracking-wide">
             <span className="mr-2">←</span> Back to CTO Hub
           </Link>
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Comparison Guide</span>
-            <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
               Fractional vs<br />Full-Time CTO
             </h1>
             <p className="text-xl text-gray-600">Complete comparison to help you choose the right model for your company</p>

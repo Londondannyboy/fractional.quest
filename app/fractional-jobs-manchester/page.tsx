@@ -130,7 +130,7 @@ export default async function ManchesterPage() {
             </div>
             <div>
               <div className="text-4xl font-black text-red-700">£800m</div>
-              <div className="text-gray-600 font-medium">VC invested 2024</div>
+              <div className="text-gray-600 font-medium">VC invested 2024 (source: <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a>)</div>
             </div>
           </div>
         </div>
@@ -141,7 +141,7 @@ export default async function ManchesterPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Jobs by Manchester Area</h2>
-            <p className="text-xl text-gray-600">From Spinningfields to MediaCityUK</p>
+            <p className="text-xl text-gray-600">From Spinningfields to MediaCityUK - explore opportunities across the city supported by <a href="https://www.techuk.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK</a></p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -174,7 +174,7 @@ export default async function ManchesterPage() {
               <span className="text-3xl mb-4 block">💳</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">FinTech Powerhouse</h3>
               <p className="text-gray-600">
-                Manchester hosts 500+ fintech companies including Klarna's UK HQ and Booking.com's financial services. Fractional CFOs are in high demand for scaling operations.
+                Manchester hosts 500+ fintech companies including Klarna's UK HQ and Booking.com's financial services. According to <a href="https://www.technation.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a>, fractional CFOs are in high demand for scaling operations in the region's growing fintech sector.
               </p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8">
@@ -188,16 +188,16 @@ export default async function ManchesterPage() {
               <span className="text-3xl mb-4 block">🚀</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Scale-Up Capital</h3>
               <p className="text-gray-600">
-                With lower costs than London and access to northern talent, Manchester is the UK's top destination for scale-ups seeking fractional leadership.
+                With lower costs than London and access to northern talent, Manchester is the UK's top destination for scale-ups seeking fractional leadership. The <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> reports strong growth in Manchester's scale-up ecosystem.
               </p>
             </div>
           </div>
           <div className="mt-12 max-w-4xl mx-auto">
             <p className="text-gray-700 leading-relaxed mb-4">
-              Manchester's business ecosystem is thriving. <a href="https://www.manchesterdigital.com/" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:text-red-700 underline">Manchester Digital</a> data shows the city has the largest tech workforce outside London, with exceptional growth in fintech, e-commerce, and SaaS sectors.
+              Manchester's business ecosystem is thriving. <a href="https://www.manchesterdigital.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Manchester Digital</a> data shows the city has the largest tech workforce outside London, with exceptional growth in fintech, e-commerce, and SaaS sectors. <a href="https://investinmanchester.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">MIDAS Manchester</a> supports businesses investing and expanding in the Greater Manchester region.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              The Northern Powerhouse initiative continues to drive investment. For fractional executives, Manchester offers London-competitive rates with lower living costs and exceptional quality of life.
+              The <a href="https://www.greatermanchester-ca.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Greater Manchester Combined Authority</a> continues to drive the Northern Powerhouse initiative. For fractional executives, Manchester offers London-competitive rates with lower living costs and exceptional quality of life, as highlighted by <a href="https://www.ons.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS</a> regional employment data.
             </p>
           </div>
         </div>
@@ -263,7 +263,7 @@ export default async function ManchesterPage() {
                 <span className="text-red-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                A fractional job in Manchester is a part-time executive role working 1-3 days per week. Manchester's fintech and media clusters create strong demand for fractional CFOs and CMOs with commercial expertise.
+                A fractional job in Manchester is a part-time executive role working 1-3 days per week. Manchester's fintech and media clusters create strong demand for fractional CFOs and CMOs with commercial expertise. <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> research shows fractional working is increasingly popular among senior professionals.
               </p>
             </details>
 
@@ -273,7 +273,7 @@ export default async function ManchesterPage() {
                 <span className="text-red-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                Manchester fractional executives earn £700-£1,200 per day - competitive with London rates. With 2-4 clients, annual earnings of £140,000-£220,000+ are achievable.
+                Manchester fractional executives earn £700-£1,200 per day - competitive with London rates. With 2-4 clients, annual earnings of £140,000-£220,000+ are achievable. The <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> provides resources for executives exploring portfolio careers.
               </p>
             </details>
 
@@ -283,7 +283,7 @@ export default async function ManchesterPage() {
                 <span className="text-red-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                Manchester is the Northern Powerhouse because it hosts 10,000+ digital jobs, £800m+ annual VC investment, and the UK's largest regional tech sector. It's the economic engine of the North.
+                Manchester is the Northern Powerhouse because it hosts 10,000+ digital jobs, £800m+ annual VC investment, and the UK's largest regional tech sector. It's the economic engine of the North. The <a href="https://www.britishchambers.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Chambers of Commerce</a> and <a href="https://www.cbi.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CBI</a> regularly highlight Manchester's economic contribution.
               </p>
             </details>
           </div>

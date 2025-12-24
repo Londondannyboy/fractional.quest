@@ -23,7 +23,7 @@ const CAREER_FAQS = [
   },
   {
     question: 'What qualifications do fractional compliance officers need?',
-    answer: 'Common qualifications include ICA (International Compliance Association) Certificate or Diploma, CISI Diploma in Investment Compliance, and/or legal qualifications (solicitor/barrister). While not mandatory, these demonstrate professional competence. More important is practical experience and track record in FCA-regulated environments.'
+    answer: 'Common qualifications include <a href="https://www.int-comp.org/qualifications/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICA (International Compliance Association)</a> Certificate or Diploma, <a href="https://www.cisi.org/cisiweb2/cisi-website/study-with-us/professional-qualifications" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CISI Diploma in Investment Compliance</a>, and/or legal qualifications (solicitor/barrister). While not mandatory, these demonstrate professional competence. More important is practical experience and track record in <a href="https://www.fca.org.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA</a>-regulated environments.'
   },
   {
     question: 'How much can I earn as a fractional compliance officer?',
@@ -35,11 +35,11 @@ const CAREER_FAQS = [
   },
   {
     question: 'Should I set up a limited company?',
-    answer: 'Most fractional compliance officers operate through limited companies for tax efficiency and liability protection. Ltd company structure allows dividend payments, pension contributions, and expense deductions. However, consider IR35 implications—many engagements may be caught by IR35, particularly SMF roles.'
+    answer: 'Most fractional compliance officers operate through limited companies for tax efficiency and liability protection. Ltd company structure allows dividend payments, pension contributions, and expense deductions. You can <a href="https://www.gov.uk/set-up-limited-company" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">register via Companies House</a>. However, consider <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35</a> implications—many engagements may be caught by IR35, particularly SMF roles.'
   },
   {
     question: 'How do I find my first fractional compliance clients?',
-    answer: 'First clients typically come from: your professional network (former colleagues, clients, contacts), compliance consultancies seeking associate capacity, recruitment agencies with interim/contract desks, LinkedIn outreach and content, referrals from lawyers and accountants serving FinTech, and direct approaches to newly authorised FCA firms.'
+    answer: 'First clients typically come from: your professional network (former colleagues, clients, contacts), compliance consultancies seeking associate capacity, recruitment agencies with interim/contract desks, LinkedIn outreach and content, referrals from lawyers and accountants serving FinTech, and direct approaches to newly authorised firms (check the <a href="https://www.fca.org.uk/firms/financial-services-register" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA register</a>).'
   }
 ]
 
@@ -130,7 +130,7 @@ export default function HowToBecomeFractionalComplianceOfficerPage() {
       <section className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-slate-900 py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1920&q=80"
+            src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1920"
             alt="How to become a fractional compliance officer - career development in regulatory compliance"
             className="w-full h-full object-cover opacity-20"
           />
@@ -143,7 +143,7 @@ export default function HowToBecomeFractionalComplianceOfficerPage() {
           <span className="inline-block bg-purple-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             Career Guide
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
             How to Become a<br />
             <span className="text-purple-400">Fractional Compliance Officer</span>
           </h1>
@@ -179,7 +179,7 @@ export default function HowToBecomeFractionalComplianceOfficerPage() {
             </p>
 
             <p>
-              The UK market for fractional compliance has grown significantly, driven by FinTech expansion,
+              The UK market for fractional compliance has grown significantly, driven by FinTech expansion (supported by initiatives like the <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a>),
               regulatory complexity, and cost pressures on regulated firms. For compliance professionals with
               the right experience and credentials, fractional work can be both financially rewarding and
               professionally fulfilling.
@@ -189,7 +189,7 @@ export default function HowToBecomeFractionalComplianceOfficerPage() {
               <p className="text-lg font-semibold text-slate-900 mb-2">Is Fractional Compliance Right for You?</p>
               <p className="text-slate-700">
                 Fractional work suits self-motivated professionals comfortable with business development,
-                variable income, and managing multiple client relationships. It's less suited to those who
+                variable income, and managing multiple client relationships. Leadership resources from the <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> can help develop these skills. It's less suited to those who
                 prefer job security, employer-provided benefits, and deep integration with a single organisation.
               </p>
             </div>
@@ -246,7 +246,7 @@ export default function HowToBecomeFractionalComplianceOfficerPage() {
             <ul className="space-y-2">
               <li><strong>10-15+ years</strong> compliance experience in FCA-regulated firms</li>
               <li><strong>3-5+ years</strong> in senior compliance roles (Head of, CCO, Senior Manager)</li>
-              <li>Direct experience with <a href="https://www.fca.org.uk" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">FCA regulatory requirements</a> and interaction</li>
+              <li>Direct experience with <a href="https://www.fca.org.uk/firms" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA regulatory requirements</a> and interaction</li>
               <li>Previous <strong>SMF approval</strong> (SMF16 or SMF17) highly valued</li>
               <li>Experience building compliance frameworks and leading teams</li>
             </ul>
@@ -254,8 +254,8 @@ export default function HowToBecomeFractionalComplianceOfficerPage() {
             <h3 className="text-xl font-bold text-slate-900 mt-10 mb-4">Professional Qualifications</h3>
             <p>While not mandatory, these qualifications enhance credibility:</p>
             <ul className="space-y-2">
-              <li><strong>ICA qualifications</strong> — International Compliance Association Certificate/Diploma</li>
-              <li><strong>CISI</strong> — Diploma in Investment Compliance</li>
+              <li><strong><a href="https://www.int-comp.org/qualifications/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICA qualifications</a></strong> — International Compliance Association Certificate/Diploma</li>
+              <li><strong><a href="https://www.cisi.org/cisiweb2/cisi-website/study-with-us/professional-qualifications" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CISI</a></strong> — Diploma in Investment Compliance</li>
               <li><strong>Legal qualifications</strong> — Solicitor or barrister qualification (valued for regulatory roles)</li>
               <li><strong>AML certifications</strong> — CAMS, ICA Advanced Certificate in AML (for MLRO roles)</li>
             </ul>
@@ -266,10 +266,10 @@ export default function HowToBecomeFractionalComplianceOfficerPage() {
               High-demand sectors include:
             </p>
             <ul className="space-y-2">
-              <li><strong>Crypto and digital assets</strong> — FCA registration, Travel Rule, custody</li>
-              <li><strong>Payments and e-money</strong> — EMI/PI compliance, safeguarding, PSD2</li>
+              <li><strong>Crypto and digital assets</strong> — <a href="https://www.fca.org.uk/firms/financial-crime/cryptoassets-aml-ctf-regime" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA registration</a>, Travel Rule, custody</li>
+              <li><strong>Payments and e-money</strong> — EMI/PI compliance, safeguarding, PSD2. Data protection under <a href="https://ico.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICO</a> guidance is critical</li>
               <li><strong>Consumer credit</strong> — CONC, affordability, Consumer Duty</li>
-              <li><strong>Investment management</strong> — MiFID II, CASS, best execution</li>
+              <li><strong>Investment management</strong> — MiFID II, CASS, best execution. <a href="https://www.bankofengland.co.uk/prudential-regulation" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">PRA</a> requirements for deposit-takers</li>
             </ul>
           </div>
         </div>
@@ -285,7 +285,7 @@ export default function HowToBecomeFractionalComplianceOfficerPage() {
 
           <div className="prose prose-lg prose-slate max-w-none">
             <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Business Structure</h3>
-            <p>Most fractional compliance officers operate through <strong>limited companies</strong>:</p>
+            <p>Most fractional compliance officers operate through <strong>limited companies</strong> (register via <a href="https://www.gov.uk/set-up-limited-company" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Companies House</a>). See <a href="https://www.gov.uk/business-legal-structures" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">gov.uk business structures guidance</a> for options:</p>
             <ul className="space-y-2">
               <li>Tax efficiency through salary and dividend combination</li>
               <li>Liability protection (though PI insurance remains essential)</li>
@@ -299,7 +299,7 @@ export default function HowToBecomeFractionalComplianceOfficerPage() {
                 Many fractional compliance engagements, particularly SMF roles, may be caught by
                 <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline ml-1">IR35</a>.
                 This means you may be taxed as an employee despite working through a limited company.
-                Factor this into your pricing and financial planning.
+                Factor this into your pricing and financial planning. <a href="https://www.ipse.co.uk/ipse-news/news-listing/ir35-reforms-what-you-need-to-know.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IPSE provides guidance</a> on IR35 for self-employed professionals.
               </p>
             </div>
 
@@ -338,7 +338,7 @@ export default function HowToBecomeFractionalComplianceOfficerPage() {
               <li><strong>Start competitively:</strong> When building your client base, consider rates slightly below market to secure initial engagements</li>
               <li><strong>Value-based pricing:</strong> For high-stakes work (authorisation, remediation), price based on value delivered</li>
               <li><strong>Retainer discounts:</strong> Offer 5-10% discount for committed retainer arrangements</li>
-              <li><strong>Regular reviews:</strong> Increase rates annually as your reputation and demand grows</li>
+              <li><strong>Regular reviews:</strong> Increase rates annually as your reputation and demand grows. Consider professional development support from <a href="https://www.cipd.org/uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> for consulting skills</li>
             </ul>
           </div>
         </div>

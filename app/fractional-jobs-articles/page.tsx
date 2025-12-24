@@ -108,7 +108,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80')`,
+              backgroundImage: `url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1920')`,
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-amber-600/80 via-orange-500/60 to-yellow-400/40" />

@@ -416,9 +416,17 @@ function VoiceInterface({ token, userId, profile, memoryContext, graphData, onPr
   return (
     <div className="flex-1 flex flex-col">
       {/* Main Voice Area */}
-      <div className="flex-1 flex flex-col items-center justify-center p-8 bg-gradient-to-b from-purple-50 to-white">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+      <div className="flex-1 flex flex-col items-center justify-center p-8 bg-gradient-to-b from-purple-50 to-white relative">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Hero background"
+            className="w-full h-full object-cover opacity-30"
+          />
+        </div>
+        <div className="text-center mb-8 relative z-10">
+          <h1 className="text-3xl font-bold text-white mb-2">
             {profile?.first_name ? `Hi ${profile.first_name}` : 'Your Repo'}
           </h1>
           <p className="text-gray-600">
@@ -430,7 +438,7 @@ function VoiceInterface({ token, userId, profile, memoryContext, graphData, onPr
         <button
           onClick={isConnected ? disconnect : handleConnect}
           disabled={isConnecting}
-          className={`w-32 h-32 rounded-full text-white font-bold text-lg shadow-xl transition-all ${
+          className={`w-32 h-32 rounded-full text-white font-bold text-lg shadow-xl transition-all relative z-10 ${
             isConnected
               ? 'bg-blue-500 hover:bg-blue-600 animate-pulse'
               : isConnecting
@@ -453,13 +461,13 @@ function VoiceInterface({ token, userId, profile, memoryContext, graphData, onPr
           )}
         </button>
 
-        <p className="mt-4 text-sm text-gray-500">
+        <p className="mt-4 text-sm text-gray-500 relative z-10">
           {isConnected ? (isPlaying ? 'Repo is speaking...' : 'Listening...') : 'Tap to start'}
         </p>
 
         {/* Action buttons when connected */}
         {isConnected && (
-          <div className="mt-4 flex gap-3">
+          <div className="mt-4 flex gap-3 relative z-10">
             <button
               onClick={() => {
                 console.log('[Manual] Show jobs button clicked')

@@ -28,7 +28,7 @@ const COMPLIANCE_FAQS = [
   },
   {
     question: 'Can you work part-time as a compliance officer?',
-    answer: 'Yes, many compliance officers work part-time, particularly at senior levels. The FCA permits part-time appointments for SMF16 (Compliance Oversight) and SMF17 (MLRO) roles, provided the individual has sufficient time and resource to fulfil their responsibilities. Part-time compliance work is common in FinTech, payments, crypto, and smaller regulated firms.'
+    answer: 'Yes, many compliance officers work part-time, particularly at senior levels. The <a href="https://www.fca.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA</a> permits part-time appointments for SMF16 (Compliance Oversight) and SMF17 (MLRO) roles, provided the individual has sufficient time and resource to fulfil their responsibilities. Part-time compliance work is common in FinTech, payments, crypto, and smaller regulated firms.'
   },
   {
     question: 'Where can I find part-time compliance jobs?',
@@ -36,7 +36,7 @@ const COMPLIANCE_FAQS = [
   },
   {
     question: 'What qualifications do I need for part-time compliance work?',
-    answer: 'For senior part-time compliance roles holding SMF positions, you typically need 10+ years of compliance experience in financial services, ICA or CISI compliance qualifications, previous FCA approval history for SMF roles, clean regulatory track record, and sector-specific expertise (FinTech, crypto, investment management). Junior roles may accept 5+ years experience.'
+    answer: 'For senior part-time compliance roles holding SMF positions, you typically need 10+ years of compliance experience in financial services, <a href="https://www.int-comp.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICA</a> or <a href="https://www.cisi.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CISI</a> compliance qualifications, previous FCA approval history for SMF roles, clean regulatory track record, and sector-specific expertise (FinTech, crypto, investment management). Junior roles may accept 5+ years experience.'
   },
   {
     question: 'Is part-time compliance work done remotely?',
@@ -111,7 +111,7 @@ export default function PartTimeComplianceJobsUKPage() {
       <section className="relative bg-gradient-to-br from-teal-900 via-teal-800 to-slate-900 py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1920&q=80"
+            src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1920"
             alt="Part-time compliance jobs UK - flexible compliance officer working in modern office"
             className="w-full h-full object-cover opacity-20"
           />
@@ -124,7 +124,7 @@ export default function PartTimeComplianceJobsUKPage() {
           <span className="inline-block bg-teal-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             Career Guide
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
             Part-Time Compliance<br />
             <span className="text-teal-400">Jobs UK</span>
           </h1>
@@ -192,8 +192,7 @@ export default function PartTimeComplianceJobsUKPage() {
                 &pound;100k+ full-time salaries
               </li>
               <li>
-                <strong>Career preferences:</strong> Senior compliance professionals increasingly value flexibility
-                and portfolio careers over single-employer relationships
+                <strong>Career preferences:</strong> Senior compliance professionals increasingly value <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexibility</a> and portfolio careers over single-employer relationships
               </li>
             </ul>
 
@@ -331,8 +330,8 @@ export default function PartTimeComplianceJobsUKPage() {
             <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Professional Networks</h3>
             <p>Many part-time opportunities come through professional connections:</p>
             <ul className="space-y-2">
-              <li><strong>ICA (International Compliance Association)</strong> — Events, forums, and job board</li>
-              <li><strong>CISI</strong> — Compliance-focused professional body with networking events</li>
+              <li><strong><a href="https://www.int-comp.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICA (International Compliance Association)</a></strong> — Events, forums, and job board</li>
+              <li><strong><a href="https://www.cisi.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CISI</a></strong> — Compliance-focused professional body with networking events</li>
               <li><strong>LinkedIn</strong> — Compliance-specific groups and direct outreach</li>
               <li><strong>Former colleagues</strong> — Referrals from your professional network</li>
             </ul>
@@ -342,9 +341,9 @@ export default function PartTimeComplianceJobsUKPage() {
               Proactively approaching firms can uncover opportunities not yet advertised. Target:
             </p>
             <ul className="space-y-2">
-              <li>Newly FCA-authorised firms (check the FCA register for recent authorisations)</li>
-              <li>Growing FinTechs and crypto firms</li>
-              <li>Private equity portfolio companies</li>
+              <li>Newly <a href="https://register.fca.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA-authorised firms</a> (check the FCA register for recent authorisations)</li>
+              <li>Growing <a href="https://www.ukfinance.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FinTechs</a> and crypto firms</li>
+              <li><a href="https://scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Private equity portfolio companies</a></li>
               <li>Firms advertising for full-time compliance staff (may consider part-time alternatives)</li>
             </ul>
           </div>
@@ -402,7 +401,7 @@ export default function PartTimeComplianceJobsUKPage() {
           <div className="prose prose-lg prose-slate max-w-none">
             <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Core Qualifications</h3>
             <ul className="space-y-2">
-              <li>ICA Certificate/Diploma or CISI Diploma in Investment Compliance</li>
+              <li><a href="https://www.int-comp.org/qualifications" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICA Certificate/Diploma</a> or <a href="https://www.cisi.org/cisiweb2/cisi-website/study-with-us/compliance" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CISI Diploma in Investment Compliance</a></li>
               <li>10+ years compliance experience in <a href="https://www.fca.org.uk/firms" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline">FCA-regulated firms</a></li>
               <li>Previous SMF16 or SMF17 approval (for senior roles)</li>
               <li>Clean regulatory record with no FCA enforcement history</li>
@@ -410,28 +409,29 @@ export default function PartTimeComplianceJobsUKPage() {
 
             <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Technical Knowledge</h3>
             <ul className="space-y-2">
-              <li>FCA Handbook and regulatory framework</li>
+              <li><a href="https://www.handbook.fca.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA Handbook</a> and regulatory framework</li>
               <li><a href="https://www.fca.org.uk/firms/senior-managers-certification-regime" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 underline">Senior Managers & Certification Regime</a></li>
-              <li>AML/CTF regulations and JMLSG guidance</li>
+              <li>AML/CTF regulations and <a href="https://www.jmlsg.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">JMLSG guidance</a></li>
               <li>Consumer Duty and conduct risk</li>
               <li>Sector-specific rules (COBS, CONC, BCOBS, etc.)</li>
+              <li>Data protection compliance and <a href="https://ico.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICO guidance</a></li>
             </ul>
 
             <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Business Skills</h3>
             <ul className="space-y-2">
-              <li>Board and committee presentation skills</li>
+              <li><a href="https://www.iod.com/professional-development/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Board and committee presentation skills</a></li>
               <li>Policy and procedure drafting</li>
               <li>Regulatory relationship management</li>
               <li>Risk assessment and compliance monitoring programme design</li>
-              <li>Training delivery and compliance culture development</li>
+              <li>Training delivery and <a href="https://www.cipd.org/uk/knowledge/factsheets/learning-development-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">compliance culture development</a></li>
             </ul>
 
             <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">High-Demand Specialisms</h3>
             <p>Certain specialisms command premium rates:</p>
             <ul className="space-y-2">
-              <li><strong>Crypto and digital assets</strong> — FCA registration, Travel Rule, AML</li>
+              <li><strong><a href="https://www.fca.org.uk/firms/cryptoassets" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Crypto and digital assets</a></strong> — FCA registration, Travel Rule, AML</li>
               <li><strong>Consumer Duty</strong> — Implementation and ongoing monitoring</li>
-              <li><strong>Payments and e-money</strong> — EMI/PI authorisation and compliance</li>
+              <li><strong><a href="https://www.fca.org.uk/firms/electronic-money-payment-institutions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Payments and e-money</a></strong> — EMI/PI authorisation and compliance</li>
               <li><strong>CASS</strong> — Client assets and client money rules</li>
               <li><strong>Operational resilience</strong> — Business continuity and third-party risk</li>
             </ul>
@@ -489,7 +489,7 @@ export default function PartTimeComplianceJobsUKPage() {
           <div className="prose prose-lg prose-slate max-w-none">
             <p>
               Annual earnings assume approximately 100 billable days (2 days per week, accounting for holidays
-              and non-billable time). Many fractional compliance professionals work 3-4 days per week across
+              and non-billable time). Many <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">fractional compliance professionals</a> work 3-4 days per week across
               multiple clients, earning &pound;150,000-&pound;200,000+.
             </p>
             <p>
@@ -506,7 +506,7 @@ export default function PartTimeComplianceJobsUKPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-2 block">UK Tax</span>
             <h2 className="text-3xl md:text-4xl font-black text-slate-900">IR35: Inside vs Outside</h2>
             <p className="text-slate-600 mt-4">
-              As a part-time compliance professional, your IR35 status significantly impacts take-home pay
+              As a part-time compliance professional, your <a href="https://www.gov.uk/guidance/understanding-off-payroll-working-ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35 status</a> significantly impacts take-home pay
             </p>
           </div>
           <IR35Calculator defaultDayRate={1000} />
@@ -550,7 +550,7 @@ export default function PartTimeComplianceJobsUKPage() {
             <div className="bg-slate-100 p-6 rounded-lg my-8 not-prose">
               <p className="text-slate-700">
                 <strong className="text-slate-900">Typical hybrid arrangement:</strong> 1-2 days per month on-site for
-                committee meetings and team interaction, remainder remote. Some SMF holders successfully work fully
+                committee meetings and team interaction, remainder remote. Some <a href="https://www.fca.org.uk/firms/senior-managers-certification-regime/senior-managers-regime" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">SMF holders</a> successfully work fully
                 remotely, particularly for smaller firms outside London.
               </p>
             </div>

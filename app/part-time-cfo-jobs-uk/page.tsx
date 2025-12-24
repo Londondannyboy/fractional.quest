@@ -66,6 +66,7 @@ export default async function PartTimeCfoJobsUkPage() {
       {/* Editorial Hero with 3D Knowledge Graph */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
+          <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="" className="w-full h-full object-cover" />
           <JobsGraph3D roleFilter="CFO" limit={25} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="relative z-10 w-full py-20">
@@ -77,7 +78,7 @@ export default async function PartTimeCfoJobsUkPage() {
               <span className="inline-block bg-blue-950/200 text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Finance Leadership
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Part-Time CFO<br />
                 <span className="text-blue-400">Jobs UK</span>
               </h1>

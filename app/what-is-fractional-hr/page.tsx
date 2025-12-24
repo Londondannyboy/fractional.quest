@@ -66,7 +66,8 @@ export default function WhatIsFractionalHRPage() {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <JobsGraph3D categoryFilter="HR" limit={25} height="100%" isHero={true} showOverlay={true} />
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 w-full py-20">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -77,7 +78,7 @@ export default function WhatIsFractionalHRPage() {
               <span className="inline-block bg-white text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Definition Guide
               </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 What is<br />
                 <span className="text-pink-400">Fractional HR?</span>
               </h1>
@@ -128,14 +129,14 @@ export default function WhatIsFractionalHRPage() {
               </div>
               <div className="bg-gray-50 p-6 border-l-4 border-gray-900">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">"HR" (Human Resources)</h4>
-                <p className="text-gray-700 mb-0">Refers to the people function—talent acquisition, employee relations, performance management, culture, compensation, compliance, and organisational development. At senior levels: CHRO (Chief Human Resources Officer), HR Director, or People Partner.</p>
+                <p className="text-gray-700 mb-0">Refers to the people function—talent acquisition, <a href="https://www.acas.org.uk/employment-contracts-and-conditions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">employee relations</a>, performance management, culture, compensation, compliance, and organisational development. At senior levels: CHRO (Chief Human Resources Officer), HR Director, or People Partner.</p>
               </div>
             </div>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">How Fractional HR Works</h3>
 
             <p>
-              When you engage a fractional HR professional, they become your senior people leader—but part-time. According to <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-700 underline">CIPD research</a>, this model has grown 43% since 2020 as businesses seek flexible access to senior expertise.
+              When you engage a fractional HR professional, they become your senior people leader—but part-time. According to <a href="https://www.cipd.org/uk/knowledge/reports/profession-map/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD research</a>, this model has grown 43% since 2020 as businesses seek flexible access to senior expertise.
             </p>
 
             <p>A typical engagement looks like this:</p>
@@ -148,7 +149,7 @@ export default function WhatIsFractionalHRPage() {
                   <ul className="space-y-1 text-sm list-none pl-0">
                     <li>• Attend weekly leadership meetings</li>
                     <li>• Develop and implement HR strategy</li>
-                    <li>• Manage complex employee relations</li>
+                    <li>• Manage complex <a href="https://www.acas.org.uk/employment-rights" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">employee relations</a></li>
                     <li>• Lead talent acquisition for key hires</li>
                     <li>• Build HR policies and processes</li>
                     <li>• Mentor any junior HR team members</li>
@@ -175,23 +176,25 @@ export default function WhatIsFractionalHRPage() {
             <div className="grid md:grid-cols-2 gap-6 my-10 not-prose">
               <div className="bg-gray-50 p-5">
                 <h4 className="font-bold text-gray-900 mb-2">Scale-ups (20-150 employees)</h4>
-                <p className="text-sm text-gray-700">Companies that have outgrown founder-led HR but aren't ready for a £150k+ full-time CHRO.</p>
+                <p className="text-sm text-gray-700">Companies that have outgrown founder-led HR but aren't ready for a £150k+ full-time CHRO. According to the <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a>, this is the fastest-growing business segment in the UK.</p>
               </div>
               <div className="bg-gray-50 p-5">
                 <h4 className="font-bold text-gray-900 mb-2">VC/PE-Backed Companies</h4>
-                <p className="text-sm text-gray-700">Portfolio companies that need professional HR leadership to support rapid growth and investor expectations.</p>
+                <p className="text-sm text-gray-700">Portfolio companies that need professional HR leadership to support rapid growth and investor expectations. The <a href="https://www.britishbusinessbank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> reports strong growth in this segment.</p>
               </div>
               <div className="bg-gray-50 p-5">
                 <h4 className="font-bold text-gray-900 mb-2">SMEs Facing HR Challenges</h4>
-                <p className="text-sm text-gray-700">Businesses dealing with tribunals, restructuring, M&A, or culture issues that require senior expertise.</p>
+                <p className="text-sm text-gray-700">Businesses dealing with <a href="https://www.acas.org.uk/employment-tribunals" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">tribunals</a>, restructuring, M&A, or culture issues that require senior expertise.</p>
               </div>
               <div className="bg-gray-50 p-5">
                 <h4 className="font-bold text-gray-900 mb-2">Companies Building HR Infrastructure</h4>
-                <p className="text-sm text-gray-700">Organisations that need to establish proper HR foundations—contracts, handbooks, HRIS, policies—from scratch.</p>
+                <p className="text-sm text-gray-700">Organisations that need to establish proper HR foundations—<a href="https://www.gov.uk/browse/employing-people" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">employment contracts</a>, handbooks, HRIS, policies—from scratch.</p>
               </div>
             </div>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">Fractional HR vs Other Models</h3>
+
+            <p>Understanding how fractional HR compares to other <a href="https://www.cipd.org/uk/knowledge/factsheets/hr-outsourcing-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">HR service models</a> helps you make the right choice for your business:</p>
 
             <div className="overflow-x-auto my-10">
               <table className="w-full border-collapse text-sm">
@@ -243,23 +246,23 @@ export default function WhatIsFractionalHRPage() {
             <div className="grid gap-6 my-10">
               <div className="bg-gray-50 p-6 border-l-4 border-pink-500">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">1. Cost Efficiency (50-70% Savings)</h4>
-                <p className="text-gray-700 mb-0">Access CHRO-level expertise at a fraction of full-time cost. A 2-day/week fractional HR Director costs £94k-£114k annually vs £145k-£183k+ for full-time (including NI, pension, benefits).</p>
+                <p className="text-gray-700 mb-0">Access CHRO-level expertise at a fraction of full-time cost. A 2-day/week fractional HR Director costs £94k-£114k annually vs £145k-£183k+ for full-time (including NI, <a href="https://www.gov.uk/workplace-pensions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">pension</a>, benefits).</p>
               </div>
               <div className="bg-gray-50 p-6 border-l-4 border-gray-300">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">2. Senior Expertise</h4>
-                <p className="text-gray-700 mb-0">Fractional HR leaders typically have 15-20+ years experience and have held multiple CHRO/HR Director roles. They bring pattern recognition and best practices from across industries.</p>
+                <p className="text-gray-700 mb-0">Fractional HR leaders typically have 15-20+ years experience and have held multiple CHRO/HR Director roles. They bring pattern recognition and <a href="https://www.cipd.org/uk/knowledge/guides/hr-practices/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">best practices</a> from across industries.</p>
               </div>
               <div className="bg-gray-50 p-6 border-l-4 border-pink-500">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">3. Flexibility</h4>
-                <p className="text-gray-700 mb-0">Scale from 1 to 3 days per week as your needs change. Intensive during rapid growth or crisis, lighter during steady state. 30-60 day notice periods vs 3-6 months for full-time.</p>
+                <p className="text-gray-700 mb-0">Scale from 1 to 3 days per week as your needs change. Intensive during rapid growth or crisis, lighter during steady state. 30-60 day notice periods vs 3-6 months for full-time. This aligns with the UK's growing <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working</a> trends.</p>
               </div>
               <div className="bg-gray-50 p-6 border-l-4 border-gray-300">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">4. Speed to Impact</h4>
-                <p className="text-gray-700 mb-0">Start within 1-2 weeks vs 4-6 months to hire full-time. Critical when facing urgent HR challenges—tribunal, restructuring, or rapid hiring.</p>
+                <p className="text-gray-700 mb-0">Start within 1-2 weeks vs 4-6 months to hire full-time. Critical when facing urgent HR challenges—tribunal, <a href="https://www.acas.org.uk/reorganising-your-workforce" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">restructuring</a>, or rapid hiring.</p>
               </div>
               <div className="bg-gray-50 p-6 border-l-4 border-pink-500">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">5. External Perspective</h4>
-                <p className="text-gray-700 mb-0">Working across multiple companies, fractional HR leaders bring fresh perspective and can quickly identify what's working elsewhere in similar businesses.</p>
+                <p className="text-gray-700 mb-0">Working across multiple companies, fractional HR leaders bring fresh perspective and can quickly identify what's working elsewhere in similar businesses. This cross-sector knowledge is valued by <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">business directors</a> seeking competitive advantage.</p>
               </div>
             </div>
           </div>

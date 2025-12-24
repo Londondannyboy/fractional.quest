@@ -104,7 +104,7 @@ export default function FractionalHRForStartupsPage() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed mb-10">
-              Most startup founders face a dilemma: <strong>You need proper HR to hire well, stay compliant, and build culture—but you can't afford or justify a £150k+ full-time HR Director.</strong> Fractional HR solves this perfectly.
+              Most <a href="https://www.startups.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">startup</a> founders face a dilemma: <strong>You need proper HR to hire well, stay compliant, and build culture—but you can't afford or justify a £150k+ full-time HR Director.</strong> Fractional HR solves this perfectly.
             </p>
 
             <div className="bg-pink-50 border-l-4 border-pink-500 p-8 mb-10">
@@ -143,7 +143,7 @@ export default function FractionalHRForStartupsPage() {
             <div className="grid gap-6 my-10">
               <div className="bg-gray-50 p-6 border-l-4 border-pink-500">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">15-25 Employees</h4>
-                <p className="text-gray-700 mb-0">The inflection point where informal HR breaks. You're spending too much time on people issues. Your first complex employee problem appears. You need proper contracts and policies.</p>
+                <p className="text-gray-700 mb-0">The inflection point where informal HR breaks. You're spending too much time on people issues. Your first complex employee problem appears. You need proper <a href="https://www.acas.org.uk/employment-contracts" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">contracts</a> and policies.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-gray-900">
@@ -153,7 +153,7 @@ export default function FractionalHRForStartupsPage() {
 
               <div className="bg-gray-50 p-6 border-l-4 border-pink-500">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Pre-Fundraise (6-12 Months Out)</h4>
-                <p className="text-gray-700 mb-0">Investors scrutinise people practices. Professional HR infrastructure, retention data, and compliant employment practices signal maturity and reduce DD risk.</p>
+                <p className="text-gray-700 mb-0"><a href="https://www.british-business-bank.co.uk/finance-hub/growth-and-scaling-up/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Investors</a> scrutinise people practices. Professional HR infrastructure, retention data, and compliant employment practices signal maturity and reduce DD risk.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-gray-900">
@@ -183,7 +183,7 @@ export default function FractionalHRForStartupsPage() {
               <div className="bg-white p-8 border-2 border-gray-900">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-4">1. Build HR Foundations</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Create compliant employment contracts (fixing risky template ones)</li>
+                  <li>• Create compliant <a href="https://www.cipd.org/uk/knowledge/factsheets/employment-law-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">employment contracts</a> (fixing risky template ones)</li>
                   <li>• Develop employee handbook with key policies</li>
                   <li>• Set up basic HRIS for employee records</li>
                   <li>• Implement proper onboarding process</li>
@@ -207,7 +207,7 @@ export default function FractionalHRForStartupsPage() {
               <div className="bg-white p-8 border-l-4 border-gray-300">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-4">3. Professionalise Hiring</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Create structured interview processes</li>
+                  <li>• Create <a href="https://www.cipd.org/uk/knowledge/guides/recruitment/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">structured interview processes</a></li>
                   <li>• Develop job descriptions and levelling frameworks</li>
                   <li>• Implement assessment methods that work</li>
                   <li>• Build employer brand basics</li>
@@ -231,10 +231,10 @@ export default function FractionalHRForStartupsPage() {
               <div className="bg-white p-8 border-l-4 border-pink-500">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-4">5. Handle Early ER Issues</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Manage first performance problems properly</li>
+                  <li>• Manage first <a href="https://www.acas.org.uk/managing-performance" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">performance problems</a> properly</li>
                   <li>• Navigate probation period decisions</li>
                   <li>• Handle sensitive exits professionally</li>
-                  <li>• Respond to early grievances correctly</li>
+                  <li>• Respond to early <a href="https://www.acas.org.uk/grievance-procedure-step-by-step" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">grievances</a> correctly</li>
                   <li>• Advise on team restructures</li>
                 </ul>
                 <p className="text-sm text-gray-600 mt-4 mb-0"><strong>Critical:</strong> One mishandled exit can cost £25,000+ and damage employer brand</p>
@@ -300,7 +300,7 @@ export default function FractionalHRForStartupsPage() {
           <div className="bg-gray-50 text-gray-900 p-8 my-10">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Sweet Spot: Seed to Series A</h3>
             <p className="text-gray-600 mb-4">
-              The PERFECT time for fractional HR is <strong className="text-white">post-Seed, pre-Series A</strong>. You have 20-40 people, you're hiring regularly, and you need professional HR but can't justify £150k+ full-time.
+              The PERFECT time for fractional HR is <strong className="text-white">post-Seed, pre-Series A</strong>. You have 20-40 people, you're hiring regularly, and you need professional HR but can't justify £150k+ full-time. <a href="https://www.scaleupinstitute.org.uk/scaleup-programmes/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Scaling companies</a> at this stage benefit most from fractional expertise.
             </p>
             <div className="bg-white/10 p-6">
               <p className="text-white font-semibold mb-2">Typical Engagement:</p>
@@ -328,7 +328,7 @@ export default function FractionalHRForStartupsPage() {
               <div className="bg-white p-8 border-l-4 border-pink-500">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-4">SaaS Startup - Avoided Tribunal</h3>
                 <p className="text-gray-700 mb-2"><strong>Situation:</strong> 25-person SaaS company. Employee performance issue escalating. Founder about to dismiss without proper process.</p>
-                <p className="text-gray-700 mb-2"><strong>Fractional HR Action:</strong> Implemented proper performance improvement plan, documented everything correctly, managed exit with settlement agreement.</p>
+                <p className="text-gray-700 mb-2"><strong>Fractional HR Action:</strong> Implemented proper <a href="https://www.acas.org.uk/performance-management" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">performance improvement plan</a>, documented everything correctly, managed exit with settlement agreement.</p>
                 <p className="text-gray-700 mb-2"><strong>Cost:</strong> £12,000 (3-month engagement, 1 day/week)</p>
                 <p className="text-gray-700 mb-2"><strong>Outcome:</strong> Clean exit with settlement agreement. Avoided £25,000+ tribunal claim + £15,000 legal fees + 6 months founder distraction.</p>
                 <p className="text-pink-600 font-bold">ROI: 3-4x (£40k+ saved for £12k investment)</p>
@@ -337,7 +337,7 @@ export default function FractionalHRForStartupsPage() {
               <div className="bg-white p-8 border-l-4 border-gray-900">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-4">FinTech - Series A Due Diligence</h3>
                 <p className="text-gray-700 mb-2"><strong>Situation:</strong> 35-person FinTech raising Series A. No proper employment contracts, no handbook, compliance gaps.</p>
-                <p className="text-gray-700 mb-2"><strong>Fractional HR Action:</strong> Built complete HR infrastructure in 4 months: new contracts for all employees, comprehensive handbook, HRIS, compliance audit.</p>
+                <p className="text-gray-700 mb-2"><strong>Fractional HR Action:</strong> Built complete HR infrastructure in 4 months: new contracts for all employees, comprehensive handbook, HRIS, <a href="https://www.gov.uk/browse/employing-people" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">compliance audit</a>.</p>
                 <p className="text-gray-700 mb-2"><strong>Cost:</strong> £20,000 (4-month engagement, 1.5 days/week)</p>
                 <p className="text-gray-700 mb-2"><strong>Outcome:</strong> Passed investor DD with no HR issues. Successfully raised £8M Series A. Investor specifically noted "professional HR setup for company this size."</p>
                 <p className="text-pink-600 font-bold">ROI: Enabled funding round—invaluable</p>
@@ -346,7 +346,7 @@ export default function FractionalHRForStartupsPage() {
               <div className="bg-white p-8 border-l-4 border-pink-500">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-4">E-Commerce - Reduced Bad Hires</h3>
                 <p className="text-gray-700 mb-2"><strong>Situation:</strong> 40-person e-commerce startup. High turnover (35%). Several recent bad hires costing £30k+ each in replacement costs.</p>
-                <p className="text-gray-700 mb-2"><strong>Fractional HR Action:</strong> Redesigned hiring process, implemented structured interviews, created competency framework, trained hiring managers.</p>
+                <p className="text-gray-700 mb-2"><strong>Fractional HR Action:</strong> Redesigned hiring process, implemented structured interviews, created <a href="https://www.cipd.org/uk/knowledge/factsheets/competency-factsheet/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">competency framework</a>, trained hiring managers.</p>
                 <p className="text-gray-700 mb-2"><strong>Cost:</strong> £35,000 (8-month engagement, 1 day/week)</p>
                 <p className="text-gray-700 mb-2"><strong>Outcome:</strong> Turnover dropped to 18%. Quality of hires improved significantly. Saved estimated £120,000 in year-one bad hire and replacement costs.</p>
                 <p className="text-pink-600 font-bold">ROI: 3.4x (£120k saved for £35k investment)</p>
@@ -383,7 +383,7 @@ export default function FractionalHRForStartupsPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-6">Ready for Fractional HR for Your Startup?</h2>
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            Find experienced startup HR leaders who've scaled companies from Seed to Series C.
+            Find experienced startup HR leaders who've scaled companies from Seed to Series C. Resources from <a href="https://www.enterprisenation.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Enterprise Nation</a> and <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD</a> can also support your growth journey.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/fractional-hr-jobs-uk" className="px-8 py-4 bg-pink-500 text-white font-bold uppercase tracking-wider hover:bg-pink-400 transition-colors">

@@ -32,9 +32,9 @@ export default function HowToBecomeFractionalCOOPage() {
             <h3>Minimum Qualifications</h3>
             <ul>
               <li><strong>15-20+ years operations experience</strong> — Clients won't pay fractional rates for less</li>
-              <li><strong>Prior COO or VP Operations title</strong> — Credibility requires executive track record</li>
-              <li><strong>Scaling experience</strong> — Must have scaled companies 2x-10x revenue</li>
-              <li><strong>Industry expertise</strong> — Deep knowledge of at least one sector (SaaS, e-commerce, etc.)</li>
+              <li><strong>Prior COO or VP Operations title</strong> — Credibility requires executive track record. Consider <a href="https://www.cmi.org.uk/membership/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CMI Chartered Manager status</a> for additional credibility</li>
+              <li><strong>Scaling experience</strong> — Must have scaled companies 2x-10x revenue. The <a href="https://scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> provides resources on growth best practices</li>
+              <li><strong>Industry expertise</strong> — Deep knowledge of at least one sector (SaaS, e-commerce, manufacturing etc.). <a href="https://www.makeuk.org/membership" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Make UK</a> is valuable for manufacturing operations leaders</li>
               <li><strong>Systems implementation</strong> — Built operational infrastructure at multiple companies</li>
               <li><strong>Team leadership</strong> — Managed 20+ person teams across multiple functions</li>
               <li><strong>Executive presence</strong> — Can command room with CEOs, boards, investors</li>
@@ -54,7 +54,7 @@ export default function HowToBecomeFractionalCOOPage() {
               <li><strong>Talk to 10-15 potential clients</strong> — Would they hire you? At what rate?</li>
               <li><strong>Join fractional executive networks</strong> — Bolster, Business Talent Group, Fractional Quest</li>
               <li><strong>Analyze competitor positioning</strong> — Who serves your niche? What do they charge?</li>
-              <li><strong>Assess your network</strong> — Can you get first 2-3 clients through connections?</li>
+              <li><strong>Assess your network</strong> — Can you get first 2-3 clients through connections? Join <a href="https://www.iod.com/membership/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> or <a href="https://www.cipd.org/uk/join/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> for networking opportunities</li>
             </ul>
 
             <p className="text-xl font-bold">
@@ -124,12 +124,12 @@ export default function HowToBecomeFractionalCOOPage() {
 
               <div className="bg-gray-50 p-6">
                 <h4 className="font-bold text-lg mb-2">4. VC/PE Portfolio Networks</h4>
-                <p className="text-gray-700">Partner with VCs who have portfolio companies needing ops help. Become their "go-to fractional COO" for portfolio.</p>
+                <p className="text-gray-700">Partner with VCs who have portfolio companies needing ops help. Become their "go-to fractional COO" for portfolio. Connect with <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> backed funds.</p>
               </div>
 
               <div className="bg-gray-50 p-6">
                 <h4 className="font-bold text-lg mb-2">5. Speaking & Events</h4>
-                <p className="text-gray-700">Speak at industry conferences, CEO peer groups, accelerators. Position as expert. Leads from speaking have high close rate.</p>
+                <p className="text-gray-700">Speak at industry conferences, CEO peer groups, accelerators. Position as expert. Leads from speaking have high close rate. <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD events</a> are excellent for connecting with business leaders.</p>
               </div>
             </div>
 
@@ -137,10 +137,11 @@ export default function HowToBecomeFractionalCOOPage() {
 
             <h3>Business Setup</h3>
             <ul>
-              <li><strong>Entity:</strong> LLC or S-Corp for liability protection and tax benefits</li>
-              <li><strong>Insurance:</strong> $2M E&O insurance ($1,500-$3,000/year)</li>
+              <li><strong>Entity:</strong> Register as a <a href="https://www.gov.uk/set-up-business" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">limited company or sole trader</a> for liability protection and tax benefits. Register with <a href="https://www.gov.uk/government/organisations/companies-house" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Companies House</a> if forming a limited company</li>
+              <li><strong>Insurance:</strong> £2M professional indemnity insurance (£1,500-£3,000/year)</li>
               <li><strong>Contracts:</strong> Master services agreement template (have lawyer review)</li>
               <li><strong>Banking:</strong> Separate business account, accounting software (QuickBooks/Xero)</li>
+              <li><strong>IR35 Compliance:</strong> Understand <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35 tax rules</a> for contractors. Join <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IPSE</a> for guidance on self-employment tax matters</li>
             </ul>
 
             <h3>Client Portfolio Strategy</h3>
@@ -148,7 +149,7 @@ export default function HowToBecomeFractionalCOOPage() {
               <li><strong>2-4 clients maximum</strong> — More and quality suffers</li>
               <li><strong>Stagger start dates</strong> — Don't take 3 clients same month</li>
               <li><strong>8-12 days/month per client</strong> — Sweet spot for most engagements</li>
-              <li><strong>Target: $15k-25k/month total</strong> — From 2-3 clients</li>
+              <li><strong>Target: £15k-25k/month total</strong> — From 2-3 clients. Consider leveraging <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> resources for working capital if needed</li>
             </ul>
 
             <h2>Step 6: Deliver Exceptional Results</h2>

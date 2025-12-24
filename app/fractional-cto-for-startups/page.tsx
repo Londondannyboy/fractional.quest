@@ -41,20 +41,20 @@ const STARTUP_FAQS = [
 export default function FractionalCTOForStartupsPage() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-white bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/7413915/pexels-photo-7413915.jpeg?auto=compress&cs=tinysrgb&w=1920)' }}>
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <Link href="/fractional-cto" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-8 transition-colors text-sm tracking-wide">
             <span className="mr-2">←</span> Back to CTO Hub
           </Link>
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">For Startups</span>
-            <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Fractional CTO for Startups</h1>
+            <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">Fractional CTO for Startups</h1>
             <p className="text-xl text-gray-600">When to hire, what to expect, and how fractional CTOs accelerate startup success</p>
           </div>
 
           <div className="bg-blue-50 border-l-4 border-blue-600 p-8 mb-12">
             <p className="text-xl text-gray-900 leading-relaxed mb-0">
-              Most startups can't afford or don't need a <strong>£250k+ full-time CTO</strong>, but they desperately need senior technical leadership. Fractional CTOs provide <strong>CTO-level expertise at startup-friendly prices</strong> (£42k-£80k/year for 1-2 days/week), helping non-technical founders build products, prepare for fundraising, and scale engineering teams.
+              Most <a href="https://www.startups.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">startups</a> can't afford or don't need a <strong>£250k+ full-time CTO</strong>, but they desperately need senior technical leadership. Fractional CTOs provide <strong>CTO-level expertise at startup-friendly prices</strong> (£42k-£80k/year for 1-2 days/week), helping non-technical founders build products, prepare for fundraising, and scale engineering teams.
             </p>
           </div>
 
@@ -65,28 +65,28 @@ export default function FractionalCTOForStartupsPage() {
               <div className="bg-gray-50 p-6 border-l-4 border-blue-500">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">✅ Stage: Pre-Product / Building MVP</h3>
                 <p className="text-gray-700 mb-2"><strong>Scenario:</strong> You're a non-technical founder with an idea. You need to build your first product.</p>
-                <p className="text-gray-700 mb-2"><strong>What Fractional CTO Does:</strong> Define technical approach, evaluate development agencies, choose tech stack, oversee MVP development, make build vs buy decisions.</p>
+                <p className="text-gray-700 mb-2"><strong>What Fractional CTO Does:</strong> Define technical approach, evaluate development agencies, choose tech stack, oversee MVP development, make build vs buy decisions. Understanding the <a href="https://www.scaleupinstitute.org.uk/scaleup-resources/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scaleup journey</a> helps frame technical decisions appropriately.</p>
                 <p className="text-gray-600 text-sm mb-0"><strong>Engagement:</strong> 1 day/week for 6-12 months (£850-£1,600/week)</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-gray-300">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">✅ Stage: Pre-Seed / Seed Fundraising</h3>
                 <p className="text-gray-700 mb-2"><strong>Scenario:</strong> You're raising £500k-£2M. Investors want to speak with your technical leader.</p>
-                <p className="text-gray-700 mb-2"><strong>What Fractional CTO Does:</strong> Provide technical credibility, handle investor technical DD, articulate technology strategy, validate technical approach, represent technology in pitch.</p>
+                <p className="text-gray-700 mb-2"><strong>What Fractional CTO Does:</strong> Provide technical credibility, handle investor technical DD, articulate technology strategy, validate technical approach, represent technology in pitch. Understanding <a href="https://www.british-business-bank.co.uk/finance-hub/business-guidance/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">funding options</a> and working with <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">venture capital partners</a> requires strong technical leadership.</p>
                 <p className="text-gray-600 text-sm mb-0"><strong>Engagement:</strong> 1-2 days/week for 6 months around fundraise (£3,500-£6,500/month)</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-blue-500">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">✅ Stage: Post-Seed, Scaling Team (3 to 10 Engineers)</h3>
                 <p className="text-gray-700 mb-2"><strong>Scenario:</strong> You've raised seed funding. You're growing from 3 to 10 engineers and need senior technical leadership.</p>
-                <p className="text-gray-700 mb-2"><strong>What Fractional CTO Does:</strong> Hire senior engineers, establish development processes, set architecture direction, build engineering culture, mentor tech leads.</p>
+                <p className="text-gray-700 mb-2"><strong>What Fractional CTO Does:</strong> Hire senior engineers, establish development processes, set architecture direction, build engineering culture, mentor tech leads. Building a strong <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scaleup culture</a> and team is critical at this stage.</p>
                 <p className="text-gray-600 text-sm mb-0"><strong>Engagement:</strong> 2 days/week ongoing (£7k-£13k/month)</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-gray-300">
                 <h3 className="text-xl font-black text-gray-900 mt-0 mb-3">✅ Stage: Series A Prep, Scaling to 15-25 Engineers</h3>
                 <p className="text-gray-700 mb-2"><strong>Scenario:</strong> You're preparing Series A (£5M-£15M raise). Need to demonstrate technical maturity and readiness to scale.</p>
-                <p className="text-gray-700 mb-2"><strong>What Fractional CTO Does:</strong> Architect for scale, establish team structure, implement monitoring/observability, prepare technical DD materials, hire engineering leaders.</p>
+                <p className="text-gray-700 mb-2"><strong>What Fractional CTO Does:</strong> Architect for scale, establish team structure, implement monitoring/observability, prepare technical DD materials, hire engineering leaders. Professional development through organizations like the <a href="https://www.bcs.org/membership/member-communities/professional-development/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BCS professional community</a> ensures your technical leadership stays current.</p>
                 <p className="text-gray-600 text-sm mb-0"><strong>Engagement:</strong> 2-3 days/week for 12+ months (£10k-£19k/month)</p>
               </div>
             </div>
@@ -96,9 +96,9 @@ export default function FractionalCTOForStartupsPage() {
             <div className="bg-white border-2 border-gray-900 p-8 my-10">
               <h4 className="text-xl font-bold text-gray-900 mt-0 mb-4">Core Value for Startups:</h4>
               <ul className="space-y-3 text-gray-700 mb-0">
-                <li><strong>Technical Strategy:</strong> Choose tech stack, define architecture, make build vs buy decisions</li>
+                <li><strong>Technical Strategy:</strong> Choose tech stack, define architecture, make build vs buy decisions. The <a href="https://www.bcs.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BCS</a> provides professional standards for technology leadership.</li>
                 <li><strong>Vendor/Agency Oversight:</strong> Evaluate and manage development agencies, offshore teams, contractors</li>
-                <li><strong>Hiring:</strong> Define roles, conduct technical interviews, hire your first engineers and Tech Lead</li>
+                <li><strong>Hiring:</strong> Define roles, conduct technical interviews, hire your first engineers and Tech Lead. <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD guidance</a> on recruitment can be valuable for building your team.</li>
                 <li><strong>Investor Relations:</strong> Handle technical DD, provide credibility, articulate technology vision</li>
                 <li><strong>Risk Management:</strong> Identify technical risks early, prevent expensive mistakes, security basics</li>
                 <li><strong>Process & Culture:</strong> Establish development workflows, code review, CI/CD, testing practices</li>
@@ -194,18 +194,18 @@ export default function FractionalCTOForStartupsPage() {
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">For Non-Technical Founders</h3>
 
             <p className="text-xl text-gray-600 mb-8">
-              If you're a non-technical founder, a fractional CTO is often essential. Here's what they do for you:
+              If you're a non-technical founder, a fractional CTO is often essential. Many successful <a href="https://www.startups.co.uk/guides/non-technical-founders/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">non-technical founders</a> rely on experienced technical leadership to bring their vision to life. Here's what they do for you:
             </p>
 
             <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">
               <h4 className="text-lg font-bold text-gray-900 mb-3">Key Value for Non-Technical Founders:</h4>
               <ul className="space-y-2 text-gray-700 mb-0">
                 <li>• <strong>Translate technical to business:</strong> Explain technical decisions in business terms you understand</li>
-                <li>• <strong>Protect you from bad technical decisions:</strong> Prevent expensive mistakes on architecture, tech stack, vendors</li>
+                <li>• <strong>Protect you from bad technical decisions:</strong> Prevent expensive mistakes on architecture, tech stack, vendors. <a href="https://www.techuk.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK</a> provides industry insights on technology best practices.</li>
                 <li>• <strong>Evaluate development partners:</strong> Assess agencies, contractors, offshore teams objectively</li>
                 <li>• <strong>Hire your first engineers:</strong> Define roles, conduct technical interviews, assess culture fit</li>
                 <li>• <strong>Provide investor credibility:</strong> Represent technology professionally to VCs and technical advisors</li>
-                <li>• <strong>Make you technically literate:</strong> Educate you on technical concepts relevant to your business</li>
+                <li>• <strong>Make you technically literate:</strong> Educate you on technical concepts relevant to your business. Resources from <a href="https://www.enterprisenation.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Enterprise Nation</a> can help founders develop business and technical acumen.</li>
               </ul>
             </div>
 
@@ -214,7 +214,7 @@ export default function FractionalCTOForStartupsPage() {
             <div className="space-y-4 my-8">
               <div className="bg-gray-50 p-6 border-l-4 border-red-500">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">❌ Too Early: You Only Have an Idea</h4>
-                <p className="text-gray-600 mb-0">If you're pre-revenue with just an idea and no funding, start with a technical co-founder or experienced contractor. Fractional CTO makes sense once you have some budget (£20k+ raised) and are ready to build.</p>
+                <p className="text-gray-600 mb-0">If you're pre-revenue with just an idea and no funding, start with a technical co-founder or experienced contractor. Fractional CTO makes sense once you have some budget (£20k+ raised) and are ready to build. <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a> offers resources for early-stage tech startups.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-red-500">
@@ -238,7 +238,7 @@ export default function FractionalCTOForStartupsPage() {
                 <strong>2. Set Your Budget:</strong> £3,500-£6,500/month (1-2 days/week) is typical for startups. See if you can afford it from current runway.
               </li>
               <li>
-                <strong>3. Source Candidates:</strong> Start with your network (advisors, investors). Use fractional CTO agencies for pre-vetted candidates. See our <Link href="/fractional-cto-services" className="text-blue-600 hover:text-blue-700 underline">services directory</Link>.
+                <strong>3. Source Candidates:</strong> Start with your network (advisors, investors). Use fractional CTO agencies for pre-vetted candidates. The <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> network can be a valuable source for finding experienced technology leaders. See our <Link href="/fractional-cto-services" className="text-blue-600 hover:text-blue-700 underline">services directory</Link>.
               </li>
               <li>
                 <strong>4. Assess Fit:</strong> Look for: (a) Experience with your tech stack, (b) Track record with startups at your stage, (c) Strong communication (can translate technical to business), (d) References from other startup founders.

@@ -20,11 +20,11 @@ export default function OnboardingRouter() {
   }
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center px-6">
+    <div className="min-h-screen bg-white flex items-center justify-center px-6" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="max-w-5xl w-full">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Welcome to <span className="text-blue-400">Fractional Quest</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">

@@ -42,7 +42,7 @@ export default function InterimCFOPage() {
                 Interim CFO<br /><span className="text-blue-300">Services UK</span>
               </h1>
               <p className="text-xl text-white/90 leading-relaxed max-w-2xl mb-8">
-                Full-time temporary CFO leadership for transitions, transformations, and critical periods. Expert financial executives available to start immediately.
+                Full-time temporary CFO leadership for transitions, transformations, and critical periods. Expert financial executives available to start immediately. As <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline">UK flexible working legislation</a> evolves, interim executive appointments have become a mainstream solution for businesses requiring senior leadership.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="#contact" className="px-8 py-4 bg-white text-blue-900 font-bold uppercase tracking-wider hover:bg-blue-50 transition-colors">
@@ -76,6 +76,7 @@ export default function InterimCFOPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-black text-gray-900 mb-8">When to Hire an Interim CFO</h2>
+          <p className="text-gray-600 mb-8">According to <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> research, growing businesses often need interim executive support during critical transitions. The <a href="https://www.britishbusinessbank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> notes that access to experienced financial leadership is a key factor in SME growth success.</p>
           <div className="grid md:grid-cols-2 gap-6">
             {[
               { scenario: 'CFO Departure', description: 'Your CFO has left and you need immediate leadership while recruiting a permanent replacement.' },
@@ -98,6 +99,7 @@ export default function InterimCFOPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-black text-gray-900 mb-8">Interim CFO vs Fractional CFO</h2>
+          <p className="text-gray-600 mb-6">Both interim and fractional CFO engagements fall under <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35 regulations</a> which govern off-payroll working arrangements. The <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> provides guidance on engaging interim executives effectively. <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS employment data</a> shows the continued growth of flexible senior roles.</p>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
@@ -136,7 +138,7 @@ export default function InterimCFOPage() {
       <section id="contact" className="py-20 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-black mb-6">Need an Interim CFO?</h2>
-          <p className="text-xl text-gray-600 mb-10">Tell us about your situation and we'll help you find the right interim or fractional CFO.</p>
+          <p className="text-xl text-gray-600 mb-10">Tell us about your situation and we'll help you find the right interim or fractional CFO. Businesses requiring financial transformation should consider the <a href="https://www.cimaglobal.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">CIMA</a> and <a href="https://www.frc.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Financial Reporting Council</a> standards for financial leadership.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact/companies" className="px-10 py-5 bg-blue-950/200 text-black font-bold uppercase tracking-wider hover:bg-blue-400 transition-colors">
               Find an Interim CFO

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const SALARY_FAQS = [
   {
     question: "How much does a Fractional CTO earn in the UK?",
-    answer: "Fractional CTOs in the UK typically earn £150,000-£300,000+ annually. With 2-4 clients at £850-£1,600/day each, working 2-3 days per week per client, most fractional CTOs earn significantly more than equivalent full-time roles (£180k-£250k) while enjoying better flexibility."
+    answer: "Fractional CTOs in the UK typically earn £150,000-£300,000+ annually. With 2-4 clients at £850-£1,600/day each, working 2-3 days per week per client, most fractional CTOs earn significantly more than equivalent full-time roles (£180k-£250k) while enjoying better flexibility. Understanding <a href=\"https://www.gov.uk/topic/business-tax/ir35\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-blue-600 hover:text-blue-700 underline\">IR35 regulations</a> is crucial for contractors operating through limited companies."
   },
   {
     question: "What is a typical Fractional CTO day rate?",
@@ -31,7 +31,7 @@ const SALARY_FAQS = [
   },
   {
     question: "Can Fractional CTOs earn more than full-time CTOs?",
-    answer: "Yes, many do. A fractional CTO working with 3 clients at £1,200/day, 2 days/week each generates £288k annually vs £180k-£250k for full-time roles. However, fractional CTOs must account for business expenses, no benefits, and client acquisition time."
+    answer: "Yes, many do. A fractional CTO working with 3 clients at £1,200/day, 2 days/week each generates £288k annually vs £180k-£250k for full-time roles. According to <a href=\"https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-blue-600 hover:text-blue-700 underline\">ONS earnings data</a>, senior technology professionals are among the highest earners in the UK. However, fractional CTOs must account for business expenses, no benefits, and client acquisition time."
   },
   {
     question: "How many clients should a Fractional CTO have?",
@@ -44,6 +44,8 @@ export default function FractionalCTOSalaryPage() {
     <div className="min-h-screen bg-white">
       <section className="relative min-h-[65vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+          <div className="absolute inset-0 bg-black/40" />
           <JobsGraph3D roleFilter="CTO" limit={20} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="relative z-10 w-full py-20">
@@ -55,7 +57,7 @@ export default function FractionalCTOSalaryPage() {
               <span className="inline-block bg-white text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Salary Guide 2025
               </span>
-              <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Fractional CTO<br />
                 <span className="text-blue-400">Salary UK</span>
               </h1>
@@ -85,6 +87,8 @@ export default function FractionalCTOSalaryPage() {
           <div className="prose prose-lg prose-gray max-w-none">
             <h3 className="text-2xl font-black text-gray-900 mt-0 mb-6">Fractional CTO Salary Breakdown (UK 2025)</h3>
 
+            <p>Based on <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS employment data</a> and industry surveys, fractional CTOs in the UK command premium rates reflecting their strategic value and specialized expertise.</p>
+
             <div className="bg-white border-2 border-gray-900 p-8 my-10">
               <div className="grid md:grid-cols-3 gap-8 text-center mb-6">
                 <div>
@@ -103,6 +107,8 @@ export default function FractionalCTOSalaryPage() {
             </div>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">Day Rate Ranges by Experience</h3>
+
+            <p>Professional development and continuous learning through organizations like <a href="https://www.bcs.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BCS, The Chartered Institute for IT</a> helps CTOs maintain their expertise and justify premium rates.</p>
 
             <div className="space-y-6 my-10">
               <div className="bg-gray-50 p-6 border-l-4 border-blue-500">
@@ -126,7 +132,7 @@ export default function FractionalCTOSalaryPage() {
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">Typical Client Portfolio Models</h3>
 
-            <p>Here are the most common client portfolio structures and their earnings:</p>
+            <p>Here are the most common client portfolio structures and their earnings. Understanding <a href="https://www.gov.uk/guidance/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a> is essential when structuring your fractional practice:</p>
 
             <div className="space-y-6 my-10">
               <div className="bg-white border-2 border-gray-900 p-6">
@@ -198,6 +204,8 @@ export default function FractionalCTOSalaryPage() {
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">Salary Comparison: Fractional vs Full-Time CTO</h3>
 
+            <p>According to <a href="https://www.cipd.org/uk/knowledge/reports/reward-management-survey/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD salary surveys</a>, technology leadership roles continue to command premium compensation. Here's how fractional and full-time CTO arrangements compare:</p>
+
             <div className="overflow-x-auto my-10">
               <table className="w-full border-collapse text-left text-sm">
                 <thead>
@@ -225,7 +233,7 @@ export default function FractionalCTOSalaryPage() {
                   </tr>
                   <tr className="border-b bg-gray-50">
                     <td className="p-4 font-semibold">Expenses</td>
-                    <td className="p-4 bg-blue-50">15-20% (accountant, insurance, tools, travel)</td>
+                    <td className="p-4 bg-blue-50">15-20% (accountant, insurance, tools, travel). Note: <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35 status</a> affects tax treatment</td>
                     <td className="p-4">Covered by employer</td>
                   </tr>
                   <tr className="border-b">
@@ -254,11 +262,13 @@ export default function FractionalCTOSalaryPage() {
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">Factors That Increase Fractional CTO Rates</h3>
 
+            <p>The UK's thriving tech ecosystem, documented by <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a>, creates strong demand for experienced technology leaders. Key factors that command premium rates include:</p>
+
             <ul className="space-y-3">
               <li><strong>Specialized Expertise:</strong> AI/ML, Blockchain, Security, FinTech command £200-£400/day premium</li>
-              <li><strong>Proven Track Record:</strong> Successful exits (acquisition/IPO) add £200-£300/day</li>
+              <li><strong>Proven Track Record:</strong> Successful exits (acquisition/IPO) add £200-£300/day. Organizations like <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> provide networking for senior business leaders</li>
               <li><strong>Location:</strong> London rates 15-20% higher than regional (Manchester, Edinburgh, Bristol)</li>
-              <li><strong>Industry Demand:</strong> HealthTech, FinTech, and regulated industries pay 15-25% more</li>
+              <li><strong>Industry Demand:</strong> HealthTech, FinTech, and regulated industries pay 15-25% more. <a href="https://www.techuk.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK</a> tracks sector trends and demand</li>
               <li><strong>Urgency:</strong> Emergency engagements (technical crisis, security breach) can command 50% premium</li>
               <li><strong>Brand & Reputation:</strong> Well-known CTOs with speaking/writing profile charge premium rates</li>
             </ul>
@@ -268,12 +278,12 @@ export default function FractionalCTOSalaryPage() {
             <div className="space-y-4 my-8">
               <div className="bg-gray-50 p-6">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">1. Build Specialized Expertise</h4>
-                <p className="text-gray-700 mb-0">Develop deep expertise in high-demand areas: AI/ML infrastructure, security/compliance, FinTech systems, or specific tech stacks (Kubernetes, AWS/GCP, data platforms). Specialists charge 20-40% more than generalists.</p>
+                <p className="text-gray-700 mb-0">Develop deep expertise in high-demand areas: AI/ML infrastructure, security/compliance, FinTech systems, or specific tech stacks (Kubernetes, AWS/GCP, data platforms). The <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> highlights the need for technical leadership in growing companies. Specialists charge 20-40% more than generalists.</p>
               </div>
 
               <div className="bg-gray-50 p-6">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">2. Target High-Value Industries</h4>
-                <p className="text-gray-700 mb-0">Focus on industries with complex technical requirements and high budgets: FinTech, HealthTech, regulated sectors, and B2B SaaS. These pay £200-£400/day more than e-commerce or consumer startups.</p>
+                <p className="text-gray-700 mb-0">Focus on industries with complex technical requirements and high budgets: FinTech, HealthTech, regulated sectors, and B2B SaaS. The <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> supports growth companies that often need fractional CTO expertise. These pay £200-£400/day more than e-commerce or consumer startups.</p>
               </div>
 
               <div className="bg-gray-50 p-6">
@@ -288,7 +298,7 @@ export default function FractionalCTOSalaryPage() {
 
               <div className="bg-gray-50 p-6">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">5. Optimize Your Portfolio</h4>
-                <p className="text-gray-700 mb-0">3 clients at £1,300/day (1.5 days each) = £280k annually with good work-life balance. Add a 4th client only if you can maintain quality. Drop low-paying or difficult clients annually to make room for better engagements.</p>
+                <p className="text-gray-700 mb-0">3 clients at £1,300/day (1.5 days each) = £280k annually with good work-life balance. Add a 4th client only if you can maintain quality. Drop low-paying or difficult clients annually to make room for better engagements. Resources like <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IPSE</a> (Association of Independent Professionals and the Self-Employed) offer support for freelance professionals.</p>
               </div>
             </div>
 

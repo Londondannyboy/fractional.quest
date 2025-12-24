@@ -13,12 +13,13 @@ export default function HowItWorksPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-white border-b border-gray-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <section className="bg-white border-b border-gray-200 relative bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1920)' }}>
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative">
           <span className="inline-block text-sm font-semibold text-blue-600 uppercase tracking-wider mb-4">
             For Companies
           </span>
-          <h1 className="font-editorial text-5xl md:text-6xl font-bold text-gray-900 leading-[1.1] mb-6">
+          <h1 className="font-editorial text-5xl md:text-6xl font-bold text-white leading-[1.1] mb-6">
             How Fractional Hiring Works
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">

@@ -52,12 +52,13 @@ export default async function PartTimeCfoPage() {
       {/* Hero with 3D Knowledge Graph Background */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
           <JobsGraph3D roleFilter="CFO" limit={30} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <div className="bg-gray-50/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10">
             <Link href="/" className="text-white/70 hover:text-gray-900 mb-6 inline-block">← Back to Home</Link>
-            <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">Part-Time CFO Services & Jobs UK</h1>
+            <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Part-Time CFO Services & Jobs UK</h1>
             <p className="text-xl text-white/80 mb-8">
               <strong>Part time CFO</strong> services for growing UK businesses. Whether you need a <strong>CFO part time</strong> or you're seeking <strong>part time CFO jobs</strong>, we connect experienced finance leaders with companies. Remote CFO jobs available.
             </p>
@@ -75,10 +76,10 @@ export default async function PartTimeCfoPage() {
         <div className="max-w-4xl mx-auto px-4 prose prose-lg prose-emerald">
           <h2>What is a Part-Time CFO?</h2>
           <p>
-            A <strong>part-time CFO</strong> (also known as a fractional CFO or outsourced CFO) is an experienced Chief Financial Officer who provides strategic financial leadership to companies on a flexible, part-time basis. <strong>Part time CFO services</strong> allow businesses to access senior finance expertise without the cost of a full-time hire. Rather than committing to a single full-time role, <strong>part time CFOs</strong> typically work with multiple clients, dedicating 1-3 days per week to each engagement.
+            A <strong>part-time CFO</strong> (also known as a fractional CFO or outsourced CFO) is an experienced Chief Financial Officer who provides strategic financial leadership to companies on a <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible, part-time basis</a>. <strong>Part time CFO services</strong> allow businesses to access senior finance expertise without the cost of a full-time hire. Rather than committing to a single full-time role, <strong>part time CFOs</strong> typically work with multiple clients, dedicating 1-3 days per week to each engagement.
           </p>
           <p>
-            The demand for <strong>part time CFO jobs</strong> in the UK has grown significantly. Whether you're a business with a <strong>part time CFO wanted</strong> requirement, or a finance professional seeking <strong>CFO part time</strong> opportunities, the market is thriving. Startups, scale-ups, and SMEs increasingly need senior financial expertise but cannot justify a full-time hire. Companies typically engage a part-time CFO when they reach Series A funding, need to prepare financial models for investors, or require board-level financial reporting.
+            The demand for <strong>part time CFO jobs</strong> in the UK has grown significantly. Whether you're a business with a <strong>part time CFO wanted</strong> requirement, or a finance professional seeking <strong>CFO part time</strong> opportunities, the market is thriving. <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Startups, scale-ups</a>, and SMEs increasingly need senior financial expertise but cannot justify a full-time hire. Companies typically engage a part-time CFO when they reach Series A funding, need to prepare financial models for investors, or require board-level financial reporting.
           </p>
 
           <h2>Part-Time CFO vs Full-Time CFO</h2>
@@ -95,15 +96,15 @@ export default async function PartTimeCfoPage() {
           </p>
           <ul>
             <li><strong>Venture-backed startups</strong> - Companies at Series A or B stage that need fundraising support, financial modelling, and investor relations expertise</li>
-            <li><strong>Private equity portfolio companies</strong> - PE firms often require part-time CFOs to strengthen finance functions across their investments</li>
+            <li><strong>Private equity portfolio companies</strong> - <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">PE firms</a> often require part-time CFOs to strengthen finance functions across their investments</li>
             <li><strong>Scale-ups</strong> - Fast-growing companies (£5-50m revenue) that have outgrown their bookkeeper but aren't ready for a full-time CFO</li>
-            <li><strong>SMEs preparing for exit</strong> - Business owners planning a sale who need to professionalise their finances</li>
+            <li><strong>SMEs preparing for exit</strong> - Business owners planning a sale who need to professionalise their finances with support from the <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a></li>
             <li><strong>Turnaround situations</strong> - Companies in financial distress that need experienced leadership</li>
           </ul>
 
           <h2>Part-Time CFO Salary and Day Rates</h2>
           <p>
-            <strong>Part-time CFO</strong> compensation in the UK typically ranges from £800 to £1,500 per day, depending on experience, industry specialisation, and location. London-based roles command premium rates, with City and Canary Wharf engagements often paying £1,200-£1,500 per day.
+            <strong>Part-time CFO</strong> compensation in the UK typically ranges from £800 to £1,500 per day, depending on experience, industry specialisation, and location. London-based roles command premium rates, with City and Canary Wharf engagements often paying £1,200-£1,500 per day. <a href="https://www.ons.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS data</a> shows senior finance professionals increasingly choosing flexible working arrangements.
           </p>
           <p>
             A part-time CFO working 2-3 days per week across multiple clients can realistically earn £150,000-£250,000 annually. The most experienced fractional CFOs with strong networks and repeat clients can earn significantly more.
@@ -115,19 +116,19 @@ export default async function PartTimeCfoPage() {
             <li>Financial strategy development and execution</li>
             <li>Cash flow forecasting and management</li>
             <li>Fundraising support and investor relations</li>
-            <li>Board reporting and financial governance</li>
+            <li>Board reporting and financial governance aligned with <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> best practices</li>
             <li>Budget creation and monitoring</li>
             <li>Financial systems and process improvement</li>
-            <li>Team leadership and finance function development</li>
+            <li>Team leadership and finance function development, including <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">people management</a> of finance teams</li>
             <li>M&A support and due diligence</li>
           </ul>
 
           <h2>How to Become a Part-Time CFO</h2>
           <p>
-            Transitioning to a <strong>part-time CFO career</strong> typically requires 15+ years of finance experience, including at least 5 years in senior leadership roles. Most successful part-time CFOs hold professional qualifications (ACA, ACCA, CIMA) and have experience across multiple industries.
+            Transitioning to a <strong>part-time CFO career</strong> typically requires 15+ years of finance experience, including at least 5 years in senior leadership roles. Most successful part-time CFOs hold professional qualifications (<a href="https://www.icaew.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACA</a>, <a href="https://www.accaglobal.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACCA</a>, <a href="https://www.cimaglobal.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIMA</a>) and have experience across multiple industries.
           </p>
           <p>
-            Building a portfolio of clients takes time. Many part-time CFOs start by taking on one or two fractional engagements alongside consulting work, gradually building their client base through referrals and networking. Platforms like <Link href="/fractional-jobs-uk">Fractional Quest</Link> can help connect experienced CFOs with companies seeking part-time finance leadership.
+            Building a portfolio of clients takes time. Many part-time CFOs start by taking on one or two fractional engagements alongside consulting work, gradually building their client base through referrals and networking. <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Self-employed professionals</a> benefit from understanding freelance finance leadership models. Platforms like <Link href="/fractional-jobs-uk">Fractional Quest</Link> can help connect experienced CFOs with companies seeking part-time finance leadership.
           </p>
 
           <h2>Part-Time CFO Services</h2>
@@ -147,7 +148,7 @@ export default async function PartTimeCfoPage() {
 
           <h2>Remote CFO Jobs</h2>
           <p>
-            <strong>Remote CFO jobs</strong> have become increasingly common since 2020. Many <strong>part time CFOs</strong> now work entirely remotely or in hybrid arrangements, using modern finance software and video conferencing to deliver their services. This has opened up the market significantly—a company in Manchester can now engage a London-based <strong>part-time CFO</strong> without the need for regular in-person meetings.
+            <strong>Remote CFO jobs</strong> have become increasingly common since 2020, aligned with <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK flexible working rights</a>. Many <strong>part time CFOs</strong> now work entirely remotely or in hybrid arrangements, using modern finance software and video conferencing to deliver their services. This has opened up the market significantly—a company in Manchester can now engage a London-based <strong>part-time CFO</strong> without the need for regular in-person meetings.
           </p>
           <p>
             For CFOs seeking <strong>remote CFO jobs</strong>, the flexibility is a major attraction. You can work with clients across the UK (and internationally) from your home office, making <strong>CFO part time</strong> work even more appealing.

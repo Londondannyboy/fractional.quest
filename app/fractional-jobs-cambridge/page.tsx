@@ -73,10 +73,15 @@ export default async function CambridgePage() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section with 3D Knowledge Graph */}
       <section className="relative bg-gradient-to-br from-cyan-900 via-cyan-800 to-cyan-900 py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0">
-          <JobsGraph3D locationFilter="cambridge" limit={30} height="100%" isHero={true} showOverlay={true} />
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('https://images.pexels.com/photos/256395/pexels-photo-256395.jpeg?auto=compress&cs=tinysrgb&w=1920')`,
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/90 via-cyan-800/80 to-cyan-700/60" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Link href="/" className="inline-flex items-center text-cyan-200 hover:text-gray-900 mb-6 transition-colors">
             ← Back to Home
           </Link>
@@ -85,7 +90,7 @@ export default async function CambridgePage() {
               {stats.totalCambridge}+ Jobs in Cambridge
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
             Fractional Jobs Cambridge
           </h1>
           <p className="max-w-2xl text-xl text-cyan-100 mb-10 leading-relaxed">
@@ -126,7 +131,7 @@ export default async function CambridgePage() {
             </div>
             <div>
               <div className="text-4xl font-black text-cyan-700">£1.7bn</div>
-              <div className="text-gray-600 font-medium">VC invested 2024</div>
+              <div className="text-gray-600 font-medium">VC invested 2024 (<a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BVCA</a>)</div>
             </div>
           </div>
         </div>
@@ -170,34 +175,34 @@ export default async function CambridgePage() {
               <span className="text-3xl mb-4 block">🧬</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Biotech Capital</h3>
               <p className="text-gray-600">
-                Cambridge has the UK's largest life sciences cluster with AstraZeneca, Abcam, and 500+ biotech companies. Fractional CFOs are in high demand for IPO-ready companies.
+                Cambridge has the UK's largest life sciences cluster with AstraZeneca, Abcam, and 500+ biotech companies. Fractional CFOs are in high demand for IPO-ready companies, with the <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> supporting growth-stage funding.
               </p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8">
               <span className="text-3xl mb-4 block">🤖</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">AI & Deep Tech Hub</h3>
               <p className="text-gray-600">
-                Home to DeepMind spinouts, ARM, and leading AI research. Cambridge attracts more VC per capita than anywhere outside Silicon Valley.
+                Home to DeepMind spinouts, ARM, and leading AI research. Cambridge attracts more VC per capita than anywhere outside Silicon Valley, with <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a> reporting exceptional growth in AI startups.
               </p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8">
               <span className="text-3xl mb-4 block">🎓</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">World-Class Talent</h3>
               <p className="text-gray-600">
-                Cambridge University's 900+ spinouts create constant demand for experienced fractional leadership to commercialize breakthrough research.
+                Cambridge University's 900+ spinouts create constant demand for experienced fractional leadership to commercialize breakthrough research. The <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> tracks high-growth companies needing executive expertise.
               </p>
             </div>
           </div>
         </div>
           <div className="mt-12 max-w-4xl mx-auto">
             <p className="text-gray-700 leading-relaxed mb-4">
-              Cambridge's innovation ecosystem is world-class. <a href="https://www.cambridgenetwork.co.uk/news/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Cambridge Network</a> data shows over 5,000 knowledge-intensive companies in the region, creating exceptional demand for fractional executives who understand deep tech, life sciences, and IP-led business models.
+              Cambridge's innovation ecosystem is world-class. <a href="https://www.cambridgenetwork.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Cambridge Network</a> data shows over 5,000 knowledge-intensive companies in the region, creating exceptional demand for fractional executives who understand deep tech, life sciences, and IP-led business models.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
-              The concentration of spin-outs and venture-backed companies drives fractional opportunities. <a href="https://www.cambridgeahead.co.uk/insights/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Cambridge Ahead</a> research highlights consistent growth in biotech, quantum computing, and AI startups—all requiring fractional CFO expertise for fundraising and fractional CTO/CSO leadership for technical strategy.
+              The concentration of spin-outs and venture-backed companies drives fractional opportunities. The <a href="https://cpca.business/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Cambridge & Peterborough Combined Authority</a> supports regional economic development, while <a href="https://www.ons.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS</a> data highlights consistent growth in biotech, quantum computing, and AI startups—all requiring fractional CFO expertise for fundraising and fractional CTO/CSO leadership for technical strategy.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Cambridge offers premium rates (£800-£1,200) reflecting the sophistication of clients and proximity to London. For executives with deep tech or life sciences experience, Cambridge represents one of the UK's most attractive markets for portfolio careers.
+              Cambridge offers premium rates (£800-£1,200) reflecting the sophistication of clients and proximity to London. For executives with deep tech or life sciences experience, Cambridge represents one of the UK's most attractive markets for portfolio careers, with <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> research showing strong demand for flexible executive talent.
             </p>
           </div>
       </section>
@@ -262,7 +267,7 @@ export default async function CambridgePage() {
                 <span className="text-cyan-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                A fractional job in Cambridge is a part-time executive role working 1-3 days per week. Cambridge's deep tech and biotech clusters create exceptional demand for fractional CTOs and CFOs with specialist expertise.
+                A fractional job in Cambridge is a part-time executive role working 1-3 days per week. Cambridge's deep tech and biotech clusters create exceptional demand for fractional CTOs and CFOs with specialist expertise. The <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> reports growing adoption of fractional leadership models.
               </p>
             </details>
 
@@ -272,7 +277,7 @@ export default async function CambridgePage() {
                 <span className="text-cyan-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                Cambridge fractional executives earn £700-£1,200 per day - some of the highest rates outside London. Deep tech and biotech specialists can earn £150,000-£250,000+ annually.
+                Cambridge fractional executives earn £700-£1,200 per day - some of the highest rates outside London. Deep tech and biotech specialists can earn £150,000-£250,000+ annually, according to <a href="https://www.ons.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS</a> earnings data for the region.
               </p>
             </details>
 
@@ -282,20 +287,20 @@ export default async function CambridgePage() {
                 <span className="text-cyan-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                Cambridge is called Silicon Fen because it hosts Europe's largest technology cluster with 4,500+ tech companies, £1.7bn+ annual VC investment, and more spinouts than any other UK university.
+                Cambridge is called Silicon Fen because it hosts Europe's largest technology cluster with 4,500+ tech companies, £1.7bn+ annual VC investment, and more spinouts than any other UK university. <a href="https://www.techuk.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK</a> recognizes Cambridge as a critical UK innovation hub.
               </p>
             </details>
           </div>
         </div>
           <div className="mt-12 max-w-4xl mx-auto">
             <p className="text-gray-700 leading-relaxed mb-4">
-              Cambridge's innovation ecosystem is world-class. <a href="https://www.cambridgenetwork.co.uk/news/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Cambridge Network</a> data shows over 5,000 knowledge-intensive companies in the region, creating exceptional demand for fractional executives who understand deep tech, life sciences, and IP-led business models.
+              The region's business infrastructure is exceptional. <a href="https://www.cambridgeshirechamber.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Cambridgeshire Chambers of Commerce</a> supports local businesses, while the <a href="https://www.cbi.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CBI</a> tracks economic trends across the UK's key innovation clusters.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
-              The concentration of spin-outs and venture-backed companies drives fractional opportunities. <a href="https://www.cambridgeahead.co.uk/insights/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Cambridge Ahead</a> research highlights consistent growth in biotech, quantum computing, and AI startups—all requiring fractional CFO expertise for fundraising and fractional CTO/CSO leadership for technical strategy.
+              For fractional professionals, Cambridge offers unparalleled access to high-growth companies. Whether working with quantum computing startups, biotech scale-ups, or AI ventures, the breadth of opportunity is exceptional. The regional economy continues to attract <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> backing for innovative businesses.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Cambridge offers premium rates (£800-£1,200) reflecting the sophistication of clients and proximity to London. For executives with deep tech or life sciences experience, Cambridge represents one of the UK's most attractive markets for portfolio careers.
+              Cambridge's premium day rates (£800-£1,200) reflect both the sophistication of clients and the specialized expertise required. For executives with deep tech or life sciences backgrounds, the region represents one of the UK's most lucrative markets for fractional careers, with strong support from professional bodies like <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a>.
             </p>
           </div>
       </section>

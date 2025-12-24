@@ -30,7 +30,7 @@ export default function FractionalOperationsPage() {
             <div className="max-w-4xl">
               <span className="inline-block bg-white/20 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">Functional Leadership</span>
               <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-[0.9]">Fractional<br /><span className="text-orange-200">Operations</span></h1>
-              <p className="text-xl text-white leading-relaxed max-w-2xl mb-8">Access senior operations leadership without the full-time commitment. From COOs to Operations Directors, find the right level of expertise for your growth stage.</p>
+              <p className="text-xl text-white leading-relaxed max-w-2xl mb-8">Access senior operations leadership without the full-time commitment. From COOs to Operations Directors, find the right level of expertise for your growth stage. The <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-orange-200 underline">British Business Bank</a> highlights how flexible leadership models enable businesses to scale sustainably.</p>
               <div className="flex flex-wrap gap-4">
                 <Link href="#contact" className="px-8 py-4 bg-white/20 text-white font-bold uppercase tracking-wider hover:bg-white hover:text-orange-900 transition-colors">Find Operations Leadership</Link>
                 <Link href="/fractional-coo-services" className="px-8 py-4 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-orange-900 transition-colors">Fractional COO Services</Link>
@@ -43,7 +43,7 @@ export default function FractionalOperationsPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-black text-gray-900 mb-6">Fractional Operations Leadership</h2>
-          <p className="text-xl text-gray-600 leading-relaxed mb-6">As companies scale, operational complexity grows exponentially. The <a href="https://www.lean.org/explore-lean/what-is-lean/" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 underline">Lean Enterprise Institute</a> demonstrates how systematic operational excellence enables sustainable growth. Fractional operations leaders bring the experience to build scalable systems, processes, and teams—without the cost of a full-time executive, applying <a href="https://www.themanufacturer.com/articles/operational-excellence/" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 underline">operational excellence principles</a> proven in scaling businesses.</p>
+          <p className="text-xl text-gray-600 leading-relaxed mb-6">As companies scale, operational complexity grows exponentially. Research from the <a href="https://scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> shows that scaling businesses face unique operational challenges that require experienced leadership. Fractional operations leaders bring the experience to build scalable systems, processes, and teams—without the cost of a full-time executive. According to <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">government flexible working guidelines</a>, this model offers businesses greater agility in accessing senior talent.</p>
           <div className="grid md:grid-cols-3 gap-6 mt-10">
             {[
               { title: 'Fractional COO', description: 'C-level operations leadership for scaling and transformation.', link: '/fractional-coo-services' },
@@ -56,12 +56,14 @@ export default function FractionalOperationsPage() {
               </Link>
             ))}
           </div>
+          <p className="text-gray-600 mt-8 leading-relaxed">The <a href="https://www.bethebusiness.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Be the Business</a> research shows that productivity gains often come from experienced operations leadership. Meanwhile, <a href="https://www.makeuk.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Make UK</a> highlights the importance of operational efficiency for manufacturers and production businesses.</p>
         </div>
       </section>
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-black text-gray-900 mb-8">What Fractional Operations Leaders Do</h2>
+          <p className="text-gray-600 mb-6 leading-relaxed">From process optimisation informed by <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS labour market data</a> to team development guided by <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD people management standards</a>, fractional operations leaders deliver comprehensive operational excellence:</p>
           <div className="grid md:grid-cols-2 gap-6">
             {[
               { title: 'Process Design', description: 'Design and implement efficient, scalable operational processes.' },
@@ -77,6 +79,7 @@ export default function FractionalOperationsPage() {
               </div>
             ))}
           </div>
+          <p className="text-gray-600 mt-8 leading-relaxed">These capabilities align with professional standards set by organisations like the <a href="https://www.cmi.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Chartered Management Institute</a> and <a href="https://www.apm.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Association for Project Management</a>, ensuring best practice operational leadership across all business functions.</p>
         </div>
       </section>
 
@@ -89,7 +92,7 @@ export default function FractionalOperationsPage() {
       <section id="contact" className="py-20 bg-gray-50 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-black mb-6">Find Operations Leadership</h2>
-          <p className="text-xl text-gray-600 mb-10">Tell us about your operational challenges and we'll match you with the right fractional operations executive.</p>
+          <p className="text-xl text-gray-600 mb-10">Tell us about your operational challenges and we'll match you with the right fractional operations executive. Drawing on insights from the <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a>, we connect you with leaders who understand modern business governance and operational best practice.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/handler/sign-up" className="px-10 py-5 bg-orange-500 text-black font-bold uppercase tracking-wider hover:bg-orange-400 transition-colors">Get Started</Link>
             <Link href="/fractional-coo-services" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Learn About Fractional COOs</Link>

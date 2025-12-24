@@ -74,6 +74,7 @@ export default async function OxfordPage() {
       {/* Hero Section with 3D Knowledge Graph */}
       <section className="relative bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-900 py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/159490/yale-university-landscape-universities-schools-159490.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
           <JobsGraph3D locationFilter="oxford" limit={30} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -85,7 +86,7 @@ export default async function OxfordPage() {
               {stats.totalOxford}+ Jobs in Oxford
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
             Fractional Jobs Oxford
           </h1>
           <p className="max-w-2xl text-xl text-indigo-100 mb-10 leading-relaxed">
@@ -122,11 +123,11 @@ export default async function OxfordPage() {
             </div>
             <div>
               <div className="text-4xl font-black text-indigo-700">+35%</div>
-              <div className="text-gray-600 font-medium">AI sector growth</div>
+              <div className="text-gray-600 font-medium">AI sector growth (<a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a>)</div>
             </div>
             <div>
               <div className="text-4xl font-black text-indigo-700">£1bn+</div>
-              <div className="text-gray-600 font-medium">annual VC investment</div>
+              <div className="text-gray-600 font-medium">annual VC investment (<a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BVCA</a>)</div>
             </div>
           </div>
         </div>
@@ -137,7 +138,7 @@ export default async function OxfordPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Jobs by Oxford Area</h2>
-            <p className="text-xl text-gray-600">From the Science Park to Harwell Campus</p>
+            <p className="text-xl text-gray-600">From the Science Park to Harwell Campus, supported by <a href="https://www.oxfordshirelep.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">OxLEP</a></p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -170,21 +171,21 @@ export default async function OxfordPage() {
               <span className="text-3xl mb-4 block">🧬</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Life Sciences Leader</h3>
               <p className="text-gray-600">
-                Oxford developed the AstraZeneca vaccine and hosts Europe's largest life sciences cluster. Fractional CFOs are critical for navigating complex funding and regulatory pathways.
+                Oxford developed the AstraZeneca vaccine and hosts Europe's largest life sciences cluster. Fractional CFOs are critical for navigating complex funding and regulatory pathways, with support from the <a href="https://www.britishbusinessbank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a>.
               </p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8">
               <span className="text-3xl mb-4 block">🚀</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Space Tech Hub</h3>
               <p className="text-gray-600">
-                Harwell Campus is the UK's space tech epicentre with ESA, Satellite Applications Catapult, and 100+ space companies creating demand for tech leadership.
+                Harwell Campus is the UK's space tech epicentre with ESA, Satellite Applications Catapult, and 100+ space companies creating demand for tech leadership, supported by <a href="https://www.techuk.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK</a>.
               </p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8">
               <span className="text-3xl mb-4 block">🎓</span>
               <h3 className="text-xl font-bold text-gray-900 mb-3">200+ Spinouts</h3>
               <p className="text-gray-600">
-                Oxford University has created 200+ spinout companies valued at £13bn+. These research-led companies need experienced fractional executives to scale commercially.
+                Oxford University has created 200+ spinout companies valued at £13bn+. These research-led companies need experienced fractional executives to scale commercially, as highlighted by the <a href="https://scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a>.
               </p>
             </div>
           </div>
@@ -196,6 +197,7 @@ export default async function OxfordPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Oxford Industries</h2>
+            <p className="text-lg text-gray-600">Diverse sectors supported by the <a href="https://www.oxfordshirechamber.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Oxford Chamber of Commerce</a></p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -251,7 +253,7 @@ export default async function OxfordPage() {
                 <span className="text-indigo-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                A fractional job in Oxford is a part-time executive role working 1-3 days per week. Oxford's life sciences and deep tech clusters create exceptional demand for fractional CFOs and CTOs.
+                A fractional job in Oxford is a part-time executive role working 1-3 days per week. Oxford's life sciences and deep tech clusters create exceptional demand for fractional CFOs and CTOs. Learn more about flexible working from the <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a>.
               </p>
             </details>
 
@@ -261,7 +263,7 @@ export default async function OxfordPage() {
                 <span className="text-indigo-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                Oxford fractional executives earn £700-£1,100 per day. Life sciences and space tech specialists can earn £140,000-£220,000+ annually working with 2-4 clients.
+                Oxford fractional executives earn £700-£1,100 per day. Life sciences and space tech specialists can earn £140,000-£220,000+ annually working with 2-4 clients. For salary benchmarking, see <a href="https://www.ons.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS</a> data.
               </p>
             </details>
 
@@ -271,7 +273,7 @@ export default async function OxfordPage() {
                 <span className="text-indigo-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                Harwell Campus is the UK's leading science and innovation campus with ESA, Diamond Light Source, and 100+ space and healthcare tech companies. It's creating huge demand for fractional tech leadership.
+                Harwell Campus is the UK's leading science and innovation campus with ESA, Diamond Light Source, and 100+ space and healthcare tech companies. It's creating huge demand for fractional tech leadership, as evidenced by <a href="https://www.cbi.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CBI</a> innovation reports.
               </p>
             </details>
           </div>
@@ -290,6 +292,7 @@ export default async function OxfordPage() {
                 <li><Link href="/cfo" className="hover:text-indigo-700">Fractional CFO Jobs</Link></li>
                 <li><Link href="/cto" className="hover:text-indigo-700">Fractional CTO Jobs</Link></li>
                 <li><Link href="/cmo" className="hover:text-indigo-700">Fractional CMO Jobs</Link></li>
+                <li className="mt-3"><a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a></li>
               </ul>
             </div>
 
@@ -307,6 +310,7 @@ export default async function OxfordPage() {
               <ul className="space-y-2 text-gray-600">
                 <li><Link href="/guide" className="hover:text-indigo-700">Fractional Work Guide</Link></li>
                 <li><Link href="/fractional-executive-salary-uk" className="hover:text-indigo-700">Salary Guide</Link></li>
+                <li className="mt-3"><a href="https://www.britishchambers.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Chambers of Commerce</a></li>
               </ul>
             </div>
           </div>

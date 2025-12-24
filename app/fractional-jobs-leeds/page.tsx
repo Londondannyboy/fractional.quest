@@ -81,6 +81,7 @@ export default async function LeedsPage() {
       {/* 3D Knowledge Graph */}
       <section className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
+          <img src="https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Leeds cityscape" className="w-full h-full object-cover opacity-30" />
           <JobsGraph3D locationFilter="leeds" limit={30} height="100%" isHero={true} showOverlay={true} />
         </div>
 
@@ -93,7 +94,7 @@ export default async function LeedsPage() {
               {stats.total}+ Jobs in Yorkshire
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
             Fractional Jobs Leeds</h1>
           <img src="/logo.svg" alt="Fractional Jobs Leeds - Executive roles in Yorkshire" className="hidden" width={1} height={1} />
           
@@ -159,7 +160,7 @@ export default async function LeedsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Yorkshire Industries</h2>
-            <p className="text-xl text-gray-600">Key sectors hiring fractional executives</p>
+            <p className="text-xl text-gray-600">Key sectors hiring fractional executives. The <a href="https://www.cbi.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CBI</a> reports strong economic performance across these Yorkshire sectors.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {yorkshireIndustries.map((industry) => (
@@ -186,7 +187,7 @@ export default async function LeedsPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Legal & Financial Hub</h3>
               <p className="text-gray-600">
-                Leeds has the UK's largest legal sector outside London and a thriving financial services community.
+                Leeds has the UK's largest legal sector outside London and a thriving financial services community. The <a href="https://www.westyorks-ca.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">West Yorkshire Combined Authority</a> supports growth across professional services.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-sm">
@@ -195,7 +196,7 @@ export default async function LeedsPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Digital Growth</h3>
               <p className="text-gray-600">
-                Leeds Digital Hub is one of the UK's fastest-growing tech clusters, with 20% YoY growth in fractional tech roles.
+                Leeds Digital Hub is one of the UK's fastest-growing tech clusters, with 20% YoY growth in fractional tech roles. <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a> recognizes Yorkshire as a key UK tech hub.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-sm">
@@ -211,13 +212,13 @@ export default async function LeedsPage() {
         </div>
           <div className="mt-12 max-w-4xl mx-auto">
             <p className="text-gray-700 leading-relaxed mb-4">
-              Leeds has emerged as the UK's fastest-growing regional economy. <a href="https://www.the-lep.com/about/research-and-data/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Leeds City Region Enterprise Partnership</a> data shows GVA growth of 22% over five years, outpacing most UK cities. The concentration of legal, financial services, and digital firms creates exceptional demand for fractional CFO, COO, and compliance expertise.
+              Leeds has emerged as the UK's fastest-growing regional economy. <a href="https://www.the-lep.com/about/research-and-data/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Leeds City Region Enterprise Partnership</a> data shows GVA growth of 22% over five years, outpacing most UK cities. The concentration of legal, financial services, and digital firms creates exceptional demand for fractional CFO, COO, and compliance expertise. The <a href="https://www.britishchambers.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Chambers of Commerce</a> reports strong business confidence across the region.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
-              The city's tech sector particularly drives fractional opportunities. <a href="https://leedsdigitalfestival.org" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Leeds Digital Festival</a> represents one of the UK's largest tech communities, with over 3,000 digital businesses requiring technical leadership. The rise of cyber security and fintech companies adds demand for fractional CTO and CISO roles.
+              The city's tech sector particularly drives fractional opportunities. <a href="https://leedsdigitalfestival.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Leeds Digital Festival</a> represents one of the UK's largest tech communities, with over 3,000 digital businesses requiring technical leadership. The rise of cyber security and fintech companies adds demand for fractional CTO and CISO roles. <a href="https://www.techuk.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK</a> actively supports the region's growing tech ecosystem.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Leeds offers strong value for fractional executives: competitive day rates (£700-£1,100) combined with Yorkshire's quality of life. <a href="https://www.yorkshirepost.co.uk/business" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">Yorkshire Post business coverage</a> highlights continued investment in professional services and advanced manufacturing—sectors that value experienced fractional leadership.
+              Leeds offers strong value for fractional executives: competitive day rates (£700-£1,100) combined with Yorkshire's quality of life. <a href="https://www.yorkshirepost.co.uk/business" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Yorkshire Post business coverage</a> highlights continued investment in professional services and advanced manufacturing—sectors that value experienced fractional leadership. According to <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS regional employment data</a>, Yorkshire shows robust job growth in professional and technical occupations.
             </p>
           </div>
       </section>
@@ -265,7 +266,7 @@ export default async function LeedsPage() {
                 <span className="text-purple-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600">
-                Leeds fractional executives typically earn £600-£1,000 per day. Legal and financial services roles command premium rates, often comparable to Birmingham levels.
+                Leeds fractional executives typically earn £600-£1,000 per day. Legal and financial services roles command premium rates, often comparable to Birmingham levels. The <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> provides insights on executive compensation trends across the UK.
               </p>
             </details>
             <details className="group bg-white rounded-xl p-6 cursor-pointer">
@@ -274,7 +275,7 @@ export default async function LeedsPage() {
                 <span className="text-purple-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600">
-                Yes - Leeds Digital Hub is thriving with 20% YoY growth in fractional tech positions. Companies like Sky Betting, NHS Digital, and numerous scale-ups hire fractional CTOs and tech leaders.
+                Yes - Leeds Digital Hub is thriving with 20% YoY growth in fractional tech positions. Companies like Sky Betting, NHS Digital, and numerous scale-ups hire fractional CTOs and tech leaders. The <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> highlights Yorkshire's strong scale-up community requiring flexible leadership.
               </p>
             </details>
             <details className="group bg-white rounded-xl p-6 cursor-pointer">
@@ -283,7 +284,7 @@ export default async function LeedsPage() {
                 <span className="text-purple-700 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <p className="mt-4 text-gray-600">
-                Absolutely. Leeds is just 2hr 15min from London by train. Many fractional executives maintain a mixed client base, leveraging Leeds' lower costs while accessing London opportunities.
+                Absolutely. Leeds is just 2hr 15min from London by train. Many fractional executives maintain a mixed client base, leveraging Leeds' lower costs while accessing London opportunities. The <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> supports directors across Yorkshire with networking and professional development.
               </p>
             </details>
           </div>
@@ -315,7 +316,7 @@ export default async function LeedsPage() {
             Ready to Work in Yorkshire?
           </h2>
           <p className="text-xl text-purple-100 mb-10">
-            {stats.total}+ fractional opportunities across Leeds, Sheffield, and York
+            {stats.total}+ fractional opportunities across Leeds, Sheffield, and York. The <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> continues investing in Yorkshire SMEs creating demand for fractional expertise.
           </p>
           <Link
             href="/fractional-jobs?location=Leeds"

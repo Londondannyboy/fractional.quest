@@ -46,6 +46,9 @@ export default async function PartTimeHRJobsUKPage() {
     <div className="min-h-screen bg-white">
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920)' }}>
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
         <div className="absolute inset-0">
           <JobsGraph3D categoryFilter="HR" limit={25} height="100%" isHero={true} showOverlay={true} />
         </div>
@@ -58,7 +61,7 @@ export default async function PartTimeHRJobsUKPage() {
               <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Job Board
               </span>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Part-Time<br />
                 <span className="text-pink-400">HR Jobs UK</span>
               </h1>
@@ -120,25 +123,40 @@ export default async function PartTimeHRJobsUKPage() {
           <div className="prose prose-lg prose-pink max-w-none">
             <h2>Finding Part-Time HR Jobs in the UK</h2>
             <p>
-              The UK market for <strong>part-time HR jobs</strong> has grown significantly, with more experienced HR professionals choosing flexible working arrangements. Whether you're seeking a fractional HR Director role or a part-time CHRO position, the opportunities are increasingly diverse.
+              The UK market for <strong>part-time HR jobs</strong> has grown significantly, with more experienced HR professionals choosing <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a>. Whether you're seeking a fractional HR Director role or a part-time CHRO position supported by <a href="https://www.cipd.org/uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD professional standards</a>, the opportunities are increasingly diverse.
             </p>
 
             <h3>Types of Part-Time HR Roles Available</h3>
             <ul>
-              <li><strong>Part-Time HR Director:</strong> 1-3 days/week, £900-£1,100/day, building and leading HR functions</li>
+              <li><strong>Part-Time HR Director:</strong> 1-3 days/week, £900-£1,100/day, building and leading HR functions in line with <a href="https://www.gov.uk/browse/employing-people" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK employment legislation</a></li>
               <li><strong>Part-Time CHRO:</strong> 2-3 days/week, £1,100-£1,300/day, board-level people leadership</li>
               <li><strong>Part-Time People Partner:</strong> 1-2 days/week, £600-£850/day, hands-on HR support</li>
-              <li><strong>Part-Time HR Consultant:</strong> Project-based, £700-£950/day, specialist expertise</li>
+              <li><strong>Part-Time HR Consultant:</strong> Project-based, £700-£950/day, specialist expertise aligned with <a href="https://www.acas.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACAS best practices</a></li>
             </ul>
 
             <h3>Industries Hiring Part-Time HR</h3>
             <p>Part-time HR roles are particularly common in:</p>
             <ul>
-              <li><strong>Tech & SaaS:</strong> Scale-ups needing senior HR for rapid growth</li>
-              <li><strong>VC/PE-backed companies:</strong> Portfolio companies with professional HR requirements</li>
+              <li><strong>Tech & SaaS:</strong> <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Scale-ups</a> needing senior HR for rapid growth</li>
+              <li><strong>VC/PE-backed companies:</strong> <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Portfolio companies</a> with professional HR requirements</li>
               <li><strong>Financial services:</strong> Regulated industries needing compliance expertise</li>
-              <li><strong>Healthcare:</strong> Growing sector with specific HR challenges</li>
+              <li><strong>Healthcare:</strong> Growing sector with specific HR challenges informed by <a href="https://www.ons.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS employment data</a></li>
             </ul>
+
+            <h3>Why Companies Hire Part-Time HR Professionals</h3>
+            <p>
+              Many UK businesses are turning to part-time HR leadership as a cost-effective solution. <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> research shows that flexible HR arrangements allow companies to access senior expertise without the full-time overhead, particularly beneficial for organizations navigating complex <a href="https://www.gov.uk/browse/employing-people" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">employment regulations</a>.
+            </p>
+
+            <h3>Professional Development for Part-Time HR Roles</h3>
+            <p>
+              Maintaining your professional credentials is essential. The <a href="https://www.cipd.org/uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> offers resources specifically for HR professionals working in fractional or part-time capacities. Additionally, staying current with <a href="https://www.shrm.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">SHRM best practices</a> can enhance your value proposition to UK clients.
+            </p>
+
+            <h3>The Self-Employed HR Market</h3>
+            <p>
+              Many part-time HR professionals operate as self-employed consultants. <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IPSE (Association of Independent Professionals and the Self-Employed)</a> provides guidance on navigating the freelance HR landscape, including IR35 considerations and contract best practices.
+            </p>
           </div>
         </div>
       </section>

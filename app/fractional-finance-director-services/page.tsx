@@ -25,19 +25,19 @@ export const metadata: Metadata = {
 const FD_FAQS = [
   {
     question: 'What is a Fractional Finance Director?',
-    answer: 'A Fractional FD is a qualified accountant and experienced finance leader who manages your company\'s finances part-time. They are more operationally focused than a CFO, handling day-to-day financial management, reporting, and cash flow.',
+    answer: 'A Fractional FD is a qualified accountant and experienced finance leader who manages your company\'s finances part-time. They are more operationally focused than a CFO, handling day-to-day financial management, reporting, and cash flow. Most hold <a href="https://www.accaglobal.com/uk/en/member.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ACCA</a> or similar professional qualifications.',
   },
   {
     question: 'Who needs a Fractional FD?',
-    answer: 'SMEs with turnover between £2m and £10m often need more than a bookkeeper but can\'t afford a full-time FD. A fractional FD provides the necessary oversight and strategic input to keep the business financially healthy.',
+    answer: 'SMEs with turnover between £2m and £10m often need more than a bookkeeper but can\'t afford a full-time FD. A fractional FD provides the necessary oversight and strategic input to keep the business financially healthy. This is particularly important for <a href="https://www.scaleupinstitute.org.uk/what-is-a-scaleup/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scaleup businesses</a> seeking growth capital.',
   },
   {
     question: 'How much does a Fractional FD cost?',
-    answer: 'Fractional FD rates are typically £600-£1,000 per day. This is significantly less than a full-time salary, and you only pay for the days you need (e.g., 2-4 days per month).',
+    answer: 'Fractional FD rates are typically £600-£1,000 per day. This is significantly less than a full-time salary, and you only pay for the days you need (e.g., 2-4 days per month). Understanding <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a> can help structure the engagement effectively.',
   },
   {
     question: 'What is the difference between an FD and a Financial Controller?',
-    answer: 'A Controller looks backward (accounting accuracy). An FD looks forward (forecasting and strategy). An FD also manages external relationships with banks, auditors, and investors.',
+    answer: 'A Controller looks backward (accounting accuracy). An FD looks forward (forecasting and strategy). An FD also manages external relationships with banks, auditors, and investors. The <a href="https://www.iod.com/news/news/articles/what-is-a-finance-director/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD provides guidance</a> on the strategic role of finance directors.',
   },
 ]
 
@@ -69,7 +69,7 @@ export default function FractionalFinanceDirectorServicesPage() {
               </h1>
               <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mb-8">
                 Hire a <strong className="text-white">Fractional Finance Director</strong> to control your cash.
-                Operational rigour, accurate reporting, and financial stability—at a flexible cost.
+                Operational rigour, accurate reporting, and financial stability—at a flexible cost. Track key metrics with <a href="https://www.ons.gov.uk/businessindustryandtrade/business" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/90 underline">ONS business data</a> insights.
               </p>
               <div className="flex flex-wrap gap-8 mb-10">
                 <div>
@@ -107,10 +107,10 @@ export default function FractionalFinanceDirectorServicesPage() {
           </div>
           <div className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              A <strong className="font-semibold text-gray-900">Fractional Finance Director</strong> is the financial conscience of your business. They work with you part-time to ensure your financial house is in order. From producing reliable management accounts to managing cash flow and dealing with the bank, they provide the operational grip that allows the business to scale safely.
+              A <strong className="font-semibold text-gray-900">Fractional Finance Director</strong> is the financial conscience of your business. They work with you part-time to ensure your financial house is in order. From producing reliable management accounts to managing cash flow and dealing with the bank, they provide the operational grip that allows the business to scale safely. Many <a href="https://www.icaew.com/membership/regulations-standards-and-guidance" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ICAEW-qualified accountants</a> serve in this role.
             </p>
             <p>
-              For many UK SMEs, this is the most critical hire after the initial founding team. It professionalises the business and prepares it for future growth or investment.
+              For many UK SMEs, this is the most critical hire after the initial founding team. It professionalises the business and prepares it for future growth or investment. Access to <a href="https://www.gov.uk/business-finance-support" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">business finance support</a> often requires robust financial reporting that a fractional FD can provide. Companies seeking venture capital should familiarize themselves with <a href="https://www.bvca.co.uk/policy/guidance-for-entrepreneurs" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BVCA guidance for entrepreneurs</a>.
             </p>
           </div>
         </div>
@@ -127,32 +127,56 @@ export default function FractionalFinanceDirectorServicesPage() {
             {[
               {
                 title: 'Management Accounts',
-                description: 'Producing accurate, timely monthly board packs that explain what the numbers actually mean.',
+                description: (
+                  <>
+                    Producing accurate, timely monthly board packs that explain what the numbers actually mean. Following <a href="https://www.frc.org.uk/library/standards-codes-policy/corporate-governance/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FRC corporate governance standards</a>.
+                  </>
+                ),
                 icon: '📊',
               },
               {
                 title: 'Cash Flow Forecasting',
-                description: 'Building robust 13-week cash flow forecasts to prevent surprises and manage working capital.',
+                description: (
+                  <>
+                    Building robust 13-week cash flow forecasts to prevent surprises and manage working capital. Learn more from the <a href="https://www.british-business-bank.co.uk/finance-hub/cash-flow-management/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a>.
+                  </>
+                ),
                 icon: '💷',
               },
               {
                 title: 'Budgeting',
-                description: 'Setting annual budgets and tracking performance against them. Identifying variances early.',
+                description: (
+                  <>
+                    Setting annual budgets and tracking performance against them. Identifying variances early. Essential skills taught by <a href="https://www.cimaglobal.com/qualifications/cima-professional-qualification/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIMA-qualified professionals</a>.
+                  </>
+                ),
                 icon: '📉',
               },
               {
                 title: 'Compliance',
-                description: 'Ensuring all statutory obligations (VAT, PAYE, Annual Accounts) are met on time and accurately.',
+                description: (
+                  <>
+                    Ensuring all statutory obligations (VAT, PAYE, Annual Accounts) are met on time and accurately. Stay compliant with <a href="https://www.gov.uk/government/organisations/hm-revenue-customs" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">HMRC requirements</a>.
+                  </>
+                ),
                 icon: '✅',
               },
               {
                 title: 'Systems & Process',
-                description: 'Implementing modern finance tools (Xero, Pleo, etc.) to automate manual work and reduce errors.',
+                description: (
+                  <>
+                    Implementing modern finance tools (Xero, Pleo, etc.) to automate manual work and reduce errors. Aligning with <a href="https://www.cipd.org/uk/knowledge/guides/hr-systems-technology/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD technology guidance</a>.
+                  </>
+                ),
                 icon: '⚙️',
               },
               {
                 title: 'Bank Relationships',
-                description: 'Managing relationships with lenders and securing necessary facilities like invoice finance or loans.',
+                description: (
+                  <>
+                    Managing relationships with lenders and securing necessary facilities like invoice finance or loans. Essential for accessing <a href="https://www.british-business-bank.co.uk/finance-hub/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">growth capital</a>.
+                  </>
+                ),
                 icon: '🏦',
               },
             ].map((item, index) => (

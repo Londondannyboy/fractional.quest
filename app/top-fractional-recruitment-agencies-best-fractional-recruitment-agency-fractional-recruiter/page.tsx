@@ -32,7 +32,12 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
       {/* Editorial Hero with 3D Knowledge Graph Background */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <JobsGraph3D limit={30} height="100%" isHero={true} showOverlay={true} />
+          <img
+            src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Recruitment"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
 
         {/* Hero Content */}
@@ -49,7 +54,7 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
                   Launching January 2025
                 </span>
 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-[0.95] tracking-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[0.95] tracking-tight">
                   Fractional Recruitment Agency
                   <span className="block text-amber-400"> - Done Differently</span>
                 </h1>

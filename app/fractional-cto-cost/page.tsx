@@ -23,21 +23,23 @@ export const metadata: Metadata = {
 export default function FractionalCTOCostPage() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+      <section className="py-20 md:py-28 bg-white relative">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10">
           <Link href="/fractional-cto" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-8 transition-colors text-sm tracking-wide">
             <span className="mr-2">←</span> Back to CTO Hub
           </Link>
           <div className="mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Pricing Guide</span>
-            <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Fractional CTO Cost UK</h1>
+            <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">Fractional CTO Cost UK</h1>
             <p className="text-xl text-gray-600">Complete 2025 pricing guide for hiring a fractional CTO</p>
           </div>
 
           <div className="bg-blue-50 border-l-4 border-blue-600 p-8 mb-12">
             <div className="prose prose-lg max-w-none">
               <p className="text-2xl font-light text-gray-900 leading-relaxed mb-0">
-                Hiring a Fractional CTO in the UK costs <strong className="font-bold">£85,000-£160,000 annually</strong> for 1-2 days per week, compared to <strong>£250,000-£350,000+ total cost</strong> (salary, benefits, equity) for full-time. You save 50-60% while accessing senior expertise (15-20+ years experience).
+                Hiring a Fractional CTO in the UK costs <strong className="font-bold">£85,000-£160,000 annually</strong> for 1-2 days per week, compared to <strong>£250,000-£350,000+ total cost</strong> (salary, benefits, equity) for full-time. You save 50-60% while accessing senior expertise (15-20+ years experience). This flexible approach aligns with modern <a href="https://www.cipd.org/uk/views-and-insights/thought-leadership/insight/flexible-working-lessons/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working practices</a> advocated by CIPD.
               </p>
             </div>
           </div>
@@ -79,7 +81,7 @@ export default function FractionalCTOCostPage() {
                 <p className="text-gray-700 mb-3">
                   <strong>Cost:</strong> £1,700-£3,200/week | £7k-£13k/month | £85k-£160k/year
                 </p>
-                <p className="text-gray-600 text-sm mb-0"><strong>Best for:</strong> Growing engineering teams (5-15 engineers), active hiring, architecture evolution, and ongoing technical leadership.</p>
+                <p className="text-gray-600 text-sm mb-0"><strong>Best for:</strong> Growing engineering teams (5-15 engineers), active hiring, architecture evolution, and ongoing technical leadership. This aligns with <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD guidance</a> on executive leadership structures.</p>
               </div>
 
               <div className="bg-gray-50 p-6 border-l-4 border-blue-500">
@@ -110,13 +112,13 @@ export default function FractionalCTOCostPage() {
                   </tr>
                   <tr className="border-b bg-gray-50">
                     <td className="p-4 font-semibold">Employer NI (13.8%)</td>
-                    <td className="p-4 bg-blue-50">£0 (contractor)</td>
+                    <td className="p-4 bg-blue-50">£0 (contractor, subject to <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35 rules</a>)</td>
                     <td className="p-4">£25k-£35k</td>
                   </tr>
                   <tr className="border-b">
                     <td className="p-4 font-semibold">Pension (5-10%)</td>
                     <td className="p-4 bg-blue-50">£0</td>
-                    <td className="p-4">£9k-£25k</td>
+                    <td className="p-4">£9k-£25k (see <a href="https://www.gov.uk/workplace-pensions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">workplace pension requirements</a>)</td>
                   </tr>
                   <tr className="border-b bg-gray-50">
                     <td className="p-4 font-semibold">Benefits (health, life)</td>
@@ -174,11 +176,11 @@ export default function FractionalCTOCostPage() {
 
             <ul className="space-y-3">
               <li><strong>Experience Level:</strong> 10-15 years (£850-£1,200/day) vs 20+ years with exits (£1,400-£1,600/day)</li>
-              <li><strong>Days Per Week:</strong> 1 day/week (£42k-£80k/year) vs 2-3 days/week (£85k-£240k/year)</li>
+              <li><strong>Days Per Week:</strong> 1 day/week (£42k-£80k/year) vs 2-3 days/week (£85k-£240k/year), with <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a></li>
               <li><strong>Specialization:</strong> Generalist CTO vs specialist (AI/ML, Security, FinTech) = +15-30%</li>
-              <li><strong>Location:</strong> London/South East +15-20% premium vs regional UK rates</li>
-              <li><strong>Industry:</strong> FinTech, HealthTech, regulated sectors pay 15-25% more</li>
-              <li><strong>Engagement Type:</strong> Day rate, monthly retainer, or project-based pricing</li>
+              <li><strong>Location:</strong> London/South East +15-20% premium vs regional UK rates, according to <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS salary data</a></li>
+              <li><strong>Industry:</strong> FinTech, HealthTech, regulated sectors pay 15-25% more, as reflected in <a href="https://www.techuk.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">techUK industry reports</a></li>
+              <li><strong>Engagement Type:</strong> Day rate, monthly retainer, or project-based pricing, following <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IPSE contractor guidelines</a></li>
             </ul>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-6">Return on Investment (ROI)</h3>
@@ -190,7 +192,7 @@ export default function FractionalCTOCostPage() {
             <div className="space-y-6 my-10">
               <div className="bg-gray-50 p-6">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">💰 Fundraising Success</h4>
-                <p className="text-gray-600 mb-0">Fractional CTOs help companies raise £2M-£20M+ by providing technical credibility, handling due diligence, and articulating technology strategy to investors. Investment: £50k-£100k for 6-12 months. Return: £2M-£20M raised.</p>
+                <p className="text-gray-600 mb-0">Fractional CTOs help companies raise £2M-£20M+ by providing technical credibility, handling due diligence, and articulating technology strategy to investors. Investment: £50k-£100k for 6-12 months. Return: £2M-£20M raised. <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> research shows technical leadership is crucial for funding success.</p>
               </div>
 
               <div className="bg-gray-50 p-6">
@@ -200,12 +202,12 @@ export default function FractionalCTOCostPage() {
 
               <div className="bg-gray-50 p-6">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">📈 Team Velocity</h4>
-                <p className="text-gray-600 mb-0">Proper technical leadership increases engineering velocity 30-50% through better processes, architecture, and decision-making. This accelerates time-to-market and revenue growth.</p>
+                <p className="text-gray-600 mb-0">Proper technical leadership increases engineering velocity 30-50% through better processes, architecture, and decision-making. This accelerates time-to-market and revenue growth. <a href="https://www.cipd.org/uk/knowledge/reports/people-profession-2024/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD research</a> demonstrates the impact of leadership on team performance.</p>
               </div>
 
               <div className="bg-gray-50 p-6">
                 <h4 className="text-lg font-bold text-gray-900 mb-2">🎯 Hiring Efficiency</h4>
-                <p className="text-gray-600 mb-0">Fractional CTOs hire better engineers faster—saving 2-3 months per hire × £80k-£120k salary = £160k-£240k in avoided hiring mistakes and faster team growth.</p>
+                <p className="text-gray-600 mb-0">Fractional CTOs hire better engineers faster—saving 2-3 months per hire × £80k-£120k salary = £160k-£240k in avoided hiring mistakes and faster team growth. Technical recruitment expertise is essential as highlighted by <a href="https://www.bcs.org/membership-and-registrations/get-registered/professional-registration-for-it-technicians/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BCS professional standards</a>.</p>
               </div>
             </div>
 
@@ -214,7 +216,7 @@ export default function FractionalCTOCostPage() {
             <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">
               <p className="text-lg font-semibold text-gray-900 mb-3">✅ Fractional CTO is cost-effective when:</p>
               <ul className="space-y-2 text-gray-700 mb-0">
-                <li>• Your revenue is £1M-£20M (can't justify £250k+ full-time cost)</li>
+                <li>• Your revenue is £1M-£20M (can't justify £250k+ full-time cost), typical of <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">scaleup companies</a></li>
                 <li>• You have 5-20 engineers (need CTO expertise, but not 40 hours weekly)</li>
                 <li>• You need strategic leadership more than daily operational management</li>
                 <li>• You're preparing for fundraising, audit, or major technical initiative</li>
@@ -228,7 +230,7 @@ export default function FractionalCTOCostPage() {
                 <li>• Revenue exceeds £20M with 25+ engineers</li>
                 <li>• You need daily hands-on leadership and operational management</li>
                 <li>• You're facing constant technical crises requiring daily attention</li>
-                <li>• Your technology is your core competitive advantage (deep tech, AI, etc.)</li>
+                <li>• Your technology is your core competitive advantage (deep tech, AI, etc.), especially in sectors tracked by <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Tech Nation</a></li>
                 <li>• You can offer meaningful equity (1-2%) to attract top talent</li>
               </ul>
             </div>
@@ -248,7 +250,7 @@ export default function FractionalCTOCostPage() {
                 </li>
                 <li>
                   <strong>3. Start Small, Scale Up:</strong>
-                  <p className="text-sm mt-1">Begin with 1 day/week for 3 months (£10k-£20k pilot). Scale to 2-3 days if needed.</p>
+                  <p className="text-sm mt-1">Begin with 1 day/week for 3 months (£10k-£20k pilot). Scale to 2-3 days if needed. This phased approach is recommended in <a href="https://www.scaleupinstitute.org.uk/scaleup-programmes/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute guidance</a> for growing businesses.</p>
                 </li>
                 <li>
                   <strong>4. Build In Flexibility:</strong>

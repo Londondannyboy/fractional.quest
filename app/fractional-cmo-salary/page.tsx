@@ -43,10 +43,11 @@ export default function FractionalCmoSalaryPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-purple-900 to-purple-800 py-20">
-        <div className="max-w-4xl mx-auto px-4">
+      <section className="relative bg-gradient-to-br from-purple-900 to-purple-800 py-20">
+        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: 'url(https://images.pexels.com/photos/7413891/pexels-photo-7413891.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+        <div className="relative max-w-4xl mx-auto px-4">
           <Link href="/" className="text-purple-200 hover:text-gray-900 mb-6 inline-block">← Back to Home</Link>
-          <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">Fractional CMO Salary UK 2025</h1>
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Fractional CMO Salary UK 2025</h1>
           <p className="text-xl text-purple-100 mb-8">
             Complete guide to fractional CMO pay rates, day rates, and annual earnings in the UK market.
           </p>
@@ -97,10 +98,10 @@ export default function FractionalCmoSalaryPage() {
           <div className="prose prose-lg prose-purple mb-12">
             <h2>Fractional CMO Salary Overview</h2>
             <p>
-              <strong>Fractional CMO salary</strong> in the UK varies based on experience, specialisation, location, and the types of clients you work with. Unlike <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/latest" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">traditional full-time CMO roles</a> with annual salaries of £100,000-£180,000, fractional CMOs charge day rates—typically £700 to £1,400 per day in 2025.
+              <strong>Fractional CMO salary</strong> in the UK varies based on experience, specialisation, location, and the types of clients you work with. Unlike <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/latest" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">traditional full-time CMO roles</a> with annual salaries of £100,000-£180,000, fractional CMOs charge day rates—typically £700 to £1,400 per day in 2025. As <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">self-employed professionals</a>, many fractional CMOs structure their businesses to optimize earnings.
             </p>
             <p>
-              The <strong>fractional CMO UK salary</strong> model often delivers higher total compensation than full-time equivalents. A fractional CMO working with 2-3 clients at 2 days each can earn £150,000-£200,000 annually while maintaining flexibility and variety that full-time roles don't offer. Most fractional CMOs operate as <a href="https://www.gov.uk/working-for-yourself" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">self-employed professionals</a> or through limited companies.
+              The <strong>fractional CMO UK salary</strong> model often delivers higher total compensation than full-time equivalents. A fractional CMO working with 2-3 clients at 2 days each can earn £150,000-£200,000 annually while maintaining flexibility and variety that full-time roles don't offer. Most fractional CMOs operate as <a href="https://www.gov.uk/working-for-yourself" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 underline">self-employed professionals</a> or through limited companies, and understanding <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IR35 tax regulations</a> is crucial for compliance.
             </p>
           </div>
 
@@ -129,7 +130,7 @@ export default function FractionalCmoSalaryPage() {
                 </tbody>
               </table>
             </div>
-            <p className="text-gray-600 text-sm mt-4">*Annual estimates based on 155 billable days per year</p>
+            <p className="text-gray-600 text-sm mt-4">*Annual estimates based on 155 billable days per year. For benchmarking, consult <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD professional guidance</a> on director-level compensation.</p>
           </div>
 
           {/* By Location */}
@@ -180,25 +181,26 @@ export default function FractionalCmoSalaryPage() {
                 </tbody>
               </table>
             </div>
+            <p className="text-gray-600 text-sm mt-4">Industries with high growth potential often benefit from <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> supported ventures, creating more opportunities for fractional leadership.</p>
           </div>
 
           <div className="prose prose-lg prose-purple">
             <h2>What Affects Fractional CMO Salary?</h2>
-            <p>Several factors influence <strong>fractional CMO earnings</strong>:</p>
+            <p>Several factors influence <strong>fractional CMO earnings</strong>, according to <a href="https://www.cipd.org/uk/knowledge/reports/reward-management-surveys/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD salary research</a>:</p>
             <ul>
-              <li><strong>B2B vs B2C experience</strong> - B2B SaaS expertise commands highest rates due to demand</li>
+              <li><strong>B2B vs B2C experience</strong> - B2B SaaS expertise commands highest rates due to demand, especially in sectors supported by <a href="https://www.british-business-bank.co.uk/supporting-business-growth/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">growth-focused initiatives</a></li>
               <li><strong>Track record</strong> - Proven results (pipeline growth, CAC reduction) add 15-25% premium</li>
-              <li><strong>Industry specialisation</strong> - Deep vertical expertise (FinTech, HealthTech) pays more</li>
-              <li><strong>Channel expertise</strong> - Performance marketing, PLG, or brand specialists earn premium rates</li>
+              <li><strong>Industry specialisation</strong> - Deep vertical expertise (FinTech, HealthTech) pays more, with <a href="https://www.cim.co.uk/qualifications/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIM professional qualifications</a> adding credibility</li>
+              <li><strong>Channel expertise</strong> - Performance marketing, PLG, or brand specialists earn premium rates, particularly those certified by industry bodies like the <a href="https://ipa.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IPA</a></li>
               <li><strong>Team size managed</strong> - Experience scaling teams adds to your value proposition</li>
             </ul>
 
             <h2>Fractional CMO vs Full-Time CMO Salary</h2>
             <p>
-              A full-time CMO at a Series A/B startup typically earns £120,000-£160,000 plus equity. A <strong>fractional CMO</strong> earning £1,000/day for 150 days achieves £150,000—comparable cash with more flexibility. The trade-off is equity: full-time roles often include meaningful stock options that fractional arrangements typically don't.
+              A full-time CMO at a Series A/B startup typically earns £120,000-£160,000 plus equity. A <strong>fractional CMO</strong> earning £1,000/day for 150 days achieves £150,000—comparable cash with more flexibility. The trade-off is equity: full-time roles often include meaningful stock options that fractional arrangements typically don't. Many fractional professionals benefit from <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working arrangements</a> that enable better work-life balance.
             </p>
             <p>
-              However, fractional CMOs can mitigate this by negotiating advisory equity or working with multiple companies, diversifying their portfolio exposure while maintaining higher cash compensation.
+              However, fractional CMOs can mitigate this by negotiating advisory equity or working with multiple companies, diversifying their portfolio exposure while maintaining higher cash compensation. This model is increasingly popular among <a href="https://scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp companies</a> seeking experienced leadership without full-time commitment.
             </p>
           </div>
         </div>

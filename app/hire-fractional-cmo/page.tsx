@@ -123,7 +123,7 @@ export default function HireFractionalCMOPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Sourcing</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Where to Find Fractional CMOs</h2>
             <p className="text-xl text-gray-600">
-              Five proven channels for finding pre-vetted, experienced fractional marketing leaders.
+              Five proven channels for finding pre-vetted, experienced fractional marketing leaders. The <a href="https://www.cim.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Chartered Institute of Marketing</a> highlights the growing demand for flexible marketing leadership in the UK market.
             </p>
           </div>
 
@@ -192,7 +192,7 @@ export default function HireFractionalCMOPage() {
             <p className="text-lg text-gray-900">
               <strong>Pro Tip:</strong> Use multiple channels in parallel. Post on job boards while asking for referrals.
               The best fractional CMOs are often working with 2-3 companies and may not be actively looking—referrals help
-              you reach them.
+              you reach them. <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Flexible working arrangements</a> like fractional roles are increasingly recognized as strategic hiring models.
             </p>
           </div>
         </div>
@@ -205,7 +205,7 @@ export default function HireFractionalCMOPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Evaluation Criteria</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">What to Look For in a Fractional CMO</h2>
             <p className="text-xl text-gray-600 max-w-3xl">
-              Not all experienced marketers make good fractional CMOs. Here's what separates the best from the rest.
+              Not all experienced marketers make good fractional CMOs. Here's what separates the best from the rest. According to the <a href="https://www.ipa.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Practitioners in Advertising</a>, senior marketing leaders need both strategic vision and operational expertise.
             </p>
           </div>
 
@@ -213,13 +213,13 @@ export default function HireFractionalCMOPage() {
             {[
               {
                 criteria: 'Relevant Industry & Stage Experience',
-                description: 'Have they scaled companies at your stage? A CMO who took a Series D company from £50M to £200M won\'t know how to build 0-to-1 demand gen at a pre-seed startup. Look for experience scaling companies from £1M to £10M ARR if that\'s where you are.',
+                description: 'Have they scaled companies at your stage? A CMO who took a Series D company from £50M to £200M won\'t know how to build 0-to-1 demand gen at a pre-seed startup. Look for experience scaling companies from £1M to £10M ARR if that\'s where you are. The <a href="https://scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> reports that growing companies need marketing leaders who understand their specific growth phase.',
                 lookFor: 'Portfolio of 3-5 similar companies, measurable growth metrics, knowledge of your GTM motion',
                 redFlag: 'Only worked at big brands or only at tiny startups (if you\'re mid-market)',
               },
               {
                 criteria: 'Channel & Tactical Expertise',
-                description: 'Do they know the channels that matter for your business? A brand marketing expert won\'t help you build PLG or performance marketing. Ensure their channel expertise matches your needs.',
+                description: 'Do they know the channels that matter for your business? A brand marketing expert won\'t help you build PLG or performance marketing. Ensure their channel expertise matches your needs. The <a href="https://dma.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Data & Marketing Association</a> emphasizes the importance of multi-channel marketing expertise.',
                 lookFor: 'Deep knowledge of 2-3 core channels, proven ability to drive pipeline/revenue, hands-on execution experience',
                 redFlag: 'Generalist who hasn\'t specialized in any channel or GTM motion',
               },
@@ -231,13 +231,13 @@ export default function HireFractionalCMOPage() {
               },
               {
                 criteria: 'Team Leadership Experience',
-                description: 'Have they built and led marketing teams? A fractional CMO needs to hire, mentor, and manage people—not just execute tactics themselves. They should have hired at least 5-10 marketers and managed teams of 3-15 people.',
+                description: 'Have they built and led marketing teams? A fractional CMO needs to hire, mentor, and manage people—not just execute tactics themselves. They should have hired at least 5-10 marketers and managed teams of 3-15 people. The <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> highlights that effective people management is critical for senior leadership roles.',
                 lookFor: 'Built teams from scratch, hiring process expertise, coaching/mentorship stories, structured 1-on-1s',
                 redFlag: 'Never managed people or only managed 1-2 direct reports',
               },
               {
                 criteria: 'Strategic Thinking & Decision-Making',
-                description: 'Can they make hard prioritization calls? Great CMOs say "no" to good ideas because better ones exist. They should be able to build a strategy, allocate budgets, and justify decisions with data and logic.',
+                description: 'Can they make hard prioritization calls? Great CMOs say "no" to good ideas because better ones exist. They should be able to build a strategy, allocate budgets, and justify decisions with data and logic. <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> research shows strategic decision-making is a core competency for C-suite executives.',
                 lookFor: 'Clear POV on what won\'t work, frameworks for prioritization, comfort with ambiguity',
                 redFlag: 'Says "yes" to everything or can\'t explain why they\'d prioritize X over Y',
               },
@@ -278,7 +278,7 @@ export default function HireFractionalCMOPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Interview Guide</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Interview Questions to Ask</h2>
             <p className="text-xl text-gray-600 max-w-3xl">
-              These questions separate strategic CMOs from tactical marketers. Use them to assess expertise, results, and fit.
+              These questions separate strategic CMOs from tactical marketers. Use them to assess expertise, results, and fit. The <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> notes that effective recruitment practices are essential for scaling businesses.
             </p>
           </div>
 
@@ -314,7 +314,7 @@ export default function HireFractionalCMOPage() {
                 </li>
                 <li className="text-gray-700">
                   <strong className="text-gray-900">"How do you approach proving marketing ROI to the CFO or board?"</strong><br/>
-                  <span className="text-sm text-gray-600">Listen for: Multi-touch attribution, incrementality testing, clear reporting frameworks</span>
+                  <span className="text-sm text-gray-600">Listen for: Multi-touch attribution, incrementality testing, clear reporting frameworks. <a href="https://www.ons.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS data</a> can provide valuable benchmarking context for marketing spend.</span>
                 </li>
                 <li className="text-gray-700">
                   <strong className="text-gray-900">"What CAC and LTV:CAC ratios are healthy for a business like ours?"</strong><br/>
@@ -336,7 +336,7 @@ export default function HireFractionalCMOPage() {
                 </li>
                 <li className="text-gray-700">
                   <strong className="text-gray-900">"How do you balance managing agencies vs building in-house capabilities?"</strong><br/>
-                  <span className="text-sm text-gray-600">Listen for: Agency management experience, clear rationale for outsourcing decisions</span>
+                  <span className="text-sm text-gray-600">Listen for: Agency management experience, clear rationale for outsourcing decisions. The <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">BVCA</a> highlights that portfolio companies often benefit from flexible resourcing strategies.</span>
                 </li>
                 <li className="text-gray-700">
                   <strong className="text-gray-900">"Tell me about a time you coached an underperforming marketer to success."</strong><br/>
@@ -381,7 +381,7 @@ export default function HireFractionalCMOPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Process</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">The Fractional CMO Hiring Process</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From first conversation to start date in 2-4 weeks. Here's the proven process.
+              From first conversation to start date in 2-4 weeks. Here's the proven process. Research from the <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> shows that structured hiring processes lead to better executive appointments.
             </p>
           </div>
 
@@ -437,7 +437,7 @@ export default function HireFractionalCMOPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-3 block">Contracts</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Contract Terms & Structure</h2>
             <p className="text-xl text-gray-600 max-w-3xl">
-              Standard terms for fractional CMO engagements. Adapt based on your needs and the candidate's preferences.
+              Standard terms for fractional CMO engagements. Adapt based on your needs and the candidate's preferences. <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">UK flexible working regulations</a> provide a framework for these arrangements, though fractional executives typically work as consultants.
             </p>
           </div>
 
@@ -477,7 +477,7 @@ export default function HireFractionalCMOPage() {
                   <h4 className="font-bold text-gray-900 mb-2">IP & Confidentiality</h4>
                   <ul className="text-gray-700 space-y-1 text-base mb-0">
                     <li><strong>IP ownership:</strong> Company owns all work product</li>
-                    <li><strong>Confidentiality:</strong> Standard NDA terms, survives termination</li>
+                    <li><strong>Confidentiality:</strong> Standard NDA terms, survives termination. The <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">IoD</a> provides guidance on director-level confidentiality agreements.</li>
                     <li><strong>Non-compete:</strong> Usually not applicable (fractional works with multiple companies)</li>
                   </ul>
                 </div>
