@@ -29,7 +29,7 @@ const faqItems = [
   },
   {
     question: 'What does a fractional CMO do?',
-    answer: 'A fractional CMO provides the same strategic leadership as a full-time CMO: developing <a href="https://www.cim.co.uk/professional-marketing-standards" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">marketing strategy</a>, building and leading teams, managing budgets, driving customer acquisition, and owning marketing results. They just do it 1-3 days per week instead of five.',
+    answer: 'A fractional CMO provides the same strategic leadership as a full-time CMO: developing <a href="https://www.cim.co.uk/professional-marketing-standards" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">marketing strategy</a>, building and leading teams, managing budgets, driving customer acquisition, and owning marketing results. They just do it 1-3 days per week instead of five.',
   },
   {
     question: 'How is fractional CMO different from a consultant?',
@@ -37,7 +37,7 @@ const faqItems = [
   },
   {
     question: 'Why do companies hire fractional CMOs instead of full-time?',
-    answer: 'Companies hire fractional CMOs to get senior marketing expertise without the £150k-£250k+ cost of a full-time executive. It\'s ideal for <a href="https://www.bvca.co.uk" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">startups, scale-ups</a>, or mid-sized companies that need strategic leadership but don\'t have budget or workload for a full-time CMO.',
+    answer: 'Companies hire fractional CMOs to get senior marketing expertise without the £150k-£250k+ cost of a full-time executive. It\'s ideal for <a href="https://www.bvca.co.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">startups, scale-ups</a>, or mid-sized companies that need strategic leadership but don\'t have budget or workload for a full-time CMO.',
   },
 ]
 

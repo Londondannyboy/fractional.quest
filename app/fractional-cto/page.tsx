@@ -212,7 +212,7 @@ export default function FractionalCTOPage() {
                   },
                   {
                     title: 'Security & Compliance',
-                    description: 'Implement security best practices, manage risks, prepare for audits. Navigate <a href="https://www.ncsc.gov.uk" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">Cyber Essentials</a> and ISO 27001 requirements.',
+                    description: 'Implement security best practices, manage risks, prepare for audits. Navigate <a href="https://www.ncsc.gov.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Cyber Essentials</a> and ISO 27001 requirements.',
                     icon: '🔒',
                   },
                   {
@@ -429,13 +429,13 @@ export default function FractionalCTOPage() {
                   },
                   {
                     title: 'Investor Credibility',
-                    description: 'Investors and acquirers want experienced technical leadership. A fractional CTO provides credibility and handles technical due diligence professionally. <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> research shows strong leadership is a key investment criterion.',
+                    description: 'Investors and acquirers want experienced technical leadership. A fractional CTO provides credibility and handles technical due diligence professionally. <a href="https://www.british-business-bank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> research shows strong leadership is a key investment criterion.',
                     stat: '100%',
                     statLabel: 'DD Ready',
                   },
                   {
                     title: 'Flexibility & Scale',
-                    description: 'Scale from 1 to 3 days per week as needs change. 30-60 day notice periods. No long-term commitment or equity lock-in. Perfect for volatile growth, aligning with <a href="https://www.cipd.org/uk/knowledge/reports/flexible-working/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">CIPD flexible working best practices</a>.',
+                    description: 'Scale from 1 to 3 days per week as needs change. 30-60 day notice periods. No long-term commitment or equity lock-in. Perfect for volatile growth, aligning with <a href="https://www.cipd.org/uk/knowledge/reports/flexible-working/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD flexible working best practices</a>.',
                     stat: '1-3',
                     statLabel: 'Days/Week',
                   },

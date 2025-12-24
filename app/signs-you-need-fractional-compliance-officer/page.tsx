@@ -22,17 +22,17 @@ const signs = [
     summary: 'Applying for FCA authorisation without experienced compliance leadership significantly increases rejection risk.',
     content: `
       <p>
-        The <a href="https://www.fca.org.uk/firms/authorisation" target="_blank" rel="noopener noreferrer" class="text-rose-600 hover:text-rose-700 underline">FCA authorisation process</a>
+        The <a href="https://www.fca.org.uk/firms/authorisation" target="_blank" rel="noopener noreferrer" className="text-rose-600 hover:text-rose-700 underline">FCA authorisation process</a>
         requires demonstrating robust compliance arrangements from day one. This includes compliance policies, monitoring programmes,
-        risk assessments, and often a named <a href="https://www.fca.org.uk/firms/senior-managers-certification-regime" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">SMF16 (Compliance Oversight)</a> or SMF17 (MLRO) holder.
+        risk assessments, and often a named <a href="https://www.fca.org.uk/firms/senior-managers-certification-regime" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">SMF16 (Compliance Oversight)</a> or SMF17 (MLRO) holder.
       </p>
-      <p class="mt-4">
+      <p className="mt-4">
         <strong>Why a fractional compliance officer helps:</strong>
       </p>
-      <ul class="mt-2 space-y-2">
+      <ul className="mt-2 space-y-2">
         <li>Drafts application materials to FCA standards</li>
         <li>Develops the compliance framework the FCA expects to see</li>
-        <li>Can be named as proposed SMF16/SMF17—often with faster approval due to existing <a href="https://www.cisi.org/cisiweb2/cisi-website/study-with-us/professional-refresher" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">professional qualifications</a> and FCA history</li>
+        <li>Can be named as proposed SMF16/SMF17—often with faster approval due to existing <a href="https://www.cisi.org/cisiweb2/cisi-website/study-with-us/professional-refresher" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">professional qualifications</a> and FCA history</li>
         <li>Manages FCA queries and interview preparation</li>
         <li>Costs significantly less than hiring full-time before you're generating revenue</li>
       </ul>
@@ -48,20 +48,20 @@ const signs = [
       <p>
         When your compliance officer resigns, you face several urgent challenges:
       </p>
-      <ul class="mt-2 space-y-2">
-        <li><strong>FCA notification:</strong> You must <a href="https://www.fca.org.uk/firms/senior-managers-certification-regime/smf-notifications" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">notify the FCA of SMF vacancies</a> and may need to identify an interim holder</li>
+      <ul className="mt-2 space-y-2">
+        <li><strong>FCA notification:</strong> You must <a href="https://www.fca.org.uk/firms/senior-managers-certification-regime/smf-notifications" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">notify the FCA of SMF vacancies</a> and may need to identify an interim holder</li>
         <li><strong>Regulatory gap:</strong> The FCA expects continuous compliance oversight—gaps create risk</li>
         <li><strong>Knowledge loss:</strong> Departing officers take institutional knowledge with them</li>
         <li><strong>Recruitment timeline:</strong> Hiring a permanent replacement takes 3-6 months</li>
       </ul>
-      <p class="mt-4">
+      <p className="mt-4">
         <strong>Why a fractional compliance officer helps:</strong>
       </p>
-      <ul class="mt-2 space-y-2">
+      <ul className="mt-2 space-y-2">
         <li>Can start within 1-2 weeks—faster than any permanent hire</li>
         <li>Provides immediate SMF cover if already FCA-approved</li>
         <li>Maintains regulatory relationships and compliance programme</li>
-        <li>Can transition to permanent <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">flexible working</a> arrangement or hand over to permanent hire</li>
+        <li>Can transition to permanent <a href="https://www.gov.uk/flexible-working" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">flexible working</a> arrangement or hand over to permanent hire</li>
       </ul>
     `,
     action: 'Find interim cover',
@@ -75,20 +75,20 @@ const signs = [
       <p>
         Rapid business growth creates compliance pressure:
       </p>
-      <ul class="mt-2 space-y-2">
+      <ul className="mt-2 space-y-2">
         <li>New products launching faster than compliance review can keep pace</li>
         <li>Expanding into new markets or customer segments with different regulatory requirements</li>
-        <li>Growing teams without adequate <a href="https://www.ica.org.uk/training" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">compliance training</a></li>
+        <li>Growing teams without adequate <a href="https://www.ica.org.uk/training" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">compliance training</a></li>
         <li>Increasing transaction volumes straining AML monitoring</li>
         <li>Board pressure to move fast conflicting with compliance caution</li>
-        <li>Data protection and <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">GDPR compliance</a> requirements expanding with customer base</li>
+        <li>Data protection and <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">GDPR compliance</a> requirements expanding with customer base</li>
       </ul>
-      <p class="mt-4">
+      <p className="mt-4">
         <strong>Why a fractional compliance officer helps:</strong>
       </p>
-      <ul class="mt-2 space-y-2">
+      <ul className="mt-2 space-y-2">
         <li>Adds senior compliance capacity without full-time commitment</li>
-        <li>Brings experience scaling compliance from previous <a href="https://www.scaleupinstitute.org.uk/scaleup-programmes/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">high-growth environments</a></li>
+        <li>Brings experience scaling compliance from previous <a href="https://www.scaleupinstitute.org.uk/scaleup-programmes/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">high-growth environments</a></li>
         <li>Can increase days temporarily during high-growth phases</li>
         <li>Provides strategic input on compliance-friendly growth</li>
         <li>Costs less than an additional full-time hire while you assess long-term needs</li>
@@ -105,17 +105,17 @@ const signs = [
       <p>
         Regulatory issues demand immediate, expert attention:
       </p>
-      <ul class="mt-2 space-y-2">
+      <ul className="mt-2 space-y-2">
         <li><strong>FCA supervisory feedback:</strong> Criticism that requires documented remediation</li>
-        <li><strong><a href="https://www.fca.org.uk/firms/skilled-persons-reviews" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">s166 skilled person review</a>:</strong> Independent review of compliance arrangements</li>
-        <li><strong>Enforcement investigation:</strong> <a href="https://www.fca.org.uk/enforcement" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">FCA enforcement action</a> or investigation</li>
+        <li><strong><a href="https://www.fca.org.uk/firms/skilled-persons-reviews" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">s166 skilled person review</a>:</strong> Independent review of compliance arrangements</li>
+        <li><strong>Enforcement investigation:</strong> <a href="https://www.fca.org.uk/enforcement" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA enforcement action</a> or investigation</li>
         <li><strong>Customer complaints:</strong> Patterns suggesting systemic compliance issues</li>
         <li><strong>Internal audit findings:</strong> Significant compliance gaps identified internally</li>
       </ul>
-      <p class="mt-4">
+      <p className="mt-4">
         <strong>Why a fractional compliance officer helps:</strong>
       </p>
-      <ul class="mt-2 space-y-2">
+      <ul className="mt-2 space-y-2">
         <li>Brings independent, experienced perspective the FCA respects</li>
         <li>Has handled similar regulatory situations at other firms</li>
         <li>Can lead remediation programmes and evidence improvements</li>
@@ -134,17 +134,17 @@ const signs = [
       <p>
         Some compliance challenges require specialist expertise:
       </p>
-      <ul class="mt-2 space-y-2">
-        <li><strong><a href="https://www.fca.org.uk/firms/consumer-duty" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">Consumer Duty</a>:</strong> The FCA's new outcomes-focused regulation requires cultural and operational change</li>
-        <li><strong>Crypto/Digital Assets:</strong> <a href="https://www.fca.org.uk/firms/financial-crime/cryptoassets-aml-ctf-regime" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">FCA registration</a> and the Travel Rule need crypto-specific AML expertise</li>
-        <li><strong>CASS (Client Assets):</strong> <a href="https://www.fca.org.uk/firms/client-assets" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">Client money and assets rules</a> are complex and high-risk</li>
-        <li><strong>Operational Resilience:</strong> New <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2021/march/operational-resilience-impact-tolerances-for-important-business-services-ss" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 underline">PRA requirements</a> on business continuity and third-party risk</li>
+      <ul className="mt-2 space-y-2">
+        <li><strong><a href="https://www.fca.org.uk/firms/consumer-duty" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Consumer Duty</a>:</strong> The FCA's new outcomes-focused regulation requires cultural and operational change</li>
+        <li><strong>Crypto/Digital Assets:</strong> <a href="https://www.fca.org.uk/firms/financial-crime/cryptoassets-aml-ctf-regime" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">FCA registration</a> and the Travel Rule need crypto-specific AML expertise</li>
+        <li><strong>CASS (Client Assets):</strong> <a href="https://www.fca.org.uk/firms/client-assets" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Client money and assets rules</a> are complex and high-risk</li>
+        <li><strong>Operational Resilience:</strong> New <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2021/march/operational-resilience-impact-tolerances-for-important-business-services-ss" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">PRA requirements</a> on business continuity and third-party risk</li>
         <li><strong>MiFID II/COBS:</strong> Investment business conduct requirements</li>
       </ul>
-      <p class="mt-4">
+      <p className="mt-4">
         <strong>Why a fractional compliance officer helps:</strong>
       </p>
-      <ul class="mt-2 space-y-2">
+      <ul className="mt-2 space-y-2">
         <li>Access specialists without hiring full-time in a niche area</li>
         <li>Fractional professionals often have cross-firm experience implementing these requirements</li>
         <li>Project-based engagement for implementation, ongoing for monitoring</li>
