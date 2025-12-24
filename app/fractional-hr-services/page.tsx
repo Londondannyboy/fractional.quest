@@ -5,6 +5,8 @@ import { createDbQuery } from '@/lib/db'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { FAQ } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { BreadcrumbsLight } from '@/components/Breadcrumbs'
+import { getRoleBreadcrumbs } from '@/lib/seo-config'
 
 export const revalidate = 3600
 
@@ -92,9 +94,7 @@ export default async function FractionalHRServicesPage() {
         </div>
         <div className="relative z-10 w-full py-20">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
-            <Link href="/fractional-hr" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm">
-              <span className="mr-2">←</span> Back to HR Hub
-            </Link>
+            <BreadcrumbsLight items={getRoleBreadcrumbs('hr', 'services')} className="mb-8" />
             <div className="max-w-4xl">
               <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Services

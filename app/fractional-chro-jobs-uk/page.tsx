@@ -7,6 +7,9 @@ import { DesktopOnly } from '@/components/DesktopOnly'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
+import { BreadcrumbsLight } from '@/components/Breadcrumbs'
+import { JobListingSchema } from '@/components/JobPostingSchema'
+import { getRoleBreadcrumbs } from '@/lib/seo-config'
 
 export const revalidate = 3600
 
@@ -130,6 +133,7 @@ export default async function FractionalCHROJobsUKPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-chro-jobs-uk" />
       {/* Hero with Aspirational Image */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
         {/* Background Image - HR professional */}
@@ -143,9 +147,7 @@ export default async function FractionalCHROJobsUKPage() {
         </div>
         <div className="relative z-10 w-full py-16">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
-            <Link href="/fractional-hr" className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors text-sm tracking-wide">
-              <span className="mr-2">←</span> Back to HR Hub
-            </Link>
+            <BreadcrumbsLight items={getRoleBreadcrumbs('chro', 'jobs')} className="mb-8" />
             <div className="max-w-4xl">
               <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
                 HR Leadership

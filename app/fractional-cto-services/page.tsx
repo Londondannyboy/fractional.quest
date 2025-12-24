@@ -4,6 +4,8 @@ import { FAQ, CTO_SERVICE_FAQS } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
 import { HireProcessStepper } from '@/components/HireProcessStepper'
 import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
+import { BreadcrumbsLight } from '@/components/Breadcrumbs'
+import { getRoleBreadcrumbs } from '@/lib/seo-config'
 
 export const revalidate = 3600
 
@@ -37,9 +39,10 @@ export default function FractionalCTOServicesPage() {
         </div>
         <div className="relative z-10 w-full py-16">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
-            <Link href="/" className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors text-sm tracking-wide">
-              <span className="mr-2">←</span> Back to Home
-            </Link>
+            <BreadcrumbsLight
+              items={getRoleBreadcrumbs('cto', 'services')}
+              className="mb-6"
+            />
             <div className="max-w-4xl">
               <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
                 Technical Leadership

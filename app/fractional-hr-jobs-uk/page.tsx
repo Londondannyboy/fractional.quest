@@ -10,6 +10,9 @@ import { DesktopOnly } from '@/components/DesktopOnly'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { FracSection } from '@/components/FracSection'
+import { BreadcrumbsLight } from '@/components/Breadcrumbs'
+import { JobListingSchema } from '@/components/JobPostingSchema'
+import { getRoleBreadcrumbs } from '@/lib/seo-config'
 
 export const revalidate = 3600
 
@@ -60,6 +63,26 @@ async function getFeaturedCompanies() {
   }
 }
 
+// Server-side job fetch for SEO
+async function getHRJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote, workplace_type,
+        compensation, role_category, skills_required, posted_date, hours_per_week,
+        description_snippet
+      FROM jobs
+      WHERE is_active = true AND role_category = 'HR'
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 12
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
 const HR_FAQS = [
   {
     question: 'What is a fractional HR job?',
@@ -88,10 +111,11 @@ const HR_FAQS = [
 ]
 
 export default async function FractionalHrJobsUkPage() {
-  const [stats, companies] = await Promise.all([getHRStats(), getFeaturedCompanies()])
+  const [stats, companies, jobs] = await Promise.all([getHRStats(), getFeaturedCompanies(), getHRJobs()])
 
   return (
     <div className="min-h-screen bg-white">
+      <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-hr-jobs-uk" />
       {/* Editorial Hero with 3D Knowledge Graph & Frac */}
       <section className="relative min-h-[75vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -100,9 +124,7 @@ export default async function FractionalHrJobsUkPage() {
         </div>
         <div className="relative z-10 w-full py-20">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <Link href="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm tracking-wide">
-              <span className="mr-2">←</span> Back to Home
-            </Link>
+            <BreadcrumbsLight items={getRoleBreadcrumbs('hr', 'jobs')} className="mb-8" />
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
               <div className="max-w-4xl">
                 <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">

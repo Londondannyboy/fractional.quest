@@ -9,6 +9,9 @@ import { RoleContentHub } from '@/components/RoleContentHub'
 import { RoleNews } from '@/components/RoleNews'
 import { FracSection } from '@/components/FracSection'
 import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
+import { BreadcrumbsLight } from '@/components/Breadcrumbs'
+import { JobListingSchema } from '@/components/JobPostingSchema'
+import { getRoleBreadcrumbs } from '@/lib/seo-config'
 
 export const revalidate = 3600
 
@@ -99,6 +102,7 @@ export default async function FractionalCmoJobsUkPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-cmo-jobs-uk" />
       {/* Hero with Aspirational Image */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         {/* Background Image - Marketing professional */}
@@ -112,9 +116,7 @@ export default async function FractionalCmoJobsUkPage() {
         </div>
         <div className="relative z-10 w-full py-16">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <Link href="/" className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors text-sm tracking-wide">
-              <span className="mr-2">←</span> Back to Home
-            </Link>
+            <BreadcrumbsLight items={getRoleBreadcrumbs('cmo', 'jobs')} className="mb-8" />
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
               <div className="max-w-3xl">
                 <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">

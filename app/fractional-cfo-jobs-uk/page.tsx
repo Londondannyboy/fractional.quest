@@ -9,6 +9,9 @@ import { RoleContentHub } from '@/components/RoleContentHub'
 import { RoleNews } from '@/components/RoleNews'
 import { FracSection } from '@/components/FracSection'
 import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
+import { BreadcrumbsLight } from '@/components/Breadcrumbs'
+import { JobListingSchema } from '@/components/JobPostingSchema'
+import { getRoleBreadcrumbs } from '@/lib/seo-config'
 
 export const revalidate = 3600
 
@@ -97,6 +100,12 @@ export default async function FractionalCfoJobsUkPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* JobPosting Schema for SEO */}
+      <JobListingSchema
+        jobs={jobs}
+        pageUrl="https://fractional.quest/fractional-cfo-jobs-uk"
+      />
+
       {/* Hero with Cleaner Look */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-white">
         <div className="absolute inset-0 z-0">
@@ -104,9 +113,10 @@ export default async function FractionalCfoJobsUkPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/60"></div>
         </div>
         <div className="container-content relative z-10">
-            <Link href="/" className="inline-flex items-center text-white hover:text-gray-200 mb-8 transition-colors text-sm font-medium">
-              <span className="mr-2">←</span> Back to Home
-            </Link>
+            <BreadcrumbsLight
+              items={getRoleBreadcrumbs('cfo', 'jobs')}
+              className="mb-8"
+            />
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
               <div className="max-w-3xl">
                 <span className="inline-block bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">

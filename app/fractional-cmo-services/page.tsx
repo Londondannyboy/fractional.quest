@@ -4,6 +4,8 @@ import { FAQ, CMO_SERVICE_FAQS } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
 import { HireProcessStepper } from '@/components/HireProcessStepper'
 import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
+import { BreadcrumbsLight } from '@/components/Breadcrumbs'
+import { getRoleBreadcrumbs } from '@/lib/seo-config'
 
 export const revalidate = 3600
 
@@ -37,9 +39,10 @@ export default function FractionalCMOServicesPage() {
         </div>
         <div className="relative z-10 w-full py-20">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
-            <Link href="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm tracking-wide">
-              <span className="mr-2">←</span> Back to Home
-            </Link>
+            <BreadcrumbsLight
+              items={getRoleBreadcrumbs('cmo', 'services')}
+              className="mb-8"
+            />
             <div className="max-w-4xl">
               <span className="inline-block bg-amber-500 text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Marketing Leadership
