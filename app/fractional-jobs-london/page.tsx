@@ -223,18 +223,6 @@ export default async function FractionalJobsLondonPage() {
     }
   }
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    'mainEntity': londonFAQs.map(faq => ({
-      '@type': 'Question',
-      'name': faq.question,
-      'acceptedAnswer': {
-        '@type': 'Answer',
-        'text': faq.answer
-      }
-    }))
-  }
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -250,7 +238,6 @@ export default async function FractionalJobsLondonPage() {
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostingsSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero Image Banner */}
@@ -514,7 +501,7 @@ export default async function FractionalJobsLondonPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
             London Fractional Jobs FAQ
           </h2>
-          <FAQ faqs={londonFAQs} skipSchema={true} />
+          <FAQ faqs={londonFAQs} />
         </div>
       </section>
 

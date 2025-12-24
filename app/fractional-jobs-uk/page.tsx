@@ -284,20 +284,6 @@ export default async function FractionalJobsUKPage() {
     })
   }
 
-  // FAQ Schema for rich snippets
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    'mainEntity': ukFractionalJobsFAQs.map(faq => ({
-      '@type': 'Question',
-      'name': faq.question,
-      'acceptedAnswer': {
-        '@type': 'Answer',
-        'text': faq.answer
-      }
-    }))
-  }
-
   // Breadcrumb schema
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -333,11 +319,6 @@ export default async function FractionalJobsUKPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostingsSchema) }}
-      />
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {/* Breadcrumb Schema */}
       <script
@@ -847,7 +828,6 @@ export default async function FractionalJobsUKPage() {
               items={ukFractionalJobsFAQs}
               title=""
               className=""
-              skipSchema={true}
             />
           </div>
         </div>
