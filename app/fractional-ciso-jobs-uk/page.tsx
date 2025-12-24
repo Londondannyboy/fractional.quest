@@ -687,7 +687,7 @@ export default async function FractionalCisoJobsUkPage() {
             <div className="flex flex-wrap gap-4">
               <Link href="/fractional-ciso" className="text-gray-600 hover:text-red-600 font-medium transition-colors">Fractional CISO Guide</Link>
               <Link href="/fractional-cto-jobs-uk" className="text-gray-600 hover:text-red-600 font-medium transition-colors">Fractional CTO Jobs UK</Link>
-              <Link href="/uk-fractional-jobs-uk-london-fractional-jobs-london" className="text-gray-600 hover:text-red-600 font-medium transition-colors">Fractional Jobs London</Link>
+              <Link href="/fractional-jobs-london" className="text-gray-600 hover:text-red-600 font-medium transition-colors">Fractional Jobs London</Link>
               <Link href="/fractional-ciso-pricing-cost-guide" className="text-gray-600 hover:text-red-600 font-medium transition-colors">CISO Pricing Guide</Link>
               <Link href="/how-to-become-fractional-ciso" className="text-gray-600 hover:text-red-600 font-medium transition-colors">Become a Fractional CISO</Link>
               <Link href="/what-is-fractional-ciso" className="text-gray-600 hover:text-red-600 font-medium transition-colors">What is a Fractional CISO</Link>

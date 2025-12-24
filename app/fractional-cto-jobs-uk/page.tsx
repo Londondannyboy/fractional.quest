@@ -304,7 +304,7 @@ export default async function FractionalCtoJobsUkPage() {
               Beyond AI, the technical complexity curve continues steepening. Cloud-native architectures, microservices, event-driven systems, real-time data pipelines—the modern tech stack demands expertise non-technical founders cannot acquire quickly. Meanwhile, hiring full-time senior engineers has become brutally competitive according to <a href="https://www.linkedin.com/pulse/topics/home/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">LinkedIn market data</a>. Fractional CTOs solve both problems: they architect the right systems and attract strong engineering talent through their reputation and network.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              London accounts for roughly 60% of fractional CTO opportunities according to <a href="https://www.ons.gov.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS employment data</a>, though Manchester, Edinburgh, and Cambridge show strong growth. FinTech and B2B SaaS dominate demand, but HealthTech, PropTech, and ClimaTech increasingly seek fractional technical leadership. The common thread: regulated or complex domains where strategic technical decisions carry existential weight.
+              <Link href="/fractional-jobs-london" className="text-blue-600 hover:text-blue-700 underline font-semibold">London</Link> accounts for roughly 60% of fractional CTO opportunities according to <a href="https://www.ons.gov.uk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS employment data</a>, though Manchester, Edinburgh, and Cambridge show strong growth. FinTech and B2B SaaS dominate demand, but HealthTech, PropTech, and ClimaTech increasingly seek fractional technical leadership. The common thread: regulated or complex domains where strategic technical decisions carry existential weight.
             </p>
           </article>
         </div>
@@ -428,7 +428,7 @@ export default async function FractionalCtoJobsUkPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related</span>
             <div className="flex flex-wrap gap-4">
-              <Link href="/uk-fractional-jobs-uk-london-fractional-jobs-london" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Fractional Jobs London</Link>
+              <Link href="/fractional-jobs-london" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Fractional Jobs London</Link>
               <Link href="/fractional-jobs-tech" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Tech Industry Jobs</Link>
               <Link href="/fractional-cmo-jobs-uk" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">CMO Jobs UK</Link>
               <Link href="/fractional-cfo-jobs-uk" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">CFO Jobs UK</Link>

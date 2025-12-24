@@ -195,6 +195,24 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* London Featured Section */}
+      <section className="py-12 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="container-content">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-white">
+              <h2 className="font-editorial text-2xl md:text-3xl font-bold mb-2">Fractional Jobs London</h2>
+              <p className="text-white/80">60% of UK opportunities • £900-£1,500 day rates • City & Canary Wharf</p>
+            </div>
+            <Link
+              href="/fractional-jobs-london"
+              className="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-lg"
+            >
+              Browse London Jobs →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Latest Jobs - Card Grid */}
       {featuredJobs.length > 0 && (
         <section className="section-padding bg-gray-50">
@@ -372,9 +390,9 @@ export default async function Home() {
                 <li><Link href="/fractional-cmo-jobs-uk" className="hover:text-gray-900 hover:underline">Fractional CMO Jobs</Link></li>
                 <li><Link href="/fractional-cto-jobs-uk" className="hover:text-gray-900 hover:underline">Fractional CTO Jobs</Link></li>
                 <li><Link href="/fractional-coo-jobs-uk" className="hover:text-gray-900 hover:underline">Fractional COO Jobs</Link></li>
+                <li><Link href="/fractional-jobs-london" className="hover:text-gray-900 hover:underline font-medium">London Fractional Jobs</Link></li>
                 <li><Link href="/fractional-cpo-jobs-uk" className="hover:text-gray-900 hover:underline">Fractional CPO Jobs</Link></li>
                 <li><Link href="/fractional-cro-jobs-uk" className="hover:text-gray-900 hover:underline">Fractional CRO Jobs</Link></li>
-                <li><Link href="/fractional-compliance-jobs-uk" className="hover:text-gray-900 hover:underline">Compliance Jobs</Link></li>
               </ul>
             </div>
             <div>

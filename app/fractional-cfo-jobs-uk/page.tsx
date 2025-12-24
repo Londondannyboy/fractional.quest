@@ -370,6 +370,15 @@ export default async function FractionalCfoJobsUkPage() {
             <Link href="/handler/sign-up" className="px-10 py-5 bg-white text-gray-900 font-bold rounded-lg uppercase tracking-wider hover:bg-gray-100 transition-colors">Create Profile</Link>
             <Link href="/fractional-cfo-salary" className="px-10 py-5 border-2 border-white text-white font-bold rounded-lg uppercase tracking-wider hover:bg-white hover:text-gray-900 transition-colors">Salary Guide</Link>
           </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
+            <Link href="/fractional-jobs-london" className="text-gray-300 hover:text-white transition-colors">London Jobs</Link>
+            <span className="text-gray-600">•</span>
+            <Link href="/fractional-jobs-uk" className="text-gray-300 hover:text-white transition-colors">All UK Jobs</Link>
+            <span className="text-gray-600">•</span>
+            <Link href="/fractional-cto-jobs-uk" className="text-gray-300 hover:text-white transition-colors">CTO Jobs</Link>
+            <span className="text-gray-600">•</span>
+            <Link href="/fractional-cmo-jobs-uk" className="text-gray-300 hover:text-white transition-colors">CMO Jobs</Link>
+          </div>
         </div>
       </section>
 

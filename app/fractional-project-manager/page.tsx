@@ -433,7 +433,7 @@ export default async function FractionalProjectManagerPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related</span>
             <div className="flex flex-wrap gap-4">
-              <Link href="/uk-fractional-jobs-uk-london-fractional-jobs-london" className="text-gray-600 hover:text-green-600 font-medium transition-colors">Fractional Jobs</Link>
+              <Link href="/fractional-jobs-london" className="text-gray-600 hover:text-green-600 font-medium transition-colors">Fractional Jobs</Link>
               <Link href="/fractional-cfo-jobs-uk" className="text-gray-600 hover:text-green-600 font-medium transition-colors">CFO Jobs UK</Link>
               <Link href="/fractional-cmo-jobs-uk" className="text-gray-600 hover:text-green-600 font-medium transition-colors">CMO Jobs UK</Link>
               <Link href="/fractional-cto-jobs-uk" className="text-gray-600 hover:text-green-600 font-medium transition-colors">CTO Jobs UK</Link>

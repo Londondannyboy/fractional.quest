@@ -443,6 +443,7 @@ export default async function FractionalJobsUKPage() {
               <div className="flex flex-wrap gap-2 mt-4">
                 {[
                   { label: 'All Roles', href: '/fractional-jobs-uk', active: true },
+                  { label: 'London Jobs', href: '/fractional-jobs-london', featured: true },
                   { label: 'CFO', href: '/fractional-cfo-jobs-uk' },
                   { label: 'CTO', href: '/fractional-cto-jobs-uk' },
                   { label: 'CMO', href: '/fractional-cmo-jobs-uk' },
@@ -455,6 +456,8 @@ export default async function FractionalJobsUKPage() {
                     className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
                       filter.active
                         ? 'bg-blue-600 text-white'
+                        : filter.featured
+                        ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600'
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                     }`}
                   >

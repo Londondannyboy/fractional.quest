@@ -708,7 +708,7 @@ export default async function FractionalCeoJobsUkPage() {
               <Link href="/fractional-cfo-jobs-uk" className="text-gray-600 hover:text-purple-600 font-medium transition-colors">Fractional CFO Jobs UK</Link>
               <Link href="/fractional-cto-jobs-uk" className="text-gray-600 hover:text-purple-600 font-medium transition-colors">Fractional CTO Jobs UK</Link>
               <Link href="/fractional-coo-jobs-uk" className="text-gray-600 hover:text-purple-600 font-medium transition-colors">Fractional COO Jobs UK</Link>
-              <Link href="/uk-fractional-jobs-uk-london-fractional-jobs-london" className="text-gray-600 hover:text-purple-600 font-medium transition-colors">Fractional Jobs London</Link>
+              <Link href="/fractional-jobs-london" className="text-gray-600 hover:text-purple-600 font-medium transition-colors">Fractional Jobs London</Link>
               <Link href="/fractional-ceo-salary" className="text-gray-600 hover:text-purple-600 font-medium transition-colors">CEO Salary Guide</Link>
               <Link href="/interim-ceo-jobs-uk" className="text-gray-600 hover:text-purple-600 font-medium transition-colors">Interim CEO Jobs UK</Link>
               <Link href="/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter" className="text-gray-600 hover:text-purple-600 font-medium transition-colors">Fractional Recruitment Agency</Link>

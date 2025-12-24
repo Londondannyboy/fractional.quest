@@ -350,7 +350,7 @@ export default async function FractionalCmoJobsUkPage() {
               London leads with 55% of roles, supported by the capital&apos;s thriving startup ecosystem documented by <a href="https://www.beauhurst.com" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">Beauhurst</a>, but opportunities exist nationwide. Regional hubs like Manchester (backed by <a href="https://www.investinmanchester.com/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">MIDAS</a>) and Edinburgh (supported by <a href="https://www.scottish-enterprise.com/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">Scottish Enterprise</a>) are rapidly expanding their fractional markets:
             </p>
             <ul className="space-y-2">
-              <li><strong>London Tech City:</strong> £900-£1,400/day</li>
+              <li><strong><Link href="/fractional-jobs-london" className="text-amber-600 hover:text-amber-700 underline">London Tech City</Link>:</strong> £900-£1,400/day</li>
               <li><strong>Manchester:</strong> £700-£1,000/day</li>
               <li><strong>Bristol & Edinburgh:</strong> £700-£1,000/day</li>
               <li><strong>Remote UK:</strong> £650-£950/day</li>
@@ -565,7 +565,7 @@ export default async function FractionalCmoJobsUkPage() {
             <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related</span>
             <div className="flex flex-wrap gap-4">
               <Link href="/part-time-cmo-jobs-uk" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Part-Time CMO Jobs UK</Link>
-              <Link href="/uk-fractional-jobs-uk-london-fractional-jobs-london" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Fractional CMO Jobs London</Link>
+              <Link href="/fractional-jobs-london" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Fractional Jobs London</Link>
               <Link href="/fractional-cmo-salary" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">CMO Salary Guide</Link>
               <Link href="/fractional-cmo-cost" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Fractional CMO Cost</Link>
               <Link href="/how-to-become-a-fractional-cmo" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Become a Fractional CMO</Link>
