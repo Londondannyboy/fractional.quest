@@ -23,25 +23,36 @@ export function Footer() {
             </p>
           </div>
 
+          {/* Center: Jobs by Location */}
+          <div className="flex flex-col gap-2">
+            <span className="text-gray-500 text-xs font-semibold uppercase tracking-wider mb-2">Jobs by Location</span>
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+              <Link href="/fractional-jobs-uk" className="text-gray-400 hover:text-white transition-colors">UK</Link>
+              <Link href="/fractional-jobs-london" className="text-gray-400 hover:text-white transition-colors">London</Link>
+              <Link href="/fractional-jobs-manchester" className="text-gray-400 hover:text-white transition-colors">Manchester</Link>
+              <Link href="/fractional-jobs-birmingham" className="text-gray-400 hover:text-white transition-colors">Birmingham</Link>
+            </div>
+          </div>
+
           {/* Right: Key Links */}
           <div className="flex flex-wrap gap-x-8 gap-y-4 text-sm font-medium">
             <Link
               href="/terms"
               className="text-gray-400 hover:text-white transition-colors"
             >
-              Terms of Service
+              Terms
             </Link>
             <Link
               href="/privacy"
               className="text-gray-400 hover:text-white transition-colors"
             >
-              Privacy Policy
+              Privacy
             </Link>
             <Link
               href="/contact"
               className="text-gray-400 hover:text-white transition-colors"
             >
-              Contact Us
+              Contact
             </Link>
             <Link
               href="/about"

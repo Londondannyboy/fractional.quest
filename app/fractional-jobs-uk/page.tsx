@@ -7,6 +7,7 @@ import { FAQ } from '@/components/FAQ'
 import { RecommendedArticles } from '@/components/RecommendedArticles'
 import { FracSection } from '@/components/FracSection'
 import { JobSearch } from '@/components/JobSearch'
+import { TLDR } from '@/components/TLDR'
 
 import { CalculatorSkeleton } from '@/components/ui/Skeleton'
 import { SavedJobsCounter } from '@/components/SavedJobsCounter'
@@ -498,6 +499,16 @@ export default async function FractionalJobsUKPage() {
 
               {/* Right Sidebar - Content Hub (Sticky) */}
               <div className="lg:col-span-1 space-y-5 lg:sticky lg:top-24 lg:self-start lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto lg:scrollbar-thin">
+                {/* TLDR Summary */}
+                <TLDR
+                  points={[
+                    '£700-£1,500/day rates for CFO, CTO, CMO roles',
+                    '2-3 days/week with multiple clients',
+                    'London (60%) + remote opportunities across UK',
+                    'Most roles outside IR35 when properly structured',
+                  ]}
+                />
+
                 {/* Rate Calculator Card */}
                 <Link
                   href="#rate-calculator"
@@ -620,7 +631,7 @@ export default async function FractionalJobsUKPage() {
                   <h3 className="text-base font-bold text-gray-900 mb-3">Jobs by Location</h3>
                   <div className="flex flex-wrap gap-2">
                     {[
-                      { label: 'London', href: '/fractional-jobs?location=London' },
+                      { label: 'London', href: '/fractional-jobs-london' },
                       { label: 'Manchester', href: '/fractional-jobs-manchester' },
                       { label: 'Birmingham', href: '/fractional-jobs-birmingham' },
                       { label: 'Edinburgh', href: '/fractional-jobs-edinburgh' },
@@ -752,7 +763,7 @@ export default async function FractionalJobsUKPage() {
             <h3 className="text-xl md:text-2xl font-bold text-gray-900 !text-gray-900 mb-6">Top UK Markets</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { name: 'London', jobs: stats.totalLondon, rate: '£900-£1,500/day', link: '/fractional-jobs?location=London' },
+                { name: 'London', jobs: stats.totalLondon, rate: '£900-£1,500/day', link: '/fractional-jobs-london' },
                 { name: 'Manchester', jobs: Math.round(stats.totalUK * 0.15), rate: '£700-£1,200/day', link: '/fractional-jobs-manchester' },
                 { name: 'Birmingham', jobs: Math.round(stats.totalUK * 0.08), rate: '£650-£1,100/day', link: '/fractional-jobs-birmingham' },
               ].map((region) => (
