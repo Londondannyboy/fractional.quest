@@ -5,6 +5,7 @@ import { FAQ } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -109,8 +110,18 @@ export default async function FractionalRecruiterJobsUkPage() {
     getRecruiterJobs()
   ])
 
+  const mostRecentJob = jobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
+
   return (
     <div className="min-h-screen bg-white">
+      <WebPageSchema
+        title="Fractional Recruiter Jobs UK | Part-Time Talent Acquisition Roles"
+        description="Find part-time Internal Recruiter positions paying £400-£700/day"
+        url="https://fractional.quest/fractional-recruiter-jobs-uk"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.total}
+      />
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
         <div
@@ -127,9 +138,12 @@ export default async function FractionalRecruiterJobsUkPage() {
               <span className="mr-2">←</span> Back to Home
             </Link>
             <div className="max-w-4xl">
-              <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-                Talent Acquisition
-              </span>
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                  Talent Acquisition
+                </span>
+                <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
+              </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Fractional Recruiter Jobs UK
               </h1>

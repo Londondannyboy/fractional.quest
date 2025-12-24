@@ -8,6 +8,7 @@ import { RecommendedArticles } from '@/components/RecommendedArticles'
 import { FracSection } from '@/components/FracSection'
 import { JobSearch } from '@/components/JobSearch'
 import { TLDR } from '@/components/TLDR'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 import { CalculatorSkeleton } from '@/components/ui/Skeleton'
 import { SavedJobsCounter } from '@/components/SavedJobsCounter'
@@ -217,6 +218,9 @@ export default async function FractionalJobsUKPage() {
     getUKJobs()
   ])
 
+  const mostRecentJob = ukJobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
+
   // Generate JobPosting JSON-LD schema for all jobs
   const jobPostingsSchema = {
     '@context': 'https://schema.org',
@@ -316,6 +320,15 @@ export default async function FractionalJobsUKPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* WebPage Schema with dateModified for SEO freshness */}
+      <WebPageSchema
+        title="Fractional Jobs UK: CFO, CTO, CMO, PM Roles"
+        description="Find fractional jobs UK: 17+ CFO, CTO, CMO, Project Manager roles with £700-£1,500 day rates"
+        url="https://fractional.quest/fractional-jobs-uk"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.totalUK}
+      />
+
       {/* JobPosting JSON-LD Schema */}
       <script
         type="application/ld+json"
@@ -348,9 +361,12 @@ export default async function FractionalJobsUKPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
             <div className="max-w-2xl">
-              <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-                {stats.totalUK}+ Live Opportunities
-              </span>
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                  {stats.totalUK}+ Live Opportunities
+                </span>
+                <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
+              </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 Fractional Executive Jobs

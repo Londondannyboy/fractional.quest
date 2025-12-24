@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -64,9 +65,17 @@ async function getPSStats() {
 
 export default async function ProfessionalServicesPage() {
   const stats = await getPSStats()
+  const lastUpdatedDate = new Date() // Use current date
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <WebPageSchema
+        title="Fractional Jobs Professional Services - Executive Roles in Consulting & Advisory"
+        description="Find fractional executive jobs in professional services. CFO, COO, CMO roles paying £600-£1,100/day"
+        url="https://fractional.quest/fractional-jobs-professional-services"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.totalPS}
+      />
       {/* Hero Section with 3D Knowledge Graph Background */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
@@ -77,10 +86,11 @@ export default async function ProfessionalServicesPage() {
             <Link href="/" className="inline-flex items-center text-white/70 hover:text-gray-900 mb-6 transition-colors">
               ← Back to Home
             </Link>
-            <div className="inline-block mb-6">
+            <div className="flex flex-wrap items-center gap-3 mb-6">
               <span className="bg-white/10 backdrop-blur text-white/90 px-5 py-2.5 rounded-full text-sm font-medium border border-white/20">
                 {stats.totalPS}+ Professional Services Jobs
               </span>
+              <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
               Fractional Jobs Professional Services

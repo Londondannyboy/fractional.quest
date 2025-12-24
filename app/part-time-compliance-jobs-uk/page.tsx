@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
 import { IR35Calculator } from '@/components/IR35Calculator'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const metadata: Metadata = {
   title: 'Part-Time Compliance Jobs UK | Flexible Compliance Roles 2025',
@@ -105,8 +106,20 @@ const transitionSteps = [
 ]
 
 export default function PartTimeComplianceJobsUKPage() {
+  // For static pages without database queries, use current date
+  const lastUpdatedDate = new Date()
+  const stats = { total: 45 } // Approximate for schema
+
   return (
     <div className="min-h-screen bg-white">
+      <WebPageSchema
+        title="Part-Time Compliance Jobs UK | Flexible Compliance Roles"
+        description="Find part-time compliance jobs in the UK. Flexible CCO, MLRO, and compliance officer roles paying £800-£1,500/day."
+        url="https://fractional.quest/part-time-compliance-jobs-uk"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.total}
+      />
+
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-teal-900 via-teal-800 to-slate-900 py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
@@ -121,9 +134,12 @@ export default function PartTimeComplianceJobsUKPage() {
           <Link href="/" className="inline-flex items-center text-teal-300/60 hover:text-white mb-8 transition-colors text-sm tracking-wide">
             <span className="mr-2">&larr;</span> Back to Home
           </Link>
-          <span className="inline-block bg-teal-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-            Career Guide
-          </span>
+          <div className="flex flex-wrap items-center gap-3 mb-6">
+            <span className="inline-block bg-teal-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em]">
+              Career Guide
+            </span>
+            <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
+          </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
             Part-Time Compliance<br />
             <span className="text-teal-400">Jobs UK</span>

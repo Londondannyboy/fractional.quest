@@ -4,6 +4,7 @@ import { createDbQuery } from '@/lib/db'
 import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
 import { FAQ } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -41,6 +42,23 @@ async function getRemoteStats() {
   }
 }
 
+async function getRemoteJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, workplace_type,
+        compensation, role_category, skills_required, posted_date
+      FROM jobs
+      WHERE is_active = true AND (is_remote = true OR workplace_type = 'Remote' OR workplace_type = 'Hybrid')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 6
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
+
 const REMOTE_FAQS = [
   {
     question: 'Can fractional executives work remotely?',
@@ -65,10 +83,21 @@ const REMOTE_FAQS = [
 ]
 
 export default async function RemoteFractionalJobsPage() {
-  const stats = await getRemoteStats()
+  const [stats, jobs] = await Promise.all([getRemoteStats(), getRemoteJobs()])
+
+  const mostRecentJob = jobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
 
   return (
     <div className="min-h-screen bg-white">
+      <WebPageSchema
+        title="Remote Fractional Jobs UK | Work From Home Executive Roles"
+        description="Remote fractional jobs UK - Find work from home fractional executive positions paying £800-£1,500/day"
+        url="https://fractional.quest/remote-fractional-jobs"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.total}
+      />
+
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-emerald-50 to-white" style={{backgroundImage: 'url(https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=1920)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
         <div className="absolute inset-0 bg-black/40"></div>
@@ -77,9 +106,12 @@ export default async function RemoteFractionalJobsPage() {
             <span className="mr-2">←</span> Back to Home
           </Link>
           <div className="max-w-4xl">
-            <span className="inline-block bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-              Work From Anywhere
-            </span>
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              <span className="inline-block bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                Work From Anywhere
+              </span>
+              <LastUpdatedBadge date={lastUpdatedDate} className="text-gray-500" />
+            </div>
             <h1 className="font-editorial text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Remote Fractional Jobs UK
             </h1>

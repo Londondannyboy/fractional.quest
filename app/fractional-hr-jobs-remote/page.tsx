@@ -5,6 +5,7 @@ import { createDbQuery } from '@/lib/db'
 import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { DesktopOnly } from '@/components/DesktopOnly'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -42,9 +43,17 @@ async function getRemoteHRStats() {
 export default async function RemoteHRJobsPage() {
   const stats = await getRemoteHRStats()
   const remotePercentage = stats.total > 0 ? Math.round((stats.remoteCount / stats.total) * 100) : 56
+  const lastUpdatedDate = new Date() // Use current date as we don't fetch individual jobs
 
   return (
     <div className="min-h-screen bg-white">
+      <WebPageSchema
+        title="Remote Fractional HR Jobs UK 2025 | Work From Home HR Roles"
+        description="Find remote fractional HR jobs paying £700-£1,300/day"
+        url="https://fractional.quest/fractional-hr-jobs-remote"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.remoteCount}
+      />
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -61,9 +70,12 @@ export default async function RemoteHRJobsPage() {
               <span className="mr-2">←</span> Back to All HR Jobs
             </Link>
             <div className="max-w-4xl">
-              <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-                Remote Jobs
-              </span>
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em]">
+                  Remote Jobs
+                </span>
+                <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
+              </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Remote<br />
                 <span className="text-pink-400">HR Jobs</span>

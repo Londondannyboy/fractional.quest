@@ -6,6 +6,7 @@ import { RoleCalculator } from '@/components/RoleCalculator'
 import { DesktopOnly } from '@/components/DesktopOnly'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleContentHub } from '@/components/RoleContentHub'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -115,8 +116,18 @@ export default async function FractionalProductJobsUkPage() {
     getProductJobs()
   ])
 
+  const mostRecentJob = jobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
+
   return (
     <div className="min-h-screen bg-white">
+      <WebPageSchema
+        title="Fractional Product Manager Jobs UK | Part-Time CPO Roles"
+        description="Find part-time Chief Product Officer positions paying £800-£1,400/day"
+        url="https://fractional.quest/fractional-product-jobs-uk"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.total}
+      />
       {/* Hero with Aspirational Image */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
         {/* Background Image - Product professional */}
@@ -134,9 +145,12 @@ export default async function FractionalProductJobsUkPage() {
               <span className="mr-2">←</span> Back to Home
             </Link>
             <div className="max-w-4xl">
-              <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-                Product Leadership
-              </span>
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                  Product Leadership
+                </span>
+                <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
+              </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Fractional Product Manager Jobs UK
               </h1>

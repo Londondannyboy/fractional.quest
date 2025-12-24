@@ -12,6 +12,7 @@ import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -98,8 +99,23 @@ export default async function FractionalCfoJobsUkPage() {
     getFinanceJobs()
   ])
 
+  // Use most recent job's posted date for SEO freshness
+  const mostRecentJob = jobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date
+    ? new Date(mostRecentJob.posted_date)
+    : new Date()
+
   return (
     <div className="min-h-screen bg-white">
+      {/* WebPage Schema with dateModified for SEO freshness */}
+      <WebPageSchema
+        title="Fractional CFO Jobs UK | Part-Time Chief Financial Officer Roles"
+        description="Find part-time CFO positions paying £800-£1,500/day"
+        url="https://fractional.quest/fractional-cfo-jobs-uk"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.total}
+      />
+
       {/* JobPosting Schema for SEO */}
       <JobListingSchema
         jobs={jobs}
@@ -119,9 +135,12 @@ export default async function FractionalCfoJobsUkPage() {
             />
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
               <div className="max-w-3xl">
-                <span className="inline-block bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-                  Finance Leadership
-                </span>
+                <div className="flex flex-wrap items-center gap-3 mb-6">
+                  <span className="inline-block bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                    Finance Leadership
+                  </span>
+                  <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
+                </div>
                 <h1 className="font-editorial text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                   Fractional CFO Jobs UK
                 </h1>

@@ -5,6 +5,7 @@ import { FAQ } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -109,8 +110,19 @@ export default async function FractionalSalesDirectorJobsUkPage() {
     getSalesJobs()
   ])
 
+  const mostRecentJob = jobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
+
   return (
     <div className="min-h-screen bg-white">
+      <WebPageSchema
+        title="Fractional Sales Director Jobs UK | Part-Time Sales Roles"
+        description="Find part-time Sales Director positions paying £600-£1,000/day. Remote & hybrid available."
+        url="https://fractional.quest/fractional-sales-director-jobs-uk"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.total}
+      />
+
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
         <div
@@ -127,9 +139,12 @@ export default async function FractionalSalesDirectorJobsUkPage() {
               <span className="mr-2">←</span> Back to Home
             </Link>
             <div className="max-w-4xl">
-              <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-                Sales Management
-              </span>
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                  Sales Management
+                </span>
+                <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
+              </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Fractional Sales Director Jobs UK
               </h1>

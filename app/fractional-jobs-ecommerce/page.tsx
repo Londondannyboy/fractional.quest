@@ -5,6 +5,7 @@ import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { FAQ, ECOMMERCE_FAQS } from '@/components/FAQ'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -63,9 +64,17 @@ async function getEcommerceStats() {
 
 export default async function EcommercePage() {
   const stats = await getEcommerceStats()
+  const lastUpdatedDate = new Date() // Use current date
 
   return (
     <div className="min-h-screen bg-white">
+      <WebPageSchema
+        title="Fractional Jobs E-commerce - Executive Roles in Online Retail & DTC"
+        description="Find fractional executive jobs in e-commerce. CFO, CMO, CTO roles paying £600-£1,100/day"
+        url="https://fractional.quest/fractional-jobs-ecommerce"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.totalEcommerce}
+      />
       {/* Hero Section with 3D Knowledge Graph Background */}
       <section className="relative min-h-[85vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
@@ -88,9 +97,12 @@ export default async function EcommercePage() {
                     <span className="mr-2">←</span> Back to Home
                   </Link>
 
-                  <span className="inline-block bg-pink-500/20 backdrop-blur text-pink-200 px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-widest mb-6">
-                    {stats.totalEcommerce}+ E-commerce Opportunities
-                  </span>
+                  <div className="flex flex-wrap items-center gap-3 mb-6">
+                    <span className="inline-block bg-pink-500/20 backdrop-blur text-pink-200 px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-widest">
+                      {stats.totalEcommerce}+ E-commerce Opportunities
+                    </span>
+                    <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
+                  </div>
 
                   <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
                     Fractional Jobs<br />

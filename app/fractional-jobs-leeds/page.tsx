@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { JobCard } from '@/components/JobCard'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -76,8 +77,19 @@ async function getLeedsJobs() {
 export default async function LeedsPage() {
   const [stats, jobs] = await Promise.all([getLeedsStats(), getLeedsJobs()])
 
+  const mostRecentJob = jobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <WebPageSchema
+        title="Fractional Jobs Leeds - Executive Roles in Yorkshire"
+        description="Find fractional executive jobs in Leeds and Yorkshire with £600-£1,000 daily rates"
+        url="https://fractional.quest/fractional-jobs-leeds"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.total}
+      />
+
       {/* 3D Knowledge Graph */}
       <section className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
@@ -89,10 +101,11 @@ export default async function LeedsPage() {
           <Link href="/" className="inline-flex items-center text-purple-200 hover:text-gray-900 mb-6 transition-colors">
             ← Back to Home
           </Link>
-          <div className="inline-block mb-6">
+          <div className="flex flex-wrap items-center gap-3 mb-6">
             <span className="bg-purple-700/50 backdrop-blur text-white px-5 py-2.5 rounded-full text-sm font-medium border border-purple-500/30">
               {stats.total}+ Jobs in Yorkshire
             </span>
+            <LastUpdatedBadge date={lastUpdatedDate} className="text-purple-200" />
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
             Fractional Jobs Leeds</h1>

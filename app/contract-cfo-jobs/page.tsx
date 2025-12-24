@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
+import { WebPageSchema } from '@/components/WebPageSchema'
 
 export const metadata: Metadata = {
   title: 'Contract CFO Jobs UK: Fixed-Term CFO Opportunities 2025',
@@ -19,6 +20,8 @@ export const metadata: Metadata = {
 export const revalidate = 3600
 
 export default function ContractCFOJobsPage() {
+  const lastUpdatedDate = new Date() // Use current date
+
   const faqItems = [
     {
       question: 'What is the difference between contract CFO and fractional CFO?',
@@ -48,6 +51,12 @@ export default function ContractCFOJobsPage() {
 
   return (
     <>
+      <WebPageSchema
+        title="Contract CFO Jobs UK: Fixed-Term CFO Opportunities 2025"
+        description="Find contract CFO jobs in the UK. Day rates £800-£1,500"
+        url="https://fractional.quest/contract-cfo-jobs"
+        dateModified={lastUpdatedDate}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

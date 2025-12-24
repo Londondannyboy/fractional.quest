@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import { Badge } from '@/components/Badge'
 import { Suspense } from 'react'
 import { RecommendedArticlesLight } from '@/components/RecommendedArticles'
+import { WebPageSchema } from '@/components/WebPageSchema'
 
 // Revalidate every 4 hours for articles
 export const revalidate = 14400
@@ -116,8 +117,21 @@ export default async function ArticleDetailPage({ params }: PageProps) {
       })
     : null
 
+  // Use article's published_at for dateModified
+  const articleDate = article.published_at
+    ? new Date(article.published_at)
+    : new Date()
+
   return (
     <article className="min-h-screen bg-gray-50">
+      {/* WebPage Schema with dateModified for SEO freshness */}
+      <WebPageSchema
+        title={article.title}
+        description={article.excerpt || 'Read this article on Fractional Quest'}
+        url={`https://fractional.quest/${slug}`}
+        dateModified={articleDate}
+      />
+
       {/* Hero Section */}
       <header className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 text-white">
         {/* Background Pattern */}

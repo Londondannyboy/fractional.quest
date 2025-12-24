@@ -9,6 +9,7 @@ import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { DesktopOnly } from '@/components/DesktopOnly'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -58,11 +59,41 @@ async function getFeaturedCompanies() {
   }
 }
 
+async function getMarketingJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote, workplace_type,
+        compensation, role_category, skills_required, posted_date, hours_per_week,
+        description_snippet
+      FROM jobs
+      WHERE is_active = true AND role_category = 'Marketing'
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 12
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
 export default async function PartTimeCmoJobsUkPage() {
-  const [stats, companies] = await Promise.all([getMarketingStats(), getFeaturedCompanies()])
+  const [stats, companies, jobs] = await Promise.all([getMarketingStats(), getFeaturedCompanies(), getMarketingJobs()])
+
+  const mostRecentJob = jobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
 
   return (
     <div className="min-h-screen bg-white">
+      <WebPageSchema
+        title="Part-Time CMO Jobs UK | Flexible Chief Marketing Officer Roles"
+        description="Part-time CMO jobs UK - Find flexible CMO positions paying £700-£1,400/day."
+        url="https://fractional.quest/part-time-cmo-jobs-uk"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.total}
+      />
+
       {/* Editorial Hero with 3D Knowledge Graph */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -80,9 +111,12 @@ export default async function PartTimeCmoJobsUkPage() {
               <span className="mr-2">←</span> Back to Home
             </Link>
             <div className="max-w-4xl">
-              <span className="inline-block bg-amber-500 text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-                Marketing Leadership
-              </span>
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span className="inline-block bg-amber-500 text-black px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em]">
+                  Marketing Leadership
+                </span>
+                <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
+              </div>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Part-Time CMO<br />
                 <span className="text-amber-400">Jobs UK</span>

@@ -8,6 +8,7 @@ import { RoleContentHub } from '@/components/RoleContentHub'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -112,8 +113,19 @@ export default async function FractionalProductManagerJobsUkPage() {
     getPMJobs()
   ])
 
+  const mostRecentJob = jobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
+
   return (
     <div className="min-h-screen bg-white">
+      <WebPageSchema
+        title="Fractional Product Manager Jobs UK | Part-Time PM Roles"
+        description="Find part-time Product Manager positions paying £400-£700/day. Remote & hybrid available."
+        url="https://fractional.quest/fractional-product-manager-jobs-uk"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.total}
+      />
+
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-product-manager-jobs-uk" />
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
@@ -129,9 +141,12 @@ export default async function FractionalProductManagerJobsUkPage() {
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <BreadcrumbsLight items={getRoleBreadcrumbs('product', 'jobs')} className="mb-8" />
             <div className="max-w-4xl">
-              <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-                Product Management
-              </span>
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                  Product Management
+                </span>
+                <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
+              </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Fractional Product Manager Jobs UK
               </h1>

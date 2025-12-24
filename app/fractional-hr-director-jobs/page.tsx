@@ -6,6 +6,7 @@ import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { DesktopOnly } from '@/components/DesktopOnly'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -34,11 +35,41 @@ async function getHRStats() {
   }
 }
 
+async function getHRJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote, workplace_type,
+        compensation, role_category, skills_required, posted_date, hours_per_week,
+        description_snippet
+      FROM jobs
+      WHERE is_active = true AND role_category = 'HR'
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 12
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
 export default async function FractionalHRDirectorJobsPage() {
-  const jobCount = await getHRStats()
+  const [jobCount, jobs] = await Promise.all([getHRStats(), getHRJobs()])
+
+  const mostRecentJob = jobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
 
   return (
     <div className="min-h-screen bg-white">
+      <WebPageSchema
+        title="Fractional HR Director Jobs UK | £900-£1,100/Day Roles"
+        description="Find fractional HR Director jobs in the UK. Part-time positions paying £900-£1,100/day."
+        url="https://fractional.quest/fractional-hr-director-jobs"
+        dateModified={lastUpdatedDate}
+        itemCount={jobCount}
+      />
+
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -55,9 +86,12 @@ export default async function FractionalHRDirectorJobsPage() {
               <span className="mr-2">←</span> Back to HR Director Guide
             </Link>
             <div className="max-w-4xl">
-              <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-                Job Board
-              </span>
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em]">
+                  Job Board
+                </span>
+                <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
+              </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Fractional<br />
                 <span className="text-pink-400">HR Director Jobs</span>

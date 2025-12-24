@@ -8,6 +8,7 @@ import { RoleContentHub } from '@/components/RoleContentHub'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -112,8 +113,18 @@ export default async function FractionalCgoJobsUkPage() {
     getCGOJobs()
   ])
 
+  const mostRecentJob = jobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
+
   return (
     <div className="min-h-screen bg-white">
+      <WebPageSchema
+        title="Fractional CGO Jobs UK | Part-Time Chief Green Officer Roles"
+        description="Find part-time CGO & Sustainability Officer positions paying £700-£1,200/day"
+        url="https://fractional.quest/fractional-cgo-jobs-uk"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.total}
+      />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-cgo-jobs-uk" />
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
@@ -129,9 +140,12 @@ export default async function FractionalCgoJobsUkPage() {
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <BreadcrumbsLight items={getRoleBreadcrumbs('cgo', 'jobs')} className="mb-8" />
             <div className="max-w-4xl">
-              <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-                Sustainability Leadership
-              </span>
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                  Sustainability Leadership
+                </span>
+                <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
+              </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Fractional CGO Jobs UK
               </h1>

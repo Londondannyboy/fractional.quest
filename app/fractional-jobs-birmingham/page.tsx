@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -70,11 +71,39 @@ async function getBirminghamStats() {
   }
 }
 
+async function getBirminghamJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, workplace_type,
+        compensation, role_category, skills_required, posted_date
+      FROM jobs
+      WHERE is_active = true AND location ILIKE '%birmingham%'
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 6
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
+
 export default async function BirminghamPage() {
-  const stats = await getBirminghamStats()
+  const [stats, jobs] = await Promise.all([getBirminghamStats(), getBirminghamJobs()])
+
+  const mostRecentJob = jobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <WebPageSchema
+        title="Fractional Jobs Birmingham - Executive Roles in the UK's Second City"
+        description="Find fractional executive jobs in Birmingham with £650-£1,100 daily rates"
+        url="https://fractional.quest/fractional-jobs-birmingham"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.totalBirmingham}
+      />
+
       {/* Hero Section with 3D Knowledge Graph */}
       <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
@@ -84,10 +113,11 @@ export default async function BirminghamPage() {
           <Link href="/" className="inline-flex items-center text-blue-200 hover:text-white mb-6 transition-colors">
             ← Back to Home
           </Link>
-          <div className="inline-block mb-6">
+          <div className="flex flex-wrap items-center gap-3 mb-6">
             <span className="bg-blue-700/50 backdrop-blur text-white px-5 py-2.5 rounded-full text-sm font-medium border border-blue-500/30">
               {stats.totalBirmingham}+ Jobs in Birmingham
             </span>
+            <LastUpdatedBadge date={lastUpdatedDate} className="text-blue-200" />
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
             Fractional Jobs Birmingham

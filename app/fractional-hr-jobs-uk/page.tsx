@@ -13,6 +13,7 @@ import { FracSection } from '@/components/FracSection'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -113,8 +114,18 @@ const HR_FAQS = [
 export default async function FractionalHrJobsUkPage() {
   const [stats, companies, jobs] = await Promise.all([getHRStats(), getFeaturedCompanies(), getHRJobs()])
 
+  const mostRecentJob = jobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
+
   return (
     <div className="min-h-screen bg-white">
+      <WebPageSchema
+        title="Fractional HR Jobs UK | Part-Time CHRO Roles 2025"
+        description="Find part-time HR & People leadership positions paying £700-£1,300/day"
+        url="https://fractional.quest/fractional-hr-jobs-uk"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.total}
+      />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-hr-jobs-uk" />
       {/* Editorial Hero with 3D Knowledge Graph & Frac */}
       <section className="relative min-h-[75vh] flex items-center overflow-hidden">
@@ -127,9 +138,12 @@ export default async function FractionalHrJobsUkPage() {
             <BreadcrumbsLight items={getRoleBreadcrumbs('hr', 'jobs')} className="mb-8" />
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
               <div className="max-w-4xl">
-                <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-                  People Leadership
-                </span>
+                <div className="flex flex-wrap items-center gap-3 mb-6">
+                  <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em]">
+                    People Leadership
+                  </span>
+                  <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
+                </div>
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                   Fractional HR<br />
                   <span className="text-pink-400">Jobs UK</span>

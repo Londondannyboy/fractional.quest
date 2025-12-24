@@ -4,6 +4,7 @@ import { createDbQuery } from '@/lib/db'
 import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
 import { FAQ } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -37,6 +38,25 @@ async function getDirectorStats() {
   }
 }
 
+async function getDirectorJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote, workplace_type,
+        compensation, role_category, skills_required, posted_date, hours_per_week,
+        description_snippet
+      FROM jobs
+      WHERE is_active = true AND (title ILIKE '%director%' OR role_category IN ('HR', 'Finance', 'Sales', 'Marketing', 'Operations'))
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 12
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
 const DIRECTOR_FAQS = [
   {
     question: 'What is a fractional director?',
@@ -61,10 +81,21 @@ const DIRECTOR_FAQS = [
 ]
 
 export default async function FractionalDirectorJobsPage() {
-  const stats = await getDirectorStats()
+  const [stats, jobs] = await Promise.all([getDirectorStats(), getDirectorJobs()])
+
+  const mostRecentJob = jobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
 
   return (
     <div className="min-h-screen bg-white">
+      <WebPageSchema
+        title="Fractional Director Jobs UK | Part-Time Director Roles"
+        description="Find part-time director positions across HR, Finance, Sales & Operations. £800-£1,500/day."
+        url="https://fractional.quest/fractional-director-jobs-uk"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.total}
+      />
+
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-white">
         <div className="absolute inset-0 z-0">
@@ -80,9 +111,12 @@ export default async function FractionalDirectorJobsPage() {
             <span className="mr-2">←</span> Back to Home
           </Link>
           <div className="max-w-4xl">
-            <span className="inline-block bg-indigo-500/20 text-indigo-200 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-              Executive Leadership
-            </span>
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              <span className="inline-block bg-indigo-500/20 text-indigo-200 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                Executive Leadership
+              </span>
+              <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
+            </div>
             <h1 className="font-editorial text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Fractional Director Jobs UK
             </h1>

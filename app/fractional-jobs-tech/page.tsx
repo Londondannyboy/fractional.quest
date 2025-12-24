@@ -5,6 +5,7 @@ import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { FAQ, TECH_FAQS } from '@/components/FAQ'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -64,11 +65,39 @@ async function getTechStats() {
   }
 }
 
+async function getTechJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, workplace_type,
+        compensation, role_category, skills_required, posted_date
+      FROM jobs
+      WHERE is_active = true AND (role_category ILIKE '%tech%' OR role_category ILIKE '%CTO%' OR role_category ILIKE '%engineering%' OR title ILIKE '%CTO%' OR title ILIKE '%tech%')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 6
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
+
 export default async function TechJobsPage() {
-  const stats = await getTechStats()
+  const [stats, jobs] = await Promise.all([getTechStats(), getTechJobs()])
+
+  const mostRecentJob = jobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
 
   return (
     <div className="min-h-screen bg-white">
+      <WebPageSchema
+        title="Fractional Tech Jobs UK - CTO, VP Engineering, Tech Director Roles"
+        description="Find fractional tech jobs in the UK with £900-£1,500 daily rates"
+        url="https://fractional.quest/fractional-jobs-tech"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.total}
+      />
+
       {/* Hero Section with 3D Knowledge Graph Background */}
       <section className="relative min-h-[85vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
@@ -87,9 +116,12 @@ export default async function TechJobsPage() {
                     <span className="mr-2">←</span> Back to Home
                   </Link>
 
-                  <span className="inline-block bg-blue-500/20 backdrop-blur text-blue-200 px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-widest mb-6">
-                    {stats.total}+ Tech Leadership Roles
-                  </span>
+                  <div className="flex flex-wrap items-center gap-3 mb-6">
+                    <span className="inline-block bg-blue-500/20 backdrop-blur text-blue-200 px-4 py-1.5 rounded-full text-xs font-medium uppercase tracking-widest">
+                      {stats.total}+ Tech Leadership Roles
+                    </span>
+                    <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
+                  </div>
 
                   <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95] tracking-tight">
                     Fractional<br />

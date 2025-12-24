@@ -9,6 +9,7 @@ import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { DesktopOnly } from '@/components/DesktopOnly'
 import { ShareButtons } from '@/components/ShareButtons'
 import { JobMarketContext } from '@/components/JobMarketContext'
+import { WebPageSchema } from '@/components/WebPageSchema'
 
 // Revalidate every hour for job details
 export const revalidate = 3600
@@ -292,8 +293,21 @@ export default async function JobDetailPage({ params }: PageProps) {
       directApply: true
     }
 
+    // Use job's posted_date for dateModified
+    const jobDate = job.posted_date
+      ? new Date(job.posted_date)
+      : new Date()
+
     return (
       <div className="min-h-screen bg-white">
+        {/* WebPage Schema with dateModified for SEO freshness */}
+        <WebPageSchema
+          title={`${job.title} at ${job.company_name}`}
+          description={job.description_snippet || `Fractional ${job.title} position at ${job.company_name}`}
+          url={`https://fractional.quest/fractional-job/${slug}`}
+          dateModified={jobDate}
+        />
+
         {/* JobPosting Structured Data for Google */}
         <script
           type="application/ld+json"

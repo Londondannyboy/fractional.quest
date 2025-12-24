@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -70,11 +71,39 @@ async function getManchesterStats() {
   }
 }
 
+async function getManchesterJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, workplace_type,
+        compensation, role_category, skills_required, posted_date
+      FROM jobs
+      WHERE is_active = true AND location ILIKE '%manchester%'
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 6
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
+
 export default async function ManchesterPage() {
-  const stats = await getManchesterStats()
+  const [stats, jobs] = await Promise.all([getManchesterStats(), getManchesterJobs()])
+
+  const mostRecentJob = jobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <WebPageSchema
+        title="Fractional Jobs Manchester - Executive Roles in the Northern Powerhouse"
+        description="Find fractional executive jobs in Manchester with £700-£1,200 daily rates"
+        url="https://fractional.quest/fractional-jobs-manchester"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.totalManchester}
+      />
+
       {/* Hero Section with 3D Knowledge Graph */}
       <section className="relative bg-gradient-to-br from-red-900 via-red-800 to-red-900 py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
@@ -84,10 +113,11 @@ export default async function ManchesterPage() {
           <Link href="/" className="inline-flex items-center text-red-200 hover:text-white mb-6 transition-colors">
             ← Back to Home
           </Link>
-          <div className="inline-block mb-6">
+          <div className="flex flex-wrap items-center gap-3 mb-6">
             <span className="bg-red-700/50 backdrop-blur text-white px-5 py-2.5 rounded-full text-sm font-medium border border-red-500/30">
               {stats.totalManchester}+ Jobs in Manchester
             </span>
+            <LastUpdatedBadge date={lastUpdatedDate} className="text-red-200" />
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
             Fractional Jobs Manchester

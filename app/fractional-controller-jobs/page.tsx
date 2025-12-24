@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
+import { WebPageSchema } from '@/components/WebPageSchema'
 
 export const metadata: Metadata = {
   title: 'Fractional Financial Controller Jobs UK 2025 | Part-Time Controller Roles',
@@ -18,6 +19,8 @@ export const metadata: Metadata = {
 export const revalidate = 3600
 
 export default function FractionalControllerJobsPage() {
+  const lastUpdatedDate = new Date() // Use current date
+
   const faqItems = [
     {
       question: 'What is the difference between fractional controller and fractional CFO?',
@@ -35,6 +38,12 @@ export default function FractionalControllerJobsPage() {
 
   return (
     <>
+      <WebPageSchema
+        title="Fractional Financial Controller Jobs UK 2025 | Part-Time Controller Roles"
+        description="Fractional financial controller jobs with day rates £500-£1,000"
+        url="https://fractional.quest/fractional-controller-jobs"
+        dateModified={lastUpdatedDate}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',

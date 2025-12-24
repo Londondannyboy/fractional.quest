@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
+import { WebPageSchema } from '@/components/WebPageSchema'
 
 export const metadata: Metadata = {
   title: 'Remote Fractional CFO Jobs UK: Find Remote CFO Opportunities 2025',
@@ -46,8 +47,16 @@ export default function RemoteFractionalCFOJobsPage() {
     },
   ]
 
+  const lastUpdatedDate = new Date() // No jobs fetched, use current date
+
   return (
     <>
+      <WebPageSchema
+        title="Remote Fractional CFO Jobs UK: Find Remote CFO Opportunities"
+        description="Find remote fractional CFO jobs in the UK. Remote CFO opportunities paying £800-£1,500/day"
+        url="https://fractional.quest/fractional-cfo-jobs-remote"
+        dateModified={lastUpdatedDate}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

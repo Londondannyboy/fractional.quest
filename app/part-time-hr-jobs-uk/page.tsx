@@ -5,6 +5,7 @@ import { createDbQuery } from '@/lib/db'
 import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { DesktopOnly } from '@/components/DesktopOnly'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -39,11 +40,41 @@ async function getHRStats() {
   }
 }
 
+async function getHRJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote, workplace_type,
+        compensation, role_category, skills_required, posted_date, hours_per_week,
+        description_snippet
+      FROM jobs
+      WHERE is_active = true AND role_category = 'HR'
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 12
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
 export default async function PartTimeHRJobsUKPage() {
-  const stats = await getHRStats()
+  const [stats, jobs] = await Promise.all([getHRStats(), getHRJobs()])
+
+  const mostRecentJob = jobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
 
   return (
     <div className="min-h-screen bg-white">
+      <WebPageSchema
+        title="Part-Time HR Jobs UK | Flexible HR Director & CHRO Positions"
+        description="Browse part-time HR jobs in the UK. Flexible positions paying £700-£1,300/day."
+        url="https://fractional.quest/part-time-hr-jobs-uk"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.total}
+      />
+
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920)' }}>
@@ -58,9 +89,12 @@ export default async function PartTimeHRJobsUKPage() {
               <span className="mr-2">←</span> Back to Part-Time HR
             </Link>
             <div className="max-w-4xl">
-              <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-                Job Board
-              </span>
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em]">
+                  Job Board
+                </span>
+                <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
+              </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.9] tracking-tight">
                 Part-Time<br />
                 <span className="text-pink-400">HR Jobs UK</span>
