@@ -1,4 +1,15 @@
 import { MetadataRoute } from 'next'
+import { NON_SEO_DIRECTORIES } from '@/lib/seo-policy'
+
+// =============================================================================
+// SEO POLICY: See lib/seo-policy.ts for full documentation
+// =============================================================================
+
+// Convert directory names to URL paths for robots.txt
+const DISALLOWED_PATHS = [
+  '/admin/', // Always block admin
+  ...NON_SEO_DIRECTORIES.map(dir => `/${dir}/`),
+]
 
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://fractional.quest'
@@ -8,38 +19,38 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/admin/', '/api/', '/handler/'],
+        disallow: DISALLOWED_PATHS,
       },
       // Explicitly allow AI crawlers for better indexing
       {
         userAgent: 'GPTBot',
         allow: '/',
-        disallow: ['/admin/', '/api/', '/handler/'],
+        disallow: DISALLOWED_PATHS,
       },
       {
         userAgent: 'ChatGPT-User',
         allow: '/',
-        disallow: ['/admin/', '/api/', '/handler/'],
+        disallow: DISALLOWED_PATHS,
       },
       {
         userAgent: 'Claude-Web',
         allow: '/',
-        disallow: ['/admin/', '/api/', '/handler/'],
+        disallow: DISALLOWED_PATHS,
       },
       {
         userAgent: 'Anthropic-AI',
         allow: '/',
-        disallow: ['/admin/', '/api/', '/handler/'],
+        disallow: DISALLOWED_PATHS,
       },
       {
         userAgent: 'Google-Extended',
         allow: '/',
-        disallow: ['/admin/', '/api/', '/handler/'],
+        disallow: DISALLOWED_PATHS,
       },
       {
         userAgent: 'PerplexityBot',
         allow: '/',
-        disallow: ['/admin/', '/api/', '/handler/'],
+        disallow: DISALLOWED_PATHS,
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,

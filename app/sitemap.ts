@@ -1,20 +1,20 @@
 import { MetadataRoute } from 'next'
 import { createDbQuery } from '@/lib/db'
+import { NON_SEO_DIRECTORIES, EXCLUDED_PAGES, STATIC_PAGE_SLUGS } from '@/lib/seo-policy'
 import fs from 'fs'
 import path from 'path'
 
 export const revalidate = 3600 // Revalidate every hour
 
-// Directories to exclude from sitemap
-const EXCLUDED_DIRS = [
-  'api',
-  'handler',
-  'handlers',
-  '_components',
-  '_lib',
-  'components',
-  'lib',
-]
+// =============================================================================
+// SEO POLICY: See lib/seo-policy.ts for full documentation
+// =============================================================================
+
+// Use centralized policy for excluded directories
+const EXCLUDED_DIRS = NON_SEO_DIRECTORIES
+
+// Convert static page slugs to a Set for fast lookup
+const STATIC_SLUGS_SET = new Set(STATIC_PAGE_SLUGS)
 
 // Dynamic route patterns to exclude (contain brackets)
 const isDynamicRoute = (dir: string) => dir.includes('[') && dir.includes(']')
@@ -115,6 +115,12 @@ function findAllPages(dir: string, baseDir: string): string[] {
       } else if (entry.name === 'page.tsx' || entry.name === 'page.ts') {
         // Found a page - extract the route
         const relativePath = path.relative(baseDir, dir)
+
+        // Skip individually excluded pages
+        if (EXCLUDED_PAGES.includes(relativePath)) {
+          continue
+        }
+
         pages.push(relativePath)
       }
     }
@@ -132,12 +138,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Auto-discover all static pages
   const discoveredPages = findAllPages(appDir, appDir)
 
-  const staticPages: MetadataRoute.Sitemap = discoveredPages.map(slug => ({
-    url: slug === '' ? baseUrl : `${baseUrl}/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: getChangeFrequency(slug),
-    priority: getPriority(slug),
-  }))
+  // Track URLs to prevent duplicates
+  const seenUrls = new Set<string>()
+
+  const staticPages: MetadataRoute.Sitemap = discoveredPages.map(slug => {
+    const url = slug === '' ? baseUrl : `${baseUrl}/${slug}`
+    seenUrls.add(url)
+    return {
+      url,
+      lastModified: new Date(),
+      changeFrequency: getChangeFrequency(slug),
+      priority: getPriority(slug),
+    }
+  })
 
   // Sort by priority (highest first)
   staticPages.sort((a, b) => (b.priority || 0) - (a.priority || 0))
@@ -145,35 +158,58 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   try {
     const sql = createDbQuery()
 
-    // Fetch all active jobs
+    // Fetch all active jobs with real timestamps
     const jobs = await sql`
-      SELECT slug, updated_date FROM jobs
+      SELECT slug, updated_date, posted_date FROM jobs
       WHERE is_active = true
-      ORDER BY updated_date DESC
+      ORDER BY COALESCE(updated_date, posted_date) DESC NULLS LAST
       LIMIT 500
     `
 
-    const jobUrls: MetadataRoute.Sitemap = jobs.map((job: any) => ({
-      url: `${baseUrl}/fractional-job/${job.slug}`,
-      lastModified: job.updated_date ? new Date(job.updated_date) : new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    }))
+    const jobUrls: MetadataRoute.Sitemap = jobs
+      .filter((job: any) => {
+        const url = `${baseUrl}/fractional-job/${job.slug}`
+        if (seenUrls.has(url)) return false
+        seenUrls.add(url)
+        return true
+      })
+      .map((job: any) => ({
+        url: `${baseUrl}/fractional-job/${job.slug}`,
+        lastModified: new Date(job.updated_date || job.posted_date || Date.now()),
+        changeFrequency: 'weekly' as const,
+        priority: 0.8,
+      }))
 
-    // Fetch all published articles
+    // Fetch all published articles with real timestamps
     const articles = await sql`
-      SELECT slug, published_at FROM articles
+      SELECT slug, published_at, updated_at FROM articles
       WHERE status = 'published' AND app = 'fractional'
-      ORDER BY published_at DESC
+      ORDER BY COALESCE(updated_at, published_at) DESC NULLS LAST
       LIMIT 500
     `
 
-    const articleUrls: MetadataRoute.Sitemap = articles.map((article: any) => ({
-      url: `${baseUrl}/${article.slug}`,
-      lastModified: article.published_at ? new Date(article.published_at) : new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
-    }))
+    // Only add articles that don't already exist as static pages
+    // Double-check against both seenUrls AND explicit STATIC_SLUGS_SET
+    const articleUrls: MetadataRoute.Sitemap = articles
+      .filter((article: any) => {
+        // Skip if slug matches a known static page
+        if (STATIC_SLUGS_SET.has(article.slug)) {
+          return false
+        }
+        const url = `${baseUrl}/${article.slug}`
+        if (seenUrls.has(url)) return false
+        seenUrls.add(url)
+        return true
+      })
+      .map((article: any) => ({
+        url: `${baseUrl}/${article.slug}`,
+        lastModified: new Date(article.updated_at || article.published_at || Date.now()),
+        changeFrequency: 'monthly' as const,
+        priority: 0.6,
+      }))
+
+    // Log sitemap stats for monitoring
+    console.log(`[Sitemap] Generated: ${staticPages.length} static, ${jobUrls.length} jobs, ${articleUrls.length} articles`)
 
     return [...staticPages, ...jobUrls, ...articleUrls]
   } catch (error) {
