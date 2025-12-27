@@ -8,6 +8,7 @@ import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { WebPageSchema } from '@/components/WebPageSchema'
+import { ServiceSchema } from '@/components/ServiceSchema'
 
 export const revalidate = 3600
 
@@ -64,6 +65,12 @@ export default function FractionalCISOServicesPage() {
         dateModified={new Date()}
       />
       <FAQPageSchema faqs={CISO_SERVICE_FAQS} />
+      <ServiceSchema
+        name="Fractional CISO Services"
+        description="Hire a Fractional CISO for SOC 2, ISO 27001, security strategy, and compliance"
+        url="https://fractional.quest/fractional-ciso-services"
+        priceRange="£900-£1,600/day"
+      />
       {/* Hero Section with Unsplash Image */}
       <section className="relative min-h-[75vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">

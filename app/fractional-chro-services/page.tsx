@@ -8,6 +8,7 @@ import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { WebPageSchema } from '@/components/WebPageSchema'
+import { ServiceSchema } from '@/components/ServiceSchema'
 
 export const revalidate = 3600
 
@@ -64,6 +65,12 @@ export default function FractionalCHROServicesPage() {
         dateModified={new Date()}
       />
       <FAQPageSchema faqs={CHRO_SERVICE_FAQS} />
+      <ServiceSchema
+        name="Fractional CHRO Services"
+        description="Hire a Fractional CHRO for people strategy, culture building, and talent development"
+        url="https://fractional.quest/fractional-chro-services"
+        priceRange="£650-£1,200/day"
+      />
       {/* Hero Section with Aspirational Image */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         <div

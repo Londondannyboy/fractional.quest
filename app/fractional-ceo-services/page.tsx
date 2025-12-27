@@ -8,6 +8,7 @@ import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { WebPageSchema } from '@/components/WebPageSchema'
+import { ServiceSchema } from '@/components/ServiceSchema'
 
 export const revalidate = 3600
 
@@ -56,6 +57,12 @@ export default function FractionalCEOServicesPage() {
         dateModified={new Date()}
       />
       <FAQPageSchema faqs={CEO_FAQS} />
+      <ServiceSchema
+        name="Fractional CEO Services"
+        description="Hire a Fractional CEO for turnarounds, scale-ups, and strategic leadership"
+        url="https://fractional.quest/fractional-ceo-services"
+        priceRange="£1,000-£2,000/day"
+      />
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         <div

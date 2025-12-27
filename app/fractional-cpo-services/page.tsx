@@ -8,6 +8,7 @@ import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { WebPageSchema } from '@/components/WebPageSchema'
+import { ServiceSchema } from '@/components/ServiceSchema'
 
 export const revalidate = 3600
 
@@ -64,6 +65,12 @@ export default function FractionalCPOServicesPage() {
         dateModified={new Date()}
       />
       <FAQPageSchema faqs={CPO_SERVICE_FAQS} />
+      <ServiceSchema
+        name="Fractional CPO Services"
+        description="Hire a Fractional CPO for product strategy, roadmap development, and team leadership"
+        url="https://fractional.quest/fractional-cpo-services"
+        priceRange="£800-£1,500/day"
+      />
       {/* Hero Section with Unsplash Image */}
       <section className="relative min-h-[75vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
