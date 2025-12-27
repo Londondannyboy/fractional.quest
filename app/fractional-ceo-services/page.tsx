@@ -6,6 +6,7 @@ import { HireProcessStepper } from '@/components/HireProcessStepper'
 import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 
 export const revalidate = 3600
 
@@ -46,6 +47,8 @@ const CEO_FAQS = [
 export default function FractionalCEOServicesPage() {
   return (
     <div className="min-h-screen bg-white">
+      {/* FAQ Schema for rich snippets */}
+      <FAQPageSchema faqs={CEO_FAQS} />
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         <div
@@ -171,14 +174,141 @@ export default function FractionalCEOServicesPage() {
         </div>
       </section>
 
+      {/* Benefits */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-12">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Benefits</span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Why Hire a Fractional CEO?</h2>
+          </div>
+          <div className="space-y-8">
+            <div className="flex gap-6 p-6 bg-gray-50 border-l-4 border-blue-950">
+              <div className="flex-shrink-0 text-center">
+                <div className="text-3xl font-black text-blue-950">50%</div>
+                <div className="text-xs text-gray-500 uppercase tracking-wider">Cost Savings</div>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Cost Efficiency</h3>
+                <p className="text-gray-600">Access CEO-level leadership at 40-60% less than a full-time hire. Pay only for the time you need—typically £100,000-£200,000 per year versus £300,000+ for full-time with equity.</p>
+              </div>
+            </div>
+            <div className="flex gap-6 p-6 bg-gray-50 border-l-4 border-blue-950">
+              <div className="flex-shrink-0 text-center">
+                <div className="text-3xl font-black text-blue-950">20+</div>
+                <div className="text-xs text-gray-500 uppercase tracking-wider">Years Experience</div>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Battle-Tested Leadership</h3>
+                <p className="text-gray-600">Get a CEO with 20+ years of experience who has navigated growth, turnarounds, and exits. They've seen your challenges before and know what works.</p>
+              </div>
+            </div>
+            <div className="flex gap-6 p-6 bg-gray-50 border-l-4 border-blue-950">
+              <div className="flex-shrink-0 text-center">
+                <div className="text-3xl font-black text-blue-950">Fast</div>
+                <div className="text-xs text-gray-500 uppercase tracking-wider">Deployment</div>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Quick Start</h3>
+                <p className="text-gray-600">A fractional CEO can start within weeks, not months. No lengthy recruitment process—get leadership in place when you need it most.</p>
+              </div>
+            </div>
+            <div className="flex gap-6 p-6 bg-gray-50 border-l-4 border-blue-950">
+              <div className="flex-shrink-0 text-center">
+                <div className="text-3xl font-black text-blue-950">100%</div>
+                <div className="text-xs text-gray-500 uppercase tracking-wider">Flexibility</div>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-1">Scalable Engagement</h3>
+                <p className="text-gray-600">Scale up during critical periods, scale down when stable. No long-term employment commitments—the engagement adapts to your needs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* When to Hire */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-12">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Timing</span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">When Should You Hire a Fractional CEO?</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white p-6 border border-gray-200">
+              <h3 className="font-bold text-gray-900 mb-2">Founder Stepping Back</h3>
+              <p className="text-gray-600 text-sm mb-3">You want to focus on product, vision, or a new venture. You need someone to run day-to-day operations and lead the team.</p>
+              <span className="inline-block text-xs font-bold text-blue-950 uppercase tracking-wider">When ready to delegate</span>
+            </div>
+            <div className="bg-white p-6 border border-gray-200">
+              <h3 className="font-bold text-gray-900 mb-2">Turnaround Situation</h3>
+              <p className="text-gray-600 text-sm mb-3">The business is struggling and needs experienced crisis management. A fractional CEO can stabilise operations quickly.</p>
+              <span className="inline-block text-xs font-bold text-blue-950 uppercase tracking-wider">When urgent action needed</span>
+            </div>
+            <div className="bg-white p-6 border border-gray-200">
+              <h3 className="font-bold text-gray-900 mb-2">Preparing for Exit</h3>
+              <p className="text-gray-600 text-sm mb-3">You're planning a sale or IPO. Professional management increases valuation and buyer confidence.</p>
+              <span className="inline-block text-xs font-bold text-blue-950 uppercase tracking-wider">12-24 months before exit</span>
+            </div>
+            <div className="bg-white p-6 border border-gray-200">
+              <h3 className="font-bold text-gray-900 mb-2">Subsidiary Leadership</h3>
+              <p className="text-gray-600 text-sm mb-3">Your UK or regional subsidiary needs local executive leadership without the cost of a full-time CEO.</p>
+              <span className="inline-block text-xs font-bold text-blue-950 uppercase tracking-wider">When local presence needed</span>
+            </div>
+            <div className="bg-white p-6 border border-gray-200">
+              <h3 className="font-bold text-gray-900 mb-2">Scaling Rapidly</h3>
+              <p className="text-gray-600 text-sm mb-3">You've raised funding and need to scale fast. Experienced CEO leadership helps navigate hypergrowth challenges.</p>
+              <span className="inline-block text-xs font-bold text-blue-950 uppercase tracking-wider">Post-funding</span>
+            </div>
+            <div className="bg-white p-6 border border-gray-200">
+              <h3 className="font-bold text-gray-900 mb-2">Board Requirement</h3>
+              <p className="text-gray-600 text-sm mb-3">Investors or the board want professional management. A fractional CEO satisfies governance requirements.</p>
+              <span className="inline-block text-xs font-bold text-blue-950 uppercase tracking-wider">When board mandates</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Cost Calculator */}
       <section id="calculator" className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="mb-8 text-center">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">How Much Does a Fractional CEO Cost?</h2>
+            <p className="text-gray-600 mt-4">Compare the cost of fractional vs full-time CEO</p>
           </div>
           <RoleCalculator role="ceo" />
+          <div className="mt-8 prose prose-gray max-w-none">
+            <h3 className="text-xl font-bold text-gray-900">Typical Fractional CEO Pricing</h3>
+            <ul className="text-gray-600">
+              <li><strong>Day Rate:</strong> £1,000-£2,000 per day (depending on experience and company size)</li>
+              <li><strong>Monthly Retainer:</strong> £8,000-£16,000 for 2-3 days per week</li>
+              <li><strong>Annual Cost:</strong> £100,000-£200,000 (vs £300,000+ for full-time with equity)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Table */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Comparison</span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional vs Interim vs Full-Time CEO</h2>
+            <p className="text-gray-600 mt-4">Choose the right leadership model for your needs</p>
+          </div>
+          <ServiceComparisonTable role="CEO" accentColor="blue" />
+        </div>
+      </section>
+
+      {/* How to Hire */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Process</span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">How to Hire a Fractional CEO</h2>
+            <p className="text-gray-600 mt-4">From first conversation to start date in as little as 2 weeks</p>
+          </div>
+          <HireProcessStepper accentColor="blue" />
         </div>
       </section>
 
@@ -207,6 +337,46 @@ export default function FractionalCEOServicesPage() {
             <Link href="/contact/companies" className="px-10 py-5 bg-white text-black font-bold uppercase tracking-wider hover:bg-gray-100 transition-colors">
               Find a Fractional CEO
             </Link>
+            <Link href="/fractional-ceo-jobs-uk" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">
+              I'm a CEO Looking for Roles
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Resources */}
+      <section className="py-16 bg-gray-50 border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="mb-8">
+            <h2 className="text-2xl font-black text-gray-900 mb-2">Complete Executive Leadership Hub</h2>
+            <p className="text-gray-600">Explore our comprehensive guides for businesses and executives</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-3">For Businesses</h3>
+              <div className="space-y-2">
+                <Link href="/fractional-ceo" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">Fractional CEO Guide</Link>
+                <Link href="/interim-ceo" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">Interim CEO Services</Link>
+                <Link href="/fractional-managing-director-services" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">Fractional MD Services</Link>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-3">For Executives</h3>
+              <div className="space-y-2">
+                <Link href="/fractional-ceo-jobs-uk" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">CEO Jobs UK</Link>
+                <Link href="/fractional-managing-director-jobs-uk" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">MD Jobs UK</Link>
+                <Link href="/contact/executives" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">Join Our Network</Link>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-3">Other Fractional Roles</h3>
+              <div className="space-y-2">
+                <Link href="/fractional-cfo-services" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">Fractional CFO</Link>
+                <Link href="/fractional-cto-services" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">Fractional CTO</Link>
+                <Link href="/fractional-cmo-services" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">Fractional CMO</Link>
+                <Link href="/fractional-coo-services" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">Fractional COO</Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
