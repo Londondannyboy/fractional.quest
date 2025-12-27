@@ -8,8 +8,8 @@ import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Recruitment Services UK | Hire a Part-Time Talent Partner',
-  description: 'Hire a Fractional Internal Recruiter or Talent Partner. Expert in-house recruitment capability without agency fees. Build your employer brand and hire better talent.',
+  title: 'Fractional Recruiter UK 2025',
+  description: 'Hire a Fractional Recruiter. In-house talent capability without agency fees.',
   keywords: 'fractional recruiter, fractional talent partner, hire fractional recruiter, part time internal recruiter, embedded talent partner, recruitment services',
   alternates: {
     canonical: 'https://fractional.quest/fractional-recruitment-services',

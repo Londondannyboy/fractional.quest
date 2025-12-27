@@ -8,8 +8,8 @@ import { RoleCalculator } from '@/components/RoleCalculator'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'What is a Fractional CHRO? Complete Guide for UK Businesses (2025)',
-  description: 'A Fractional CHRO is a part-time Chief Human Resources Officer providing executive-level people leadership at £1,100-£1,300/day. Complete UK guide with costs and use cases.',
+  title: 'Fractional CHRO Guide UK 2025',
+  description: 'What is a fractional CHRO? Part-time Chief HR Officer guide. £1,100-£1,300/day.',
   keywords: 'fractional chro, fractional chro meaning, fractional chief people officer, part time chro, fractional chro uk',
   alternates: {
     canonical: 'https://fractional.quest/fractional-chro',

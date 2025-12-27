@@ -10,8 +10,8 @@ import { getRoleBreadcrumbs } from '@/lib/seo-config'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional DPO Services UK | Hire a Part-Time Data Protection Officer',
-  description: 'Hire a Fractional Data Protection Officer (DPO). Ensure GDPR compliance and data privacy with expert guidance. Flexible, cost-effective DPO services.',
+  title: 'Fractional DPO Services UK',
+  description: 'Hire a Fractional DPO. GDPR compliance and data privacy expert guidance on demand.',
   keywords: 'fractional dpo, fractional data protection officer, hire fractional dpo, part time dpo, gdpr compliance services, data privacy officer',
   alternates: {
     canonical: 'https://fractional.quest/fractional-dpo-services',

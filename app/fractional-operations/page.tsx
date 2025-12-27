@@ -5,8 +5,8 @@ import { HireProcessStepper } from '@/components/HireProcessStepper'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Operations Leadership UK | Hire Part-Time Operations Executives',
-  description: 'Hire fractional operations leaders for your business. Part-time COOs, VPs of Operations, and Ops Directors. Expert operations leadership without full-time cost.',
+  title: 'Fractional Operations UK 2025',
+  description: 'Hire fractional operations leaders. Part-time COOs, VPs of Ops, Operations Directors.',
   keywords: 'fractional operations, fractional ops director, part-time operations executive, fractional vp operations, hire operations leader',
   alternates: { canonical: 'https://fractional.quest/fractional-operations' },
 }

@@ -13,8 +13,8 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CCO Jobs UK | Part-Time Chief Compliance Officer Roles',
-  description: 'Fractional CCO jobs UK - Find part-time Chief Compliance Officer positions paying £800-£1,300/day. Browse live CCO roles for experienced risk & compliance leaders. Remote & hybrid available.',
+  title: 'Fractional CCO Jobs UK 2025',
+  description: 'Fractional CCO jobs UK. Part-time Chief Compliance Officer roles. £800-£1,300/day.',
   keywords: 'fractional cco jobs, fractional cco jobs uk, part time cco, part-time chief compliance officer, cco part time, fractional compliance opportunities, fractional risk jobs',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cco-jobs-uk',

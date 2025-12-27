@@ -7,8 +7,8 @@ import { RoleCalculator } from '@/components/RoleCalculator'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional HR Salary UK 2025 - Day Rates, Annual Earnings & Pay Guide',
-  description: 'Fractional HR salary guide for 2025. UK day rates £700-£1,300. Annual earnings £90k-£200k. Compare rates by seniority, location and industry.',
+  title: 'Fractional HR Salary UK 2025',
+  description: 'Fractional HR salary UK. Day rates £700-£1,300, annual earnings £90k-£200k.',
   keywords: 'fractional hr salary, fractional hr day rate, fractional hr pay, part time hr salary, fractional hr earnings uk, fractional hr director salary',
   alternates: {
     canonical: 'https://fractional.quest/fractional-hr-salary',

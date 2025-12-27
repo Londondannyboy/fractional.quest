@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
 
 export const metadata: Metadata = {
-  title: 'Fractional Compliance for FinTech | FCA Compliance Officer Services UK',
-  description: 'Fractional compliance for FinTech - FCA compliance officers for EMIs, payment institutions, and consumer credit firms. SMF16/SMF17 approved. Day rates £900-£1,400.',
+  title: 'Fractional FinTech Compliance',
+  description: 'FCA compliance for FinTech. SMF16/SMF17 for EMIs, payments, consumer credit. £900-£1,400/day.',
   keywords: 'fintech compliance, fca compliance officer, emi compliance, payment institution compliance, fractional compliance fintech, smf16, smf17, consumer duty compliance',
   alternates: {
     canonical: 'https://fractional.quest/fractional-compliance-fintech',

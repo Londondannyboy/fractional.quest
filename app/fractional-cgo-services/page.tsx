@@ -10,8 +10,8 @@ import { getRoleBreadcrumbs } from '@/lib/seo-config'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CGO Services UK | Hire a Part-Time Chief Green Officer',
-  description: 'Hire a Fractional Chief Green Officer (CGO) or Chief Sustainability Officer (CSO). Expert ESG leadership to drive Net Zero strategy and compliance. Sustainable growth at a flexible cost.',
+  title: 'Fractional CGO Services UK',
+  description: 'Hire a Fractional CGO. ESG leadership for Net Zero strategy and sustainability compliance.',
   keywords: 'fractional cgo, fractional chief green officer, hire fractional cgo, part time sustainability officer, fractional cso, fractional esg services',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cgo-services',

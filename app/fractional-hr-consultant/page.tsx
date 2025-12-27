@@ -6,8 +6,8 @@ import { JobsGraph3D } from '@/components/JobsGraph3D'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional HR Consultant vs HR Director | Which Do You Need? (2025)',
-  description: 'Fractional HR Consultant vs Fractional HR Director: key differences, costs, and when to hire each. HR Consultants: £700-£950/day. HR Directors: £900-£1,100/day.',
+  title: 'HR Consultant vs HR Director',
+  description: 'Fractional HR Consultant vs Director. Key differences, costs £700-£1,100/day, when to hire each.',
   keywords: 'fractional hr consultant, fractional hr consulting, hr consultant vs hr director, fractional hr consultant jobs, part time hr consultant',
   alternates: {
     canonical: 'https://fractional.quest/fractional-hr-consultant',

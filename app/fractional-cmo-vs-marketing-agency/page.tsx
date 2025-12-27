@@ -6,8 +6,8 @@ import { StrategicComparisonInfographic, ComparisonData } from '@/components/inf
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CMO vs Marketing Agency: Which Should You Hire? | Complete Comparison 2025',
-  description: 'Detailed comparison: Fractional CMO vs marketing agency. Costs, responsibilities, when to use each, and can you use both? Side-by-side breakdown with real examples to help you decide.',
+  title: 'Fractional CMO vs Agency 2025',
+  description: 'Fractional CMO vs marketing agency comparison. Costs, when to use each, can you use both?',
   keywords: 'fractional cmo vs marketing agency, fractional cmo vs agency, cmo vs marketing agency, should i hire cmo or agency',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cmo-vs-marketing-agency',

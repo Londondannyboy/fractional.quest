@@ -8,8 +8,8 @@ import { FAQ, PROFESSIONAL_SERVICES_FAQS } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Jobs Professional Services - Executive Roles in Consulting & Advisory',
-  description: 'Find fractional executive jobs in professional services. CFO, COO, CMO roles in consulting, legal tech, and advisory firms. £600-£1,100 daily rates.',
+  title: 'Fractional PS Jobs UK',
+  description: 'Fractional jobs in professional services. CFO, COO, CMO in consulting. £600-£1,100/day.',
   openGraph: {
     title: 'Fractional Jobs Professional Services - Consulting & Advisory Roles',
     description: 'Find fractional executive jobs in professional services and consulting.',

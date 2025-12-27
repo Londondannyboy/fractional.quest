@@ -6,8 +6,8 @@ import { JobsGraph3D } from '@/components/JobsGraph3D'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional HR Roles UK 2025 | All HR Leadership Positions Explained',
-  description: 'Guide to all fractional HR roles: People Partner, HR Director, CHRO, HR Consultant. Day rates £600-£1,300. Find the right role for your experience level.',
+  title: 'Fractional HR Roles UK 2025',
+  description: 'Fractional HR roles guide. People Partner, HR Director, CHRO, Consultant. £600-£1,300/day.',
   keywords: 'fractional hr roles, fractional hr positions, types of fractional hr, fractional hr jobs types, fractional hr career',
   alternates: {
     canonical: 'https://fractional.quest/fractional-hr-roles',

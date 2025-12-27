@@ -8,8 +8,8 @@ import { FAQ, MANCHESTER_FAQS } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Jobs Manchester - Executive Roles in the Northern Powerhouse',
-  description: 'Find fractional executive jobs in Manchester. CFO, CMO, CTO roles in MediaCityUK & beyond. £700-£1,200 daily rates. Tech, fintech, and creative hub.',
+  title: 'Fractional Jobs Manchester UK',
+  description: 'Fractional executive jobs in Manchester. CFO, CMO, CTO roles. £700-£1,200/day rates.',
   keywords: 'fractional jobs Manchester, fractional CFO Manchester, fractional CTO Manchester, part-time executive Manchester',
   alternates: {
     canonical: 'https://fractional.quest/fractional-jobs-manchester',

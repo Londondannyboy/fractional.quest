@@ -5,8 +5,8 @@ import { HireProcessStepper } from '@/components/HireProcessStepper'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Marketing Leadership UK | Hire Part-Time Marketing Executives',
-  description: 'Hire fractional marketing leaders for your business. Part-time CMOs, VPs of Marketing, and marketing directors. Expert marketing leadership without full-time cost.',
+  title: 'Fractional Marketing UK 2025',
+  description: 'Hire fractional marketing leaders. Part-time CMOs, VPs of Marketing, Marketing Directors.',
   keywords: 'fractional marketing, fractional marketing director, part-time marketing executive, fractional vp marketing, hire marketing leader',
   alternates: { canonical: 'https://fractional.quest/fractional-marketing' },
 }

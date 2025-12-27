@@ -10,8 +10,8 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Recruiter Jobs UK | Part-Time Talent Acquisition Roles',
-  description: 'Fractional Recruiter jobs UK - Find part-time Internal Recruiter positions paying £400-£700/day. Browse live Talent Acquisition roles for experienced recruiters. Remote & hybrid available.',
+  title: 'Fractional Recruiter Jobs UK',
+  description: 'Fractional Recruiter jobs UK. Part-time Internal Recruiter roles. £400-£700/day.',
   keywords: 'fractional recruiter jobs, fractional talent acquisition jobs uk, part time internal recruiter, fractional head of talent, part time recruitment jobs, freelance recruiter',
   alternates: {
     canonical: 'https://fractional.quest/fractional-recruiter-jobs-uk',

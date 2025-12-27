@@ -10,8 +10,8 @@ import { getRoleBreadcrumbs } from '@/lib/seo-config'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CAO Services UK | Hire a Part-Time Chief Analytics Officer',
-  description: 'Hire a Fractional Chief Analytics Officer (CAO) for your business. Unlock the value of your data with expert leadership in AI, BI, and predictive modelling. Flexible and cost-effective.',
+  title: 'Fractional CAO Services UK',
+  description: 'Hire a Fractional CAO. Expert analytics leadership in AI, BI, and predictive modelling.',
   keywords: 'fractional cao, fractional analytics officer, hire fractional cao, part time cao, fractional chief analytics officer, fractional data services',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cao-services',

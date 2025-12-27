@@ -6,8 +6,8 @@ import { FAQ } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CMO Cost UK 2025: Day Rates, Monthly Retainers & ROI Guide',
-  description: 'Complete guide to fractional CMO cost in the UK. Day rates: £700-£1,400. Monthly retainers: £3k-£5.5k. Calculate savings vs full-time CMO (40-60% cheaper). Regional pricing, ROI examples, and hidden costs explained.',
+  title: 'Fractional CMO Cost UK 2025',
+  description: 'Fractional CMO cost UK. Day rates £700-£1,400, monthly £3k-£5.5k. 40-60% cheaper than full-time.',
   keywords: 'fractional cmo cost, fractional cmo pricing, fractional cmo rates, how much does a fractional cmo cost, fractional cmo day rate, fractional cmo retainer',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cmo-cost',

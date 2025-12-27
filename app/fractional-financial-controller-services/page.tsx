@@ -8,8 +8,8 @@ import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Financial Controller Services UK | Hire a Part-Time FC',
-  description: 'Hire a Fractional Financial Controller (FC) for your business. Expert accounting management, month-end close, and financial controls. Accuracy and compliance at a flexible cost.',
+  title: 'Fractional FC Services UK',
+  description: 'Hire a Fractional Financial Controller. Accounting management, month-end, controls.',
   keywords: 'fractional financial controller, fractional fc, hire fractional controller, part time financial controller, fractional accounting services',
   alternates: {
     canonical: 'https://fractional.quest/fractional-financial-controller-services',

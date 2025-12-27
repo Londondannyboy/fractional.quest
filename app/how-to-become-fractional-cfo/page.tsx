@@ -5,8 +5,8 @@ import { FAQ } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'How to Become a Fractional CFO UK 2025 | Step-by-Step Career Guide',
-  description: 'Learn how to become a fractional CFO. Required experience (15+ years), step-by-step career path, how to get your first client, and earn £100k-£300k+ annually. 140/mo searches.',
+  title: 'Become a Fractional CFO 2025',
+  description: 'How to become a fractional CFO. Career path, 15+ years experience, earn £100k-£300k+.',
   keywords: 'how to become a fractional cfo, fractional cfo career, become fractional cfo, fractional cfo requirements, fractional cfo transition',
   alternates: {
     canonical: 'https://fractional.quest/how-to-become-fractional-cfo',

@@ -6,8 +6,8 @@ import { RoleCalculator } from '@/components/RoleCalculator'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CFO for Startups | Expert Financial Leadership for £3k-£8k/Month',
-  description: 'Fractional CFO services for startups. Get Series A-ready financials, fundraising support, and strategic CFO expertise without £150k+ full-time cost. 50/mo searches, $218 CPC.',
+  title: 'Fractional CFO for Startups UK',
+  description: 'Fractional CFO for startups. Series A financials, fundraising support from £3k-£8k/month.',
   keywords: 'fractional cfo for startups, startup cfo, fractional cfo seed stage, series a cfo, startup financial leadership',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cfo-for-startups',

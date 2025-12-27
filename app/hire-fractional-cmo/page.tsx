@@ -6,8 +6,8 @@ import { FAQ } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Hire a Fractional CMO: Complete Guide to Finding the Right Marketing Leader | 2025',
-  description: 'Complete guide to hiring a fractional CMO. Where to find them, what to look for, interview questions, red flags, and contract terms. Start within 2 weeks, drive results in 90 days.',
+  title: 'Hire a Fractional CMO UK 2025',
+  description: 'How to hire a fractional CMO. Where to find them, interview questions, red flags, contract terms.',
   keywords: 'hire fractional cmo, hiring fractional cmo, find fractional cmo, fractional cmo recruitment, how to hire fractional cmo',
   alternates: {
     canonical: 'https://fractional.quest/hire-fractional-cmo',

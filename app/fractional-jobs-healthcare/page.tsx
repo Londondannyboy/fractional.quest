@@ -9,8 +9,8 @@ import { FAQ, HEALTHCARE_FAQS } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Jobs Healthcare - Executive Roles in HealthTech & Life Sciences',
-  description: 'Find fractional executive jobs in healthcare. CFO, CMO, CTO roles in HealthTech, MedTech, and Life Sciences. £700-£1,300 daily rates. UK\'s fastest-growing sector.',
+  title: 'Fractional Healthcare Jobs UK',
+  description: 'Fractional executive jobs in healthcare. CFO, CMO, CTO roles in HealthTech. £700-£1,300/day.',
   openGraph: {
     title: 'Fractional Jobs Healthcare - Executive Roles in HealthTech & Life Sciences',
     description: 'Find fractional executive jobs in healthcare and life sciences UK.',

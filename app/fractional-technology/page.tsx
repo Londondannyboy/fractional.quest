@@ -5,8 +5,8 @@ import { HireProcessStepper } from '@/components/HireProcessStepper'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Technology Leadership UK | Hire Part-Time Tech Executives',
-  description: 'Hire fractional technology leaders for your business. Part-time CTOs, CIOs, VPs of Engineering. Expert tech leadership without full-time cost.',
+  title: 'Fractional Tech UK 2025',
+  description: 'Hire fractional tech leaders. Part-time CTOs, CIOs, VPs of Engineering.',
   keywords: 'fractional technology, fractional tech director, part-time technology executive, fractional vp engineering, hire tech leader',
   alternates: { canonical: 'https://fractional.quest/fractional-technology' },
 }

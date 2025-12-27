@@ -6,8 +6,8 @@ import { HireProcessStepper } from '@/components/HireProcessStepper'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Security Leadership UK | Hire Part-Time Security Executives',
-  description: 'Hire fractional security leaders for your business. Part-time CISOs, Security Directors, and InfoSec Managers. Expert security leadership without full-time cost.',
+  title: 'Fractional Security UK 2025',
+  description: 'Hire fractional security leaders. Part-time CISOs, Security Directors, InfoSec Managers.',
   keywords: 'fractional security, fractional security director, part-time security executive, fractional ciso, hire security leader',
   alternates: { canonical: 'https://fractional.quest/fractional-security' },
 }

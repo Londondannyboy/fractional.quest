@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
 
 export const metadata: Metadata = {
-  title: 'How to Become a Fractional Compliance Officer UK | Career Guide 2025',
-  description: 'How to become a fractional compliance officer in the UK. Step-by-step career guide - qualifications, experience, setting up your business, finding clients, and pricing.',
+  title: 'Become a Compliance Officer UK',
+  description: 'How to become a fractional compliance officer. Qualifications, experience, finding clients.',
   keywords: 'how to become fractional compliance officer, fractional compliance career, compliance consultant career, start compliance consultancy, smf16 career, compliance freelance',
   alternates: {
     canonical: 'https://fractional.quest/how-to-become-fractional-compliance-officer',

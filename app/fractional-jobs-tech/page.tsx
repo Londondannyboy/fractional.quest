@@ -10,8 +10,8 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Tech Jobs UK - CTO, VP Engineering, Tech Director Roles',
-  description: 'Find fractional tech jobs in the UK. Fractional CTO, VP Engineering, Tech Director roles. £900-£1,500 daily rates. SaaS, FinTech, HealthTech opportunities.',
+  title: 'Fractional Tech Jobs UK 2025',
+  description: 'Fractional tech jobs UK. CTO, VP Engineering, Tech Director. £900-£1,500/day.',
   openGraph: {
     title: 'Fractional Tech Jobs UK - CTO, VP Engineering, Tech Director Roles',
     description: 'Find fractional technology leadership roles across the UK.',

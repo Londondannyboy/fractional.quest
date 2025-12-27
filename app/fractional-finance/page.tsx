@@ -5,8 +5,8 @@ import { HireProcessStepper } from '@/components/HireProcessStepper'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Finance Leadership UK | Hire Part-Time Finance Executives',
-  description: 'Hire fractional finance leaders for your business. Part-time CFOs, Finance Directors, and Controllers. Expert financial leadership without full-time cost.',
+  title: 'Fractional Finance UK 2025',
+  description: 'Hire fractional finance leaders. Part-time CFOs, Finance Directors, Controllers.',
   keywords: 'fractional finance, fractional finance director, part-time finance executive, fractional controller, hire finance leader',
   alternates: { canonical: 'https://fractional.quest/fractional-finance' },
 }

@@ -4,8 +4,8 @@ import { FAQ } from '@/components/FAQ'
 import { WebPageSchema } from '@/components/WebPageSchema'
 
 export const metadata: Metadata = {
-  title: 'Remote Fractional CFO Jobs UK: Find Remote CFO Opportunities 2025',
-  description: 'Find remote fractional CFO jobs in the UK. Complete guide to remote CFO opportunities, where to find them, how to work remotely effectively, and salary expectations.',
+  title: 'Remote Fractional CFO Jobs UK',
+  description: 'Remote fractional CFO jobs UK. Find remote CFO opportunities, salary expectations.',
   openGraph: {
     title: 'Remote Fractional CFO Jobs UK: Find Remote CFO Opportunities 2025',
     description: 'Find remote fractional CFO jobs in the UK. Complete guide to remote CFO opportunities, where to find them, how to work remotely effectively, and salary expectations.',

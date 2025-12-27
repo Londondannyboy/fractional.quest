@@ -5,8 +5,8 @@ import { FAQ } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'What Does a Fractional CMO Do? Day-to-Day Responsibilities & Deliverables | 2025',
-  description: 'Complete breakdown of what fractional CMOs actually do. Day-to-day activities, deliverables, first 90 days timeline, and real examples from marketing leaders. See job descriptions from live roles.',
+  title: 'What Does a Fractional CMO Do?',
+  description: 'What fractional CMOs do day-to-day. Responsibilities, deliverables, first 90 days timeline.',
   keywords: 'what does a fractional cmo do, fractional cmo responsibilities, fractional cmo deliverables, fractional cmo day in the life, fractional cmo job description',
   alternates: {
     canonical: 'https://fractional.quest/what-does-a-fractional-cmo-do',

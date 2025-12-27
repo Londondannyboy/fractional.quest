@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
 
 export const metadata: Metadata = {
-  title: 'CFO Community & Reddit Resources: Networks for Finance Leaders 2025',
-  description: 'Best CFO communities, Reddit forums, and professional networks for finance leaders. Connect with fractional CFOs, share insights, and access peer support.',
+  title: 'CFO Community & Reddit 2025',
+  description: 'CFO communities, Reddit forums, networks for finance leaders. Connect with fractional CFOs.',
   openGraph: {
     title: 'CFO Community & Reddit Resources: Networks for Finance Leaders 2025',
     description: 'Discover CFO communities and Reddit forums for finance professionals.',

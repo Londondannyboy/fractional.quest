@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "What is Fractional Ownership? Complete Guide 2025 | Fractional Quest",
-  description: "Learn about fractional ownership: how it works, types of fractional investments, benefits, risks, and whether it's right for you. Complete UK guide.",
+  title: "Fractional Ownership Guide 2025",
+  description: "What is fractional ownership? How it works, types, benefits, risks. Complete UK guide.",
   keywords: "fractional ownership, fractional ownership UK, fractional investment, shared ownership, fractional property",
   alternates: {
     canonical: "https://fractional.quest/fractional-ownership-guide",

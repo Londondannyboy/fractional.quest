@@ -10,8 +10,8 @@ import { getRoleBreadcrumbs } from '@/lib/seo-config'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Compliance Services UK | Hire a Part-Time Compliance Officer',
-  description: 'Hire a Fractional Compliance Officer for your business. Expert regulatory guidance for FCA, GDPR, and ISO standards. Risk management at a flexible cost.',
+  title: 'Fractional Compliance UK 2025',
+  description: 'Hire a Fractional Compliance Officer. FCA, GDPR, ISO regulatory guidance on demand.',
   keywords: 'fractional compliance officer, fractional compliance manager, hire fractional compliance, part time compliance officer, regulatory compliance services',
   alternates: {
     canonical: 'https://fractional.quest/fractional-compliance-services',

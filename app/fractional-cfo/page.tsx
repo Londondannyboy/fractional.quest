@@ -10,8 +10,8 @@ import { RoleContentHub } from '@/components/RoleContentHub'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CFO: The Complete Guide 2025 | Everything You Need to Know',
-  description: 'The complete guide to Fractional CFOs. Learn what a fractional CFO does, pricing, how to hire one, and how to become a fractional CFO. 12,100+ searches/month.',
+  title: 'Fractional CFO Guide UK 2025',
+  description: 'What is a fractional CFO? Complete guide - pricing, how to hire, become a fractional CFO.',
   keywords: 'fractional cfo, what is a fractional cfo, fractional cfo services, fractional cfo salary, fractional cfo jobs, hire fractional cfo, become fractional cfo',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cfo',

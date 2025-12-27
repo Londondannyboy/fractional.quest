@@ -2,8 +2,8 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Fractional Executive Calculators | Day Rate, Savings & Portfolio Tools',
-  description: 'Free calculators for fractional executives and companies. Calculate day rates, company savings vs full-time hires, and plan your portfolio career. Essential tools for the UK fractional market.',
+  title: 'Fractional Exec Calculators',
+  description: 'Free fractional executive calculators. Day rates, company savings vs full-time, portfolio planning.',
   alternates: {
     canonical: 'https://fractional.quest/calculators'
   }

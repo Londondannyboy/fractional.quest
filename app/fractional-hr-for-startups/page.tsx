@@ -6,8 +6,8 @@ import { RoleCalculator } from '@/components/RoleCalculator'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional HR for Startups | Expert People Leadership for £3k-£8k/Month',
-  description: 'Fractional HR services for startups. Get expert people leadership, employment compliance, and culture building without £150k+ full-time cost. £144 CPC high-value keyword.',
+  title: 'Fractional HR for Startups UK',
+  description: 'Fractional HR for startups. People leadership, employment compliance from £3k-£8k/month.',
   keywords: 'fractional hr for startups, startup hr, fractional hr seed stage, series a hr, startup people leadership, startup hr director',
   alternates: {
     canonical: 'https://fractional.quest/fractional-hr-for-startups',

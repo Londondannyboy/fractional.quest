@@ -6,8 +6,8 @@ import { HireProcessStepper } from '@/components/HireProcessStepper'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Revenue Leadership UK | Hire Part-Time Sales Executives',
-  description: 'Hire fractional revenue leaders for your business. Part-time CROs, VPs of Sales, and Sales Directors. Expert revenue leadership without full-time cost.',
+  title: 'Fractional Revenue UK 2025',
+  description: 'Hire fractional revenue leaders. Part-time CROs, VPs of Sales, Sales Directors.',
   keywords: 'fractional revenue, fractional sales director, part-time sales executive, fractional vp sales, hire revenue leader, fractional cro',
   alternates: { canonical: 'https://fractional.quest/fractional-revenue' },
 }

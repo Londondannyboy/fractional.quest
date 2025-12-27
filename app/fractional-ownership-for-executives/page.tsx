@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Fractional Ownership for Executives | Lifestyle & Investment Guide",
-  description: "How fractional executives use their flexibility and income to access fractional property, jets, and luxury assets. The lifestyle guide for portfolio professionals.",
+  title: "Fractional Ownership for Execs",
+  description: "Fractional ownership for executives. Property, jets, luxury assets. Lifestyle investment guide.",
   keywords: "fractional ownership executives, fractional ownership lifestyle, executive fractional property, portfolio career investments",
   alternates: {
     canonical: "https://fractional.quest/fractional-ownership-for-executives",

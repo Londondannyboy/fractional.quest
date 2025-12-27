@@ -5,8 +5,8 @@ import { FAQ } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'How to Become a Fractional CMO: Complete Career Guide 2025 | Skills, Salary & Jobs',
-  description: 'Complete guide to becoming a fractional CMO. Career path, skills needed, how to get your first client, salary expectations (£700-£1,400/day), and how to build a sustainable fractional practice.',
+  title: 'Become a Fractional CMO 2025',
+  description: 'How to become a fractional CMO. Career path, skills, salary £700-£1,400/day, get your first client.',
   keywords: 'how to become fractional cmo, fractional cmo career, become fractional cmo, fractional cmo jobs, fractional cmo salary',
   alternates: {
     canonical: 'https://fractional.quest/how-to-become-a-fractional-cmo',

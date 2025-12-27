@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: '5 Signs Your Business Needs a Fractional Compliance Officer | UK Guide',
-  description: '5 signs your business needs a fractional compliance officer - FCA authorisation, compliance gaps, scaling challenges, regulatory feedback, and specialist expertise.',
+  title: '5 Signs You Need Compliance Help',
+  description: '5 signs you need a fractional compliance officer. FCA authorisation, gaps, scaling challenges.',
   keywords: 'fractional compliance officer, when to hire compliance officer, compliance officer signs, outsourced compliance, fca compliance help',
   alternates: {
     canonical: 'https://fractional.quest/signs-you-need-fractional-compliance-officer',

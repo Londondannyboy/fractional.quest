@@ -8,8 +8,8 @@ import { FAQ } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Compliance Jobs UK | Fractional & Part-Time Compliance Officer Roles',
-  description: 'Compliance jobs UK - Find fractional compliance officer, part-time compliance, and interim compliance roles. Browse compliance jobs in FinTech, financial services, and regulated industries. £500-£900/day.',
+  title: 'Compliance Jobs UK 2025',
+  description: 'Compliance jobs UK. Fractional, part-time, interim compliance roles. FinTech, financial services.',
   keywords: 'compliance jobs, compliance jobs uk, fractional compliance officer, part time compliance jobs, compliance officer jobs, interim compliance officer, fintech compliance jobs, outsourced compliance, mlro jobs',
   alternates: {
     canonical: 'https://fractional.quest/compliance',

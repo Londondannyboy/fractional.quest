@@ -8,8 +8,8 @@ import { FAQ } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'CRO Jobs & Services UK | Chief Revenue Officer | Fractional Quest',
-  description: 'Find CRO jobs UK - fractional CRO, part-time Chief Revenue Officer, and interim CRO roles. Browse CRO jobs, hire a fractional CRO, or explore revenue leadership services. £1,000-£1,800/day.',
+  title: 'CRO Jobs UK 2025',
+  description: 'CRO jobs UK. Fractional, part-time, interim Chief Revenue Officer. £1,000-£1,800/day.',
   keywords: 'cro, cro jobs, cro jobs uk, chief revenue officer, fractional cro, part time cro, interim cro, cro services, hire cro, cro salary uk, revenue officer jobs',
   alternates: {
     canonical: 'https://fractional.quest/cro',

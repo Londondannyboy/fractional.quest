@@ -6,8 +6,8 @@ import { HireProcessStepper } from '@/components/HireProcessStepper'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Product Leadership UK | Hire Part-Time Product Executives',
-  description: 'Hire fractional product leaders for your business. Part-time CPOs, VPs of Product, and Product Directors. Expert product leadership without full-time cost.',
+  title: 'Fractional Product UK 2025',
+  description: 'Hire fractional product leaders. Part-time CPOs, VPs of Product, Product Directors.',
   keywords: 'fractional product, fractional product director, part-time product executive, fractional vp product, hire product leader',
   alternates: { canonical: 'https://fractional.quest/fractional-product' },
 }

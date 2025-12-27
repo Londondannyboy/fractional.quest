@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Fractional COO for Startups | Operational Leadership for $5k-12k/mo',
-  description: 'Fractional COOs help startups scale from $2M to $20M+ without full-time exec cost. Get systems, team structure, and operational excellence for 60% less.',
+  title: 'Fractional COO for Startups UK',
+  description: 'Fractional COO for startups. Scale operations from $2M to $20M+ for 60% less.',
   keywords: 'fractional coo for startups, startup coo, operations for startups, startup operations executive',
 }
 

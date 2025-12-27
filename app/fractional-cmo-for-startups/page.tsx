@@ -6,8 +6,8 @@ import { FAQ } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CMO for Startups: Why Startups Choose Part-Time Marketing Leadership | 2025',
-  description: 'Complete guide to hiring a fractional CMO for startups. Why startups need fractional vs full-time, stage-by-stage breakdown (pre-seed to Series B), costs, equity models, and when to convert to full-time.',
+  title: 'Fractional CMO for Startups UK',
+  description: 'Why startups hire fractional CMOs. Pre-seed to Series B guide, costs £700-£1,400/day, equity models.',
   keywords: 'fractional cmo for startups, startup fractional cmo, fractional cmo seed stage, fractional cmo series a, startup marketing leadership',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cmo-for-startups',

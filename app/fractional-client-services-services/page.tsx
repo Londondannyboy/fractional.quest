@@ -8,8 +8,8 @@ import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Client Services Director Services UK | Hire a Part-Time CSD',
-  description: 'Hire a Fractional Client Services Director (CSD) or Head of Customer Success. Expert leadership for account management, retention, and client growth. Flexible and high-impact.',
+  title: 'Fractional CSD Services UK',
+  description: 'Hire a Fractional Client Services Director. Account management, retention, client growth.',
   keywords: 'fractional client services director, fractional csd, hire fractional client services, part time customer success director, fractional head of cs, account management leadership',
   alternates: {
     canonical: 'https://fractional.quest/fractional-client-services-services',

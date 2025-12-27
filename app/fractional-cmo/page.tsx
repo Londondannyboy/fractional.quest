@@ -12,8 +12,8 @@ import { RoleContentHub } from '@/components/RoleContentHub'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CMO: Complete Guide to Part-Time Chief Marketing Officers | Fractional.Quest',
-  description: 'Ultimate guide to fractional CMOs. Learn what they do, when to hire, costs (£700-£1,400/day), ROI, and how to find the perfect marketing leader for your business. Browse 100+ fractional CMO jobs.',
+  title: 'Fractional CMO Guide UK 2025',
+  description: 'What is a fractional CMO? Costs £700-£1,400/day, when to hire, ROI guide. Browse 100+ part-time CMO jobs.',
   keywords: 'fractional cmo, part time cmo, fractional chief marketing officer, fractional cmo uk, fractional cmo cost, hire fractional cmo, what is a fractional cmo',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cmo',

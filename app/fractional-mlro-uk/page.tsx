@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
 
 export const metadata: Metadata = {
-  title: 'Fractional MLRO UK | Outsourced Money Laundering Reporting Officer 2025',
-  description: 'Fractional MLRO services for UK firms. Outsourced Money Laundering Reporting Officer (SMF17) for FinTech, crypto, payments & EMIs. Day rates £900-£1,300.',
+  title: 'Fractional MLRO UK 2025',
+  description: 'Outsourced MLRO services for UK firms. SMF17 for FinTech, crypto, payments. £900-£1,300/day.',
   keywords: 'fractional mlro, outsourced mlro, mlro services uk, smf17, money laundering reporting officer, outsourced aml, fractional aml officer, mlro jobs',
   alternates: {
     canonical: 'https://fractional.quest/fractional-mlro-uk',

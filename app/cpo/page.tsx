@@ -8,8 +8,8 @@ import { FAQ } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'CPO Jobs & Services UK | Chief Product Officer | Fractional Quest',
-  description: 'Find CPO jobs UK - fractional CPO, part-time Chief Product Officer, and interim CPO roles. Browse CPO jobs, hire a fractional CPO, or explore CPO services. £800-£1,300/day.',
+  title: 'CPO Jobs UK 2025',
+  description: 'CPO jobs UK. Fractional, part-time, interim Chief Product Officer. £800-£1,300/day.',
   keywords: 'cpo, cpo jobs, cpo jobs uk, chief product officer, fractional cpo, part time cpo, interim cpo, cpo services, hire cpo, cpo salary uk',
   alternates: {
     canonical: 'https://fractional.quest/cpo',

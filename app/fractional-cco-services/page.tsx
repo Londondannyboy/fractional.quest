@@ -10,8 +10,8 @@ import { getRoleBreadcrumbs } from '@/lib/seo-config'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CCO Services UK | Hire a Part-Time Chief Compliance Officer',
-  description: 'Hire a Fractional Chief Compliance Officer (CCO) for your business. Access senior regulatory leadership for FCA, GDPR, and ISO compliance. Expert guidance at a fraction of full-time cost.',
+  title: 'Fractional CCO Services UK',
+  description: 'Hire a Fractional CCO. Senior regulatory leadership for FCA, GDPR, ISO compliance.',
   keywords: 'fractional cco, fractional compliance officer, hire fractional cco, part time cco, fractional chief compliance officer, fractional compliance services',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cco-services',
