@@ -17,8 +17,8 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CMO Jobs UK | Part-Time CMO Roles 2025',
-  description: 'Fractional CMO jobs UK - Find part-time Chief Marketing Officer positions paying £700-£1,400/day. Browse live CMO roles for experienced marketing leaders. Remote & hybrid available.',
+  title: 'Fractional CMO Jobs UK: Part-Time Roles',
+  description: 'Fractional CMO jobs UK. Part-time Chief Marketing Officer positions paying £700-£1,400/day. Remote & hybrid roles for experienced marketing leaders.',
   keywords: 'fractional cmo jobs uk, fractional cmo jobs, part time cmo jobs, fractional cmo uk, cmo jobs uk, part time chief marketing officer, fractional cmo',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cmo-jobs-uk',
