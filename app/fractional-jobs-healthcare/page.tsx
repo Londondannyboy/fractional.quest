@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
-import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
+import { ServerJobGrid } from '@/components/ServerJobGrid'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { FAQ, HEALTHCARE_FAQS } from '@/components/FAQ'
 
@@ -157,7 +157,14 @@ export default async function HealthcarePage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Healthcare Fractional Jobs</h2>
             <p className="text-xl text-gray-500">Browse {stats.totalHealthcare}+ opportunities in life sciences. <a href="https://www.nhsemployers.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">NHS Employers</a> supports workforce innovation across the healthcare sector.</p>
           </div>
-          <EmbeddedJobBoard />
+          <ServerJobGrid
+            jobs={[]}
+            roleCategory="Executive"
+            ctaLink="/fractional-jobs-uk"
+            ctaText="View All Fractional Jobs"
+            maxJobs={9}
+            showViewAll={true}
+          />
         </div>
       </section>
 

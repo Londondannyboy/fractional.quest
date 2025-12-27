@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Suspense } from 'react'
 import { SavingsCalculator } from '@/components/SavingsCalculator'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
-import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
+import { ServerJobGrid } from '@/components/ServerJobGrid'
 import { getAgencies, Agency } from '@/lib/agencies'
 
 export const metadata: Metadata = {
@@ -193,9 +193,14 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
               View All Jobs →
             </Link>
           </div>
-          <Suspense fallback={<div className="bg-white rounded-2xl border border-gray-200 p-8"><div className="animate-pulse space-y-4"><div className="h-10 bg-gray-200 rounded w-1/3"></div><div className="grid grid-cols-2 gap-4"><div className="h-48 bg-gray-200 rounded"></div><div className="h-48 bg-gray-200 rounded"></div></div></div></div>}>
-            <EmbeddedJobBoard pageSlug="fractional-recruitment-agencies" jobsPerPage={6} title="" allJobsLinkText="View All Fractional Jobs" />
-          </Suspense>
+          <ServerJobGrid
+            jobs={[]}
+            roleCategory="Executive"
+            ctaLink="/fractional-jobs-uk"
+            ctaText="View All Fractional Jobs"
+            maxJobs={6}
+            showViewAll={true}
+          />
         </div>
       </section>
 

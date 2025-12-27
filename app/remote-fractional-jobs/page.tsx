@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
-import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
+import { ServerJobGrid } from '@/components/ServerJobGrid'
 import { FAQ } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
@@ -47,13 +47,13 @@ async function getRemoteJobs() {
     const sql = createDbQuery()
     const jobs = await sql`
       SELECT id, slug, title, company_name, location, is_remote, workplace_type,
-        compensation, role_category, skills_required, posted_date
+        compensation, role_category, skills_required, posted_date, description_snippet
       FROM jobs
       WHERE is_active = true AND (is_remote = true OR workplace_type = 'Remote' OR workplace_type = 'Hybrid')
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 6
     `
-    return jobs
+    return jobs as any[]
   } catch (error) {
     return []
   }
@@ -212,11 +212,13 @@ export default async function RemoteFractionalJobsPage() {
       {/* Jobs Board */}
       <section id="jobs" className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <EmbeddedJobBoard
-            defaultWorkType="Remote"
-            title="Latest Remote Fractional Jobs"
-            pageSlug="remote-fractional-jobs"
-            jobsPerPage={12}
+          <ServerJobGrid
+            jobs={jobs}
+            roleCategory="Executive"
+            ctaLink="/fractional-jobs-uk?remote=true"
+            ctaText={`View All ${stats.total}+ Remote Jobs`}
+            maxJobs={12}
+            showViewAll={true}
           />
         </div>
       </section>

@@ -163,7 +163,66 @@ export function JobPostingSchema({
 }
 
 /**
+ * Role-based salary estimates for schema (day rates in GBP)
+ * Used when no compensation is provided - Google prefers estimated salaries over missing
+ */
+const ROLE_SALARY_ESTIMATES: Record<string, { min: number; max: number }> = {
+  'Executive': { min: 1000, max: 2000 },
+  'CEO': { min: 1000, max: 2000 },
+  'CFO': { min: 900, max: 1500 },
+  'Finance': { min: 900, max: 1500 },
+  'CTO': { min: 850, max: 1600 },
+  'Engineering': { min: 850, max: 1600 },
+  'CMO': { min: 800, max: 1400 },
+  'Marketing': { min: 800, max: 1400 },
+  'COO': { min: 850, max: 1400 },
+  'Operations': { min: 850, max: 1400 },
+  'HR': { min: 700, max: 1200 },
+  'CHRO': { min: 800, max: 1300 },
+  'Product': { min: 800, max: 1300 },
+  'CPO': { min: 800, max: 1300 },
+  'Sales': { min: 750, max: 1300 },
+  'CRO': { min: 800, max: 1400 },
+  'default': { min: 700, max: 1200 },
+}
+
+/**
+ * Get estimated salary for a role category
+ */
+function getEstimatedSalary(roleCategory?: string, title?: string): { min: number; max: number } {
+  // Try role category first
+  if (roleCategory && ROLE_SALARY_ESTIMATES[roleCategory]) {
+    return ROLE_SALARY_ESTIMATES[roleCategory]
+  }
+
+  // Try to infer from title
+  if (title) {
+    const t = title.toLowerCase()
+    if (t.includes('ceo') || t.includes('chief executive')) return ROLE_SALARY_ESTIMATES['CEO']
+    if (t.includes('cfo') || t.includes('chief financial')) return ROLE_SALARY_ESTIMATES['CFO']
+    if (t.includes('cto') || t.includes('chief technology')) return ROLE_SALARY_ESTIMATES['CTO']
+    if (t.includes('cmo') || t.includes('chief marketing')) return ROLE_SALARY_ESTIMATES['CMO']
+    if (t.includes('coo') || t.includes('chief operating')) return ROLE_SALARY_ESTIMATES['COO']
+    if (t.includes('chro') || t.includes('chief people') || t.includes('hr director')) return ROLE_SALARY_ESTIMATES['HR']
+    if (t.includes('cpo') || t.includes('chief product')) return ROLE_SALARY_ESTIMATES['Product']
+    if (t.includes('cro') || t.includes('chief revenue') || t.includes('sales director')) return ROLE_SALARY_ESTIMATES['Sales']
+  }
+
+  return ROLE_SALARY_ESTIMATES['default']
+}
+
+/**
+ * Calculate validThrough date (30 days from posted date)
+ */
+function calculateValidThrough(postedDate?: string): string {
+  const baseDate = postedDate ? new Date(postedDate) : new Date()
+  const validThrough = new Date(baseDate.getTime() + 30 * 24 * 60 * 60 * 1000)
+  return validThrough.toISOString().split('T')[0]
+}
+
+/**
  * Generate JobPosting schema for a list of jobs (for job listing pages)
+ * Enhanced with salary estimates, validThrough, and complete schema fields
  */
 interface JobListingSchemaProps {
   jobs: Array<{
@@ -176,43 +235,86 @@ interface JobListingSchemaProps {
     compensation?: string
     posted_date?: string
     description_snippet?: string
+    role_category?: string
+    skills_required?: string[]
   }>
   pageUrl: string
 }
 
 export function JobListingSchema({ jobs, pageUrl }: JobListingSchemaProps) {
-  // Generate ItemList schema for multiple jobs
+  // Generate ItemList schema for multiple jobs with full compliance
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    itemListElement: jobs.map((job, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      item: {
-        '@type': 'JobPosting',
-        '@id': `https://fractional.quest/fractional-job/${job.slug}`,
-        title: job.title,
-        hiringOrganization: {
-          '@type': 'Organization',
-          name: job.company_name || 'Confidential',
+    itemListElement: jobs.map((job, index) => {
+      const datePosted = job.posted_date || new Date().toISOString().split('T')[0]
+      const validThrough = calculateValidThrough(job.posted_date)
+      const estimatedSalary = getEstimatedSalary(job.role_category, job.title)
+      const parsedSalary = job.compensation ? parseCompensation(job.compensation) : null
+
+      // Build base salary - use parsed if available, otherwise estimate
+      const baseSalary = parsedSalary ? {
+        '@type': 'MonetaryAmount',
+        currency: parsedSalary.currency || 'GBP',
+        value: {
+          '@type': 'QuantitativeValue',
+          minValue: parsedSalary.minValue,
+          ...(parsedSalary.maxValue && { maxValue: parsedSalary.maxValue }),
+          unitText: parsedSalary.unitText || 'DAY',
         },
-        datePosted: job.posted_date || new Date().toISOString().split('T')[0],
-        ...(job.description_snippet && { description: job.description_snippet }),
-        ...(job.is_remote && { jobLocationType: 'TELECOMMUTE' }),
-        ...(job.location && !job.is_remote && {
-          jobLocation: {
-            '@type': 'Place',
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: job.location,
-              addressCountry: 'GB',
-            },
+      } : {
+        '@type': 'MonetaryAmount',
+        currency: 'GBP',
+        value: {
+          '@type': 'QuantitativeValue',
+          minValue: estimatedSalary.min,
+          maxValue: estimatedSalary.max,
+          unitText: 'DAY',
+        },
+      }
+
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'JobPosting',
+          '@id': `https://fractional.quest/fractional-job/${job.slug}`,
+          title: job.title,
+          description: job.description_snippet || `${job.title} position at ${job.company_name}. Fractional/part-time opportunity in the UK.`,
+          hiringOrganization: {
+            '@type': 'Organization',
+            name: job.company_name || 'Confidential',
           },
-        }),
-        employmentType: 'CONTRACTOR',
-        url: `https://fractional.quest/fractional-job/${job.slug}`,
-      },
-    })),
+          datePosted,
+          validThrough,
+          employmentType: 'CONTRACTOR',
+          baseSalary,
+          directApply: true,
+          url: `https://fractional.quest/fractional-job/${job.slug}`,
+          // Location handling
+          ...(job.is_remote ? {
+            jobLocationType: 'TELECOMMUTE',
+            applicantLocationRequirements: {
+              '@type': 'Country',
+              name: 'United Kingdom',
+            },
+          } : {
+            jobLocation: {
+              '@type': 'Place',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: job.location || 'United Kingdom',
+                addressCountry: 'GB',
+              },
+            },
+          }),
+          // Skills if available
+          ...(job.skills_required && job.skills_required.length > 0 && {
+            skills: job.skills_required.join(', '),
+          }),
+        },
+      }
+    }),
     numberOfItems: jobs.length,
     url: pageUrl,
   }

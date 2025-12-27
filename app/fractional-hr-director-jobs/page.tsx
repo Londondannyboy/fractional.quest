@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Suspense } from 'react'
 import { createDbQuery } from '@/lib/db'
-import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
+import { ServerJobGrid } from '@/components/ServerJobGrid'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { DesktopOnly } from '@/components/DesktopOnly'
 import { RoleCalculator } from '@/components/RoleCalculator'
@@ -153,9 +153,14 @@ export default async function FractionalHRDirectorJobsPage() {
             </div>
             <p className="text-gray-500">Pre-filtered to HR. Look for Director-level roles.</p>
           </div>
-          <Suspense fallback={<div className="bg-white rounded-2xl border border-gray-200 p-8"><div className="animate-pulse space-y-4"><div className="h-10 bg-gray-200 rounded w-1/3"></div><div className="grid grid-cols-2 gap-4"><div className="h-48 bg-gray-200 rounded"></div><div className="h-48 bg-gray-200 rounded"></div></div></div></div>}>
-            <EmbeddedJobBoard defaultDepartment="HR" pageSlug="fractional-hr-director-jobs" jobsPerPage={12} title="HR Director Jobs" allJobsLinkText="View All HR Jobs" />
-          </Suspense>
+          <ServerJobGrid
+            jobs={jobs}
+            roleCategory="HR"
+            ctaLink="/fractional-jobs-uk?department=HR"
+            ctaText={`View All ${jobCount}+ HR Director Jobs`}
+            maxJobs={9}
+            showViewAll={true}
+          />
         </div>
       </section>
 

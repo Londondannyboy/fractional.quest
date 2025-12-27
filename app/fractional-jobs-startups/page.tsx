@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
-import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
+import { ServerJobGrid } from '@/components/ServerJobGrid'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { FAQ, STARTUPS_FAQS } from '@/components/FAQ'
 
@@ -160,7 +160,14 @@ export default async function StartupJobsPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Startup Fractional Jobs</h2>
             <p className="text-xl text-gray-500">Browse {stats.total}+ opportunities at startups and scale-ups</p>
           </div>
-          <EmbeddedJobBoard />
+          <ServerJobGrid
+            jobs={[]}
+            roleCategory="Executive"
+            ctaLink="/fractional-jobs-uk"
+            ctaText={`View All ${stats.total}+ Startup Jobs`}
+            maxJobs={9}
+            showViewAll={true}
+          />
         </div>
       </section>
 

@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
-import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
+import { ServerJobGrid } from '@/components/ServerJobGrid'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { FAQ, FINANCE_FAQS } from '@/components/FAQ'
 
@@ -153,7 +153,14 @@ export default async function FinanceJobsPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Fractional Finance Jobs</h2>
             <p className="text-xl text-gray-500">Browse {stats.total}+ finance leadership opportunities</p>
           </div>
-          <EmbeddedJobBoard defaultDepartment="Finance" />
+          <ServerJobGrid
+            jobs={[]}
+            roleCategory="Finance"
+            ctaLink="/fractional-jobs-uk?department=Finance"
+            ctaText={`View All ${stats.total}+ Finance Jobs`}
+            maxJobs={9}
+            showViewAll={true}
+          />
         </div>
       </section>
 

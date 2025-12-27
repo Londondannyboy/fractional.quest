@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
-import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
+import { ServerJobGrid } from '@/components/ServerJobGrid'
 import { FAQ } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
@@ -217,10 +217,13 @@ export default async function FractionalDirectorJobsPage() {
       {/* Jobs Board */}
       <section id="jobs" className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <EmbeddedJobBoard
-            title="Latest Fractional Director Jobs"
-            pageSlug="fractional-director-jobs-uk"
-            jobsPerPage={12}
+          <ServerJobGrid
+            jobs={jobs}
+            roleCategory="Executive"
+            ctaLink="/fractional-jobs-uk"
+            ctaText={`View All ${stats.total}+ Director Jobs`}
+            maxJobs={12}
+            showViewAll={true}
           />
         </div>
       </section>

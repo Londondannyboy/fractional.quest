@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
-import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
+import { ServerJobGrid } from '@/components/ServerJobGrid'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { FAQ, TECH_FAQS } from '@/components/FAQ'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
@@ -185,7 +185,14 @@ export default async function TechJobsPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Fractional Tech Jobs</h2>
             <p className="text-xl text-gray-500">Browse {stats.total}+ tech leadership opportunities</p>
           </div>
-          <EmbeddedJobBoard defaultDepartment="Engineering" />
+          <ServerJobGrid
+            jobs={[]}
+            roleCategory="Engineering"
+            ctaLink="/fractional-jobs-uk?department=Engineering"
+            ctaText={`View All ${stats.total}+ Tech Jobs`}
+            maxJobs={9}
+            showViewAll={true}
+          />
         </div>
       </section>
 

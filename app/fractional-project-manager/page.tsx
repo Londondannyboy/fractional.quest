@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Suspense } from 'react'
 import { createDbQuery } from '@/lib/db'
-import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
+import { ServerJobGrid } from '@/components/ServerJobGrid'
 import { FAQ } from '@/components/FAQ'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { DesktopOnly } from '@/components/DesktopOnly'
@@ -55,6 +55,24 @@ async function getFeaturedCompanies() {
   }
 }
 
+async function getPMJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote, workplace_type,
+        compensation, role_category, skills_required, posted_date, description_snippet
+      FROM jobs
+      WHERE is_active = true AND (role_category = 'Operations' OR title ILIKE '%project%manager%' OR title ILIKE '%programme%manager%')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 12
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
 const PM_FAQS = [
   {
     question: 'What is a fractional project manager?',
@@ -83,7 +101,7 @@ const PM_FAQS = [
 ]
 
 export default async function FractionalProjectManagerPage() {
-  const [stats, companies] = await Promise.all([getPMStats(), getFeaturedCompanies()])
+  const [stats, companies, jobs] = await Promise.all([getPMStats(), getFeaturedCompanies(), getPMJobs()])
 
   // Schema markup for the hub page
   const collectionSchema = {
@@ -331,9 +349,14 @@ export default async function FractionalProjectManagerPage() {
             </div>
             <p className="text-gray-500">Pre-filtered to Operations & PM roles. Change filters to explore.</p>
           </div>
-          <Suspense fallback={<div className="bg-white rounded-2xl border border-gray-200 p-8"><div className="animate-pulse space-y-4"><div className="h-10 bg-gray-200 rounded w-1/3"></div><div className="grid grid-cols-2 gap-4"><div className="h-48 bg-gray-200 rounded"></div><div className="h-48 bg-gray-200 rounded"></div></div></div></div>}>
-            <EmbeddedJobBoard defaultDepartment="Operations" pageSlug="fractional-project-manager" jobsPerPage={10} title="Latest Project Manager Jobs" allJobsLinkText="View All PM Jobs" />
-          </Suspense>
+          <ServerJobGrid
+            jobs={jobs}
+            roleCategory="Operations"
+            ctaLink="/fractional-jobs-uk?department=Operations"
+            ctaText={`View All ${stats.total}+ PM Jobs`}
+            maxJobs={9}
+            showViewAll={true}
+          />
         </div>
       </section>
 

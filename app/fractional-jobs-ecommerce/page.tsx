@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
-import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
+import { ServerJobGrid } from '@/components/ServerJobGrid'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { FAQ, ECOMMERCE_FAQS } from '@/components/FAQ'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
@@ -166,7 +166,14 @@ export default async function EcommercePage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">E-commerce Fractional Jobs</h2>
             <p className="text-xl text-gray-500">Browse {stats.totalEcommerce}+ opportunities in online retail</p>
           </div>
-          <EmbeddedJobBoard />
+          <ServerJobGrid
+            jobs={[]}
+            roleCategory="Executive"
+            ctaLink="/fractional-jobs-uk"
+            ctaText="View All E-commerce Jobs"
+            maxJobs={9}
+            showViewAll={true}
+          />
         </div>
       </section>
 

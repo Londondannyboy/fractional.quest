@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Suspense } from 'react'
 import { createDbQuery } from '@/lib/db'
-import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
+import { ServerJobGrid } from '@/components/ServerJobGrid'
 import { FAQ } from '@/components/FAQ'
 
 export const revalidate = 3600
@@ -133,9 +133,14 @@ export default async function ComplianceHubPage() {
               View All Compliance Jobs →
             </Link>
           </div>
-          <Suspense fallback={<div className="bg-white rounded-2xl border border-gray-200 p-8"><div className="animate-pulse space-y-4"><div className="h-10 bg-gray-200 rounded w-1/3"></div><div className="grid grid-cols-2 gap-4"><div className="h-48 bg-gray-200 rounded"></div><div className="h-48 bg-gray-200 rounded"></div></div></div></div>}>
-            <EmbeddedJobBoard defaultDepartment="Compliance" pageSlug="compliance" jobsPerPage={6} title="" allJobsLinkText="View All Compliance Jobs UK" />
-          </Suspense>
+          <ServerJobGrid
+            jobs={[]}
+            roleCategory="Executive"
+            ctaLink="/fractional-jobs-uk"
+            ctaText="View All Compliance Jobs UK"
+            maxJobs={6}
+            showViewAll={true}
+          />
         </div>
       </section>
 

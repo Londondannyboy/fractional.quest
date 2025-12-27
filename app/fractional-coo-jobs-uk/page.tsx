@@ -7,7 +7,7 @@ import { DesktopOnly } from '@/components/DesktopOnly'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleContentHub } from '@/components/RoleContentHub'
 import { FracSection } from '@/components/FracSection'
-import { EmbeddedJobBoard } from '@/components/EmbeddedJobBoard'
+import { ServerJobGrid } from '@/components/ServerJobGrid'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
@@ -183,26 +183,27 @@ export default async function FractionalCooJobsUkPage() {
         </div>
       </section>
 
-      {/* JOBS BOARD - Prominent at the top */}
-      <section id="jobs" className="py-12 md:py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <EmbeddedJobBoard 
-            defaultDepartment="Operations" 
-            title="Latest Fractional COO Jobs" 
-            pageSlug="fractional-coo-jobs-uk"
+      {/* JOBS SECTION - Server-rendered for SEO */}
+      <section id="jobs" className="py-16 md:py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Browse</span>
+              <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional COO Jobs UK Listings</h2>
+            </div>
+            <p className="text-gray-500">{jobs.length}+ live fractional COO jobs in the UK</p>
+          </div>
+
+          {/* Server-rendered job grid - visible to search engines */}
+          <ServerJobGrid
+            jobs={jobs}
+            roleCategory="Operations"
+            ctaLink="/fractional-jobs-uk?department=Operations"
+            ctaText={`View All ${stats.total}+ Fractional COO Jobs UK`}
+            maxJobs={9}
+            showViewAll={true}
           />
         </div>
-      </section>
-
-      {/* Server-rendered Jobs for SEO - sr-only */}
-      <section className="sr-only">
-        {jobs.map(job => (
-          <div key={job.id}>
-            <h3>{job.title} at {job.company_name}</h3>
-            <p>{job.description_snippet}</p>
-            <a href={`/fractional-job/${job.slug}`}>View Job</a>
-          </div>
-        ))}
       </section>
 
       {/* Calculator */}
