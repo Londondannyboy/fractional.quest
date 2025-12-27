@@ -9,8 +9,8 @@ import { JobListingSchema } from '@/components/JobPostingSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Jobs | CFO, CTO, CMO, COO Executive Roles UK',
-  description: 'Browse all fractional jobs: CFO, CTO, CMO, COO and executive roles. Part-time leadership positions paying £700-£1,500/day. Find your next fractional opportunity.',
+  title: 'Fractional Jobs UK: Executive Roles 2025',
+  description: 'Browse fractional jobs: CFO, CTO, CMO, COO roles. Part-time executive positions paying £700-£1,500/day across the UK.',
   keywords: 'fractional jobs, fractional executive jobs, fractional CFO, fractional CTO, fractional CMO, fractional COO, part-time executive, interim executive, portfolio career',
   alternates: {
     canonical: 'https://fractional.quest/fractional-jobs',
