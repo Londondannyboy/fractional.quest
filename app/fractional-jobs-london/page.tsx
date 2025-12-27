@@ -240,69 +240,57 @@ export default async function FractionalJobsLondonPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostingsSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      {/* Hero Image Banner */}
-      <section className="relative h-[280px] md:h-[350px] overflow-hidden">
+      {/* Hero Section with H1 */}
+      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-12 md:py-16">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80')`,
           }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/60 to-gray-900/80" />
-        </div>
-        <div className="relative z-10 h-full flex items-end max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+        />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-white/80">
+          <nav className="flex items-center gap-2 text-sm text-white/70 mb-6">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
             <Link href="/fractional-jobs-uk" className="hover:text-white transition-colors">UK Jobs</Link>
             <span>/</span>
             <span className="text-white font-medium">London</span>
           </nav>
-        </div>
-      </section>
 
-      {/* H1 Section - White Background */}
-      <section className="bg-white py-12 md:py-16 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="flex flex-wrap items-center gap-3 mb-4">
-              <span className="inline-block bg-blue-100 text-blue-800 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
-                {stats.totalLondon}+ London Opportunities
-              </span>
-              <span className="text-gray-500 text-xs">
-                Updated {lastUpdatedDisplay}
-              </span>
-            </div>
+          <div className="flex flex-wrap items-center gap-3 mb-4">
+            <span className="inline-block bg-blue-500/20 text-blue-200 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-blue-400/30">
+              {stats.totalLondon}+ London Jobs
+            </span>
+            <span className="text-gray-400 text-xs">
+              Updated {lastUpdatedDisplay}
+            </span>
+          </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
-              Fractional Jobs London
-            </h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 leading-tight">
+            Fractional Jobs London
+          </h1>
 
-            <img
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
-              alt="Fractional jobs London - executive opportunities in the City"
-              className="w-full max-w-md rounded-lg shadow-lg mb-8 hidden md:block"
-            />
+          <p className="text-lg text-gray-300 mb-6 max-w-2xl">
+            CFO, CTO, CMO & executive roles in the City, Canary Wharf and beyond. Premium day rates from £900-£1,500.
+          </p>
 
-            <p className="text-xl text-gray-600 mb-8 max-w-xl">
-              CFO, CTO, CMO & executive roles in the City, Canary Wharf and beyond. Premium day rates from £900-£1,500. London's thriving business ecosystem, supported by organizations like the <a href="https://www.britishchambers.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Chambers of Commerce</a>, creates exceptional opportunities for fractional executives.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="#jobs"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg bg-gray-900 text-white hover:bg-black transition-all duration-200 shadow-lg"
-              >
-                Browse London Jobs ↓
-              </Link>
-              <Link
-                href="/fractional-jobs-uk"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg bg-white text-gray-900 border border-gray-300 hover:bg-gray-50 transition-all duration-200"
-              >
-                View All UK Jobs
-              </Link>
-            </div>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="#jobs"
+              className="inline-flex items-center px-6 py-3 text-sm font-semibold rounded-lg bg-white text-gray-900 hover:bg-gray-100 transition-colors"
+            >
+              Browse Jobs
+              <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            <Link
+              href="/fractional-jobs-uk"
+              className="inline-flex items-center px-6 py-3 text-sm font-semibold rounded-lg border border-gray-600 text-white hover:bg-gray-800 transition-colors"
+            >
+              All UK Jobs
+            </Link>
           </div>
         </div>
       </section>
