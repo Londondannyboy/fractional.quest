@@ -304,7 +304,7 @@ export default async function HealthcarePage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Healthcare Fractional FAQs</h2>
             <p className="text-xl text-gray-500">Common questions about fractional work in healthcare. For executive career guidance, visit the <a href="https://www.iod.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a>.</p>
           </div>
-          <FAQ skipSchema={true} items={HEALTHCARE_FAQS} title="" />
+          <FAQ items={HEALTHCARE_FAQS} title="" />
         </div>
       </section>
 

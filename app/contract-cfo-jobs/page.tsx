@@ -469,7 +469,7 @@ export default function ContractCFOJobsPage() {
           </div>
 
           {/* FAQ Section */}
-          <FAQ skipSchema={true} items={faqItems} title="Contract CFO Jobs FAQs" />
+          <FAQ items={faqItems} title="Contract CFO Jobs FAQs" />
 
           {/* Related Resources */}
           <section className="mt-12 rounded-xl bg-slate-50 p-8">

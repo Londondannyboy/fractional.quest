@@ -260,7 +260,7 @@ export default async function CambridgePage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Cambridge Fractional Jobs FAQ
           </h2>
-          <FAQ skipSchema={true} faqs={CAMBRIDGE_FAQS} title="" />
+          <FAQ faqs={CAMBRIDGE_FAQS} title="" />
         </div>
       </section>
 

@@ -375,7 +375,7 @@ export default async function FractionalJobsPage() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
-          <FAQ skipSchema={true} faqs={FRACTIONAL_FAQS} />
+          <FAQ faqs={FRACTIONAL_FAQS} />
         </div>
       </section>
 

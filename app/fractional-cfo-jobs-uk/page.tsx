@@ -360,7 +360,7 @@ export default async function FractionalCfoJobsUkPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-2 block">FAQ</span>
             <h2 className="font-editorial text-3xl md:text-4xl font-bold text-gray-900">Common Questions</h2>
           </div>
-          <FAQ skipSchema={true} items={CFO_FAQS} title="" />
+          <FAQ items={CFO_FAQS} title="" />
         </div>
       </section>
 

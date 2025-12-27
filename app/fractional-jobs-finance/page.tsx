@@ -294,7 +294,7 @@ export default async function FinanceJobsPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Finance Fractional FAQs</h2>
             <p className="text-xl text-gray-500">Common questions about fractional finance roles</p>
           </div>
-          <FAQ skipSchema={true} items={FINANCE_FAQS} title="" />
+          <FAQ items={FINANCE_FAQS} title="" />
         </div>
       </section>
 

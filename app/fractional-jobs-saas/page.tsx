@@ -363,7 +363,7 @@ export default async function SaasPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">SaaS Fractional FAQs</h2>
             <p className="text-xl text-gray-500">Common questions about fractional work in SaaS</p>
           </div>
-          <FAQ skipSchema={true} items={SAAS_FAQS} title="" />
+          <FAQ items={SAAS_FAQS} title="" />
         </div>
       </section>
 

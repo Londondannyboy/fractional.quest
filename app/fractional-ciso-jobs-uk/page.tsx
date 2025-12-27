@@ -511,7 +511,7 @@ export default async function FractionalCisoJobsUkPage() {
               Common Questions About Fractional CISO Jobs UK
             </h2>
           </div>
-          <FAQ skipSchema={true} items={CISO_FAQS} title="" />
+          <FAQ items={CISO_FAQS} title="" />
         </div>
       </section>
 

@@ -202,7 +202,7 @@ export default function OutsourcedCFOServicesPage() {
             </div>
           </div>
 
-          <FAQ skipSchema={true} items={faqItems} title="Outsourced CFO Services FAQs" />
+          <FAQ items={faqItems} title="Outsourced CFO Services FAQs" />
 
           <section className="mt-12 rounded-xl bg-slate-50 p-8">
             <h2 className="mb-6 text-2xl font-bold text-slate-900">Related Resources</h2>

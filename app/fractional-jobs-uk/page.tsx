@@ -844,7 +844,7 @@ export default async function FractionalJobsUKPage() {
               items={ukFractionalJobsFAQs}
               title=""
               className=""
-              skipSchema={true}
+             
             />
           </div>
         </div>

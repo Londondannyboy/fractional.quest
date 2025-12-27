@@ -353,7 +353,7 @@ export default function HowToBecomeFractionalComplianceOfficerPage() {
               Common Questions
             </h2>
           </div>
-          <FAQ skipSchema={true} items={CAREER_FAQS} title="" />
+          <FAQ items={CAREER_FAQS} title="" />
         </div>
       </section>
 

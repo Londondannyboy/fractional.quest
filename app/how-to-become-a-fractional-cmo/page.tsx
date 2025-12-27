@@ -46,8 +46,35 @@ const faqItems = [
 ]
 
 export default function HowToBecomeFractionalCMOPage() {
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Become a Fractional CMO',
+    description: 'Step-by-step guide to launching a fractional CMO career in the UK with day rates of £700-£1,400.',
+    totalTime: 'P6M',
+    step: [
+      { '@type': 'HowToStep', position: 1, name: 'Build Marketing Leadership Experience', text: 'Gain 15+ years marketing experience with 5+ years in leadership roles. Proven track record scaling companies and driving measurable results.' },
+      { '@type': 'HowToStep', position: 2, name: 'Develop Industry Expertise', text: 'Specialize in specific sectors (B2B SaaS, FinTech, eCommerce) and company stages where you can demonstrate deep expertise.' },
+      { '@type': 'HowToStep', position: 3, name: 'Set Up Your Business', text: 'Register limited company, set day rate (£700-£1,400), create service packages, and build LinkedIn thought leadership.' },
+      { '@type': 'HowToStep', position: 4, name: 'Find First Clients', text: 'Start with network: former colleagues, investors, founders you know. Join fractional job boards and attend startup events.' },
+      { '@type': 'HowToStep', position: 5, name: 'Scale Your Practice', text: 'Build case studies from initial clients, expand through referrals, and work with 2-3 clients for £150k-£220k+ annually.' },
+    ],
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://fractional.quest' },
+      { '@type': 'ListItem', position: 2, name: 'CMO', item: 'https://fractional.quest/fractional-cmo' },
+      { '@type': 'ListItem', position: 3, name: 'How to Become', item: 'https://fractional.quest/how-to-become-a-fractional-cmo' },
+    ],
+  }
+
   return (
     <div className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero */}
       <section className="bg-gradient-to-br from-rose-600 to-rose-500 py-24">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -483,7 +510,7 @@ export default function HowToBecomeFractionalCMOPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-black text-gray-900 mb-8">Frequently Asked Questions</h2>
-          <FAQ skipSchema={true} items={faqItems} title="" />
+          <FAQ items={faqItems} title="" />
         </div>
       </section>
 

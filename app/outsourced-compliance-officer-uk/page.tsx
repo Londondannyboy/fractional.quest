@@ -772,7 +772,7 @@ export default function OutsourcedComplianceOfficerUKPage() {
               Outsourced Compliance Officer: Common Questions
             </h2>
           </div>
-          <FAQ skipSchema={true} items={COMPLIANCE_FAQS} title="" />
+          <FAQ items={COMPLIANCE_FAQS} title="" />
         </div>
       </section>
 

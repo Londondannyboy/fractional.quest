@@ -719,7 +719,7 @@ export default async function FractionalCHROJobsUKPage() {
               Common Questions About Fractional CHRO Jobs UK
             </h2>
           </div>
-          <FAQ skipSchema={true} items={CHRO_CAREER_FAQS} title="" />
+          <FAQ items={CHRO_CAREER_FAQS} title="" />
         </div>
       </section>
 

@@ -799,7 +799,7 @@ export default function FractionalCISOGuidePage() {
       <section className="py-20 bg-gray-50 border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8">Frequently Asked Questions</h2>
-          <FAQ skipSchema={true} faqs={CISO_FAQS} />
+          <FAQ faqs={CISO_FAQS} />
         </div>
       </section>
 

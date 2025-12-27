@@ -386,7 +386,7 @@ export default function FractionalCTOServicesPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
-          <FAQ skipSchema={true} items={CTO_SERVICE_FAQS} title="" />
+          <FAQ items={CTO_SERVICE_FAQS} title="" />
         </div>
       </section>
 

@@ -408,7 +408,7 @@ export default async function PartTimeCfoJobsUkPage() {
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Part-Time CFO & Fractional CFO Jobs FAQ</h2>
             <p className="text-gray-600 mt-4">Common questions about part-time CFO jobs, fractional CFO roles, and remote CFO positions in the UK.</p>
           </div>
-          <FAQ skipSchema={true} items={CFO_FAQS} title="" />
+          <FAQ items={CFO_FAQS} title="" />
         </div>
       </section>
 

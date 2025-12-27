@@ -207,7 +207,7 @@ export default async function PartTimeHRJobsUKPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Frequently Asked Questions
           </h2>
-          <FAQ skipSchema={true} faqs={HR_FAQS} title="" />
+          <FAQ faqs={HR_FAQS} title="" />
         </div>
       </section>
 

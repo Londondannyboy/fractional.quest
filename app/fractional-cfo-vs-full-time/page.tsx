@@ -568,7 +568,7 @@ export default function FractionalVsFullTimeCFOPage() {
           </div>
 
           {/* FAQ Section */}
-          <FAQ skipSchema={true} items={faqItems} title="Fractional vs Full-Time CFO FAQs" />
+          <FAQ items={faqItems} title="Fractional vs Full-Time CFO FAQs" />
 
           {/* Related Resources */}
           <section className="mt-12 rounded-xl bg-slate-50 p-8">

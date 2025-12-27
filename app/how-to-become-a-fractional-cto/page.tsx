@@ -39,8 +39,36 @@ const BECOME_CTO_FAQS = [
 ]
 
 export default function HowToBecomeFractionalCTOPage() {
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Become a Fractional CTO',
+    description: 'Step-by-step guide to launching a fractional CTO career in the UK.',
+    image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    totalTime: 'P6M',
+    step: [
+      { '@type': 'HowToStep', position: 1, name: 'Build Technical Experience', text: 'Gain 15+ years in technology with 5+ years in senior leadership (CTO, VP Engineering). Experience scaling teams and building systems at scale.' },
+      { '@type': 'HowToStep', position: 2, name: 'Define Your Specialization', text: 'Focus on specific technologies, industries (SaaS, FinTech), and company stages (seed, Series A, scale-up).' },
+      { '@type': 'HowToStep', position: 3, name: 'Set Up Your Business', text: 'Register limited company, get professional indemnity insurance, create contract templates, and set your day rate (£850-£1,200).' },
+      { '@type': 'HowToStep', position: 4, name: 'Find First Clients', text: 'Start with your network - former colleagues, investors, companies you advised. First 1-2 clients should know and trust you.' },
+      { '@type': 'HowToStep', position: 5, name: 'Build Your Practice', text: 'Expand through LinkedIn, fractional CTO agencies, and referrals once you have case studies from happy clients.' },
+    ],
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://fractional.quest' },
+      { '@type': 'ListItem', position: 2, name: 'CTO', item: 'https://fractional.quest/fractional-cto' },
+      { '@type': 'ListItem', position: 3, name: 'How to Become', item: 'https://fractional.quest/how-to-become-a-fractional-cto' },
+    ],
+  }
+
   return (
     <div className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="py-20 md:py-28 bg-white relative bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1920)' }}>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10">
@@ -239,7 +267,7 @@ export default function HowToBecomeFractionalCTOPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Frequently Asked Questions</h2>
           </div>
-          <FAQ skipSchema={true} items={BECOME_CTO_FAQS} title="" />
+          <FAQ items={BECOME_CTO_FAQS} title="" />
         </div>
       </section>
 

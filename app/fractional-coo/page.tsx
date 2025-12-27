@@ -387,7 +387,7 @@ export default function FractionalCOOPage() {
                 <span className="text-xs font-bold uppercase tracking-[0.2em] text-orange-600 mb-2 block">FAQ</span>
                 <h2 className="text-3xl md:text-4xl font-black text-gray-900">Common Questions</h2>
               </div>
-              <FAQ skipSchema={true} items={COO_FAQS} title="" />
+              <FAQ items={COO_FAQS} title="" />
             </section>
 
             {/* CTA Section */}

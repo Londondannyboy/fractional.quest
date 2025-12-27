@@ -39,8 +39,38 @@ const faqItems = [
 ]
 
 export default function HowToBecomeAFractionalExecutivePage() {
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Become a Fractional Executive',
+    description: 'Step-by-step guide to launching a successful fractional executive career in the UK.',
+    image: 'https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    totalTime: 'P6M',
+    estimatedCost: { '@type': 'MonetaryAmount', currency: 'GBP', value: '2000' },
+    step: [
+      { '@type': 'HowToStep', position: 1, name: 'Assess Your Readiness', text: 'Evaluate if you have 15+ years experience, 5+ at senior level, proven track record, strong network, and financial runway for 6-12 months.' },
+      { '@type': 'HowToStep', position: 2, name: 'Define Your Value Proposition', text: 'Specialize by function (CFO, CMO, CTO), industry focus, company stage, and specific problems you solve. Avoid being a generalist.' },
+      { '@type': 'HowToStep', position: 3, name: 'Build Your Infrastructure', text: 'Register limited company, open business bank account, arrange accountant, get professional indemnity insurance, optimize LinkedIn, create rate card.' },
+      { '@type': 'HowToStep', position: 4, name: 'Find Your First Clients', text: 'Leverage your network: former employers, ex-colleagues now CEOs, investors, and professional referrals. First 2-3 clients come from warm connections.' },
+      { '@type': 'HowToStep', position: 5, name: 'Structure Your Engagements', text: 'Define scope, time commitment (1-3 days/week), pricing (day rate or monthly retainer), and contract terms including notice period and IP ownership.' },
+    ],
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://fractional.quest' },
+      { '@type': 'ListItem', position: 2, name: 'Careers', item: 'https://fractional.quest/fractional-executive' },
+      { '@type': 'ListItem', position: 3, name: 'How to Become', item: 'https://fractional.quest/how-to-become-a-fractional-executive' },
+    ],
+  }
+
   return (
     <div className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
       {/* Hero */}
       <section className="bg-gradient-to-br from-amber-600 to-amber-500 py-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
@@ -301,7 +331,7 @@ export default function HowToBecomeAFractionalExecutivePage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-black text-gray-900 mb-8">FAQs</h2>
-          <FAQ skipSchema={true} items={faqItems} title="" />
+          <FAQ items={faqItems} title="" />
         </div>
       </section>
 

@@ -411,7 +411,7 @@ export default async function LiverpoolPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Liverpool Fractional Jobs FAQ
           </h2>
-          <FAQ skipSchema={true} faqs={LIVERPOOL_FAQS} title="" />
+          <FAQ faqs={LIVERPOOL_FAQS} title="" />
         </div>
       </section>
 

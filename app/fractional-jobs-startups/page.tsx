@@ -395,7 +395,7 @@ export default async function StartupJobsPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Startup Fractional FAQs</h2>
             <p className="text-xl text-gray-500">Common questions about fractional work at startups</p>
           </div>
-          <FAQ skipSchema={true} items={STARTUPS_FAQS} title="" />
+          <FAQ items={STARTUPS_FAQS} title="" />
         </div>
       </section>
 

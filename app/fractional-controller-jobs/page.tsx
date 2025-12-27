@@ -146,7 +146,7 @@ export default function FractionalControllerJobsPage() {
             </Link>
           </div>
 
-          <FAQ skipSchema={true} items={faqItems} title="Fractional Controller FAQs" />
+          <FAQ items={faqItems} title="Fractional Controller FAQs" />
 
           <section className="mt-12 rounded-xl bg-slate-50 p-8">
             <h2 className="mb-6 text-2xl font-bold text-slate-900">Related Resources</h2>

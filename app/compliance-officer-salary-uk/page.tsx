@@ -471,7 +471,7 @@ export default function ComplianceOfficerSalaryUKPage() {
               Compliance Officer Salary: Common Questions
             </h2>
           </div>
-          <FAQ skipSchema={true} items={SALARY_FAQS} title="" />
+          <FAQ items={SALARY_FAQS} title="" />
         </div>
       </section>
 

@@ -289,7 +289,7 @@ export default async function EcommercePage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">E-commerce Fractional FAQs</h2>
             <p className="text-xl text-gray-500">Common questions about fractional work in e-commerce. For HR best practices, see <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD resources</a></p>
           </div>
-          <FAQ skipSchema={true} items={ECOMMERCE_FAQS} title="" />
+          <FAQ items={ECOMMERCE_FAQS} title="" />
         </div>
       </section>
 

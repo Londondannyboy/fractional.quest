@@ -452,7 +452,7 @@ export default function FractionalMLROUKPage() {
               Fractional MLRO: Common Questions
             </h2>
           </div>
-          <FAQ skipSchema={true} items={MLRO_FAQS} title="" />
+          <FAQ items={MLRO_FAQS} title="" />
         </div>
       </section>
 

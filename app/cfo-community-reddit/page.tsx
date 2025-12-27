@@ -120,7 +120,7 @@ export default function CFOCommunityRedditPage() {
             </Link>
           </div>
 
-          <FAQ skipSchema={true} items={faqItems} title="CFO Community FAQs" />
+          <FAQ items={faqItems} title="CFO Community FAQs" />
         </div>
       </div>
     </>
