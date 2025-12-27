@@ -5,8 +5,8 @@ import { JobsGraph3D } from '@/components/JobsGraph3D'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Finance Agency UK | Part-Time Finance Support',
-  description: 'Access fractional finance agency services. Part-time CFO support, FP&A, and financial strategy. Finance expertise without full-time overhead.',
+  title: 'Fractional Finance Agency UK',
+  description: 'Fractional finance agency. CFO support, FP&A, financial strategy.',
   keywords: 'fractional finance agency, part-time finance agency, fractional finance services, fractional cfo services uk',
   alternates: { canonical: 'https://fractional.quest/fractional-finance-agency' },
 }

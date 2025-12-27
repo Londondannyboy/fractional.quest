@@ -9,8 +9,8 @@ import { ArticleSearch } from '@/components/ArticleSearch'
 export const revalidate = 14400 // Revalidate every 4 hours
 
 export const metadata: Metadata = {
-  title: 'Fractional Executive Articles & Guides | Fractional Quest',
-  description: 'Expert guides and articles about fractional executive roles, career tips, salary guides, and hiring strategies for CFO, CTO, CMO roles.',
+  title: 'Fractional Exec Articles',
+  description: 'Fractional executive articles. Career tips, salary guides, hiring strategies.',
   openGraph: {
     title: 'Fractional Executive Articles & Guides | Fractional Quest',
     description: 'Expert guides and articles about fractional executive roles, career tips, and hiring strategies.',

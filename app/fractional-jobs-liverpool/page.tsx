@@ -8,8 +8,8 @@ import { FAQ, LIVERPOOL_FAQS } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Jobs Liverpool - Executive Roles in the North West',
-  description: 'Find fractional executive jobs in Liverpool. CFO, CMO, CTO roles across the Liverpool City Region. £550-£1,000 daily rates. Digital, creative, and maritime hub.',
+  title: 'Fractional Jobs Liverpool UK',
+  description: 'Fractional executive jobs Liverpool. CFO, CMO, CTO roles. £550-£1,000/day.',
   openGraph: {
     title: 'Fractional Jobs Liverpool - Executive Roles in the North West',
     description: 'Find fractional executive jobs in Liverpool. CFO, CMO, CTO roles across the Liverpool City Region.',

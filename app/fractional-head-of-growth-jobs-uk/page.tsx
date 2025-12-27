@@ -9,8 +9,8 @@ import { RoleContentHub } from '@/components/RoleContentHub'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Head of Growth Jobs UK | Part-Time Growth Roles',
-  description: 'Fractional Head of Growth jobs UK - Find part-time Growth Director positions paying £700-£1,200/day. Browse live Growth roles for experienced marketers. Remote & hybrid available.',
+  title: 'Fractional Growth Jobs UK 2025',
+  description: 'Fractional Head of Growth jobs UK. Growth Director roles. £700-£1,200/day.',
   keywords: 'fractional head of growth jobs, fractional growth director jobs uk, part time head of growth, fractional growth jobs, growth marketing jobs part time, fractional growth marketing',
   alternates: {
     canonical: 'https://fractional.quest/fractional-head-of-growth-jobs-uk',

@@ -6,8 +6,8 @@ import { RoleCalculator } from '@/components/RoleCalculator'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CFO Cost UK 2025 | £36k-£120k vs £150k+ Full-Time',
-  description: 'How much does a fractional CFO cost? £3k-£10k/month (£36k-£120k annually) vs £150k-£250k+ for full-time. Calculate your savings. 170/mo searches.',
+  title: 'Fractional CFO Cost UK 2025',
+  description: 'Fractional CFO cost. £3k-£10k/month vs £150k+ full-time. Calculate savings.',
   keywords: 'fractional cfo cost, how much does a fractional cfo cost, fractional cfo pricing, part time cfo cost, cfo cost',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cfo-cost',

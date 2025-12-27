@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Fractional COO Meaning | What Does Fractional COO Mean?',
-  description: 'Fractional COO meaning: A part-time Chief Operating Officer who works 1-3 days/week providing strategic operational leadership at 60-70% less cost than full-time.',
+  title: 'Fractional COO Meaning',
+  description: 'Fractional COO meaning. Part-time COO working 1-3 days/week, 60-70% less cost.',
   keywords: 'fractional coo meaning, what does fractional coo mean, fractional coo definition, what is fractional',
 }
 

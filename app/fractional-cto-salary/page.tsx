@@ -6,8 +6,8 @@ import { JobsGraph3D } from '@/components/JobsGraph3D'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CTO Salary UK: 2025 Earnings & Compensation Guide',
-  description: 'How much do Fractional CTOs earn in the UK? Comprehensive 2025 salary guide covering day rates, annual earnings, and how to maximize income as a fractional CTO.',
+  title: 'Fractional CTO Salary UK 2025',
+  description: 'Fractional CTO salary UK. Day rates, annual earnings, income maximization.',
   keywords: 'fractional cto salary, fractional cto salary uk, how much does a fractional cto make, fractional cto earnings, fractional cto income',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cto-salary',

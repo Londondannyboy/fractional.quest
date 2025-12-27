@@ -10,8 +10,8 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Jobs E-commerce - Executive Roles in Online Retail & DTC',
-  description: 'Find fractional executive jobs in e-commerce. CFO, CMO, CTO roles in online retail, DTC brands, and marketplaces. £600-£1,100 daily rates.',
+  title: 'Fractional E-commerce Jobs UK',
+  description: 'Fractional exec jobs in e-commerce. Online retail, DTC brands. £600-£1,100/day.',
   openGraph: {
     title: 'Fractional Jobs E-commerce - Executive Roles in Online Retail',
     description: 'Find fractional executive jobs in e-commerce and DTC brands.',

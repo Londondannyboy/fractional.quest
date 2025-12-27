@@ -4,8 +4,8 @@ import Link from 'next/link'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional COO Hourly Rate 2025 | $125-$250/hour Guide',
-  description: 'Fractional COO hourly rates range from $125-$250/hour ($1,000-$2,000/day) depending on experience. Complete pricing guide for hourly engagements.',
+  title: 'Fractional COO Hourly Rate',
+  description: 'Fractional COO hourly rates. $125-$250/hour ($1,000-$2,000/day) by experience.',
   keywords: 'fractional coo hourly rate, coo hourly rate, part time coo hourly rate, fractional operations hourly',
 }
 

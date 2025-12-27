@@ -8,8 +8,8 @@ import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional AI Services UK | Hire a Part-Time Head of AI',
-  description: 'Hire a Fractional Head of AI or AI Director. Expert leadership for Artificial Intelligence strategy, implementation, and ethics. Navigate the AI revolution at a flexible cost.',
+  title: 'Fractional AI Services UK',
+  description: 'Hire a Fractional Head of AI. AI strategy, implementation, ethics leadership.',
   keywords: 'fractional head of ai, fractional ai director, hire fractional ai expert, part time ai leadership, ai strategy consulting, fractional ai services',
   alternates: {
     canonical: 'https://fractional.quest/fractional-ai-services',

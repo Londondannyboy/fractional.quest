@@ -6,8 +6,8 @@ import { RoleCalculator } from '@/components/RoleCalculator'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CTO Cost UK: Complete 2025 Pricing Guide',
-  description: 'How much does a Fractional CTO cost? Complete UK pricing guide covering day rates, monthly costs, annual budgets, and ROI vs full-time CTOs.',
+  title: 'Fractional CTO Cost UK 2025',
+  description: 'Fractional CTO cost UK. Day rates, monthly costs, ROI vs full-time CTOs.',
   keywords: 'fractional cto cost, fractional cto price, how much does a fractional cto cost, fractional cto pricing',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cto-cost',

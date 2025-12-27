@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { StrategicComparisonInfographic, ComparisonData } from '@/components/infographics/StrategicComparisonInfographic'
 
 export const metadata: Metadata = {
-  title: 'Fractional COO vs Full-Time COO | Complete Comparison 2025',
-  description: 'Fractional COO vs Full-Time: Compare cost ($120k vs $280k+), commitment (2 days/week vs 5), start time (2 weeks vs 4 months). Which is right for you?',
+  title: 'Fractional vs Full-Time COO',
+  description: 'Fractional COO vs Full-Time. $120k vs $280k+, 2 days/week vs full-time.',
   keywords: 'fractional coo vs full time coo, fractional vs full time, part time coo vs full time, should i hire fractional',
 }
 

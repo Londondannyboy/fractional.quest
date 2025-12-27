@@ -6,8 +6,8 @@ import { RoleCalculator } from '@/components/RoleCalculator'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional HR Cost UK 2025 | £67k-£135k vs £150k+ Full-Time',
-  description: 'How much does fractional HR cost? £700-£1,300/day (£67k-£135k annually) vs £150k-£250k+ for full-time CHRO. Complete UK pricing guide with ROI analysis.',
+  title: 'Fractional HR Cost UK 2025',
+  description: 'Fractional HR cost. £700-£1,300/day vs £150k+ full-time. ROI analysis.',
   keywords: 'fractional hr cost, how much does fractional hr cost, fractional hr pricing, fractional hr rates uk, part time hr cost',
   alternates: {
     canonical: 'https://fractional.quest/fractional-hr-cost',

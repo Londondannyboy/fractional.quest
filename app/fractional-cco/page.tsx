@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
 
 export const metadata: Metadata = {
-  title: 'Fractional CCO | Chief Compliance Officer Services UK 2025',
-  description: 'What is a fractional CCO? Part-time Chief Compliance Officer services for UK regulated firms. SMF16 approved, £1,000-£1,500/day. For FinTech, crypto, payments & investment firms.',
+  title: 'Fractional CCO UK 2025',
+  description: 'Fractional CCO services. SMF16 approved, £1,000-£1,500/day. FinTech, crypto, payments.',
   keywords: 'fractional cco, fractional chief compliance officer, part time cco, outsourced cco, cco services uk, smf16, fractional compliance officer, chief compliance officer services',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cco',

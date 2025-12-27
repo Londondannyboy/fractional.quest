@@ -7,8 +7,8 @@ import { FAQ, BELFAST_FAQS } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Jobs Belfast - Executive Roles in Northern Ireland',
-  description: 'Find fractional executive jobs in Belfast. CFO, CMO, CTO roles in Northern Ireland. £500-£900 daily rates. Cyber security, fintech, and tech hub.',
+  title: 'Fractional Jobs Belfast UK',
+  description: 'Fractional executive jobs Belfast. CFO, CMO, CTO in Northern Ireland. £500-£900/day.',
   openGraph: {
     title: 'Fractional Jobs Belfast - Executive Roles in Northern Ireland',
     description: 'Find fractional executive jobs in Belfast, Northern Ireland\'s tech capital.',

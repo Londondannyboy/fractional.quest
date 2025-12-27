@@ -5,8 +5,8 @@ import { RoleCalculator } from '@/components/RoleCalculator'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional HR Hourly Rate UK 2025 | £88-£163/Hour Guide',
-  description: 'Fractional HR hourly rates UK 2025. People Partners £75-£106/hour. HR Directors £113-£138/hour. CHROs £138-£163/hour. Complete pricing guide.',
+  title: 'Fractional HR Hourly Rate UK',
+  description: 'Fractional HR hourly rates UK. £75-£163/hour by seniority level.',
   keywords: 'fractional hr hourly rate, fractional hr rate per hour, part time hr hourly rate, fractional hr consultant hourly rate',
   alternates: {
     canonical: 'https://fractional.quest/fractional-hr-hourly-rate',

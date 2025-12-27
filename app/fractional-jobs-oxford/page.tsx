@@ -7,8 +7,8 @@ import { FAQ, OXFORD_FAQS } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Jobs Oxford - Executive Roles in the Innovation Hub',
-  description: 'Find fractional executive jobs in Oxford. CFO, CMO, CTO roles in the Oxford cluster. £700-£1,100 daily rates. Life sciences, AI, and deep tech hub.',
+  title: 'Fractional Jobs Oxford UK',
+  description: 'Fractional executive jobs Oxford. CFO, CMO, CTO roles. £700-£1,100/day.',
   openGraph: {
     title: 'Fractional Jobs Oxford - Executive Roles in the Innovation Hub',
     description: 'Find fractional executive jobs in Oxford, the UK\'s life sciences and AI innovation hub.',

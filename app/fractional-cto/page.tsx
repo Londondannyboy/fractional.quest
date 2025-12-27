@@ -11,8 +11,8 @@ import { RoleContentHub } from '@/components/RoleContentHub'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CTO UK | Complete Guide to Part-Time CTOs (2025)',
-  description: 'Complete guide to Fractional CTOs: definition, when to hire, cost analysis, and how to find the right technical leadership for your company. 1,600+ monthly searches.',
+  title: 'Fractional CTO Guide UK 2025',
+  description: 'Fractional CTO guide. Definition, when to hire, cost analysis, find tech leadership.',
   keywords: 'fractional cto, fractional chief technology officer, part time cto, fractional cto uk, fractional cto services, what is a fractional cto, fractional cto cost',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cto',

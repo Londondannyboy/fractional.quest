@@ -9,8 +9,8 @@ import { FAQ, LEEDS_FAQS } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Jobs Leeds - Executive Roles in Yorkshire',
-  description: 'Find fractional executive jobs in Leeds and Yorkshire. CFO, CMO, CTO roles. £600-£1,000 daily rates. Growing digital and financial services hub.',
+  title: 'Fractional Jobs Leeds UK',
+  description: 'Fractional executive jobs Leeds. CFO, CMO, CTO roles. £600-£1,000/day.',
   openGraph: {
     title: 'Fractional Jobs Leeds - Executive Roles in Yorkshire',
     description: 'Find fractional executive jobs in Leeds and across Yorkshire.',

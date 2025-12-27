@@ -7,8 +7,8 @@ import { StrategicComparisonInfographic, ComparisonData } from '@/components/inf
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional vs Full-Time CTO: Complete Comparison Guide 2025',
-  description: 'Fractional CTO vs Full-Time CTO: detailed comparison of cost, commitment, experience, and when each model makes sense. Decision framework included.',
+  title: 'Fractional vs Full-Time CTO',
+  description: 'Fractional CTO vs Full-Time. Cost, commitment, when each model makes sense.',
   keywords: 'fractional cto vs full time, fractional vs full time cto, part time cto vs full time',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cto-vs-full-time-cto',

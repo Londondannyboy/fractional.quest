@@ -6,8 +6,8 @@ import { JobsGraph3D } from '@/components/JobsGraph3D'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CTO Hourly Rate UK: 2025 Pricing Guide',
-  description: 'What is the hourly rate for Fractional CTOs in the UK? Complete 2025 guide covering hourly rates, day rates, and when hourly pricing makes sense.',
+  title: 'Fractional CTO Hourly Rate UK',
+  description: 'Fractional CTO hourly rates UK. Complete 2025 pricing guide.',
   keywords: 'fractional cto hourly rate, fractional cto rate, cto hourly rate, fractional cto pricing',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cto-hourly-rate',

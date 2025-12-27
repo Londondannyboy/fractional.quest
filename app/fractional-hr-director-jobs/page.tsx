@@ -12,8 +12,8 @@ import { FAQ, HR_FAQS } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional HR Director Jobs UK 2025 | £900-£1,100/Day Roles',
-  description: 'Fractional HR Director jobs in the UK paying £900-£1,100/day. Find part-time HR Director positions with growing companies. 20+ monthly searches.',
+  title: 'Fractional HR Director Jobs UK',
+  description: 'Fractional HR Director jobs UK. Part-time roles £900-£1,100/day.',
   keywords: 'fractional hr director jobs, fractional hr director jobs uk, part time hr director jobs, fractional head of hr jobs',
   alternates: {
     canonical: 'https://fractional.quest/fractional-hr-director-jobs',

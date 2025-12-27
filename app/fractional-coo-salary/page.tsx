@@ -4,8 +4,8 @@ import { Suspense } from 'react'
 import { RateDistribution } from '@/components/RateDistribution'
 
 export const metadata: Metadata = {
-  title: 'Fractional COO Salary 2025 - Day Rates, Annual Earnings & Pay Guide',
-  description: 'Fractional COO salary guide for 2025. Day rates $1,000-$1,800. Annual earnings $150k-$300k+. Compare rates by location, industry and experience level.',
+  title: 'Fractional COO Salary 2025',
+  description: 'Fractional COO salary. Day rates $1,000-$1,800, annual earnings $150k-$300k+.',
   keywords: 'fractional coo salary, fractional coo day rate, fractional coo pay, part time coo salary, fractional coo earnings',
   openGraph: {
     title: 'Fractional COO Salary 2025 - Complete Pay Guide',

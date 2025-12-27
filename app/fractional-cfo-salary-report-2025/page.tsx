@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: '2025 Fractional CFO Salary Report: UK Rates & Earnings Data',
-  description: 'Comprehensive 2025 fractional CFO salary report. Day rates, annual earnings, regional variations, and market trends based on UK data.',
+  title: 'CFO Salary Report UK 2025',
+  description: 'Fractional CFO salary report. Day rates, annual earnings, regional trends.',
   openGraph: {
     title: '2025 Fractional CFO Salary Report UK',
     description: 'Complete salary data for fractional CFOs. Day rates, annual earnings, and market analysis.',

@@ -13,8 +13,8 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CSO Jobs UK | Part-Time Chief Sales Officer Roles',
-  description: 'Fractional CSO jobs UK - Find part-time Chief Sales Officer positions paying £1,000-£1,600/day. Browse live CSO roles for experienced sales leaders. Remote & hybrid available.',
+  title: 'Fractional CSO Jobs UK 2025',
+  description: 'Fractional CSO jobs UK. Part-time Chief Sales Officer roles. £1,000-£1,600/day.',
   keywords: 'fractional cso jobs, fractional cso jobs uk, part time chief sales officer, fractional sales jobs, cso part time, fractional sales director, fractional sales leadership',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cso-jobs-uk',

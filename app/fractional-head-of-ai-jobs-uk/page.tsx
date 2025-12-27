@@ -9,8 +9,8 @@ import { RoleContentHub } from '@/components/RoleContentHub'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Head of AI Jobs UK | Part-Time AI Director Roles',
-  description: 'Fractional Head of AI jobs UK - Find part-time AI Director & Head of AI positions paying £1,000-£1,800/day. Browse live AI roles for experienced technology leaders. Remote & hybrid available.',
+  title: 'Fractional AI Jobs UK 2025',
+  description: 'Fractional Head of AI jobs UK. AI Director roles. £1,000-£1,800/day.',
   keywords: 'fractional head of ai jobs, fractional ai director jobs uk, part time head of ai, fractional ai jobs, ai leadership part time, artificial intelligence jobs uk',
   alternates: {
     canonical: 'https://fractional.quest/fractional-head-of-ai-jobs-uk',

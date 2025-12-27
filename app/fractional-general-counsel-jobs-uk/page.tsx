@@ -9,8 +9,8 @@ import { RoleContentHub } from '@/components/RoleContentHub'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional General Counsel Jobs UK | Part-Time GC Roles',
-  description: 'Fractional General Counsel jobs UK - Find part-time GC positions paying £800-£1,500/day. Browse live General Counsel roles for experienced lawyers. Remote & hybrid available.',
+  title: 'Fractional GC Jobs UK 2025',
+  description: 'Fractional General Counsel jobs UK. Part-time GC roles. £800-£1,500/day.',
   keywords: 'fractional general counsel jobs, fractional gc jobs uk, part time general counsel, fractional legal counsel, part time gc jobs, fractional head of legal',
   alternates: {
     canonical: 'https://fractional.quest/fractional-general-counsel-jobs-uk',

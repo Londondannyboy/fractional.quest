@@ -8,8 +8,8 @@ import { FAQ, NEWCASTLE_FAQS } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Jobs Newcastle - Executive Roles in the North East',
-  description: 'Find fractional executive jobs in Newcastle. CFO, CMO, CTO roles in the North East. £500-£950 daily rates. Tech, digital, and professional services hub.',
+  title: 'Fractional Jobs Newcastle UK',
+  description: 'Fractional executive jobs Newcastle. CFO, CMO, CTO roles. £500-£950/day.',
   openGraph: {
     title: 'Fractional Jobs Newcastle - Executive Roles in the North East',
     description: 'Find fractional executive jobs in Newcastle. Tech, digital, and professional services hub.',

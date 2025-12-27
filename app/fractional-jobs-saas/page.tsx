@@ -9,8 +9,8 @@ import { FAQ, SAAS_FAQS } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Jobs SaaS - Executive Roles in Software & Cloud',
-  description: 'Find fractional executive jobs in SaaS. CFO, CMO, CTO roles in B2B software, cloud platforms, and subscription businesses. £700-£1,300 daily rates.',
+  title: 'Fractional SaaS Jobs UK',
+  description: 'Fractional exec jobs in SaaS. B2B software, cloud platforms. £700-£1,300/day.',
   openGraph: {
     title: 'Fractional Jobs SaaS - Executive Roles in Software',
     description: 'Find fractional executive jobs in SaaS and B2B software.',

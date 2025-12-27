@@ -9,8 +9,8 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Director Jobs UK | Part-Time Director Roles 2025',
-  description: 'Fractional director jobs UK - Find part-time director positions across HR, Finance, Sales, Marketing & Operations. Fractional HR director, fractional finance director, fractional sales director jobs paying £800-£1,500/day.',
+  title: 'Fractional Director Jobs UK',
+  description: 'Fractional director jobs UK. HR, Finance, Sales, Ops director roles. £800-£1,500/day.',
   keywords: 'fractional director jobs, fractional director, fractional director jobs uk, part time director, fractional hr director, fractional finance director, fractional sales director, fractional managing director, fractional operations director, interim director, director jobs uk, part time director jobs',
   alternates: {
     canonical: 'https://fractional.quest/fractional-director-jobs-uk',

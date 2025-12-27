@@ -10,8 +10,8 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Business Development Jobs UK | Part-Time BD Roles',
-  description: 'Fractional Business Development jobs UK - Find part-time BD positions paying £500-£900/day. Browse live Business Development roles for experienced dealmakers. Remote & hybrid available.',
+  title: 'Fractional BD Jobs UK 2025',
+  description: 'Fractional Business Development jobs UK. Part-time BD roles £500-£900/day.',
   keywords: 'fractional business development jobs, fractional bd jobs uk, part time business development, fractional partnerships jobs, part time bd jobs, freelance business development',
   alternates: {
     canonical: 'https://fractional.quest/fractional-business-development-jobs-uk',

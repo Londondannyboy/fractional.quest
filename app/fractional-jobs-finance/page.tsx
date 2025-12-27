@@ -9,8 +9,8 @@ import { FAQ, FINANCE_FAQS } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Finance Jobs UK - CFO, FD, Finance Director Roles',
-  description: 'Find fractional finance jobs in the UK. Fractional CFO, Finance Director, FD roles. £800-£1,400 daily rates. PE-backed, startups, and SMEs.',
+  title: 'Fractional Finance Jobs UK',
+  description: 'Fractional finance jobs UK. CFO, Finance Director, FD roles. £800-£1,400/day.',
   openGraph: {
     title: 'Fractional Finance Jobs UK - CFO, FD, Finance Director Roles',
     description: 'Find fractional finance leadership roles across the UK.',

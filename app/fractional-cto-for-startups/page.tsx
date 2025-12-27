@@ -5,8 +5,8 @@ import { FAQ } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CTO for Startups: When to Hire & Cost Guide 2025',
-  description: 'Should your startup hire a Fractional CTO? Complete guide for startups on when to hire, cost, benefits, and how fractional CTOs help non-technical founders build products.',
+  title: 'Fractional CTO for Startups',
+  description: 'Fractional CTO for startups. When to hire, cost, benefits for founders.',
   keywords: 'fractional cto for startups, fractional cto startup, startup cto, non-technical founder cto',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cto-for-startups',

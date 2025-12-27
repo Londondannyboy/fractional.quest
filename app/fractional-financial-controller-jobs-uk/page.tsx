@@ -12,8 +12,8 @@ import { getRoleBreadcrumbs } from '@/lib/seo-config'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Financial Controller Jobs UK | Part-Time FC Roles',
-  description: 'Fractional Financial Controller jobs UK - Find part-time FC positions paying £400-£700/day. Browse live Financial Controller roles for experienced accountants. Remote & hybrid available.',
+  title: 'Fractional FC Jobs UK 2025',
+  description: 'Fractional Financial Controller jobs UK. Part-time FC roles. £400-£700/day.',
   keywords: 'fractional financial controller jobs, fractional fc jobs uk, part time financial controller, fractional controller roles, part time controller jobs, finance controller part time',
   alternates: {
     canonical: 'https://fractional.quest/fractional-financial-controller-jobs-uk',

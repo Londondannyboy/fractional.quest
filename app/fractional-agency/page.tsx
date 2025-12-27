@@ -5,8 +5,8 @@ import { JobsGraph3D } from '@/components/JobsGraph3D'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Agency UK | Part-Time Agency Services',
-  description: 'Access fractional agency services for your business. Part-time agency support for marketing, creative, and strategy. Agency expertise without full retainers.',
+  title: 'Fractional Agency UK',
+  description: 'Fractional agency services. Marketing, creative, strategy without full retainers.',
   keywords: 'fractional agency, fractional agency services, part-time agency, fractional marketing agency, fractional agency uk',
   alternates: { canonical: 'https://fractional.quest/fractional-agency' },
 }

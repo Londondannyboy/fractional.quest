@@ -11,8 +11,8 @@ import { FAQ, HR_FAQS } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Remote Fractional HR Jobs UK 2025 | Work From Home HR Roles',
-  description: 'Find remote fractional HR jobs in the UK. Work-from-home HR Director and CHRO positions paying £700-£1,300/day. Fully remote and hybrid opportunities.',
+  title: 'Remote Fractional HR Jobs UK',
+  description: 'Remote fractional HR jobs UK. Work-from-home HR Director, CHRO. £700-£1,300/day.',
   keywords: 'remote fractional hr jobs, remote hr jobs uk, work from home hr jobs, remote hr director jobs, fractional hr remote',
   alternates: {
     canonical: 'https://fractional.quest/fractional-hr-jobs-remote',

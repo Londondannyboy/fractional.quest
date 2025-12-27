@@ -7,8 +7,8 @@ import { FAQ, CAMBRIDGE_FAQS } from '@/components/FAQ'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Jobs Cambridge - Executive Roles in the Silicon Fen',
-  description: 'Find fractional executive jobs in Cambridge. CFO, CMO, CTO roles in Silicon Fen. £700-£1,200 daily rates. Deep tech, biotech, and AI hub.',
+  title: 'Fractional Jobs Cambridge UK',
+  description: 'Fractional executive jobs Cambridge. CFO, CMO, CTO roles. £700-£1,200/day.',
   openGraph: {
     title: 'Fractional Jobs Cambridge - Executive Roles in Silicon Fen',
     description: 'Find fractional executive jobs in Cambridge, the UK\'s deep tech and biotech capital.',
