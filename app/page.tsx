@@ -384,15 +384,15 @@ export default async function Home() {
         <div className="container-content">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             <div>
-              <h3 className="font-bold text-gray-900 mb-6 uppercase text-sm tracking-wider">Roles</h3>
+              <h3 className="font-bold text-gray-900 mb-6 uppercase text-sm tracking-wider">Jobs</h3>
               <ul className="space-y-3 text-sm text-gray-600">
+                <li><Link href="/fractional-jobs" className="hover:text-gray-900 hover:underline font-semibold">All Fractional Jobs</Link></li>
+                <li><Link href="/fractional-jobs-uk" className="hover:text-gray-900 hover:underline font-medium">UK Fractional Jobs</Link></li>
+                <li><Link href="/fractional-jobs-london" className="hover:text-gray-900 hover:underline">London Jobs</Link></li>
                 <li><Link href="/fractional-cfo-jobs-uk" className="hover:text-gray-900 hover:underline">Fractional CFO Jobs</Link></li>
                 <li><Link href="/fractional-cmo-jobs-uk" className="hover:text-gray-900 hover:underline">Fractional CMO Jobs</Link></li>
                 <li><Link href="/fractional-cto-jobs-uk" className="hover:text-gray-900 hover:underline">Fractional CTO Jobs</Link></li>
                 <li><Link href="/fractional-coo-jobs-uk" className="hover:text-gray-900 hover:underline">Fractional COO Jobs</Link></li>
-                <li><Link href="/fractional-jobs-london" className="hover:text-gray-900 hover:underline font-medium">London Fractional Jobs</Link></li>
-                <li><Link href="/fractional-cpo-jobs-uk" className="hover:text-gray-900 hover:underline">Fractional CPO Jobs</Link></li>
-                <li><Link href="/fractional-cro-jobs-uk" className="hover:text-gray-900 hover:underline">Fractional CRO Jobs</Link></li>
               </ul>
             </div>
             <div>
@@ -408,12 +408,15 @@ export default async function Home() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-gray-900 mb-6 uppercase text-sm tracking-wider">Platform</h3>
+              <h3 className="font-bold text-gray-900 mb-6 uppercase text-sm tracking-wider">More Roles</h3>
               <ul className="space-y-3 text-sm text-gray-600">
-                <li><Link href="/people" className="hover:text-gray-900 hover:underline">Browse Executives</Link></li>
-                <li><Link href="/destinations" className="hover:text-gray-900 hover:underline">Destinations</Link></li>
-                <li><Link href="/profile/edit" className="hover:text-gray-900 hover:underline">Create Profile</Link></li>
-                <li><Link href="/about" className="hover:text-gray-900 hover:underline">About Us</Link></li>
+                <li><Link href="/fractional-cpo-jobs-uk" className="hover:text-gray-900 hover:underline">Fractional CPO Jobs</Link></li>
+                <li><Link href="/fractional-cro-jobs-uk" className="hover:text-gray-900 hover:underline">Fractional CRO Jobs</Link></li>
+                <li><Link href="/fractional-chro-jobs-uk" className="hover:text-gray-900 hover:underline">Fractional CHRO Jobs</Link></li>
+                <li><Link href="/fractional-ciso-jobs-uk" className="hover:text-gray-900 hover:underline">Fractional CISO Jobs</Link></li>
+                <li><Link href="/fractional-ceo-jobs-uk" className="hover:text-gray-900 hover:underline">Fractional CEO Jobs</Link></li>
+                <li><Link href="/part-time-cfo-jobs-uk" className="hover:text-gray-900 hover:underline">Part-Time CFO Jobs</Link></li>
+                <li><Link href="/remote-fractional-jobs" className="hover:text-gray-900 hover:underline">Remote Fractional Jobs</Link></li>
               </ul>
             </div>
             <div>
