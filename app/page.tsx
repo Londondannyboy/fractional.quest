@@ -402,9 +402,12 @@ export default async function Home() {
                 <li><Link href="/fractional-cmo-services" className="hover:text-gray-900 hover:underline">Hire a Fractional CMO</Link></li>
                 <li><Link href="/fractional-cto-services" className="hover:text-gray-900 hover:underline">Hire a Fractional CTO</Link></li>
                 <li><Link href="/fractional-coo-services" className="hover:text-gray-900 hover:underline">Hire a Fractional COO</Link></li>
+                <li><Link href="/fractional-ceo-services" className="hover:text-gray-900 hover:underline">Hire a Fractional CEO</Link></li>
                 <li><Link href="/fractional-cpo-services" className="hover:text-gray-900 hover:underline">Hire a Fractional CPO</Link></li>
                 <li><Link href="/fractional-cro-services" className="hover:text-gray-900 hover:underline">Hire a Fractional CRO</Link></li>
-                <li><Link href="/fractional-compliance-services" className="hover:text-gray-900 hover:underline">Compliance Services</Link></li>
+                <li><Link href="/fractional-chro-services" className="hover:text-gray-900 hover:underline">Hire a Fractional CHRO</Link></li>
+                <li><Link href="/fractional-cio-services" className="hover:text-gray-900 hover:underline">Hire a Fractional CIO</Link></li>
+                <li><Link href="/fractional-ciso-services" className="hover:text-gray-900 hover:underline">Hire a Fractional CISO</Link></li>
               </ul>
             </div>
             <div>
