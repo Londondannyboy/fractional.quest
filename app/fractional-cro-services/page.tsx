@@ -37,8 +37,8 @@ const CRO_SERVICE_FAQS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Fractional CRO Services UK | Hire a Part-Time Chief Revenue Officer',
-  description: 'Hire a Fractional CRO for your business. Access senior revenue leadership at a fraction of full-time cost. Expert CROs for go-to-market strategy, sales leadership, and revenue growth. Start within days.',
+  title: 'Fractional CRO Services UK',
+  description: 'Hire a Fractional CRO. Go-to-market strategy, sales leadership, revenue growth.',
   keywords: 'fractional cro, fractional cro services, hire fractional cro, part time cro, fractional chief revenue officer, fractional cro uk, fractional revenue director',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cro-services',

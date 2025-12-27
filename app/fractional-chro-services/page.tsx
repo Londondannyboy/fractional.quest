@@ -37,8 +37,8 @@ const CHRO_SERVICE_FAQS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Fractional CHRO Services UK | Hire a Part-Time HR Director',
-  description: 'Hire a Fractional CHRO for your business. Access senior HR leadership at a fraction of full-time cost. Expert CHROs for people strategy, culture building, and talent development. Start within days.',
+  title: 'Fractional CHRO Services UK',
+  description: 'Hire a Fractional CHRO. People strategy, culture building, talent development.',
   keywords: 'fractional chro, fractional hr director, hire fractional chro, part time hr director, fractional chief hr officer, fractional chro uk, fractional people director',
   alternates: {
     canonical: 'https://fractional.quest/fractional-chro-services',

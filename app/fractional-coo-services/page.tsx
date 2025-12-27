@@ -10,8 +10,8 @@ import { getRoleBreadcrumbs } from '@/lib/seo-config'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional COO Services UK | Hire a Part-Time COO',
-  description: 'Hire a Fractional COO for your business. Access senior operations leadership at a fraction of full-time cost. Expert COOs for scaling, process optimisation, and operational excellence. Start within days.',
+  title: 'Fractional COO Services UK',
+  description: 'Hire a Fractional COO. Scaling, process optimisation, operational excellence.',
   keywords: 'fractional coo, fractional coo services, hire fractional coo, part time coo, fractional chief operating officer, fractional coo uk, fractional operations director',
   alternates: {
     canonical: 'https://fractional.quest/fractional-coo-services',

@@ -10,8 +10,8 @@ import { getRoleBreadcrumbs } from '@/lib/seo-config'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CEO Services UK | Hire a Part-Time CEO',
-  description: 'Hire a Fractional CEO for your business. Access experienced Chief Executive leadership for turnarounds, scale-ups, and transitions. Strategic vision at a fraction of full-time cost.',
+  title: 'Fractional CEO Services UK',
+  description: 'Hire a Fractional CEO. Turnarounds, scale-ups, transitions. Strategic leadership.',
   keywords: 'fractional ceo, fractional ceo services, hire fractional ceo, part time ceo, fractional chief executive officer, fractional ceo uk, interim ceo services',
   alternates: {
     canonical: 'https://fractional.quest/fractional-ceo-services',

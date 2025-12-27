@@ -37,8 +37,8 @@ const CISO_SERVICE_FAQS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Fractional CISO Services UK | Hire a Part-Time Chief Security Officer',
-  description: 'Hire a Fractional CISO for your business. Access senior security leadership at a fraction of full-time cost. Expert CISOs for SOC 2, ISO 27001, security strategy, and compliance. Start within days.',
+  title: 'Fractional CISO Services UK',
+  description: 'Hire a Fractional CISO. SOC 2, ISO 27001, security strategy, compliance.',
   keywords: 'fractional ciso, fractional ciso services, hire fractional ciso, part time ciso, fractional chief security officer, fractional ciso uk, fractional security director, soc 2 compliance',
   alternates: {
     canonical: 'https://fractional.quest/fractional-ciso-services',

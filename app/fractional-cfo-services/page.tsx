@@ -10,8 +10,8 @@ import { getRoleBreadcrumbs } from '@/lib/seo-config'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CFO Services UK | Hire a Part-Time CFO',
-  description: 'Hire a Fractional CFO for your business. Access senior financial leadership at a fraction of full-time cost. Expert CFOs for fundraising, financial strategy, and growth. Start within days.',
+  title: 'Fractional CFO Services UK',
+  description: 'Hire a Fractional CFO. Fundraising, financial strategy, growth support.',
   keywords: 'fractional cfo, fractional cfo services, hire fractional cfo, part time cfo, fractional chief financial officer, fractional cfo uk, fractional finance director',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cfo-services',

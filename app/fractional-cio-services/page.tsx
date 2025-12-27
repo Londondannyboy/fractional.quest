@@ -36,8 +36,8 @@ const CIO_SERVICE_FAQS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Fractional CIO Services UK | Hire a Part-Time Chief Information Officer',
-  description: 'Hire a Fractional CIO for your business. Access senior IT leadership at a fraction of full-time cost. Expert CIOs for digital transformation, IT strategy, and enterprise systems. Start within days.',
+  title: 'Fractional CIO Services UK',
+  description: 'Hire a Fractional CIO. Digital transformation, IT strategy, enterprise systems.',
   keywords: 'fractional cio, fractional cio services, hire fractional cio, part time cio, fractional chief information officer, fractional cio uk, fractional it director',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cio-services',

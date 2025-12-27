@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Fractional Quest | Our Story & Mission",
-  description: "Learn about Fractional Quest - the platform helping executives transition to portfolio careers and companies find fractional leadership talent.",
+  title: "About Fractional Quest",
+  description: "About Fractional Quest. Platform for executives and companies finding fractional talent.",
   alternates: {
     canonical: "https://fractional.quest/about",
   },

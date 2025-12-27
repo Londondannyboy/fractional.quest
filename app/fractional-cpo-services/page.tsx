@@ -37,8 +37,8 @@ const CPO_SERVICE_FAQS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Fractional CPO Services UK | Hire a Part-Time Chief Product Officer',
-  description: 'Hire a Fractional CPO for your business. Access senior product leadership at a fraction of full-time cost. Expert CPOs for product strategy, roadmaps, and team leadership. Start within days.',
+  title: 'Fractional CPO Services UK',
+  description: 'Hire a Fractional CPO. Product strategy, roadmaps, team leadership.',
   keywords: 'fractional cpo, fractional cpo services, hire fractional cpo, part time cpo, fractional chief product officer, fractional cpo uk, fractional product director',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cpo-services',

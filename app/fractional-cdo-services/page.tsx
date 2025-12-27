@@ -37,8 +37,8 @@ const CDO_SERVICE_FAQS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Fractional CDO Services UK | Hire a Part-Time Chief Data Officer',
-  description: 'Hire a Fractional CDO for your business. Access senior data leadership at a fraction of full-time cost. Expert CDOs for data strategy, analytics, AI readiness, and data governance. Start within days.',
+  title: 'Fractional CDO Services UK',
+  description: 'Hire a Fractional CDO. Data strategy, analytics, AI readiness, governance.',
   keywords: 'fractional cdo, fractional cdo services, hire fractional cdo, part time cdo, fractional chief data officer, fractional cdo uk, fractional data director',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cdo-services',

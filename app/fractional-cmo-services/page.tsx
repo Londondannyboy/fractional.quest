@@ -10,8 +10,8 @@ import { getRoleBreadcrumbs } from '@/lib/seo-config'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CMO Services UK | Hire a Part-Time CMO',
-  description: 'Hire a Fractional CMO for your business. Access senior marketing leadership at a fraction of full-time cost. Expert CMOs for growth strategy, brand building, and team leadership. Start within days.',
+  title: 'Fractional CMO Services UK',
+  description: 'Hire a Fractional CMO. Growth strategy, brand building, team leadership.',
   keywords: 'fractional cmo, fractional cmo services, hire fractional cmo, part time cmo, fractional chief marketing officer, fractional cmo uk, fractional marketing director',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cmo-services',

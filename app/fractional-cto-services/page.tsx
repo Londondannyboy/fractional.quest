@@ -10,8 +10,8 @@ import { getRoleBreadcrumbs } from '@/lib/seo-config'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CTO Services UK | Hire a Part-Time CTO',
-  description: 'Hire a Fractional CTO for your business. Access senior technical leadership at a fraction of full-time cost. Expert CTOs for architecture, team building, and technical strategy. Start within days.',
+  title: 'Fractional CTO Services UK',
+  description: 'Hire a Fractional CTO. Architecture, team building, technical strategy.',
   keywords: 'fractional cto, fractional cto services, hire fractional cto, part time cto, fractional chief technology officer, fractional cto uk, fractional tech lead',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cto-services',
