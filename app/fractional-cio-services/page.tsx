@@ -6,6 +6,7 @@ import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { FAQPageSchema } from '@/components/FAQPageSchema'
+import { WebPageSchema } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
@@ -54,7 +55,13 @@ export const metadata: Metadata = {
 export default function FractionalCIOServicesPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* FAQ Schema for rich snippets */}
+      {/* Schema for SEO */}
+      <WebPageSchema
+        title="Fractional CIO Services UK"
+        description="Hire a Fractional CIO for your business"
+        url="https://fractional.quest/fractional-cio-services"
+        dateModified={new Date()}
+      />
       <FAQPageSchema faqs={CIO_SERVICE_FAQS} />
       {/* Hero Section with Unsplash Image */}
       <section className="relative min-h-[75vh] flex items-center overflow-hidden">
