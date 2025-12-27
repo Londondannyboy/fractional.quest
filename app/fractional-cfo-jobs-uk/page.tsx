@@ -13,6 +13,7 @@ import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 
 export const revalidate = 3600
 
@@ -115,6 +116,8 @@ export default async function FractionalCfoJobsUkPage() {
         dateModified={lastUpdatedDate}
         itemCount={stats.total}
       />
+      {/* FAQ Schema for rich snippets */}
+      <FAQPageSchema faqs={CFO_FAQS} />
 
       {/* JobPosting Schema for SEO */}
       <JobListingSchema

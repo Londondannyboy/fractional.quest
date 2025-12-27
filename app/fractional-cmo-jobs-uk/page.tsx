@@ -13,6 +13,7 @@ import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 
 export const revalidate = 3600
 
@@ -113,6 +114,7 @@ export default async function FractionalCmoJobsUkPage() {
         dateModified={lastUpdatedDate}
         itemCount={stats.total}
       />
+      <FAQPageSchema faqs={CMO_FAQS} />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-cmo-jobs-uk" />
       {/* Hero with Aspirational Image */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
