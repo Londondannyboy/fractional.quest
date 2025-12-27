@@ -537,7 +537,7 @@ export default async function FractionalCeoJobsUkPage() {
               Common Questions About Fractional CEO Jobs UK
             </h2>
           </div>
-          <FAQ items={CEO_FAQS} title="" />
+          <FAQ skipSchema={true} items={CEO_FAQS} title="" />
         </div>
       </section>
 

@@ -548,7 +548,7 @@ export default function FractionalCCOPage() {
               Fractional CCO: Common Questions
             </h2>
           </div>
-          <FAQ items={CCO_FAQS} title="" />
+          <FAQ skipSchema={true} items={CCO_FAQS} title="" />
         </div>
       </section>
 

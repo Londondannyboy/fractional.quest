@@ -343,7 +343,7 @@ export default function FractionalComplianceFintechPage() {
               FinTech Compliance: Common Questions
             </h2>
           </div>
-          <FAQ items={FINTECH_FAQS} title="" />
+          <FAQ skipSchema={true} items={FINTECH_FAQS} title="" />
         </div>
       </section>
 

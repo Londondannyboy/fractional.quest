@@ -341,7 +341,7 @@ export default function FractionalCFOGuidePage() {
               </div>
             </section>
 
-            <FAQ items={CFO_FAQS} title="Common Questions" />
+            <FAQ skipSchema={true} items={CFO_FAQS} title="Common Questions" />
 
           </main>
 

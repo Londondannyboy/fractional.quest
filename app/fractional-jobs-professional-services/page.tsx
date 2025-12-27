@@ -358,7 +358,7 @@ export default async function ProfessionalServicesPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
           </div>
-          <FAQ faqs={PROFESSIONAL_SERVICES_FAQS} title="" />
+          <FAQ skipSchema={true} faqs={PROFESSIONAL_SERVICES_FAQS} title="" />
         </div>
       </section>
 

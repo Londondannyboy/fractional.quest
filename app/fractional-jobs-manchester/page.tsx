@@ -286,7 +286,7 @@ export default async function ManchesterPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Manchester Fractional Jobs FAQ
           </h2>
-          <FAQ faqs={MANCHESTER_FAQS} title="" />
+          <FAQ skipSchema={true} faqs={MANCHESTER_FAQS} title="" />
         </div>
       </section>
 

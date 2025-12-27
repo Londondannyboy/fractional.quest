@@ -324,7 +324,7 @@ export default function InterimComplianceOfficerPage() {
               Professional bodies like the <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> provide guidance on effective governance structures for interim appointments.
             </p>
           </div>
-          <FAQ items={INTERIM_FAQS} title="" />
+          <FAQ skipSchema={true} items={INTERIM_FAQS} title="" />
         </div>
       </section>
 

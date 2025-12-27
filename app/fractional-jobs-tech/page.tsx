@@ -419,7 +419,7 @@ export default async function TechJobsPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Tech Fractional FAQs</h2>
             <p className="text-xl text-gray-500">Common questions about fractional tech roles</p>
           </div>
-          <FAQ items={TECH_FAQS} title="" />
+          <FAQ skipSchema={true} items={TECH_FAQS} title="" />
         </div>
       </section>
 

@@ -583,7 +583,7 @@ export default function PartTimeComplianceJobsUKPage() {
               Part-Time Compliance Jobs: Common Questions
             </h2>
           </div>
-          <FAQ items={COMPLIANCE_FAQS} title="" />
+          <FAQ skipSchema={true} items={COMPLIANCE_FAQS} title="" />
         </div>
       </section>
 

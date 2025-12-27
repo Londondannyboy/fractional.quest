@@ -246,7 +246,7 @@ export default async function OxfordPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Oxford Fractional Jobs FAQ
           </h2>
-          <FAQ faqs={OXFORD_FAQS} title="" />
+          <FAQ skipSchema={true} faqs={OXFORD_FAQS} title="" />
         </div>
       </section>
 

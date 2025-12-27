@@ -312,7 +312,7 @@ export default async function FractionalCsoJobsUkPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Common Questions About Fractional CSO Jobs</h2>
           </div>
-          <FAQ items={CSO_FAQS} title="" />
+          <FAQ skipSchema={true} items={CSO_FAQS} title="" />
         </div>
       </section>
 

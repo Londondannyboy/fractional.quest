@@ -277,7 +277,7 @@ export default async function NewcastlePage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Newcastle Fractional Jobs FAQ
           </h2>
-          <FAQ faqs={NEWCASTLE_FAQS} title="" />
+          <FAQ skipSchema={true} faqs={NEWCASTLE_FAQS} title="" />
         </div>
       </section>
 

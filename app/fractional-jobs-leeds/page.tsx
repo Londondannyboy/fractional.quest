@@ -275,7 +275,7 @@ export default async function LeedsPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Leeds Fractional Jobs FAQ
           </h2>
-          <FAQ faqs={LEEDS_FAQS} title="" />
+          <FAQ skipSchema={true} faqs={LEEDS_FAQS} title="" />
         </div>
       </section>
 

@@ -267,7 +267,7 @@ export default async function BelfastPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Belfast Fractional Jobs FAQ
           </h2>
-          <FAQ faqs={BELFAST_FAQS} title="" />
+          <FAQ skipSchema={true} faqs={BELFAST_FAQS} title="" />
         </div>
       </section>
 

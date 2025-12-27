@@ -654,7 +654,7 @@ export default async function InterimCeoPage() {
               Common Questions About Interim CEO UK Roles
             </h2>
           </div>
-          <FAQ items={INTERIM_CEO_FAQS} title="" />
+          <FAQ skipSchema={true} items={INTERIM_CEO_FAQS} title="" />
         </div>
       </section>
 

@@ -178,7 +178,7 @@ export default function VirtualCFOServicesPage() {
             </div>
           </div>
 
-          <FAQ items={faqItems} title="Virtual CFO Services FAQs" />
+          <FAQ skipSchema={true} items={faqItems} title="Virtual CFO Services FAQs" />
 
           <section className="mt-12 rounded-xl bg-slate-50 p-8">
             <h2 className="mb-6 text-2xl font-bold text-slate-900">Related Resources</h2>

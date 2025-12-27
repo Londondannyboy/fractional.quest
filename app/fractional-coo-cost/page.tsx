@@ -238,7 +238,7 @@ export default function FractionalCOOCostPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Common Questions</span>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional COO Cost FAQs</h2>
           </div>
-          <FAQ items={COST_FAQS} title="" className="" />
+          <FAQ skipSchema={true} items={COST_FAQS} title="" className="" />
         </div>
       </section>
 

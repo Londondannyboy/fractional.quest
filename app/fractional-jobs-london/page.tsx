@@ -509,7 +509,7 @@ export default async function FractionalJobsLondonPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
             London Fractional Jobs FAQ
           </h2>
-          <FAQ faqs={londonFAQs} />
+          <FAQ skipSchema={true} faqs={londonFAQs} />
         </div>
       </section>
 

@@ -291,7 +291,7 @@ export default async function BirminghamPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Birmingham Fractional Jobs FAQ
           </h2>
-          <FAQ faqs={BIRMINGHAM_FAQS} title="" />
+          <FAQ skipSchema={true} faqs={BIRMINGHAM_FAQS} title="" />
         </div>
       </section>
 

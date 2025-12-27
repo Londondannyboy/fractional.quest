@@ -339,7 +339,7 @@ export default function OutsourcedComplianceCostPage() {
               Compliance Cost: Common Questions
             </h2>
           </div>
-          <FAQ items={COST_FAQS} title="" />
+          <FAQ skipSchema={true} items={COST_FAQS} title="" />
         </div>
       </section>
 

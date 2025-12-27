@@ -415,7 +415,7 @@ export default async function FractionalCmoJobsUkPage() {
               Common Questions About Fractional CMO Jobs UK
             </h2>
           </div>
-          <FAQ items={CMO_FAQS} title="" />
+          <FAQ skipSchema={true} items={CMO_FAQS} title="" />
         </div>
       </section>
 

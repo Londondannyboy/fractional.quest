@@ -547,7 +547,7 @@ export default function RemoteFractionalCFOJobsPage() {
           </div>
 
           {/* FAQ Section */}
-          <FAQ items={faqItems} title="Remote Fractional CFO Jobs FAQs" />
+          <FAQ skipSchema={true} items={faqItems} title="Remote Fractional CFO Jobs FAQs" />
 
           {/* Related Resources */}
           <section className="mt-12 rounded-xl bg-slate-50 p-8">
