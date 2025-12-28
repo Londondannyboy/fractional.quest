@@ -95,12 +95,62 @@ function getBrandStyling(brand?: BrandData) {
   }
 }
 
+// Map role category/executive title to job listing page slug
+function getRolePageSlug(roleCategory?: string, executiveTitle?: string): string | null {
+  // First try executive title for specific pages
+  const titleMap: Record<string, string> = {
+    'CFO': 'fractional-cfo-jobs-uk',
+    'CTO': 'fractional-cto-jobs-uk',
+    'CMO': 'fractional-cmo-jobs-uk',
+    'COO': 'fractional-coo-jobs-uk',
+    'CHRO': 'fractional-chro-jobs-uk',
+    'CPO': 'fractional-cpo-jobs-uk',
+    'CIO': 'fractional-cio-jobs-uk',
+    'CDO': 'fractional-cdo-jobs-uk',
+    'CSO': 'fractional-cso-jobs-uk',
+    'CCO': 'fractional-cco-jobs-uk',
+    'CEO': 'fractional-ceo-jobs-uk',
+    'Finance Director': 'fractional-finance-director-jobs-uk',
+    'Marketing Director': 'fractional-cmo-jobs-uk',
+    'HR Director': 'fractional-chro-jobs-uk',
+  }
+  if (executiveTitle && titleMap[executiveTitle]) {
+    return titleMap[executiveTitle]
+  }
+
+  // Fall back to role category
+  const categoryMap: Record<string, string> = {
+    'Finance': 'fractional-cfo-jobs-uk',
+    'Engineering': 'fractional-cto-jobs-uk',
+    'Marketing': 'fractional-cmo-jobs-uk',
+    'Operations': 'fractional-coo-jobs-uk',
+    'HR': 'fractional-chro-jobs-uk',
+    'Product': 'fractional-cpo-jobs-uk',
+    'Sales': 'fractional-cro-jobs-uk',
+    'Legal': 'fractional-legal-jobs-uk',
+    'Executive': 'fractional-ceo-jobs-uk',
+    'Data': 'fractional-cdo-jobs-uk',
+  }
+  if (roleCategory && categoryMap[roleCategory]) {
+    return categoryMap[roleCategory]
+  }
+
+  return 'fractional-jobs-uk'
+}
+
+// Get human-readable role name for SEO
+function getRoleName(roleCategory?: string, executiveTitle?: string): string {
+  if (executiveTitle && executiveTitle !== 'Other') return executiveTitle
+  if (roleCategory) return roleCategory
+  return 'Executive'
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
   try {
     const sql = createDbQuery()
     const jobs = await sql`
-      SELECT title, company_name, location
+      SELECT title, company_name, location, role_category, executive_title, country, city, is_remote
       FROM jobs
       WHERE slug = ${slug}
         AND is_active = true
@@ -112,9 +162,43 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
 
     const job = jobs[0] as any
+    const roleName = getRoleName(job.role_category, job.executive_title)
+    const locationStr = job.city || job.country || job.location || 'Remote'
+    const isRemote = job.is_remote
+
+    // SEO-optimized title: "Fractional CFO Jobs - Company Name - London | Fractional Quest"
+    const title = `${job.title} - ${job.company_name}${locationStr ? ` - ${locationStr}` : ''} | Fractional Jobs`
+
+    // SEO-optimized description with keywords
+    const description = `Apply for ${job.title} at ${job.company_name}${locationStr ? ` in ${locationStr}` : ''}${isRemote ? ' (Remote)' : ''}. Find fractional ${roleName} jobs and part-time executive roles on Fractional Quest - the leading fractional jobs board.`
+
+    // Keywords for SEO
+    const keywords = [
+      'fractional jobs',
+      `fractional ${roleName.toLowerCase()}`,
+      `${roleName.toLowerCase()} jobs`,
+      job.company_name,
+      locationStr,
+      isRemote ? 'remote jobs' : null,
+      'part-time executive',
+      'fractional executive',
+    ].filter(Boolean).join(', ')
+
     return {
-      title: `${job.title} at ${job.company_name} | Fractional Quest`,
-      description: `Fractional ${job.title} position at ${job.company_name} in ${job.location}. Browse and apply on Fractional Quest - a UK fractional executive job board.`,
+      title,
+      description,
+      keywords,
+      openGraph: {
+        title: `${job.title} at ${job.company_name}`,
+        description,
+        type: 'website',
+        url: `https://fractional.quest/fractional-job/${slug}`,
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: `${job.title} at ${job.company_name}`,
+        description,
+      },
     }
   } catch {
     return { title: 'Job | Fractional Quest' }
@@ -133,11 +217,14 @@ export default async function JobDetailPage({ params }: PageProps) {
         j.company_name,
         j.company_domain,
         j.location,
+        j.country,
+        j.city,
         j.is_remote,
         j.compensation,
         j.employment_type,
         j.seniority_level,
         j.role_category,
+        j.executive_title,
         j.description_snippet,
         j.full_description,
         j.skills_required,
@@ -195,6 +282,10 @@ export default async function JobDetailPage({ params }: PageProps) {
 
     const styling = getBrandStyling(brand)
     const { colors, banner, logo } = styling
+
+    // Get role page for internal linking (SEO)
+    const rolePageSlug = getRolePageSlug(job.role_category, job.executive_title)
+    const roleName = getRoleName(job.role_category, job.executive_title)
 
     const formatDate = (dateString?: string) => {
       if (!dateString) return null
@@ -427,16 +518,18 @@ export default async function JobDetailPage({ params }: PageProps) {
                         {job.compensation}
                       </span>
                     )}
-                    {job.role_category && (
-                      <span
-                        className="px-4 py-1.5 rounded-full text-sm font-bold"
+                    {job.role_category && rolePageSlug && (
+                      <Link
+                        href={`/${rolePageSlug}`}
+                        className="px-4 py-1.5 rounded-full text-sm font-bold hover:opacity-90 transition-opacity"
                         style={{
                           backgroundColor: `${colors.accent}CC`,
                           color: 'white'
                         }}
+                        title={`Browse all fractional ${roleName} jobs`}
                       >
-                        {job.role_category}
-                      </span>
+                        {job.role_category} Jobs →
+                      </Link>
                     )}
                     {job.seniority_level && (
                       <span
@@ -738,7 +831,15 @@ export default async function JobDetailPage({ params }: PageProps) {
                     {job.role_category && (
                       <div className="flex justify-between">
                         <dt className="text-gray-500">Department</dt>
-                        <dd className="font-medium text-gray-900">{job.role_category}</dd>
+                        <dd className="font-medium">
+                          {rolePageSlug ? (
+                            <Link href={`/${rolePageSlug}`} className="text-purple-700 hover:text-purple-900 hover:underline">
+                              {job.role_category}
+                            </Link>
+                          ) : (
+                            <span className="text-gray-900">{job.role_category}</span>
+                          )}
+                        </dd>
                       </div>
                     )}
                     {job.seniority_level && (
@@ -792,6 +893,24 @@ export default async function JobDetailPage({ params }: PageProps) {
                     />
                   </Suspense>
                 </div>
+
+                {/* Browse More Jobs - Internal Link for SEO */}
+                {rolePageSlug && (
+                  <div className="bg-gradient-to-br from-purple-50 to-indigo-50 p-5 rounded-xl border border-purple-100">
+                    <h3 className="text-sm font-bold uppercase tracking-wider text-purple-800 mb-3">
+                      Explore More {roleName} Jobs
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-4">
+                      Browse all fractional {roleName.toLowerCase()} positions and find your next opportunity.
+                    </p>
+                    <Link
+                      href={`/${rolePageSlug}`}
+                      className="block w-full py-3 rounded-lg font-bold text-center bg-purple-600 text-white hover:bg-purple-700 transition-colors"
+                    >
+                      View All {roleName} Jobs →
+                    </Link>
+                  </div>
+                )}
 
                 {/* Work From Anywhere - For remote jobs */}
                 {job.is_remote && (
