@@ -231,14 +231,59 @@ interface JobListingSchemaProps {
     title: string
     company_name: string
     location?: string
+    country?: string
+    city?: string
     is_remote?: boolean
     compensation?: string
     posted_date?: string
     description_snippet?: string
     role_category?: string
     skills_required?: string[]
+    salary_min?: number
+    salary_max?: number
+    salary_currency?: string
   }>
   pageUrl: string
+}
+
+// Map country names to ISO codes for schema
+const COUNTRY_CODES: Record<string, string> = {
+  'UK': 'GB',
+  'USA': 'US',
+  'United Kingdom': 'GB',
+  'United States': 'US',
+  'Canada': 'CA',
+  'Germany': 'DE',
+  'France': 'FR',
+  'Ireland': 'IE',
+  'Australia': 'AU',
+  'Netherlands': 'NL',
+  'Spain': 'ES',
+  'Italy': 'IT',
+  'Singapore': 'SG',
+  'India': 'IN',
+  'Saudi Arabia': 'SA',
+  'Philippines': 'PH',
+  'Argentina': 'AR',
+}
+
+// Map currency codes
+const COUNTRY_CURRENCIES: Record<string, string> = {
+  'GB': 'GBP',
+  'US': 'USD',
+  'CA': 'CAD',
+  'DE': 'EUR',
+  'FR': 'EUR',
+  'IE': 'EUR',
+  'AU': 'AUD',
+  'NL': 'EUR',
+  'ES': 'EUR',
+  'IT': 'EUR',
+  'SG': 'SGD',
+  'IN': 'INR',
+  'SA': 'SAR',
+  'PH': 'PHP',
+  'AR': 'ARS',
 }
 
 export function JobListingSchema({ jobs, pageUrl }: JobListingSchemaProps) {
@@ -250,28 +295,56 @@ export function JobListingSchema({ jobs, pageUrl }: JobListingSchemaProps) {
       const datePosted = job.posted_date || new Date().toISOString().split('T')[0]
       const validThrough = calculateValidThrough(job.posted_date)
       const estimatedSalary = getEstimatedSalary(job.role_category, job.title)
-      const parsedSalary = job.compensation ? parseCompensation(job.compensation) : null
 
-      // Build base salary - use parsed if available, otherwise estimate
-      const baseSalary = parsedSalary ? {
-        '@type': 'MonetaryAmount',
-        currency: parsedSalary.currency || 'GBP',
-        value: {
-          '@type': 'QuantitativeValue',
-          minValue: parsedSalary.minValue,
-          ...(parsedSalary.maxValue && { maxValue: parsedSalary.maxValue }),
-          unitText: parsedSalary.unitText || 'DAY',
-        },
-      } : {
-        '@type': 'MonetaryAmount',
-        currency: 'GBP',
-        value: {
-          '@type': 'QuantitativeValue',
-          minValue: estimatedSalary.min,
-          maxValue: estimatedSalary.max,
-          unitText: 'DAY',
-        },
+      // Determine country code
+      const countryCode = job.country ? (COUNTRY_CODES[job.country] || 'GB') : 'GB'
+      const countryCurrency = COUNTRY_CURRENCIES[countryCode] || 'GBP'
+
+      // Build base salary - use actual salary_min/max if available, then parsed, then estimate
+      let baseSalary
+      if (job.salary_min) {
+        baseSalary = {
+          '@type': 'MonetaryAmount',
+          currency: job.salary_currency || countryCurrency,
+          value: {
+            '@type': 'QuantitativeValue',
+            minValue: job.salary_min,
+            ...(job.salary_max && { maxValue: job.salary_max }),
+            unitText: 'YEAR', // DB stores annual
+          },
+        }
+      } else if (job.compensation) {
+        const parsedSalary = parseCompensation(job.compensation)
+        if (parsedSalary) {
+          baseSalary = {
+            '@type': 'MonetaryAmount',
+            currency: parsedSalary.currency || countryCurrency,
+            value: {
+              '@type': 'QuantitativeValue',
+              minValue: parsedSalary.minValue,
+              ...(parsedSalary.maxValue && { maxValue: parsedSalary.maxValue }),
+              unitText: parsedSalary.unitText || 'DAY',
+            },
+          }
+        }
       }
+      // Fall back to estimate if no salary data
+      if (!baseSalary) {
+        baseSalary = {
+          '@type': 'MonetaryAmount',
+          currency: countryCurrency,
+          value: {
+            '@type': 'QuantitativeValue',
+            minValue: estimatedSalary.min,
+            maxValue: estimatedSalary.max,
+            unitText: 'DAY',
+          },
+        }
+      }
+
+      // Determine location for schema
+      const locationCity = job.city || job.location?.split(',')[0] || undefined
+      const countryName = job.country || 'United Kingdom'
 
       return {
         '@type': 'ListItem',
@@ -280,7 +353,7 @@ export function JobListingSchema({ jobs, pageUrl }: JobListingSchemaProps) {
           '@type': 'JobPosting',
           '@id': `https://fractional.quest/fractional-job/${job.slug}`,
           title: job.title,
-          description: job.description_snippet || `${job.title} position at ${job.company_name}. Fractional/part-time opportunity in the UK.`,
+          description: job.description_snippet || `${job.title} position at ${job.company_name}. Fractional/part-time executive opportunity.`,
           hiringOrganization: {
             '@type': 'Organization',
             name: job.company_name || 'Confidential',
@@ -291,20 +364,20 @@ export function JobListingSchema({ jobs, pageUrl }: JobListingSchemaProps) {
           baseSalary,
           directApply: true,
           url: `https://fractional.quest/fractional-job/${job.slug}`,
-          // Location handling
+          // Location handling - international aware
           ...(job.is_remote ? {
             jobLocationType: 'TELECOMMUTE',
             applicantLocationRequirements: {
               '@type': 'Country',
-              name: 'United Kingdom',
+              name: countryName,
             },
           } : {
             jobLocation: {
               '@type': 'Place',
               address: {
                 '@type': 'PostalAddress',
-                addressLocality: job.location || 'United Kingdom',
-                addressCountry: 'GB',
+                ...(locationCity && { addressLocality: locationCity }),
+                addressCountry: countryCode,
               },
             },
           }),

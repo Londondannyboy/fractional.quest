@@ -61,13 +61,13 @@ async function getAIJobs() {
     const sql = createDbQuery()
     const jobs = await sql`
       SELECT
-        id, slug, title, company_name, location, is_remote, workplace_type,
+        id, slug, title, company_name, location, country, city, is_remote, workplace_type,
         compensation, role_category, skills_required, posted_date,
         description_snippet
       FROM jobs
       WHERE is_active = true AND (role_category = 'Engineering' OR title ILIKE '%AI%' OR title ILIKE '%Artificial Intelligence%')
       ORDER BY posted_date DESC NULLS LAST
-      LIMIT 12
+      LIMIT 20
     `
     return jobs as any[]
   } catch {

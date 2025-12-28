@@ -70,13 +70,14 @@ async function getFinanceJobs() {
     const sql = createDbQuery()
     const jobs = await sql`
       SELECT
-        id, slug, title, company_name, location, is_remote, workplace_type,
-        compensation, role_category, skills_required, posted_date, hours_per_week,
-        description_snippet
+        id, slug, title, company_name, location, country, city,
+        is_remote, workplace_type, compensation, role_category,
+        skills_required, posted_date, hours_per_week, description_snippet,
+        salary_min, salary_max, salary_currency
       FROM jobs
       WHERE is_active = true AND role_category = 'Finance'
       ORDER BY posted_date DESC NULLS LAST
-      LIMIT 12
+      LIMIT 20
     `
     return jobs as any[]
   } catch {

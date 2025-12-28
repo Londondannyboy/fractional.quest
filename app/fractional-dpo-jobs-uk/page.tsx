@@ -65,13 +65,13 @@ async function getDPOJobs() {
     const sql = createDbQuery()
     const jobs = await sql`
       SELECT
-        id, slug, title, company_name, location, is_remote, workplace_type,
-        compensation, role_category, skills_required, posted_date, hours_per_week,
+        id, slug, title, company_name, location, country, city, is_remote, workplace_type,
+        compensation, role_category, skills_required, posted_date, hours_per_week, salary_min, salary_max, salary_currency,
         description_snippet
       FROM jobs
       WHERE is_active = true AND (role_category = 'Compliance' OR title ILIKE '%DPO%' OR title ILIKE '%Data Protection%')
       ORDER BY posted_date DESC NULLS LAST
-      LIMIT 12
+      LIMIT 20
     `
     return jobs as any[]
   } catch {
