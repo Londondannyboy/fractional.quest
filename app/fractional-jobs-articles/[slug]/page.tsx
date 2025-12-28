@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import ReactMarkdown from 'react-markdown'
 import { createDbQuery } from '@/lib/db'
 
 interface ArticlePageProps {
@@ -131,19 +132,19 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       />
 
       {/* Header */}
-      <div className="bg-gradient-to-br from-gray-900 via-slate-900 to-black py-16">
+      <div className="bg-gradient-to-br from-purple-50 via-white to-blue-50 py-16 border-b border-gray-100">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           {/* Breadcrumbs */}
-          <div className="flex items-center gap-2 text-sm text-gray-600 mb-6">
-            <Link href="/" className="hover:text-white transition-colors">
+          <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
+            <Link href="/" className="hover:text-purple-600 transition-colors">
               Home
             </Link>
             <span>/</span>
-            <Link href="/fractional-jobs-articles" className="hover:text-white transition-colors">
+            <Link href="/fractional-jobs-articles" className="hover:text-purple-600 transition-colors">
               Articles
             </Link>
             <span>/</span>
-            <span className="text-gray-300">{article.title}</span>
+            <span className="text-gray-700 truncate max-w-[200px]">{article.title}</span>
           </div>
 
           {/* Badge */}
@@ -154,15 +155,15 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           )}
 
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
             {article.title}
           </h1>
 
           {/* Meta */}
-          <div className="flex items-center gap-4 text-gray-600 text-sm">
+          <div className="flex items-center gap-4 text-gray-500 text-sm">
             {formattedDate && <span>{formattedDate}</span>}
             {article.auto_generated && (
-              <span className="inline-flex items-center gap-1">
+              <span className="inline-flex items-center gap-1 text-purple-600">
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -196,12 +197,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         )}
 
         {/* Article Content */}
-        <div className="prose prose-lg max-w-none">
-          {article.content.split('\n\n').map((paragraph, index) => (
-            <p key={index} className="text-gray-700 leading-relaxed mb-6">
-              {paragraph}
-            </p>
-          ))}
+        <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-gray-700 prose-p:leading-relaxed prose-strong:text-gray-900 prose-ul:my-4 prose-li:text-gray-700 prose-li:my-1 prose-blockquote:border-l-purple-500 prose-blockquote:bg-purple-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:rounded-r-lg prose-code:bg-gray-100 prose-code:px-1 prose-code:rounded prose-pre:bg-gray-900 prose-pre:text-gray-100">
+          <ReactMarkdown>{article.content}</ReactMarkdown>
         </div>
 
         {/* CTA */}
