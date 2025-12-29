@@ -17,10 +17,6 @@ const { handleRequest } = copilotRuntimeNextJSAppRouterEndpoint({
   endpoint: '/api/copilotkit',
 })
 
-export const POST = async (req: Request) => {
-  return handleRequest(req)
-}
-
 export const GET = async (req: Request) => {
   return handleRequest(req)
 }
