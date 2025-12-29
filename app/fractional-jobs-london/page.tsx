@@ -146,7 +146,7 @@ async function getLondonStats() {
         GROUP BY role_category
         ORDER BY count DESC
       `,
-      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS INTEGER)) as avg FROM jobs WHERE is_active = true AND location ILIKE '%london%' AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+'`
+      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS BIGINT)) as avg FROM jobs WHERE is_active = true AND location ILIKE '%london%' AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+' AND LENGTH(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g')) < 10`
     ])
 
     const count = parseInt((totalLondon[0] as any)?.count || '0')
@@ -757,13 +757,7 @@ export default async function FractionalJobsLondonPage() {
         </div>
       </section>
 
-      {/* AI Job Assistant - CopilotKit Popup */}
-      <JobAssistant
-        pageContext={{
-          currentPage: 'Fractional Jobs London',
-          filters: { location: 'London' },
-        }}
-      />
+      {/* AI Job Assistant - disabled until CopilotKit agents configured */}
     </div>
   )
 }

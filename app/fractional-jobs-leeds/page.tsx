@@ -47,7 +47,7 @@ async function getLeedsStats() {
     const sql = createDbQuery()
     const [total, avgRateResult] = await Promise.all([
       sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (location ILIKE '%leeds%' OR location ILIKE '%yorkshire%' OR location ILIKE '%sheffield%')`,
-      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS INTEGER)) as avg FROM jobs WHERE is_active = true AND (location ILIKE '%leeds%' OR location ILIKE '%yorkshire%') AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+'`
+      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS BIGINT)) as avg FROM jobs WHERE is_active = true AND (location ILIKE '%leeds%' OR location ILIKE '%yorkshire%') AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+'`
     ])
     return {
       total: parseInt((total[0] as any)?.count || '0'),

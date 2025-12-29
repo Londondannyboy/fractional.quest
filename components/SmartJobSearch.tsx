@@ -1,31 +1,7 @@
 'use client'
 
-import { useState, useCallback, Component, ReactNode } from 'react'
-import { useCopilotAction, useCopilotReadable } from '@copilotkit/react-core'
+import { useState, useCallback } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-
-// Error boundary to prevent CopilotKit errors from crashing the page
-class CopilotErrorBoundary extends Component<{ children: ReactNode; fallback: ReactNode }, { hasError: boolean }> {
-  constructor(props: { children: ReactNode; fallback: ReactNode }) {
-    super(props)
-    this.state = { hasError: false }
-  }
-
-  static getDerivedStateFromError() {
-    return { hasError: true }
-  }
-
-  componentDidCatch(error: Error) {
-    console.warn('CopilotKit error (non-fatal):', error.message)
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback
-    }
-    return this.props.children
-  }
-}
 
 interface SmartJobSearchProps {
   totalJobs?: number
@@ -42,7 +18,10 @@ interface JobFilters {
   keywords?: string[]
 }
 
-function SmartJobSearchInner({
+// CopilotKit integration disabled - requires agent setup
+// To re-enable: wrap app in CopilotProvider and configure agents
+
+export function SmartJobSearch({
   totalJobs = 50,
   className = '',
   placeholder = 'Try: "CFO roles in London, remote, under £1,200/day"'
@@ -52,107 +31,6 @@ function SmartJobSearchInner({
   const [query, setQuery] = useState('')
   const [isSearching, setIsSearching] = useState(false)
   const [filters, setFilters] = useState<JobFilters>({})
-  const [suggestions, setSuggestions] = useState<string[]>([])
-
-  // Make current filters readable to the AI
-  useCopilotReadable({
-    description: 'Current job search filters and context',
-    value: {
-      currentFilters: filters,
-      totalJobs,
-      availableRoles: ['CFO', 'CTO', 'CMO', 'COO', 'CHRO', 'CPO', 'CISO'],
-      availableLocations: ['London', 'Manchester', 'Birmingham', 'Edinburgh', 'Remote'],
-      rateRange: { min: 500, max: 2000 },
-    },
-  })
-
-  // Action to filter jobs based on natural language query
-  useCopilotAction({
-    name: 'filterJobs',
-    description: 'Filter fractional executive jobs based on user criteria. Use this when user wants to search or filter jobs.',
-    parameters: [
-      {
-        name: 'role',
-        type: 'string',
-        description: 'Executive role type (CFO, CTO, CMO, COO, CHRO, CPO, CISO)',
-        required: false,
-      },
-      {
-        name: 'location',
-        type: 'string',
-        description: 'Location preference (London, Manchester, Remote, etc.)',
-        required: false,
-      },
-      {
-        name: 'rateMin',
-        type: 'number',
-        description: 'Minimum day rate in GBP',
-        required: false,
-      },
-      {
-        name: 'rateMax',
-        type: 'number',
-        description: 'Maximum day rate in GBP',
-        required: false,
-      },
-      {
-        name: 'workType',
-        type: 'string',
-        description: 'Work arrangement (Remote, Hybrid, On-site)',
-        required: false,
-      },
-    ],
-    handler: async ({ role, location, rateMin, rateMax, workType }) => {
-      const newFilters: JobFilters = {}
-
-      if (role) newFilters.role = role.toUpperCase()
-      if (location) newFilters.location = location
-      if (rateMin) newFilters.rateMin = rateMin
-      if (rateMax) newFilters.rateMax = rateMax
-      if (workType) newFilters.workType = workType as JobFilters['workType']
-
-      setFilters(newFilters)
-
-      // Build URL with filters
-      const params = new URLSearchParams()
-      if (role) params.set('role', role.toUpperCase())
-      if (location) params.set('location', location)
-      if (workType) params.set('type', workType)
-
-      // Navigate to filtered view
-      const queryString = params.toString()
-      if (queryString) {
-        router.push(`/fractional-jobs-uk?${queryString}`)
-      }
-
-      return `Found jobs matching: ${JSON.stringify(newFilters)}`
-    },
-  })
-
-  // Action to save a search for later
-  useCopilotAction({
-    name: 'saveSearch',
-    description: 'Save the current search criteria for job alerts',
-    parameters: [
-      {
-        name: 'searchName',
-        type: 'string',
-        description: 'A name for this saved search',
-        required: true,
-      },
-    ],
-    handler: async ({ searchName }) => {
-      // Store in localStorage for now
-      const savedSearches = JSON.parse(localStorage.getItem('savedSearches') || '[]')
-      savedSearches.push({
-        name: searchName,
-        filters,
-        createdAt: new Date().toISOString(),
-      })
-      localStorage.setItem('savedSearches', JSON.stringify(savedSearches))
-      return `Search "${searchName}" saved successfully!`
-    },
-  })
 
   const handleSearch = useCallback(async () => {
     if (!query.trim()) return
@@ -332,47 +210,3 @@ function SmartJobSearchInner({
   )
 }
 
-// Basic fallback search component (no CopilotKit)
-function BasicJobSearch({
-  className = '',
-  placeholder = 'Search jobs...'
-}: SmartJobSearchProps) {
-  const router = useRouter()
-  const [query, setQuery] = useState('')
-
-  const handleSearch = () => {
-    if (query.trim()) {
-      router.push(`/fractional-jobs-uk?q=${encodeURIComponent(query)}`)
-    }
-  }
-
-  return (
-    <div className={className}>
-      <div className="flex items-center gap-2">
-        <input
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-          placeholder={placeholder}
-          className="w-full px-4 py-3 pl-12 text-gray-900 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500"
-        />
-        <button
-          onClick={handleSearch}
-          className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700"
-        >
-          Search
-        </button>
-      </div>
-    </div>
-  )
-}
-
-// Export wrapped component with error boundary
-export function SmartJobSearch(props: SmartJobSearchProps) {
-  return (
-    <CopilotErrorBoundary fallback={<BasicJobSearch {...props} />}>
-      <SmartJobSearchInner {...props} />
-    </CopilotErrorBoundary>
-  )
-}

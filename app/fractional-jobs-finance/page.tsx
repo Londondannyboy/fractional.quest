@@ -53,7 +53,7 @@ async function getFinanceStats() {
     const sql = createDbQuery()
     const [total, avgRateResult] = await Promise.all([
       sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category ILIKE '%CFO%' OR role_category ILIKE '%finance%' OR title ILIKE '%CFO%' OR title ILIKE '%finance%')`,
-      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS INTEGER)) as avg FROM jobs WHERE is_active = true AND (role_category ILIKE '%CFO%' OR role_category ILIKE '%finance%') AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+'`
+      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS BIGINT)) as avg FROM jobs WHERE is_active = true AND (role_category ILIKE '%CFO%' OR role_category ILIKE '%finance%') AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+'`
     ])
     return {
       total: parseInt((total[0] as any)?.count || '0'),

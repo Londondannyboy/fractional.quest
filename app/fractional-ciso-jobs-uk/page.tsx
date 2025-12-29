@@ -74,7 +74,7 @@ async function getSecurityStats() {
     const sql = createDbQuery()
     const [totalResult, avgRateResult, remoteResult] = await Promise.all([
       sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category IN ('Security', 'Data', 'Legal') OR title ILIKE '%CISO%' OR title ILIKE '%Security%' OR title ILIKE '%Information Officer%' OR title ILIKE '%Data Protection%' OR title ILIKE '%DPO%' OR title ILIKE '%Compliance%' OR title ILIKE '%Cyber%' OR title ILIKE '%InfoSec%' OR title ILIKE '%Risk%')`,
-      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS INTEGER)) as avg FROM jobs WHERE is_active = true AND (role_category IN ('Security', 'Data') OR title ILIKE '%CISO%' OR title ILIKE '%Security%') AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+'`,
+      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS BIGINT)) as avg FROM jobs WHERE is_active = true AND (role_category IN ('Security', 'Data') OR title ILIKE '%CISO%' OR title ILIKE '%Security%') AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+'`,
       sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category IN ('Security', 'Data', 'Legal') OR title ILIKE '%CISO%' OR title ILIKE '%Security%' OR title ILIKE '%Cyber%') AND (is_remote = true OR workplace_type = 'Remote')`
     ])
     return {

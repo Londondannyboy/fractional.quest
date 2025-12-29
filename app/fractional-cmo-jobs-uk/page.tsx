@@ -37,7 +37,7 @@ async function getMarketingStats() {
     const sql = createDbQuery()
     const [totalResult, avgRateResult, remoteResult] = await Promise.all([
       sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND role_category = 'Marketing'`,
-      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS INTEGER)) as avg FROM jobs WHERE is_active = true AND role_category = 'Marketing' AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+'`,
+      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS BIGINT)) as avg FROM jobs WHERE is_active = true AND role_category = 'Marketing' AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+'`,
       sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND role_category = 'Marketing' AND (is_remote = true OR workplace_type = 'Remote')`
     ])
     return {

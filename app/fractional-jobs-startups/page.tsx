@@ -56,7 +56,7 @@ async function getStartupStats() {
     const sql = createDbQuery()
     const [total, avgRateResult] = await Promise.all([
       sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (company_name ILIKE '%startup%' OR description_snippet ILIKE '%series%' OR description_snippet ILIKE '%scale-up%' OR description_snippet ILIKE '%venture%')`,
-      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS INTEGER)) as avg FROM jobs WHERE is_active = true AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+'`
+      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS BIGINT)) as avg FROM jobs WHERE is_active = true AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+'`
     ])
     return {
       total: Math.max(parseInt((total[0] as any)?.count || '0'), 80),
