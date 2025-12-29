@@ -58,6 +58,12 @@ const nextConfig: NextConfig = {
         destination: '/part-time-cmo-jobs-uk',
         permanent: true, // 301 redirect for SEO
       },
+      // Redirect long recruitment agency URL to short SEO-optimized URL
+      {
+        source: '/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter',
+        destination: '/fractional-recruitment-agency',
+        permanent: true, // 301 redirect for SEO
+      },
     ];
   },
 
