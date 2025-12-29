@@ -5,15 +5,23 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { AuthButtons } from './AuthButtons'
 
+// Job markets for dropdown
+const JOB_MARKETS = [
+  { href: '/fractional-jobs', label: 'Global', flag: '🌍' },
+  { href: '/fractional-jobs-uk', label: 'United Kingdom', flag: '🇬🇧' },
+  { href: '/fractional-jobs-us', label: 'United States', flag: '🇺🇸' },
+  { href: '/fractional-jobs-au', label: 'Australia', flag: '🇦🇺' },
+]
+
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [jobsDropdownOpen, setJobsDropdownOpen] = useState(false)
   const pathname = usePathname()
 
   // Always use the "light" theme for consistency
   const navBaseClasses = "sticky top-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-gray-100"
-  
+
   const navLinks = [
-    { href: '/fractional-jobs-uk', label: 'Jobs' },
     { href: '/destinations', label: 'Destinations' },
     { href: '/fractional-property-ownership-uk', label: 'Property' },
     { href: '/frac', label: 'Talk to Frac' },
@@ -45,6 +53,41 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
+            {/* Jobs Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setJobsDropdownOpen(!jobsDropdownOpen)}
+                onBlur={() => setTimeout(() => setJobsDropdownOpen(false), 150)}
+                className={`flex items-center gap-1 text-sm font-medium transition-colors ${
+                  pathname.includes('fractional-jobs')
+                    ? 'text-gray-900 font-semibold'
+                    : 'text-gray-500 hover:text-gray-900'
+                }`}
+              >
+                Jobs
+                <svg className={`w-4 h-4 transition-transform ${jobsDropdownOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {jobsDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 w-52 bg-white border border-gray-200 rounded-lg shadow-lg py-2 z-50">
+                  {JOB_MARKETS.map((market) => (
+                    <Link
+                      key={market.href}
+                      href={market.href}
+                      className={`flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-gray-50 transition-colors ${
+                        pathname === market.href ? 'bg-purple-50 text-purple-700 font-medium' : 'text-gray-700'
+                      }`}
+                      onClick={() => setJobsDropdownOpen(false)}
+                    >
+                      <span className="text-lg">{market.flag}</span>
+                      <span>{market.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {navLinks.map((link) => (
               <Link
                 key={link.href}
