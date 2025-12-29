@@ -12,6 +12,7 @@ import { JobPreviewTooltip } from '@/components/ui/JobPreviewTooltip'
 import { AuthorByline, AuthorBylineCompact } from '@/components/AuthorByline'
 import { EmailCapture } from '@/components/EmailCapture'
 import { LastUpdated, LastUpdatedBadge } from '@/components/LastUpdated'
+import { HotJobs } from '@/components/HotJobs'
 
 // CopilotKit-enhanced components (client-side) - using dynamic without ssr:false for server component compatibility
 const SmartJobSearch = dynamic(
@@ -354,13 +355,36 @@ export default async function FractionalJobsLondonPage() {
         </div>
       </section>
 
+      {/* Hot Jobs - Latest Postings */}
+      {(londonJobs as any[]).length > 0 && (
+        <section className="py-8 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <HotJobs
+              jobs={(londonJobs as any[]).map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date || job.created_at,
+                is_remote: job.is_remote,
+              }))}
+              title="🔥 Hot Jobs in London"
+              maxJobs={5}
+            />
+          </div>
+        </section>
+      )}
+
       {/* Jobs Section */}
       {(londonJobs as any[]).length > 0 && (
         <section id="jobs" className="py-12 md:py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                Fractional Jobs in London
+                All Fractional Jobs in London
               </h2>
               <p className="text-gray-600 text-sm mb-6">
                 {stats.totalLondon} active London opportunities. London's position as a global business hub, highlighted by the <a href="https://www.cbi.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CBI</a>, continues to drive demand for flexible executive expertise across fintech, scale-ups, and established enterprises.
