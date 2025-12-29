@@ -2,7 +2,9 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
@@ -13,8 +15,8 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CAO Jobs UK 2025',
-  description: 'Fractional CAO jobs UK. Part-time Chief Analytics Officer roles. £900-£1,400/day.',
+  title: 'Fractional CAO Jobs UK: Chief Analytics Officer Roles 2025',
+  description: 'Fractional CAO jobs UK for experienced analytics leaders. Part-time Chief Analytics Officer positions paying £900-£1,400/day. Browse live fractional CAO jobs and data science leadership opportunities across the UK.',
   keywords: 'fractional cao jobs, fractional cao jobs uk, part time cao, part-time chief analytics officer, cao part time, fractional analytics opportunities, fractional data science jobs',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cao-jobs-uk',
@@ -90,19 +92,27 @@ function getDaysAgo(postedDate: string | null): number | undefined {
 const CAO_FAQS = [
   {
     question: 'What is a Fractional CAO?',
-    answer: 'A Fractional CAO (Chief Analytics Officer) is an experienced analytics leader who helps companies extract value from their data. They build analytics capabilities, data science teams, and predictive models on a part-time basis.',
+    answer: 'A Fractional CAO (Chief Analytics Officer) is an experienced analytics leader who works with companies on a part-time basis, typically 1-3 days per week. They build analytics capabilities, data science teams, and predictive models—extracting business value from data without the £150,000-£220,000+ cost of a full-time hire.',
   },
   {
     question: 'How does a CAO differ from a CDO?',
-    answer: 'A CDO (Chief Data Officer) typically focuses on data governance, management, and infrastructure (the "defence"). A CAO focuses on insights, modelling, and business value generation (the "offence"). However, in fractional roles, these responsibilities often overlap.',
+    answer: 'A CDO (Chief Data Officer) typically focuses on data governance, management, and infrastructure (the "defence"). A CAO focuses on insights, modelling, and business value generation (the "offence"). CDOs ensure data quality and compliance; CAOs drive decisions and predict outcomes. In fractional roles, these responsibilities often overlap.',
   },
   {
-    question: 'How much do Fractional CAO jobs pay?',
-    answer: 'Fractional CAO roles in the UK typically pay £900-£1,400 per day. The high rate reflects the scarcity of senior leaders who can bridge the gap between complex data science and business strategy.',
+    question: 'How much do Fractional CAO jobs pay in the UK?',
+    answer: 'Fractional CAO roles in the UK typically pay £900-£1,400 per day. London-based roles command £1,100-£1,400/day, while regional positions average £900-£1,200/day. Annual earnings for fractional CAOs working with multiple clients can reach £180,000-£300,000+.',
   },
   {
-    question: 'What skills are required?',
-    answer: 'Deep expertise in data science, machine learning, and BI is essential, coupled with strong business acumen. Fractional CAOs must be able to translate technical insights into actionable business strategies for the C-suite.',
+    question: 'What skills are required for Fractional CAO jobs?',
+    answer: 'Deep expertise in data science, machine learning, and BI is essential, coupled with strong business acumen. Fractional CAOs must translate technical insights into actionable business strategies. Key skills include: Python/R, SQL, cloud platforms (AWS, GCP, Azure), BI tools (Tableau, Looker, Power BI), and ML frameworks.',
+  },
+  {
+    question: 'What industries hire Fractional CAOs?',
+    answer: 'High-demand industries include: FinTech (risk modelling, fraud detection), e-commerce (personalisation, demand forecasting), healthcare (clinical analytics), media (audience insights), and any company seeking to leverage AI/ML for competitive advantage.',
+  },
+  {
+    question: 'What is the future of Fractional CAO roles?',
+    answer: 'With the democratisation of AI and GenAI adoption, the CAO role is evolving. Fractional CAOs are increasingly expected to guide companies on AI strategy, ethics, and value creation—making them pivotal players in the modern C-suite.',
   },
 ]
 
@@ -119,12 +129,13 @@ export default async function FractionalCaoJobsUkPage() {
   return (
     <div className="min-h-screen bg-white">
       <WebPageSchema
-        title="Fractional CAO Jobs UK | Part-Time Chief Analytics Officer Roles"
+        title="Fractional CAO Jobs UK | Part-Time Chief Analytics Officer Roles 2025"
         description="Find part-time CAO positions paying £900-£1,400/day"
         url="https://fractional.quest/fractional-cao-jobs-uk"
         dateModified={lastUpdatedDate}
         itemCount={stats.total}
       />
+      <FAQPageSchema faqs={CAO_FAQS} />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-cao-jobs-uk" />
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">

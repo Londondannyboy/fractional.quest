@@ -2,15 +2,21 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
+import { BreadcrumbsLight } from '@/components/Breadcrumbs'
+import { JobListingSchema } from '@/components/JobPostingSchema'
+import { getRoleBreadcrumbs } from '@/lib/seo-config'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Growth Jobs UK 2025',
-  description: 'Fractional Head of Growth jobs UK. Growth Director roles. £700-£1,200/day.',
+  title: 'Fractional Head of Growth Jobs UK: Growth Director Roles 2025',
+  description: 'Fractional Head of Growth jobs UK for experienced growth leaders. Part-time Growth Director positions paying £700-£1,200/day. Browse live fractional growth jobs and marketing leadership opportunities across the UK.',
   keywords: 'fractional head of growth jobs, fractional growth director jobs uk, part time head of growth, fractional growth jobs, growth marketing jobs part time, fractional growth marketing',
   alternates: {
     canonical: 'https://fractional.quest/fractional-head-of-growth-jobs-uk',

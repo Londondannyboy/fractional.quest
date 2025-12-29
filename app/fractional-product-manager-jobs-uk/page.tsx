@@ -2,7 +2,9 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
@@ -13,8 +15,8 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional PM Jobs UK 2025',
-  description: 'Fractional Product Manager jobs UK. Part-time PM positions £400-£700/day. Remote & hybrid roles.',
+  title: 'Fractional Product Manager Jobs UK: Part-Time PM Roles 2025',
+  description: 'Fractional Product Manager jobs UK for experienced PMs. Part-time Product Manager positions paying £400-£700/day. Browse live fractional PM jobs and product leadership opportunities across the UK.',
   keywords: 'fractional product manager jobs, fractional pm jobs uk, part time product manager, fractional product roles, part time pm jobs, freelance product manager',
   alternates: {
     canonical: 'https://fractional.quest/fractional-product-manager-jobs-uk',

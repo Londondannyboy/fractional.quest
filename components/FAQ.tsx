@@ -88,9 +88,10 @@ export function FAQ({ items, faqs, title = 'Frequently Asked Questions', classNa
                 openIndex === index ? 'max-h-96' : 'max-h-0'
               }`}
             >
-              <div className="p-6 pt-0 text-gray-600 leading-relaxed">
-                {item.answer}
-              </div>
+              <div
+                className="p-6 pt-0 text-gray-600 leading-relaxed [&_a]:text-blue-600 [&_a]:underline [&_a]:hover:text-blue-700"
+                dangerouslySetInnerHTML={{ __html: item.answer }}
+              />
             </div>
           </div>
         ))}

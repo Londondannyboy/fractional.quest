@@ -2,7 +2,9 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
@@ -13,14 +15,14 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CDO Jobs UK 2025',
-  description: 'Fractional CDO jobs UK. Part-time Chief Data Officer roles. £900-£1,500/day.',
-  keywords: 'fractional cdo jobs, fractional cdo jobs uk, part time cdo, part-time chief data officer, cdo part time, fractional cdo opportunities, fractional data jobs, head of data part time',
+  title: 'Fractional CDO Jobs UK: Chief Data Officer Roles 2025',
+  description: 'Fractional CDO jobs UK for experienced data leaders. Part-time Chief Data Officer positions paying £900-£1,500/day. Browse live fractional CDO jobs, interim CDO roles, and data leadership opportunities across the UK.',
+  keywords: 'fractional cdo jobs, fractional cdo jobs uk, part time cdo, part-time chief data officer, cdo part time, fractional cdo opportunities, fractional data jobs, head of data part time, interim cdo jobs, data officer salary uk, chief data officer jobs uk, fractional data leadership',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cdo-jobs-uk',
   },
   openGraph: {
-    title: 'Fractional CDO Jobs UK | Part-Time Chief Data Officer Roles',
+    title: 'Fractional CDO Jobs UK | Part-Time Chief Data Officer Roles 2025',
     description: 'Fractional CDO jobs UK - Find part-time CDO positions paying £900-£1,500/day. Remote & hybrid available.',
     images: ['/images/fractional-cdo-jobs-uk.jpg'],
     url: 'https://fractional.quest/fractional-cdo-jobs-uk',
@@ -90,19 +92,27 @@ function getDaysAgo(postedDate: string | null): number | undefined {
 const CDO_FAQS = [
   {
     question: 'What is a Fractional CDO?',
-    answer: 'A Fractional CDO (Chief Data Officer) is an experienced data executive who helps companies define their data strategy, governance, and architecture on a part-time basis. They enable organisations to become data-driven without the cost of a full-time hire.',
+    answer: 'A Fractional CDO (Chief Data Officer) is an experienced data executive who works with companies on a part-time basis, typically 1-3 days per week. They define data strategy, governance, and architecture, enabling organisations to become data-driven and AI-ready without the £180,000-£280,000+ cost of a full-time hire.',
   },
   {
     question: 'How much do Fractional CDO jobs pay in the UK?',
-    answer: 'Fractional CDO day rates in the UK are high, typically ranging from £900 to £1,500 per day. Demand is driven by the need for AI readiness and complex data compliance (GDPR) strategies.',
+    answer: 'Fractional CDO day rates in the UK range from £900 to £1,500 per day, making them among the highest-paid fractional executive roles. London-based CDOs typically command £1,100-£1,500/day, while regional roles average £900-£1,300/day. Annual earnings for fractional CDOs working with multiple clients can reach £200,000-£350,000+.',
   },
   {
     question: 'Why hire a Fractional CDO?',
-    answer: 'Companies hire Fractional CDOs to unlock the value of their data. This includes setting up modern data stacks, ensuring regulatory compliance, preparing for AI/ML initiatives, and bridging the gap between technical teams and business leadership.',
+    answer: 'Companies hire Fractional CDOs to: unlock the value of their data assets, implement modern data stacks (Snowflake, Databricks, BigQuery), ensure GDPR and regulatory compliance, prepare for AI/ML initiatives, establish data governance frameworks, and bridge the gap between technical teams and business leadership.',
   },
   {
     question: 'What industries need Fractional CDOs?',
-    answer: 'FinTech, Insurance, Healthcare, and E-commerce are the biggest employers of Fractional CDOs due to the volume and sensitivity of the data they handle. However, any company seeking to leverage AI is a potential client.',
+    answer: 'FinTech, Insurance, Healthcare, and E-commerce are the primary employers of Fractional CDOs due to the volume and sensitivity of data they handle. Private equity portfolio companies, media organisations, and any company preparing for AI adoption are also key clients.',
+  },
+  {
+    question: 'What qualifications do I need for Fractional CDO jobs?',
+    answer: 'Successful Fractional CDO candidates typically have: 15+ years of data experience with 5+ years in CDO, VP Data, or Head of Analytics roles; proven track record implementing data platforms and governance frameworks; expertise in cloud data platforms (Snowflake, Databricks, BigQuery); strong understanding of GDPR and data ethics; and board-level communication skills.',
+  },
+  {
+    question: 'How is a Fractional CDO different from a Data Consultant?',
+    answer: 'A Fractional CDO operates as an embedded executive with ongoing accountability for data strategy and outcomes. They attend board meetings, manage data teams, and own the data roadmap. A Data Consultant typically provides project-based advice without executive responsibility. Fractional CDOs have skin in the game and are invested in long-term success.',
   },
 ]
 
@@ -119,12 +129,13 @@ export default async function FractionalCdoJobsUkPage() {
   return (
     <div className="min-h-screen bg-white">
       <WebPageSchema
-        title="Fractional CDO Jobs UK | Part-Time Chief Data Officer Roles"
+        title="Fractional CDO Jobs UK | Part-Time Chief Data Officer Roles 2025"
         description="Find part-time CDO positions paying £900-£1,500/day"
         url="https://fractional.quest/fractional-cdo-jobs-uk"
         dateModified={lastUpdatedDate}
         itemCount={stats.total}
       />
+      <FAQPageSchema faqs={CDO_FAQS} />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-cdo-jobs-uk" />
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
@@ -187,7 +198,7 @@ export default async function FractionalCdoJobsUkPage() {
              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
             <h2 className="text-2xl md:text-3xl font-black text-gray-900">Earnings Calculator</h2>
           </div>
-          <RoleCalculator role="cto" /> 
+          <RoleCalculator role="cdo" /> 
         </div>
       </section>
 
@@ -263,38 +274,114 @@ export default async function FractionalCdoJobsUkPage() {
           <div className="mb-16">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-4 block">The Guide</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
-              A Guide to <span className="text-teal-600">Fractional CDO Jobs UK</span>
+              Everything You Need to Know About<br />
+              <span className="text-teal-600">Fractional CDO Jobs UK</span>
             </h2>
             <div className="w-24 h-1 bg-teal-900"></div>
           </div>
-          
+
+          {/* SEO Image */}
+          <figure className="mb-16 -mx-6 lg:-mx-16">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
+              alt="Fractional CDO jobs UK - Chief Data Officer leading data strategy"
+              title="Fractional CDO Jobs UK - Part-Time Chief Data Officer Roles"
+              className="w-full h-80 md:h-96 object-cover"
+            />
+            <figcaption className="text-sm text-gray-500 mt-3 px-6 lg:px-16">
+              Fractional CDO jobs UK: Data leaders across the UK are embracing fractional work
+            </figcaption>
+          </figure>
+
           <article className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              <strong className="font-semibold text-gray-900">Fractional CDO jobs</strong> are amongst the fastest-growing executive roles in the UK. As data becomes the lifeblood of modern business, part-time Chief Data Officers provide the critical governance, strategy, and architecture needed to harness it effectively—without the full-time cost.
-            </p>
-            
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">The Strategic Value of a Fractional CDO</h3>
-            <p>
-              For many mid-sized companies, hiring a full-time CDO (£180k-£250k) is prohibitive. Yet, the need for data leadership is acute. A <strong className="font-semibold">Fractional CDO</strong> steps in to turn messy data into a strategic asset. They implement modern data stacks, establish single sources of truth, and prepare organisations for the AI revolution.
+              <strong className="font-semibold text-gray-900">Fractional CDO jobs</strong> are among the fastest-growing executive roles in the UK. Part-time Chief Data Officer positions where seasoned data executives turn raw information into strategic assets—implementing modern data stacks, establishing governance frameworks, and preparing organisations for the AI revolution. According to <a href="https://www.cipd.org/uk/knowledge/reports/flexible-working-trends/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800 underline">CIPD research</a>, senior data leadership is increasingly embracing flexible models.
             </p>
 
-             <div className="bg-gray-50 p-8 my-10 border-l-4 border-teal-900">
-              <p className="text-xl font-semibold text-gray-900 mb-0">"The Fractional CDO is the architect of the AI-ready enterprise, ensuring data is clean, compliant, and accessible."</p>
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">The Rise of Fractional CDO Jobs UK</h3>
+            <p>
+              The UK market for <strong>fractional CDO jobs</strong> has exploded, driven by the convergence of AI adoption, regulatory complexity, and the value of data-driven decision making. According to <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800 underline">BVCA research</a>, private equity firms increasingly mandate data leadership across portfolio companies. The cost of a full-time CDO (£180,000-£280,000+) is prohibitive for most mid-market companies, yet the need for data strategy has never been more acute.
+            </p>
+
+            <div className="bg-gray-50 p-8 my-10 border-l-4 border-teal-900">
+              <p className="text-xl font-semibold text-gray-900 mb-0">"The Fractional CDO is the architect of the AI-ready enterprise, ensuring data is clean, compliant, and accessible across the organisation."</p>
             </div>
 
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Core Focus Areas</h3>
+            <p>
+              UK companies at Series A-C are primary drivers of demand. These organisations have accumulated significant data but lack the leadership to leverage it strategically. A fractional CDO provides the expertise to implement modern data platforms, establish single sources of truth, ensure <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800 underline">GDPR compliance</a>, and prepare for AI/ML initiatives—all at a fraction of the cost.
+            </p>
+
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Why Fractional CDO Jobs Are Booming</h3>
             <ul className="space-y-3">
-              <li><strong>Data Strategy:</strong> Creating a roadmap that aligns data initiatives with business goals (e.g., reducing churn, optimising pricing).</li>
-              <li><strong>Governance & Compliance:</strong> Ensuring robust GDPR compliance and data ethics frameworks are in place.</li>
-              <li><strong>Architecture:</strong> Overseeing the selection and implementation of data warehouses (Snowflake, BigQuery) and BI tools.</li>
-              <li><strong>AI & ML Readiness:</strong> assessing data quality and infrastructure to support future Artificial Intelligence projects.</li>
+              <li><strong>AI readiness:</strong> Companies preparing for AI/ML adoption need clean, governed data foundations</li>
+              <li><strong>Regulatory pressure:</strong> <a href="https://ico.org.uk/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800 underline">ICO enforcement</a> and GDPR requirements demand senior data governance</li>
+              <li><strong>PE/VC expectations:</strong> Investors require demonstrable data maturity and analytics capabilities</li>
+              <li><strong>Modern data stacks:</strong> Implementing Snowflake, Databricks, BigQuery requires executive-level architecture decisions</li>
+              <li><strong>Analytics transformation:</strong> Moving from Excel-based reporting to self-service BI and data democratisation</li>
+              <li><strong>Data monetisation:</strong> Exploring opportunities to generate revenue from data assets</li>
             </ul>
 
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Who Hires Fractional CDOs?</h3>
+            <div className="bg-teal-50 p-6 border border-teal-200 rounded-lg my-8 not-prose">
+              <p className="text-teal-800 font-medium mb-3">Looking to hire a Fractional CDO instead?</p>
+              <Link href="/fractional-cdo-services" className="inline-flex items-center text-teal-700 font-bold hover:text-teal-900">
+                View Fractional CDO Services →
+              </Link>
+            </div>
+
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Types of Fractional CDO Jobs</h3>
+            <div className="grid md:grid-cols-2 gap-6 not-prose my-8">
+              {[
+                { title: 'FinTech / Financial Services CDO', desc: 'FCA data requirements, real-time analytics', rate: '£1,200-£1,500/day' },
+                { title: 'HealthTech CDO', desc: 'NHS data integration, clinical analytics', rate: '£1,100-£1,400/day' },
+                { title: 'PE Portfolio CDO', desc: 'Multi-company data strategy, value creation', rate: '£1,100-£1,400/day' },
+                { title: 'Scale-up CDO', desc: 'Building data function from scratch', rate: '£900-£1,200/day' },
+              ].map((type, i) => (
+                <div key={i} className="bg-gray-50 p-6 border border-gray-200">
+                  <h4 className="font-bold text-gray-900 mb-1">{type.title}</h4>
+                  <p className="text-gray-600 text-sm mb-2">{type.desc}</p>
+                  <span className="text-teal-600 font-semibold text-sm">{type.rate}</span>
+                </div>
+              ))}
+            </div>
+
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Fractional CDO Jobs by Location</h3>
             <p>
-              <Link href="/fractional-cdo-jobs-uk" className="text-teal-600 hover:text-teal-800 underline">Fractional CDO roles</Link> are common in private equity-backed firms looking to maximise valuation through better data assets. They are also prevalent in FinTech and HealthTech scale-ups where data integrity is not just an advantage, but a regulatory requirement.
+              London dominates with approximately 60% of fractional CDO opportunities, driven by the capital's concentration of FinTech, media, and data-intensive scale-ups. However, remote-first culture has expanded access—experienced CDOs based anywhere in the UK can serve multiple clients. Manchester, Edinburgh, and Cambridge tech ecosystems generate consistent demand.
             </p>
+            <ul className="space-y-2">
+              <li><strong>London (City, Shoreditch, Canary Wharf):</strong> £1,100-£1,500/day</li>
+              <li><strong>Manchester & Leeds:</strong> £900-£1,200/day</li>
+              <li><strong>Edinburgh & Glasgow:</strong> £900-£1,200/day</li>
+              <li><strong>Remote UK (multi-client):</strong> £950-£1,300/day</li>
+            </ul>
+
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Requirements for Fractional CDO Jobs</h3>
+            <ul className="space-y-2">
+              <li>15+ years data experience, with 5+ years in CDO, VP Data, or Head of Analytics roles</li>
+              <li>Proven track record implementing modern data platforms (Snowflake, Databricks, BigQuery)</li>
+              <li>Deep understanding of <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800 underline">GDPR and data protection requirements</a></li>
+              <li>Experience with BI tools: Looker, Tableau, Power BI</li>
+              <li>Understanding of <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800 underline">IR35 legislation</a> and limited company structure</li>
+              <li>Board-level communication skills and experience presenting to investors</li>
+              <li>Knowledge of AI/ML fundamentals and data science workflows</li>
+            </ul>
           </article>
+        </div>
+      </section>
+
+      {/* IR35 Calculator Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">UK Tax</span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">
+              UK IR35 Calculator for Fractional CDO Jobs
+            </h2>
+            <p className="text-gray-600 mt-4">
+              As a fractional CDO in the UK, your IR35 status significantly impacts your take-home pay
+            </p>
+          </div>
+          <IR35Calculator defaultDayRate={1200} />
         </div>
       </section>
 
@@ -327,7 +414,7 @@ export default async function FractionalCdoJobsUkPage() {
         </div>
       </section>
       
-       <RoleContentHub currentRole="cto" /> 
+      <RoleContentHub currentRole="cto" /> 
     </div>
   )
 }

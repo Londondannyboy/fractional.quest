@@ -2,16 +2,21 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
+import { BreadcrumbsLight } from '@/components/Breadcrumbs'
+import { JobListingSchema } from '@/components/JobPostingSchema'
+import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional BD Jobs UK 2025',
-  description: 'Fractional Business Development jobs UK. Part-time BD roles £500-£900/day.',
+  title: 'Fractional Business Development Jobs UK: Part-Time BD Roles 2025',
+  description: 'Fractional Business Development jobs UK for experienced BD professionals. Part-time Business Development positions paying £500-£900/day. Browse live fractional BD jobs and partnerships opportunities across the UK.',
   keywords: 'fractional business development jobs, fractional bd jobs uk, part time business development, fractional partnerships jobs, part time bd jobs, freelance business development',
   alternates: {
     canonical: 'https://fractional.quest/fractional-business-development-jobs-uk',

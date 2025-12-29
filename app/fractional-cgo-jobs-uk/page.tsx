@@ -2,7 +2,9 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
@@ -13,15 +15,15 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CGO Jobs UK 2025',
-  description: 'Fractional CGO jobs UK. Chief Green Officer, Sustainability roles. £700-£1,200/day.',
-  keywords: 'fractional cgo jobs, fractional cgo jobs uk, part time chief green officer, fractional sustainability officer, cgo part time, fractional esg jobs, chief sustainability officer part time',
+  title: 'Fractional CGO Jobs UK: Chief Sustainability Officer Roles 2025',
+  description: 'Fractional CGO jobs UK for experienced sustainability leaders. Part-time Chief Green Officer and CSO positions paying £700-£1,200/day. Browse live ESG, sustainability, and net-zero leadership opportunities across the UK.',
+  keywords: 'fractional cgo jobs, fractional cgo jobs uk, part time chief green officer, fractional sustainability officer, cgo part time, fractional esg jobs, chief sustainability officer part time, fractional cso, esg director jobs, net zero jobs uk, sustainability director jobs',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cgo-jobs-uk',
   },
   openGraph: {
-    title: 'Fractional CGO Jobs UK | Part-Time Chief Green Officer Roles',
-    description: 'Fractional CGO jobs UK - Find part-time CGO positions paying £700-£1,200/day. Remote & hybrid available.',
+    title: 'Fractional CGO Jobs UK | Part-Time Chief Green Officer Roles 2025',
+    description: 'Fractional CGO jobs UK - Find part-time sustainability and ESG positions paying £700-£1,200/day. Remote & hybrid available.',
     images: ['/images/fractional-cgo-jobs-uk.jpg'],
     url: 'https://fractional.quest/fractional-cgo-jobs-uk',
   },
@@ -90,19 +92,27 @@ function getDaysAgo(postedDate: string | null): number | undefined {
 const CGO_FAQS = [
   {
     question: 'What is a Fractional CGO?',
-    answer: 'A Fractional CGO (Chief Green Officer or Chief Sustainability Officer) is an experienced ESG leader who helps companies develop and implement sustainability strategies on a part-time basis. They ensure environmental compliance, drive net-zero initiatives, and build sustainable business models.',
+    answer: 'A Fractional CGO (Chief Green Officer or Chief Sustainability Officer) is an experienced ESG leader who works with companies on a part-time basis, typically 1-2 days per week. They develop sustainability strategies, ensure environmental compliance, drive net-zero initiatives, and build sustainable business models—all without the £120,000-£180,000+ cost of a full-time hire.',
   },
   {
-    question: 'How much do Fractional CGO jobs pay?',
-    answer: 'Fractional CGO/CSO day rates in the UK generally range from £700 to £1,200 per day. Rates are rising as regulatory pressure (e.g., SDR, TCFD) increases and investors demand robust ESG credentials.',
+    question: 'How much do Fractional CGO jobs pay in the UK?',
+    answer: 'Fractional CGO/CSO day rates in the UK range from £700 to £1,200 per day. London-based roles typically command £900-£1,200/day, while regional positions average £700-£1,000/day. Rates are rising as regulatory pressure (SDR, TCFD, CSRD) increases and investors demand robust ESG credentials.',
   },
   {
     question: 'Why hire a Fractional CGO?',
-    answer: 'Many SMEs want to be sustainable but lack the expertise or budget for a full-time ESG director. A Fractional CGO provides the strategic roadmap, ensuring the company meets its environmental goals and compliance obligations efficiently.',
+    answer: 'Companies hire Fractional CGOs to: develop credible net-zero roadmaps, ensure compliance with emerging ESG regulations (SDR, TCFD, CSRD), prepare sustainability reports for investors and stakeholders, build sustainable supply chains, achieve B Corp certification, and integrate ESG into business strategy—all without the cost of a full-time executive.',
+  },
+  {
+    question: 'What qualifications do I need for Fractional CGO jobs?',
+    answer: 'Successful Fractional CGO candidates typically have: 10+ years in sustainability, environmental, or ESG roles; expertise in frameworks like TCFD, GRI, SASB, and Science Based Targets; understanding of UK/EU sustainability regulations; experience with carbon accounting and net-zero planning; and strong stakeholder communication skills.',
   },
   {
     question: 'What is the background of a CGO?',
-    answer: 'CGOs often come from diverse backgrounds including environmental science, operations, legal compliance, or corporate strategy. The key requirement is deep knowledge of sustainability frameworks and the ability to drive organisational change.',
+    answer: 'CGOs come from diverse backgrounds including environmental science, operations management, corporate strategy, legal compliance, and engineering. The key requirements are deep knowledge of sustainability frameworks, understanding of regulatory requirements, and the ability to drive organisational change across departments.',
+  },
+  {
+    question: 'What industries hire Fractional CGOs?',
+    answer: 'High-demand industries include: manufacturing (supply chain sustainability), financial services (ESG investing, SDR compliance), real estate (energy efficiency, net-zero buildings), retail and FMCG (sustainable sourcing), and any company facing investor or regulatory pressure on ESG performance.',
   },
 ]
 
@@ -119,12 +129,13 @@ export default async function FractionalCgoJobsUkPage() {
   return (
     <div className="min-h-screen bg-white">
       <WebPageSchema
-        title="Fractional CGO Jobs UK | Part-Time Chief Green Officer Roles"
+        title="Fractional CGO Jobs UK | Part-Time Chief Green Officer Roles 2025"
         description="Find part-time CGO & Sustainability Officer positions paying £700-£1,200/day"
         url="https://fractional.quest/fractional-cgo-jobs-uk"
         dateModified={lastUpdatedDate}
         itemCount={stats.total}
       />
+      <FAQPageSchema faqs={CGO_FAQS} />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-cgo-jobs-uk" />
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
@@ -187,7 +198,7 @@ export default async function FractionalCgoJobsUkPage() {
              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
             <h2 className="text-2xl md:text-3xl font-black text-gray-900">Earnings Calculator</h2>
           </div>
-          <RoleCalculator role="coo" /> 
+          <RoleCalculator role="cgo" /> 
         </div>
       </section>
 
@@ -263,38 +274,99 @@ export default async function FractionalCgoJobsUkPage() {
           <div className="mb-16">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-4 block">The Guide</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
-              A Guide to <span className="text-emerald-600">Fractional CGO Jobs UK</span>
+              Everything You Need to Know About<br />
+              <span className="text-emerald-600">Fractional CGO Jobs UK</span>
             </h2>
             <div className="w-24 h-1 bg-emerald-900"></div>
           </div>
-          
+
+          {/* SEO Image */}
+          <figure className="mb-16 -mx-6 lg:-mx-16">
+            <img
+              src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1200&q=80"
+              alt="Fractional CGO jobs UK - Chief Sustainability Officer leading ESG strategy"
+              title="Fractional CGO Jobs UK - Part-Time Chief Green Officer Roles"
+              className="w-full h-80 md:h-96 object-cover"
+            />
+            <figcaption className="text-sm text-gray-500 mt-3 px-6 lg:px-16">
+              Fractional CGO jobs UK: Sustainability leaders across the UK are embracing fractional work
+            </figcaption>
+          </figure>
+
           <article className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              <strong className="font-semibold text-gray-900">Fractional CGO jobs</strong> (Chief Green Officer or Chief Sustainability Officer) are emerging as critical roles in the modern C-suite. As companies face increasing pressure from investors, customers, and regulators to operate sustainably, part-time ESG leadership provides a focused, expert path to Net Zero.
-            </p>
-            
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Sustainability as Strategy</h3>
-            <p>
-              A <strong className="font-semibold">Fractional CGO</strong> moves sustainability from a "nice-to-have" marketing message to a core business strategy. For SMEs and mid-market firms, a full-time CSO may be out of reach, but a fractional leader can deliver the audit, strategy, and reporting frameworks needed to satisfy stakeholders and secure green investment.
+              <strong className="font-semibold text-gray-900">Fractional CGO jobs</strong> (Chief Green Officer or Chief Sustainability Officer) are emerging as critical roles in the modern C-suite. Part-time ESG leadership positions where experienced sustainability executives drive net-zero initiatives, ensure regulatory compliance, and build sustainable business models. According to <a href="https://www.gov.uk/government/publications/uk-sustainability-disclosure-standards" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-800 underline">UK SDR regulations</a>, demand for ESG expertise continues to grow.
             </p>
 
-             <div className="bg-gray-50 p-8 my-10 border-l-4 border-emerald-900">
-              <p className="text-xl font-semibold text-gray-900 mb-0">"Fractional CGOs ensure that environmental responsibility translates into operational efficiency and long-term value creation."</p>
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">The Rise of Fractional CGO Jobs UK</h3>
+            <p>
+              The UK market for <strong>fractional CGO jobs</strong> has grown substantially as regulatory pressure intensifies. The <a href="https://www.fca.org.uk/publications/policy-statements/ps21-24-new-climate-related-disclosure-rules" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-800 underline">FCA's climate disclosure rules</a>, the <a href="https://www.gov.uk/government/publications/uk-sustainability-disclosure-standards" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-800 underline">SDR framework</a>, and investor demands for credible ESG performance have created unprecedented demand for sustainability leadership. A full-time CSO (£120,000-£180,000+) is prohibitive for most mid-market firms, making the fractional model highly attractive.
+            </p>
+
+            <div className="bg-gray-50 p-8 my-10 border-l-4 border-emerald-900">
+              <p className="text-xl font-semibold text-gray-900 mb-0">"Fractional CGOs transform sustainability from a compliance burden into a competitive advantage—driving operational efficiency and long-term value creation."</p>
             </div>
 
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">What the Role Delivers</h3>
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Why Fractional CGO Jobs Are Growing</h3>
             <ul className="space-y-3">
-              <li><strong>ESG Reporting:</strong> Managing disclosures for frameworks like TCFD, SASB, and B Corp certification.</li>
-              <li><strong>Carbon Reduction:</strong> Developing and executing credible Net Zero roadmaps.</li>
-              <li><strong>Supply Chain Audit:</strong> Assessing and improving the sustainability of the company's value chain.</li>
-              <li><strong>Stakeholder Engagement:</strong> Communicating sustainability progress to investors, employees, and customers.</li>
+              <li><strong>Regulatory pressure:</strong> SDR, TCFD, CSRD requirements demand senior ESG expertise</li>
+              <li><strong>Investor scrutiny:</strong> VCs, PE firms, and institutional investors requiring robust ESG credentials</li>
+              <li><strong>Net-zero commitments:</strong> Companies need credible pathways to decarbonisation</li>
+              <li><strong>Supply chain sustainability:</strong> Scope 3 emissions requiring value chain transformation</li>
+              <li><strong>B Corp certification:</strong> Growing demand for certified sustainable business practices</li>
+              <li><strong>Greenwashing risk:</strong> <a href="https://www.asa.org.uk/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-800 underline">ASA enforcement</a> and reputational risks of misleading claims</li>
             </ul>
 
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Why Now?</h3>
-            <p>
-              The UK's regulatory environment is tightening, and "greenwashing" is being actively punished. Companies need genuine expertise to navigate this landscape. <Link href="/fractional-cgo-jobs-uk" className="text-emerald-600 hover:text-emerald-800 underline">Fractional sustainability roles</Link> offer the specific, high-level guidance required to build a resilient, compliant, and future-proof business.
-            </p>
+            <div className="bg-emerald-50 p-6 border border-emerald-200 rounded-lg my-8 not-prose">
+              <p className="text-emerald-800 font-medium mb-3">Looking to hire a Fractional CGO instead?</p>
+              <Link href="/fractional-cgo-services" className="inline-flex items-center text-emerald-700 font-bold hover:text-emerald-900">
+                View Fractional CGO Services →
+              </Link>
+            </div>
+
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Types of Fractional CGO Jobs</h3>
+            <div className="grid md:grid-cols-2 gap-6 not-prose my-8">
+              {[
+                { title: 'Financial Services CGO', desc: 'SDR compliance, ESG investing', rate: '£900-£1,200/day' },
+                { title: 'Manufacturing CGO', desc: 'Net-zero operations, Scope 3', rate: '£800-£1,100/day' },
+                { title: 'Real Estate CGO', desc: 'Energy efficiency, sustainable buildings', rate: '£750-£1,000/day' },
+                { title: 'Scale-up CGO', desc: 'B Corp, ESG frameworks from scratch', rate: '£700-£950/day' },
+              ].map((type, i) => (
+                <div key={i} className="bg-gray-50 p-6 border border-gray-200">
+                  <h4 className="font-bold text-gray-900 mb-1">{type.title}</h4>
+                  <p className="text-gray-600 text-sm mb-2">{type.desc}</p>
+                  <span className="text-emerald-600 font-semibold text-sm">{type.rate}</span>
+                </div>
+              ))}
+            </div>
+
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Requirements for Fractional CGO Jobs</h3>
+            <ul className="space-y-2">
+              <li>10+ years in sustainability, environmental, or ESG roles</li>
+              <li>Expertise in frameworks: TCFD, GRI, SASB, CDP, Science Based Targets</li>
+              <li>Understanding of <a href="https://www.fca.org.uk/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-800 underline">UK/EU sustainability regulations</a></li>
+              <li>Carbon accounting and net-zero planning experience</li>
+              <li>Supply chain sustainability and Scope 3 emissions expertise</li>
+              <li>Understanding of <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-800 underline">IR35 legislation</a> and limited company structure</li>
+              <li>Board-level communication skills and stakeholder engagement</li>
+            </ul>
           </article>
+        </div>
+      </section>
+
+      {/* IR35 Calculator Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">UK Tax</span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">
+              UK IR35 Calculator for Fractional CGO Jobs
+            </h2>
+            <p className="text-gray-600 mt-4">
+              As a fractional CGO in the UK, your IR35 status significantly impacts your take-home pay
+            </p>
+          </div>
+          <IR35Calculator defaultDayRate={950} />
         </div>
       </section>
 

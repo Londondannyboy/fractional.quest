@@ -2,16 +2,21 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
+import { BreadcrumbsLight } from '@/components/Breadcrumbs'
+import { JobListingSchema } from '@/components/JobPostingSchema'
+import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Recruiter Jobs UK',
-  description: 'Fractional Recruiter jobs UK. Part-time Internal Recruiter roles. £400-£700/day.',
+  title: 'Fractional Recruiter Jobs UK: Part-Time Talent Acquisition Roles 2025',
+  description: 'Fractional Recruiter jobs UK for experienced talent acquisition professionals. Part-time Internal Recruiter positions paying £400-£700/day. Browse live fractional recruiter jobs and HR opportunities across the UK.',
   keywords: 'fractional recruiter jobs, fractional talent acquisition jobs uk, part time internal recruiter, fractional head of talent, part time recruitment jobs, freelance recruiter',
   alternates: {
     canonical: 'https://fractional.quest/fractional-recruiter-jobs-uk',

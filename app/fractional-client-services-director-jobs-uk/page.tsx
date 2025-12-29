@@ -2,16 +2,21 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
+import { BreadcrumbsLight } from '@/components/Breadcrumbs'
+import { JobListingSchema } from '@/components/JobPostingSchema'
+import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CSD Jobs UK 2025',
-  description: 'Fractional Client Services Director jobs UK. Part-time CS roles. £600-£1,000/day.',
+  title: 'Fractional Client Services Director Jobs UK: Part-Time CSD Roles 2025',
+  description: 'Fractional Client Services Director jobs UK for experienced client success leaders. Part-time positions paying £600-£1,000/day. Browse live fractional CSD jobs and customer success opportunities across the UK.',
   keywords: 'fractional client services director jobs, fractional customer success jobs uk, part time client services, fractional head of customer success, part time cs jobs, freelance account director',
   alternates: {
     canonical: 'https://fractional.quest/fractional-client-services-director-jobs-uk',

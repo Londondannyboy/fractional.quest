@@ -2,7 +2,9 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
@@ -13,8 +15,8 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CCO Jobs UK 2025',
-  description: 'Fractional CCO jobs UK. Part-time Chief Compliance Officer roles. £800-£1,300/day.',
+  title: 'Fractional CCO Jobs UK: Chief Compliance Officer Roles 2025',
+  description: 'Fractional CCO jobs UK for experienced compliance leaders. Part-time Chief Compliance Officer positions paying £800-£1,300/day. Browse live fractional CCO jobs, risk, and regulatory leadership opportunities across the UK.',
   keywords: 'fractional cco jobs, fractional cco jobs uk, part time cco, part-time chief compliance officer, cco part time, fractional compliance opportunities, fractional risk jobs',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cco-jobs-uk',
@@ -90,19 +92,27 @@ function getDaysAgo(postedDate: string | null): number | undefined {
 const CCO_FAQS = [
   {
     question: 'What is a Fractional CCO?',
-    answer: 'A Fractional CCO (Chief Compliance Officer) is an experienced risk and compliance executive who helps organisations navigate regulatory requirements on a part-time basis. They build compliance frameworks, manage risk, and deal with regulators like the FCA or ICO.',
+    answer: 'A Fractional CCO (Chief Compliance Officer) is an experienced risk and compliance executive who works with organisations on a part-time basis, typically 1-3 days per week. They build compliance frameworks, manage risk, and deal with regulators like the FCA, PRA, or ICO—all without the £140,000-£200,000+ cost of a full-time hire.',
   },
   {
     question: 'How much do Fractional CCO jobs pay in the UK?',
-    answer: 'Fractional CCO day rates in the UK typically range from £800 to £1,300 per day. Rates are particularly high in the FinTech and HealthTech sectors due to the complexity and severity of regulatory penalties.',
+    answer: 'Fractional CCO day rates in the UK range from £800 to £1,300 per day. London-based roles typically command £1,000-£1,300/day, while regional positions average £800-£1,100/day. Annual earnings for fractional CCOs working with multiple clients can reach £160,000-£280,000+.',
   },
   {
     question: 'Why do companies hire Fractional CCOs?',
-    answer: 'Early-stage FinTechs and regulated businesses need senior compliance oversight to obtain licences (like FCA authorisation) but often cannot afford a full-time CCO. A fractional CCO provides the necessary "approved person" status and strategic oversight.',
+    answer: 'Companies hire Fractional CCOs to: obtain FCA authorisation or other regulatory licences, build compliance frameworks from scratch, provide "approved person" status, navigate complex regulatory requirements (AML, GDPR, FCA rules), and prepare for audits—all without the cost of a full-time executive.',
   },
   {
-    question: 'What sectors are most active for Fractional CCOs?',
-    answer: 'Financial Services (FinTech, WealthTech, Crypto) is the dominant sector. However, Healthcare (CQC compliance) and Data-heavy industries (GDPR) also frequently hire fractional compliance leadership.',
+    question: 'What sectors hire Fractional CCOs?',
+    answer: 'High-demand sectors include: Financial Services (FinTech, WealthTech, Crypto, lending), Healthcare (CQC compliance, clinical governance), Data-intensive industries (GDPR, privacy), InsurTech, and RegTech companies building compliance solutions.',
+  },
+  {
+    question: 'What qualifications do I need for Fractional CCO jobs?',
+    answer: 'Successful Fractional CCO candidates typically have: 12+ years in compliance/risk roles with 5+ years at senior level; FCA-approved person status or equivalent; expertise in AML, KYC, and regulatory frameworks; knowledge of GDPR and data protection; and understanding of IR35 legislation for contracting.',
+  },
+  {
+    question: 'Can Fractional CCOs hold approved person status?',
+    answer: 'Yes, fractional CCOs can hold FCA Approved Person or Senior Manager status under SM&CR for their clients. This is one of the key reasons FinTechs and regulated businesses hire fractional compliance leadership—to fulfil regulatory requirements without full-time headcount.',
   },
 ]
 
@@ -119,12 +129,13 @@ export default async function FractionalCcoJobsUkPage() {
   return (
     <div className="min-h-screen bg-white">
       <WebPageSchema
-        title="Fractional CCO Jobs UK | Part-Time Chief Compliance Officer Roles"
+        title="Fractional CCO Jobs UK | Part-Time Chief Compliance Officer Roles 2025"
         description="Find part-time CCO positions paying £800-£1,300/day"
         url="https://fractional.quest/fractional-cco-jobs-uk"
         dateModified={lastUpdatedDate}
         itemCount={stats.total}
       />
+      <FAQPageSchema faqs={CCO_FAQS} />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-cco-jobs-uk" />
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">

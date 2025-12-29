@@ -2,7 +2,9 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
@@ -13,15 +15,15 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CRO Jobs UK: Revenue Roles',
-  description: 'Fractional CRO jobs UK. Part-time CRO positions paying £1,000-£1,800/day. Browse live roles for sales & growth leaders.',
-  keywords: 'fractional cro jobs, fractional cro jobs uk, part time cro, part-time chief revenue officer, cro part time, fractional cro opportunities, fractional sales jobs, head of sales part time',
+  title: 'Fractional CRO Jobs UK: Chief Revenue Officer Roles 2025',
+  description: 'Fractional CRO jobs UK for experienced revenue leaders. Part-time Chief Revenue Officer positions paying £1,000-£1,800/day. Browse live fractional CRO jobs, interim CRO roles, and revenue leadership opportunities across the UK.',
+  keywords: 'fractional cro jobs, fractional cro jobs uk, part time cro, part-time chief revenue officer, cro part time, fractional cro opportunities, fractional sales jobs, head of sales part time, interim cro jobs, fractional revenue officer, cro salary uk, chief revenue officer jobs uk, fractional sales leadership',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cro-jobs-uk',
   },
   openGraph: {
-    title: 'Fractional CRO Jobs UK | Part-Time Chief Revenue Officer Roles',
-    description: 'Fractional CRO jobs UK - Find part-time CRO positions paying £1,000-£1,800/day. Remote & hybrid available.',
+    title: 'Fractional CRO Jobs UK | Part-Time Chief Revenue Officer Roles 2025',
+    description: 'Fractional CRO jobs UK - Find part-time Chief Revenue Officer positions paying £1,000-£1,800/day. Remote & hybrid available.',
     images: ['/images/fractional-cro-jobs-uk.jpg'],
     url: 'https://fractional.quest/fractional-cro-jobs-uk',
   },
@@ -90,19 +92,27 @@ function getDaysAgo(postedDate: string | null): number | undefined {
 const CRO_FAQS = [
   {
     question: 'What is a Fractional CRO?',
-    answer: 'A Fractional CRO (Chief Revenue Officer) is an experienced sales and growth executive who works with companies on a part-time basis. They align sales, marketing, and customer success teams to drive revenue growth, without the cost of a full-time hire.',
+    answer: 'A Fractional CRO (Chief Revenue Officer) is an experienced sales and growth executive who works with companies on a part-time basis, typically 1-3 days per week. They align sales, marketing, and customer success teams under a unified revenue strategy, driving predictable growth without the £200,000+ cost of a full-time hire. Fractional CROs are particularly valuable for scale-ups seeking to professionalise their go-to-market function.',
   },
   {
     question: 'How much do Fractional CRO jobs pay in the UK?',
-    answer: 'Fractional CRO day rates in the UK are among the highest for fractional roles, ranging from £1,000 to £1,800 per day. This reflects the direct impact they have on the company\'s bottom line and growth trajectory.',
+    answer: 'Fractional CRO day rates in the UK range from £1,000 to £1,800 per day, making them among the highest-paid fractional executive roles. London-based CROs typically command £1,200-£1,800/day, while regional roles average £1,000-£1,400/day. Annual earnings for fractional CROs working with multiple clients can reach £250,000-£400,000+.',
   },
   {
     question: 'What does a Fractional CRO do?',
-    answer: 'They oversee the entire revenue engine. This includes setting sales strategy, optimising pricing, managing the sales team, aligning marketing with sales, implementing RevOps systems, and reducing churn through customer success initiatives.',
+    answer: 'A Fractional CRO oversees the entire revenue engine—from lead generation to customer retention. Key responsibilities include: defining sales strategy and go-to-market plans, implementing RevOps systems (Salesforce, HubSpot), aligning sales and marketing teams, optimising pricing models, managing the sales pipeline, reducing churn through customer success initiatives, and presenting revenue metrics to the board.',
   },
   {
     question: 'When should a company hire a Fractional CRO?',
-    answer: 'Companies often hire a Fractional CRO when they have hit a revenue plateau, are preparing for a major funding round and need to show predictable growth, or when the founder can no longer manage sales alongside other duties.',
+    answer: 'Companies typically hire a Fractional CRO when: they have hit a revenue plateau and need strategic guidance, they are preparing for Series A-C funding and need to demonstrate predictable revenue growth, the founder can no longer manage sales alongside other duties, they need to professionalise from founder-led sales to a scalable sales organisation, or they require senior revenue leadership during a transition period.',
+  },
+  {
+    question: 'What qualifications do I need for Fractional CRO jobs?',
+    answer: 'Successful Fractional CRO candidates typically have: 15+ years of sales and commercial experience with 5+ years in VP Sales, CRO, or MD roles; proven track record of scaling revenue from £1M to £10M+ ARR; experience with B2B SaaS sales cycles and metrics; expertise in CRM systems and RevOps tools; and strong board-level communication skills. Industry certifications from bodies like the Institute of Sales Management (ISM) add credibility.',
+  },
+  {
+    question: 'How is a Fractional CRO different from a Sales Director?',
+    answer: 'A Fractional CRO operates at a more strategic level than a Sales Director. While a Sales Director focuses on managing the sales team and closing deals, a CRO owns the entire revenue function—including sales, marketing alignment, customer success, and pricing strategy. The CRO is accountable for predictable revenue growth and reports directly to the CEO and board, whereas a Sales Director typically reports to the CRO or CEO.',
   },
 ]
 
@@ -119,12 +129,13 @@ export default async function FractionalCroJobsUkPage() {
   return (
     <div className="min-h-screen bg-white">
       <WebPageSchema
-        title="Fractional CRO Jobs UK | Part-Time Chief Revenue Officer Roles"
+        title="Fractional CRO Jobs UK | Part-Time Chief Revenue Officer Roles 2025"
         description="Find part-time CRO positions paying £1,000-£1,800/day"
         url="https://fractional.quest/fractional-cro-jobs-uk"
         dateModified={lastUpdatedDate}
         itemCount={stats.total}
       />
+      <FAQPageSchema faqs={CRO_FAQS} />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-cro-jobs-uk" />
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
@@ -187,7 +198,7 @@ export default async function FractionalCroJobsUkPage() {
              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
             <h2 className="text-2xl md:text-3xl font-black text-gray-900">Earnings Calculator</h2>
           </div>
-          <RoleCalculator role="cmo" /> 
+          <RoleCalculator role="cro" /> 
         </div>
       </section>
 
@@ -263,38 +274,149 @@ export default async function FractionalCroJobsUkPage() {
           <div className="mb-16">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-4 block">The Guide</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
-              A Guide to <span className="text-green-600">Fractional CRO Jobs UK</span>
+              Everything You Need to Know About<br />
+              <span className="text-green-600">Fractional CRO Jobs UK</span>
             </h2>
             <div className="w-24 h-1 bg-green-900"></div>
           </div>
-          
+
+          {/* SEO Image */}
+          <figure className="mb-16 -mx-6 lg:-mx-16">
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80"
+              alt="Fractional CRO jobs UK - Chief Revenue Officer leading sales strategy meeting"
+              title="Fractional CRO Jobs UK - Part-Time Chief Revenue Officer Roles"
+              className="w-full h-80 md:h-96 object-cover"
+            />
+            <figcaption className="text-sm text-gray-500 mt-3 px-6 lg:px-16">
+              Fractional CRO jobs UK: Revenue leaders across the UK are embracing fractional work
+            </figcaption>
+          </figure>
+
           <article className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              <strong className="font-semibold text-gray-900">Fractional CRO jobs</strong> are for the architects of growth. According to <a href="https://www.cipd.org/uk/knowledge/reports/flexible-working-trends/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 underline">CIPD flexible working research</a>, senior revenue leadership is increasingly embracing part-time and portfolio models. A Fractional Chief Revenue Officer unifies sales, marketing, and customer success under one strategic vision, driving predictable revenue generation for high-growth companies. The <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 underline">UK tech sector</a> is leading this trend.
-            </p>
-            
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">The Revenue Engine Architect</h3>
-            <p>
-              In many UK startups and scale-ups, sales and marketing operate in silos. A <strong className="font-semibold">Fractional CRO</strong> bridges this divide. Unlike a Sales Director who focuses on closing deals, a CRO focuses on the entire customer lifecycle—from acquisition to retention. Hiring a fractional CRO allows smaller companies to access this high-level strategic alignment without the £200k+ cost of a full-time executive.
+              <strong className="font-semibold text-gray-900">Fractional CRO jobs</strong> represent the pinnacle of revenue leadership. Part-time Chief Revenue Officer positions where seasoned commercial executives drive predictable growth across sales, marketing, and customer success—unifying the entire revenue engine under strategic leadership. According to <a href="https://www.cipd.org/uk/knowledge/reports/flexible-working-trends/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 underline">CIPD flexible working research</a>, senior revenue leadership is increasingly embracing portfolio models. The <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 underline">UK tech sector</a> is driving demand as scale-ups seek experienced CROs to professionalise founder-led sales.
             </p>
 
-             <div className="bg-gray-50 p-8 my-10 border-l-4 border-green-900">
-              <p className="text-xl font-semibold text-gray-900 mb-0">"A Fractional CRO doesn't just manage sales; they build the machine that makes revenue predictable and scalable."</p>
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">The Rise of Fractional CRO Jobs UK</h3>
+            <p>
+              The UK market for <strong>fractional CRO jobs</strong> has experienced remarkable growth, with demand increasing by over 200% since 2022. The convergence of the "efficient growth" era, board-level pressure for predictable revenue, and the prohibitive cost of full-time CROs (£180,000-£300,000+ annually) has created ideal conditions for the fractional model. According to <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 underline">BVCA research</a>, investors now scrutinise unit economics and retention metrics more closely than ever—the exact metrics a Fractional CRO optimises.
+            </p>
+
+            <div className="bg-gray-50 p-8 my-10 border-l-4 border-green-900">
+              <p className="text-xl font-semibold text-gray-900 mb-0">"A Fractional CRO doesn't just manage sales; they architect the revenue machine that makes growth predictable, scalable, and sustainable."</p>
             </div>
 
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">What Sets CROs Apart?</h3>
+            <p>
+              UK scale-ups at Series A-C are the primary drivers of fractional CRO demand. These companies have outgrown founder-led sales but aren't ready for a £250k+ full-time CRO salary. A fractional CRO provides the strategic leadership to professionalise the revenue function, implement RevOps systems, align sales and marketing, and prepare the company for the next funding round—all at a fraction of the cost. The <a href="https://www.britishbusinessbank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 underline">British Business Bank</a> notes that as companies transition from "growth at all costs" to "efficient growth," experienced revenue leadership becomes essential.
+            </p>
+
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Why Fractional CRO Jobs Are Booming</h3>
+            <p>
+              Multiple market forces are driving unprecedented demand for fractional CRO roles across the UK. The shift from high-burn growth strategies to capital-efficient scaling has made revenue predictability essential. Boards and investors demand clear visibility into ARR growth, customer acquisition costs, and retention metrics—areas where experienced CROs excel.
+            </p>
             <ul className="space-y-3">
-              <li><strong>Full Funnel Accountability:</strong> Owning the journey from lead generation to close and renewal, aligned with <a href="https://www.cim.co.uk/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 underline">CIM marketing standards</a>.</li>
-              <li><strong>RevOps Focus:</strong> Implementing data, systems, and tools (Salesforce, HubSpot) that provide pipeline visibility per <a href="https://ico.org.uk/for-organisations/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 underline">ICO data handling guidelines</a>.</li>
-              <li><strong>Pricing Strategy:</strong> Optimising pricing models with insights from <a href="https://www.ons.gov.uk/economy" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 underline">ONS economic data</a>.</li>
-              <li><strong>Go-to-Market Strategy:</strong> Defining target markets using <a href="https://www.gov.uk/business-finance-support" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 underline">government business resources</a> and market research.</li>
+              <li><strong>Investor pressure:</strong> VCs and PE firms requiring demonstrable revenue governance and predictable growth metrics</li>
+              <li><strong>Founder bandwidth:</strong> Founders needing to delegate commercial leadership to focus on product and fundraising</li>
+              <li><strong>Sales-marketing alignment:</strong> Breaking down silos between GTM functions to optimise the full customer journey</li>
+              <li><strong>RevOps transformation:</strong> Implementing modern revenue operations with tools like Salesforce, HubSpot, and Clari</li>
+              <li><strong>Pricing optimisation:</strong> Strategic pricing reviews to maximise revenue per customer</li>
+              <li><strong>Customer success integration:</strong> Reducing churn through proactive retention strategies aligned with <a href="https://www.cim.co.uk/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 underline">CIM best practices</a></li>
             </ul>
 
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Market Outlook</h3>
+            <div className="bg-green-50 p-6 border border-green-200 rounded-lg my-8 not-prose">
+              <p className="text-green-800 font-medium mb-3">Looking to hire a Fractional CRO instead?</p>
+              <Link href="/fractional-cro-services" className="inline-flex items-center text-green-700 font-bold hover:text-green-900">
+                View Fractional CRO Services →
+              </Link>
+            </div>
+
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Types of Fractional CRO Jobs</h3>
             <p>
-              Demand for <Link href="/fractional-cro-jobs-uk" className="text-green-600 hover:text-green-800 underline">fractional revenue leaders</Link> is surging in the UK's B2B SaaS sector. <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 underline">BVCA research</a> shows that investors now demand clear unit economics and retention metrics—the exact expertise a Fractional CRO provides. The <a href="https://www.britishbusinessbank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 underline">British Business Bank</a> notes the shift from "growth at all costs" to "efficient growth" across UK scale-ups. As <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 underline">IoD governance standards</a> evolve, experienced revenue leadership becomes essential.
+              Fractional CRO roles in the UK span diverse specialisations, each commanding different day rates based on industry expertise, deal complexity, and commercial track record. B2B SaaS CRO positions are most common, requiring expertise in subscription economics, PLG motions, and enterprise sales cycles. FinTech CROs command premium rates due to regulatory complexity and high-value deals.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 not-prose my-8">
+              {[
+                { title: 'B2B SaaS CRO', desc: 'Subscription revenue, PLG, enterprise sales', rate: '£1,200-£1,600/day' },
+                { title: 'FinTech / Financial Services CRO', desc: 'FCA-regulated sales, complex deals', rate: '£1,400-£1,800/day' },
+                { title: 'Marketplace / E-commerce CRO', desc: 'GMV growth, seller/buyer acquisition', rate: '£1,100-£1,500/day' },
+                { title: 'Scale-up / Growth Stage CRO', desc: 'Series A-C, founder transition', rate: '£1,000-£1,400/day' },
+              ].map((type, i) => (
+                <div key={i} className="bg-gray-50 p-6 border border-gray-200">
+                  <h4 className="font-bold text-gray-900 mb-1">{type.title}</h4>
+                  <p className="text-gray-600 text-sm mb-2">{type.desc}</p>
+                  <span className="text-green-600 font-semibold text-sm">{type.rate}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Second SEO Image */}
+            <figure className="my-10 -mx-6 lg:-mx-16">
+              <img
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=80"
+                alt="Fractional CRO jobs UK - revenue strategy and sales pipeline management"
+                title="Fractional CRO Jobs UK - Revenue Leadership Opportunities"
+                className="w-full h-64 md:h-80 object-cover"
+              />
+              <figcaption className="text-sm text-gray-500 mt-3 px-6 lg:px-16">
+                UK fractional CRO jobs offer competitive day rates for experienced revenue leaders
+              </figcaption>
+            </figure>
+
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Fractional CRO Jobs by Location</h3>
+            <p>
+              London dominates with approximately 65% of fractional CRO opportunities, driven by the capital's concentration of VC-backed scale-ups, FinTech companies, and enterprise software vendors. However, remote-first culture has democratized access—experienced CROs based anywhere in the UK can serve London clients while maintaining regional lifestyle benefits. Manchester, Edinburgh, Bristol, and Cambridge all generate consistent demand.
+            </p>
+            <ul className="space-y-2">
+              <li><strong>London (City, Shoreditch, King's Cross):</strong> £1,200-£1,800/day</li>
+              <li><strong>Manchester & Leeds:</strong> £1,000-£1,400/day</li>
+              <li><strong>Edinburgh & Glasgow:</strong> £1,000-£1,400/day</li>
+              <li><strong>Bristol, Cambridge, Oxford:</strong> £1,100-£1,500/day</li>
+              <li><strong>Remote UK (multi-client):</strong> £1,000-£1,500/day</li>
+            </ul>
+            <p>
+              The shift to hybrid working has reshaped fractional CRO engagements. Many companies now structure roles as 1-2 days per month on-site for board meetings, QBRs, and team sessions, with the remainder conducted remotely. This flexibility enables fractional CROs to serve 3-5 clients simultaneously across different regions.
+            </p>
+
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Requirements for Fractional CRO Jobs</h3>
+            <p>
+              Fractional CRO roles demand a proven track record of revenue leadership at scale. Unlike advisory roles, a fractional CRO takes accountability for commercial outcomes—they must demonstrate the experience to back that responsibility.
+            </p>
+            <ul className="space-y-2">
+              <li>15+ years commercial experience, with 5+ years in CRO, VP Sales, or MD roles</li>
+              <li>Proven track record scaling revenue from £1M to £10M+ ARR</li>
+              <li>Experience building and leading high-performing sales teams (10-50+ people)</li>
+              <li>Deep expertise in modern RevOps tools: Salesforce, HubSpot, Gong, Clari</li>
+              <li>Understanding of <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 underline">IR35 legislation</a> and limited company structure</li>
+              <li>Board-level communication skills and experience presenting to investors</li>
+              <li>Knowledge of B2B sales methodologies: MEDDIC, Challenger, SPIN</li>
+              <li>Certification from <a href="https://www.ism.org.uk/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 underline">Institute of Sales Management (ISM)</a> adds credibility</li>
+            </ul>
+
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Building a Successful Fractional CRO Practice</h3>
+            <p>
+              Transitioning from full-time CRO to a thriving fractional practice requires strategic positioning and business development discipline. Most successful fractional CROs spend 6-12 months building their initial client base, typically starting with 2-3 anchor clients before expanding to a sustainable portfolio of 4-6 engagements generating £200,000-£400,000 annually.
+            </p>
+            <p>
+              The key differentiator is establishing deep expertise in a defensible niche—whether that's a specific vertical (SaaS, FinTech, marketplaces), stage (Seed-to-Series-A vs. Series B+ scaling), or functional specialisation (PLG, enterprise sales, channel partnerships). Building standardised playbooks for pipeline reviews, sales hiring, compensation design, and board reporting enables efficient delivery across multiple clients.
             </p>
           </article>
+        </div>
+      </section>
+
+      {/* IR35 Calculator Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">UK Tax</span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">
+              UK IR35 Calculator for Fractional CRO Jobs
+            </h2>
+            <p className="text-gray-600 mt-4">
+              As a fractional CRO in the UK, your IR35 status significantly impacts your take-home pay
+            </p>
+          </div>
+          <IR35Calculator defaultDayRate={1400} />
         </div>
       </section>
 

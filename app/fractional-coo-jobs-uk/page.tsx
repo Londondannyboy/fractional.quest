@@ -17,15 +17,15 @@ import { FAQPageSchema } from '@/components/FAQPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional COO Jobs UK: Part-Time Roles',
-  description: 'Fractional COO jobs UK. Part-time COO positions paying £750-£1,400/day. Browse live roles for experienced operations leaders.',
-  keywords: 'fractional coo jobs uk, fractional coo jobs, part time coo jobs, fractional coo uk, coo jobs uk, part time chief operating officer, fractional coo',
+  title: 'Fractional COO Jobs UK | Chief Operating Officer Roles 2025',
+  description: 'Fractional COO jobs UK - Part-time Chief Operating Officer positions paying £750-£1,400/day. Browse live fractional COO roles for experienced operations leaders seeking flexible executive work.',
+  keywords: 'fractional coo jobs uk, fractional coo jobs, fractional chief operating officer, part time coo jobs uk, fractional coo, coo jobs uk, part time chief operating officer, fractional operations director, interim coo uk',
   alternates: {
     canonical: 'https://fractional.quest/fractional-coo-jobs-uk',
   },
   openGraph: {
-    title: 'Fractional COO Jobs UK | Part-Time COO Roles 2025',
-    description: 'Fractional COO jobs UK - Find part-time COO positions paying £750-£1,400/day. Remote & hybrid.',
+    title: 'Fractional COO Jobs UK | Chief Operating Officer Roles 2025',
+    description: 'Fractional COO jobs UK - Find part-time Chief Operating Officer positions paying £750-£1,400/day. Remote & hybrid opportunities.',
     images: ['/images/fractional-coo-jobs-uk.jpg'],
     url: 'https://fractional.quest/fractional-coo-jobs-uk',
   },
@@ -64,6 +64,7 @@ async function getFeaturedCompanies() {
 }
 
 // Server-side job fetch for SEO - renders in initial HTML for crawlers
+// UK-ONLY filter: prioritise UK jobs, exclude non-UK locations
 async function getOperationsJobs() {
   try {
     const sql = createDbQuery()
@@ -73,7 +74,23 @@ async function getOperationsJobs() {
         compensation, role_category, skills_required, posted_date, hours_per_week, salary_min, salary_max, salary_currency,
         description_snippet
       FROM jobs
-      WHERE is_active = true AND role_category = 'Operations'
+      WHERE is_active = true
+        AND role_category = 'Operations'
+        AND (
+          country = 'UK'
+          OR country = 'United Kingdom'
+          OR country = 'GB'
+          OR location ILIKE '%UK%'
+          OR location ILIKE '%United Kingdom%'
+          OR location ILIKE '%London%'
+          OR location ILIKE '%Manchester%'
+          OR location ILIKE '%Birmingham%'
+          OR location ILIKE '%Edinburgh%'
+          OR location ILIKE '%Bristol%'
+          OR location ILIKE '%Leeds%'
+          OR location ILIKE '%Glasgow%'
+          OR (is_remote = true AND country IS NULL)
+        )
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 20
     `
@@ -113,50 +130,75 @@ export default async function FractionalCooJobsUkPage() {
       />
       <FAQPageSchema faqs={COO_FAQS} />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-coo-jobs-uk" />
-      {/* Hero with Aspirational Image */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden">
-        {/* Background Image - Operations professional */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1920&q=80')`,
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-600/85 via-amber-500/70 to-yellow-400/50" />
-        </div>
-        <div className="relative z-10 w-full py-16">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <BreadcrumbsLight items={getRoleBreadcrumbs('coo', 'jobs')} className="mb-8" />
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
-              <div className="max-w-3xl">
-                <div className="flex flex-wrap items-center gap-3 mb-6">
-                  <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
-                    Operations Leadership
-                  </span>
-                  <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
-                </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                  Fractional COO Jobs UK
-                </h1>
-                <p className="text-xl text-white/90 leading-relaxed max-w-2xl mb-8">
-                  Part-time Chief Operating Officer roles for experienced operations leaders.
-                  Work 2-3 days a week at £750-£1,400/day.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Link href="#jobs" className="px-8 py-4 bg-white text-orange-700 font-bold rounded-lg hover:bg-gray-100 transition-colors">
-                    Browse Jobs
-                  </Link>
-                  <Link href="/fractional-jobs-startups" className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
-                    Startup COO Jobs
-                  </Link>
+      {/* Hero - Clean white design with video thumbnail */}
+      <section className="relative bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 md:py-16">
+          <BreadcrumbsLight items={getRoleBreadcrumbs('coo', 'jobs')} className="mb-8" />
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Text content */}
+            <div>
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span className="inline-block bg-orange-100 text-orange-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                  Operations Leadership
+                </span>
+                <LastUpdatedBadge date={lastUpdatedDate} className="text-gray-500" />
+              </div>
+
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight">
+                <span className="text-orange-600">Fractional COO Jobs</span>
+                <br />UK
+              </h1>
+
+              <p className="text-xl text-gray-600 leading-relaxed max-w-xl mb-8">
+                Part-time <strong className="text-gray-900">Chief Operating Officer</strong> roles for experienced operations leaders.
+                Work <strong className="text-gray-900">2-3 days a week</strong> at <strong className="text-orange-600">£750-£1,400/day</strong>.
+              </p>
+
+              <div className="flex flex-wrap gap-4 mb-8">
+                <Link href="#jobs" className="px-8 py-4 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition-colors shadow-lg shadow-orange-600/25">
+                  Browse {stats.total}+ Jobs
+                </Link>
+                <Link href="/fractional-coo-salary" className="px-8 py-4 border-2 border-gray-300 text-gray-700 font-bold rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-colors">
+                  Salary Guide
+                </Link>
+              </div>
+
+              {/* Quick stats inline */}
+              <div className="flex flex-wrap gap-6 text-sm text-gray-500">
+                <span><strong className="text-gray-900">{stats.remoteCount}</strong> remote roles</span>
+                <span><strong className="text-gray-900">£950</strong> avg day rate</span>
+                <span><strong className="text-gray-900">2-3 days</strong> per week</span>
+              </div>
+            </div>
+
+            {/* Right: Video thumbnail with play button */}
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-900">
+                <img
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80"
+                  alt="Fractional COO - Chief Operating Officer working in UK business"
+                  className="w-full h-80 md:h-96 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent" />
+
+                {/* Caption overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <p className="text-white font-medium text-lg mb-1">What is a Fractional COO?</p>
+                  <p className="text-white/70 text-sm">Part-time operations leadership for growing UK businesses</p>
                 </div>
               </div>
 
-              {/* Frac Section Integration */}
-              <div className="hidden lg:block lg:w-80">
-                <FracSection title="Talk with Frac about COO roles" />
+              {/* Frac chat widget - positioned below on mobile, beside on desktop */}
+              <div className="mt-6 lg:hidden">
+                <FracSection title="Ask Frac about COO roles" />
               </div>
             </div>
+          </div>
+
+          {/* Desktop Frac widget - floating */}
+          <div className="hidden lg:block absolute top-1/2 right-8 -translate-y-1/2 w-72">
+            <FracSection title="Ask Frac about COO roles" />
           </div>
         </div>
       </section>
@@ -180,6 +222,42 @@ export default async function FractionalCooJobsUkPage() {
             <div>
               <div className="text-3xl font-bold text-white">2-3 days</div>
               <div className="text-sm text-gray-400">Avg Engagement</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Authority Context Section - Why Fractional COO is Growing */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-gray-50 to-orange-50 rounded-2xl p-8 md:p-10">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">
+              Why Fractional Chief Operating Officer Roles Are Growing in the UK
+            </h2>
+            <div className="prose prose-gray max-w-none text-gray-700 space-y-4">
+              <p>
+                The <a href="https://en.wikipedia.org/wiki/Chief_operating_officer" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 font-medium">Chief Operating Officer (COO)</a> role has evolved significantly. According to <a href="https://www.bbc.co.uk/news/business" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 font-medium">BBC Business</a> reporting on the UK's flexible work economy, senior executives increasingly prefer portfolio careers that offer autonomy and variety.
+              </p>
+              <p>
+                The <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 font-medium">Office for National Statistics</a> reports that self-employment among senior professionals has grown 23% since 2019. Meanwhile, <a href="https://www.gov.uk/government/organisations/companies-house" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 font-medium">Companies House data</a> shows over 900,000 new UK companies were registered in 2024—many requiring operational leadership but unable to afford £200,000+ full-time COO salaries.
+              </p>
+              <div className="grid md:grid-cols-3 gap-4 mt-6 not-prose">
+                <div className="bg-white rounded-lg p-4 border border-gray-200 text-center">
+                  <div className="text-2xl font-bold text-orange-600">43%</div>
+                  <div className="text-sm text-gray-600">Growth in fractional roles since 2020</div>
+                  <div className="text-xs text-gray-400 mt-1">Source: IPSE Research</div>
+                </div>
+                <div className="bg-white rounded-lg p-4 border border-gray-200 text-center">
+                  <div className="text-2xl font-bold text-orange-600">£175k</div>
+                  <div className="text-sm text-gray-600">Avg full-time COO salary saved</div>
+                  <div className="text-xs text-gray-400 mt-1">Source: Glassdoor UK</div>
+                </div>
+                <div className="bg-white rounded-lg p-4 border border-gray-200 text-center">
+                  <div className="text-2xl font-bold text-orange-600">2-3 days</div>
+                  <div className="text-sm text-gray-600">Typical weekly commitment</div>
+                  <div className="text-xs text-gray-400 mt-1">Source: Market data</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -392,31 +470,139 @@ export default async function FractionalCooJobsUkPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 md:py-28 bg-gray-50 text-white">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-4 block">Ready?</span>
-          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Find Your Next<br /><span className="text-orange-400">Fractional COO Role</span></h2>
-          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">Create your profile and get matched with companies seeking fractional operations leadership.</p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/handler/sign-up" className="px-10 py-5 bg-orange-500 text-black font-bold uppercase tracking-wider hover:bg-orange-400 transition-colors">Create Profile</Link>
-            <Link href="/fractional-jobs-startups" className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-colors">Startup Jobs</Link>
+      {/* Salary Comparison Section - Data-rich content */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="mb-10">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Salary Data</span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">Fractional COO Salary UK vs Full-Time</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-10">
+            {/* Full-time COO */}
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <span className="w-3 h-3 bg-gray-400 rounded-full"></span>
+                Full-Time COO (Permanent)
+              </h3>
+              <div className="space-y-3 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Base Salary</span>
+                  <span className="font-bold text-gray-900">£150,000 - £250,000</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Bonus (20-40%)</span>
+                  <span className="font-bold text-gray-900">£30,000 - £100,000</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Equity/LTIP</span>
+                  <span className="font-bold text-gray-900">£50,000 - £200,000</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Benefits (pension, car, etc.)</span>
+                  <span className="font-bold text-gray-900">£20,000 - £40,000</span>
+                </div>
+                <div className="border-t border-gray-300 pt-3 flex justify-between">
+                  <span className="font-bold text-gray-900">Total Annual Cost</span>
+                  <span className="font-black text-gray-900">£250,000 - £590,000</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Fractional COO */}
+            <div className="bg-orange-50 rounded-xl p-6 border border-orange-200">
+              <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <span className="w-3 h-3 bg-orange-500 rounded-full"></span>
+                Fractional COO (2 Days/Week)
+              </h3>
+              <div className="space-y-3 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Day Rate</span>
+                  <span className="font-bold text-gray-900">£900 - £1,200/day</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Days Per Year (2/week x 48 weeks)</span>
+                  <span className="font-bold text-gray-900">96 days</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Additional Benefits</span>
+                  <span className="font-bold text-gray-900">None required</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Equity</span>
+                  <span className="font-bold text-gray-900">Often included (0.1-0.5%)</span>
+                </div>
+                <div className="border-t border-orange-300 pt-3 flex justify-between">
+                  <span className="font-bold text-gray-900">Total Annual Cost</span>
+                  <span className="font-black text-orange-600">£86,400 - £115,200</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-green-50 rounded-xl p-6 border border-green-200 text-center">
+            <p className="text-lg font-bold text-green-800">
+              Businesses save <span className="text-2xl">£165,000 - £475,000/year</span> with a Fractional COO
+            </p>
+            <p className="text-sm text-green-700 mt-2">While accessing the same level of operational expertise</p>
           </div>
         </div>
       </section>
 
-      {/* Related */}
-      <section className="py-12 bg-white border-t border-gray-200">
+      {/* CTA */}
+      <section className="py-20 md:py-28 bg-gray-900">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-orange-400 mb-4 block">Ready?</span>
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">Find Your Next<br /><span className="text-orange-400">Fractional COO Role</span></h2>
+          <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">Create your profile and get matched with companies seeking fractional operations leadership across the UK.</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link href="/handler/sign-up" className="px-10 py-5 bg-orange-500 text-white font-bold rounded-lg uppercase tracking-wider hover:bg-orange-400 transition-colors">Create Profile</Link>
+            <Link href="/fractional-coo-salary" className="px-10 py-5 border-2 border-white text-white font-bold rounded-lg uppercase tracking-wider hover:bg-white hover:text-gray-900 transition-colors">COO Salary Guide</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Resources - More comprehensive */}
+      <section className="py-16 bg-white border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related</span>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/fractional-jobs-london" className="text-gray-600 hover:text-orange-600 font-medium transition-colors">Fractional Jobs</Link>
-              <Link href="/fractional-jobs-startups" className="text-gray-600 hover:text-orange-600 font-medium transition-colors">Startup COO Jobs</Link>
-              <Link href="/fractional-cmo-jobs-uk" className="text-gray-600 hover:text-orange-600 font-medium transition-colors">CMO Jobs UK</Link>
-              <Link href="/fractional-cfo-jobs-uk" className="text-gray-600 hover:text-orange-600 font-medium transition-colors">CFO Jobs UK</Link>
-              <Link href="/fractional-cto-jobs-uk" className="text-gray-600 hover:text-orange-600 font-medium transition-colors">CTO Jobs UK</Link>
-              <Link href="/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter" className="text-gray-600 hover:text-orange-600 font-medium transition-colors">Top Fractional Recruiters</Link>
+          <h3 className="text-lg font-bold text-gray-900 mb-8">Related Resources</h3>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Other C-Suite Jobs */}
+            <div>
+              <h4 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Other C-Suite Jobs UK</h4>
+              <ul className="space-y-3">
+                <li><Link href="/fractional-cfo-jobs-uk" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">Fractional CFO Jobs UK</Link></li>
+                <li><Link href="/fractional-cmo-jobs-uk" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">Fractional CMO Jobs UK</Link></li>
+                <li><Link href="/fractional-cto-jobs-uk" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">Fractional CTO Jobs UK</Link></li>
+                <li><Link href="/fractional-chro-jobs-uk" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">Fractional CHRO Jobs UK</Link></li>
+                <li><Link href="/fractional-ceo-jobs-uk" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">Fractional CEO Jobs UK</Link></li>
+              </ul>
+            </div>
+
+            {/* COO Guides */}
+            <div>
+              <h4 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">COO Guides</h4>
+              <ul className="space-y-3">
+                <li><Link href="/fractional-coo-salary" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">Fractional COO Salary Guide</Link></li>
+                <li><Link href="/fractional-coo-london" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">Fractional COO London</Link></li>
+                <li><Link href="/fractional-coo-meaning" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">What is a Fractional COO?</Link></li>
+                <li><Link href="/how-to-become-fractional-coo" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">How to Become a Fractional COO</Link></li>
+                <li><Link href="/fractional-coo-vs-full-time" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">Fractional vs Full-Time COO</Link></li>
+                <li><Link href="/fractional-coo-for-startups" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">Startup COO Jobs</Link></li>
+              </ul>
+            </div>
+
+            {/* Find Talent */}
+            <div>
+              <h4 className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Hire a Fractional COO</h4>
+              <ul className="space-y-3">
+                <li><Link href="/fractional-coo-services" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">Fractional COO Services</Link></li>
+                <li><Link href="/fractional-coo-cost" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">Fractional COO Cost</Link></li>
+                <li><Link href="/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">Top Fractional Recruiters</Link></li>
+                <li><Link href="/fractional-jobs-uk" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">All Fractional Jobs UK</Link></li>
+                <li><Link href="/fractional-jobs-london" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">Fractional Jobs London</Link></li>
+              </ul>
             </div>
           </div>
         </div>

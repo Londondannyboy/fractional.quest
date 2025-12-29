@@ -2,7 +2,9 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
@@ -13,8 +15,8 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional FD Jobs UK 2025',
-  description: 'Fractional Finance Director jobs UK. FD roles paying £600-£1,000/day.',
+  title: 'Fractional Finance Director Jobs UK: Part-Time FD Roles 2025',
+  description: 'Fractional Finance Director jobs UK for experienced finance leaders. Part-time FD positions paying £600-£1,000/day. Browse live fractional FD jobs and finance leadership opportunities across the UK.',
   keywords: 'fractional finance director jobs, fractional fd jobs, fractional fd jobs uk, part time finance director, fractional fd roles, part time fd jobs, finance director part time, fractional fd, fd jobs uk',
   alternates: {
     canonical: 'https://fractional.quest/fractional-finance-director-jobs-uk',

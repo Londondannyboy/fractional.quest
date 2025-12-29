@@ -2,18 +2,21 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional FC Jobs UK 2025',
-  description: 'Fractional Financial Controller jobs UK. Part-time FC roles. £400-£700/day.',
+  title: 'Fractional Financial Controller Jobs UK: Part-Time FC Roles 2025',
+  description: 'Fractional Financial Controller jobs UK for experienced finance professionals. Part-time FC positions paying £400-£700/day. Browse live fractional controller jobs and finance leadership opportunities across the UK.',
   keywords: 'fractional financial controller jobs, fractional fc jobs uk, part time financial controller, fractional controller roles, part time controller jobs, finance controller part time',
   alternates: {
     canonical: 'https://fractional.quest/fractional-financial-controller-jobs-uk',

@@ -2,15 +2,21 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
+import { BreadcrumbsLight } from '@/components/Breadcrumbs'
+import { JobListingSchema } from '@/components/JobPostingSchema'
+import { getRoleBreadcrumbs } from '@/lib/seo-config'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional AI Jobs UK 2025',
-  description: 'Fractional Head of AI jobs UK. AI Director roles. £1,000-£1,800/day.',
+  title: 'Fractional Head of AI Jobs UK: AI Director Roles 2025',
+  description: 'Fractional Head of AI jobs UK for experienced AI/ML leaders. Part-time AI Director positions paying £1,000-£1,800/day. Browse live fractional AI jobs and machine learning leadership opportunities across the UK.',
   keywords: 'fractional head of ai jobs, fractional ai director jobs uk, part time head of ai, fractional ai jobs, ai leadership part time, artificial intelligence jobs uk',
   alternates: {
     canonical: 'https://fractional.quest/fractional-head-of-ai-jobs-uk',

@@ -2,7 +2,9 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
@@ -13,8 +15,8 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional MD Jobs UK 2025',
-  description: 'Fractional Managing Director jobs UK. Part-time MD roles. £800-£1,500/day.',
+  title: 'Fractional Managing Director Jobs UK: Part-Time MD Roles 2025',
+  description: 'Fractional Managing Director jobs UK for experienced business leaders. Part-time MD positions paying £800-£1,500/day. Browse live fractional MD jobs and general management opportunities across the UK.',
   keywords: 'fractional managing director jobs, fractional md jobs uk, part time managing director, fractional md roles, part time md jobs, fractional general management jobs',
   alternates: {
     canonical: 'https://fractional.quest/fractional-managing-director-jobs-uk',

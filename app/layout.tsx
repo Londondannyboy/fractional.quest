@@ -7,6 +7,7 @@ import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { CookieConsent } from "@/components/CookieConsent";
+import { CopilotProvider } from "@/components/CopilotProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -155,14 +156,16 @@ export default function RootLayout({
       >
         <StackProvider app={stackServerApp}>
           <StackTheme>
-            <Suspense fallback={<div className="h-20 bg-white border-b border-gray-100" />}>
-              <Navigation />
-            </Suspense>
-            <main className="min-h-screen">
-              {children}
-            </main>
-            <Footer />
-            <CookieConsent />
+            <CopilotProvider>
+              <Suspense fallback={<div className="h-20 bg-white border-b border-gray-100" />}>
+                <Navigation />
+              </Suspense>
+              <main className="min-h-screen">
+                {children}
+              </main>
+              <Footer />
+              <CookieConsent />
+            </CopilotProvider>
           </StackTheme>
         </StackProvider>
       </body>

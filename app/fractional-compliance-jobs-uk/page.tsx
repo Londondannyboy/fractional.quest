@@ -2,7 +2,9 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
@@ -13,8 +15,8 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Compliance Jobs UK',
-  description: 'Fractional Compliance jobs UK. Part-time Compliance Officer roles. £500-£900/day.',
+  title: 'Fractional Compliance Jobs UK: Part-Time Compliance Roles 2025',
+  description: 'Fractional Compliance jobs UK for experienced compliance professionals. Part-time Compliance Officer positions paying £500-£900/day. Browse live fractional compliance jobs and regulatory opportunities across the UK.',
   keywords: 'fractional compliance jobs, fractional compliance officer jobs uk, part time compliance officer, fractional compliance roles, part time compliance jobs, compliance consultant jobs',
   alternates: {
     canonical: 'https://fractional.quest/fractional-compliance-jobs-uk',

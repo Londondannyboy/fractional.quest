@@ -2,15 +2,21 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
+import { BreadcrumbsLight } from '@/components/Breadcrumbs'
+import { JobListingSchema } from '@/components/JobPostingSchema'
+import { getRoleBreadcrumbs } from '@/lib/seo-config'
+import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional GC Jobs UK 2025',
-  description: 'Fractional General Counsel jobs UK. Part-time GC roles. £800-£1,500/day.',
+  title: 'Fractional General Counsel Jobs UK: Part-Time GC Roles 2025',
+  description: 'Fractional General Counsel jobs UK for experienced legal leaders. Part-time GC positions paying £800-£1,500/day. Browse live fractional general counsel jobs and legal leadership opportunities across the UK.',
   keywords: 'fractional general counsel jobs, fractional gc jobs uk, part time general counsel, fractional legal counsel, part time gc jobs, fractional head of legal',
   alternates: {
     canonical: 'https://fractional.quest/fractional-general-counsel-jobs-uk',

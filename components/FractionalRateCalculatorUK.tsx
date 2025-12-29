@@ -152,9 +152,9 @@ export function FractionalRateCalculatorUK({ className = '' }: FractionalRateCal
             <label htmlFor="day-rate-slider" className="block text-sm font-semibold text-gray-700 mb-2">
               Your Day Rate
             </label>
-            <div className="flex items-baseline gap-2 mb-3">
-              <span className="text-4xl font-black text-purple-700">{formatCurrency(dayRate)}</span>
-              <span className="text-sm text-gray-500">
+            <div className="flex flex-wrap items-baseline gap-2 mb-3">
+              <span className="text-3xl md:text-4xl font-black text-purple-700 truncate max-w-full">{formatCurrency(dayRate)}</span>
+              <span className="text-xs md:text-sm text-gray-500 whitespace-nowrap">
                 {marketPosition === 'below' && `(${Math.round(((locationAdjustedAvg - dayRate) / locationAdjustedAvg) * 100)}% below market)`}
                 {marketPosition === 'above' && `(${Math.round(((dayRate - locationAdjustedAvg) / locationAdjustedAvg) * 100)}% above market)`}
                 {marketPosition === 'at' && '(at market rate)'}

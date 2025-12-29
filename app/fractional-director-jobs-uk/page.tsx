@@ -3,14 +3,21 @@ import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { ServerJobGrid } from '@/components/ServerJobGrid'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
+import { RoleNews } from '@/components/RoleNews'
+import { RoleContentHub } from '@/components/RoleContentHub'
+import { BreadcrumbsLight } from '@/components/Breadcrumbs'
+import { JobListingSchema } from '@/components/JobPostingSchema'
+import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Director Jobs UK',
-  description: 'Fractional director jobs UK. HR, Finance, Sales, Ops director roles. £800-£1,500/day.',
+  title: 'Fractional Director Jobs UK: Part-Time Director Roles 2025',
+  description: 'Fractional director jobs UK for experienced leaders. Part-time HR, Finance, Sales, and Operations Director positions paying £800-£1,500/day. Browse live fractional director jobs across the UK.',
   keywords: 'fractional director jobs, fractional director, fractional director jobs uk, part time director, fractional hr director, fractional finance director, fractional sales director, fractional managing director, fractional operations director, interim director, director jobs uk, part time director jobs',
   alternates: {
     canonical: 'https://fractional.quest/fractional-director-jobs-uk',

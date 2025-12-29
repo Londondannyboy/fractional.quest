@@ -2,7 +2,9 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
@@ -13,8 +15,8 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional DPO Jobs UK 2025',
-  description: 'Fractional DPO jobs UK. Part-time Data Protection Officer roles. £500-£900/day.',
+  title: 'Fractional DPO Jobs UK: Data Protection Officer Roles 2025',
+  description: 'Fractional DPO jobs UK for experienced data protection professionals. Part-time Data Protection Officer positions paying £500-£900/day. Browse live fractional DPO jobs and GDPR opportunities across the UK.',
   keywords: 'fractional dpo jobs, fractional data protection officer jobs uk, part time dpo, fractional privacy officer, gdpr consultant jobs, data privacy jobs part time',
   alternates: {
     canonical: 'https://fractional.quest/fractional-dpo-jobs-uk',

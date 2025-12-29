@@ -2,16 +2,21 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
+import { BreadcrumbsLight } from '@/components/Breadcrumbs'
+import { JobListingSchema } from '@/components/JobPostingSchema'
+import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Sales Director Jobs UK 2025',
-  description: 'Fractional Sales Director jobs UK. Part-time positions £600-£1,000/day. Remote & hybrid.',
+  title: 'Fractional Sales Director Jobs UK: Part-Time Sales Leadership 2025',
+  description: 'Fractional Sales Director jobs UK for experienced sales leaders. Part-time positions paying £600-£1,000/day. Browse live fractional sales director jobs and commercial leadership opportunities across the UK.',
   keywords: 'fractional sales director jobs, fractional sales jobs uk, part time sales director, fractional sales leadership, part time sales jobs, freelance sales director',
   alternates: {
     canonical: 'https://fractional.quest/fractional-sales-director-jobs-uk',

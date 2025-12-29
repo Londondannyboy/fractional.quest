@@ -2,7 +2,9 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
@@ -13,14 +15,14 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CPO Jobs UK: Product Roles',
-  description: 'Fractional CPO jobs UK. Part-time CPO positions paying £800-£1,300/day. Browse live roles for product leaders.',
-  keywords: 'fractional cpo jobs, fractional cpo jobs uk, part time cpo, part-time chief product officer, cpo part time, cpo jobs uk, cpo jobs, interim cpo, fractional cpo, chief product officer jobs, head of product part time, remote cpo jobs, cpo salary uk',
+  title: 'Fractional CPO Jobs UK: Chief Product Officer Roles 2025',
+  description: 'Fractional CPO jobs UK for experienced product leaders. Part-time Chief Product Officer positions paying £800-£1,300/day. Browse live fractional CPO jobs, interim CPO roles, and product leadership opportunities across the UK.',
+  keywords: 'fractional cpo jobs, fractional cpo jobs uk, part time cpo, part-time chief product officer, cpo part time, cpo jobs uk, cpo jobs, interim cpo, fractional cpo, chief product officer jobs, head of product part time, remote cpo jobs, cpo salary uk, fractional product leadership, vp product jobs',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cpo-jobs-uk',
   },
   openGraph: {
-    title: 'Fractional CPO Jobs UK | Part-Time Chief Product Officer Roles',
+    title: 'Fractional CPO Jobs UK | Part-Time Chief Product Officer Roles 2025',
     description: 'Fractional CPO jobs UK - Find part-time CPO positions paying £800-£1,300/day. Browse CPO jobs now.',
     images: ['/images/fractional-cpo-jobs-uk.jpg'],
     url: 'https://fractional.quest/fractional-cpo-jobs-uk',
@@ -90,19 +92,27 @@ function getDaysAgo(postedDate: string | null): number | undefined {
 const CPO_FAQS = [
   {
     question: 'What is a Fractional CPO?',
-    answer: 'A Fractional CPO (Chief Product Officer) is an experienced product leader who works with companies on a part-time basis. They define product vision, strategy, and roadmaps, mentor product teams, and ensure product-market fit without the cost of a full-time executive.',
+    answer: 'A Fractional CPO (Chief Product Officer) is an experienced product leader who works with companies on a part-time basis, typically 1-3 days per week. They define product vision and strategy, build roadmaps, mentor product teams, and ensure product-market fit—all without the £150,000-£250,000+ cost of a full-time executive. Fractional CPOs are particularly valuable for startups transitioning from founder-led product to professional product management.',
   },
   {
     question: 'How much do Fractional CPO jobs pay in the UK?',
-    answer: 'Fractional CPO day rates in the UK generally range from £800 to £1,300 per day. Rates depend on the stage of the company (Seed vs Series B) and the complexity of the product challenges.',
+    answer: 'Fractional CPO day rates in the UK range from £800 to £1,300 per day, with London-based roles commanding £1,000-£1,300/day and regional positions averaging £800-£1,100/day. Annual earnings for fractional CPOs working with multiple clients can reach £150,000-£300,000+. Rates vary based on company stage, product complexity, and sector.',
   },
   {
     question: 'What types of companies hire Fractional CPOs?',
-    answer: 'Early-stage startups often hire Fractional CPOs to set the initial product direction before a full-time hire is affordable. Scale-ups use them to professionalise their product function, implement processes, and mentor junior PMs.',
+    answer: 'Early-stage startups (Seed to Series A) hire Fractional CPOs to establish product strategy and discovery processes. Scale-ups (Series B+) use them to professionalise product functions, implement frameworks, and mentor junior PMs. B2B SaaS, FinTech, and HealthTech are the highest-demand sectors for fractional product leadership.',
+  },
+  {
+    question: 'What does a Fractional CPO do?',
+    answer: 'A Fractional CPO defines product vision and strategy, creates and prioritises roadmaps, implements discovery and delivery frameworks, mentors product managers, aligns product with business objectives, manages stakeholder expectations, drives product-led growth initiatives, and presents product metrics to the board. They bring strategic leadership without operational micromanagement.',
+  },
+  {
+    question: 'What qualifications do I need for Fractional CPO jobs?',
+    answer: 'Successful Fractional CPO candidates typically have: 12+ years of product experience with 5+ years in VP Product or CPO roles; proven track record delivering products from 0-1 and scaling to product-market fit; experience with product frameworks (Jobs to be Done, OKRs, RICE); expertise in product tools (Jira, Linear, Productboard, Amplitude); and strong stakeholder management skills.',
   },
   {
     question: 'Do Fractional CPOs work remotely?',
-    answer: 'Yes, product leadership is well-suited to remote work. Many Fractional CPOs work remotely or in a hybrid model, using tools like Jira, Linear, and Figma to manage strategy and teams effectively.',
+    answer: 'Yes, product leadership is highly suited to remote work. Most Fractional CPOs work remotely or in a hybrid model, using collaborative tools like Figma, Miro, Linear, and Notion. Typical engagement structures include 1-2 days per month on-site for workshops and stakeholder sessions, with the remainder conducted remotely.',
   },
 ]
 
@@ -125,6 +135,7 @@ export default async function FractionalCpoJobsUkPage() {
         dateModified={lastUpdatedDate}
         itemCount={stats.total}
       />
+      <FAQPageSchema faqs={CPO_FAQS} />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-cpo-jobs-uk" />
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
@@ -263,38 +274,149 @@ export default async function FractionalCpoJobsUkPage() {
           <div className="mb-16">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-4 block">The Guide</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
-              A Guide to <span className="text-purple-600">Fractional CPO Jobs UK</span>
+              Everything You Need to Know About<br />
+              <span className="text-purple-600">Fractional CPO Jobs UK</span>
             </h2>
             <div className="w-24 h-1 bg-purple-900"></div>
           </div>
-          
+
+          {/* SEO Image */}
+          <figure className="mb-16 -mx-6 lg:-mx-16">
+            <img
+              src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1200&q=80"
+              alt="Fractional CPO jobs UK - Chief Product Officer leading product strategy session"
+              title="Fractional CPO Jobs UK - Part-Time Chief Product Officer Roles"
+              className="w-full h-80 md:h-96 object-cover"
+            />
+            <figcaption className="text-sm text-gray-500 mt-3 px-6 lg:px-16">
+              Fractional CPO jobs UK: Product leaders across the UK are embracing fractional work
+            </figcaption>
+          </figure>
+
           <article className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              <strong className="font-semibold text-gray-900">Fractional CPO jobs</strong> are transforming how UK companies build and scale products. According to <a href="https://www.cipd.org/uk/knowledge/reports/flexible-working-trends/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">CIPD research</a>, senior product roles are increasingly embracing flexible models. A part-time Chief Product Officer brings the strategic clarity of a seasoned executive—defining roadmaps, mentoring teams, and driving product-market fit—without the overhead of a full-time leader. The <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">Tech Nation</a> ecosystem continues to drive demand for experienced product leadership.
-            </p>
-            
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">The Role of a Fractional CPO</h3>
-            <p>
-              Many startups and SMEs have talented individual contributors but lack strategic product leadership. A <strong className="font-semibold">Fractional CPO</strong> fills this void by translating business goals into actionable product strategies. They are particularly valuable for companies at the Seed to Series B stage, where the "product" is evolving rapidly but a £160k+ full-time CPO isn't yet justifiable.
+              <strong className="font-semibold text-gray-900">Fractional CPO jobs</strong> are transforming how UK companies build and scale products. Part-time Chief Product Officer positions where seasoned product executives bring strategic clarity—defining vision, building roadmaps, and driving product-market fit—without the £150,000-£250,000+ overhead of a full-time leader. According to <a href="https://www.cipd.org/uk/knowledge/reports/flexible-working-trends/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">CIPD research</a>, senior product roles are increasingly embracing flexible models. The <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">UK tech sector</a> continues to drive demand.
             </p>
 
-             <div className="bg-gray-50 p-8 my-10 border-l-4 border-purple-900">
-              <p className="text-xl font-semibold text-gray-900 mb-0">"Fractional CPOs help founders move from 'founder-led product' to professional product management, establishing the processes that allow scaling."</p>
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">The Rise of Fractional CPO Jobs UK</h3>
+            <p>
+              The UK market for <strong>fractional CPO jobs</strong> has grown substantially, driven by the explosion of venture-backed startups requiring experienced product leadership. According to <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">BVCA data</a>, portfolio companies increasingly favour fractional CPOs during early growth stages when product direction is critical but a full-time hire isn't yet justified. The <a href="https://www.mindtheproduct.com/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">Mind the Product</a> community has championed this shift toward flexible product leadership.
+            </p>
+
+            <div className="bg-gray-50 p-8 my-10 border-l-4 border-purple-900">
+              <p className="text-xl font-semibold text-gray-900 mb-0">"Fractional CPOs help founders transition from 'founder-led product' to professional product management, establishing the processes that enable scaling."</p>
             </div>
 
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">What You'll Do</h3>
+            <p>
+              Startups at Seed to Series B stage are the primary drivers of demand. These companies have validated product-market fit but need strategic product leadership to scale. A fractional CPO provides the expertise to build discovery processes, implement prioritisation frameworks, mentor junior PMs, and align product with business objectives—all at a fraction of the cost. The <a href="https://www.britishbusinessbank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">British Business Bank</a> notes that as companies scrutinise headcount costs, the fractional model offers a high-impact, flexible alternative.
+            </p>
+
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Why Fractional CPO Jobs Are Growing</h3>
+            <p>
+              Multiple factors are driving unprecedented demand for fractional CPO roles across the UK. The shift from feature factories to outcome-driven product teams requires experienced leadership. Boards and investors demand clear product strategy aligned with business metrics—areas where experienced CPOs excel.
+            </p>
             <ul className="space-y-3">
-              <li><strong>Product Vision & Strategy:</strong> Defining the 'North Star' and ensuring alignment across stakeholders, following <a href="https://www.mindtheproduct.com/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">Mind the Product</a> best practices.</li>
-              <li><strong>Team Building & Mentoring:</strong> Hiring key product roles and coaching existing PMs, aligned with <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">CIPD development frameworks</a>.</li>
-              <li><strong>Process Implementation:</strong> Introducing agile workflows, discovery frameworks, and prioritisation methods (e.g., RICE, ICE) as recommended by <a href="https://www.scrum.org/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">Scrum.org</a>.</li>
-              <li><strong>Market Analysis:</strong> Conducting deep competitor research using tools and frameworks from <a href="https://www.gov.uk/business-finance-support" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">government business resources</a>.</li>
+              <li><strong>Founder bandwidth:</strong> Founders delegating product leadership to focus on fundraising and GTM</li>
+              <li><strong>Product-led growth:</strong> PLG strategies requiring sophisticated product thinking aligned with <a href="https://www.productled.org/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">ProductLed</a> frameworks</li>
+              <li><strong>Discovery maturity:</strong> Implementing continuous discovery per <a href="https://www.producttalk.org/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">Teresa Torres' methodology</a></li>
+              <li><strong>Team scaling:</strong> Building and mentoring product teams from 1 to 10+ PMs</li>
+              <li><strong>Investor readiness:</strong> Professionalising product function before Series A-B rounds</li>
+              <li><strong>Platform thinking:</strong> Evolving from single product to platform architecture</li>
             </ul>
 
-            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Demand in the UK Market</h3>
+            <div className="bg-purple-50 p-6 border border-purple-200 rounded-lg my-8 not-prose">
+              <p className="text-purple-800 font-medium mb-3">Looking to hire a Fractional CPO instead?</p>
+              <Link href="/fractional-cpo-services" className="inline-flex items-center text-purple-700 font-bold hover:text-purple-900">
+                View Fractional CPO Services →
+              </Link>
+            </div>
+
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Types of Fractional CPO Jobs</h3>
             <p>
-              The UK's vibrant tech ecosystem, as tracked by <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">ONS employment data</a>, has created a robust market for <Link href="/fractional-cpo-jobs-uk" className="text-purple-600 hover:text-purple-800 underline">fractional product leaders</Link>. London, Manchester, and Cambridge lead demand, with <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">BVCA-backed</a> portfolio companies increasingly favouring fractional CPOs. B2B SaaS, FinTech, and HealthTech are leading sectors. The <a href="https://www.britishbusinessbank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">British Business Bank</a> notes that as companies scrutinise headcount costs, the fractional model offers a high-impact, flexible alternative to permanent hiring.
+              Fractional CPO roles in the UK span diverse specialisations, each commanding different day rates based on product complexity, sector expertise, and company stage. B2B SaaS CPO positions are most common, requiring expertise in subscription products, feature adoption, and enterprise workflows. Consumer/marketplace CPOs command rates based on scale and growth metrics.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 not-prose my-8">
+              {[
+                { title: 'B2B SaaS CPO', desc: 'Enterprise products, PLG, feature adoption', rate: '£1,000-£1,300/day' },
+                { title: 'FinTech / RegTech CPO', desc: 'FCA compliance, regulated products', rate: '£1,100-£1,400/day' },
+                { title: 'HealthTech CPO', desc: 'NHS integration, clinical workflows', rate: '£1,000-£1,300/day' },
+                { title: 'Early-Stage CPO', desc: 'Seed to Series A, PMF discovery', rate: '£800-£1,100/day' },
+              ].map((type, i) => (
+                <div key={i} className="bg-gray-50 p-6 border border-gray-200">
+                  <h4 className="font-bold text-gray-900 mb-1">{type.title}</h4>
+                  <p className="text-gray-600 text-sm mb-2">{type.desc}</p>
+                  <span className="text-purple-600 font-semibold text-sm">{type.rate}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Second SEO Image */}
+            <figure className="my-10 -mx-6 lg:-mx-16">
+              <img
+                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80"
+                alt="Fractional CPO jobs UK - product roadmap and strategy planning"
+                title="Fractional CPO Jobs UK - Product Leadership Opportunities"
+                className="w-full h-64 md:h-80 object-cover"
+              />
+              <figcaption className="text-sm text-gray-500 mt-3 px-6 lg:px-16">
+                UK fractional CPO jobs offer competitive day rates for experienced product leaders
+              </figcaption>
+            </figure>
+
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Fractional CPO Jobs by Location</h3>
+            <p>
+              London dominates with approximately 60% of fractional CPO opportunities, driven by the capital's concentration of venture-backed startups and tech scale-ups. However, remote-first culture has expanded opportunities—experienced CPOs based anywhere in the UK can serve multiple clients. Cambridge, Manchester, Edinburgh, and Bristol all generate consistent demand through their growing tech ecosystems.
+            </p>
+            <ul className="space-y-2">
+              <li><strong>London (Shoreditch, King's Cross, City):</strong> £1,000-£1,300/day</li>
+              <li><strong>Cambridge & Oxford:</strong> £900-£1,200/day</li>
+              <li><strong>Manchester & Leeds:</strong> £850-£1,100/day</li>
+              <li><strong>Edinburgh & Glasgow:</strong> £850-£1,100/day</li>
+              <li><strong>Remote UK (multi-client):</strong> £900-£1,200/day</li>
+            </ul>
+            <p>
+              The shift to hybrid working has reshaped fractional CPO engagements. Many companies structure roles as 1-2 days per month on-site for workshops, planning sessions, and stakeholder alignment, with the remainder conducted remotely. This flexibility enables fractional CPOs to serve 3-5 clients simultaneously.
+            </p>
+
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Requirements for Fractional CPO Jobs</h3>
+            <p>
+              Fractional CPO roles demand extensive product leadership experience. Unlike advisory roles, a fractional CPO takes accountability for product outcomes—they must demonstrate the track record to back that responsibility.
+            </p>
+            <ul className="space-y-2">
+              <li>12+ years product experience, with 5+ years in VP Product or CPO roles</li>
+              <li>Proven track record building products from 0-1 and scaling to product-market fit</li>
+              <li>Experience building and leading product teams (5-20+ people)</li>
+              <li>Deep expertise in product tools: Jira, Linear, Productboard, Amplitude, Mixpanel</li>
+              <li>Knowledge of product frameworks: Jobs to be Done, OKRs, RICE, continuous discovery</li>
+              <li>Understanding of <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">IR35 legislation</a> and limited company structure</li>
+              <li>Board-level communication skills and experience presenting to investors</li>
+              <li>Certification from <a href="https://www.mindtheproduct.com/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">Mind the Product</a> or <a href="https://www.scrum.org/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">Scrum.org</a> adds credibility</li>
+            </ul>
+
+            <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Building a Successful Fractional CPO Practice</h3>
+            <p>
+              Transitioning from full-time CPO to a thriving fractional practice requires strategic positioning and business development discipline. Most successful fractional CPOs spend 6-12 months building their initial client base, typically starting with 2-3 anchor clients before expanding to a sustainable portfolio of 4-6 engagements generating £150,000-£300,000 annually.
+            </p>
+            <p>
+              The key differentiator is establishing deep expertise in a defensible niche—whether that's a specific vertical (SaaS, FinTech, HealthTech), stage (0-1 vs. scaling), or methodology (PLG, enterprise product). Building standardised playbooks for discovery workshops, roadmap facilitation, team assessments, and board reporting enables efficient delivery across multiple clients.
             </p>
           </article>
+        </div>
+      </section>
+
+      {/* IR35 Calculator Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">UK Tax</span>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900">
+              UK IR35 Calculator for Fractional CPO Jobs
+            </h2>
+            <p className="text-gray-600 mt-4">
+              As a fractional CPO in the UK, your IR35 status significantly impacts your take-home pay
+            </p>
+          </div>
+          <IR35Calculator defaultDayRate={1050} />
         </div>
       </section>
 

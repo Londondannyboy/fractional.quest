@@ -2,7 +2,9 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
+import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
 import { RoleContentHub } from '@/components/RoleContentHub'
 import { BreadcrumbsLight } from '@/components/Breadcrumbs'
@@ -13,8 +15,8 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CSO Jobs UK 2025',
-  description: 'Fractional CSO jobs UK. Part-time Chief Sales Officer roles. £1,000-£1,600/day.',
+  title: 'Fractional CSO Jobs UK: Chief Sales Officer Roles 2025',
+  description: 'Fractional CSO jobs UK for experienced sales leaders. Part-time Chief Sales Officer positions paying £1,000-£1,600/day. Browse live fractional CSO jobs and sales leadership opportunities across the UK.',
   keywords: 'fractional cso jobs, fractional cso jobs uk, part time chief sales officer, fractional sales jobs, cso part time, fractional sales director, fractional sales leadership',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cso-jobs-uk',

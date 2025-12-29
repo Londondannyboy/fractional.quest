@@ -162,24 +162,32 @@ export async function ServerJobGrid({
                     </span>
                   )}
                 </div>
-                {/* Job content */}
-                <div className="p-4">
-                  <p className="text-gray-700 font-medium mb-2">{job.company_name}</p>
-                  <div className="flex items-center gap-3 text-sm text-gray-500 mb-3">
-                    <span className="flex items-center gap-1">
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {/* Job content - improved spacing for mobile readability */}
+                <div className="p-5 md:p-6">
+                  <p className="text-gray-900 font-semibold mb-3 text-base">{job.company_name}</p>
+
+                  {/* Location and compensation - stacked on mobile for better readability */}
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-sm text-gray-500 mb-4">
+                    <span className="flex items-center gap-1.5">
+                      <svg className="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       </svg>
                       {job.location || 'UK'}
                     </span>
                     {job.compensation && (
-                      <span className="font-semibold text-gray-900">{job.compensation}</span>
+                      <span className="font-bold text-gray-900 text-base">{job.compensation}</span>
                     )}
                   </div>
+
+                  {/* Description with better line height and spacing */}
                   {job.description_snippet && (
-                    <p className="text-sm text-gray-600 line-clamp-2 mb-3">{job.description_snippet}</p>
+                    <p className="text-sm text-gray-600 leading-relaxed line-clamp-3 mb-4">
+                      {job.description_snippet}
+                    </p>
                   )}
-                  <span className={`inline-flex items-center gap-1.5 text-sm font-semibold ${jobColors.accent} hover:opacity-80`}>
+
+                  {/* CTA with more padding */}
+                  <span className={`inline-flex items-center gap-2 text-sm font-bold ${jobColors.accent} hover:opacity-80 pt-2`}>
                     View {roleCategory || job.role_category || 'fractional'} job
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

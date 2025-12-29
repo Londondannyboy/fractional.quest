@@ -2,17 +2,21 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { RoleCalculator } from '@/components/RoleCalculator'
 import { DesktopOnly } from '@/components/DesktopOnly'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleContentHub } from '@/components/RoleContentHub'
+import { BreadcrumbsLight } from '@/components/Breadcrumbs'
+import { JobListingSchema } from '@/components/JobPostingSchema'
+import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional Product Jobs UK 2025',
-  description: 'Fractional product manager jobs UK. Part-time CPO roles. £800-£1,400/day.',
+  title: 'Fractional Product Jobs UK: Part-Time Product Leadership 2025',
+  description: 'Fractional Product Manager and CPO jobs UK for experienced product leaders. Part-time positions paying £800-£1,400/day. Browse live fractional product jobs across the UK.',
   keywords: 'fractional product manager jobs uk, fractional cpo jobs, part time product lead, fractional product jobs, cpo jobs uk, part time chief product officer',
   openGraph: {
     title: 'Fractional Product Manager Jobs UK | Part-Time CPO Roles',
