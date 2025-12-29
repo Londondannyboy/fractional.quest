@@ -129,31 +129,31 @@ export function RoleCalculator({ role, className = '' }: RoleCalculatorProps) {
 
   return (
     <div className={`bg-black text-white overflow-hidden ${className}`}>
-      {/* Tabs */}
-      <div className="flex border-b border-gray-800">
+      {/* Tabs - Responsive */}
+      <div className="flex flex-col sm:flex-row border-b border-gray-800">
         <button
           onClick={() => setMode('candidate')}
-          className={`flex-1 px-6 py-4 text-sm font-bold uppercase tracking-wider transition-colors ${
+          className={`flex-1 px-4 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold uppercase tracking-wider transition-colors ${
             mode === 'candidate'
               ? 'bg-amber-500 text-black'
               : 'bg-gray-900 text-gray-400 hover:text-white'
           }`}
         >
-          I'm a {roleData.label} - How Much Can I Earn?
+          I'm a {roleData.label} - Earnings
         </button>
         <button
           onClick={() => setMode('employer')}
-          className={`flex-1 px-6 py-4 text-sm font-bold uppercase tracking-wider transition-colors ${
+          className={`flex-1 px-4 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-bold uppercase tracking-wider transition-colors ${
             mode === 'employer'
               ? 'bg-amber-500 text-black'
               : 'bg-gray-900 text-gray-400 hover:text-white'
           }`}
         >
-          I'm Hiring - How Much Will I Save?
+          I'm Hiring - Savings
         </button>
       </div>
 
-      <div className="p-8">
+      <div className="p-4 sm:p-8">
         {mode === 'candidate' ? (
           /* Candidate View */
           <div>
@@ -162,13 +162,13 @@ export function RoleCalculator({ role, className = '' }: RoleCalculatorProps) {
               <h3 className="text-2xl font-black mt-1">Calculate Your Potential Income</h3>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
               {/* Day Rate */}
               <div>
-                <label className="block text-sm font-medium text-gray-400 mb-2">
+                <label className="block text-xs sm:text-sm font-medium text-gray-400 mb-2">
                   Your Day Rate
                 </label>
-                <div className="text-3xl font-black text-amber-400 mb-3">
+                <div className="text-2xl sm:text-3xl font-black text-amber-400 mb-3 truncate">
                   {formatCurrency(dayRate)}
                 </div>
                 <input
@@ -189,10 +189,10 @@ export function RoleCalculator({ role, className = '' }: RoleCalculatorProps) {
 
               {/* Days Per Week */}
               <div>
-                <label className="block text-sm font-medium text-gray-400 mb-2">
+                <label className="block text-xs sm:text-sm font-medium text-gray-400 mb-2">
                   Days Per Client/Week
                 </label>
-                <div className="text-3xl font-black text-white mb-3">
+                <div className="text-2xl sm:text-3xl font-black text-white mb-3">
                   {daysPerWeek} days
                 </div>
                 <input
@@ -212,10 +212,10 @@ export function RoleCalculator({ role, className = '' }: RoleCalculatorProps) {
 
               {/* Number of Clients */}
               <div>
-                <label className="block text-sm font-medium text-gray-400 mb-2">
+                <label className="block text-xs sm:text-sm font-medium text-gray-400 mb-2">
                   Number of Clients
                 </label>
-                <div className="text-3xl font-black text-white mb-3">
+                <div className="text-2xl sm:text-3xl font-black text-white mb-3">
                   {clients} {clients === 1 ? 'client' : 'clients'}
                 </div>
                 <input
@@ -234,23 +234,23 @@ export function RoleCalculator({ role, className = '' }: RoleCalculatorProps) {
               </div>
             </div>
 
-            {/* Results */}
-            <div className="grid grid-cols-3 gap-4 p-6 bg-gray-900 border border-gray-800">
-              <div className="text-center">
-                <div className="text-sm text-gray-500 mb-1 uppercase tracking-wider">Weekly</div>
-                <div className="text-2xl font-bold text-white">
+            {/* Results - Responsive grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 sm:p-6 bg-gray-900 border border-gray-800">
+              <div className="text-center py-2 sm:py-0">
+                <div className="text-xs sm:text-sm text-gray-500 mb-1 uppercase tracking-wider">Weekly</div>
+                <div className="text-xl sm:text-2xl font-bold text-white truncate">
                   {formatCurrency(weeklyEarnings)}
                 </div>
               </div>
-              <div className="text-center border-x border-gray-800">
-                <div className="text-sm text-gray-500 mb-1 uppercase tracking-wider">Monthly</div>
-                <div className="text-2xl font-bold text-white">
+              <div className="text-center py-2 sm:py-0 border-y sm:border-y-0 sm:border-x border-gray-800">
+                <div className="text-xs sm:text-sm text-gray-500 mb-1 uppercase tracking-wider">Monthly</div>
+                <div className="text-xl sm:text-2xl font-bold text-white truncate">
                   {formatCurrency(monthlyEarnings)}
                 </div>
               </div>
-              <div className="text-center">
-                <div className="text-sm text-gray-500 mb-1 uppercase tracking-wider">Annual</div>
-                <div className="text-3xl font-black text-amber-400">
+              <div className="text-center py-2 sm:py-0">
+                <div className="text-xs sm:text-sm text-gray-500 mb-1 uppercase tracking-wider">Annual</div>
+                <div className="text-2xl sm:text-3xl font-black text-amber-400 truncate">
                   {formatCurrency(annualEarnings)}
                 </div>
               </div>
@@ -273,10 +273,10 @@ export function RoleCalculator({ role, className = '' }: RoleCalculatorProps) {
               <div className="space-y-6">
                 {/* Full-Time Salary */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-400 mb-2">
+                  <label className="block text-xs sm:text-sm font-medium text-gray-400 mb-2">
                     Full-Time {roleData.label} Salary (Base)
                   </label>
-                  <div className="text-3xl font-black text-white mb-3">
+                  <div className="text-2xl sm:text-3xl font-black text-white mb-3 truncate">
                     {formatCurrency(fullTimeSalary)}
                   </div>
                   <input
@@ -297,11 +297,11 @@ export function RoleCalculator({ role, className = '' }: RoleCalculatorProps) {
 
                 {/* Hours Needed */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-400 mb-2">
+                  <label className="block text-xs sm:text-sm font-medium text-gray-400 mb-2">
                     Hours Per Week You Actually Need
                   </label>
-                  <div className="text-3xl font-black text-white mb-3">
-                    {hoursNeeded} hours <span className="text-lg font-normal text-gray-500">({daysPerWeekNeeded.toFixed(1)} days)</span>
+                  <div className="text-2xl sm:text-3xl font-black text-white mb-3">
+                    {hoursNeeded} hrs <span className="text-sm sm:text-lg font-normal text-gray-500">({daysPerWeekNeeded.toFixed(1)} days)</span>
                   </div>
                   <input
                     type="range"
@@ -324,38 +324,38 @@ export function RoleCalculator({ role, className = '' }: RoleCalculatorProps) {
                 <h4 className="text-lg font-bold text-center mb-4 text-gray-400 uppercase tracking-wider">Annual Cost Comparison</h4>
 
                 {/* Full-Time Cost */}
-                <div className="bg-red-900/30 border border-red-900/50 p-4">
-                  <div className="flex justify-between items-center">
+                <div className="bg-red-900/30 border border-red-900/50 p-3 sm:p-4">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                     <div>
-                      <div className="text-sm text-gray-400">Full-Time {roleData.label}</div>
-                      <div className="text-xs text-gray-500">(Salary + NI + Benefits)</div>
+                      <div className="text-xs sm:text-sm text-gray-400">Full-Time {roleData.label}</div>
+                      <div className="text-[10px] sm:text-xs text-gray-500">(Salary + NI + Benefits)</div>
                     </div>
-                    <div className="text-2xl font-bold text-red-400">
+                    <div className="text-xl sm:text-2xl font-bold text-red-400 truncate">
                       {formatCurrency(fullTimeTotalCost)}
                     </div>
                   </div>
                 </div>
 
                 {/* Fractional Cost */}
-                <div className="bg-blue-900/30 border border-blue-900/50 p-4">
-                  <div className="flex justify-between items-center">
+                <div className="bg-blue-900/30 border border-blue-900/50 p-3 sm:p-4">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                     <div>
-                      <div className="text-sm text-gray-400">Fractional {roleData.label}</div>
-                      <div className="text-xs text-gray-500">({daysPerWeekNeeded.toFixed(1)} days/week x 48 weeks)</div>
+                      <div className="text-xs sm:text-sm text-gray-400">Fractional {roleData.label}</div>
+                      <div className="text-[10px] sm:text-xs text-gray-500">({daysPerWeekNeeded.toFixed(1)} days/week x 48 weeks)</div>
                     </div>
-                    <div className="text-2xl font-bold text-blue-400">
+                    <div className="text-xl sm:text-2xl font-bold text-blue-400 truncate">
                       {formatCurrency(fractionalAnnualCost)}
                     </div>
                   </div>
                 </div>
 
                 {/* Savings */}
-                <div className="bg-amber-500 text-black p-5 text-center mt-4">
-                  <div className="text-sm font-bold uppercase tracking-wider mb-1">Your Annual Savings</div>
-                  <div className="text-4xl font-black mb-1">
+                <div className="bg-amber-500 text-black p-4 sm:p-5 text-center mt-4">
+                  <div className="text-xs sm:text-sm font-bold uppercase tracking-wider mb-1">Your Annual Savings</div>
+                  <div className="text-2xl sm:text-4xl font-black mb-1 truncate">
                     {formatCurrency(savings)}
                   </div>
-                  <div className="text-lg font-bold">
+                  <div className="text-sm sm:text-lg font-bold">
                     That's {savingsPercent}% less than full-time
                   </div>
                 </div>

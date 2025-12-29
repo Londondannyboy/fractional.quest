@@ -14,15 +14,15 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Fractional CISO Jobs UK: vCISO Roles',
-  description: 'Fractional CISO jobs UK. Part-time vCISO positions paying £900-£1,600/day. Browse live roles for security leaders.',
-  keywords: 'fractional ciso jobs uk, fractional ciso jobs, part time ciso jobs, virtual ciso jobs uk, vciso jobs, ciso jobs uk, part time chief information security officer',
+  title: 'Fractional Chief Information Security Officer Jobs | CISO Roles 2025',
+  description: 'Fractional Chief Information Security Officer jobs and fractional CISO roles. Part-time vCISO positions paying £900-£1,600/day. Browse live security leadership opportunities.',
+  keywords: 'fractional chief information security officer jobs, fractional ciso jobs, fractional ciso jobs uk, part time ciso jobs, virtual ciso jobs, vciso jobs, chief information security officer jobs, part time chief information security officer, fractional security officer',
   alternates: {
     canonical: 'https://fractional.quest/fractional-ciso-jobs-uk',
   },
   openGraph: {
-    title: 'Fractional CISO Jobs UK | Part-Time vCISO Roles',
-    description: 'Fractional CISO jobs UK - Find part-time vCISO positions paying £900-£1,600/day.',
+    title: 'Fractional Chief Information Security Officer Jobs | CISO Roles',
+    description: 'Fractional Chief Information Security Officer jobs - Find part-time CISO and vCISO positions. Browse security leadership roles.',
     url: 'https://fractional.quest/fractional-ciso-jobs-uk',
     images: ['/images/fractional-ciso-jobs-uk.jpg'],
   },
@@ -55,13 +55,27 @@ const CISO_FAQS = [
   },
 ]
 
+// Broadened query to include: CISO, Security, Data Protection, Information Security, Compliance, DPO roles
+const SECURITY_QUERY = `
+  role_category IN ('Security', 'Data', 'Legal')
+  OR title ILIKE '%CISO%'
+  OR title ILIKE '%Security%'
+  OR title ILIKE '%Information Officer%'
+  OR title ILIKE '%Data Protection%'
+  OR title ILIKE '%DPO%'
+  OR title ILIKE '%Compliance%'
+  OR title ILIKE '%Cyber%'
+  OR title ILIKE '%InfoSec%'
+  OR title ILIKE '%Risk%'
+`
+
 async function getSecurityStats() {
   try {
     const sql = createDbQuery()
     const [totalResult, avgRateResult, remoteResult] = await Promise.all([
-      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category = 'Security' OR title ILIKE '%CISO%' OR title ILIKE '%Security%')`,
-      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS INTEGER)) as avg FROM jobs WHERE is_active = true AND (role_category = 'Security' OR title ILIKE '%CISO%') AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+'`,
-      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category = 'Security' OR title ILIKE '%CISO%') AND (is_remote = true OR workplace_type = 'Remote')`
+      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category IN ('Security', 'Data', 'Legal') OR title ILIKE '%CISO%' OR title ILIKE '%Security%' OR title ILIKE '%Information Officer%' OR title ILIKE '%Data Protection%' OR title ILIKE '%DPO%' OR title ILIKE '%Compliance%' OR title ILIKE '%Cyber%' OR title ILIKE '%InfoSec%' OR title ILIKE '%Risk%')`,
+      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS INTEGER)) as avg FROM jobs WHERE is_active = true AND (role_category IN ('Security', 'Data') OR title ILIKE '%CISO%' OR title ILIKE '%Security%') AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+'`,
+      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category IN ('Security', 'Data', 'Legal') OR title ILIKE '%CISO%' OR title ILIKE '%Security%' OR title ILIKE '%Cyber%') AND (is_remote = true OR workplace_type = 'Remote')`
     ])
     return {
       total: parseInt((totalResult[0] as any)?.count || '0'),
@@ -69,7 +83,7 @@ async function getSecurityStats() {
       remoteCount: parseInt((remoteResult[0] as any)?.count || '0')
     }
   } catch {
-    return { total: 24, avgRate: 1200, remoteCount: 18 }
+    return { total: 0, avgRate: 1200, remoteCount: 0 }
   }
 }
 
@@ -89,7 +103,7 @@ async function getFeaturedCompanies() {
   }
 }
 
-// Server-side job fetch for SEO - renders in initial HTML for crawlers
+// Server-side job fetch for SEO - broadened to include security, data, compliance, risk roles
 async function getSecurityJobs() {
   try {
     const sql = createDbQuery()
@@ -99,9 +113,21 @@ async function getSecurityJobs() {
         compensation, role_category, skills_required, posted_date, hours_per_week, salary_min, salary_max, salary_currency,
         description_snippet
       FROM jobs
-      WHERE is_active = true AND (role_category = 'Security' OR title ILIKE '%CISO%' OR title ILIKE '%Security%')
+      WHERE is_active = true AND (
+        role_category IN ('Security', 'Data', 'Legal')
+        OR title ILIKE '%CISO%'
+        OR title ILIKE '%Security%'
+        OR title ILIKE '%Information Officer%'
+        OR title ILIKE '%Data Protection%'
+        OR title ILIKE '%DPO%'
+        OR title ILIKE '%Compliance%'
+        OR title ILIKE '%Cyber%'
+        OR title ILIKE '%InfoSec%'
+        OR title ILIKE '%Risk%'
+        OR title ILIKE '%Privacy%'
+      )
       ORDER BY posted_date DESC NULLS LAST
-      LIMIT 20
+      LIMIT 30
     `
     return jobs as any[]
   } catch {
@@ -131,58 +157,82 @@ export default async function FractionalCisoJobsUkPage() {
   return (
     <div className="min-h-screen bg-white">
       <WebPageSchema
-        title="Fractional CISO Jobs UK | Virtual CISO Roles"
-        description="Find part-time vCISO positions paying £900-£1,600/day"
+        title="Fractional Chief Information Security Officer Jobs | CISO Roles"
+        description="Fractional Chief Information Security Officer jobs and part-time CISO positions"
         url="https://fractional.quest/fractional-ciso-jobs-uk"
         dateModified={lastUpdatedDate}
         itemCount={stats.total}
       />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-ciso-jobs-uk" />
-      {/* Hero with Aspirational Image */}
-      <section className="relative min-h-[55vh] flex items-center overflow-hidden">
-        {/* Background Image - Security professional */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=1920&q=80')`,
-          }}
+
+      {/* Hero with Video Background */}
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden">
+        {/* Video Background */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          poster="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&q=80"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-red-800/90 via-crimson-700/85 to-red-600/75" />
-        </div>
+          <source src="https://cdn.coverr.co/videos/coverr-typing-on-a-laptop-keyboard-5765/1080p.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-800/90 to-cyan-900/85" />
+
         <div className="relative z-10 w-full py-16">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
-            <BreadcrumbsLight items={getRoleBreadcrumbs('ciso', 'jobs')} className="mb-8" />
+            {/* High Authority Context - BBC/Wikipedia level sources */}
+            <div className="mb-8 pb-6 border-b border-white/20">
+              <p className="text-sm text-cyan-300 mb-2 font-medium">As reported by leading industry sources:</p>
+              <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/80">
+                <a href="https://www.bbc.co.uk/news/topics/cz4pr2gd85qt" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 underline">BBC News: Cyber Security</a>
+                <a href="https://en.wikipedia.org/wiki/Chief_information_security_officer" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 underline">Wikipedia: CISO</a>
+                <a href="https://www.ft.com/cyber-security" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 underline">Financial Times</a>
+                <a href="https://www.ncsc.gov.uk/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 underline">NCSC</a>
+              </div>
+            </div>
+
+            <BreadcrumbsLight items={getRoleBreadcrumbs('ciso', 'jobs')} className="mb-6" />
+
             <div className="max-w-4xl">
               <div className="flex flex-wrap items-center gap-3 mb-6">
-                <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
-                  Security Leadership
+                <span className="inline-block bg-cyan-500/30 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                  Fractional Chief Information Security Officer Jobs
                 </span>
                 <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
               </div>
+
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Fractional CISO Jobs UK
+                Fractional CISO Jobs
               </h1>
-              <p className="text-xl text-white/90 leading-relaxed max-w-2xl mb-8">
-                Part-time Chief Information Security Officer roles for experienced security leaders.
-                Work 2-3 days a week at £900-£1,600/day.
+
+              <p className="text-xl text-white/90 leading-relaxed max-w-2xl mb-4">
+                Part-time <strong>Chief Information Security Officer</strong> roles for experienced security leaders.
               </p>
+              <p className="text-lg text-white/80 leading-relaxed max-w-2xl mb-8">
+                Browse fractional CISO jobs, vCISO positions, and information security leadership opportunities.
+                Work flexibly at £900-£1,600/day.
+              </p>
+
               <div className="flex flex-wrap gap-4 mb-10">
                 <div className="bg-white/10 backdrop-blur rounded-xl px-6 py-4">
-                  <div className="text-3xl font-bold text-white">{stats.total}+</div>
-                  <div className="text-white/80 text-sm">Live Roles</div>
+                  <div className="text-3xl font-bold text-white">{stats.total || 'New'}</div>
+                  <div className="text-white/80 text-sm">Security Roles</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-xl px-6 py-4">
-                  <div className="text-3xl font-bold text-white">£{stats.avgRate}</div>
+                  <div className="text-3xl font-bold text-white">£{stats.avgRate || '1,200'}</div>
                   <div className="text-white/80 text-sm">Avg Day Rate</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur rounded-xl px-6 py-4">
-                  <div className="text-3xl font-bold text-white">{stats.remoteCount}</div>
+                  <div className="text-3xl font-bold text-white">{stats.remoteCount || 0}</div>
                   <div className="text-white/80 text-sm">Remote</div>
                 </div>
               </div>
+
               <div className="flex flex-wrap gap-4">
-                <Link href="#jobs" className="px-8 py-4 bg-white text-red-700 font-bold rounded-lg hover:bg-gray-100 transition-colors">
-                  Browse Jobs
+                <Link href="#jobs" className="px-8 py-4 bg-cyan-500 text-white font-bold rounded-lg hover:bg-cyan-600 transition-colors">
+                  Browse CISO Jobs
                 </Link>
                 <Link href="/fractional-ciso" className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
                   CISO Guide
@@ -193,21 +243,7 @@ export default async function FractionalCisoJobsUkPage() {
         </div>
       </section>
 
-      {/* Calculator Section - Impressive Feature Right After Hero */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="mb-8 text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
-            <h2 className="text-2xl md:text-3xl font-black text-gray-900">
-              Fractional CISO Jobs UK Earnings Calculator
-            </h2>
-            <p className="text-gray-600 mt-2">Calculate your potential earnings from fractional CISO jobs in the UK market</p>
-          </div>
-          <RoleCalculator role="ciso" />
-        </div>
-      </section>
-
-      {/* JOBS SECTION - Server-rendered for SEO */}
+      {/* JOBS SECTION - Server-rendered for SEO - FIRST after hero */}
       <section id="jobs" className="py-16 md:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
@@ -299,6 +335,19 @@ export default async function FractionalCisoJobsUkPage() {
         </div>
       </section>
 
+      {/* Calculator Section - After Jobs */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="mb-8 text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
+            <h2 className="text-2xl md:text-3xl font-black text-gray-900">
+              Fractional CISO Jobs UK Earnings Calculator
+            </h2>
+            <p className="text-gray-600 mt-2">Calculate your potential earnings from fractional CISO jobs in the UK market</p>
+          </div>
+          <RoleCalculator role="ciso" />
+        </div>
+      </section>
 
       {/* Companies Hiring - Editorial Style */}
       {companies.length > 0 && (

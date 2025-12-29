@@ -9,8 +9,8 @@ import type { Destination, FeaturedExecutive } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Fractional Quest | Design Your Life as a Fractional Executive",
-  description: "Join the fractional revolution. Work 2-3 days a week, earn £150-300k, and live anywhere. Browse fractional CFO, CMO, CTO roles or create your profile.",
-  keywords: "fractional executive, fractional cfo, fractional cmo, fractional cto, portfolio career, fractional jobs, fractional ownership",
+  description: "Join the global fractional executive revolution. Work 2-3 days a week, earn $200-400k or £150-300k, and live anywhere. Browse fractional CFO, CMO, CTO roles worldwide.",
+  keywords: "fractional executive, fractional cfo, fractional cmo, fractional cto, portfolio career, fractional jobs, fractional executive jobs, part-time executive, interim executive",
   alternates: {
     canonical: "https://fractional.quest",
   },
@@ -105,12 +105,12 @@ export default async function Home() {
                 <span className="text-gray-500">Not Your Commute.</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-lg">
-                Join thousands of executives who've traded the 9-5 grind for freedom. Work 2-3 days a week. Earn £150-300k. Live anywhere.
+                Join thousands of executives worldwide who've traded the 9-5 grind for freedom. Work 2-3 days a week. Earn top-tier rates. Live anywhere.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="/fractional-jobs-uk"
+                  href="/fractional-jobs"
                   className="inline-flex justify-center items-center px-8 py-4 bg-gray-900 text-white font-medium rounded-lg hover:bg-black transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
                   Browse {stats.jobs}+ Roles
@@ -180,7 +180,7 @@ export default async function Home() {
               <div className="text-sm font-medium text-gray-500 uppercase tracking-wide">Live Opportunities</div>
             </div>
             <div className="text-center p-6 border-r border-gray-100 last:border-0">
-              <div className="font-editorial text-4xl text-gray-900 mb-2">£1.5k</div>
+              <div className="font-editorial text-4xl text-gray-900 mb-2">$1.5k+</div>
               <div className="text-sm font-medium text-gray-500 uppercase tracking-wide">Avg Day Rate</div>
             </div>
             <div className="text-center p-6 border-r border-gray-100 last:border-0">
@@ -195,20 +195,34 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* London Featured Section */}
+      {/* Global Markets Section */}
       <section className="py-12 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="container-content">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-white">
-              <h2 className="font-editorial text-2xl md:text-3xl font-bold mb-2">Fractional Jobs London</h2>
-              <p className="text-white/80">60% of UK opportunities • £900-£1,500 day rates • City & Canary Wharf</p>
+              <h2 className="font-editorial text-2xl md:text-3xl font-bold mb-2">Fractional Jobs Worldwide</h2>
+              <p className="text-white/80">UK • USA • Australia • Remote-first • $1,200-$2,500 day rates</p>
             </div>
-            <Link
-              href="/fractional-jobs-london"
-              className="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-lg"
-            >
-              Browse London Jobs →
-            </Link>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/fractional-jobs-uk"
+                className="inline-flex items-center px-6 py-3 bg-white text-gray-900 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-lg text-sm"
+              >
+                🇬🇧 UK Jobs
+              </Link>
+              <Link
+                href="/fractional-jobs-us"
+                className="inline-flex items-center px-6 py-3 bg-white/20 text-white font-bold rounded-lg hover:bg-white/30 transition-colors text-sm"
+              >
+                🇺🇸 US Jobs
+              </Link>
+              <Link
+                href="/fractional-jobs-au"
+                className="inline-flex items-center px-6 py-3 bg-white/20 text-white font-bold rounded-lg hover:bg-white/30 transition-colors text-sm"
+              >
+                🇦🇺 AU Jobs
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -222,7 +236,7 @@ export default async function Home() {
                 <h2 className="font-editorial text-4xl font-bold text-gray-900 mb-4">Latest Roles</h2>
                 <p className="text-gray-600 max-w-xl">Curated senior leadership opportunities from top companies.</p>
               </div>
-              <Link href="/fractional-jobs-uk" className="hidden md:inline-flex items-center font-medium text-gray-900 border-b border-gray-900 pb-0.5 hover:text-gray-600 hover:border-gray-600 transition-colors">
+              <Link href="/fractional-jobs" className="hidden md:inline-flex items-center font-medium text-gray-900 border-b border-gray-900 pb-0.5 hover:text-gray-600 hover:border-gray-600 transition-colors">
                 View All Opportunities
               </Link>
             </div>
