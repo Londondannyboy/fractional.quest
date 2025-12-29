@@ -1,8 +1,31 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, Component, ReactNode } from 'react'
 import { useCopilotAction, useCopilotReadable } from '@copilotkit/react-core'
 import { useRouter, useSearchParams } from 'next/navigation'
+
+// Error boundary to prevent CopilotKit errors from crashing the page
+class CopilotErrorBoundary extends Component<{ children: ReactNode; fallback: ReactNode }, { hasError: boolean }> {
+  constructor(props: { children: ReactNode; fallback: ReactNode }) {
+    super(props)
+    this.state = { hasError: false }
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true }
+  }
+
+  componentDidCatch(error: Error) {
+    console.warn('CopilotKit error (non-fatal):', error.message)
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback
+    }
+    return this.props.children
+  }
+}
 
 interface SmartJobSearchProps {
   totalJobs?: number
@@ -19,7 +42,7 @@ interface JobFilters {
   keywords?: string[]
 }
 
-export function SmartJobSearch({
+function SmartJobSearchInner({
   totalJobs = 50,
   className = '',
   placeholder = 'Try: "CFO roles in London, remote, under £1,200/day"'
@@ -306,5 +329,50 @@ export function SmartJobSearch({
         </div>
       )}
     </div>
+  )
+}
+
+// Basic fallback search component (no CopilotKit)
+function BasicJobSearch({
+  className = '',
+  placeholder = 'Search jobs...'
+}: SmartJobSearchProps) {
+  const router = useRouter()
+  const [query, setQuery] = useState('')
+
+  const handleSearch = () => {
+    if (query.trim()) {
+      router.push(`/fractional-jobs-uk?q=${encodeURIComponent(query)}`)
+    }
+  }
+
+  return (
+    <div className={className}>
+      <div className="flex items-center gap-2">
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+          placeholder={placeholder}
+          className="w-full px-4 py-3 pl-12 text-gray-900 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500"
+        />
+        <button
+          onClick={handleSearch}
+          className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  )
+}
+
+// Export wrapped component with error boundary
+export function SmartJobSearch(props: SmartJobSearchProps) {
+  return (
+    <CopilotErrorBoundary fallback={<BasicJobSearch {...props} />}>
+      <SmartJobSearchInner {...props} />
+    </CopilotErrorBoundary>
   )
 }

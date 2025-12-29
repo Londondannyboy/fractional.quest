@@ -1,9 +1,32 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, Component, ReactNode } from 'react'
 import { CopilotPopup } from '@copilotkit/react-ui'
 import { useCopilotAction, useCopilotReadable } from '@copilotkit/react-core'
 import '@copilotkit/react-ui/styles.css'
+
+// Error boundary to prevent CopilotKit errors from crashing the page
+class CopilotErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean }> {
+  constructor(props: { children: ReactNode }) {
+    super(props)
+    this.state = { hasError: false }
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true }
+  }
+
+  componentDidCatch(error: Error) {
+    console.warn('CopilotKit error (non-fatal):', error.message)
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return null // Silently fail - don't show anything
+    }
+    return this.props.children
+  }
+}
 
 interface JobAssistantProps {
   pageContext?: {
@@ -13,7 +36,7 @@ interface JobAssistantProps {
   }
 }
 
-export function JobAssistant({ pageContext }: JobAssistantProps) {
+function JobAssistantInner({ pageContext }: JobAssistantProps) {
   const [savedJobs, setSavedJobs] = useState<string[]>([])
 
   // Make page context readable to the AI
@@ -152,5 +175,14 @@ Be concise, helpful, and professional. Use UK English spelling.`}
       }}
       className="z-50"
     />
+  )
+}
+
+// Export wrapped component with error boundary
+export function JobAssistant({ pageContext }: JobAssistantProps) {
+  return (
+    <CopilotErrorBoundary>
+      <JobAssistantInner pageContext={pageContext} />
+    </CopilotErrorBoundary>
   )
 }
