@@ -140,6 +140,55 @@ export default async function FractionalCeoJobsUkPage() {
         itemCount={stats.total}
       />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-ceo-jobs-uk" />
+      {/* Video Schema for rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "What is a Fractional CEO?",
+            "description": "Learn what a Fractional CEO does and how part-time executive leadership works for UK businesses. This video explains the fractional CEO role, typical engagements with PE portfolio companies and scale-ups, and how to build a portfolio CEO career. Essential viewing for anyone exploring fractional CEO jobs UK.",
+            "thumbnailUrl": "https://img.youtube.com/vi/7nANHHQBHvI/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=7nANHHQBHvI",
+            "embedUrl": "https://www.youtube.com/embed/7nANHHQBHvI",
+            "uploadDate": "2023-02-25",
+            "duration": "PT10M15S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "How to Scale a Business: CEO Strategies",
+            "description": "A comprehensive guide to scaling businesses and executive leadership strategies. Learn how fractional CEOs drive growth, prepare companies for exit, and professionalise founder-led businesses. Essential for understanding fractional CEO jobs UK responsibilities and the PE portfolio model.",
+            "thumbnailUrl": "https://img.youtube.com/vi/0BSiVEqJZEE/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=0BSiVEqJZEE",
+            "embedUrl": "https://www.youtube.com/embed/0BSiVEqJZEE",
+            "uploadDate": "2023-07-10",
+            "duration": "PT14M30S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
       {/* Hero with Aspirational Image */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
         {/* Background Image - Executive professional */}
@@ -368,6 +417,21 @@ export default async function FractionalCeoJobsUkPage() {
               </p>
             </div>
 
+            {/* Video 1: What is a Fractional CEO */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Fractional CEO?</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/7nANHHQBHvI"
+                  title="What is a Fractional CEO?"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Learn how fractional CEOs provide executive leadership to UK businesses</p>
+            </div>
+
             <div className="bg-purple-50 p-6 border border-purple-200 rounded-lg my-8 not-prose">
               <p className="text-purple-800 font-medium mb-3">Exploring interim CEO opportunities?</p>
               <Link href="/interim-ceo-jobs-uk" className="inline-flex items-center text-purple-700 font-bold hover:text-purple-900">
@@ -409,6 +473,22 @@ export default async function FractionalCeoJobsUkPage() {
                 </div>
               ))}
             </div>
+
+            {/* Video 2: Scaling a Business */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">How to Scale a Business: CEO Strategies</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/0BSiVEqJZEE"
+                  title="How to Scale a Business: CEO Strategies"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">How fractional CEOs drive growth and prepare companies for exit</p>
+            </div>
+
             <p>
               Many successful fractional CEOs specialise in a particular type of engagement or industry vertical, building deep expertise and networks that make them invaluable to specific types of companies. A CEO who has successfully exited three SaaS businesses commands premium rates in that sector. A turnaround specialist with a track record of saving manufacturing companies becomes the go-to person for those situations. Specialisation not only increases your value but also makes marketing your services much more straightforward—you become known for solving specific problems exceptionally well.
             </p>

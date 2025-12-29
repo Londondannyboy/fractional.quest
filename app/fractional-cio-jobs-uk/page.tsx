@@ -152,6 +152,55 @@ export default async function FractionalCioJobsUkPage() {
       />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-cio-jobs-uk" />
       <FAQPageSchema faqs={CIO_FAQS} />
+      {/* Video Schema for rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "What Does a CIO Do? Chief Information Officer Role Explained",
+            "description": "Learn what a Chief Information Officer (CIO) does and how fractional CIOs help UK businesses drive digital transformation. This video explains the CIO role, IT strategy, vendor management, and technology governance. Essential viewing for anyone exploring fractional CIO jobs UK.",
+            "thumbnailUrl": "https://img.youtube.com/vi/QwqnBYR7Cqk/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=QwqnBYR7Cqk",
+            "embedUrl": "https://www.youtube.com/embed/QwqnBYR7Cqk",
+            "uploadDate": "2023-01-20",
+            "duration": "PT8M15S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "Digital Transformation Strategy Guide",
+            "description": "A comprehensive guide to digital transformation for mid-market businesses. Learn how fractional CIOs lead cloud migration, ERP implementation, and IT modernisation projects. Essential for understanding fractional CIO jobs UK responsibilities and digital leadership.",
+            "thumbnailUrl": "https://img.youtube.com/vi/mESrgDN1H6M/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=mESrgDN1H6M",
+            "embedUrl": "https://www.youtube.com/embed/mESrgDN1H6M",
+            "uploadDate": "2023-06-10",
+            "duration": "PT13M50S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
         <div
@@ -323,6 +372,21 @@ export default async function FractionalCioJobsUkPage() {
               <p className="text-xl font-semibold text-gray-900 mb-0">"Fractional CIOs deliver enterprise-grade IT strategy to SMEs, turning technology from a cost centre into a competitive advantage."</p>
             </div>
 
+            {/* Video 1: What is a CIO */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">What Does a Chief Information Officer Do?</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/QwqnBYR7Cqk"
+                  title="What Does a CIO Do? Chief Information Officer Role Explained"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Learn how fractional CIOs drive digital transformation in UK businesses</p>
+            </div>
+
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Types of Fractional CIO Jobs</h3>
             <div className="grid md:grid-cols-2 gap-6 not-prose my-8">
               {[
@@ -337,6 +401,21 @@ export default async function FractionalCioJobsUkPage() {
                   <span className="text-blue-600 font-semibold text-sm">{type.rate}</span>
                 </div>
               ))}
+            </div>
+
+            {/* Video 2: Digital Transformation */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">Digital Transformation Strategy</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/mESrgDN1H6M"
+                  title="Digital Transformation Strategy Guide"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">How fractional CIOs lead cloud migration and IT modernisation</p>
             </div>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Key Responsibilities of a Fractional CIO</h3>

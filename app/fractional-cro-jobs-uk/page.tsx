@@ -137,6 +137,55 @@ export default async function FractionalCroJobsUkPage() {
       />
       <FAQPageSchema faqs={CRO_FAQS} />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-cro-jobs-uk" />
+      {/* Video Schema for rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "What is a Chief Revenue Officer (CRO)?",
+            "description": "Learn what a Chief Revenue Officer (CRO) does and how fractional CROs help UK businesses drive revenue growth. This video explains the CRO role, typical responsibilities including sales strategy, marketing alignment, and customer success oversight. Essential viewing for anyone exploring fractional CRO jobs UK or considering hiring part-time revenue leadership.",
+            "thumbnailUrl": "https://img.youtube.com/vi/qE6xsCoWNuE/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=qE6xsCoWNuE",
+            "embedUrl": "https://www.youtube.com/embed/qE6xsCoWNuE",
+            "uploadDate": "2023-03-15",
+            "duration": "PT8M30S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "How to Build Revenue Operations (RevOps)",
+            "description": "A comprehensive guide to building Revenue Operations for growth-stage companies. Learn how fractional CROs implement RevOps systems, align sales and marketing teams, and create predictable revenue growth in UK businesses. Perfect for understanding fractional CRO jobs UK responsibilities and the modern revenue leadership function.",
+            "thumbnailUrl": "https://img.youtube.com/vi/CsYE_HYbFFI/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=CsYE_HYbFFI",
+            "embedUrl": "https://www.youtube.com/embed/CsYE_HYbFFI",
+            "uploadDate": "2023-06-20",
+            "duration": "PT12M15S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
         <div
@@ -307,6 +356,21 @@ export default async function FractionalCroJobsUkPage() {
               <p className="text-xl font-semibold text-gray-900 mb-0">"A Fractional CRO doesn't just manage sales; they architect the revenue machine that makes growth predictable, scalable, and sustainable."</p>
             </div>
 
+            {/* Video 1: What is a CRO */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Chief Revenue Officer?</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/qE6xsCoWNuE"
+                  title="What is a Chief Revenue Officer (CRO)?"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Learn how fractional CROs drive revenue growth across sales, marketing, and customer success</p>
+            </div>
+
             <p>
               UK scale-ups at Series A-C are the primary drivers of fractional CRO demand. These companies have outgrown founder-led sales but aren't ready for a £250k+ full-time CRO salary. A fractional CRO provides the strategic leadership to professionalise the revenue function, implement RevOps systems, align sales and marketing, and prepare the company for the next funding round—all at a fraction of the cost. The <a href="https://www.britishbusinessbank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 underline">British Business Bank</a> notes that as companies transition from "growth at all costs" to "efficient growth," experienced revenue leadership becomes essential.
             </p>
@@ -348,6 +412,21 @@ export default async function FractionalCroJobsUkPage() {
                   <span className="text-green-600 font-semibold text-sm">{type.rate}</span>
                 </div>
               ))}
+            </div>
+
+            {/* Video 2: RevOps and Revenue Leadership */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">Building Revenue Operations (RevOps)</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/CsYE_HYbFFI"
+                  title="How to Build Revenue Operations (RevOps)"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">How fractional CROs implement RevOps to create predictable revenue growth</p>
             </div>
 
             {/* Second SEO Image */}

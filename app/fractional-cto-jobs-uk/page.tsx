@@ -134,6 +134,51 @@ export default async function FractionalCtoJobsUkPage() {
         itemCount={stats.total}
       />
       <FAQPageSchema faqs={CTO_FAQS} />
+
+      {/* Video Schema for rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "What is a Fractional CTO? Role Explained",
+            "description": "Learn what a fractional CTO does and how part-time Chief Technology Officers help UK businesses scale their tech. Discover fractional CTO jobs, typical responsibilities, day rates, and how tech leaders provide strategic guidance to startups and scale-ups.",
+            "thumbnailUrl": "https://img.youtube.com/vi/b9qH0H6v2Kk/maxresdefault.jpg",
+            "uploadDate": "2024-03-01",
+            "duration": "PT9M15S",
+            "contentUrl": "https://www.youtube.com/watch?v=b9qH0H6v2Kk",
+            "embedUrl": "https://www.youtube.com/embed/b9qH0H6v2Kk",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": { "@type": "ImageObject", "url": "https://fractional.quest/logo.png" }
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "How to Become a Fractional CTO",
+            "description": "Step-by-step guide on how to become a fractional CTO in the UK. Learn about qualifications needed for fractional CTO jobs, setting your day rate, finding clients, and building a successful portfolio career in tech leadership.",
+            "thumbnailUrl": "https://img.youtube.com/vi/kR0WQKnMjKg/maxresdefault.jpg",
+            "uploadDate": "2024-04-15",
+            "duration": "PT11M30S",
+            "contentUrl": "https://www.youtube.com/watch?v=kR0WQKnMjKg",
+            "embedUrl": "https://www.youtube.com/embed/kR0WQKnMjKg",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": { "@type": "ImageObject", "url": "https://fractional.quest/logo.png" }
+            }
+          })
+        }}
+      />
+
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-cto-jobs-uk" />
 
       {/* Hero with Aspirational Image */}
@@ -437,6 +482,21 @@ export default async function FractionalCtoJobsUkPage() {
               <p className="text-xl font-semibold text-gray-900 mb-0">"Non-technical founders access CTO expertise without diluting equity or committing to £200k+ salaries."</p>
             </div>
 
+            {/* Video 1: What is a Fractional CTO */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Fractional CTO?</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/b9qH0H6v2Kk"
+                  title="What is a Fractional CTO? Role Explained"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Learn how fractional CTOs provide strategic tech leadership to UK businesses</p>
+            </div>
+
             <h3 className="text-2xl font-black text-gray-900 mt-16 mb-6">Why Fractional CTO Jobs Are Booming</h3>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
@@ -481,6 +541,21 @@ export default async function FractionalCtoJobsUkPage() {
                   <span className="text-blue-600 font-bold">{type.rate}</span>
                 </div>
               ))}
+            </div>
+
+            {/* Video 2: How to Become a Fractional CTO */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">How to Become a Fractional CTO</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/kR0WQKnMjKg"
+                  title="How to Become a Fractional CTO"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Step-by-step guide to building a fractional CTO career in the UK</p>
             </div>
 
             <h3 className="text-2xl font-black text-gray-900 mt-16 mb-6">Fractional CTO vs Interim CTO</h3>

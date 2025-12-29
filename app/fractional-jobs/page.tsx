@@ -131,6 +131,55 @@ export default async function FractionalJobsPage() {
         itemCount={stats.total}
       />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-jobs" />
+      {/* Video Schema for rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "What Are Fractional Jobs? Complete Guide to Part-Time Executive Roles",
+            "description": "Learn what fractional jobs are and how part-time executive roles are transforming the future of work. This video covers CFO, CTO, CMO roles, typical day rates, portfolio career benefits, and how to find fractional opportunities worldwide.",
+            "thumbnailUrl": "https://img.youtube.com/vi/YwlRrjNF2vI/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=YwlRrjNF2vI",
+            "embedUrl": "https://www.youtube.com/embed/YwlRrjNF2vI",
+            "uploadDate": "2023-05-01",
+            "duration": "PT10M30S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "The Future of Executive Work: Fractional Leadership Explained",
+            "description": "Discover why fractional jobs are the future of executive employment. Learn how businesses benefit from part-time C-suite leadership and how experienced executives build portfolio careers with multiple clients.",
+            "thumbnailUrl": "https://img.youtube.com/vi/3k_mJFQP8vQ/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=3k_mJFQP8vQ",
+            "embedUrl": "https://www.youtube.com/embed/3k_mJFQP8vQ",
+            "uploadDate": "2023-07-15",
+            "duration": "PT13M45S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
 
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 md:py-24">

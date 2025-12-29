@@ -145,6 +145,51 @@ export default async function FractionalCHROJobsUKPage() {
         itemCount={stats.total}
       />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-chro-jobs-uk" />
+
+      {/* Video Schema for rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "What is a Fractional CHRO? Role Explained",
+            "description": "Learn what a fractional CHRO does and how part-time Chief Human Resources Officers help UK businesses build people infrastructure. Discover fractional CHRO jobs, typical responsibilities, day rates, and how HR leaders provide strategic guidance to startups and scale-ups.",
+            "thumbnailUrl": "https://img.youtube.com/vi/YqWbqLVVsKE/maxresdefault.jpg",
+            "uploadDate": "2024-04-01",
+            "duration": "PT9M30S",
+            "contentUrl": "https://www.youtube.com/watch?v=YqWbqLVVsKE",
+            "embedUrl": "https://www.youtube.com/embed/YqWbqLVVsKE",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": { "@type": "ImageObject", "url": "https://fractional.quest/logo.png" }
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "How to Become a Fractional CHRO",
+            "description": "Step-by-step guide on how to become a fractional CHRO in the UK. Learn about CIPD qualifications needed, finding fractional CHRO jobs, setting your day rate, and building a successful portfolio career in HR leadership.",
+            "thumbnailUrl": "https://img.youtube.com/vi/HzTZLrxRuqk/maxresdefault.jpg",
+            "uploadDate": "2024-05-15",
+            "duration": "PT12M45S",
+            "contentUrl": "https://www.youtube.com/watch?v=HzTZLrxRuqk",
+            "embedUrl": "https://www.youtube.com/embed/HzTZLrxRuqk",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": { "@type": "ImageObject", "url": "https://fractional.quest/logo.png" }
+            }
+          })
+        }}
+      />
+
       {/* Hero with Aspirational Image */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
         {/* Background Image - HR professional */}
@@ -373,6 +418,21 @@ export default async function FractionalCHROJobsUKPage() {
               </p>
             </div>
 
+            {/* Video 1: What is a Fractional CHRO */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Fractional CHRO?</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/YqWbqLVVsKE"
+                  title="What is a Fractional CHRO? Role Explained"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Learn how fractional CHROs provide strategic HR leadership to UK businesses</p>
+            </div>
+
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Why Fractional CHRO Jobs Are Booming</h3>
             <p>
               The explosion in fractional CHRO demand reflects several converging trends in the UK employment landscape. The shift to hybrid and remote work, accelerated by the pandemic, has fundamentally changed how organisations think about workplace culture and employee engagement. Companies need strategic HR leadership to navigate these challenges, but many cannot justify the investment in a full-time C-suite role.
@@ -508,6 +568,21 @@ export default async function FractionalCHROJobsUKPage() {
             <p>
               <strong>DEI CHROs</strong> focus specifically on diversity, equity, and inclusion transformation. With investors and regulators demanding greater transparency on diversity metrics, companies need expertise in DEI strategy, measurement, and authentic culture change. These fractional leaders help organisations move beyond performative DEI initiatives to create genuinely inclusive cultures with measurable improvements in representation, pay equity, employee engagement, and retention across diverse groups. They're skilled at building DEI frameworks, training senior leaders, and holding organisations accountable to commitments.
             </p>
+
+            {/* Video 2: How to Become a Fractional CHRO */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">How to Become a Fractional CHRO</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/HzTZLrxRuqk"
+                  title="How to Become a Fractional CHRO"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Step-by-step guide to building a fractional CHRO career in the UK</p>
+            </div>
 
             {/* Second SEO Image */}
             <figure className="my-10 -mx-6 lg:-mx-16">

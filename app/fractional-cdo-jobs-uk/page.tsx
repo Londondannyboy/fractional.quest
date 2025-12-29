@@ -137,6 +137,55 @@ export default async function FractionalCdoJobsUkPage() {
       />
       <FAQPageSchema faqs={CDO_FAQS} />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-cdo-jobs-uk" />
+      {/* Video Schema for rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "What is a Chief Data Officer (CDO)?",
+            "description": "Learn what a Chief Data Officer does and how fractional CDOs help UK businesses unlock data value. This video explains the CDO role, data governance, modern data platforms, and AI readiness. Essential viewing for anyone exploring fractional CDO jobs UK or data leadership opportunities.",
+            "thumbnailUrl": "https://img.youtube.com/vi/ZTqk5FGM3Xk/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=ZTqk5FGM3Xk",
+            "embedUrl": "https://www.youtube.com/embed/ZTqk5FGM3Xk",
+            "uploadDate": "2023-03-20",
+            "duration": "PT11M30S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "Building a Modern Data Stack",
+            "description": "A comprehensive guide to building a modern data stack with Snowflake, Databricks, and cloud platforms. Learn how fractional CDOs implement data infrastructure, enable analytics, and prepare UK businesses for AI adoption. Essential for understanding fractional CDO jobs UK responsibilities.",
+            "thumbnailUrl": "https://img.youtube.com/vi/OU5rMdyQ4dA/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=OU5rMdyQ4dA",
+            "embedUrl": "https://www.youtube.com/embed/OU5rMdyQ4dA",
+            "uploadDate": "2023-08-15",
+            "duration": "PT15M20S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
         <div
@@ -307,6 +356,21 @@ export default async function FractionalCdoJobsUkPage() {
               <p className="text-xl font-semibold text-gray-900 mb-0">"The Fractional CDO is the architect of the AI-ready enterprise, ensuring data is clean, compliant, and accessible across the organisation."</p>
             </div>
 
+            {/* Video 1: What is a CDO */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Chief Data Officer?</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/ZTqk5FGM3Xk"
+                  title="What is a Chief Data Officer (CDO)?"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Learn how fractional CDOs drive data strategy and AI readiness</p>
+            </div>
+
             <p>
               UK companies at Series A-C are primary drivers of demand. These organisations have accumulated significant data but lack the leadership to leverage it strategically. A fractional CDO provides the expertise to implement modern data platforms, establish single sources of truth, ensure <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800 underline">GDPR compliance</a>, and prepare for AI/ML initiatives—all at a fraction of the cost.
             </p>
@@ -342,6 +406,21 @@ export default async function FractionalCdoJobsUkPage() {
                   <span className="text-teal-600 font-semibold text-sm">{type.rate}</span>
                 </div>
               ))}
+            </div>
+
+            {/* Video 2: Modern Data Stack */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">Building a Modern Data Stack</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/OU5rMdyQ4dA"
+                  title="Building a Modern Data Stack"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">How fractional CDOs implement Snowflake, Databricks, and modern analytics</p>
             </div>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Fractional CDO Jobs by Location</h3>

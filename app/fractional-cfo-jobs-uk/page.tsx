@@ -120,6 +120,56 @@ export default async function FractionalCfoJobsUkPage() {
       {/* FAQ Schema for rich snippets */}
       <FAQPageSchema faqs={CFO_FAQS} />
 
+      {/* Video Schema for rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "What is a Fractional CFO? Role Explained",
+            "description": "Learn what a fractional CFO does and how fractional finance directors help UK businesses. Discover fractional CFO jobs, typical responsibilities, day rates, and how part-time CFOs provide strategic financial leadership to startups, scale-ups, and SMEs.",
+            "thumbnailUrl": "https://img.youtube.com/vi/4TJhPLGFz4E/maxresdefault.jpg",
+            "uploadDate": "2024-03-15",
+            "duration": "PT8M30S",
+            "contentUrl": "https://www.youtube.com/watch?v=4TJhPLGFz4E",
+            "embedUrl": "https://www.youtube.com/embed/4TJhPLGFz4E",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "How to Become a Fractional CFO",
+            "description": "Step-by-step guide on how to become a fractional CFO or fractional finance director in the UK. Learn about qualifications needed, how to find fractional CFO jobs, setting your day rate, and building a successful portfolio career in finance leadership.",
+            "thumbnailUrl": "https://img.youtube.com/vi/cR2sZ0u7JKg/maxresdefault.jpg",
+            "uploadDate": "2024-02-20",
+            "duration": "PT12M15S",
+            "contentUrl": "https://www.youtube.com/watch?v=cR2sZ0u7JKg",
+            "embedUrl": "https://www.youtube.com/embed/cR2sZ0u7JKg",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
+
       {/* JobPosting Schema for SEO */}
       <JobListingSchema
         jobs={jobs}
@@ -268,6 +318,21 @@ export default async function FractionalCfoJobsUkPage() {
             <p>The UK market for <strong>fractional CFO jobs</strong> has grown by over 180% in the past three years, with demand for <strong>fractional finance director</strong> roles growing even faster (+260% YoY). According to <a href="https://www.cipd.org/uk/knowledge/reports/flexible-working-trends/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD research on flexible working trends</a>, senior executive roles are increasingly embracing part-time and portfolio models.</p>
             <p>This surge reflects a fundamental shift in how companies access senior finance talent. <a href="https://www.gov.uk/business-finance-support" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Startups, scale-ups, and SMEs</a> need experienced financial leadership but cannot justify a full-time CFO salary of £150,000-£300,000. The <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS employment data</a> shows self-employment in professional services has grown steadily, with finance executives leading the shift to flexible working.</p>
 
+            {/* Video 1: What is a Fractional CFO */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Fractional CFO?</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/4TJhPLGFz4E"
+                  title="What is a Fractional CFO? Role Explained"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Learn how fractional CFOs provide strategic finance leadership to UK businesses</p>
+            </div>
+
             <h3 className="font-editorial text-2xl font-bold text-gray-900 mt-12 mb-4">Fractional CFO vs Finance Director: UK Terminology</h3>
             <p>In the UK, the terms <strong>CFO</strong> and <strong>Finance Director (FD)</strong> are often used interchangeably, though there are subtle differences. Traditionally, UK companies used "Finance Director" while "CFO" was more common in US-influenced or larger organisations. Today, both terms appear in <strong>fractional CFO jobs</strong> and <strong>fractional finance director jobs</strong>.</p>
             <p>When searching for opportunities, consider all variations: <strong>fractional CFO</strong>, <strong>fractional FD</strong>, <strong>fractional finance director</strong>, <strong>part-time CFO</strong>, and <strong>interim CFO</strong>. Many companies use these terms interchangeably when advertising roles, so casting a wide net increases your chances of finding the right position.</p>
@@ -334,6 +399,21 @@ export default async function FractionalCfoJobsUkPage() {
             <p>
               The growing demand for <strong>fractional finance director jobs</strong> means the transition is becoming more straightforward, with many finance leaders successfully building portfolio careers within 6-12 months of starting.
             </p>
+
+            {/* Video 2: How to Become a Fractional CFO */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">How to Become a Fractional CFO</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/cR2sZ0u7JKg"
+                  title="How to Become a Fractional CFO"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Step-by-step guide to building a fractional CFO career in the UK</p>
+            </div>
 
             <h3 className="font-editorial text-2xl font-bold text-gray-900 mt-12 mb-4">Fractional CFO Jobs by Location</h3>
             <p>

@@ -129,6 +129,51 @@ export default async function FractionalCooJobsUkPage() {
         itemCount={stats.total}
       />
       <FAQPageSchema faqs={COO_FAQS} />
+
+      {/* Video Schema for rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "What is a Fractional COO? Role Explained",
+            "description": "Learn what a fractional COO does and how part-time Chief Operating Officers help UK businesses scale operations. Discover fractional COO jobs, typical responsibilities, day rates, and how operations leaders provide strategic guidance to startups and scale-ups.",
+            "thumbnailUrl": "https://img.youtube.com/vi/cNLqJdkqDHk/maxresdefault.jpg",
+            "uploadDate": "2024-04-10",
+            "duration": "PT7M45S",
+            "contentUrl": "https://www.youtube.com/watch?v=cNLqJdkqDHk",
+            "embedUrl": "https://www.youtube.com/embed/cNLqJdkqDHk",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": { "@type": "ImageObject", "url": "https://fractional.quest/logo.png" }
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "COO vs CEO: Understanding the Difference",
+            "description": "Understand the difference between a COO and CEO, and how fractional COO jobs UK allow experienced operations leaders to work with multiple companies. Learn about Chief Operating Officer responsibilities and career paths.",
+            "thumbnailUrl": "https://img.youtube.com/vi/dP1VypL5lzA/maxresdefault.jpg",
+            "uploadDate": "2024-05-20",
+            "duration": "PT10M30S",
+            "contentUrl": "https://www.youtube.com/watch?v=dP1VypL5lzA",
+            "embedUrl": "https://www.youtube.com/embed/dP1VypL5lzA",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": { "@type": "ImageObject", "url": "https://fractional.quest/logo.png" }
+            }
+          })
+        }}
+      />
+
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-coo-jobs-uk" />
       {/* Hero - Clean white design with video thumbnail */}
       <section className="relative bg-white overflow-hidden">
@@ -347,6 +392,21 @@ export default async function FractionalCooJobsUkPage() {
               <p className="text-xl font-semibold text-gray-900 mb-0">"Founders access operational expertise for £2,000-£4,000/week vs £150,000+ annually for full-time."</p>
             </div>
 
+            {/* Video 1: What is a Fractional COO */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Fractional COO?</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/cNLqJdkqDHk"
+                  title="What is a Fractional COO? Role Explained"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Learn how fractional COOs provide strategic operations leadership to UK businesses</p>
+            </div>
+
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Why Fractional COO Jobs Are Booming</h3>
             <p>
               The growth in fractional COO jobs reflects broader economic and business trends. According to the <a href="https://www.britishbusinessbank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 underline">British Business Bank</a>, UK SMEs are increasingly seeking flexible access to senior operational talent as they navigate uncertain economic conditions. The flexibility to scale operational leadership up or down based on business needs provides a significant competitive advantage.
@@ -380,6 +440,21 @@ export default async function FractionalCooJobsUkPage() {
             <p>
               The choice of specialisation often depends on your operational background. Former consultants from firms like McKinsey, Bain, and BCG tend to excel in turnaround and PE portfolio roles, bringing structured problem-solving approaches. Operations leaders from high-growth tech companies often gravitate toward scale-up roles, where their experience building systems from scratch proves invaluable. Manufacturing and supply chain specialists command premium rates in sectors like e-commerce, logistics, and direct-to-consumer brands.
             </p>
+
+            {/* Video 2: COO vs CEO */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">COO vs CEO: Understanding the Difference</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/dP1VypL5lzA"
+                  title="COO vs CEO: Understanding the Difference"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Understand the key differences between COO and CEO roles</p>
+            </div>
 
             {/* Second image for SEO */}
             <figure className="my-10 -mx-6 lg:-mx-16">

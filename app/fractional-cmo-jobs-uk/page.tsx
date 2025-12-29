@@ -115,6 +115,51 @@ export default async function FractionalCmoJobsUkPage() {
         itemCount={stats.total}
       />
       <FAQPageSchema faqs={CMO_FAQS} />
+
+      {/* Video Schema for rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "What is a Fractional CMO? Role Explained",
+            "description": "Learn what a fractional CMO does and how part-time Chief Marketing Officers help UK businesses grow. Discover fractional CMO jobs, typical responsibilities, day rates, and how marketing leaders provide strategic guidance to startups and scale-ups.",
+            "thumbnailUrl": "https://img.youtube.com/vi/L8vLq6nqQdM/maxresdefault.jpg",
+            "uploadDate": "2024-02-01",
+            "duration": "PT8M45S",
+            "contentUrl": "https://www.youtube.com/watch?v=L8vLq6nqQdM",
+            "embedUrl": "https://www.youtube.com/embed/L8vLq6nqQdM",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": { "@type": "ImageObject", "url": "https://fractional.quest/logo.png" }
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "Fractional CMO vs Marketing Consultant",
+            "description": "Understand the difference between a fractional CMO and a marketing consultant. Learn when to hire each for your UK business and how fractional CMO jobs provide embedded leadership versus project-based advice.",
+            "thumbnailUrl": "https://img.youtube.com/vi/R8xXiQA7F5o/maxresdefault.jpg",
+            "uploadDate": "2024-03-20",
+            "duration": "PT10M15S",
+            "contentUrl": "https://www.youtube.com/watch?v=R8xXiQA7F5o",
+            "embedUrl": "https://www.youtube.com/embed/R8xXiQA7F5o",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": { "@type": "ImageObject", "url": "https://fractional.quest/logo.png" }
+            }
+          })
+        }}
+      />
+
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-cmo-jobs-uk" />
       {/* Hero with Aspirational Image */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
@@ -291,6 +336,21 @@ export default async function FractionalCmoJobsUkPage() {
               </p>
             </div>
 
+            {/* Video 1: What is a Fractional CMO */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Fractional CMO?</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/L8vLq6nqQdM"
+                  title="What is a Fractional CMO? Role Explained"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Learn how fractional CMOs provide strategic marketing leadership to UK businesses</p>
+            </div>
+
             <div className="bg-amber-50 p-6 border border-amber-200 rounded-lg my-8 not-prose">
               <p className="text-amber-800 font-medium mb-3">Looking for part-time CMO opportunities instead?</p>
               <Link href="/part-time-cmo-jobs-uk" className="inline-flex items-center text-amber-700 font-bold hover:text-amber-900">
@@ -334,6 +394,21 @@ export default async function FractionalCmoJobsUkPage() {
             <p>
               The choice of specialisation often depends on your career background and the types of companies you want to work with. Many fractional CMOs find success by focusing on a specific vertical or business model where they can leverage their deepest expertise. Others prefer a generalist approach, taking on diverse challenges across different industries to build a broader portfolio of experience.
             </p>
+
+            {/* Video 2: Fractional CMO vs Marketing Consultant */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">Fractional CMO vs Marketing Consultant</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/R8xXiQA7F5o"
+                  title="Fractional CMO vs Marketing Consultant"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Understand the key differences between fractional CMO and marketing consultant roles</p>
+            </div>
 
             {/* Second SEO Image */}
             <figure className="my-10 -mx-6 lg:-mx-16">

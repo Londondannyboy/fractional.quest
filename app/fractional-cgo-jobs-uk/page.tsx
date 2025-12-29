@@ -137,6 +137,55 @@ export default async function FractionalCgoJobsUkPage() {
       />
       <FAQPageSchema faqs={CGO_FAQS} />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-cgo-jobs-uk" />
+      {/* Video Schema for rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "What is a Chief Sustainability Officer (CSO)?",
+            "description": "Learn what a Chief Sustainability Officer or CGO does and how fractional sustainability leaders help UK businesses achieve net-zero targets. This video explains the ESG leadership role, sustainability frameworks, and regulatory compliance. Essential for anyone exploring fractional CGO jobs UK.",
+            "thumbnailUrl": "https://img.youtube.com/vi/nBV7pG3P8fc/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=nBV7pG3P8fc",
+            "embedUrl": "https://www.youtube.com/embed/nBV7pG3P8fc",
+            "uploadDate": "2023-05-10",
+            "duration": "PT9M45S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "Net Zero Strategy for Businesses",
+            "description": "A comprehensive guide to developing net-zero strategies for UK businesses. Learn how fractional CGOs create carbon reduction roadmaps, implement TCFD disclosures, and drive sustainable transformation. Essential for understanding fractional CGO jobs UK responsibilities.",
+            "thumbnailUrl": "https://img.youtube.com/vi/eIbGhjE8h9s/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=eIbGhjE8h9s",
+            "embedUrl": "https://www.youtube.com/embed/eIbGhjE8h9s",
+            "uploadDate": "2023-09-05",
+            "duration": "PT13M10S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
         <div
@@ -307,6 +356,21 @@ export default async function FractionalCgoJobsUkPage() {
               <p className="text-xl font-semibold text-gray-900 mb-0">"Fractional CGOs transform sustainability from a compliance burden into a competitive advantage—driving operational efficiency and long-term value creation."</p>
             </div>
 
+            {/* Video 1: What is a CSO/CGO */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Chief Sustainability Officer?</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/nBV7pG3P8fc"
+                  title="What is a Chief Sustainability Officer (CSO)?"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Learn how fractional CGOs drive ESG strategy and net-zero initiatives</p>
+            </div>
+
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Why Fractional CGO Jobs Are Growing</h3>
             <ul className="space-y-3">
               <li><strong>Regulatory pressure:</strong> SDR, TCFD, CSRD requirements demand senior ESG expertise</li>
@@ -338,6 +402,21 @@ export default async function FractionalCgoJobsUkPage() {
                   <span className="text-emerald-600 font-semibold text-sm">{type.rate}</span>
                 </div>
               ))}
+            </div>
+
+            {/* Video 2: Net Zero Strategy */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">Developing a Net Zero Strategy</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/eIbGhjE8h9s"
+                  title="Net Zero Strategy for Businesses"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">How fractional CGOs create carbon reduction roadmaps for UK businesses</p>
             </div>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Requirements for Fractional CGO Jobs</h3>

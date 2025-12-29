@@ -263,6 +263,55 @@ export default async function FractionalJobsLondonPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostingsSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {/* Video Schema for rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "Fractional Executive Jobs in London - Market Overview",
+            "description": "Discover fractional jobs London opportunities in 2025. Learn about day rates for CFO, CTO, CMO roles in the City, Canary Wharf, and Tech City. Essential viewing for executives exploring fractional work in London's thriving business ecosystem.",
+            "thumbnailUrl": "https://img.youtube.com/vi/cB2PYg1f0zE/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=cB2PYg1f0zE",
+            "embedUrl": "https://www.youtube.com/embed/cB2PYg1f0zE",
+            "uploadDate": "2023-06-15",
+            "duration": "PT12M30S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "How to Build a Portfolio Career in London",
+            "description": "A comprehensive guide to building a fractional executive portfolio career in London. Learn how to land multiple clients, set competitive rates, and build a thriving practice in the UK's largest fractional jobs market.",
+            "thumbnailUrl": "https://img.youtube.com/vi/9Yrt-m7dloE/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=9Yrt-m7dloE",
+            "embedUrl": "https://www.youtube.com/embed/9Yrt-m7dloE",
+            "uploadDate": "2023-09-20",
+            "duration": "PT15M45S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
 
       {/* Hero Section with H1 - Video Background */}
       <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-12 md:py-16 overflow-hidden">
@@ -560,6 +609,21 @@ export default async function FractionalJobsLondonPage() {
             <p className="mb-4">
               London dominates the UK's fractional executive market, accounting for approximately 60% of all available positions. This concentration is driven by the capital's unique position as a global financial centre, home to Europe's largest technology cluster, and headquarters for thousands of scale-up businesses seeking flexible leadership.
             </p>
+
+            {/* Video 1: London Market Overview */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">Fractional Jobs in London: Market Overview</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/cB2PYg1f0zE"
+                  title="Fractional Executive Jobs in London - Market Overview"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Learn about London's thriving fractional executive market and premium day rates</p>
+            </div>
             <p className="mb-4">
               The City of London and Canary Wharf provide consistent demand for fractional CFOs, particularly among fintech companies and PE-backed portfolio businesses requiring financial restructuring or IPO preparation. Meanwhile, Tech City's corridor from Shoreditch to King's Cross generates strong demand for fractional CTOs and CPOs from Series A to Series C startups navigating rapid growth phases.
             </p>
@@ -601,6 +665,22 @@ export default async function FractionalJobsLondonPage() {
             </p>
 
             <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Building a Fractional Career in London: Strategic Considerations</h3>
+
+            {/* Video 2: Building a Portfolio Career */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">How to Build a Portfolio Career in London</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/9Yrt-m7dloE"
+                  title="How to Build a Portfolio Career in London"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Strategic guidance for building a fractional executive practice in London</p>
+            </div>
+
             <p className="mb-4">
               For executives considering the transition to fractional work in London, several strategic factors merit consideration. First, positioning matters enormously. The London market is increasingly competitive, with established fractional executives building strong reputations and referral networks. New entrants benefit from identifying a specific niche—whether by sector (fintech, healthtech, e-commerce), stage (pre-seed, Series A, growth), or expertise area (M&A, digital transformation, turnaround).
             </p>

@@ -341,6 +341,55 @@ export default async function FractionalJobsUKPage() {
           })),
         }) }}
       />
+      {/* Video Schema for rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "What is a Fractional Executive? The Complete Guide",
+            "description": "Learn what a fractional executive does and how fractional jobs UK are transforming the way businesses access senior leadership. This video covers CFO, CTO, CMO roles, typical day rates, and how to build a portfolio career in the UK fractional market.",
+            "thumbnailUrl": "https://img.youtube.com/vi/QI1tHp_D-AI/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=QI1tHp_D-AI",
+            "embedUrl": "https://www.youtube.com/embed/QI1tHp_D-AI",
+            "uploadDate": "2023-04-10",
+            "duration": "PT11M20S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "How to Become a Fractional Executive",
+            "description": "A step-by-step guide to transitioning from full-time employment to a fractional executive career. Learn how to position yourself for fractional jobs UK, set your rates, acquire clients, and build a sustainable portfolio practice.",
+            "thumbnailUrl": "https://img.youtube.com/vi/r5WlSD_h-c4/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=r5WlSD_h-c4",
+            "embedUrl": "https://www.youtube.com/embed/r5WlSD_h-c4",
+            "uploadDate": "2023-08-05",
+            "duration": "PT14M15S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
 
       {/* Hero Section with Colorful Aspirational Image */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
@@ -675,6 +724,22 @@ export default async function FractionalJobsUKPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
             About Fractional Jobs UK
           </h2>
+
+          {/* Video 1: What is a Fractional Executive */}
+          <div className="my-10 not-prose">
+            <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Fractional Executive?</h4>
+            <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+              <iframe
+                src="https://www.youtube.com/embed/QI1tHp_D-AI"
+                title="What is a Fractional Executive? The Complete Guide"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+            <p className="text-gray-500 text-sm mt-3">Learn what fractional executives do and how the UK market works</p>
+          </div>
+
           <div className="space-y-4 text-gray-600 leading-relaxed">
             <p>
               Browse {stats.totalUK}+ fractional executive jobs across the United Kingdom. Find part-time CFO, CTO, CMO, and COO roles with
@@ -1182,6 +1247,22 @@ export default async function FractionalJobsUKPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 !text-gray-900 mb-6">
             How to Get Started with Fractional Jobs UK
           </h2>
+
+          {/* Video 2: How to Become a Fractional Executive */}
+          <div className="my-10 not-prose">
+            <h4 className="text-lg font-bold text-gray-900 mb-4">How to Become a Fractional Executive</h4>
+            <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+              <iframe
+                src="https://www.youtube.com/embed/r5WlSD_h-c4"
+                title="How to Become a Fractional Executive"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+            <p className="text-gray-500 text-sm mt-3">Step-by-step guide to launching your fractional executive career</p>
+          </div>
+
           <div className="space-y-6 text-gray-600">
             <p className="leading-relaxed">
               Breaking into the fractional jobs UK market requires strategic positioning and demonstrable expertise. Most successful

@@ -137,6 +137,55 @@ export default async function FractionalCpoJobsUkPage() {
       />
       <FAQPageSchema faqs={CPO_FAQS} />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-cpo-jobs-uk" />
+      {/* Video Schema for rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "What Does a Chief Product Officer Do?",
+            "description": "Learn what a Chief Product Officer (CPO) does and how fractional CPOs help UK startups and scale-ups build winning products. This video explains the CPO role, product strategy, roadmap prioritisation, and team leadership. Essential viewing for anyone exploring fractional CPO jobs UK or considering part-time product leadership.",
+            "thumbnailUrl": "https://img.youtube.com/vi/2vfkjAzYCM4/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=2vfkjAzYCM4",
+            "embedUrl": "https://www.youtube.com/embed/2vfkjAzYCM4",
+            "uploadDate": "2023-02-10",
+            "duration": "PT10M45S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "How to Build a Product-Led Growth Strategy",
+            "description": "A comprehensive guide to building product-led growth (PLG) strategies. Learn how fractional CPOs implement PLG in B2B SaaS companies, drive product adoption, and create self-serve customer journeys. Essential for understanding fractional CPO jobs UK responsibilities in modern product organisations.",
+            "thumbnailUrl": "https://img.youtube.com/vi/tKf9gI_M-dg/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=tKf9gI_M-dg",
+            "embedUrl": "https://www.youtube.com/embed/tKf9gI_M-dg",
+            "uploadDate": "2023-05-18",
+            "duration": "PT14M20S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
         <div
@@ -307,6 +356,21 @@ export default async function FractionalCpoJobsUkPage() {
               <p className="text-xl font-semibold text-gray-900 mb-0">"Fractional CPOs help founders transition from 'founder-led product' to professional product management, establishing the processes that enable scaling."</p>
             </div>
 
+            {/* Video 1: What is a CPO */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">What Does a Chief Product Officer Do?</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/2vfkjAzYCM4"
+                  title="What Does a Chief Product Officer Do?"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Learn how fractional CPOs shape product strategy and build winning products</p>
+            </div>
+
             <p>
               Startups at Seed to Series B stage are the primary drivers of demand. These companies have validated product-market fit but need strategic product leadership to scale. A fractional CPO provides the expertise to build discovery processes, implement prioritisation frameworks, mentor junior PMs, and align product with business objectives—all at a fraction of the cost. The <a href="https://www.britishbusinessbank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">British Business Bank</a> notes that as companies scrutinise headcount costs, the fractional model offers a high-impact, flexible alternative.
             </p>
@@ -348,6 +412,21 @@ export default async function FractionalCpoJobsUkPage() {
                   <span className="text-purple-600 font-semibold text-sm">{type.rate}</span>
                 </div>
               ))}
+            </div>
+
+            {/* Video 2: Product-Led Growth */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">Building Product-Led Growth (PLG)</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/tKf9gI_M-dg"
+                  title="How to Build a Product-Led Growth Strategy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">How fractional CPOs implement PLG strategies for B2B SaaS companies</p>
             </div>
 
             {/* Second SEO Image */}

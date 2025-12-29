@@ -164,6 +164,55 @@ export default async function FractionalCisoJobsUkPage() {
         itemCount={stats.total}
       />
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-ciso-jobs-uk" />
+      {/* Video Schema for rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "What is a Virtual CISO (vCISO)?",
+            "description": "Learn what a Virtual CISO or Fractional CISO does and how they help UK businesses achieve security compliance. This video explains the fractional CISO role, typical responsibilities including security strategy, compliance management, and incident response. Essential viewing for anyone exploring fractional CISO jobs UK.",
+            "thumbnailUrl": "https://img.youtube.com/vi/Yl8LkRQZeNg/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=Yl8LkRQZeNg",
+            "embedUrl": "https://www.youtube.com/embed/Yl8LkRQZeNg",
+            "uploadDate": "2023-04-12",
+            "duration": "PT9M30S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "SOC 2 Compliance Explained",
+            "description": "A comprehensive guide to SOC 2 compliance for SaaS and cloud companies. Learn how fractional CISOs guide UK businesses through SOC 2 Type 1 and Type 2 audits, security controls, and ongoing compliance management. Essential for understanding fractional CISO jobs UK responsibilities.",
+            "thumbnailUrl": "https://img.youtube.com/vi/hMdcK4nC2wE/maxresdefault.jpg",
+            "contentUrl": "https://www.youtube.com/watch?v=hMdcK4nC2wE",
+            "embedUrl": "https://www.youtube.com/embed/hMdcK4nC2wE",
+            "uploadDate": "2023-07-25",
+            "duration": "PT11M45S",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fractional Quest",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://fractional.quest/logo.png"
+              }
+            }
+          })
+        }}
+      />
 
       {/* Hero with Video Background */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
@@ -415,6 +464,21 @@ export default async function FractionalCisoJobsUkPage() {
               </p>
             </div>
 
+            {/* Video 1: What is a vCISO */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Virtual CISO (vCISO)?</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/Yl8LkRQZeNg"
+                  title="What is a Virtual CISO (vCISO)?"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">Learn how fractional CISOs provide security leadership to UK businesses</p>
+            </div>
+
             <p>
               UK startups, scale-ups, and mid-market companies can now access the same caliber of security leadership that was previously exclusive to FTSE 100 enterprises. A fractional CISO brings strategic security oversight, compliance management, incident response capabilities, and board-level reporting—without the six-figure salary commitment. For companies navigating <a href="https://www.ncsc.gov.uk" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:text-red-700 underline">Cyber Essentials certification</a>, SOC 2 compliance, or ISO 27001 requirements, a fractional CISO provides the executive leadership essential for achieving certification while maintaining lean operational costs.
             </p>
@@ -460,6 +524,22 @@ export default async function FractionalCisoJobsUkPage() {
                 </div>
               ))}
             </div>
+
+            {/* Video 2: SOC 2 Compliance */}
+            <div className="my-10 not-prose">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">Understanding SOC 2 Compliance</h4>
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/hMdcK4nC2wE"
+                  title="SOC 2 Compliance Explained"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              <p className="text-gray-500 text-sm mt-3">How fractional CISOs guide UK companies through SOC 2 certification</p>
+            </div>
+
             <p>
               Many fractional CISOs build specialized practices around specific compliance frameworks or industries, leveraging deep domain expertise to command premium rates. A CISO with extensive SOC 2 certification experience can efficiently guide multiple SaaS companies through the certification process, while a healthcare security specialist brings invaluable knowledge of NHS security requirements and MHRA regulations for medical device manufacturers. The choice of specialization often depends on your background—former banking security leaders naturally gravitate toward FinTech, while those with public sector experience excel in healthcare and government contractor roles.
             </p>
