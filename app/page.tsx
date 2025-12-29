@@ -124,19 +124,11 @@ export default async function Home() {
               </div>
 
               <div className="mt-12 flex items-center gap-4">
-                <div className="flex -space-x-4">
-                  {[
-                    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
-                    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
-                    "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&h=100&fit=crop",
-                    "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop"
-                  ].map((src, i) => (
-                    <img key={i} src={src} alt="Fractional executive" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
-                  ))}
+                <div className="px-4 py-2 bg-blue-50 rounded-full">
+                  <span className="text-sm font-medium text-blue-700">Early Access Beta</span>
                 </div>
-                <div className="text-sm">
-                  <span className="font-bold text-gray-900 block">500+ Executives</span>
-                  <span className="text-gray-500">Joined this month</span>
+                <div className="text-sm text-gray-500">
+                  Join fractional executives discovering new opportunities
                 </div>
               </div>
             </div>

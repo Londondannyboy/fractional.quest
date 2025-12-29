@@ -47,7 +47,7 @@ async function getFeaturedCompanies() {
       FROM jobs
       WHERE is_active = true AND (role_category = 'Operations' OR title ILIKE '%project%manager%' OR title ILIKE '%programme%manager%') AND company_name IS NOT NULL
       ORDER BY posted_date DESC NULLS LAST
-      LIMIT 8
+      LIMIT 50
     `
     return companies.map((c: any) => c.company_name)
   } catch {
@@ -65,7 +65,7 @@ async function getPMJobs() {
       FROM jobs
       WHERE is_active = true AND (role_category = 'Operations' OR title ILIKE '%project%manager%' OR title ILIKE '%programme%manager%')
       ORDER BY posted_date DESC NULLS LAST
-      LIMIT 12
+      LIMIT 50
     `
     return jobs as any[]
   } catch {

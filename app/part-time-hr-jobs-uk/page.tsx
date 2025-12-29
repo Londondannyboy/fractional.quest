@@ -52,7 +52,7 @@ async function getHRJobs() {
       FROM jobs
       WHERE is_active = true AND role_category = 'HR'
       ORDER BY posted_date DESC NULLS LAST
-      LIMIT 12
+      LIMIT 50
     `
     return jobs as any[]
   } catch {

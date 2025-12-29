@@ -177,7 +177,7 @@ async function getUKJobs() {
       ORDER BY
         CASE WHEN location ILIKE '%london%' THEN 0 ELSE 1 END,
         posted_date DESC NULLS LAST
-      LIMIT 15
+      LIMIT 50
     `
     return jobs
   } catch (error) {

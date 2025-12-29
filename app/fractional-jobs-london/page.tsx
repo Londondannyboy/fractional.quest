@@ -178,7 +178,7 @@ async function getLondonJobs() {
         AND company_domain IS NOT NULL
         AND description_snippet IS NOT NULL
       ORDER BY posted_date DESC NULLS LAST
-      LIMIT 15
+      LIMIT 50
     `
     return jobs
   } catch (error) {

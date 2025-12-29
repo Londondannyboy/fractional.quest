@@ -58,7 +58,7 @@ async function getFeaturedCompanies() {
       FROM jobs
       WHERE is_active = true AND role_category = 'Marketing' AND company_name IS NOT NULL
       ORDER BY posted_date DESC NULLS LAST
-      LIMIT 8
+      LIMIT 50
     `
     return companies.map((c: any) => c.company_name)
   } catch {

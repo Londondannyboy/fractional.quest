@@ -73,7 +73,7 @@ async function getLondonCooJobs() {
         AND role_category = 'Operations'
         AND (location ILIKE '%London%' OR city ILIKE '%London%')
       ORDER BY posted_date DESC NULLS LAST
-      LIMIT 12
+      LIMIT 50
     `
     return jobs as any[]
   } catch {

@@ -7,10 +7,26 @@ import { AuthButtons } from './AuthButtons'
 
 // Job markets for dropdown
 const JOB_MARKETS = [
-  { href: '/fractional-jobs', label: 'Global', flag: '🌍' },
+  { href: '/fractional-jobs-london', label: 'London', flag: '🏙️' },
   { href: '/fractional-jobs-uk', label: 'United Kingdom', flag: '🇬🇧' },
-  { href: '/fractional-jobs-us', label: 'United States', flag: '🇺🇸' },
-  { href: '/fractional-jobs-au', label: 'Australia', flag: '🇦🇺' },
+  { href: '/fractional-jobs', label: 'Global', flag: '🌍' },
+]
+
+// Role categories
+const JOB_ROLES = [
+  { href: '/fractional-cfo-jobs-uk', label: 'CFO Jobs', icon: '💰' },
+  { href: '/fractional-cto-jobs-uk', label: 'CTO Jobs', icon: '💻' },
+  { href: '/fractional-cmo-jobs-uk', label: 'CMO Jobs', icon: '📣' },
+  { href: '/fractional-coo-jobs-uk', label: 'COO Jobs', icon: '⚙️' },
+  { href: '/fractional-chro-jobs-uk', label: 'CHRO Jobs', icon: '👥' },
+  { href: '/fractional-cpo-jobs-uk', label: 'CPO Jobs', icon: '📦' },
+]
+
+// Industry verticals
+const JOB_VERTICALS = [
+  { href: '/fractional-jobs-startups', label: 'Startups', icon: '🚀' },
+  { href: '/fractional-jobs-tech', label: 'Tech & SaaS', icon: '⚡' },
+  { href: '/fractional-jobs-finance', label: 'Finance', icon: '🏦' },
 ]
 
 export function Navigation() {
@@ -70,18 +86,66 @@ export function Navigation() {
                 </svg>
               </button>
               {jobsDropdownOpen && (
-                <div className="absolute top-full left-0 mt-2 w-52 bg-white border border-gray-200 rounded-lg shadow-lg py-2 z-50">
+                <div className="absolute top-full left-0 mt-2 w-72 bg-white border border-gray-200 rounded-lg shadow-lg py-3 z-50">
+                  {/* By Location */}
+                  <div className="px-4 py-1">
+                    <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">By Location</span>
+                  </div>
                   {JOB_MARKETS.map((market) => (
                     <Link
                       key={market.href}
                       href={market.href}
-                      className={`flex items-center gap-3 px-4 py-2.5 text-sm hover:bg-gray-50 transition-colors ${
-                        pathname === market.href ? 'bg-purple-50 text-purple-700 font-medium' : 'text-gray-700'
+                      className={`flex items-center gap-3 px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${
+                        pathname === market.href ? 'bg-blue-50 text-blue-700 font-medium' : 'text-gray-700'
                       }`}
                       onClick={() => setJobsDropdownOpen(false)}
                     >
-                      <span className="text-lg">{market.flag}</span>
+                      <span className="text-base">{market.flag}</span>
                       <span>{market.label}</span>
+                    </Link>
+                  ))}
+
+                  {/* Divider */}
+                  <div className="border-t border-gray-100 my-2" />
+
+                  {/* By Role */}
+                  <div className="px-4 py-1">
+                    <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">By Role</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-1 px-2">
+                    {JOB_ROLES.map((role) => (
+                      <Link
+                        key={role.href}
+                        href={role.href}
+                        className={`flex items-center gap-2 px-2 py-2 text-sm rounded hover:bg-gray-50 transition-colors ${
+                          pathname === role.href ? 'bg-blue-50 text-blue-700 font-medium' : 'text-gray-700'
+                        }`}
+                        onClick={() => setJobsDropdownOpen(false)}
+                      >
+                        <span className="text-sm">{role.icon}</span>
+                        <span>{role.label}</span>
+                      </Link>
+                    ))}
+                  </div>
+
+                  {/* Divider */}
+                  <div className="border-t border-gray-100 my-2" />
+
+                  {/* By Industry */}
+                  <div className="px-4 py-1">
+                    <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">By Industry</span>
+                  </div>
+                  {JOB_VERTICALS.map((vertical) => (
+                    <Link
+                      key={vertical.href}
+                      href={vertical.href}
+                      className={`flex items-center gap-3 px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${
+                        pathname === vertical.href ? 'bg-blue-50 text-blue-700 font-medium' : 'text-gray-700'
+                      }`}
+                      onClick={() => setJobsDropdownOpen(false)}
+                    >
+                      <span className="text-base">{vertical.icon}</span>
+                      <span>{vertical.label}</span>
                     </Link>
                   ))}
                 </div>

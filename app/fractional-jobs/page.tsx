@@ -107,7 +107,7 @@ async function getAllJobs() {
       FROM jobs
       WHERE is_active = true
       ORDER BY posted_date DESC NULLS LAST
-      LIMIT 15
+      LIMIT 50
     `
     return jobs as any[]
   } catch {
