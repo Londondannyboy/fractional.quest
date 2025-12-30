@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { useUser } from '@stackframe/stack'
+// Auth removed - will be replaced with NeonAuth
 import { Badge } from './Badge'
 import { CompanyLogo } from './CompanyLogo'
 import { MiniSkillsChart } from './MiniSkillsChart'
@@ -60,43 +60,18 @@ export function JobCardLegacy({
   appealSummary,
   keyDeliverables,
 }: JobCardProps) {
-  const user = useUser()  // Don't redirect, just check if logged in
+  // Auth removed - save functionality disabled until NeonAuth is added
 
   // State for expandable graphs
   const [showGraphs, setShowGraphs] = useState(false)
   const [isSaved, setIsSaved] = useState(false)
   const [isSaving, setIsSaving] = useState(false)
 
+  // Save functionality disabled until NeonAuth is added
   const handleSave = async (e: React.MouseEvent) => {
     e.preventDefault()
     e.stopPropagation()
-
-    if (!jobId) {
-      console.warn('JobCard: jobId is required to save jobs')
-      return
-    }
-
-    if (!user) {
-      window.location.href = '/handler/sign-in?returnUrl=' + encodeURIComponent(window.location.pathname)
-      return
-    }
-
-    setIsSaving(true)
-    try {
-      const response = await fetch('/api/save-job', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ jobId, action: isSaved ? 'remove' : 'add' })
-      })
-
-      if (response.ok) {
-        setIsSaved(!isSaved)
-      }
-    } catch (error) {
-      console.error('Failed to save job:', error)
-    } finally {
-      setIsSaving(false)
-    }
+    console.log('Save job feature requires authentication')
   }
 
   // Enhanced compensation display with estimation

@@ -5,19 +5,27 @@ import { SavingsCalculator } from '@/components/SavingsCalculator'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { ServerJobGrid } from '@/components/ServerJobGrid'
 import { getAgencies, Agency } from '@/lib/agencies'
+import { ExpertProfile, ExpertProfileSchema } from '@/components/ExpertProfile'
+import { CaseStudy, CaseStudySchema } from '@/components/CaseStudy'
 
+// Target keyword: "fractional recruitment agency"
 export const metadata: Metadata = {
-  title: 'Top Fractional Recruitment Agency UK',
-  description: 'Best fractional recruitment agency UK. Compare top recruiters. Save 40-60%.',
-  keywords: 'best fractional recruitment agency, fractional recruiters, top fractional recruitment agencies, fractional recruitment agency uk, fractional executive recruitment, fractional cfo recruitment',
+  title: 'Fractional Recruitment Agency 🏆 Top UK Recruiters',
+  description: '🔥 Best fractional recruitment agency UK - Compare top recruiters with transparent 10-15% fees. Save 40-60% vs full-time hires. Fractional CFO, CTO, CMO recruitment.',
+  keywords: 'fractional recruitment agency, best fractional recruitment agency, fractional recruiters, top fractional recruitment agencies, fractional recruitment agency uk, fractional executive recruitment',
   alternates: {
     canonical: 'https://fractional.quest/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter',
   },
   openGraph: {
-    title: 'Best Fractional Recruitment Agency UK | Top Recruiters',
-    description: 'Find the best fractional recruitment agency in the UK. Compare top fractional recruiters and save 40-60% vs full-time hires.',
+    title: 'Fractional Recruitment Agency 🏆 Top UK Recruiters',
+    description: '🔥 Best fractional recruitment agency UK - Compare top recruiters with transparent fees. Save 40-60%.',
     type: 'website',
     url: 'https://fractional.quest/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fractional Recruitment Agency 🏆 Top UK Recruiters',
+    description: '🔥 Best fractional recruitment agency UK - Save 40-60% vs full-time.',
   },
 }
 
@@ -503,6 +511,14 @@ export default async function TopFractionalRecruitmentAgenciesPage() {
           </div>
         </div>
       </section>
+
+      {/* E-E-A-T: Expert Profile - Establishes authority */}
+      <ExpertProfile />
+      <ExpertProfileSchema />
+
+      {/* E-E-A-T: Case Study - Demonstrates real experience */}
+      <CaseStudy />
+      <CaseStudySchema />
 
       {/* Related Pages */}
       <section className="py-12 bg-white border-t border-gray-200">

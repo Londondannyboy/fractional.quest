@@ -3,7 +3,7 @@
 import React, { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useUser } from '@stackframe/stack'
+// Auth removed - will be replaced with NeonAuth
 import { AspirationalBadge } from './AspirationalBadge'
 import { generateAspirationalMessage } from '@/lib/aspirational-messages'
 import type { AspirationalMessageData } from '@/lib/types'
@@ -176,7 +176,7 @@ export function JobCard({
   keyDeliverables,
   imageUrl,
 }: JobCardProps) {
-  const user = useUser()
+  // Auth removed - save functionality disabled until NeonAuth is added
   const [isSaved, setIsSaved] = useState(false)
   const [isSaving, setIsSaving] = useState(false)
   const [viewCount, setViewCount] = useState<number | null>(null)
@@ -235,33 +235,12 @@ export function JobCard({
     return null
   }, [customMessage, isRemote, workplaceType, location, hoursPerWeek])
 
+  // Save functionality disabled until NeonAuth is added
   const handleSave = async (e: React.MouseEvent) => {
     e.preventDefault()
     e.stopPropagation()
-
-    if (!jobId) return
-
-    if (!user) {
-      window.location.href = '/handler/sign-in?returnUrl=' + encodeURIComponent(window.location.pathname)
-      return
-    }
-
-    setIsSaving(true)
-    try {
-      const response = await fetch('/api/save-job', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ jobId, action: isSaved ? 'remove' : 'add' })
-      })
-
-      if (response.ok) {
-        setIsSaved(!isSaved)
-      }
-    } catch (error) {
-      console.error('Failed to save job:', error)
-    } finally {
-      setIsSaving(false)
-    }
+    // Auth required - feature disabled
+    console.log('Save job feature requires authentication')
   }
 
   // Format compensation display

@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
-import { StackProvider, StackTheme } from "@stackframe/stack";
-import { stackServerApp } from "@/stack/server";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { CookieConsent } from "@/components/CookieConsent";
+// Auth removed - will be replaced with NeonAuth
 // CopilotKit disabled - requires agent configuration
-// import { CopilotProvider } from "@/components/CopilotProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -178,18 +176,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased bg-white text-gray-900`}
       >
-        <StackProvider app={stackServerApp}>
-          <StackTheme>
-            <Suspense fallback={<div className="h-20 bg-white border-b border-gray-100" />}>
-              <Navigation />
-            </Suspense>
-            <main className="min-h-screen">
-              {children}
-            </main>
-            <Footer />
-            <CookieConsent />
-          </StackTheme>
-        </StackProvider>
+        <Suspense fallback={<div className="h-20 bg-white border-b border-gray-100" />}>
+          <Navigation />
+        </Suspense>
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

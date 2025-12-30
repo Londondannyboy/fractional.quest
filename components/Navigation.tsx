@@ -12,14 +12,19 @@ const JOB_MARKETS = [
   { href: '/fractional-jobs', label: 'Global', flag: '🌍' },
 ]
 
-// Role categories
+// Role categories - all C-suite roles for SEO
 const JOB_ROLES = [
   { href: '/fractional-cfo-jobs-uk', label: 'CFO Jobs', icon: '💰' },
   { href: '/fractional-cto-jobs-uk', label: 'CTO Jobs', icon: '💻' },
-  { href: '/fractional-cmo-jobs-uk', label: 'CMO Jobs', icon: '📣' },
+  { href: '/fractional-cmo-jobs-uk', label: 'CMO Jobs', icon: '📈' },
   { href: '/fractional-coo-jobs-uk', label: 'COO Jobs', icon: '⚙️' },
+  { href: '/fractional-cpo-jobs-uk', label: 'CPO Jobs', icon: '🎯' },
+  { href: '/fractional-cro-jobs-uk', label: 'CRO Jobs', icon: '📊' },
   { href: '/fractional-chro-jobs-uk', label: 'CHRO Jobs', icon: '👥' },
-  { href: '/fractional-cpo-jobs-uk', label: 'CPO Jobs', icon: '📦' },
+  { href: '/fractional-cio-jobs-uk', label: 'CIO Jobs', icon: '🖥️' },
+  { href: '/fractional-ciso-jobs-uk', label: 'CISO Jobs', icon: '🔒' },
+  { href: '/fractional-cdo-jobs-uk', label: 'CDO Jobs', icon: '📡' },
+  { href: '/fractional-cco-jobs-uk', label: 'CCO Jobs', icon: '📋' },
 ]
 
 // Industry verticals
@@ -86,7 +91,7 @@ export function Navigation() {
                 </svg>
               </button>
               {jobsDropdownOpen && (
-                <div className="absolute top-full left-0 mt-2 w-72 bg-white border border-gray-200 rounded-lg shadow-lg py-3 z-50">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-white border border-gray-200 rounded-lg shadow-lg py-3 z-50">
                   {/* By Location */}
                   <div className="px-4 py-1">
                     <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">By Location</span>
@@ -112,12 +117,12 @@ export function Navigation() {
                   <div className="px-4 py-1">
                     <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">By Role</span>
                   </div>
-                  <div className="grid grid-cols-2 gap-1 px-2">
+                  <div className="grid grid-cols-3 gap-1 px-2">
                     {JOB_ROLES.map((role) => (
                       <Link
                         key={role.href}
                         href={role.href}
-                        className={`flex items-center gap-2 px-2 py-2 text-sm rounded hover:bg-gray-50 transition-colors ${
+                        className={`flex items-center gap-1.5 px-2 py-1.5 text-xs rounded hover:bg-gray-50 transition-colors ${
                           pathname === role.href ? 'bg-blue-50 text-blue-700 font-medium' : 'text-gray-700'
                         }`}
                         onClick={() => setJobsDropdownOpen(false)}

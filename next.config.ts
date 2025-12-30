@@ -136,7 +136,6 @@ const nextConfig: NextConfig = {
       "@tailwindcss/typography",
       "react-markdown",
       "@humeai/voice-react",
-      "@stackframe/stack",
       "@neondatabase/serverless",
       "zod",
       "three",

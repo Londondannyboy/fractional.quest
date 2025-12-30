@@ -1,25 +1,9 @@
 'use client'
 
-import Link from 'next/link'
-import { UserButton, useUser } from '@stackframe/stack'
-import { Button } from './Button'
+// Auth removed - will be replaced with NeonAuth
+// This component is temporarily disabled
 
 export function AuthButtons({ scrolled }: { scrolled: boolean }) {
-  const user = useUser()
-
-  if (user) {
-    return <UserButton />
-  }
-
-  return (
-    <Link href="/handler/sign-in">
-      <Button
-        variant="ghost"
-        size="sm"
-        className={!scrolled ? '!text-white hover:bg-white/20' : ''}
-      >
-        Sign In
-      </Button>
-    </Link>
-  )
+  // Auth disabled - return null until NeonAuth is added
+  return null
 }

@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
 import { FAQPageSchema } from '@/components/FAQPageSchema'
+import { ExpertProfile, ExpertProfileSchema } from '@/components/ExpertProfile'
+import { CaseStudy, CaseStudySchema } from '@/components/CaseStudy'
 import { RoleCalculator } from '@/components/RoleCalculator'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleNews } from '@/components/RoleNews'
@@ -515,6 +517,14 @@ export default async function FractionalCroJobsUkPage() {
           <FAQ items={CRO_FAQS} title="" />
         </div>
       </section>
+
+      {/* E-E-A-T: Expert Profile - Establishes authority */}
+      <ExpertProfile />
+      <ExpertProfileSchema />
+
+      {/* E-E-A-T: Case Study - Demonstrates real experience */}
+      <CaseStudy />
+      <CaseStudySchema />
 
       {/* CTA */}
       <section className="py-20 md:py-28 bg-green-900 text-white">
