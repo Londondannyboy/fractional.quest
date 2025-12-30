@@ -323,18 +323,20 @@ export default async function FractionalJobsLondonPage() {
 
       {/* Hero Section with H1 - Optimized Background */}
       <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-12 md:py-16 overflow-hidden">
-        {/* LCP-optimized Background Image */}
+        {/* LCP-optimized Background Image with blur placeholder */}
         <div className="absolute inset-0 z-0">
-          {/* Priority image for LCP - using Next.js Image for optimization */}
+          {/* Priority image for LCP - mobile-optimized with blur placeholder */}
           <Image
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1280&q=75&auto=format"
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=60&auto=format"
             alt="London business skyline"
             fill
             priority
             fetchPriority="high"
-            sizes="100vw"
+            sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1280px"
             className="object-cover opacity-40"
-            quality={75}
+            quality={60}
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgUH/8QAIhAAAgEEAQUBAAAAAAAAAAAAAQIDBAURIQAGEhMxQVH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAIDAQAAAAAAAAAAAAAAAAECAAMRIf/aAAwDAQACEQMRAD8Aw+1XGe23aCupJGSWJw6MCR1rdXqapmup2lnmd5HOS7EsT+5PPcaO6U0jdQV8/wC0+4xz//Z"
           />
           {/* Gradient overlay for text readability */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-800/70 to-gray-900/80" />
