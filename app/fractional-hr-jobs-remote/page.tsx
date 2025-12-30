@@ -7,6 +7,7 @@ import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { DesktopOnly } from '@/components/DesktopOnly'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 import { FAQ, HR_FAQS } from '@/components/FAQ'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 export const revalidate = 3600
 
@@ -41,10 +42,55 @@ async function getRemoteHRStats() {
   }
 }
 
+// Get remote HR jobs
+async function getRemoteHRJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote,
+        compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND role_category = 'HR'
+        AND (is_remote = true OR workplace_type = 'Remote' OR workplace_type = 'Hybrid')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 20
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
+// Get related jobs from other categories
+async function getRelatedJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote,
+        compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND role_category NOT IN ('HR')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 15
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
 export default async function RemoteHRJobsPage() {
-  const stats = await getRemoteHRStats()
+  const [stats, jobs, relatedJobs] = await Promise.all([
+    getRemoteHRStats(),
+    getRemoteHRJobs(),
+    getRelatedJobs()
+  ])
   const remotePercentage = stats.total > 0 ? Math.round((stats.remoteCount / stats.total) * 100) : 56
-  const lastUpdatedDate = new Date() // Use current date as we don't fetch individual jobs
+  const lastUpdatedDate = jobs[0]?.posted_date ? new Date(jobs[0].posted_date) : new Date()
 
   return (
     <div className="min-h-screen bg-white">
@@ -102,6 +148,31 @@ export default async function RemoteHRJobsPage() {
           </div>
         </div>
       </section>
+
+      {/* Quick Job Lines - Visible Immediately */}
+      {jobs.length > 0 && (
+        <section className="py-6 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <HotJobsLines
+              jobs={jobs.map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Latest Remote HR Jobs"
+              maxJobs={12}
+              viewAllHref="/fractional-hr-jobs-uk"
+              viewAllText="View all HR jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Job Board */}
       <section className="py-16 md:py-20 bg-white">
@@ -206,6 +277,39 @@ export default async function RemoteHRJobsPage() {
           </div>
         </div>
       </section>
+
+      {/* Related Jobs Section */}
+      {relatedJobs.length > 0 && (
+        <section className="py-12 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                More Fractional Jobs Across the UK
+              </h2>
+              <p className="text-gray-600">
+                Explore other fractional executive opportunities
+              </p>
+            </div>
+            <HotJobsLines
+              jobs={relatedJobs.map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Related Opportunities"
+              maxJobs={15}
+              viewAllHref="/fractional-jobs-uk"
+              viewAllText="View all UK jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Related */}
       <section className="py-12 bg-white border-t border-gray-200">

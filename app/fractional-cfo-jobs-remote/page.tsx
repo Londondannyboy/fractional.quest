@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
 import { WebPageSchema } from '@/components/WebPageSchema'
+import { HotJobsLines } from '@/components/HotJobsLines'
+import { createDbQuery } from '@/lib/db'
 
 export const metadata: Metadata = {
   title: 'Remote Fractional CFO Jobs UK',
@@ -19,7 +21,53 @@ export const metadata: Metadata = {
 
 export const revalidate = 3600
 
-export default function RemoteFractionalCFOJobsPage() {
+// Get remote CFO jobs
+async function getRemoteCFOJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote,
+        compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND (role_category = 'Finance' OR title ILIKE '%CFO%' OR title ILIKE '%Chief Financial%')
+        AND (is_remote = true OR workplace_type = 'Remote')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 20
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
+// Get related jobs from other categories
+async function getRelatedJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote,
+        compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND role_category NOT IN ('Finance')
+        AND title NOT ILIKE '%CFO%'
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 15
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
+export default async function RemoteFractionalCFOJobsPage() {
+  const [jobs, relatedJobs] = await Promise.all([
+    getRemoteCFOJobs(),
+    getRelatedJobs()
+  ])
   const faqItems = [
     {
       question: 'Can fractional CFO work be done entirely remotely?',
@@ -109,6 +157,29 @@ export default function RemoteFractionalCFOJobsPage() {
               Comprehensive guide to finding and succeeding in remote fractional CFO roles. Discover opportunities, optimize your remote setup, and build a thriving location-independent CFO practice.
             </p>
           </header>
+
+          {/* Quick Job Lines - Visible Immediately */}
+          {jobs.length > 0 && (
+            <div className="mb-12 rounded-xl bg-white p-8 shadow-sm ring-1 ring-slate-900/5">
+              <HotJobsLines
+                jobs={jobs.map(job => ({
+                  id: job.id,
+                  slug: job.slug,
+                  title: job.title,
+                  company_name: job.company_name,
+                  location: job.location,
+                  compensation: job.compensation,
+                  role_category: job.role_category,
+                  posted_date: job.posted_date,
+                  is_remote: job.is_remote,
+                }))}
+                title="Latest Remote CFO Jobs"
+                maxJobs={12}
+                viewAllHref="/fractional-cfo-jobs-uk"
+                viewAllText="View all CFO jobs"
+              />
+            </div>
+          )}
 
           {/* Market Overview */}
           <div className="mb-12 rounded-xl bg-white p-8 shadow-sm ring-1 ring-slate-900/5">
@@ -548,6 +619,37 @@ export default function RemoteFractionalCFOJobsPage() {
 
           {/* FAQ Section */}
           <FAQ items={faqItems} title="Remote Fractional CFO Jobs FAQs" />
+
+          {/* Related Jobs Section */}
+          {relatedJobs.length > 0 && (
+            <div className="mt-12 rounded-xl bg-slate-50 p-8">
+              <div className="mb-6">
+                <h2 className="text-2xl font-bold text-slate-900 mb-2">
+                  More Fractional Jobs Across the UK
+                </h2>
+                <p className="text-slate-600">
+                  Explore other fractional executive opportunities
+                </p>
+              </div>
+              <HotJobsLines
+                jobs={relatedJobs.map(job => ({
+                  id: job.id,
+                  slug: job.slug,
+                  title: job.title,
+                  company_name: job.company_name,
+                  location: job.location,
+                  compensation: job.compensation,
+                  role_category: job.role_category,
+                  posted_date: job.posted_date,
+                  is_remote: job.is_remote,
+                }))}
+                title="Related Opportunities"
+                maxJobs={15}
+                viewAllHref="/fractional-jobs-uk"
+                viewAllText="View all UK jobs"
+              />
+            </div>
+          )}
 
           {/* Related Resources */}
           <section className="mt-12 rounded-xl bg-slate-50 p-8">

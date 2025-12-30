@@ -380,7 +380,40 @@ export default async function FractionalRecruiterJobsUkPage() {
         </div>
       </section>
 
-      <RoleContentHub currentRole="chro" /> 
+      {/* Related Jobs Section */}
+      {relatedJobs.length > 0 && (
+        <section className="py-12 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                More Fractional Jobs Across the UK
+              </h2>
+              <p className="text-gray-600">
+                Explore other fractional executive opportunities
+              </p>
+            </div>
+            <HotJobsLines
+              jobs={relatedJobs.map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Related Opportunities"
+              maxJobs={15}
+              viewAllHref="/fractional-jobs-uk"
+              viewAllText="View all UK jobs"
+            />
+          </div>
+        </section>
+      )}
+
+      <RoleContentHub currentRole="chro" />
       {/* Mapped to CHRO/HR */}
     </div>
   )

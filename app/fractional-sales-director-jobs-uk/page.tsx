@@ -83,6 +83,28 @@ async function getSalesJobs() {
   }
 }
 
+// Get related executive jobs (other roles)
+async function getRelatedJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote,
+        compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND role_category != 'Sales'
+        AND (title NOT ILIKE '%Sales Director%')
+        AND role_category IN ('CTO', 'CFO', 'CMO', 'COO', 'CEO', 'CHRO', 'Product', 'Finance', 'Marketing', 'Operations')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 15
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
 function getDaysAgo(postedDate: string | null): number | undefined {
   if (!postedDate) return undefined
   const posted = new Date(postedDate)
@@ -111,10 +133,11 @@ const SALES_FAQS = [
 ]
 
 export default async function FractionalSalesDirectorJobsUkPage() {
-  const [stats, companies, jobs] = await Promise.all([
+  const [stats, companies, jobs, relatedJobs] = await Promise.all([
     getSalesStats(),
     getFeaturedCompanies(),
-    getSalesJobs()
+    getSalesJobs(),
+    getRelatedJobs()
   ])
 
   const mostRecentJob = jobs[0]
@@ -189,6 +212,31 @@ export default async function FractionalSalesDirectorJobsUkPage() {
         </div>
       </section>
 
+      {/* Quick Job Lines - Visible Immediately Above Fold */}
+      {jobs.length > 0 && (
+        <section className="py-6 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <HotJobsLines
+              jobs={jobs.map((job: any) => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Latest Sales Director Jobs"
+              maxJobs={12}
+              viewAllHref="#jobs"
+              viewAllText="See all jobs"
+            />
+          </div>
+        </section>
+      )}
+
       {/* Calculator */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
@@ -196,7 +244,7 @@ export default async function FractionalSalesDirectorJobsUkPage() {
              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
             <h2 className="text-2xl md:text-3xl font-black text-gray-900">Earnings Calculator</h2>
           </div>
-          <RoleCalculator role="cmo" /> 
+          <RoleCalculator role="cmo" />
         </div>
       </section>
 
@@ -336,7 +384,40 @@ export default async function FractionalSalesDirectorJobsUkPage() {
         </div>
       </section>
 
-      <RoleContentHub currentRole="cmo" /> 
+      {/* Related Executive Jobs Section */}
+      {relatedJobs.length > 0 && (
+        <section className="py-12 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                More Fractional Executive Jobs
+              </h2>
+              <p className="text-gray-600">
+                Explore other executive roles across the UK.
+              </p>
+            </div>
+            <HotJobsLines
+              jobs={relatedJobs.map((job: any) => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Other Executive Opportunities"
+              maxJobs={15}
+              viewAllHref="/fractional-jobs-uk"
+              viewAllText="View all UK jobs"
+            />
+          </div>
+        </section>
+      )}
+
+      <RoleContentHub currentRole="cmo" />
       {/* Mapped to CMO/Sales */}
     </div>
   )
