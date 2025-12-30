@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { createDbQuery } from '@/lib/db'
 import { FAQ, CMO_FAQS } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
@@ -172,15 +173,16 @@ export default async function FractionalCmoJobsUkPage() {
       <JobListingSchema jobs={jobs} pageUrl="https://fractional.quest/fractional-cmo-jobs-uk" />
       {/* Hero with Aspirational Image */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
-        {/* Background Image - Marketing professional */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1580489944761-15a19d654956?w=1920&q=80')`,
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-amber-600/85 via-orange-500/70 to-pink-500/50" />
-        </div>
+        {/* Background Image - Marketing professional - Using Next.js Image for LCP optimization */}
+        <Image
+          src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=1920&q=80"
+          alt="Fractional CMO - Marketing executive professional"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-600/85 via-orange-500/70 to-pink-500/50" />
         <div className="relative z-10 w-full py-16">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <BreadcrumbsLight items={getRoleBreadcrumbs('cmo', 'jobs')} className="mb-8" />
@@ -310,7 +312,7 @@ export default async function FractionalCmoJobsUkPage() {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-4 block">The Guide</span>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
               Everything You Need to Know About<br />
-              <span className="text-amber-600">Fractional CMO Jobs UK</span>
+              <span className="text-amber-700">Fractional CMO Jobs UK</span>
             </h2>
             <div className="w-24 h-1 bg-amber-500"></div>
           </div>
@@ -331,7 +333,7 @@ export default async function FractionalCmoJobsUkPage() {
           {/* Article Content - Editorial Typography */}
           <article className="prose prose-lg prose-gray max-w-none">
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 font-light">
-              <strong className="font-semibold text-gray-900">Fractional CMO jobs</strong> represent the new frontier of marketing leadership. Part-time Chief Marketing Officer positions where experienced leaders provide strategic guidance to multiple companies simultaneously—delivering world-class expertise at a fraction of the cost. According to <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">IPSE (Association of Independent Professionals and the Self-Employed)</a>, the UK&apos;s senior contractor market continues to expand, with marketing leadership roles among the fastest-growing segments.
+              <strong className="font-semibold text-gray-900">Fractional CMO jobs</strong> represent the new frontier of marketing leadership. Part-time Chief Marketing Officer positions where experienced leaders provide strategic guidance to multiple companies simultaneously—delivering world-class expertise at a fraction of the cost. According to <a href="https://www.ipse.co.uk/" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline">IPSE (Association of Independent Professionals and the Self-Employed)</a>, the UK&apos;s senior contractor market continues to expand, with marketing leadership roles among the fastest-growing segments.
             </p>
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">The Rise of Fractional CMO Jobs UK</h3>
@@ -364,7 +366,7 @@ export default async function FractionalCmoJobsUkPage() {
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Why Fractional CMO Jobs Are Booming</h3>
             <p>
-              The growth in fractional CMO demand is supported by broader economic trends. The <a href="https://www.britishbusinessbank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">British Business Bank&apos;s research</a> shows UK SMEs are increasingly seeking flexible access to senior talent, while <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">Tech Nation data</a> highlights the UK tech sector&apos;s continued expansion, creating strong demand for marketing leadership.
+              The growth in fractional CMO demand is supported by broader economic trends. The <a href="https://www.britishbusinessbank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline">British Business Bank&apos;s research</a> shows UK SMEs are increasingly seeking flexible access to senior talent, while <a href="https://technation.io/" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline">Tech Nation data</a> highlights the UK tech sector&apos;s continued expansion, creating strong demand for marketing leadership.
             </p>
             <ul className="space-y-3">
               <li><strong>Cost efficiency:</strong> Senior expertise at a fraction of the cost</li>
@@ -391,7 +393,7 @@ export default async function FractionalCmoJobsUkPage() {
                 <div key={i} className="bg-gray-50 p-6 border border-gray-200">
                   <h4 className="font-bold text-gray-900 mb-1">{type.title}</h4>
                   <p className="text-gray-600 text-sm mb-2">{type.desc}</p>
-                  <span className="text-amber-600 font-semibold text-sm">{type.rate}</span>
+                  <span className="text-amber-700 font-semibold text-sm">{type.rate}</span>
                 </div>
               ))}
             </div>
@@ -424,10 +426,10 @@ export default async function FractionalCmoJobsUkPage() {
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Fractional CMO Jobs by Location</h3>
             <p>
-              London leads with 55% of roles, supported by the capital&apos;s thriving startup ecosystem documented by <a href="https://www.beauhurst.com" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">Beauhurst</a>, but opportunities exist nationwide. Regional hubs like Manchester (backed by <a href="https://www.investinmanchester.com/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">MIDAS</a>) and Edinburgh (supported by <a href="https://www.scottish-enterprise.com/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">Scottish Enterprise</a>) are rapidly expanding their fractional markets:
+              London leads with 55% of roles, supported by the capital&apos;s thriving startup ecosystem documented by <a href="https://www.beauhurst.com" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline">Beauhurst</a>, but opportunities exist nationwide. Regional hubs like Manchester (backed by <a href="https://www.investinmanchester.com/" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline">MIDAS</a>) and Edinburgh (supported by <a href="https://www.scottish-enterprise.com/" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline">Scottish Enterprise</a>) are rapidly expanding their fractional markets:
             </p>
             <ul className="space-y-2">
-              <li><strong><Link href="/fractional-jobs-london" className="text-amber-600 hover:text-amber-700 underline">London Tech City</Link>:</strong> £900-£1,400/day</li>
+              <li><strong><Link href="/fractional-jobs-london" className="text-amber-700 hover:text-amber-700 underline">London Tech City</Link>:</strong> £900-£1,400/day</li>
               <li><strong>Manchester:</strong> £700-£1,000/day</li>
               <li><strong>Bristol & Edinburgh:</strong> £700-£1,000/day</li>
               <li><strong>Remote UK:</strong> £650-£950/day</li>
@@ -438,15 +440,15 @@ export default async function FractionalCmoJobsUkPage() {
 
             <h3 className="text-2xl font-black text-gray-900 mt-12 mb-4">Requirements for Fractional CMO Jobs</h3>
             <p>
-              Professional credentials and continuous development are increasingly valued in fractional CMO roles. Many successful CMOs hold qualifications from bodies like the <a href="https://www.cim.co.uk" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">Chartered Institute of Marketing (CIM)</a> or have completed executive education programmes. Understanding <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">IR35 compliance</a> and operating through a limited company structure is also essential for most fractional arrangements. For a complete career roadmap, see our guide on <Link href="/how-to-become-a-fractional-cmo" className="text-amber-600 hover:text-amber-700 underline">how to become a fractional CMO</Link>.
+              Professional credentials and continuous development are increasingly valued in fractional CMO roles. Many successful CMOs hold qualifications from bodies like the <a href="https://www.cim.co.uk" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline">Chartered Institute of Marketing (CIM)</a> or have completed executive education programmes. Understanding <a href="https://www.gov.uk/topic/business-tax/ir35" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline">IR35 compliance</a> and operating through a limited company structure is also essential for most fractional arrangements. For a complete career roadmap, see our guide on <Link href="/how-to-become-a-fractional-cmo" className="text-amber-700 hover:text-amber-700 underline">how to become a fractional CMO</Link>.
             </p>
             <ul className="space-y-2">
               <li>12-15+ years marketing experience, 5+ in senior leadership</li>
               <li>Proven track record of revenue/pipeline growth</li>
               <li>Deep channel expertise (performance, brand, PLG, ABM)</li>
               <li>Team building and management experience</li>
-              <li>Board-level communication skills and understanding of <a href="https://www.asa.org.uk" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">advertising regulations</a></li>
-              <li>Knowledge of <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline">data protection regulations (GDPR)</a> for marketing activities</li>
+              <li>Board-level communication skills and understanding of <a href="https://www.asa.org.uk" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline">advertising regulations</a></li>
+              <li>Knowledge of <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline">data protection regulations (GDPR)</a> for marketing activities</li>
             </ul>
 
             <div className="bg-gray-50 text-gray-900 p-6 rounded-lg my-10 not-prose">
@@ -510,19 +512,19 @@ export default async function FractionalCmoJobsUkPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-amber-500">Professional Bodies &amp; Marketing Organizations</h3>
               <ul className="space-y-3 text-gray-600">
                 <li>
-                  <a href="https://www.marketingweek.com/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline font-medium">
+                  <a href="https://www.marketingweek.com/" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline font-medium">
                     Marketing Week
                   </a>
                   {' '}&mdash; Leading UK marketing publication with industry news, analysis, and career insights
                 </li>
                 <li>
-                  <a href="https://www.dma.org.uk/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline font-medium">
+                  <a href="https://www.dma.org.uk/" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline font-medium">
                     Data &amp; Marketing Association (DMA)
                   </a>
                   {' '}&mdash; UK trade association for data-driven marketing, offering guidance and best practices
                 </li>
                 <li>
-                  <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline font-medium">
+                  <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline font-medium">
                     Institute of Directors (IoD)
                   </a>
                   {' '}&mdash; Professional development and networking for C-level executives including CMOs
@@ -535,19 +537,19 @@ export default async function FractionalCmoJobsUkPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-amber-500">Government Resources &amp; Regulation</h3>
               <ul className="space-y-3 text-gray-600">
                 <li>
-                  <a href="https://www.gov.uk/set-up-business" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline font-medium">
+                  <a href="https://www.gov.uk/set-up-business" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline font-medium">
                     Gov.uk Business Setup Guide
                   </a>
                   {' '}&mdash; Official guidance for setting up a limited company as a fractional executive
                 </li>
                 <li>
-                  <a href="https://www.cap.org.uk/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline font-medium">
+                  <a href="https://www.cap.org.uk/" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline font-medium">
                     Committee of Advertising Practice (CAP)
                   </a>
                   {' '}&mdash; UK advertising codes and guidance for compliant marketing practices
                 </li>
                 <li>
-                  <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline font-medium">
+                  <a href="https://www.ons.gov.uk/employmentandlabourmarket" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline font-medium">
                     ONS Employment Statistics
                   </a>
                   {' '}&mdash; Official UK labour market data including self-employment and contractor trends
@@ -560,19 +562,19 @@ export default async function FractionalCmoJobsUkPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-amber-500">Industry Research &amp; Market Data</h3>
               <ul className="space-y-3 text-gray-600">
                 <li>
-                  <a href="https://www.thinkbox.tv" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline font-medium">
+                  <a href="https://www.thinkbox.tv" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline font-medium">
                     Thinkbox Marketing Research
                   </a>
                   {' '}&mdash; UK marketing effectiveness research and advertising insights
                 </li>
                 <li>
-                  <a href="https://www.iabuk.com/research" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline font-medium">
+                  <a href="https://www.iabuk.com/research" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline font-medium">
                     IAB UK Research
                   </a>
                   {' '}&mdash; Digital advertising standards and market research for the UK
                 </li>
                 <li>
-                  <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline font-medium">
+                  <a href="https://www.bvca.co.uk/" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline font-medium">
                     British Private Equity &amp; Venture Capital Association
                   </a>
                   {' '}&mdash; Insights on PE/VC portfolio companies that frequently hire fractional CMOs
@@ -585,13 +587,13 @@ export default async function FractionalCmoJobsUkPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-amber-500">Business Support &amp; Networking</h3>
               <ul className="space-y-3 text-gray-600">
                 <li>
-                  <a href="https://www.linkedin.com/business/marketing" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline font-medium">
+                  <a href="https://www.linkedin.com/business/marketing" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline font-medium">
                     LinkedIn Marketing Solutions
                   </a>
                   {' '}&mdash; Platform for building your personal brand and connecting with potential clients
                 </li>
                 <li>
-                  <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:text-amber-700 underline font-medium">
+                  <a href="https://www.cipd.org" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:text-amber-700 underline font-medium">
                     CIPD (Chartered Institute of Personnel and Development)
                   </a>
                   {' '}&mdash; Research on flexible working and employment trends relevant to fractional executives
@@ -649,14 +651,14 @@ export default async function FractionalCmoJobsUkPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Related</span>
             <div className="flex flex-wrap gap-4">
-              <Link href="/part-time-cmo-jobs-uk" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Part-Time CMO Jobs UK</Link>
-              <Link href="/fractional-jobs-london" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Fractional Jobs London</Link>
-              <Link href="/fractional-cmo-salary" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">CMO Salary Guide</Link>
-              <Link href="/fractional-cmo-cost" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Fractional CMO Cost</Link>
-              <Link href="/how-to-become-a-fractional-cmo" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Become a Fractional CMO</Link>
-              <Link href="/fractional-cmo-meaning" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Fractional CMO Meaning</Link>
-              <Link href="/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">Fractional Recruitment Agency</Link>
-              <Link href="/fractional-cfo-jobs-uk" className="text-gray-600 hover:text-amber-600 font-medium transition-colors">CFO Jobs UK</Link>
+              <Link href="/part-time-cmo-jobs-uk" className="text-gray-600 hover:text-amber-700 font-medium transition-colors">Part-Time CMO Jobs UK</Link>
+              <Link href="/fractional-jobs-london" className="text-gray-600 hover:text-amber-700 font-medium transition-colors">Fractional Jobs London</Link>
+              <Link href="/fractional-cmo-salary" className="text-gray-600 hover:text-amber-700 font-medium transition-colors">CMO Salary Guide</Link>
+              <Link href="/fractional-cmo-cost" className="text-gray-600 hover:text-amber-700 font-medium transition-colors">Fractional CMO Cost</Link>
+              <Link href="/how-to-become-a-fractional-cmo" className="text-gray-600 hover:text-amber-700 font-medium transition-colors">Become a Fractional CMO</Link>
+              <Link href="/fractional-cmo-meaning" className="text-gray-600 hover:text-amber-700 font-medium transition-colors">Fractional CMO Meaning</Link>
+              <Link href="/top-fractional-recruitment-agencies-best-fractional-recruitment-agency-fractional-recruiter" className="text-gray-600 hover:text-amber-700 font-medium transition-colors">Fractional Recruitment Agency</Link>
+              <Link href="/fractional-cfo-jobs-uk" className="text-gray-600 hover:text-amber-700 font-medium transition-colors">CFO Jobs UK</Link>
             </div>
           </div>
         </div>

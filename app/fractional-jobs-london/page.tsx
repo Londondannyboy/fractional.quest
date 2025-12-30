@@ -216,12 +216,9 @@ export default async function FractionalJobsLondonPage() {
     getLondonJobs()
   ])
 
-  // Use the most recent job's posted date as "last updated"
-  // This reflects actual content freshness, not just render time
-  const mostRecentJob = (londonJobs as any[])[0]
-  const lastUpdatedDate = mostRecentJob?.posted_date
-    ? new Date(mostRecentJob.posted_date)
-    : new Date()
+  // Use today's date as "last updated" since page is dynamically regenerated
+  // and content is regularly refreshed via ISR (revalidate = 3600)
+  const lastUpdatedDate = new Date()
 
   const lastUpdated = lastUpdatedDate.toISOString()
   const lastUpdatedDisplay = lastUpdatedDate.toLocaleDateString('en-GB', {
@@ -323,8 +320,8 @@ export default async function FractionalJobsLondonPage() {
         }}
       />
 
-      {/* Hero Section with H1 - Optimized Background */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-12 md:py-16 overflow-hidden">
+      {/* Hero Section with H1 - Bright, Professional London Theme */}
+      <section className="relative bg-gradient-to-br from-blue-700 via-blue-600 to-indigo-700 text-white py-12 md:py-16 overflow-hidden">
         {/* LCP-optimized Background Image with blur placeholder */}
         <div className="absolute inset-0 z-0">
           {/* Priority image for LCP - mobile-optimized with blur placeholder */}
@@ -335,13 +332,13 @@ export default async function FractionalJobsLondonPage() {
             priority
             fetchPriority="high"
             sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1280px"
-            className="object-cover opacity-40"
+            className="object-cover opacity-30"
             quality={60}
             placeholder="blur"
             blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgUH/8QAIhAAAgEEAQUBAAAAAAAAAAAAAQIDBAURIQAGEhMxQVH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAIDAQAAAAAAAAAAAAAAAAECAAMRIf/aAAwDAQACEQMRAD8Aw+1XGe23aCupJGSWJw6MCR1rdXqapmup2lnmd5HOS7EsT+5PPcaO6U0jdQV8/wC0+4xz//Z"
           />
-          {/* Gradient overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-800/70 to-gray-900/80" />
+          {/* Lighter gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-800/60 via-blue-700/50 to-indigo-800/60" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}

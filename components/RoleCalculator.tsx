@@ -179,6 +179,7 @@ export function RoleCalculator({ role, className = '' }: RoleCalculatorProps) {
                   value={dayRate}
                   onChange={(e) => setDayRate(Number(e.target.value))}
                   className="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
+                  aria-label={`Your day rate: ${formatCurrency(dayRate)}`}
                 />
                 <div className="flex justify-between text-xs text-gray-500 mt-1">
                   <span>£{roleData.minDayRate}</span>
@@ -203,6 +204,7 @@ export function RoleCalculator({ role, className = '' }: RoleCalculatorProps) {
                   value={daysPerWeek}
                   onChange={(e) => setDaysPerWeek(Number(e.target.value))}
                   className="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
+                  aria-label={`Days per client per week: ${daysPerWeek} days`}
                 />
                 <div className="flex justify-between text-xs text-gray-500 mt-1">
                   <span>1 day</span>
@@ -226,6 +228,7 @@ export function RoleCalculator({ role, className = '' }: RoleCalculatorProps) {
                   value={clients}
                   onChange={(e) => setClients(Number(e.target.value))}
                   className="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
+                  aria-label={`Number of clients: ${clients}`}
                 />
                 <div className="flex justify-between text-xs text-gray-500 mt-1">
                   <span>1</span>
@@ -287,6 +290,7 @@ export function RoleCalculator({ role, className = '' }: RoleCalculatorProps) {
                     value={fullTimeSalary}
                     onChange={(e) => setFullTimeSalary(Number(e.target.value))}
                     className="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
+                    aria-label={`Full-time salary: ${formatCurrency(fullTimeSalary)}`}
                   />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
                     <span>£80k</span>
@@ -311,6 +315,7 @@ export function RoleCalculator({ role, className = '' }: RoleCalculatorProps) {
                     value={hoursNeeded}
                     onChange={(e) => setHoursNeeded(Number(e.target.value))}
                     className="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
+                    aria-label={`Hours per week needed: ${hoursNeeded} hours`}
                   />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
                     <span>4 hrs (0.5 days)</span>
