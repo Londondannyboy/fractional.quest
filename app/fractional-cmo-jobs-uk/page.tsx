@@ -14,6 +14,8 @@ import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 import { FAQPageSchema } from '@/components/FAQPageSchema'
+import { ExpertProfile, ExpertProfileSchema } from '@/components/ExpertProfile'
+import { CaseStudy, CaseStudySchema } from '@/components/CaseStudy'
 
 export const revalidate = 3600
 
@@ -614,6 +616,14 @@ export default async function FractionalCmoJobsUkPage() {
           </div>
         </div>
       </section>
+
+      {/* E-E-A-T: Expert Profile - Establishes authority */}
+      <ExpertProfile />
+      <ExpertProfileSchema />
+
+      {/* E-E-A-T: Case Study - Demonstrates real experience */}
+      <CaseStudy />
+      <CaseStudySchema />
 
       {/* CTA Section - Bold Editorial */}
       <section className="py-20 md:py-28 bg-gray-50 text-white">

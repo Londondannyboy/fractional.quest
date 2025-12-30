@@ -15,6 +15,8 @@ import { EmailCapture } from '@/components/EmailCapture'
 import { LastUpdated, LastUpdatedBadge } from '@/components/LastUpdated'
 import { HotJobs } from '@/components/HotJobs'
 import { LazyYouTube } from '@/components/LazyYouTube'
+import { ExpertProfile, ExpertProfileSchema } from '@/components/ExpertProfile'
+import { CaseStudy, CaseStudySchema } from '@/components/CaseStudy'
 
 // CopilotKit-enhanced components (client-side) - using dynamic without ssr:false for server component compatibility
 const SmartJobSearch = dynamic(
@@ -727,6 +729,14 @@ export default async function FractionalJobsLondonPage() {
           <FAQ faqs={londonFAQs} />
         </div>
       </section>
+
+      {/* E-E-A-T: Expert Profile - Establishes authority */}
+      <ExpertProfile />
+      <ExpertProfileSchema />
+
+      {/* E-E-A-T: Case Study - Demonstrates real experience */}
+      <CaseStudy />
+      <CaseStudySchema />
 
       {/* Internal Links Section */}
       <section className="py-12 bg-white border-t border-gray-100">
