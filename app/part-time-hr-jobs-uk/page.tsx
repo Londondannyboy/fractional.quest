@@ -8,6 +8,7 @@ import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { DesktopOnly } from '@/components/DesktopOnly'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 import { FAQ, HR_FAQS } from '@/components/FAQ'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 export const revalidate = 3600
 
@@ -61,8 +62,28 @@ async function getHRJobs() {
   }
 }
 
+// Get related jobs from other role categories for cross-linking
+async function getRelatedJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote,
+        compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND role_category IN ('Finance', 'Marketing', 'Technology', 'Operations')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 15
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
 export default async function PartTimeHRJobsUKPage() {
-  const [stats, jobs] = await Promise.all([getHRStats(), getHRJobs()])
+  const [stats, jobs, relatedJobs] = await Promise.all([getHRStats(), getHRJobs(), getRelatedJobs()])
 
   const mostRecentJob = jobs[0]
   const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
@@ -131,8 +152,33 @@ export default async function PartTimeHRJobsUKPage() {
         </div>
       </section>
 
+      {/* Quick Job Lines - Visible Immediately */}
+      {jobs.length > 0 && (
+        <section className="py-6 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <HotJobsLines
+              jobs={jobs.map((job: any) => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Latest Part-Time HR Jobs"
+              maxJobs={12}
+              viewAllHref="#jobs"
+              viewAllText="See all HR jobs"
+            />
+          </div>
+        </section>
+      )}
+
       {/* Job Board */}
-      <section className="py-16 md:py-20 bg-white">
+      <section id="jobs" className="py-16 md:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
@@ -219,6 +265,39 @@ export default async function PartTimeHRJobsUKPage() {
           <FAQ faqs={HR_FAQS} title="" />
         </div>
       </section>
+
+      {/* Related Fractional Jobs Section */}
+      {relatedJobs.length > 0 && (
+        <section className="py-12 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                More Fractional Executive Opportunities
+              </h2>
+              <p className="text-gray-600">
+                Explore other part-time and fractional executive roles across finance, marketing, technology, and operations.
+              </p>
+            </div>
+            <HotJobsLines
+              jobs={relatedJobs.map((job: any) => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Related Executive Roles"
+              maxJobs={15}
+              viewAllHref="/fractional-jobs-uk"
+              viewAllText="View all fractional jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="py-16 bg-gray-50 text-gray-900">

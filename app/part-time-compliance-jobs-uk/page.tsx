@@ -3,6 +3,10 @@ import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
+import { HotJobsLines } from '@/components/HotJobsLines'
+import { createDbQuery } from '@/lib/db'
+
+export const revalidate = 3600
 
 export const metadata: Metadata = {
   title: 'Part-Time Compliance Jobs UK',
@@ -105,10 +109,57 @@ const transitionSteps = [
   }
 ]
 
-export default function PartTimeComplianceJobsUKPage() {
-  // For static pages without database queries, use current date
+// Get compliance-related jobs
+async function getComplianceJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote,
+        compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND (
+          role_category = 'Compliance'
+          OR title ILIKE '%compliance%'
+          OR title ILIKE '%cco%'
+          OR title ILIKE '%mlro%'
+          OR title ILIKE '%regulatory%'
+        )
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 15
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
+// Get related jobs from other role categories for cross-linking
+async function getRelatedJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote,
+        compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND role_category IN ('Finance', 'Technology', 'HR', 'Operations')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 15
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
+export default async function PartTimeComplianceJobsUKPage() {
+  const [complianceJobs, relatedJobs] = await Promise.all([getComplianceJobs(), getRelatedJobs()])
+
   const lastUpdatedDate = new Date()
-  const stats = { total: 45 } // Approximate for schema
+  const stats = { total: complianceJobs.length > 0 ? complianceJobs.length : 45 }
 
   return (
     <div className="min-h-screen bg-white">
@@ -173,6 +224,31 @@ export default function PartTimeComplianceJobsUKPage() {
           </div>
         </div>
       </section>
+
+      {/* Quick Job Lines - Visible Immediately */}
+      {complianceJobs.length > 0 && (
+        <section className="py-6 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <HotJobsLines
+              jobs={complianceJobs.map((job: any) => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Latest Compliance Jobs"
+              maxJobs={12}
+              viewAllHref="/fractional-jobs-uk?department=Compliance"
+              viewAllText="See all compliance jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Introduction */}
       <section className="py-16 md:py-20 bg-white">
@@ -586,6 +662,39 @@ export default function PartTimeComplianceJobsUKPage() {
           <FAQ items={COMPLIANCE_FAQS} title="" />
         </div>
       </section>
+
+      {/* Related Fractional Jobs Section */}
+      {relatedJobs.length > 0 && (
+        <section className="py-12 bg-slate-50 border-t border-slate-200">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold text-slate-900 mb-2">
+                More Fractional Executive Opportunities
+              </h2>
+              <p className="text-slate-600">
+                Explore other part-time and fractional executive roles across finance, technology, HR, and operations.
+              </p>
+            </div>
+            <HotJobsLines
+              jobs={relatedJobs.map((job: any) => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Related Executive Roles"
+              maxJobs={15}
+              viewAllHref="/fractional-jobs-uk"
+              viewAllText="View all fractional jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="py-20 bg-teal-900 text-white">

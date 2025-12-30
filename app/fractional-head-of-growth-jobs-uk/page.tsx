@@ -12,6 +12,7 @@ import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 export const revalidate = 3600
 
@@ -82,6 +83,27 @@ async function getGrowthJobs() {
   }
 }
 
+// Get related jobs from other categories
+async function getRelatedJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote,
+        compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND role_category NOT IN ('Marketing')
+        AND title NOT ILIKE '%Growth%'
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 15
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
 function getDaysAgo(postedDate: string | null): number | undefined {
   if (!postedDate) return undefined
   const posted = new Date(postedDate)
@@ -110,11 +132,15 @@ const GROWTH_FAQS = [
 ]
 
 export default async function FractionalHeadOfGrowthJobsUkPage() {
-  const [stats, companies, jobs] = await Promise.all([
+  const [stats, companies, jobs, relatedJobs] = await Promise.all([
     getGrowthStats(),
     getFeaturedCompanies(),
-    getGrowthJobs()
+    getGrowthJobs(),
+    getRelatedJobs()
   ])
+
+  const mostRecentJob = jobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
 
   return (
     <div className="min-h-screen bg-white">

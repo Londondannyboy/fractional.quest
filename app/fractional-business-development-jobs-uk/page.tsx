@@ -12,6 +12,7 @@ import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 export const revalidate = 3600
 
@@ -82,6 +83,28 @@ async function getBDJobs() {
   }
 }
 
+// Get related jobs from other categories
+async function getRelatedJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote,
+        compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND role_category NOT IN ('Sales')
+        AND title NOT ILIKE '%Business Development%'
+        AND title NOT ILIKE '%BD%'
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 15
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
 function getDaysAgo(postedDate: string | null): number | undefined {
   if (!postedDate) return undefined
   const posted = new Date(postedDate)
@@ -110,10 +133,11 @@ const BD_FAQS = [
 ]
 
 export default async function FractionalBusinessDevelopmentJobsUkPage() {
-  const [stats, companies, jobs] = await Promise.all([
+  const [stats, companies, jobs, relatedJobs] = await Promise.all([
     getBDStats(),
     getFeaturedCompanies(),
-    getBDJobs()
+    getBDJobs(),
+    getRelatedJobs()
   ])
 
   const mostRecentJob = jobs[0]
@@ -187,6 +211,31 @@ export default async function FractionalBusinessDevelopmentJobsUkPage() {
         </div>
       </section>
 
+      {/* Quick Job Lines - Visible Immediately */}
+      {jobs.length > 0 && (
+        <section className="py-6 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <HotJobsLines
+              jobs={jobs.map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Latest Fractional BD Jobs"
+              maxJobs={12}
+              viewAllHref="#jobs"
+              viewAllText="See all jobs"
+            />
+          </div>
+        </section>
+      )}
+
       {/* Calculator */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
@@ -194,7 +243,7 @@ export default async function FractionalBusinessDevelopmentJobsUkPage() {
              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
             <h2 className="text-2xl md:text-3xl font-black text-gray-900">Earnings Calculator</h2>
           </div>
-          <RoleCalculator role="cmo" /> 
+          <RoleCalculator role="cmo" />
         </div>
       </section>
 
@@ -332,7 +381,40 @@ export default async function FractionalBusinessDevelopmentJobsUkPage() {
         </div>
       </section>
 
-      <RoleContentHub currentRole="cmo" /> 
+      {/* Related Jobs Section */}
+      {relatedJobs.length > 0 && (
+        <section className="py-12 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                More Fractional Jobs Across the UK
+              </h2>
+              <p className="text-gray-600">
+                Explore other fractional executive opportunities
+              </p>
+            </div>
+            <HotJobsLines
+              jobs={relatedJobs.map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Related Opportunities"
+              maxJobs={15}
+              viewAllHref="/fractional-jobs-uk"
+              viewAllText="View all UK jobs"
+            />
+          </div>
+        </section>
+      )}
+
+      <RoleContentHub currentRole="cmo" />
       {/* Mapped to CMO/Sales */}
     </div>
   )

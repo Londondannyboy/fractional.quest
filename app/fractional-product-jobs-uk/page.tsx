@@ -12,6 +12,7 @@ import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 export const revalidate = 3600
 
@@ -105,6 +106,27 @@ async function getProductJobs() {
   }
 }
 
+// Get related executive jobs (other roles)
+async function getRelatedJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote,
+        compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND role_category != 'Product'
+        AND role_category IN ('CTO', 'CFO', 'CMO', 'COO', 'CEO', 'CHRO', 'Operations', 'Finance', 'Marketing')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 15
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
 // Calculate days ago for posted date
 function getDaysAgo(postedDate: string | null): number | undefined {
   if (!postedDate) return undefined
@@ -115,10 +137,11 @@ function getDaysAgo(postedDate: string | null): number | undefined {
 }
 
 export default async function FractionalProductJobsUkPage() {
-  const [stats, companies, jobs] = await Promise.all([
+  const [stats, companies, jobs, relatedJobs] = await Promise.all([
     getProductStats(),
     getFeaturedCompanies(),
-    getProductJobs()
+    getProductJobs(),
+    getRelatedJobs()
   ])
 
   const mostRecentJob = jobs[0]
@@ -192,6 +215,31 @@ export default async function FractionalProductJobsUkPage() {
           </div>
         </div>
       </section>
+
+      {/* Quick Job Lines - Visible Immediately Above Fold */}
+      {jobs.length > 0 && (
+        <section className="py-6 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <HotJobsLines
+              jobs={jobs.map((job: any) => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Latest Fractional Product Jobs"
+              maxJobs={12}
+              viewAllHref="#jobs"
+              viewAllText="See all jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Calculator */}
       <section className="py-12 bg-gray-50">
@@ -548,6 +596,39 @@ export default async function FractionalProductJobsUkPage() {
           </div>
         </div>
       </section>
+
+      {/* Related Executive Jobs Section */}
+      {relatedJobs.length > 0 && (
+        <section className="py-12 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                More Fractional Executive Jobs
+              </h2>
+              <p className="text-gray-600">
+                Explore other executive roles across the UK.
+              </p>
+            </div>
+            <HotJobsLines
+              jobs={relatedJobs.map((job: any) => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Other Executive Opportunities"
+              maxJobs={15}
+              viewAllHref="/fractional-jobs-uk"
+              viewAllText="View all UK jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Related */}
       <section className="py-12 bg-white border-t border-gray-200">

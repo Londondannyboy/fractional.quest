@@ -5,6 +5,7 @@ import { JobCard } from '@/components/JobCard'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 import { FAQ, LEEDS_FAQS } from '@/components/FAQ'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 export const revalidate = 3600
 
@@ -75,8 +76,36 @@ async function getLeedsJobs() {
   }
 }
 
+// Get wider UK jobs (not Leeds/Yorkshire) for the "More Across UK" section
+async function getWiderUKJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote,
+        compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND (
+          location ILIKE '%uk%' OR location ILIKE '%united kingdom%'
+          OR location ILIKE '%london%' OR location ILIKE '%manchester%'
+          OR location ILIKE '%birmingham%' OR location ILIKE '%bristol%'
+          OR location ILIKE '%edinburgh%' OR location ILIKE '%glasgow%'
+          OR is_remote = true
+        )
+        AND location NOT ILIKE '%leeds%'
+        AND location NOT ILIKE '%yorkshire%'
+        AND location NOT ILIKE '%sheffield%'
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 15
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
+
 export default async function LeedsPage() {
-  const [stats, jobs] = await Promise.all([getLeedsStats(), getLeedsJobs()])
+  const [stats, jobs, widerUKJobs] = await Promise.all([getLeedsStats(), getLeedsJobs(), getWiderUKJobs()])
 
   const mostRecentJob = jobs[0]
   const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
@@ -149,6 +178,31 @@ export default async function LeedsPage() {
           </div>
         </div>
       </section>
+
+      {/* Quick Job Lines - Visible Immediately After Stats */}
+      {(jobs as any[]).length > 0 && (
+        <section className="py-6 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <HotJobsLines
+              jobs={(jobs as any[]).map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Latest Leeds & Yorkshire Fractional Jobs"
+              maxJobs={12}
+              viewAllHref="/fractional-jobs?location=Leeds"
+              viewAllText="See all jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Areas */}
       <section className="py-20 md:py-28 bg-gray-50">
@@ -296,6 +350,39 @@ export default async function LeedsPage() {
           </div>
         </div>
       </section>
+
+      {/* Wider UK Jobs Section - Shows jobs from broader geography */}
+      {(widerUKJobs as any[]).length > 0 && (
+        <section className="py-12 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                More Fractional Jobs Across the UK
+              </h2>
+              <p className="text-gray-600">
+                Remote and regional opportunities outside Yorkshire. Many offer hybrid arrangements.
+              </p>
+            </div>
+            <HotJobsLines
+              jobs={(widerUKJobs as any[]).map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="UK-Wide & Remote Opportunities"
+              maxJobs={15}
+              viewAllHref="/fractional-jobs-uk"
+              viewAllText="View all UK jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="py-20 md:py-28 bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900">

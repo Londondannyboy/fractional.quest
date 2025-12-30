@@ -12,6 +12,7 @@ import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 export const revalidate = 3600
 
@@ -82,6 +83,28 @@ async function getGCJobs() {
   }
 }
 
+// Get related jobs from other categories
+async function getRelatedJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT
+        id, slug, title, company_name, location, is_remote,
+        compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND role_category NOT IN ('Legal')
+        AND title NOT ILIKE '%General Counsel%'
+        AND title NOT ILIKE '%Head of Legal%'
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 15
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
 function getDaysAgo(postedDate: string | null): number | undefined {
   if (!postedDate) return undefined
   const posted = new Date(postedDate)
@@ -110,14 +133,25 @@ const GC_FAQS = [
 ]
 
 export default async function FractionalGeneralCounselJobsUkPage() {
-  const [stats, companies, jobs] = await Promise.all([
+  const [stats, companies, jobs, relatedJobs] = await Promise.all([
     getGCStats(),
     getFeaturedCompanies(),
-    getGCJobs()
+    getGCJobs(),
+    getRelatedJobs()
   ])
+
+  const mostRecentJob = jobs[0]
+  const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
 
   return (
     <div className="min-h-screen bg-white">
+      <WebPageSchema
+        title="Fractional General Counsel Jobs UK | Part-Time GC Roles"
+        description="Find part-time GC positions paying £800-£1,500/day"
+        url="https://fractional.quest/fractional-general-counsel-jobs-uk"
+        dateModified={lastUpdatedDate}
+        itemCount={stats.total}
+      />
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
@@ -137,9 +171,12 @@ export default async function FractionalGeneralCounselJobsUkPage() {
               <span className="mr-2">←</span> Back to Home
             </Link>
             <div className="max-w-4xl">
-              <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-                Legal Leadership
-              </span>
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span className="inline-block bg-white/20 backdrop-blur text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                  Legal Leadership
+                </span>
+                <LastUpdatedBadge date={lastUpdatedDate} className="text-white/70" />
+              </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Fractional General Counsel Jobs UK
               </h1>
@@ -174,6 +211,31 @@ export default async function FractionalGeneralCounselJobsUkPage() {
         </div>
       </section>
 
+      {/* Quick Job Lines - Visible Immediately */}
+      {jobs.length > 0 && (
+        <section className="py-6 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <HotJobsLines
+              jobs={jobs.map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Latest Fractional GC Jobs"
+              maxJobs={12}
+              viewAllHref="#jobs"
+              viewAllText="See all jobs"
+            />
+          </div>
+        </section>
+      )}
+
       {/* Calculator */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
@@ -181,7 +243,7 @@ export default async function FractionalGeneralCounselJobsUkPage() {
              <span className="text-xs font-bold uppercase tracking-[0.2em] text-gray-600 mb-2 block">Calculator</span>
             <h2 className="text-2xl md:text-3xl font-black text-gray-900">Earnings Calculator</h2>
           </div>
-          <RoleCalculator role="cfo" /> 
+          <RoleCalculator role="cfo" />
         </div>
       </section>
 
@@ -322,7 +384,40 @@ export default async function FractionalGeneralCounselJobsUkPage() {
         </div>
       </section>
 
-      <RoleContentHub currentRole="compliance" /> 
+      {/* Related Jobs Section */}
+      {relatedJobs.length > 0 && (
+        <section className="py-12 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                More Fractional Jobs Across the UK
+              </h2>
+              <p className="text-gray-600">
+                Explore other fractional executive opportunities
+              </p>
+            </div>
+            <HotJobsLines
+              jobs={relatedJobs.map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Related Opportunities"
+              maxJobs={15}
+              viewAllHref="/fractional-jobs-uk"
+              viewAllText="View all UK jobs"
+            />
+          </div>
+        </section>
+      )}
+
+      <RoleContentHub currentRole="compliance" />
       {/* Mapped to Compliance/Legal */}
     </div>
   )

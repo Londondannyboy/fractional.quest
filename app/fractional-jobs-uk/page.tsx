@@ -11,6 +11,7 @@ import { JobSearch } from '@/components/JobSearch'
 import { TLDR } from '@/components/TLDR'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 import { LazyYouTube } from '@/components/LazyYouTube'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 import { CalculatorSkeleton } from '@/components/ui/Skeleton'
 import { SavedJobsCounter } from '@/components/SavedJobsCounter'
@@ -186,6 +187,23 @@ async function getUKJobs() {
   }
 }
 
+async function getWiderJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND (is_remote = true OR location ILIKE '%remote%' OR location NOT ILIKE '%uk%')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 15
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
+
 // Helper to estimate day rates based on role category
 function estimateRateByRole(roleCategory?: string): { min: number; max: number } | undefined {
   if (!roleCategory) return undefined
@@ -214,9 +232,10 @@ function estimateRateByRole(roleCategory?: string): { min: number; max: number }
 }
 
 export default async function FractionalJobsUKPage() {
-  const [stats, ukJobs] = await Promise.all([
+  const [stats, ukJobs, widerJobs] = await Promise.all([
     getUKStats(),
-    getUKJobs()
+    getUKJobs(),
+    getWiderJobs()
   ])
 
   const mostRecentJob = ukJobs[0]
@@ -473,6 +492,31 @@ export default async function FractionalJobsUKPage() {
           </div>
         </div>
       </section>
+
+      {/* Quick Job Lines - Visible Immediately Above Fold */}
+      {(ukJobs as any[]).length > 0 && (
+        <section className="py-6 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <HotJobsLines
+              jobs={(ukJobs as any[]).map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Latest UK Fractional Jobs"
+              maxJobs={12}
+              viewAllHref="#jobs"
+              viewAllText="See all jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Featured Jobs Section with Filters */}
       {(ukJobs as any[]).length > 0 && (
@@ -912,6 +956,39 @@ export default async function FractionalJobsUKPage() {
       </section>
 
 
+
+      {/* Wider Jobs Section - Remote & International Opportunities */}
+      {(widerJobs as any[]).length > 0 && (
+        <section className="py-12 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                Remote & International Opportunities
+              </h2>
+              <p className="text-gray-600">
+                Fractional roles available remotely or internationally.
+              </p>
+            </div>
+            <HotJobsLines
+              jobs={(widerJobs as any[]).map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Remote & Global Opportunities"
+              maxJobs={15}
+              viewAllHref="/fractional-jobs-remote"
+              viewAllText="View remote jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Internal Links - Subtle footer */}
       <section className="py-12 md:py-16 bg-white border-t border-gray-200">

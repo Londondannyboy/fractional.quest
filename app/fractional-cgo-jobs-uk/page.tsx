@@ -13,6 +13,7 @@ import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 import { LazyYouTube } from '@/components/LazyYouTube'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 export const revalidate = 3600
 

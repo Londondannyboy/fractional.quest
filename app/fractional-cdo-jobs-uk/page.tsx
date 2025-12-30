@@ -15,6 +15,7 @@ import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 import { LazyYouTube } from '@/components/LazyYouTube'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 export const revalidate = 3600
 
@@ -85,6 +86,25 @@ async function getCDOJobs() {
   }
 }
 
+// Get related jobs from OTHER roles for cross-promotion
+async function getRelatedJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND role_category IS NOT NULL
+        AND role_category != 'Data'
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 15
+    `
+    return jobs as any[]
+  } catch {
+    return []
+  }
+}
+
 function getDaysAgo(postedDate: string | null): number | undefined {
   if (!postedDate) return undefined
   const posted = new Date(postedDate)
@@ -121,10 +141,11 @@ const CDO_FAQS = [
 ]
 
 export default async function FractionalCdoJobsUkPage() {
-  const [stats, companies, jobs] = await Promise.all([
+  const [stats, companies, jobs, relatedJobs] = await Promise.all([
     getCDOStats(),
     getFeaturedCompanies(),
-    getCDOJobs()
+    getCDOJobs(),
+    getRelatedJobs()
   ])
 
   const mostRecentJob = jobs[0]

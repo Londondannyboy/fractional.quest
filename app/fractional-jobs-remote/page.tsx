@@ -1,7 +1,9 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 export const revalidate = 3600
 
@@ -38,7 +40,53 @@ const faqItems = [
   },
 ]
 
-export default function FractionalJobsRemotePage() {
+// Get remote jobs for this page
+async function getRemoteJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote,
+        compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND (is_remote = true OR location ILIKE '%remote%')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 15
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
+
+// Get wider UK jobs (office-based) for the "More Across UK" section
+async function getWiderUKJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote,
+        compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND (
+          location ILIKE '%uk%' OR location ILIKE '%united kingdom%'
+          OR location ILIKE '%london%' OR location ILIKE '%manchester%'
+          OR location ILIKE '%birmingham%' OR location ILIKE '%leeds%'
+          OR location ILIKE '%bristol%' OR location ILIKE '%edinburgh%'
+        )
+        AND is_remote = false
+        AND location NOT ILIKE '%remote%'
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 15
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
+
+export default async function FractionalJobsRemotePage() {
+  const [remoteJobs, widerUKJobs] = await Promise.all([getRemoteJobs(), getWiderUKJobs()])
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
@@ -81,6 +129,31 @@ export default function FractionalJobsRemotePage() {
           </div>
         </div>
       </section>
+
+      {/* Quick Job Lines - Visible Immediately After Stats */}
+      {(remoteJobs as any[]).length > 0 && (
+        <section className="py-6 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <HotJobsLines
+              jobs={(remoteJobs as any[]).map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Latest Remote Fractional Jobs"
+              maxJobs={12}
+              viewAllHref="/fractional-jobs-uk?type=Remote"
+              viewAllText="See all remote jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Image */}
       <section className="py-12 bg-gray-50">
@@ -269,6 +342,39 @@ export default function FractionalJobsRemotePage() {
           <FAQ items={faqItems} title="" />
         </div>
       </section>
+
+      {/* Wider UK Jobs Section - Shows office-based jobs */}
+      {(widerUKJobs as any[]).length > 0 && (
+        <section className="py-12 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                Office-Based Fractional Jobs Across the UK
+              </h2>
+              <p className="text-gray-600">
+                Prefer working on-site? Explore office-based opportunities in London, Manchester, Birmingham, and other UK cities.
+              </p>
+            </div>
+            <HotJobsLines
+              jobs={(widerUKJobs as any[]).map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="UK Office-Based Opportunities"
+              maxJobs={15}
+              viewAllHref="/fractional-jobs-uk"
+              viewAllText="View all UK jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="py-20 bg-cyan-600 text-white">

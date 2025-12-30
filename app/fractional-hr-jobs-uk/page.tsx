@@ -14,6 +14,7 @@ import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 export const revalidate = 3600
 
@@ -84,6 +85,22 @@ async function getHRJobs() {
   }
 }
 
+async function getRelatedJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 15
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
+
 const HR_FAQS = [
   {
     question: 'What is a fractional HR job?',
@@ -112,7 +129,7 @@ const HR_FAQS = [
 ]
 
 export default async function FractionalHrJobsUkPage() {
-  const [stats, companies, jobs] = await Promise.all([getHRStats(), getFeaturedCompanies(), getHRJobs()])
+  const [stats, companies, jobs, relatedJobs] = await Promise.all([getHRStats(), getFeaturedCompanies(), getHRJobs(), getRelatedJobs()])
 
   const mostRecentJob = jobs[0]
   const lastUpdatedDate = mostRecentJob?.posted_date ? new Date(mostRecentJob.posted_date) : new Date()
@@ -184,6 +201,31 @@ export default async function FractionalHrJobsUkPage() {
           </div>
         </div>
       </section>
+
+      {/* Quick Job Lines - Visible Immediately */}
+      {(jobs as any[]).length > 0 && (
+        <section className="py-6 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <HotJobsLines
+              jobs={(jobs as any[]).map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Latest HR & People Jobs"
+              maxJobs={12}
+              viewAllHref="#jobs"
+              viewAllText="See all HR jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Calculator */}
       <section className="py-12 bg-gray-50">
@@ -465,6 +507,39 @@ export default async function FractionalHrJobsUkPage() {
           <FAQ items={HR_FAQS} title="" />
         </div>
       </section>
+
+      {/* Related Jobs Section */}
+      {(relatedJobs as any[]).length > 0 && (
+        <section className="py-12 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                More Fractional Jobs Across the UK
+              </h2>
+              <p className="text-gray-600">
+                Explore other fractional executive opportunities.
+              </p>
+            </div>
+            <HotJobsLines
+              jobs={(relatedJobs as any[]).map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Related Opportunities"
+              maxJobs={15}
+              viewAllHref="/fractional-jobs-uk"
+              viewAllText="View all UK jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="py-20 md:py-28 bg-gray-50 text-white">
