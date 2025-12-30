@@ -12,6 +12,7 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { ExpertProfile, ExpertProfileSchema } from '@/components/ExpertProfile'
 import { CaseStudy, CaseStudySchema } from '@/components/CaseStudy'
+import { LazyYouTube } from '@/components/LazyYouTube'
 
 export const revalidate = 3600
 
@@ -377,15 +378,10 @@ export default async function FractionalCioJobsUkPage() {
             {/* Video 1: What is a CIO */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">What Does a Chief Information Officer Do?</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/QwqnBYR7Cqk"
-                  title="What Does a CIO Do? Chief Information Officer Role Explained"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube
+                videoId="QwqnBYR7Cqk"
+                title="What Does a CIO Do? Chief Information Officer Role Explained"
+              />
               <p className="text-gray-500 text-sm mt-3">Learn how fractional CIOs drive digital transformation in UK businesses</p>
             </div>
 
@@ -408,15 +404,10 @@ export default async function FractionalCioJobsUkPage() {
             {/* Video 2: Digital Transformation */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">Digital Transformation Strategy</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/mESrgDN1H6M"
-                  title="Digital Transformation Strategy Guide"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube
+                videoId="mESrgDN1H6M"
+                title="Digital Transformation Strategy Guide"
+              />
               <p className="text-gray-500 text-sm mt-3">How fractional CIOs lead cloud migration and IT modernisation</p>
             </div>
 

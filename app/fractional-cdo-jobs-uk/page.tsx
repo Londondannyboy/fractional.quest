@@ -13,6 +13,7 @@ import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
+import { LazyYouTube } from '@/components/LazyYouTube'
 
 export const revalidate = 3600
 
@@ -361,15 +362,7 @@ export default async function FractionalCdoJobsUkPage() {
             {/* Video 1: What is a CDO */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Chief Data Officer?</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/ZTqk5FGM3Xk"
-                  title="What is a Chief Data Officer (CDO)?"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube videoId="ZTqk5FGM3Xk" title="What is a Chief Data Officer (CDO)?" />
               <p className="text-gray-500 text-sm mt-3">Learn how fractional CDOs drive data strategy and AI readiness</p>
             </div>
 
@@ -413,15 +406,7 @@ export default async function FractionalCdoJobsUkPage() {
             {/* Video 2: Modern Data Stack */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">Building a Modern Data Stack</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/OU5rMdyQ4dA"
-                  title="Building a Modern Data Stack"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube videoId="OU5rMdyQ4dA" title="Building a Modern Data Stack" />
               <p className="text-gray-500 text-sm mt-3">How fractional CDOs implement Snowflake, Databricks, and modern analytics</p>
             </div>
 

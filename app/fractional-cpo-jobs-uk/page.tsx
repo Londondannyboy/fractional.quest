@@ -13,6 +13,7 @@ import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
+import { LazyYouTube } from '@/components/LazyYouTube'
 
 export const revalidate = 3600
 
@@ -361,15 +362,7 @@ export default async function FractionalCpoJobsUkPage() {
             {/* Video 1: What is a CPO */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">What Does a Chief Product Officer Do?</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/2vfkjAzYCM4"
-                  title="What Does a Chief Product Officer Do?"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube videoId="2vfkjAzYCM4" title="What Does a Chief Product Officer Do?" />
               <p className="text-gray-500 text-sm mt-3">Learn how fractional CPOs shape product strategy and build winning products</p>
             </div>
 
@@ -419,15 +412,7 @@ export default async function FractionalCpoJobsUkPage() {
             {/* Video 2: Product-Led Growth */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">Building Product-Led Growth (PLG)</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/tKf9gI_M-dg"
-                  title="How to Build a Product-Led Growth Strategy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube videoId="tKf9gI_M-dg" title="How to Build a Product-Led Growth Strategy" />
               <p className="text-gray-500 text-sm mt-3">How fractional CPOs implement PLG strategies for B2B SaaS companies</p>
             </div>
 

@@ -13,6 +13,7 @@ import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 import { ExpertProfile, ExpertProfileSchema } from '@/components/ExpertProfile'
 import { CaseStudy, CaseStudySchema } from '@/components/CaseStudy'
+import { LazyYouTube } from '@/components/LazyYouTube'
 
 export const revalidate = 3600
 
@@ -422,15 +423,10 @@ export default async function FractionalCeoJobsUkPage() {
             {/* Video 1: What is a Fractional CEO */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Fractional CEO?</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/7nANHHQBHvI"
-                  title="What is a Fractional CEO?"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube
+                videoId="7nANHHQBHvI"
+                title="What is a Fractional CEO?"
+              />
               <p className="text-gray-500 text-sm mt-3">Learn how fractional CEOs provide executive leadership to UK businesses</p>
             </div>
 
@@ -479,15 +475,10 @@ export default async function FractionalCeoJobsUkPage() {
             {/* Video 2: Scaling a Business */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">How to Scale a Business: CEO Strategies</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/0BSiVEqJZEE"
-                  title="How to Scale a Business: CEO Strategies"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube
+                videoId="0BSiVEqJZEE"
+                title="How to Scale a Business: CEO Strategies"
+              />
               <p className="text-gray-500 text-sm mt-3">How fractional CEOs drive growth and prepare companies for exit</p>
             </div>
 

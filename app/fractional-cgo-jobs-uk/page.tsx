@@ -11,6 +11,7 @@ import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
+import { LazyYouTube } from '@/components/LazyYouTube'
 
 export const revalidate = 3600
 
@@ -359,15 +360,7 @@ export default async function FractionalCgoJobsUkPage() {
             {/* Video 1: What is a CSO/CGO */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Chief Sustainability Officer?</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/nBV7pG3P8fc"
-                  title="What is a Chief Sustainability Officer (CSO)?"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube videoId="nBV7pG3P8fc" title="What is a Chief Sustainability Officer (CSO)?" />
               <p className="text-gray-500 text-sm mt-3">Learn how fractional CGOs drive ESG strategy and net-zero initiatives</p>
             </div>
 
@@ -407,15 +400,7 @@ export default async function FractionalCgoJobsUkPage() {
             {/* Video 2: Net Zero Strategy */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">Developing a Net Zero Strategy</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/eIbGhjE8h9s"
-                  title="Net Zero Strategy for Businesses"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube videoId="eIbGhjE8h9s" title="Net Zero Strategy for Businesses" />
               <p className="text-gray-500 text-sm mt-3">How fractional CGOs create carbon reduction roadmaps for UK businesses</p>
             </div>
 

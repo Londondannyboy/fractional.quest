@@ -9,6 +9,7 @@ import { FracSection } from '@/components/FracSection'
 import { JobSearch } from '@/components/JobSearch'
 import { TLDR } from '@/components/TLDR'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
+import { LazyYouTube } from '@/components/LazyYouTube'
 
 import { CalculatorSkeleton } from '@/components/ui/Skeleton'
 import { SavedJobsCounter } from '@/components/SavedJobsCounter'
@@ -729,15 +730,7 @@ export default async function FractionalJobsUKPage() {
           {/* Video 1: What is a Fractional Executive */}
           <div className="my-10 not-prose">
             <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Fractional Executive?</h4>
-            <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-              <iframe
-                src="https://www.youtube.com/embed/QI1tHp_D-AI"
-                title="What is a Fractional Executive? The Complete Guide"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              />
-            </div>
+            <LazyYouTube videoId="QI1tHp_D-AI" title="What is a Fractional Executive? The Complete Guide" />
             <p className="text-gray-500 text-sm mt-3">Learn what fractional executives do and how the UK market works</p>
           </div>
 
@@ -1252,15 +1245,7 @@ export default async function FractionalJobsUKPage() {
           {/* Video 2: How to Become a Fractional Executive */}
           <div className="my-10 not-prose">
             <h4 className="text-lg font-bold text-gray-900 mb-4">How to Become a Fractional Executive</h4>
-            <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-              <iframe
-                src="https://www.youtube.com/embed/r5WlSD_h-c4"
-                title="How to Become a Fractional Executive"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              />
-            </div>
+            <LazyYouTube videoId="r5WlSD_h-c4" title="How to Become a Fractional Executive" />
             <p className="text-gray-500 text-sm mt-3">Step-by-step guide to launching your fractional executive career</p>
           </div>
 

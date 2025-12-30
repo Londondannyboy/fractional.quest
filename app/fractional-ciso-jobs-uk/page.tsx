@@ -12,6 +12,7 @@ import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 import { ExpertProfile, ExpertProfileSchema } from '@/components/ExpertProfile'
 import { CaseStudy, CaseStudySchema } from '@/components/CaseStudy'
+import { LazyYouTube } from '@/components/LazyYouTube'
 
 export const revalidate = 3600
 
@@ -469,15 +470,10 @@ export default async function FractionalCisoJobsUkPage() {
             {/* Video 1: What is a vCISO */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Virtual CISO (vCISO)?</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/Yl8LkRQZeNg"
-                  title="What is a Virtual CISO (vCISO)?"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube
+                videoId="Yl8LkRQZeNg"
+                title="What is a Virtual CISO (vCISO)?"
+              />
               <p className="text-gray-500 text-sm mt-3">Learn how fractional CISOs provide security leadership to UK businesses</p>
             </div>
 
@@ -530,15 +526,10 @@ export default async function FractionalCisoJobsUkPage() {
             {/* Video 2: SOC 2 Compliance */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">Understanding SOC 2 Compliance</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/hMdcK4nC2wE"
-                  title="SOC 2 Compliance Explained"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube
+                videoId="hMdcK4nC2wE"
+                title="SOC 2 Compliance Explained"
+              />
               <p className="text-gray-500 text-sm mt-3">How fractional CISOs guide UK companies through SOC 2 certification</p>
             </div>
 

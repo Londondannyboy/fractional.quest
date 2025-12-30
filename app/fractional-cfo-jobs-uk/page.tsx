@@ -16,6 +16,7 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { ExpertProfile, ExpertProfileSchema } from '@/components/ExpertProfile'
 import { CaseStudy, CaseStudySchema } from '@/components/CaseStudy'
+import { LazyYouTube } from '@/components/LazyYouTube'
 
 export const revalidate = 3600
 
@@ -326,18 +327,13 @@ export default async function FractionalCfoJobsUkPage() {
             <p>The UK market for <strong>fractional CFO jobs</strong> has grown by over 180% in the past three years, with demand for <strong>fractional finance director</strong> roles growing even faster (+260% YoY). According to <a href="https://www.cipd.org/uk/knowledge/reports/flexible-working-trends/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD research on flexible working trends</a>, senior executive roles are increasingly embracing part-time and portfolio models.</p>
             <p>This surge reflects a fundamental shift in how companies access senior finance talent. <a href="https://www.gov.uk/business-finance-support" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Startups, scale-ups, and SMEs</a> need experienced financial leadership but cannot justify a full-time CFO salary of £150,000-£300,000. The <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ONS employment data</a> shows self-employment in professional services has grown steadily, with finance executives leading the shift to flexible working.</p>
 
-            {/* Video 1: What is a Fractional CFO */}
+            {/* Video 1: What is a Fractional CFO - Lazy loaded for performance */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Fractional CFO?</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/4TJhPLGFz4E"
-                  title="What is a Fractional CFO? Role Explained"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube
+                videoId="4TJhPLGFz4E"
+                title="What is a Fractional CFO? Role Explained"
+              />
               <p className="text-gray-500 text-sm mt-3">Learn how fractional CFOs provide strategic finance leadership to UK businesses</p>
             </div>
 
@@ -408,18 +404,13 @@ export default async function FractionalCfoJobsUkPage() {
               The growing demand for <strong>fractional finance director jobs</strong> means the transition is becoming more straightforward, with many finance leaders successfully building portfolio careers within 6-12 months of starting.
             </p>
 
-            {/* Video 2: How to Become a Fractional CFO */}
+            {/* Video 2: How to Become a Fractional CFO - Lazy loaded for performance */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">How to Become a Fractional CFO</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/cR2sZ0u7JKg"
-                  title="How to Become a Fractional CFO"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube
+                videoId="cR2sZ0u7JKg"
+                title="How to Become a Fractional CFO"
+              />
               <p className="text-gray-500 text-sm mt-3">Step-by-step guide to building a fractional CFO career in the UK</p>
             </div>
 

@@ -16,6 +16,7 @@ import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 import { FAQPageSchema } from '@/components/FAQPageSchema'
 import { ExpertProfile, ExpertProfileSchema } from '@/components/ExpertProfile'
 import { CaseStudy, CaseStudySchema } from '@/components/CaseStudy'
+import { LazyYouTube } from '@/components/LazyYouTube'
 
 export const revalidate = 3600
 
@@ -347,15 +348,10 @@ export default async function FractionalCmoJobsUkPage() {
             {/* Video 1: What is a Fractional CMO */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Fractional CMO?</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/L8vLq6nqQdM"
-                  title="What is a Fractional CMO? Role Explained"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube
+                videoId="L8vLq6nqQdM"
+                title="What is a Fractional CMO? Role Explained"
+              />
               <p className="text-gray-500 text-sm mt-3">Learn how fractional CMOs provide strategic marketing leadership to UK businesses</p>
             </div>
 
@@ -406,15 +402,10 @@ export default async function FractionalCmoJobsUkPage() {
             {/* Video 2: Fractional CMO vs Marketing Consultant */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">Fractional CMO vs Marketing Consultant</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/R8xXiQA7F5o"
-                  title="Fractional CMO vs Marketing Consultant"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube
+                videoId="R8xXiQA7F5o"
+                title="Fractional CMO vs Marketing Consultant"
+              />
               <p className="text-gray-500 text-sm mt-3">Understand the key differences between fractional CMO and marketing consultant roles</p>
             </div>
 

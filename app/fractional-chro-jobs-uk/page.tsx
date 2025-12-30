@@ -13,6 +13,7 @@ import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
 import { ExpertProfile, ExpertProfileSchema } from '@/components/ExpertProfile'
 import { CaseStudy, CaseStudySchema } from '@/components/CaseStudy'
+import { LazyYouTube } from '@/components/LazyYouTube'
 
 export const revalidate = 3600
 
@@ -423,15 +424,10 @@ export default async function FractionalCHROJobsUKPage() {
             {/* Video 1: What is a Fractional CHRO */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Fractional CHRO?</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/YqWbqLVVsKE"
-                  title="What is a Fractional CHRO? Role Explained"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube
+                videoId="YqWbqLVVsKE"
+                title="What is a Fractional CHRO? Role Explained"
+              />
               <p className="text-gray-500 text-sm mt-3">Learn how fractional CHROs provide strategic HR leadership to UK businesses</p>
             </div>
 
@@ -574,15 +570,10 @@ export default async function FractionalCHROJobsUKPage() {
             {/* Video 2: How to Become a Fractional CHRO */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">How to Become a Fractional CHRO</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/HzTZLrxRuqk"
-                  title="How to Become a Fractional CHRO"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube
+                videoId="HzTZLrxRuqk"
+                title="How to Become a Fractional CHRO"
+              />
               <p className="text-gray-500 text-sm mt-3">Step-by-step guide to building a fractional CHRO career in the UK</p>
             </div>
 

@@ -13,6 +13,7 @@ import { BreadcrumbsLight } from '@/components/Breadcrumbs'
 import { JobListingSchema } from '@/components/JobPostingSchema'
 import { getRoleBreadcrumbs } from '@/lib/seo-config'
 import { WebPageSchema, LastUpdatedBadge } from '@/components/WebPageSchema'
+import { LazyYouTube } from '@/components/LazyYouTube'
 
 export const revalidate = 3600
 
@@ -361,15 +362,7 @@ export default async function FractionalCroJobsUkPage() {
             {/* Video 1: What is a CRO */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">What is a Chief Revenue Officer?</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/qE6xsCoWNuE"
-                  title="What is a Chief Revenue Officer (CRO)?"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube videoId="qE6xsCoWNuE" title="What is a Chief Revenue Officer (CRO)?" />
               <p className="text-gray-500 text-sm mt-3">Learn how fractional CROs drive revenue growth across sales, marketing, and customer success</p>
             </div>
 
@@ -419,15 +412,7 @@ export default async function FractionalCroJobsUkPage() {
             {/* Video 2: RevOps and Revenue Leadership */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">Building Revenue Operations (RevOps)</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/CsYE_HYbFFI"
-                  title="How to Build Revenue Operations (RevOps)"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube videoId="CsYE_HYbFFI" title="How to Build Revenue Operations (RevOps)" />
               <p className="text-gray-500 text-sm mt-3">How fractional CROs implement RevOps to create predictable revenue growth</p>
             </div>
 
