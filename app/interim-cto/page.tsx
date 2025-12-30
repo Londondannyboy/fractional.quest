@@ -2,8 +2,45 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
+import { createDbQuery } from '@/lib/db'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 export const revalidate = 3600
+
+async function getInterimCTOJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND (title ILIKE '%interim%cto%' OR title ILIKE '%interim%tech%')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 10
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
+
+async function getRelatedCTOJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND (title ILIKE '%fractional%cto%' OR title ILIKE '%fractional%tech%' OR role_category ILIKE '%tech%' OR role_category ILIKE '%cto%')
+        AND title NOT ILIKE '%interim%'
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 10
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
 
 export const metadata: Metadata = {
   title: 'Interim CTO Services UK',
@@ -17,7 +54,9 @@ export const metadata: Metadata = {
   },
 }
 
-export default function InterimCTOPage() {
+export default async function InterimCTOPage() {
+  const [interimJobs, relatedJobs] = await Promise.all([getInterimCTOJobs(), getRelatedCTOJobs()])
+
   return (
     <div className="min-h-screen bg-white">
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
@@ -53,6 +92,31 @@ export default function InterimCTOPage() {
           </div>
         </div>
       </section>
+
+      {/* Live Interim CTO Jobs */}
+      {(interimJobs as any[]).length > 0 && (
+        <section className="py-8 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <HotJobsLines
+              jobs={(interimJobs as any[]).map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Live Interim CTO Jobs"
+              maxJobs={10}
+              viewAllHref="/interim-jobs-uk"
+              viewAllText="View all interim jobs"
+            />
+          </div>
+        </section>
+      )}
 
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
@@ -145,6 +209,35 @@ export default function InterimCTOPage() {
           </div>
         </div>
       </section>
+
+      {/* Related Fractional Jobs */}
+      {(relatedJobs as any[]).length > 0 && (
+        <section className="py-8 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="mb-4">
+              <h2 className="text-xl font-bold text-gray-900">Prefer Part-Time? Fractional CTO Roles</h2>
+              <p className="text-sm text-gray-600">Ongoing part-time positions (1-3 days/week)</p>
+            </div>
+            <HotJobsLines
+              jobs={(relatedJobs as any[]).map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Fractional CTO Jobs"
+              maxJobs={10}
+              viewAllHref="/fractional-cto-jobs-uk"
+              viewAllText="View all fractional CTO jobs"
+            />
+          </div>
+        </section>
+      )}
 
       <section className="py-12 bg-white border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">

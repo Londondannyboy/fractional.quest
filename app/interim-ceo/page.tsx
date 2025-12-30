@@ -6,8 +6,44 @@ import { FAQ } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
 import { IR35Calculator } from '@/components/IR35Calculator'
 import { RoleContentHub } from '@/components/RoleContentHub'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 export const revalidate = 3600
+
+async function getInterimCEOJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND (title ILIKE '%interim%ceo%' OR title ILIKE '%interim%chief executive%')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 10
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
+
+async function getRelatedCEOJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND (title ILIKE '%fractional%ceo%' OR title ILIKE '%fractional%chief executive%' OR role_category ILIKE '%ceo%' OR role_category ILIKE '%executive%')
+        AND title NOT ILIKE '%interim%'
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 10
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
 
 export const metadata: Metadata = {
   title: 'Interim CEO UK 2025',
@@ -116,10 +152,12 @@ function getDaysAgo(postedDate: string | null): number | undefined {
 }
 
 export default async function InterimCeoPage() {
-  const [stats, companies, jobs] = await Promise.all([
+  const [stats, companies, jobs, interimJobs, relatedJobs] = await Promise.all([
     getExecutiveStats(),
     getFeaturedCompanies(),
-    getExecutiveJobs()
+    getExecutiveJobs(),
+    getInterimCEOJobs(),
+    getRelatedCEOJobs()
   ])
 
   return (
@@ -180,6 +218,31 @@ export default async function InterimCeoPage() {
           </div>
         </div>
       </section>
+
+      {/* Live Interim CEO Jobs */}
+      {(interimJobs as any[]).length > 0 && (
+        <section className="py-8 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <HotJobsLines
+              jobs={(interimJobs as any[]).map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Live Interim CEO Jobs"
+              maxJobs={10}
+              viewAllHref="/interim-jobs-uk"
+              viewAllText="View all interim jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Stats Cards */}
       <section className="py-12 bg-gray-50">
@@ -813,6 +876,35 @@ export default async function InterimCeoPage() {
           </div>
         </div>
       </section>
+
+      {/* Related Fractional Jobs */}
+      {(relatedJobs as any[]).length > 0 && (
+        <section className="py-8 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="mb-4">
+              <h2 className="text-xl font-bold text-gray-900">Prefer Part-Time? Fractional CEO Roles</h2>
+              <p className="text-sm text-gray-600">Ongoing part-time positions (1-3 days/week)</p>
+            </div>
+            <HotJobsLines
+              jobs={(relatedJobs as any[]).map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Fractional CEO Jobs"
+              maxJobs={10}
+              viewAllHref="/fractional-ceo-jobs-uk"
+              viewAllText="View all fractional CEO jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Related Pages */}
       <section className="py-12 bg-white border-t border-gray-200">

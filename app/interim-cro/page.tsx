@@ -2,8 +2,45 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
+import { createDbQuery } from '@/lib/db'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 export const revalidate = 3600
+
+async function getInterimCROJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND (title ILIKE '%interim%cro%' OR title ILIKE '%interim%revenue%')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 10
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
+
+async function getRelatedCROJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND (title ILIKE '%fractional%cro%' OR title ILIKE '%fractional%revenue%' OR role_category ILIKE '%revenue%' OR role_category ILIKE '%sales%')
+        AND title NOT ILIKE '%interim%'
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 10
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
 
 export const metadata: Metadata = {
   title: 'Interim CRO Services UK',
@@ -12,7 +49,9 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://fractional.quest/interim-cro' },
 }
 
-export default function InterimCROPage() {
+export default async function InterimCROPage() {
+  const [interimJobs, relatedJobs] = await Promise.all([getInterimCROJobs(), getRelatedCROJobs()])
+
   return (
     <div className="min-h-screen bg-white">
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
@@ -35,6 +74,31 @@ export default function InterimCROPage() {
           </div>
         </div>
       </section>
+
+      {/* Live Interim CRO Jobs */}
+      {(interimJobs as any[]).length > 0 && (
+        <section className="py-8 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <HotJobsLines
+              jobs={(interimJobs as any[]).map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Live Interim CRO Jobs"
+              maxJobs={10}
+              viewAllHref="/interim-jobs-uk"
+              viewAllText="View all interim jobs"
+            />
+          </div>
+        </section>
+      )}
 
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
@@ -93,6 +157,35 @@ export default function InterimCROPage() {
           </div>
         </div>
       </section>
+
+      {/* Related Fractional Jobs */}
+      {(relatedJobs as any[]).length > 0 && (
+        <section className="py-8 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="mb-4">
+              <h2 className="text-xl font-bold text-gray-900">Prefer Part-Time? Fractional CRO Roles</h2>
+              <p className="text-sm text-gray-600">Ongoing part-time positions (1-3 days/week)</p>
+            </div>
+            <HotJobsLines
+              jobs={(relatedJobs as any[]).map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Fractional CRO Jobs"
+              maxJobs={10}
+              viewAllHref="/fractional-cro-jobs-uk"
+              viewAllText="View all fractional CRO jobs"
+            />
+          </div>
+        </section>
+      )}
     </div>
   )
 }

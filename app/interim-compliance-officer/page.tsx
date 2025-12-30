@@ -1,6 +1,43 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
+import { createDbQuery } from '@/lib/db'
+import { HotJobsLines } from '@/components/HotJobsLines'
+
+async function getInterimComplianceJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND (title ILIKE '%interim%compliance%' OR title ILIKE '%interim%cco%' OR title ILIKE '%interim%mlro%')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 10
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
+
+async function getRelatedComplianceJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND (title ILIKE '%fractional%compliance%' OR title ILIKE '%part-time%compliance%' OR role_category ILIKE '%compliance%')
+        AND title NOT ILIKE '%interim%'
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 10
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
 
 export const metadata: Metadata = {
   title: 'Interim Compliance Officer UK',
@@ -82,7 +119,9 @@ const interimScenarios = [
   }
 ]
 
-export default function InterimComplianceOfficerPage() {
+export default async function InterimComplianceOfficerPage() {
+  const [interimJobs, relatedJobs] = await Promise.all([getInterimComplianceJobs(), getRelatedComplianceJobs()])
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
@@ -134,6 +173,31 @@ export default function InterimComplianceOfficerPage() {
           </div>
         </div>
       </section>
+
+      {/* Live Interim Compliance Jobs */}
+      {(interimJobs as any[]).length > 0 && (
+        <section className="py-8 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <HotJobsLines
+              jobs={(interimJobs as any[]).map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Live Interim Compliance Jobs"
+              maxJobs={10}
+              viewAllHref="/interim-jobs-uk"
+              viewAllText="View all interim jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* What is Interim Compliance */}
       <section className="py-16 md:py-20 bg-white">
@@ -348,6 +412,35 @@ export default function InterimComplianceOfficerPage() {
           </div>
         </div>
       </section>
+
+      {/* Related Fractional Jobs */}
+      {(relatedJobs as any[]).length > 0 && (
+        <section className="py-8 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="mb-4">
+              <h2 className="text-xl font-bold text-gray-900">Prefer Part-Time? Fractional Compliance Roles</h2>
+              <p className="text-sm text-gray-600">Ongoing part-time positions (1-3 days/week)</p>
+            </div>
+            <HotJobsLines
+              jobs={(relatedJobs as any[]).map(job => ({
+                id: job.id,
+                slug: job.slug,
+                title: job.title,
+                company_name: job.company_name,
+                location: job.location,
+                compensation: job.compensation,
+                role_category: job.role_category,
+                posted_date: job.posted_date,
+                is_remote: job.is_remote,
+              }))}
+              title="Fractional Compliance Jobs"
+              maxJobs={10}
+              viewAllHref="/part-time-compliance-jobs-uk"
+              viewAllText="View all fractional compliance jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Related */}
       <section className="py-12 bg-white border-t border-slate-200">
