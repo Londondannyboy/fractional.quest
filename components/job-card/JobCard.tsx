@@ -309,13 +309,13 @@ export function JobCard({
             )}
             {/* New badge for recent posts */}
             {postedDaysAgo !== undefined && postedDaysAgo <= 2 && (
-              <span className="bg-amber-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm animate-pulse">
+              <span className="bg-amber-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm animate-pulse">
                 New
               </span>
             )}
             {/* Hot badge for posts 3-7 days old */}
             {postedDaysAgo !== undefined && postedDaysAgo > 2 && postedDaysAgo <= 7 && (
-              <span className="bg-orange-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+              <span className="bg-orange-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
                 Hot
               </span>
             )}
@@ -333,13 +333,13 @@ export function JobCard({
           <div className="flex flex-col items-end gap-2">
             {/* Remote badge */}
             {isRemote && (
-              <span className="bg-teal-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+              <span className="bg-teal-700 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
                 Remote
               </span>
             )}
             {/* Flexibility badge */}
             {flexibilityInfo && (
-              <span className="bg-purple-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+              <span className="bg-purple-700 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
                 {flexibilityInfo.days}
               </span>
             )}
@@ -473,7 +473,7 @@ export function JobCard({
               {postedDisplay}
             </span>
           )}
-          <span className="inline-flex items-center gap-1.5 px-4 py-2 bg-teal-600 text-white text-sm font-semibold rounded-lg group-hover:bg-teal-700 transition-colors">
+          <span className="inline-flex items-center gap-1.5 px-4 py-2 bg-teal-700 text-white text-sm font-semibold rounded-lg group-hover:bg-teal-800 transition-colors">
             Apply Now
             <svg className="w-4 h-4 transform group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

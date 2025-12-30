@@ -62,10 +62,11 @@ export function HotJobs({
   title = 'Hot Jobs',
   maxJobs = 5
 }: HotJobsProps) {
-  const [currentTime, setCurrentTime] = useState(new Date())
+  const [currentTime, setCurrentTime] = useState<Date | null>(null)
 
-  // Update time every minute for live timestamps
+  // Only render time on client to avoid hydration mismatch
   useEffect(() => {
+    setCurrentTime(new Date())
     const interval = setInterval(() => {
       setCurrentTime(new Date())
     }, 60000) // Update every minute
@@ -105,21 +106,23 @@ export function HotJobs({
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
           </span>
-          <h3 className="text-lg font-bold text-gray-900">{title}</h3>
+          <h2 className="text-lg font-bold text-gray-900">{title}</h2>
           {newCount > 0 && (
-            <span className="px-2 py-0.5 text-xs font-bold bg-orange-500 text-white rounded-full">
+            <span className="px-2 py-0.5 text-xs font-bold bg-orange-600 text-white rounded-full">
               {newCount} today
             </span>
           )}
           {hotCount > 0 && (
-            <span className="px-2 py-0.5 text-xs font-bold bg-red-500 text-white rounded-full animate-pulse">
+            <span className="px-2 py-0.5 text-xs font-bold bg-red-600 text-white rounded-full animate-pulse">
               {hotCount} just in
             </span>
           )}
         </div>
-        <span className="text-xs text-gray-500" suppressHydrationWarning>
-          Updated {currentTime.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
-        </span>
+        {currentTime && (
+          <span className="text-xs text-gray-600">
+            Updated {currentTime.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
+          </span>
+        )}
       </div>
 
       {/* Job List */}
@@ -164,7 +167,7 @@ export function HotJobs({
                   job.relativeTime.isHot
                     ? 'bg-red-100 text-red-700'
                     : 'bg-gray-100 text-gray-600'
-                }`}>
+                }`} suppressHydrationWarning>
                   {job.relativeTime.isHot && (
                     <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" />
@@ -237,12 +240,12 @@ export function HotJobsCompact({
                 {job.title}
               </span>
               <span className={`text-xs ml-2 ${
-                job.relativeTime.isHot ? 'text-red-600 font-medium' : 'text-gray-500'
-              }`}>
+                job.relativeTime.isHot ? 'text-red-700 font-medium' : 'text-gray-600'
+              }`} suppressHydrationWarning>
                 {job.relativeTime.text}
               </span>
             </div>
-            <span className="text-xs text-gray-500">{job.company_name}</span>
+            <span className="text-xs text-gray-600">{job.company_name}</span>
           </Link>
         ))}
       </div>

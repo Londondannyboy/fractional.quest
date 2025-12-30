@@ -115,7 +115,7 @@ export function Footer() {
             </div>
           </div>
 
-          <p className="text-gray-500 text-xs mt-6">
+          <p className="text-gray-400 text-xs mt-6" suppressHydrationWarning>
             © {new Date().getFullYear()} Fractional Quest. All rights reserved. Fractional Quest is a trading name.
           </p>
         </div>
