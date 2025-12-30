@@ -83,12 +83,17 @@ body {
   line-height: 1.6;
 }
 
-/* Smooth transitions globally */
-*, *::before, *::after {
-  transition-property: color, background-color, border-color, box-shadow, transform, opacity;
-  transition-duration: var(--transition-base);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+/*
+ * REMOVED: Global transitions on all elements
+ * This was causing poor INP (Interaction to Next Paint) scores.
+ * Transitions are now applied only to interactive elements via Tailwind classes.
+ *
+ * If you need smooth transitions, use Tailwind's transition utilities:
+ * - transition-colors
+ * - transition-transform
+ * - transition-opacity
+ * - transition-all (use sparingly)
+ */
 
 /* ===========================================
    Typography System

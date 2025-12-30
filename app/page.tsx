@@ -7,21 +7,22 @@ import { ExecutiveCard } from "@/components/ExecutiveCard";
 import { PropertyOverlay } from "@/components/PropertyOverlay";
 import type { Destination, FeaturedExecutive } from "@/lib/types";
 
-// Target keyword: "fractional jobs"
+// Target keyword: "fractional jobs" ONLY - do NOT compete with role-specific pages
+// International focus - not just UK
 export const metadata: Metadata = {
   title: "Fractional Jobs 💼 Design Your Executive Career",
-  description: "🚀 Fractional jobs for executives - CFO, CTO, CMO roles paying £800-£2,000/day. Work 2-3 days/week, earn £150-300k. Browse live fractional executive opportunities worldwide.",
-  keywords: "fractional jobs, fractional executive, fractional cfo, fractional cmo, fractional cto, portfolio career, fractional executive jobs, part-time executive, interim executive",
+  description: "🚀 Fractional jobs worldwide - Executive roles paying $1,200-$2,500/day. Work 2-3 days/week, build a portfolio career. Browse live opportunities in US, UK, Australia & remote.",
+  keywords: "fractional jobs, fractional executive, fractional executive jobs, portfolio career, part-time executive",
   openGraph: {
     title: "Fractional Jobs 💼 Design Your Executive Career",
-    description: "🚀 Fractional jobs for executives - CFO, CTO, CMO roles paying £800-£2,000/day. Work 2-3 days/week, earn £150-300k.",
+    description: "🚀 Fractional jobs worldwide - Executive roles paying $1,200-$2,500/day. Work 2-3 days/week.",
     type: "website",
     url: "https://fractional.quest",
   },
   twitter: {
     card: "summary_large_image",
     title: "Fractional Jobs 💼 Design Your Executive Career",
-    description: "🚀 Fractional jobs - CFO, CTO, CMO roles paying £800-£2,000/day.",
+    description: "🚀 Fractional jobs - Executive roles paying $1,200-$2,500/day worldwide.",
   },
   alternates: {
     canonical: "https://fractional.quest",
@@ -164,16 +165,54 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Role Ticker */}
-      <div className="border-y border-gray-100 bg-gray-50/50 py-6 overflow-hidden">
-        <div className="container-content flex justify-center">
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-4 opacity-60">
-             {['CFO', 'CTO', 'CMO', 'COO', 'CPO', 'CHRO', 'CRO'].map((role) => (
-              <span key={role} className="text-sm font-bold tracking-widest text-gray-900 uppercase">Fractional {role}</span>
+      {/* Role Directory - Links to specialist pages for SEO */}
+      <section className="py-12 bg-gray-50 border-y border-gray-200">
+        <div className="container-content">
+          <div className="text-center mb-8">
+            <h2 className="font-editorial text-2xl md:text-3xl font-bold text-gray-900 mb-2">Browse by Role</h2>
+            <p className="text-gray-600">Find fractional executive jobs by specialty</p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
+            {[
+              { role: 'CFO', href: '/fractional-cfo-jobs-uk', icon: '💰', desc: 'Finance' },
+              { role: 'CTO', href: '/fractional-cto-jobs-uk', icon: '💻', desc: 'Technology' },
+              { role: 'CMO', href: '/fractional-cmo-jobs-uk', icon: '📈', desc: 'Marketing' },
+              { role: 'COO', href: '/fractional-coo-jobs-uk', icon: '⚙️', desc: 'Operations' },
+              { role: 'CPO', href: '/fractional-cpo-jobs-uk', icon: '🎯', desc: 'Product' },
+              { role: 'CHRO', href: '/fractional-chro-jobs-uk', icon: '👥', desc: 'HR' },
+              { role: 'CEO', href: '/fractional-ceo-jobs-uk', icon: '👔', desc: 'Leadership' },
+            ].map(({ role, href, icon, desc }) => (
+              <Link
+                key={role}
+                href={href}
+                className="group bg-white rounded-xl p-4 border border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all text-center"
+              >
+                <div className="text-2xl mb-2">{icon}</div>
+                <div className="font-bold text-gray-900 group-hover:text-blue-600">Fractional {role}</div>
+                <div className="text-xs text-gray-500">{desc}</div>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            {[
+              { label: 'CIO Jobs', href: '/fractional-cio-jobs-uk' },
+              { label: 'CISO Jobs', href: '/fractional-ciso-jobs-uk' },
+              { label: 'CRO Jobs', href: '/fractional-cro-jobs-uk' },
+              { label: 'CDO Jobs', href: '/fractional-cdo-jobs-uk' },
+              { label: 'CCO Jobs', href: '/fractional-cco-jobs-uk' },
+              { label: 'Part-Time CFO', href: '/part-time-cfo' },
+            ].map(({ label, href }) => (
+              <Link
+                key={href}
+                href={href}
+                className="px-4 py-2 bg-gray-100 hover:bg-blue-100 hover:text-blue-700 rounded-full text-sm font-medium text-gray-700 transition-colors"
+              >
+                {label}
+              </Link>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Stats Section - Clean & Minimal */}
       <section className="py-16 border-b border-gray-100">

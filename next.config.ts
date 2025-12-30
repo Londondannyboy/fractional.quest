@@ -103,7 +103,30 @@ const nextConfig: NextConfig = {
   },
 
   images: {
-    unoptimized: true, // For Vercel deployment
+    // Enable image optimization for better Core Web Vitals
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+      },
+    ],
+    // Use modern formats for better compression
+    formats: ['image/avif', 'image/webp'],
+    // Optimize device sizes for responsive images
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256],
   },
 
   // Optimize CSS and package imports for modern browsers

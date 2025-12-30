@@ -31,13 +31,14 @@ const playfair = Playfair_Display({
   preload: true,
 });
 
+// Default metadata - international focus, avoid role-specific keywords
 export const metadata: Metadata = {
   title: {
-    default: "Fractional Jobs 💼 UK Executive Roles | Fractional Quest",
+    default: "Fractional Jobs 💼 Executive Roles Worldwide | Fractional Quest",
     template: "%s | Fractional Quest"
   },
-  description: "💰 Fractional jobs UK - CFO, CTO, CMO & executive roles paying £800-£2,000/day. Browse fractional executive opportunities in London & remote. The #1 fractional recruitment platform.",
-  keywords: ["fractional jobs", "fractional jobs UK", "fractional CFO", "fractional CTO", "fractional CMO", "fractional COO", "fractional executive", "part-time executive", "fractional recruitment agencies", "London fractional jobs"],
+  description: "💰 Fractional jobs worldwide - Executive roles paying $1,200-$2,500/day. Browse opportunities in US, UK, Australia & remote. The #1 fractional recruitment platform.",
+  keywords: ["fractional jobs", "fractional executive", "fractional executive jobs", "portfolio career", "part-time executive", "interim executive"],
   authors: [{ name: "Fractional Quest" }],
   creator: "Fractional Quest",
   publisher: "Fractional Quest",
@@ -50,14 +51,14 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://fractional.quest",
     siteName: "Fractional Jobs Quest",
-    title: "Fractional Jobs 💼 UK Executive Roles",
-    description: "💰 Fractional jobs UK - CFO, CTO, CMO & executive roles paying £800-£2,000/day. Browse opportunities in London & remote.",
+    title: "Fractional Jobs 💼 Executive Roles Worldwide",
+    description: "💰 Fractional jobs worldwide - Executive roles paying $1,200-$2,500/day. US, UK, Australia & remote.",
     // Images auto-generated from app/opengraph-image.tsx
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fractional Jobs 💼 UK Executive Roles",
-    description: "💰 Fractional jobs UK - CFO, CTO, CMO roles paying £800-£2,000/day.",
+    title: "Fractional Jobs 💼 Executive Roles Worldwide",
+    description: "💰 Fractional jobs worldwide - $1,200-$2,500/day. Browse now.",
     site: "@fractionalquest",
     creator: "@fractionalquest",
     // Images auto-generated from app/twitter-image.tsx
@@ -154,6 +155,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Preconnect to critical third-party origins for faster resource loading */}
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.youtube.com" />
+        <link rel="dns-prefetch" href="https://i.ytimg.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}

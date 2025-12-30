@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useUser } from '@stackframe/stack'
 import { AspirationalBadge } from './AspirationalBadge'
 import { generateAspirationalMessage } from '@/lib/aspirational-messages'
@@ -305,12 +306,15 @@ export function JobCard({
       `}
       onClick={onClick}
     >
-      {/* Image */}
+      {/* Image - Optimized with Next.js Image */}
       <div className="relative aspect-[16/10] overflow-hidden">
-        <img
+        <Image
           src={jobImage}
           alt={title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          loading="lazy"
         />
         {/* Stronger gradient overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-gray-900/10" />
@@ -436,10 +440,13 @@ export function JobCard({
         {/* Dream destination suggestion for remote roles - sell the lifestyle */}
         {dreamDestination && flexibilityInfo && (
           <div className="mb-3 p-3 bg-gradient-to-r from-teal-50 to-blue-50 rounded-lg border border-teal-200 flex items-center gap-3">
-            <img
+            <Image
               src={dreamDestination.image}
               alt={dreamDestination.name}
-              className="w-10 h-10 rounded-full object-cover flex-shrink-0 ring-2 ring-white shadow-sm"
+              width={40}
+              height={40}
+              className="rounded-full object-cover flex-shrink-0 ring-2 ring-white shadow-sm"
+              loading="lazy"
             />
             <p className="text-xs text-teal-700">
               <span className="font-semibold">{flexibilityInfo.days}?</span> Work from {dreamDestination.name}
@@ -450,10 +457,13 @@ export function JobCard({
         {/* Remote-only dream suggestion (when no flexibility info but is remote) */}
         {dreamDestination && !flexibilityInfo && (
           <div className="mb-3 p-3 bg-gradient-to-r from-teal-50 to-blue-50 rounded-lg border border-teal-200 flex items-center gap-3">
-            <img
+            <Image
               src={dreamDestination.image}
               alt={dreamDestination.name}
-              className="w-10 h-10 rounded-full object-cover flex-shrink-0 ring-2 ring-white shadow-sm"
+              width={40}
+              height={40}
+              className="rounded-full object-cover flex-shrink-0 ring-2 ring-white shadow-sm"
+              loading="lazy"
             />
             <p className="text-xs text-teal-700">
               <span className="font-semibold">Work anywhere.</span> Why not {dreamDestination.name}?

@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import { createDbQuery } from '@/lib/db'
 import { JobCard } from '@/components/JobCard'
@@ -13,6 +14,7 @@ import { AuthorByline, AuthorBylineCompact } from '@/components/AuthorByline'
 import { EmailCapture } from '@/components/EmailCapture'
 import { LastUpdated, LastUpdatedBadge } from '@/components/LastUpdated'
 import { HotJobs } from '@/components/HotJobs'
+import { LazyYouTube } from '@/components/LazyYouTube'
 
 // CopilotKit-enhanced components (client-side) - using dynamic without ssr:false for server component compatibility
 const SmartJobSearch = dynamic(
@@ -38,11 +40,11 @@ const FractionalRateCalculatorUK = dynamic(
 
 export const revalidate = 3600
 
-// Target keyword: "fractional jobs london"
+// Target keyword: "fractional jobs london" ONLY - do NOT compete with role-specific pages like /fractional-cfo-jobs-uk
 export const metadata: Metadata = {
   title: 'Fractional Jobs London 🏙️ Executive Roles',
-  description: '🔥 Fractional jobs London - CFO, CTO, CMO roles paying £900-£1,500/day. Browse live positions in the City, Canary Wharf & Tech City. Remote & hybrid options.',
-  keywords: 'fractional jobs London, fractional jobs uk, fractional work, fractional roles, fractional CFO London, fractional CTO London, fractional CMO London, part-time executive jobs London, interim executive London',
+  description: '🔥 Fractional jobs London - Browse executive roles paying £900-£1,500/day in the City, Canary Wharf & Tech City. Find your next fractional opportunity.',
+  keywords: 'fractional jobs london, london fractional jobs, fractional executive london',
   alternates: {
     canonical: 'https://fractional.quest/fractional-jobs-london',
   },
@@ -59,7 +61,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Fractional Jobs London 🏙️ Executive Roles',
-    description: '🔥 Fractional jobs London - CFO, CTO, CMO roles paying £900-£1,500/day. City, Canary Wharf & Tech City.',
+    description: '🔥 Fractional jobs London - Browse executive roles paying £900-£1,500/day in the City & Canary Wharf.',
     type: 'website',
     url: 'https://fractional.quest/fractional-jobs-london',
     siteName: 'Fractional Jobs Quest',
@@ -319,25 +321,21 @@ export default async function FractionalJobsLondonPage() {
         }}
       />
 
-      {/* Hero Section with H1 - Video Background */}
+      {/* Hero Section with H1 - Optimized Background */}
       <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-12 md:py-16 overflow-hidden">
-        {/* Video Background */}
+        {/* LCP-optimized Background Image */}
         <div className="absolute inset-0 z-0">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover opacity-40"
-            poster="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80"
-          >
-            {/* London skyline/business video from Pexels */}
-            <source
-              src="https://videos.pexels.com/video-files/2036945/2036945-uhd_2560_1440_30fps.mp4"
-              type="video/mp4"
-            />
-            {/* Fallback to image if video doesn't load */}
-          </video>
+          {/* Priority image for LCP - using Next.js Image for optimization */}
+          <Image
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1280&q=75&auto=format"
+            alt="London business skyline"
+            fill
+            priority
+            fetchPriority="high"
+            sizes="100vw"
+            className="object-cover opacity-40"
+            quality={75}
+          />
           {/* Gradient overlay for text readability */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-800/70 to-gray-900/80" />
         </div>
@@ -616,18 +614,13 @@ export default async function FractionalJobsLondonPage() {
               London dominates the UK's fractional executive market, accounting for approximately 60% of all available positions. This concentration is driven by the capital's unique position as a global financial centre, home to Europe's largest technology cluster, and headquarters for thousands of scale-up businesses seeking flexible leadership.
             </p>
 
-            {/* Video 1: London Market Overview */}
+            {/* Video 1: London Market Overview - Lazy loaded for performance */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">Fractional Jobs in London: Market Overview</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/cB2PYg1f0zE"
-                  title="Fractional Executive Jobs in London - Market Overview"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube
+                videoId="cB2PYg1f0zE"
+                title="Fractional Executive Jobs in London - Market Overview"
+              />
               <p className="text-gray-500 text-sm mt-3">Learn about London's thriving fractional executive market and premium day rates</p>
             </div>
             <p className="mb-4">
@@ -672,18 +665,13 @@ export default async function FractionalJobsLondonPage() {
 
             <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Building a Fractional Career in London: Strategic Considerations</h3>
 
-            {/* Video 2: Building a Portfolio Career */}
+            {/* Video 2: Building a Portfolio Career - Lazy loaded for performance */}
             <div className="my-10 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">How to Build a Portfolio Career in London</h4>
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <iframe
-                  src="https://www.youtube.com/embed/9Yrt-m7dloE"
-                  title="How to Build a Portfolio Career in London"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
+              <LazyYouTube
+                videoId="9Yrt-m7dloE"
+                title="How to Build a Portfolio Career in London"
+              />
               <p className="text-gray-500 text-sm mt-3">Strategic guidance for building a fractional executive practice in London</p>
             </div>
 
