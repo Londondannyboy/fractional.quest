@@ -620,7 +620,7 @@ export default async function FractionalJobsLondonPage() {
 
             {/* Video 1: London Market Overview */}
             <div className="my-8 not-prose">
-              <h4 className="text-lg font-bold text-gray-900 mb-4">Fractional Jobs in London: Market Overview</h4>
+              <p className="text-lg font-bold text-gray-900 mb-4">Fractional Jobs in London: Market Overview</p>
               <LazyYouTube
                 videoId="cB2PYg1f0zE"
                 title="Fractional Executive Jobs in London - Market Overview"
@@ -666,7 +666,7 @@ export default async function FractionalJobsLondonPage() {
 
             {/* Video 2: Building a Portfolio Career */}
             <div className="my-8 not-prose">
-              <h4 className="text-lg font-bold text-gray-900 mb-4">How to Build a Portfolio Career in London</h4>
+              <p className="text-lg font-bold text-gray-900 mb-4">How to Build a Portfolio Career in London</p>
               <LazyYouTube
                 videoId="9Yrt-m7dloE"
                 title="How to Build a Portfolio Career in London"

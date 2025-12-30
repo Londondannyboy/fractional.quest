@@ -409,7 +409,7 @@ export function JobCard({
               </span>
             ))}
             {skills.length > 3 && (
-              <span className="px-2.5 py-1 text-gray-400 text-xs">
+              <span className="px-2.5 py-1 text-gray-600 text-xs">
                 +{skills.length - 3}
               </span>
             )}
@@ -452,7 +452,7 @@ export function JobCard({
 
         {/* Syndicated job indicator */}
         {isSyndicated && (
-          <div className="mb-3 flex items-center gap-1.5 text-xs text-gray-400">
+          <div className="mb-3 flex items-center gap-1.5 text-xs text-gray-600">
             <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
             </svg>
@@ -466,7 +466,7 @@ export function JobCard({
         {/* Footer */}
         <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-100">
           {postedDisplay && (
-            <span className="text-xs text-gray-400 flex items-center gap-1">
+            <span className="text-xs text-gray-600 flex items-center gap-1">
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>

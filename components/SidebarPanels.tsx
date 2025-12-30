@@ -70,7 +70,7 @@ export function SidebarPanels({
                       {article.title}
                     </p>
                     {article.category && (
-                      <span className="text-xs text-gray-400">{article.category}</span>
+                      <span className="text-xs text-gray-600">{article.category}</span>
                     )}
                   </div>
                 </div>
@@ -117,7 +117,7 @@ export function SidebarPanels({
           <p className="text-sm text-gray-300 mb-3">
             Browse all fractional opportunities
           </p>
-          <span className="text-xs font-medium text-gray-400 group-hover:text-white transition-colors flex items-center gap-1">
+          <span className="text-xs font-medium text-gray-300 group-hover:text-white transition-colors flex items-center gap-1">
             View all jobs →
           </span>
         </Link>

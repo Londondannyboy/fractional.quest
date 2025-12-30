@@ -117,7 +117,7 @@ export function HotJobs({
             </span>
           )}
         </div>
-        <span className="text-xs text-gray-500">
+        <span className="text-xs text-gray-500" suppressHydrationWarning>
           Updated {currentTime.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
         </span>
       </div>
@@ -145,7 +145,7 @@ export function HotJobs({
                   {job.is_remote && (
                     <>
                       <span className="text-gray-300">•</span>
-                      <span className="text-green-600 font-medium">Remote</span>
+                      <span className="text-emerald-800 font-semibold">Remote</span>
                     </>
                   )}
                 </div>
