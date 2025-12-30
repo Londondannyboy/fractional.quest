@@ -161,8 +161,8 @@ async function getLondonStats() {
 
     const count = parseInt((totalLondon[0] as any)?.count || '0')
     return {
-      // Show actual count, minimum of 15 for display purposes
-      totalLondon: Math.max(count, 15),
+      // Show actual count - no fake minimums
+      totalLondon: count,
       roleStats: roleStats as { role_category: string; count: string }[],
       avgDayRate: Math.round(parseFloat((avgRateResult[0] as any)?.avg || '1050'))
     }
@@ -175,6 +175,7 @@ async function getLondonStats() {
 async function getLondonJobs() {
   try {
     const sql = createDbQuery()
+    // Removed strict filters - show all London jobs, not just perfectly enriched ones
     const jobs = await sql`
       SELECT
         id, slug, title, normalized_title, company_name, location, is_remote, workplace_type,
@@ -183,11 +184,10 @@ async function getLondonJobs() {
       FROM jobs
       WHERE is_active = true
         AND location ILIKE '%london%'
-        AND skills_required IS NOT NULL
-        AND array_length(skills_required, 1) > 0
-        AND company_domain IS NOT NULL
-        AND description_snippet IS NOT NULL
-      ORDER BY posted_date DESC NULLS LAST
+      ORDER BY
+        posted_date DESC NULLS LAST,
+        company_domain IS NOT NULL DESC,
+        description_snippet IS NOT NULL DESC
       LIMIT 50
     `
     return jobs
@@ -355,7 +355,7 @@ export default async function FractionalJobsLondonPage() {
 
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <span className="inline-block bg-blue-500/20 text-blue-200 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-blue-400/30">
-              {stats.totalLondon}+ London Jobs
+              {stats.totalLondon} London Jobs
             </span>
             <LastUpdatedBadge date={lastUpdated} />
           </div>
@@ -393,7 +393,7 @@ export default async function FractionalJobsLondonPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-10 text-center text-base">
             <div>
-              <span className="font-black text-white">{stats.totalLondon}+</span>
+              <span className="font-black text-white">{stats.totalLondon}</span>
               <span className="font-bold text-white ml-1">London Jobs</span>
             </div>
             <div>
@@ -601,7 +601,7 @@ export default async function FractionalJobsLondonPage() {
         </div>
       </section>
 
-      {/* Why London for Fractional Work - Expanded Content */}
+      {/* Why London for Fractional Work - Streamlined Content */}
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AuthorByline
@@ -615,11 +615,11 @@ export default async function FractionalJobsLondonPage() {
           </h2>
           <div className="prose prose-lg max-w-none text-gray-600">
             <p className="mb-4">
-              London dominates the UK's fractional executive market, accounting for approximately 60% of all available positions. This concentration is driven by the capital's unique position as a global financial centre, home to Europe's largest technology cluster, and headquarters for thousands of scale-up businesses seeking flexible leadership.
+              London dominates the UK's fractional executive market, accounting for approximately 60% of all available positions. The capital's unique position as a global financial centre, home to Europe's largest technology cluster, and headquarters for thousands of scale-up businesses drives consistent demand for flexible leadership.
             </p>
 
-            {/* Video 1: London Market Overview - Lazy loaded for performance */}
-            <div className="my-10 not-prose">
+            {/* Video: London Market Overview - Lazy loaded for performance */}
+            <div className="my-8 not-prose">
               <h4 className="text-lg font-bold text-gray-900 mb-4">Fractional Jobs in London: Market Overview</h4>
               <LazyYouTube
                 videoId="cB2PYg1f0zE"
@@ -627,77 +627,26 @@ export default async function FractionalJobsLondonPage() {
               />
               <p className="text-gray-500 text-sm mt-3">Learn about London's thriving fractional executive market and premium day rates</p>
             </div>
+
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Key Sectors and Day Rates</h3>
             <p className="mb-4">
-              The City of London and Canary Wharf provide consistent demand for fractional CFOs, particularly among fintech companies and PE-backed portfolio businesses requiring financial restructuring or IPO preparation. Meanwhile, Tech City's corridor from Shoreditch to King's Cross generates strong demand for fractional CTOs and CPOs from Series A to Series C startups navigating rapid growth phases.
+              <strong>The City & Canary Wharf</strong> provide consistent demand for fractional CFOs among fintech companies and PE-backed businesses. Day rates typically range from £1,000-£1,500/day. <strong>Tech City</strong> (Shoreditch to King's Cross) generates strong demand for fractional CTOs and CMOs from Series A-C startups. The <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> reports over 70% of London's high-growth companies have engaged fractional leadership.
             </p>
             <p className="mb-4">
-              London-based fractional executives command premium rates 25-40% higher than regional counterparts, reflecting both the cost of living adjustment and the complexity of mandates. Most London roles now offer hybrid arrangements, with executives typically spending 1-2 days per week on-site and the remainder working remotely—enabling portfolio careers spanning multiple clients across different sectors.
+              Rates are influenced by role type and specialisation. CFOs and CISOs command £1,000-£1,500/day; CTOs £950-£1,400/day; CMOs and COOs £900-£1,300/day. Sector specialists (fintech, AI/ML, regulated industries) command 20-30% premiums. PE-backed companies typically pay 10-15% above market rates.
             </p>
 
-            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">The London Advantage: Key Sectors and Opportunities</h3>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Hybrid Working in London</h3>
             <p className="mb-4">
-              London's fractional executive market is uniquely stratified by geography and sector. The Square Mile remains the epicentre for fractional CFO roles, with major banks, asset managers, and fintech unicorns seeking part-time financial leadership for subsidiary operations, regulatory restructuring, and M&A activities. Companies like Revolut, Monzo, and established institutions regularly engage fractional CFOs for specific initiatives without committing to full-time headcount.
-            </p>
-            <p className="mb-4">
-              Canary Wharf has evolved beyond its traditional banking focus, now hosting a growing cluster of technology-enabled financial services firms. These organisations frequently require fractional CTOs to modernise legacy systems, implement cloud infrastructure, and build engineering teams. The average fractional CTO engagement in Canary Wharf commands day rates of £1,200-£1,600, reflecting the specialised nature of financial technology requirements.
-            </p>
-            <p className="mb-4">
-              Tech City—the corridor stretching from Shoreditch through Old Street to King's Cross—represents the heart of London's scale-up ecosystem. This area generates exceptional demand for fractional CMOs and CPOs, particularly from Series A to Series C companies that have secured funding but haven't yet justified full C-suite headcount. The <a href="https://www.scaleupinstitute.org.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">ScaleUp Institute</a> reports that over 70% of London's high-growth companies have engaged fractional leadership at some stage of their development.
+              According to <a href="https://www.harveynash.co.uk/latest-news/what-is-fractional-working-and-how-could-it-help-individuals-and-employers-" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Harvey Nash UK</a>, 65% of London fractional roles now offer hybrid arrangements—typically 1-2 days on-site with remaining days remote. This enables executives in commuter belt areas to access London's premium rates while maintaining work-life balance.
             </p>
 
-            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Understanding London Day Rates: What Drives Premium Pricing</h3>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Building a London Fractional Career</h3>
             <p className="mb-4">
-              London fractional executives earn significantly more than their regional counterparts, but understanding the rate structure requires nuance. Base rates are influenced by role type: CFOs and CISOs command the highest rates (£1,000-£1,500/day), reflecting the regulatory and risk management expertise required. CTOs follow closely (£950-£1,400/day), while CMOs and COOs typically range from £900-£1,300/day.
-            </p>
-            <p className="mb-4">
-              Beyond role type, sector specialisation dramatically affects rates. A fractional CFO with deep fintech experience and FCA regulatory knowledge will command rates 20-30% higher than a generalist. Similarly, CTOs with AI/ML expertise or experience in highly regulated industries (healthcare, finance) attract premium engagements. The <a href="https://www.cipd.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">CIPD</a> notes that specialist skills in emerging technology areas can add £200-£400 to daily rates.
-            </p>
-            <p className="mb-4">
-              Client type also matters. Private equity-backed portfolio companies typically pay premium rates (10-15% above market) due to their need for rapid value creation and the complexity of working within PE reporting structures. VC-backed startups may offer slightly lower base rates but often include equity participation as part of the overall package.
-            </p>
-
-            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">The Hybrid Working Revolution in London's Fractional Market</h3>
-            <p className="mb-4">
-              The post-pandemic landscape has fundamentally transformed London's fractional executive market. According to research from <a href="https://www.harveynash.co.uk/latest-news/what-is-fractional-working-and-how-could-it-help-individuals-and-employers-" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Harvey Nash UK</a>, approximately 65% of London fractional roles now offer hybrid arrangements, with the typical expectation being 1-2 days per week on-site and remaining days remote.
-            </p>
-            <p className="mb-4">
-              This flexibility has expanded the talent pool significantly. Executives living in commuter belt areas—Hertfordshire, Surrey, Kent, and Essex—can now access London's premium rates while maintaining better work-life balance. Some fractional executives even split their time between London clients and regional or international engagements, maximising their portfolio income while minimising commuting burden.
-            </p>
-            <p className="mb-4">
-              However, certain roles still require substantial in-person presence. Fractional COOs typically need more on-site time to effectively manage operations and teams. Similarly, fractional executives supporting fundraising rounds often need to be present for investor meetings and due diligence processes. Understanding these expectations upfront is crucial for setting appropriate engagement terms.
-            </p>
-
-            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Building a Fractional Career in London: Strategic Considerations</h3>
-
-            {/* Video 2: Building a Portfolio Career - Lazy loaded for performance */}
-            <div className="my-10 not-prose">
-              <h4 className="text-lg font-bold text-gray-900 mb-4">How to Build a Portfolio Career in London</h4>
-              <LazyYouTube
-                videoId="9Yrt-m7dloE"
-                title="How to Build a Portfolio Career in London"
-              />
-              <p className="text-gray-500 text-sm mt-3">Strategic guidance for building a fractional executive practice in London</p>
-            </div>
-
-            <p className="mb-4">
-              For executives considering the transition to fractional work in London, several strategic factors merit consideration. First, positioning matters enormously. The London market is increasingly competitive, with established fractional executives building strong reputations and referral networks. New entrants benefit from identifying a specific niche—whether by sector (fintech, healthtech, e-commerce), stage (pre-seed, Series A, growth), or expertise area (M&A, digital transformation, turnaround).
-            </p>
-            <p className="mb-4">
-              Networking remains crucial. The <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> and similar professional bodies provide valuable networking opportunities. Many successful fractional executives credit their client pipelines to relationships built through industry events, investor networks, and professional service firm referrals.
-            </p>
-            <p className="mb-4">
-              The financial transition also requires planning. Most fractional executives recommend building a minimum six-month runway before going fully fractional, and targeting two clients at the start rather than one. This diversification reduces risk while building experience managing multiple engagements simultaneously. The <a href="https://www.britishbusinessbank.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">British Business Bank</a> offers resources for self-employed executives navigating the financial aspects of portfolio careers.
-            </p>
-
-            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">The Future of Fractional Work in London</h3>
-            <p className="mb-4">
-              Market indicators suggest continued growth for London's fractional executive sector. The global fractional executive market has surpassed $5.7 billion, with year-over-year growth exceeding 68% in key segments. London, as a global business hub, is well-positioned to capture a significant share of this expansion.
-            </p>
-            <p className="mb-4">
-              Several trends are shaping the future: First, larger organisations are increasingly adopting fractional models, not just startups and SMEs. Major corporations are engaging fractional executives for transformation projects, new market entry, and specialised initiatives. Second, the quality of fractional talent continues to rise as more senior executives—including former FTSE 100 leaders—enter the market. Third, technology platforms are making it easier to match fractional executives with opportunities, reducing friction in the market.
+              Success in London's competitive fractional market requires clear positioning—by sector (fintech, healthtech), stage (pre-seed to growth), or expertise (M&A, transformation). The <a href="https://www.iod.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Institute of Directors</a> and similar bodies provide valuable networking. Most executives recommend a six-month runway and targeting two clients initially.
             </p>
             <p>
-              For companies and executives alike, London's fractional market offers compelling value. Companies gain access to senior talent without full-time commitments; executives achieve flexibility and often higher effective earnings. As the market matures, expect continued professionalisation, clearer rate benchmarks, and expanded opportunities across sectors and geographies radiating from London's core.
+              The market continues to grow, with larger organisations now adopting fractional models alongside startups and SMEs. For companies and executives alike, London's fractional market offers compelling value: access to senior talent without full-time commitments, and flexible careers with premium earnings.
             </p>
           </div>
         </div>
