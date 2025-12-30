@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { createDbQuery } from '@/lib/db'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { ServerJobGrid } from '@/components/ServerJobGrid'
@@ -101,7 +102,14 @@ export default async function TechJobsPage() {
       {/* Hero Section with 3D Knowledge Graph Background */}
       <section className="relative min-h-[85vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+          <Image
+            src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Technology and engineering workspace"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
           <JobsGraph3D categoryFilter="Technology" limit={30} height="100%" isHero={true} showOverlay={true} />
         </div>
 

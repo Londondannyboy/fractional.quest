@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
@@ -46,12 +47,15 @@ export default function FractionalClientServicesServicesPage() {
     <div className="min-h-screen bg-white">
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1920&q=80')`,
-          }}
-        >
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1920&q=80"
+            alt="Fractional Client Services Director - Professional client success leadership"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-800/90 via-indigo-700/80 to-blue-800/60" />
         </div>
         <div className="relative z-10 w-full py-20">

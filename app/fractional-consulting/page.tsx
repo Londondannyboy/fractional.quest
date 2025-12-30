@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { FAQ } from '@/components/FAQ'
@@ -54,7 +55,7 @@ export default function FractionalConsultingPage() {
 
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+          <Image src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Fractional Consulting" fill priority sizes="100vw" className="object-cover object-center" />
           <JobsGraph3D limit={30} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="relative z-10 w-full py-20">

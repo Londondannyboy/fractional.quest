@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
@@ -194,15 +195,16 @@ export default async function FractionalCeoJobsUkPage() {
       />
       {/* Hero with Aspirational Image */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
-        {/* Background Image - Executive professional */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=1920&q=80')`,
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-700/85 via-indigo-600/70 to-blue-600/50" />
-        </div>
+        {/* Background Image - Executive professional - LCP optimized */}
+        <Image
+          src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=1920&q=80"
+          alt="Fractional CEO - Executive professional"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-700/85 via-indigo-600/70 to-blue-600/50" />
         <div className="relative z-10 w-full py-16">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <BreadcrumbsLight items={getRoleBreadcrumbs('ceo', 'jobs')} className="mb-8" />

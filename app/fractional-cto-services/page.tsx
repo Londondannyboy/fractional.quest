@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { FAQ, CTO_SERVICE_FAQS } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
@@ -46,12 +47,15 @@ export default function FractionalCTOServicesPage() {
       />
       {/* Hero Section with Aspirational Image */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=80')`,
-          }}
-        >
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=80"
+            alt="Fractional CTO Services - Professional technical leadership"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-purple-700/90 via-blue-600/80 to-teal-500/60" />
         </div>
         <div className="relative z-10 w-full py-16">

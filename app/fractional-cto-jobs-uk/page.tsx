@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { createDbQuery } from '@/lib/db'
 import { FAQ, CTO_FAQS } from '@/components/FAQ'
 import { DesktopOnly } from '@/components/DesktopOnly'
@@ -192,15 +193,16 @@ export default async function FractionalCtoJobsUkPage() {
 
       {/* Hero with Aspirational Image */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
-        {/* Background Image - Tech professional */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=80')`,
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/95 via-blue-800/90 to-teal-700/85" />
-        </div>
+        {/* Background Image - Tech professional - LCP optimized */}
+        <Image
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=80"
+          alt="Fractional CTO - Technology executive professional"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/95 via-blue-800/90 to-teal-700/85" />
         <div className="relative z-10 w-full py-16">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <BreadcrumbsLight items={getRoleBreadcrumbs('cto', 'jobs')} className="mb-8" />

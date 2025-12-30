@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { createDbQuery } from '@/lib/db'
 import { ServerJobGrid } from '@/components/ServerJobGrid'
 import { FAQ } from '@/components/FAQ'
@@ -99,8 +100,18 @@ export default async function RemoteFractionalJobsPage() {
       />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-emerald-50 to-white" style={{backgroundImage: 'url(https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=1920)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-        <div className="absolute inset-0 bg-black/40"></div>
+      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-emerald-50 to-white">
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Remote fractional jobs background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Link href="/" className="inline-flex items-center text-gray-500 hover:text-gray-900 mb-8 transition-colors text-sm font-medium">
             <span className="mr-2">←</span> Back to Home

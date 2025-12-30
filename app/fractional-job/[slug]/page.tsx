@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Suspense } from 'react'
 import { createDbQuery } from '@/lib/db'
 import { JobHeader } from '@/components/JobHeader'
@@ -410,10 +411,16 @@ export default async function JobDetailPage({ params }: PageProps) {
           {/* Background - Banner image or gradient */}
           {banner ? (
             <>
-              <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url(${banner})` }}
-              />
+              <div className="absolute inset-0">
+                <Image
+                  src={banner}
+                  alt={`${job.company_name} company banner`}
+                  fill
+                  priority
+                  sizes="100vw"
+                  className="object-cover object-center"
+                />
+              </div>
               <div
                 className="absolute inset-0"
                 style={{

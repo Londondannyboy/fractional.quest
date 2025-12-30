@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import { createDbQuery } from '@/lib/db'
 import { JobCard } from '@/components/JobCard'
@@ -172,13 +173,11 @@ async function getUKJobs() {
         job_source, is_syndicated, company_type, appeal_summary, key_deliverables
       FROM jobs
       WHERE is_active = true
-        AND skills_required IS NOT NULL
-        AND array_length(skills_required, 1) > 0
-        AND company_domain IS NOT NULL
-        AND description_snippet IS NOT NULL
       ORDER BY
         CASE WHEN location ILIKE '%london%' THEN 0 ELSE 1 END,
-        posted_date DESC NULLS LAST
+        posted_date DESC NULLS LAST,
+        company_domain IS NOT NULL DESC,
+        description_snippet IS NOT NULL DESC
       LIMIT 50
     `
     return jobs
@@ -396,12 +395,15 @@ export default async function FractionalJobsUKPage() {
       {/* Hero Section with Colorful Aspirational Image */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
         {/* Background Image - Colorful and Global */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=80')`,
-          }}
-        >
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=80"
+            alt="Fractional jobs UK background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-teal-900/80 via-blue-900/70 to-purple-900/60" />
         </div>
 

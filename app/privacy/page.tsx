@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | Fractional Quest',
@@ -6,7 +7,17 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12" style={{ backgroundImage: 'url(https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1920)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          alt="Privacy policy background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </div>
       <h1 className="text-4xl font-black text-white mb-8">Privacy Policy</h1>
 
       <div className="prose prose-lg max-w-none space-y-6 text-gray-600">

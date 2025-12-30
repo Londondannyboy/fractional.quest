@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FAQ } from '@/components/FAQ'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
@@ -80,7 +81,14 @@ export default function WhatIsFractionalCTOPage() {
       {/* Hero Section with 3D Background */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+          <Image
+            src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="What is a fractional CTO background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
           <JobsGraph3D roleFilter="CTO" limit={25} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="relative z-10 w-full py-20">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,7 +16,16 @@ export default function FractionalPropertyUKPage() {
     <main className="min-h-screen bg-white">
       {/* Hero */}
       <section className="bg-white border-b border-gray-200 relative">
-        <div className="absolute inset-0 bg-cover bg-center opacity-40" style={{ backgroundImage: 'url(https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Fractional Property Ownership UK hero background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center opacity-40"
+          />
+        </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative z-10">
           <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
             <Link href="/" className="hover:text-gray-700">Home</Link>

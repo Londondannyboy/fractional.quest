@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Suspense } from 'react'
 import { RateDistribution } from '@/components/RateDistribution'
@@ -44,7 +45,9 @@ export default function FractionalCmoSalaryPage() {
     <div className="min-h-screen bg-white">
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-purple-900 to-purple-800 py-20">
-        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: 'url(https://images.pexels.com/photos/7413891/pexels-photo-7413891.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+        <div className="absolute inset-0 opacity-20">
+          <Image src="https://images.pexels.com/photos/7413891/pexels-photo-7413891.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Fractional CMO Salary" fill priority sizes="100vw" className="object-cover object-center" />
+        </div>
         <div className="relative max-w-4xl mx-auto px-4">
           <Link href="/" className="text-purple-200 hover:text-gray-900 mb-6 inline-block">← Back to Home</Link>
           <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Fractional CMO Salary UK 2025</h1>

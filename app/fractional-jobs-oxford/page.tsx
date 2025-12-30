@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { createDbQuery } from '@/lib/db'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { FAQ, OXFORD_FAQS } from '@/components/FAQ'
@@ -75,7 +76,14 @@ export default async function OxfordPage() {
       {/* Hero Section with 3D Knowledge Graph */}
       <section className="relative bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-900 py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/159490/yale-university-landscape-universities-schools-159490.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+          <Image
+            src="https://images.pexels.com/photos/159490/yale-university-landscape-universities-schools-159490.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Oxford university and innovation hub"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
           <JobsGraph3D locationFilter="oxford" limit={30} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">

@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FAQ } from '@/components/FAQ'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 
@@ -45,7 +46,14 @@ export default function FractionalCTOMeaningPage() {
       {/* Hero Section */}
       <section className="relative min-h-[65vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+          <Image
+            src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Fractional CTO Meaning"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-black/50" />
           <JobsGraph3D roleFilter="CTO" limit={20} height="100%" isHero={true} showOverlay={true} />
         </div>

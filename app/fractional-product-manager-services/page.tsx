@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FAQ } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
 import { HireProcessStepper } from '@/components/HireProcessStepper'
@@ -48,12 +49,15 @@ export default function FractionalProductManagerServicesPage() {
     <div className="min-h-screen bg-white">
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1920&q=80')`,
-          }}
-        >
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1920&q=80"
+            alt="Fractional Product Manager Services UK hero background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-purple-800/90 via-purple-700/80 to-indigo-800/60" />
         </div>
         <div className="relative z-10 w-full py-20">

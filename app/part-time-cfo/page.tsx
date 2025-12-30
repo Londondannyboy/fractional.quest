@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { createDbQuery } from '@/lib/db'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 
@@ -52,7 +53,14 @@ export default async function PartTimeCfoPage() {
       {/* Hero with 3D Knowledge Graph Background */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+          <Image
+            src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Part-time CFO background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
           <JobsGraph3D roleFilter="CFO" limit={30} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="max-w-4xl mx-auto px-4 relative z-10">

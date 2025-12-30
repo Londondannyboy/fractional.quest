@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import { neon } from '@neondatabase/serverless'
 import { DestinationCard } from '@/components/DestinationCard'
 import { PropertyOverlay } from '@/components/PropertyOverlay'
@@ -39,12 +40,8 @@ export default async function DestinationsPage() {
       {/* Hero with Background Image */}
       <section className="relative min-h-[60vh] flex items-center">
         {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80')`,
-          }}
-        >
+        <div className="absolute inset-0">
+          <Image src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80" alt="Fractional Executive Destinations" fill priority sizes="100vw" className="object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-r from-teal-900/90 via-teal-900/70 to-teal-900/50" />
         </div>
 

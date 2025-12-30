@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Suspense } from 'react'
 import { createDbQuery } from '@/lib/db'
 import { ArticleCard } from '@/components/ArticleCard'
@@ -105,12 +106,15 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
         {/* Hero Section with Aspirational Image */}
         <section className="relative min-h-[55vh] flex items-center overflow-hidden">
           {/* Background Image - Sunny workspace */}
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1920')`,
-            }}
-          >
+          <div className="absolute inset-0">
+            <Image
+              src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1920"
+              alt="Professional workspace for fractional executives"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center"
+            />
             <div className="absolute inset-0 bg-gradient-to-r from-amber-600/80 via-orange-500/60 to-yellow-400/40" />
           </div>
 

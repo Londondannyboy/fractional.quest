@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FAQ } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
 
@@ -24,7 +25,16 @@ export default function FractionalCTOCostPage() {
   return (
     <div className="min-h-screen bg-white">
       <section className="py-20 md:py-28 bg-white relative">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Fractional CTO Cost"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
         <div className="absolute inset-0 bg-black/50" />
         <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10">
           <Link href="/fractional-cto" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-8 transition-colors text-sm tracking-wide">

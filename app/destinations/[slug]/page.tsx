@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { neon } from '@neondatabase/serverless'
 import type { Destination } from '@/lib/types'
 
@@ -132,10 +133,15 @@ export default async function DestinationPage({ params }: Props) {
       {/* Hero with Background Image */}
       <section className="relative min-h-[60vh] flex items-end">
         {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('${imageUrl}')` }}
-        >
+        <div className="absolute inset-0">
+          <Image
+            src={imageUrl}
+            alt={`${destination.name}, ${destination.country} - Digital nomad destination`}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent" />
         </div>
 

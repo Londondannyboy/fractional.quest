@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { neon } from '@neondatabase/serverless'
 import { ExecutiveCard } from '@/components/ExecutiveCard'
 import { CandidateCard } from '@/components/CandidateCard'
@@ -100,12 +101,15 @@ export default async function PeoplePage() {
       {/* Hero with Aspirational Image */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         {/* Background Image - Someone working from home in sunlight */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=80')`,
-          }}
-        >
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=80"
+            alt="Fractional executives background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-teal-600/80 via-blue-500/60 to-purple-500/40" />
         </div>
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,8 +14,18 @@ export default function HowItWorksPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-white border-b border-gray-200 relative bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1920)' }}>
-        <div className="absolute inset-0 bg-black/50"></div>
+      <section className="bg-white border-b border-gray-200 relative">
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="How fractional hiring works background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative">
           <span className="inline-block text-sm font-semibold text-blue-600 uppercase tracking-wider mb-4">
             For Companies

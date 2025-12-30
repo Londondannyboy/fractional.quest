@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Suspense } from 'react'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
@@ -83,7 +84,14 @@ export default async function FractionalHRDirectorPage() {
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+          <Image
+            src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Fractional HR Director hero background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
           <JobsGraph3D categoryFilter="HR" limit={25} height="100%" isHero={true} showOverlay={true} />
         </div>
         <div className="relative z-10 w-full py-20">

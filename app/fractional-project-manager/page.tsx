@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Suspense } from 'react'
 import { createDbQuery } from '@/lib/db'
 import { ServerJobGrid } from '@/components/ServerJobGrid'
@@ -217,7 +218,15 @@ export default async function FractionalProjectManagerPage() {
 
       {/* Hero with 3D Knowledge Graph */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1920)' }}>
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Fractional Project Manager UK hero background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
         <div className="absolute inset-0">

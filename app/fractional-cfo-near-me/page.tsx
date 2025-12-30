@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { FAQ } from '@/components/FAQ'
 import { JobsGlobe } from '@/components/JobsGlobe'
@@ -57,7 +58,7 @@ export default function FractionalCFONearMePage() {
       {/* Hero Section with Globe */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gray-50">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+          <Image src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Fractional CFO Near Me" fill priority sizes="100vw" className="object-cover object-center" />
           <div className="absolute inset-0 bg-black/50" />
           <JobsGlobe />
         </div>

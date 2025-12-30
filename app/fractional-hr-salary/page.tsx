@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Suspense } from 'react'
 import { RateDistribution } from '@/components/RateDistribution'
 import { RoleCalculator } from '@/components/RoleCalculator'
@@ -51,8 +52,16 @@ export default function FractionalHRSalaryPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-pink-900 to-pink-800 py-20 bg-cover bg-center bg-blend-multiply" style={{ backgroundImage: 'url(https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg?auto=compress&cs=tinysrgb&w=1920)' }}>
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="relative bg-gradient-to-br from-pink-900 to-pink-800 py-20">
+        <Image
+          src="https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          alt="HR salary and compensation planning"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center mix-blend-multiply"
+        />
+        <div className="relative z-10 max-w-4xl mx-auto px-6">
           <Link href="/fractional-hr" className="text-pink-300 hover:text-gray-900 mb-6 inline-block text-sm">← Back to HR Hub</Link>
           <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Fractional HR Salary UK 2025</h1>
           <p className="text-xl text-pink-200 mb-8">

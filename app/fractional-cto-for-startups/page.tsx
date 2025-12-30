@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FAQ } from '@/components/FAQ'
 
 export const revalidate = 3600
@@ -41,8 +42,19 @@ const STARTUP_FAQS = [
 export default function FractionalCTOForStartupsPage() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="py-20 md:py-28 bg-white bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/7413915/pexels-photo-7413915.jpeg?auto=compress&cs=tinysrgb&w=1920)' }}>
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+      <section className="py-20 md:py-28 bg-white relative">
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.pexels.com/photos/7413915/pexels-photo-7413915.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Fractional CTO for Startups"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10">
           <Link href="/fractional-cto" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-8 transition-colors text-sm tracking-wide">
             <span className="mr-2">←</span> Back to CTO Hub
           </Link>

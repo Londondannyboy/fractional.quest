@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FAQ } from '@/components/FAQ'
 
 export const revalidate = 3600
@@ -69,8 +70,18 @@ export default function HowToBecomeFractionalCTOPage() {
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <section className="py-20 md:py-28 bg-white relative bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1920)' }}>
-        <div className="absolute inset-0 bg-black/50"></div>
+      <section className="py-20 md:py-28 bg-white relative">
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="How to become a fractional CTO background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
         <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10">
           <Link href="/fractional-cto" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-8 transition-colors text-sm tracking-wide">
             <span className="mr-2">←</span> Back to CTO Hub

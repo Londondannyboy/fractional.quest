@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { createDbQuery } from '@/lib/db'
 import { FAQ, CFO_FAQS } from '@/components/FAQ'
 import { RoleCalculator } from '@/components/RoleCalculator'
@@ -188,7 +189,14 @@ export default async function FractionalCfoJobsUkPage() {
       {/* Hero with Cleaner Look */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-white">
         <div className="absolute inset-0 z-0">
-          <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Fractional CFO jobs UK - finance director reviewing reports for part-time role" className="w-full h-full object-cover opacity-50" />
+          <Image
+            src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Fractional CFO jobs UK - finance director reviewing reports for part-time role"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-50"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/60"></div>
         </div>
         <div className="container-content relative z-10">

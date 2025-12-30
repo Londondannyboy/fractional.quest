@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { RoleNews } from '@/components/RoleNews'
 import { ServiceComparisonTable } from '@/components/ServiceComparisonTable'
 
@@ -18,12 +19,15 @@ export default function FractionalServicesPage() {
       {/* Hero with Sunny Background Image */}
       <section className="relative min-h-[60vh] flex items-center">
         {/* Background Image - Bright and aspirational */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80')`,
-          }}
-        >
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80"
+            alt="Executive services background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/80 via-teal-500/60 to-amber-400/40" />
         </div>
 

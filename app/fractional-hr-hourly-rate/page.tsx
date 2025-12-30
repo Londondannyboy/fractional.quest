@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { RoleCalculator } from '@/components/RoleCalculator'
 
 export const revalidate = 3600
@@ -30,8 +31,16 @@ export default function FractionalHRHourlyRatePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-gray-50 py-20 bg-cover bg-center" style={{backgroundImage: 'url(https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=1920)'}}>
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="relative bg-gray-50 py-20">
+        <Image
+          src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          alt="Fractional HR professionals in a meeting"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="relative z-10 max-w-4xl mx-auto px-6">
           <Link href="/fractional-hr" className="text-gray-400 hover:text-gray-900 mb-6 inline-block text-sm">← Back to HR Hub</Link>
           <span className="inline-block bg-pink-500 text-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] mb-6">
             Pricing Guide 2025

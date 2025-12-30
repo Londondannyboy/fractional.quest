@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { createDbQuery } from '@/lib/db'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { FAQ, CAMBRIDGE_FAQS } from '@/components/FAQ'
@@ -74,12 +75,15 @@ export default async function CambridgePage() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section with 3D Knowledge Graph */}
       <section className="relative bg-gradient-to-br from-cyan-900 via-cyan-800 to-cyan-900 py-20 md:py-32 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.pexels.com/photos/256395/pexels-photo-256395.jpeg?auto=compress&cs=tinysrgb&w=1920')`,
-          }}
-        >
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.pexels.com/photos/256395/pexels-photo-256395.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Cambridge university and tech hub"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/90 via-cyan-800/80 to-cyan-700/60" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

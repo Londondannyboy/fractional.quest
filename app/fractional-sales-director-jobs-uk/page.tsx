@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
 import { FAQPageSchema } from '@/components/FAQPageSchema'
@@ -130,12 +131,15 @@ export default async function FractionalSalesDirectorJobsUkPage() {
 
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ 
-            backgroundImage: `url('https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1920&q=80')`,
-          }}
-        >
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1920&q=80"
+            alt="Fractional Sales Director Jobs UK hero background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-green-700/90 via-green-600/80 to-teal-700/70" />
         </div>
         <div className="relative z-10 w-full py-16">

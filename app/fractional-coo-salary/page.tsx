@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Suspense } from 'react'
 import { RateDistribution } from '@/components/RateDistribution'
@@ -44,7 +45,9 @@ export default function FractionalCooSalaryPage() {
     <div className="min-h-screen bg-white">
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-blue-900 to-blue-800 py-20">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1920)' }} />
+        <div className="absolute inset-0">
+          <Image src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Fractional COO Salary" fill priority sizes="100vw" className="object-cover object-center" />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 to-blue-800/90" />
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <Link href="/" className="text-blue-200 hover:text-gray-900 mb-6 inline-block">← Back to Home</Link>

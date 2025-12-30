@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
 import { HireProcessStepper } from '@/components/HireProcessStepper'
 
@@ -17,7 +18,15 @@ export default function FractionalDataPage() {
     <div className="min-h-screen bg-white">
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         {/* Hero Background Image */}
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1920)' }}>
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Fractional Data Leadership"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 w-full py-20">

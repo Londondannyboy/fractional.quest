@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { createDbQuery } from '@/lib/db'
 import { JobCard } from '@/components/JobCard'
@@ -193,10 +194,16 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
         {/* Background - Banner image or gradient */}
         {banner ? (
           <>
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${banner})` }}
-            />
+            <div className="absolute inset-0">
+              <Image
+                src={banner}
+                alt={`${company.name} company banner`}
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover object-center"
+              />
+            </div>
             <div
               className="absolute inset-0"
               style={{

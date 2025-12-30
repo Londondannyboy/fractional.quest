@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -53,8 +54,11 @@ export default function CalculatorsHub() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 py-20 md:py-32" style={{ backgroundImage: 'url(https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1920)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay' }}>
-        <div className="max-w-5xl mx-auto px-4 text-center">
+      <section className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 py-20 md:py-32">
+        <div className="absolute inset-0 mix-blend-overlay">
+          <Image src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Fractional Executive Calculators" fill priority sizes="100vw" className="object-cover object-center" />
+        </div>
+        <div className="relative max-w-5xl mx-auto px-4 text-center">
           <span className="section-label text-purple-300 mb-4 block">Free Tools</span>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Fractional Executive Calculators

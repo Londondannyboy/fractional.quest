@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { createDbQuery } from '@/lib/db'
 import { FAQ } from '@/components/FAQ'
 import { FAQPageSchema } from '@/components/FAQPageSchema'
@@ -135,12 +136,15 @@ export default async function FractionalProductJobsUkPage() {
       {/* Hero with Aspirational Image */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden">
         {/* Background Image - Product professional */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80')`,
-          }}
-        >
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80"
+            alt="Fractional Product Jobs UK hero background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-teal-700/85 via-purple-600/70 to-pink-500/50" />
         </div>
         <div className="relative z-10 w-full py-16">
