@@ -38,10 +38,11 @@ const FractionalRateCalculatorUK = dynamic(
 
 export const revalidate = 3600
 
+// Target keyword: "fractional jobs london"
 export const metadata: Metadata = {
-  title: 'Fractional Jobs London 2025 | CFO, CTO, CMO Roles £900-£1,500/day',
-  description: 'Browse 50+ fractional jobs in London. CFO, CTO, CMO executive roles with £900-£1,500 day rates. Remote & hybrid positions in the City, Canary Wharf & Tech City. Updated daily.',
-  keywords: 'fractional jobs London, fractional jobs uk, fractional work, fractional roles, fractional CFO London, fractional CTO London, fractional CMO London, part-time executive jobs London, interim executive London, fractional executive jobs',
+  title: 'Fractional Jobs London 🏙️ Executive Roles',
+  description: '🔥 Fractional jobs London - CFO, CTO, CMO roles paying £900-£1,500/day. Browse live positions in the City, Canary Wharf & Tech City. Remote & hybrid options.',
+  keywords: 'fractional jobs London, fractional jobs uk, fractional work, fractional roles, fractional CFO London, fractional CTO London, fractional CMO London, part-time executive jobs London, interim executive London',
   alternates: {
     canonical: 'https://fractional.quest/fractional-jobs-london',
   },
@@ -57,11 +58,16 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Fractional Jobs London: CFO, CTO, CMO Roles 2025',
-    description: 'Find fractional executive jobs in London. CFO, CTO, CMO roles with £900-£1,500 day rates.',
+    title: 'Fractional Jobs London 🏙️ Executive Roles',
+    description: '🔥 Fractional jobs London - CFO, CTO, CMO roles paying £900-£1,500/day. City, Canary Wharf & Tech City.',
     type: 'website',
     url: 'https://fractional.quest/fractional-jobs-london',
-    siteName: 'Fractional Quest',
+    siteName: 'Fractional Jobs Quest',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fractional Jobs London 🏙️ Executive Roles',
+    description: '🔥 Fractional jobs London - £900-£1,500/day. Browse now.',
   },
 }
 

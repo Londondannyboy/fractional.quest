@@ -17,18 +17,24 @@ import { FAQPageSchema } from '@/components/FAQPageSchema'
 
 export const revalidate = 3600
 
+// Target keyword: "fractional cmo jobs uk"
 export const metadata: Metadata = {
-  title: 'Fractional CMO Jobs UK: Part-Time Roles',
-  description: 'Fractional CMO jobs UK. Part-time Chief Marketing Officer positions paying £700-£1,400/day. Remote & hybrid roles for experienced marketing leaders.',
+  title: 'Fractional CMO Jobs UK 📈 Marketing Leadership Roles',
+  description: '🎯 Fractional CMO jobs UK - Part-time Chief Marketing Officer positions paying £700-£1,400/day. Browse live roles for experienced marketing leaders. Remote & hybrid.',
   keywords: 'fractional cmo jobs uk, fractional cmo jobs, part time cmo jobs, fractional cmo uk, cmo jobs uk, part time chief marketing officer, fractional cmo',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cmo-jobs-uk',
   },
   openGraph: {
-    title: 'Fractional CMO Jobs UK | Part-Time CMO Roles 2025',
-    description: 'Fractional CMO jobs UK - Find part-time CMO positions paying £700-£1,400/day. Remote & hybrid.',
+    title: 'Fractional CMO Jobs UK 📈 Marketing Leadership Roles',
+    description: '🎯 Fractional CMO jobs UK - Part-time CMO positions paying £700-£1,400/day. Remote & hybrid.',
     url: 'https://fractional.quest/fractional-cmo-jobs-uk',
     images: ['/images/fractional-cmo-jobs-uk.jpg'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fractional CMO Jobs UK 📈 Marketing Leadership Roles',
+    description: '🎯 Fractional CMO jobs UK - £700-£1,400/day. Browse live roles.',
   },
 }
 

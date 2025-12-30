@@ -16,18 +16,24 @@ import { FAQPageSchema } from '@/components/FAQPageSchema'
 
 export const revalidate = 3600
 
+// Target keyword: "fractional coo jobs uk"
 export const metadata: Metadata = {
-  title: 'Fractional COO Jobs UK | Chief Operating Officer Roles 2025',
-  description: 'Fractional COO jobs UK - Part-time Chief Operating Officer positions paying £750-£1,400/day. Browse live fractional COO roles for experienced operations leaders seeking flexible executive work.',
+  title: 'Fractional COO Jobs UK ⚙️ Operations Leadership Roles',
+  description: '🔧 Fractional COO jobs UK - Part-time Chief Operating Officer positions paying £750-£1,400/day. Browse live roles for experienced operations leaders. Remote & hybrid.',
   keywords: 'fractional coo jobs uk, fractional coo jobs, fractional chief operating officer, part time coo jobs uk, fractional coo, coo jobs uk, part time chief operating officer, fractional operations director, interim coo uk',
   alternates: {
     canonical: 'https://fractional.quest/fractional-coo-jobs-uk',
   },
   openGraph: {
-    title: 'Fractional COO Jobs UK | Chief Operating Officer Roles 2025',
-    description: 'Fractional COO jobs UK - Find part-time Chief Operating Officer positions paying £750-£1,400/day. Remote & hybrid opportunities.',
+    title: 'Fractional COO Jobs UK ⚙️ Operations Leadership Roles',
+    description: '🔧 Fractional COO jobs UK - Part-time COO positions paying £750-£1,400/day. Remote & hybrid.',
     images: ['/images/fractional-coo-jobs-uk.jpg'],
     url: 'https://fractional.quest/fractional-coo-jobs-uk',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fractional COO Jobs UK ⚙️ Operations Leadership Roles',
+    description: '🔧 Fractional COO jobs UK - £750-£1,400/day. Browse live roles.',
   },
 }
 

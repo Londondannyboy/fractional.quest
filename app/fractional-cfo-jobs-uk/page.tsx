@@ -17,18 +17,24 @@ import { FAQPageSchema } from '@/components/FAQPageSchema'
 
 export const revalidate = 3600
 
+// Target keyword: "fractional cfo jobs uk"
 export const metadata: Metadata = {
-  title: 'Fractional CFO Jobs UK | Part-Time & Finance Director Roles 2025',
-  description: 'Fractional CFO jobs UK. Part-time CFO & fractional finance director positions paying £800-£1,500/day. Browse live interim CFO and fractional FD roles in London, Manchester & remote.',
-  keywords: 'fractional cfo jobs, fractional cfo jobs uk, fractional finance director, fractional finance director jobs, fractional fd jobs, part time cfo jobs, interim cfo jobs, fractional cfo uk, fractional cfo london, fractional cfo remote, fractional cfo salary, part time finance director',
+  title: 'Fractional CFO Jobs UK 💰 Finance Director Roles',
+  description: '💼 Fractional CFO jobs UK - Part-time CFO & finance director positions paying £800-£1,500/day. Browse live roles in London, Manchester & remote. Apply direct to employers.',
+  keywords: 'fractional cfo jobs, fractional cfo jobs uk, fractional finance director, fractional finance director jobs, fractional fd jobs, part time cfo jobs, interim cfo jobs',
   alternates: {
     canonical: 'https://fractional.quest/fractional-cfo-jobs-uk',
   },
   openGraph: {
-    title: 'Fractional CFO Jobs UK | Finance Director & Part-Time Roles 2025',
-    description: 'Fractional CFO jobs UK - Part-time CFO, fractional finance director & interim CFO positions paying £800-£1,500/day. London, Manchester & remote.',
+    title: 'Fractional CFO Jobs UK 💰 Finance Director Roles',
+    description: '💼 Fractional CFO jobs UK - Part-time CFO & finance director positions paying £800-£1,500/day. London, Manchester & remote.',
     images: ['/images/fractional-cfo-jobs-uk.jpg'],
     url: 'https://fractional.quest/fractional-cfo-jobs-uk',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fractional CFO Jobs UK 💰 Finance Director Roles',
+    description: '💼 Fractional CFO jobs UK - £800-£1,500/day. Browse live roles.',
   },
 }
 

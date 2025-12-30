@@ -24,9 +24,10 @@ const IR35Calculator = dynamic(() => import('@/components/IR35Calculator').then(
 
 export const revalidate = 3600 // Revalidate every hour
 
+// Target keyword: "fractional jobs uk"
 export const metadata: Metadata = {
-  title: 'Fractional Jobs UK 2025',
-  description: 'Find fractional jobs UK. CFO, CTO, CMO, PM roles. £700-£1,500/day rates.',
+  title: 'Fractional Jobs UK 🇬🇧 Executive Roles',
+  description: '💷 Fractional jobs UK - CFO, CTO, CMO & executive roles paying £700-£1,500/day. Browse live positions in London, Manchester & remote. Apply direct to employers.',
   keywords: 'fractional jobs UK, fractional CFO jobs UK, fractional CTO jobs UK, fractional CMO jobs UK, fractional project manager UK, part-time executive jobs UK, interim executive jobs UK, fractional COO jobs UK',
   alternates: {
     canonical: 'https://fractional.quest/fractional-jobs-uk',
@@ -43,11 +44,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Fractional Jobs UK: CFO, CTO, CMO Roles 2025',
-    description: 'Fractional jobs UK: 17+ CFO, CTO, CMO roles with £700-£1,500 day rates. Apply to fractional jobs today.',
+    title: 'Fractional Jobs UK 🇬🇧 Executive Roles',
+    description: '💷 Fractional jobs UK - CFO, CTO, CMO roles paying £700-£1,500/day. London, Manchester & remote.',
     type: 'website',
     url: 'https://fractional.quest/fractional-jobs-uk',
-    siteName: 'Fractional Quest',
+    siteName: 'Fractional Jobs Quest',
   },
 }
 

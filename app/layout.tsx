@@ -33,10 +33,10 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Fractional Jobs UK | CFO, CTO, CMO Roles | Fractional Quest",
+    default: "Fractional Jobs 💼 UK Executive Roles | Fractional Quest",
     template: "%s | Fractional Quest"
   },
-  description: "Discover the best fractional jobs in the UK. Browse fractional CFO, CMO, CTO and executive roles in London. Connect with leading fractional recruitment agencies and find flexible leadership opportunities.",
+  description: "💰 Fractional jobs UK - CFO, CTO, CMO & executive roles paying £800-£2,000/day. Browse fractional executive opportunities in London & remote. The #1 fractional recruitment platform.",
   keywords: ["fractional jobs", "fractional jobs UK", "fractional CFO", "fractional CTO", "fractional CMO", "fractional COO", "fractional executive", "part-time executive", "fractional recruitment agencies", "London fractional jobs"],
   authors: [{ name: "Fractional Quest" }],
   creator: "Fractional Quest",
@@ -49,15 +49,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: "https://fractional.quest",
-    siteName: "Fractional Quest",
-    title: "Fractional Jobs UK | CFO, CTO, CMO Roles",
-    description: "Discover the best fractional jobs in the UK. Browse fractional CFO, CMO, CTO and executive roles in London.",
+    siteName: "Fractional Jobs Quest",
+    title: "Fractional Jobs 💼 UK Executive Roles",
+    description: "💰 Fractional jobs UK - CFO, CTO, CMO & executive roles paying £800-£2,000/day. Browse opportunities in London & remote.",
     // Images auto-generated from app/opengraph-image.tsx
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fractional Jobs UK | Fractional Quest",
-    description: "Discover the best fractional jobs in the UK. Browse fractional CFO, CMO, CTO and executive roles.",
+    title: "Fractional Jobs 💼 UK Executive Roles",
+    description: "💰 Fractional jobs UK - CFO, CTO, CMO roles paying £800-£2,000/day.",
     site: "@fractionalquest",
     creator: "@fractionalquest",
     // Images auto-generated from app/twitter-image.tsx
@@ -80,17 +80,22 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://fractional.quest/#organization",
-  name: "Fractional Quest",
-  alternateName: ["Fractional Quest", "FractionalQuest"],
+  name: "Fractional Jobs Quest",
+  alternateName: ["Fractional Quest", "FractionalQuest", "Fractional Executive Jobs", "Fractional Jobs UK"],
   url: "https://fractional.quest",
   logo: {
     "@type": "ImageObject",
-    url: "https://fractional.quest/logo.svg",
-    width: "512",
-    height: "512"
+    "@id": "https://fractional.quest/#logo",
+    url: "https://fractional.quest/icon-512.png",
+    contentUrl: "https://fractional.quest/icon-512.png",
+    width: 512,
+    height: 512,
+    caption: "Fractional Jobs Quest"
   },
-  image: "https://fractional.quest/logo.svg",
-  description: "UK marketplace for fractional jobs and executive services. Browse fractional CFO, CTO, CMO roles or hire fractional executives.",
+  image: {
+    "@id": "https://fractional.quest/#logo"
+  },
+  description: "UK marketplace for fractional jobs and executive services. Browse fractional CFO, CTO, CMO roles or hire fractional executives. The #1 platform for fractional executive recruitment.",
   foundingDate: "2024",
   sameAs: [
     "https://x.com/fractionalquest",
@@ -105,25 +110,31 @@ const organizationJsonLd = {
   areaServed: {
     "@type": "Country",
     name: "United Kingdom"
-  }
+  },
+  knowsAbout: [
+    "Fractional Jobs",
+    "Fractional Executive",
+    "Fractional CFO",
+    "Fractional CTO",
+    "Fractional CMO",
+    "Fractional COO",
+    "Part-Time Executive",
+    "Interim Executive",
+    "Portfolio Career"
+  ]
 };
 
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Fractional Quest",
-  alternateName: ["Fractional Quest", "FractionalQuest", "Fractional Jobs UK"],
+  "@id": "https://fractional.quest/#website",
+  name: "Fractional Jobs Quest",
+  alternateName: ["Fractional Quest", "FractionalQuest", "Fractional Jobs UK", "Fractional Executive Jobs"],
   url: "https://fractional.quest",
-  description: "UK marketplace for fractional jobs and executive services. Browse fractional CFO, CMO, CTO roles.",
+  description: "UK marketplace for fractional jobs and executive services. Browse fractional CFO, CMO, CTO roles paying £800-£2,000/day.",
   inLanguage: "en-GB",
   publisher: {
-    "@type": "Organization",
-    name: "Fractional Quest",
-    url: "https://fractional.quest",
-    logo: {
-      "@type": "ImageObject",
-      url: "https://fractional.quest/logo.svg"
-    }
+    "@id": "https://fractional.quest/#organization"
   },
   potentialAction: {
     "@type": "SearchAction",
