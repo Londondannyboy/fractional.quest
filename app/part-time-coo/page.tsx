@@ -2,6 +2,8 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { FAQ } from '@/components/FAQ'
+import { createDbQuery } from '@/lib/db'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 export const revalidate = 3600
 
@@ -17,6 +19,24 @@ export const metadata: Metadata = {
     description: 'Part-time Chief Operating Officer for scaling businesses.',
     url: 'https://fractional.quest/part-time-coo',
   },
+}
+
+async function getPartTimeCooJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND (title ILIKE '%part-time%coo%' OR title ILIKE '%part time%coo%' OR title ILIKE '%fractional%coo%'
+             OR title ILIKE '%part-time%operations%' OR title ILIKE '%part time%operations%' OR title ILIKE '%fractional%operations%')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 10
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
 }
 
 const faqItems = [
@@ -38,7 +58,8 @@ const faqItems = [
   },
 ]
 
-export default function PartTimeCOOPage() {
+export default async function PartTimeCOOPage() {
+  const partTimeJobs = await getPartTimeCooJobs()
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -94,6 +115,25 @@ export default function PartTimeCOOPage() {
           </div>
         </div>
       </section>
+
+      {/* Live Part-Time COO Jobs */}
+      {(partTimeJobs as any[]).length > 0 && (
+        <section className="py-8 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <HotJobsLines
+              jobs={(partTimeJobs as any[]).map(job => ({
+                id: job.id, slug: job.slug, title: job.title, company_name: job.company_name,
+                location: job.location, compensation: job.compensation, role_category: job.role_category,
+                posted_date: job.posted_date, is_remote: job.is_remote,
+              }))}
+              title="Live Part-Time COO Jobs"
+              maxJobs={10}
+              viewAllHref="/fractional-coo-jobs-uk"
+              viewAllText="View all jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Quick Stats */}
       <section className="py-16 bg-rose-50 border-b-4 border-rose-700">

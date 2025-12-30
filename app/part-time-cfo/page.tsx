@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { createDbQuery } from '@/lib/db'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 export const revalidate = 3600
 
@@ -45,8 +46,26 @@ async function getCfoJobs() {
   }
 }
 
+async function getPartTimeCfoJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND (title ILIKE '%part-time%cfo%' OR title ILIKE '%part time%cfo%' OR title ILIKE '%fractional%cfo%'
+             OR title ILIKE '%part-time%finance%' OR title ILIKE '%part time%finance%' OR title ILIKE '%fractional%finance%')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 10
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
+
 export default async function PartTimeCfoPage() {
-  const [jobCount, jobs] = await Promise.all([getCfoStats(), getCfoJobs()])
+  const [jobCount, jobs, partTimeJobs] = await Promise.all([getCfoStats(), getCfoJobs(), getPartTimeCfoJobs()])
 
   return (
     <div className="min-h-screen bg-white">
@@ -78,6 +97,25 @@ export default async function PartTimeCfoPage() {
           </div>
         </div>
       </section>
+
+      {/* Live Part-Time CFO Jobs */}
+      {(partTimeJobs as any[]).length > 0 && (
+        <section className="py-8 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <HotJobsLines
+              jobs={(partTimeJobs as any[]).map(job => ({
+                id: job.id, slug: job.slug, title: job.title, company_name: job.company_name,
+                location: job.location, compensation: job.compensation, role_category: job.role_category,
+                posted_date: job.posted_date, is_remote: job.is_remote,
+              }))}
+              title="Live Part-Time CFO Jobs"
+              maxJobs={10}
+              viewAllHref="/fractional-cfo-jobs-uk"
+              viewAllText="View all jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Main Content - 750+ words */}
       <article className="py-16">

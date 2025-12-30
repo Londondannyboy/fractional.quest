@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 export const revalidate = 3600
 
@@ -40,8 +41,26 @@ async function getCmoJobs() {
   }
 }
 
+async function getPartTimeCmoJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND (title ILIKE '%part-time%cmo%' OR title ILIKE '%part time%cmo%' OR title ILIKE '%fractional%cmo%'
+             OR title ILIKE '%part-time%marketing%' OR title ILIKE '%part time%marketing%' OR title ILIKE '%fractional%marketing%')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 10
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
+
 export default async function PartTimeCmoPage() {
-  const [jobCount, jobs] = await Promise.all([getCmoStats(), getCmoJobs()])
+  const [jobCount, jobs, partTimeJobs] = await Promise.all([getCmoStats(), getCmoJobs(), getPartTimeCmoJobs()])
 
   return (
     <div className="min-h-screen bg-white">
@@ -66,6 +85,25 @@ export default async function PartTimeCmoPage() {
           </div>
         </div>
       </section>
+
+      {/* Live Part-Time CMO Jobs */}
+      {(partTimeJobs as any[]).length > 0 && (
+        <section className="py-8 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <HotJobsLines
+              jobs={(partTimeJobs as any[]).map(job => ({
+                id: job.id, slug: job.slug, title: job.title, company_name: job.company_name,
+                location: job.location, compensation: job.compensation, role_category: job.role_category,
+                posted_date: job.posted_date, is_remote: job.is_remote,
+              }))}
+              title="Live Part-Time CMO Jobs"
+              maxJobs={10}
+              viewAllHref="/fractional-cmo-jobs-uk"
+              viewAllText="View all jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Main Content - 750+ words */}
       <article className="py-16">

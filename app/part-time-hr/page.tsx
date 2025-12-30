@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { createDbQuery } from '@/lib/db'
 import { JobsGraph3D } from '@/components/JobsGraph3D'
+import { HotJobsLines } from '@/components/HotJobsLines'
 
 export const revalidate = 3600
 
@@ -45,8 +46,26 @@ async function getHRJobs() {
   }
 }
 
+async function getPartTimeHrJobs() {
+  try {
+    const sql = createDbQuery()
+    const jobs = await sql`
+      SELECT id, slug, title, company_name, location, is_remote, compensation, role_category, posted_date
+      FROM jobs
+      WHERE is_active = true
+        AND (title ILIKE '%part-time%hr%' OR title ILIKE '%part time%hr%' OR title ILIKE '%fractional%hr%'
+             OR title ILIKE '%part-time%people%' OR title ILIKE '%part time%people%' OR title ILIKE '%fractional%people%')
+      ORDER BY posted_date DESC NULLS LAST
+      LIMIT 10
+    `
+    return jobs
+  } catch (error) {
+    return []
+  }
+}
+
 export default async function PartTimeHRPage() {
-  const [jobCount, jobs] = await Promise.all([getHRStats(), getHRJobs()])
+  const [jobCount, jobs, partTimeJobs] = await Promise.all([getHRStats(), getHRJobs(), getPartTimeHrJobs()])
 
   return (
     <div className="min-h-screen bg-white">
@@ -74,6 +93,25 @@ export default async function PartTimeHRPage() {
           </div>
         </div>
       </section>
+
+      {/* Live Part-Time HR Jobs */}
+      {(partTimeJobs as any[]).length > 0 && (
+        <section className="py-8 bg-white border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <HotJobsLines
+              jobs={(partTimeJobs as any[]).map(job => ({
+                id: job.id, slug: job.slug, title: job.title, company_name: job.company_name,
+                location: job.location, compensation: job.compensation, role_category: job.role_category,
+                posted_date: job.posted_date, is_remote: job.is_remote,
+              }))}
+              title="Live Part-Time HR Jobs"
+              maxJobs={10}
+              viewAllHref="/fractional-hr-jobs-uk"
+              viewAllText="View all jobs"
+            />
+          </div>
+        </section>
+      )}
 
       {/* Main Content */}
       <article className="py-16">
