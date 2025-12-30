@@ -576,7 +576,7 @@ export default async function FractionalJobsLondonPage() {
                         className="flex items-center justify-between p-2.5 rounded-lg bg-gray-50 hover:bg-blue-50 hover:text-blue-700 transition-colors text-sm"
                       >
                         <span className="font-medium text-gray-700">{link.label}</span>
-                        <span className="text-gray-400">→</span>
+                        <span className="text-gray-600">→</span>
                       </Link>
                     ))}
                   </div>
