@@ -32,8 +32,8 @@ async function getMarketingStats() {
   try {
     const sql = createDbQuery()
     const [totalResult, remoteResult] = await Promise.all([
-      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND role_category = 'Marketing'`,
-      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND role_category = 'Marketing' AND (is_remote = true OR workplace_type = 'Remote')`
+      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND role_category = 'Marketing' AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%') AND title NOT ILIKE '%interim%'`,
+      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND role_category = 'Marketing' AND (is_remote = true OR workplace_type = 'Remote') AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%') AND title NOT ILIKE '%interim%'`
     ])
     return {
       total: parseInt((totalResult[0] as any)?.count || '0'),
@@ -51,6 +51,8 @@ async function getFeaturedCompanies() {
       SELECT DISTINCT company_name
       FROM jobs
       WHERE is_active = true AND role_category = 'Marketing' AND company_name IS NOT NULL
+        AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')
+        AND title NOT ILIKE '%interim%'
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 50
     `
@@ -70,6 +72,8 @@ async function getMarketingJobs() {
         description_snippet
       FROM jobs
       WHERE is_active = true AND role_category = 'Marketing'
+        AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')
+        AND title NOT ILIKE '%interim%'
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 50
     `
@@ -90,6 +94,8 @@ async function getRelatedJobs() {
       FROM jobs
       WHERE is_active = true
         AND role_category IN ('Finance', 'Technology', 'HR', 'Operations')
+        AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')
+        AND title NOT ILIKE '%interim%'
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 15
     `

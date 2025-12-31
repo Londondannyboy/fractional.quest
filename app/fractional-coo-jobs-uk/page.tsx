@@ -45,8 +45,8 @@ async function getOperationsStats() {
   try {
     const sql = createDbQuery()
     const [totalResult, remoteResult] = await Promise.all([
-      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND role_category = 'Operations'`,
-      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND role_category = 'Operations' AND (is_remote = true OR workplace_type = 'Remote')`
+      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND role_category = 'Operations' AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')`,
+      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND role_category = 'Operations' AND (is_remote = true OR workplace_type = 'Remote') AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')`
     ])
     return {
       total: parseInt((totalResult[0] as any)?.count || '0'),
@@ -64,6 +64,7 @@ async function getFeaturedCompanies() {
       SELECT DISTINCT company_name
       FROM jobs
       WHERE is_active = true AND role_category = 'Operations' AND company_name IS NOT NULL
+        AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 50
     `
@@ -86,21 +87,8 @@ async function getOperationsJobs() {
       FROM jobs
       WHERE is_active = true
         AND role_category = 'Operations'
-        AND (
-          country = 'UK'
-          OR country = 'United Kingdom'
-          OR country = 'GB'
-          OR location ILIKE '%UK%'
-          OR location ILIKE '%United Kingdom%'
-          OR location ILIKE '%London%'
-          OR location ILIKE '%Manchester%'
-          OR location ILIKE '%Birmingham%'
-          OR location ILIKE '%Edinburgh%'
-          OR location ILIKE '%Bristol%'
-          OR location ILIKE '%Leeds%'
-          OR location ILIKE '%Glasgow%'
-          OR (is_remote = true AND country IS NULL)
-        )
+        AND title NOT ILIKE '%interim%'
+        AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 20
     `
@@ -129,6 +117,8 @@ async function getRelatedJobs() {
       WHERE is_active = true
         AND role_category IS NOT NULL
         AND role_category != 'Operations'
+        AND title NOT ILIKE '%interim%'
+        AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 15
     `

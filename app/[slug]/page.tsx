@@ -90,8 +90,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: 'Article Not Found | Fractional Quest' }
   }
 
+  // Strip existing suffix to prevent duplication like "Title | Fractional Quest | Fractional Quest"
+  const cleanTitle = article.title.replace(/\s*\|\s*Fractional Quest\s*$/i, '')
+
   return {
-    title: `${article.title} | Fractional Quest`,
+    title: `${cleanTitle} | Fractional Quest`,
     description: article.meta_description || article.excerpt || 'Read this article on Fractional Quest',
   }
 }

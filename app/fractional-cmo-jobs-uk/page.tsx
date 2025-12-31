@@ -43,13 +43,16 @@ export const metadata: Metadata = {
   },
 }
 
+// UK location filter for all queries
+const UK_FILTER = `(country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')`
+
 async function getMarketingStats() {
   try {
     const sql = createDbQuery()
     const [totalResult, avgRateResult, remoteResult] = await Promise.all([
-      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND role_category = 'Marketing'`,
-      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS BIGINT)) as avg FROM jobs WHERE is_active = true AND role_category = 'Marketing' AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+'`,
-      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND role_category = 'Marketing' AND (is_remote = true OR workplace_type = 'Remote')`
+      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND role_category = 'Marketing' AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')`,
+      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS BIGINT)) as avg FROM jobs WHERE is_active = true AND role_category = 'Marketing' AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%') AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+'`,
+      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND role_category = 'Marketing' AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%') AND (is_remote = true OR workplace_type = 'Remote')`
     ])
     return {
       total: parseInt((totalResult[0] as any)?.count || '0'),
@@ -67,7 +70,10 @@ async function getFeaturedCompanies() {
     const companies = await sql`
       SELECT DISTINCT company_name
       FROM jobs
-      WHERE is_active = true AND role_category = 'Marketing' AND company_name IS NOT NULL
+      WHERE is_active = true
+        AND role_category = 'Marketing'
+        AND company_name IS NOT NULL
+        AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 50
     `
@@ -77,7 +83,7 @@ async function getFeaturedCompanies() {
   }
 }
 
-// Server-side job fetch for SEO - renders in initial HTML for crawlers
+// Server-side job fetch for SEO - renders in initial HTML for crawlers (UK only)
 async function getMarketingJobs() {
   try {
     const sql = createDbQuery()
@@ -87,7 +93,10 @@ async function getMarketingJobs() {
         compensation, role_category, skills_required, posted_date, hours_per_week, salary_min, salary_max, salary_currency,
         description_snippet
       FROM jobs
-      WHERE is_active = true AND role_category = 'Marketing'
+      WHERE is_active = true
+        AND role_category = 'Marketing'
+        AND title NOT ILIKE '%interim%'
+        AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 20
     `
@@ -106,7 +115,7 @@ function getDaysAgo(postedDate: string | null): number | undefined {
   return Math.floor(diffTime / (1000 * 60 * 60 * 24))
 }
 
-// Get related jobs from OTHER C-suite roles for cross-linking
+// Get related jobs from OTHER C-suite roles for cross-linking (UK only)
 async function getRelatedJobs() {
   try {
     const sql = createDbQuery()
@@ -116,6 +125,8 @@ async function getRelatedJobs() {
       WHERE is_active = true
         AND role_category IS NOT NULL
         AND role_category != 'Marketing'
+        AND title NOT ILIKE '%interim%'
+        AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 15
     `

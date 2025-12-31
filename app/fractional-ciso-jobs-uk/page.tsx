@@ -73,13 +73,16 @@ const SECURITY_QUERY = `
   OR title ILIKE '%Risk%'
 `
 
+// UK location filter for all queries
+const UK_FILTER = `(country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')`
+
 async function getSecurityStats() {
   try {
     const sql = createDbQuery()
     const [totalResult, avgRateResult, remoteResult] = await Promise.all([
-      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category IN ('Security', 'Data', 'Legal') OR title ILIKE '%CISO%' OR title ILIKE '%Security%' OR title ILIKE '%Information Officer%' OR title ILIKE '%Data Protection%' OR title ILIKE '%DPO%' OR title ILIKE '%Compliance%' OR title ILIKE '%Cyber%' OR title ILIKE '%InfoSec%' OR title ILIKE '%Risk%')`,
-      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS BIGINT)) as avg FROM jobs WHERE is_active = true AND (role_category IN ('Security', 'Data') OR title ILIKE '%CISO%' OR title ILIKE '%Security%') AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+'`,
-      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category IN ('Security', 'Data', 'Legal') OR title ILIKE '%CISO%' OR title ILIKE '%Security%' OR title ILIKE '%Cyber%') AND (is_remote = true OR workplace_type = 'Remote')`
+      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category IN ('Security', 'Data', 'Legal') OR title ILIKE '%CISO%' OR title ILIKE '%Security%' OR title ILIKE '%Information Officer%' OR title ILIKE '%Data Protection%' OR title ILIKE '%DPO%' OR title ILIKE '%Compliance%' OR title ILIKE '%Cyber%' OR title ILIKE '%InfoSec%' OR title ILIKE '%Risk%') AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')`,
+      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS BIGINT)) as avg FROM jobs WHERE is_active = true AND (role_category IN ('Security', 'Data') OR title ILIKE '%CISO%' OR title ILIKE '%Security%') AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%') AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+'`,
+      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category IN ('Security', 'Data', 'Legal') OR title ILIKE '%CISO%' OR title ILIKE '%Security%' OR title ILIKE '%Cyber%') AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%') AND (is_remote = true OR workplace_type = 'Remote')`
     ])
     return {
       total: parseInt((totalResult[0] as any)?.count || '0'),
@@ -97,7 +100,10 @@ async function getFeaturedCompanies() {
     const companies = await sql`
       SELECT DISTINCT company_name
       FROM jobs
-      WHERE is_active = true AND (role_category = 'Security' OR title ILIKE '%CISO%' OR title ILIKE '%Security%') AND company_name IS NOT NULL
+      WHERE is_active = true
+        AND (role_category = 'Security' OR title ILIKE '%CISO%' OR title ILIKE '%Security%')
+        AND company_name IS NOT NULL
+        AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 50
     `
@@ -107,7 +113,7 @@ async function getFeaturedCompanies() {
   }
 }
 
-// Server-side job fetch for SEO - broadened to include security, data, compliance, risk roles
+// Server-side job fetch for SEO - broadened to include security, data, compliance, risk roles (UK only)
 async function getSecurityJobs() {
   try {
     const sql = createDbQuery()
@@ -117,19 +123,22 @@ async function getSecurityJobs() {
         compensation, role_category, skills_required, posted_date, hours_per_week, salary_min, salary_max, salary_currency,
         description_snippet
       FROM jobs
-      WHERE is_active = true AND (
-        role_category IN ('Security', 'Data', 'Legal')
-        OR title ILIKE '%CISO%'
-        OR title ILIKE '%Security%'
-        OR title ILIKE '%Information Officer%'
-        OR title ILIKE '%Data Protection%'
-        OR title ILIKE '%DPO%'
-        OR title ILIKE '%Compliance%'
-        OR title ILIKE '%Cyber%'
-        OR title ILIKE '%InfoSec%'
-        OR title ILIKE '%Risk%'
-        OR title ILIKE '%Privacy%'
-      )
+      WHERE is_active = true
+        AND (
+          role_category IN ('Security', 'Data', 'Legal')
+          OR title ILIKE '%CISO%'
+          OR title ILIKE '%Security%'
+          OR title ILIKE '%Information Officer%'
+          OR title ILIKE '%Data Protection%'
+          OR title ILIKE '%DPO%'
+          OR title ILIKE '%Compliance%'
+          OR title ILIKE '%Cyber%'
+          OR title ILIKE '%InfoSec%'
+          OR title ILIKE '%Risk%'
+          OR title ILIKE '%Privacy%'
+        )
+        AND title NOT ILIKE '%interim%'
+        AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 30
     `
@@ -139,7 +148,7 @@ async function getSecurityJobs() {
   }
 }
 
-// Get related jobs from OTHER roles for cross-promotion
+// Get related jobs from OTHER roles for cross-promotion (UK only)
 async function getRelatedJobs() {
   try {
     const sql = createDbQuery()
@@ -149,6 +158,8 @@ async function getRelatedJobs() {
       WHERE is_active = true
         AND role_category IS NOT NULL
         AND role_category NOT IN ('Security', 'Data', 'Legal')
+        AND title NOT ILIKE '%interim%'
+        AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 15
     `

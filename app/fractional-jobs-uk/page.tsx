@@ -141,16 +141,18 @@ async function getUKStats() {
   try {
     const sql = createDbQuery()
     const [totalUK, totalLondon, roleStats, avgRateResult] = await Promise.all([
-      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true`,
-      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND location ILIKE '%london%'`,
+      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%') AND title NOT ILIKE '%interim%'`,
+      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND location ILIKE '%london%' AND title NOT ILIKE '%interim%'`,
       sql`
         SELECT role_category, COUNT(*) as count
         FROM jobs
         WHERE is_active = true AND role_category IS NOT NULL
+          AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')
+          AND title NOT ILIKE '%interim%'
         GROUP BY role_category
         ORDER BY count DESC
       `,
-      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS BIGINT)) as avg FROM jobs WHERE is_active = true AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+'`
+      sql`SELECT AVG(CAST(REGEXP_REPLACE(compensation, '[^0-9]', '', 'g') AS BIGINT)) as avg FROM jobs WHERE is_active = true AND compensation IS NOT NULL AND compensation ~ '^[£$]?[0-9]+' AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%') AND title NOT ILIKE '%interim%'`
     ])
 
     return {
@@ -174,6 +176,8 @@ async function getUKJobs() {
         job_source, is_syndicated, company_type, appeal_summary, key_deliverables
       FROM jobs
       WHERE is_active = true
+        AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')
+        AND title NOT ILIKE '%interim%'
       ORDER BY
         CASE WHEN location ILIKE '%london%' THEN 0 ELSE 1 END,
         posted_date DESC NULLS LAST,
@@ -195,6 +199,7 @@ async function getWiderJobs() {
       FROM jobs
       WHERE is_active = true
         AND (is_remote = true OR location ILIKE '%remote%' OR location NOT ILIKE '%uk%')
+        AND title NOT ILIKE '%interim%'
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 15
     `

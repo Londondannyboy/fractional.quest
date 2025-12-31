@@ -35,8 +35,8 @@ async function getBDStats() {
   try {
     const sql = createDbQuery()
     const [totalResult, remoteResult] = await Promise.all([
-      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category = 'Sales' OR title ILIKE '%Business Development%' OR title ILIKE '%BD%' OR title ILIKE '%Partnerships%')`,
-      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category = 'Sales' OR title ILIKE '%Business Development%' OR title ILIKE '%BD%' OR title ILIKE '%Partnerships%') AND (is_remote = true OR workplace_type = 'Remote')`
+      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category = 'Sales' OR title ILIKE '%Business Development%' OR title ILIKE '%BD%' OR title ILIKE '%Partnerships%') AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')`,
+      sql`SELECT COUNT(*) as count FROM jobs WHERE is_active = true AND (role_category = 'Sales' OR title ILIKE '%Business Development%' OR title ILIKE '%BD%' OR title ILIKE '%Partnerships%') AND (is_remote = true OR workplace_type = 'Remote') AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')`
     ])
     return {
       total: parseInt((totalResult[0] as any)?.count || '0'),
@@ -54,6 +54,7 @@ async function getFeaturedCompanies() {
       SELECT DISTINCT company_name
       FROM jobs
       WHERE is_active = true AND (role_category = 'Sales' OR title ILIKE '%Business Development%') AND company_name IS NOT NULL
+        AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 50
     `
@@ -74,6 +75,8 @@ async function getBDJobs() {
         description_snippet
       FROM jobs
       WHERE is_active = true AND (role_category = 'Sales' OR title ILIKE '%Business Development%' OR title ILIKE '%BD%' OR title ILIKE '%Partnerships%')
+        AND title NOT ILIKE '%interim%'
+        AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 20
     `
@@ -96,6 +99,8 @@ async function getRelatedJobs() {
         AND role_category NOT IN ('Sales')
         AND title NOT ILIKE '%Business Development%'
         AND title NOT ILIKE '%BD%'
+        AND title NOT ILIKE '%interim%'
+        AND (country ILIKE '%UK%' OR country ILIKE '%United Kingdom%' OR location ILIKE '%UK%' OR location ILIKE '%London%' OR location ILIKE '%Manchester%' OR location ILIKE '%Edinburgh%' OR location ILIKE '%Birmingham%' OR location ILIKE '%Bristol%' OR location ILIKE '%Leeds%' OR location ILIKE '%Glasgow%' OR location ILIKE '%England%' OR location ILIKE '%Scotland%' OR location ILIKE '%Wales%')
       ORDER BY posted_date DESC NULLS LAST
       LIMIT 15
     `
