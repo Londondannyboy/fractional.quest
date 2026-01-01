@@ -64,6 +64,12 @@ const nextConfig: NextConfig = {
         destination: '/fractional-recruitment-agency',
         permanent: true, // 301 redirect for SEO
       },
+      // Redirect article-style jobs pages to proper job hub pages
+      {
+        source: '/fractional-ciso-jobs',
+        destination: '/fractional-ciso-jobs-uk',
+        permanent: true, // 301 redirect - send job seekers to proper jobs hub
+      },
     ];
   },
 

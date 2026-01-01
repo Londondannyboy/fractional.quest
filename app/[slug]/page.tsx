@@ -221,7 +221,15 @@ export default async function ArticleDetailPage({ params }: PageProps) {
           <div className="flex-1 max-w-4xl">
             {/* Article Body with Enhanced Styling */}
             <div
-              className="article-content bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12"
+              className="article-content prose prose-lg prose-gray max-w-none bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12
+                prose-headings:font-bold prose-headings:text-gray-900
+                prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-gray-200
+                prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+                prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-4
+                prose-strong:text-gray-900 prose-strong:font-semibold
+                prose-ul:my-4 prose-ul:space-y-2
+                prose-li:text-gray-700
+                prose-a:text-purple-600 prose-a:no-underline hover:prose-a:underline"
               dangerouslySetInnerHTML={{ __html: article.content }}
             />
 
